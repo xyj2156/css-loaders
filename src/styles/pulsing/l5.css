@@ -1,0 +1,37 @@
+@scope (.__loading-pulsing-5) {
+  & {
+    width: 80px;
+    aspect-ratio: 1;
+    position: relative;
+  }
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #ffb940;
+    box-shadow: 0 0 0 50px;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+  }
+  &:after {
+    animation: l5 1s infinite;
+    transform: perspective(300px) translateZ(0px);
+  }
+  @keyframes l5 {
+    to {
+      transform: perspective(300px) translateZ(150px);
+      opacity: 0;
+    }
+  }
+}

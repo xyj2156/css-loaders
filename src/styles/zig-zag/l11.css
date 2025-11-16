@@ -1,0 +1,19 @@
+@scope (.__loading-zig-zag-11) {
+  & {
+    height: 27px;
+    aspect-ratio: 5;
+    --c: #000 90deg, #0000 0;
+    background:
+      conic-gradient(from 135deg at top, var(--c)),
+      conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+    background-size: 20% 50%;
+    background-repeat: repeat-x;
+    clip-path: inset(0 100% 0 0);
+    animation: l11 2.5s infinite steps(11, jump-none);
+  }
+  @keyframes l11 {
+    to {
+      clip-path: inset(0);
+    }
+  }
+}

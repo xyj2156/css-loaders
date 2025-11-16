@@ -1,0 +1,110 @@
+@scope (.__loading-clones-9) {
+  & {
+    width: 28px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #f10c49;
+    animation: l9 2s infinite;
+  }
+  @keyframes l9 {
+    0% {
+      box-shadow:
+        0 -16px #f4dd51,
+        calc(16px * 0.707) calc(-16px * 0.707) #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6;
+    }
+    12.5% {
+      box-shadow:
+        0 0 #f4dd51,
+        calc(16px * 0.707) calc(-16px * 0.707) #e3aad6,
+        16px 0 #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6;
+    }
+    25% {
+      box-shadow:
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        16px 0 #f4dd51,
+        calc(16px * 0.707) calc(16px * 0.707) #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6;
+    }
+    37.5% {
+      box-shadow:
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        calc(16px * 0.707) calc(16px * 0.707) #e3aad6,
+        0 16px #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6;
+    }
+    50% {
+      box-shadow:
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        0 16px #f4dd51,
+        calc(-16px * 0.707) calc(16px * 0.707) #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6;
+    }
+    62.5% {
+      box-shadow:
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        calc(-16px * 0.707) calc(16px * 0.707) #e3aad6,
+        -16px 0 #f4dd51,
+        0 0 #e3aad6;
+    }
+    75% {
+      box-shadow:
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        -16px 0 #f4dd51,
+        calc(-16px * 0.707) calc(-16px * 0.707) #e3aad6;
+    }
+    87.5% {
+      box-shadow:
+        0 -16px #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        calc(-16px * 0.707) calc(-16px * 0.707) #e3aad6;
+    }
+    100% {
+      box-shadow:
+        0 -16px #f4dd51,
+        calc(16px * 0.707) calc(-16px * 0.707) #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6,
+        0 0 #f4dd51,
+        0 0 #e3aad6;
+    }
+  }
+}

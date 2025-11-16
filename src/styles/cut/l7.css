@@ -1,0 +1,89 @@
+@scope (.__loading-cut-7) {
+  & {
+    width: 48px;
+    height: 48px;
+    background: #d0af03;
+    border-radius: 50%;
+    --c: no-repeat linear-gradient(#000 0 0);
+    --s: 15px 15px;
+    -webkit-mask:
+      var(--c) top,
+      var(--c) right,
+      var(--c) bottom,
+      var(--c) left,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: l7 1.5s infinite;
+  }
+  @keyframes l7 {
+    0% {
+      -webkit-mask-size:
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        auto;
+    }
+    12.5% {
+      -webkit-mask-size:
+        var(--s),
+        0 0,
+        0 0,
+        0 0,
+        auto;
+    }
+    25% {
+      -webkit-mask-size:
+        var(--s),
+        var(--s),
+        0 0,
+        0 0,
+        auto;
+    }
+    37.5% {
+      -webkit-mask-size:
+        var(--s),
+        var(--s),
+        var(--s),
+        0 0,
+        auto;
+    }
+    45%,
+    55% {
+      -webkit-mask-size: var(--s), var(--s), var(--s), var(--s), auto;
+    }
+    62.5% {
+      -webkit-mask-size:
+        0 0,
+        var(--s),
+        var(--s),
+        var(--s),
+        auto;
+    }
+    75% {
+      -webkit-mask-size:
+        0 0,
+        0 0,
+        var(--s),
+        var(--s),
+        auto;
+    }
+    87.5% {
+      -webkit-mask-size:
+        0 0,
+        0 0,
+        0 0,
+        var(--s),
+        auto;
+    }
+    100% {
+      -webkit-mask-size:
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        auto;
+    }
+  }
+}

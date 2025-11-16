@@ -1,0 +1,26 @@
+@scope (.__loading-dancers-6) {
+  & {
+    width: 16px;
+    aspect-ratio: 1;
+    background: #3fb8af;
+    box-shadow: 0 -16px #ff3d7f;
+    animation: l6 2s infinite;
+  }
+  @keyframes l6 {
+    0% {
+      transform: translate(0, 0) rotate(0);
+    }
+    25% {
+      transform: translate(0, 0) rotate(90deg);
+    }
+    50% {
+      transform: translate(100%, -100%) rotate(180deg);
+    }
+    75% {
+      transform: translate(100%, -100%) rotate(270deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(360deg);
+    }
+  }
+}

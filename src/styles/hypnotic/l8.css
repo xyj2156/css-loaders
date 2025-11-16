@@ -1,0 +1,22 @@
+@scope (.__loading-hypnotic-8) {
+  & {
+    width: 50px;
+    aspect-ratio: 1;
+    color: #000;
+    border: 2px solid;
+    box-sizing: border-box;
+    background:
+      radial-gradient(farthest-side, currentColor 90%, #0000),
+      radial-gradient(farthest-side, #0000 90%, currentColor);
+    background-size: 16px 16px;
+    background-position: 0 0;
+    animation: l8 2s infinite;
+  }
+  @keyframes l8 {
+    100% {
+      background-position:
+        0px 32px,
+        -16px 0;
+    }
+  }
+}

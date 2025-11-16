@@ -1,0 +1,24 @@
+@scope (.__loading-eyes-1) {
+  & {
+    height: 30px;
+    aspect-ratio: 1;
+    display: grid;
+    background:
+      radial-gradient(farthest-side, #000 15%, #0000 18%),
+      radial-gradient(50% 100% at 50% 160%, #fff 95%, #0000) top/100% 50%,
+      radial-gradient(50% 100% at 50% -60%, #fff 95%, #0000) bottom/100% 50%;
+    background-repeat: no-repeat;
+  }
+  &:before {
+    content: '';
+    background: inherit;
+    opacity: 0.6;
+    animation: l1 1s infinite;
+  }
+  @keyframes l1 {
+    to {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+}

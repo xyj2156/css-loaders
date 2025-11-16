@@ -1,0 +1,29 @@
+@scope (.__loading-maze-1) {
+  & {
+    width: 40px;
+    aspect-ratio: 1;
+    outline: 2px solid #fff;
+    background:
+      radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px no-repeat,
+      conic-gradient(from 90deg at 10px 10px, #0000 90deg, #fff 0),
+      conic-gradient(from -90deg at 30px 30px, #0000 90deg, #fff 0);
+    animation: l1 1.5s infinite;
+  }
+  @keyframes l1 {
+    0% {
+      background-position: 0 0;
+    }
+    25% {
+      background-position: 100% 0;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    75% {
+      background-position: 0 100%;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+}

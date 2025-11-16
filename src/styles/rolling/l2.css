@@ -1,0 +1,32 @@
+@scope (.__loading-rolling-2) {
+  & {
+    display: inline-grid;
+    width: 80px;
+    aspect-ratio: 1;
+  }
+  &:before,
+  &:after {
+    content: '';
+    grid-area: 1/1;
+    border-radius: 50%;
+  }
+  &:before {
+    margin: 25%;
+    background: repeating-conic-gradient(#c02942 0 60deg, #0b486b 0 120deg);
+    transform: rotate(0turn) translate(50%) rotate(0turn);
+    animation: l2 2s alternate infinite ease-in-out;
+  }
+  &:after {
+    padding: 10%;
+    margin: -10%;
+    background: repeating-conic-gradient(from -15deg, #c02942 0 30deg, #0b486b 0 60deg);
+    mask:
+      conic-gradient(from 75deg, #000 210deg, #0000 0) content-box exclude,
+      conic-gradient(from 75deg, #000 210deg, #0000 0);
+  }
+  @keyframes l2 {
+    to {
+      transform: rotate(0.5turn) translate(50%) rotate(-1turn);
+    }
+  }
+}

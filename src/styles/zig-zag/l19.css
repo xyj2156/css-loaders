@@ -1,0 +1,27 @@
+@scope (.__loading-zig-zag-19) {
+  & {
+    display: inline-grid;
+  }
+  &:before,
+  &:after {
+    content: '';
+    height: 27px;
+    aspect-ratio: 5;
+    --c: #000 90deg, #0000 0;
+    background:
+      conic-gradient(from 135deg at top, var(--c)),
+      conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+    background-size: 20% 50%;
+    background-repeat: repeat-x;
+    clip-path: inset(0 60% 0 0);
+    animation: l19 0.8s infinite steps(7, jump-none) alternate;
+  }
+  &:after {
+    animation-direction: alternate-reverse;
+  }
+  @keyframes l19 {
+    to {
+      clip-path: inset(0 0 0 60%);
+    }
+  }
+}

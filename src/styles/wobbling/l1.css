@@ -1,0 +1,13 @@
+@scope (.__loading-wobbling-1) {
+  & {
+    width: 120px;
+    height: 20px;
+    background: linear-gradient(#000 0 0) left/20px 20px no-repeat #ddd;
+    animation: l1 1s infinite linear;
+  }
+  @keyframes l1 {
+    50% {
+      background-position: right;
+    }
+  }
+}

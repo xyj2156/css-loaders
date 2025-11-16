@@ -1,0 +1,29 @@
+@scope (.__loading-growing-8) {
+  & {
+    width: 64px;
+    aspect-ratio: 1;
+    display: grid;
+  }
+  &:before,
+  &:after {
+    content: '';
+    grid-area: 1/1;
+    border: 8px solid #bd1550;
+    box-sizing: content-box;
+    margin: auto;
+    aspect-ratio: 1;
+    animation: l8 infinite 1s steps(4, jump-none);
+  }
+  &:after {
+    animation-delay: -0.5s;
+    border-radius: 50%;
+  }
+  @keyframes l8 {
+    0% {
+      width: 0%;
+    }
+    to {
+      width: 75%;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@scope (.__loading-filling-5) {
+  & {
+    width: fit-content;
+    font-size: 40px;
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0000;
+    -webkit-text-stroke: 1px #000;
+    --g: conic-gradient(#000 0 0) no-repeat text;
+    background:
+      var(--g) 0,
+      var(--g) 100%,
+      var(--g) 0 0,
+      var(--g) 0 100%;
+    animation: l5 2s linear infinite;
+  }
+  &:before {
+    content: 'Loading';
+  }
+  @keyframes l5 {
+    0%,
+    100% {
+      background-size:
+        0 100%,
+        0 100%,
+        100% 0,
+        100% 0;
+    }
+    50% {
+      background-size:
+        55% 100%,
+        55% 100%,
+        100% 0,
+        100% 0;
+    }
+    50.01% {
+      background-size:
+        0 100%,
+        0 100%,
+        100% 55%,
+        100% 55%;
+    }
+  }
+}

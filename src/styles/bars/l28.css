@@ -1,0 +1,42 @@
+@scope (.__loading-bars-28) {
+  & {
+    height: 45px;
+    aspect-ratio: 1.4;
+    --c: no-repeat repeating-linear-gradient(90deg, #000 0 20%, #0000 0 40%);
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 72% 26%;
+    animation: l28 1s infinite;
+  }
+  @keyframes l28 {
+    0%,
+    20% {
+      background-position:
+        50% calc(0 * 100% / 3),
+        50% calc(1 * 100% / 3),
+        50% calc(2 * 100% / 3),
+        50% calc(3 * 100% / 3);
+    }
+    40% {
+      background-position:
+        50% calc(0 * 100% / 3),
+        100% calc(1 * 100% / 3),
+        0 calc(2 * 100% / 3),
+        50% calc(3 * 100% / 3);
+    }
+    60% {
+      background-position:
+        50% calc(0 * 100% / 3),
+        0 calc(1 * 100% / 3),
+        100% calc(2 * 100% / 3),
+        50% calc(3 * 100% / 3);
+    }
+    80%,
+    100% {
+      background-position:
+        50% calc(0 * 100% / 3),
+        50% calc(1 * 100% / 3),
+        50% calc(2 * 100% / 3),
+        50% calc(3 * 100% / 3);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@scope (.__loading-clones-14) {
+  & {
+    width: 40px;
+    aspect-ratio: 1.154;
+    display: grid;
+    background: conic-gradient(from 149deg at top, #0000, #bf1e62 1deg 60deg, #0000 61deg);
+    animation: l14 2s infinite cubic-bezier(0.5, 500, 0.5, -500);
+    transform-origin: top;
+  }
+  &:before,
+  &:after {
+    content: '';
+    grid-area: 1/1;
+    background: conic-gradient(from 149deg at top, #0000, #ffa588 1deg 60deg, #0000 61deg);
+    transform-origin: inherit;
+    animation: inherit;
+  }
+  &:after {
+    background: conic-gradient(from 149deg at top, #0000, #027b7f 1deg 60deg, #0000 61deg);
+    animation-timing-function: cubic-bezier(0.5, 800, 0.5, -800);
+  }
+  @keyframes l14 {
+    100% {
+      transform: rotate(0.2deg);
+    }
+  }
+}

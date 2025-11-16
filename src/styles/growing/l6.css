@@ -1,0 +1,61 @@
+@scope (.__loading-growing-6) {
+  & {
+    width: 80px;
+    aspect-ratio: 1;
+    display: grid;
+  }
+  &:before {
+    content: '';
+    background: #bd1550;
+    aspect-ratio: inherit;
+    aspect-ratio: 1;
+    clip-path: polygon(
+      91.57% 77.78%,
+      65.56% 73.28%,
+      59.75% 99.04%,
+      44.54% 77.46%,
+      22.22% 91.57%,
+      26.72% 65.56%,
+      0.96% 59.75%,
+      22.54% 44.54%,
+      8.43% 22.22%,
+      34.44% 26.72%,
+      40.25% 0.96%,
+      55.46% 22.54%,
+      77.78% 8.43%,
+      73.28% 34.44%,
+      99.04% 40.25%,
+      77.46% 55.46%,
+      91.57% 77.78%,
+      65.56% 73.28%,
+      calc(65.56% - 5.6px) calc(73.28% - 8.38px),
+      calc(91.57% - 14.97px) calc(77.78% - 10px),
+      calc(77.46% - 9.89px) calc(55.46% - 1.97px),
+      calc(99.04% - 17.65px) calc(40.25% - -3.51px),
+      calc(73.28% - 8.38px) calc(34.44% - -5.6px),
+      calc(77.78% - 10px) calc(8.43% - -14.97px),
+      calc(55.46% - 1.97px) calc(22.54% - -9.89px),
+      calc(40.25% - -3.51px) calc(0.96% - -17.65px),
+      calc(34.44% - -5.6px) calc(26.72% - -8.38px),
+      calc(8.43% - -14.97px) calc(22.22% - -10px),
+      calc(22.54% - -9.89px) calc(44.54% - -1.97px),
+      calc(0.96% - -17.65px) calc(59.75% - 3.51px),
+      calc(26.72% - -8.38px) calc(65.56% - 5.6px),
+      calc(22.22% - -10px) calc(91.57% - 14.97px),
+      calc(44.54% - -1.97px) calc(77.46% - 9.89px),
+      calc(59.75% - 3.51px) calc(99.04% - 17.65px),
+      calc(65.56% - 5.6px) calc(73.28% - 8.38px),
+      calc(91.57% - 14.97px) calc(77.78% - 10px)
+    );
+    margin: auto;
+    animation: l6 infinite 1s steps(4, jump-none);
+  }
+  @keyframes l6 {
+    0% {
+      width: 45%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+}

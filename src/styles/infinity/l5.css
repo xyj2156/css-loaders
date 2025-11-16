@@ -1,0 +1,18 @@
+@scope (.__loading-infinity-5) {
+  & {
+    width: 90px;
+    height: 14px;
+    color: #000;
+    background:
+      radial-gradient(circle 10px at right 7px top 50%, #0000 92%, currentColor),
+      radial-gradient(circle 10px at right 0 top 50%, currentColor 92%, #0000);
+    background-size: calc(100% / 3) 100%;
+    background-position: 50% 0%;
+    animation: l5 0.5s infinite linear;
+  }
+  @keyframes l5 {
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+}

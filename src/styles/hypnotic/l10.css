@@ -1,0 +1,25 @@
+@scope (.__loading-hypnotic-10) {
+  & {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+  }
+  &::before,
+  &::after {
+    content: '';
+    grid-area: 1/1;
+    border-radius: 50%;
+    background: repeating-conic-gradient(#0000, #000 1deg 18deg, #0000 20deg 36deg);
+    -webkit-mask: repeating-radial-gradient(farthest-side, #000 0 10%, #0000 0 20%);
+    animation: l10 4s infinite linear;
+  }
+  &::after {
+    -webkit-mask: repeating-radial-gradient(farthest-side, #0000 0 10%, #000 0 20%);
+    animation-direction: reverse;
+  }
+  @keyframes l10 {
+    100% {
+      transform: rotate(0.5turn);
+    }
+  }
+}

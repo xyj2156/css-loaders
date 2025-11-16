@@ -1,0 +1,39 @@
+@scope (.__loading-bouncing-7) {
+  & {
+    height: 60px;
+    aspect-ratio: 1;
+    border: 3px solid #524656;
+    position: relative;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    width: 30%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #cf4647;
+    animation:
+      l7-0 0.49s infinite alternate linear -0.11s,
+      l7-1 0.71s infinite alternate linear -0.23s;
+  }
+  @keyframes l7-0 {
+    0%,
+    5% {
+      bottom: 0%;
+    }
+    95%,
+    to {
+      bottom: 70%;
+    }
+  }
+  @keyframes l7-1 {
+    0%,
+    5% {
+      left: 0%;
+    }
+    95%,
+    to {
+      left: 70%;
+    }
+  }
+}

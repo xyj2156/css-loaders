@@ -1,0 +1,52 @@
+@scope (.__loading-clones-11) {
+  & {
+    height: 40px;
+    aspect-ratio: 0.866;
+    display: grid;
+    background: conic-gradient(from -121deg at right, #0000, #bf1e62 1deg 60deg, #0000 61deg);
+    animation: l11-0 2s infinite;
+    transform-origin: 33% 50%;
+  }
+  &:before,
+  &:after {
+    content: '';
+    grid-area: 1/1;
+    background: conic-gradient(from -121deg at right, #0000, #ffa588 1deg 60deg, #0000 61deg);
+    animation: inherit;
+    animation-name: l11-1;
+  }
+  &:after {
+    --s: 30px;
+    background: conic-gradient(from -121deg at right, #0000, #027b7f 1deg 60deg, #0000 61deg);
+  }
+  @keyframes l11-0 {
+    0% {
+      transform: translate(-30px) rotate(0) translate(0) rotate(0);
+    }
+    25% {
+      transform: translate(30px) rotate(0) translate(0) rotate(0);
+    }
+    50% {
+      transform: translate(30px) rotate(180deg) translate(0) rotate(0);
+    }
+    75% {
+      transform: translate(30px) rotate(180deg) translate(60px) rotate(0);
+    }
+    100% {
+      transform: translate(30px) rotate(180deg) translate(60px) rotate(180deg);
+    }
+  }
+  @keyframes l11-1 {
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+      transform: translate(0);
+    }
+    12.5%,
+    62.5% {
+      transform: translate(var(--s, 15px));
+    }
+  }
+}

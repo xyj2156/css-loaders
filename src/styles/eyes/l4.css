@@ -1,0 +1,33 @@
+@scope (.__loading-eyes-4) {
+  & {
+    height: 60px;
+    aspect-ratio: 1;
+    display: grid;
+  }
+  &:before,
+  &:after {
+    content: '';
+    background:
+      radial-gradient(farthest-side, #000 15%, #0000 18%) 0 0/50% 100%,
+      radial-gradient(50% 100% at 50% 160%, #fff 95%, #0000) 0 0 /50% 50%,
+      radial-gradient(50% 100% at 50% -60%, #fff 95%, #0000) 0 100%/50% 50%;
+    background-repeat: repeat-x;
+    -webkit-mask: radial-gradient(50% 100%, #000 95%, #0000) 0 100%/50% 0% repeat-x;
+    animation: l4 1s infinite alternate ease-in;
+  }
+  &:after {
+    animation-duration: 0.7s;
+  }
+  @keyframes l4 {
+    0%,
+    70% {
+      -webkit-mask-size: 50% 100%;
+    }
+    85% {
+      -webkit-mask-size: 50% 0;
+    }
+    100% {
+      -webkit-mask-size: 50% 100%;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@scope (.__loading-rolling-3) {
+  & {
+    display: inline-grid;
+    width: 80px;
+    aspect-ratio: 1;
+  }
+  &:before,
+  &:after {
+    content: '';
+    grid-area: 1/1;
+    border-radius: 50%;
+    animation: l3-0 2s alternate infinite ease-in-out;
+  }
+  &:before {
+    margin: 25%;
+    background: repeating-conic-gradient(#c02942 0 60deg, #0b486b 0 120deg);
+    translate: 0 50%;
+    rotate: -150deg;
+  }
+  &:after {
+    padding: 10%;
+    margin: -10%;
+    background: repeating-conic-gradient(#0b486b 0 30deg, #c02942 0 60deg);
+    mask:
+      linear-gradient(#0000 50%, #000 0) content-box exclude,
+      linear-gradient(#0000 50%, #000 0);
+    rotate: -75deg;
+    animation-name: l3-1;
+  }
+  @keyframes l3-0 {
+    to {
+      rotate: 150deg;
+    }
+  }
+  @keyframes l3-1 {
+    to {
+      rotate: 75deg;
+    }
+  }
+}

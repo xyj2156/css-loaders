@@ -1,0 +1,52 @@
+@scope (.__loading-shapes-20) {
+  & {
+    width: 40px;
+    aspect-ratio: 1;
+    display: flex;
+    transform-origin: 0% 150%;
+    animation: l20-0 2s infinite linear;
+  }
+  &:before,
+  &:after {
+    content: '';
+    flex: 1;
+    background: #f03355;
+    animation: l20-1 1s infinite linear alternate;
+    border-radius: 100px 0 0 100px;
+    transform-origin: 100% 100%;
+  }
+  &:after {
+    border-radius: 0 100px 100px 0;
+    transform-origin: 0% 100%;
+    --s: -1;
+  }
+  @keyframes l20-0 {
+    0%,
+    10% {
+      transform: translateY(0) scaleY(1);
+    }
+    49.99% {
+      transform: translateY(-100%) scaleY(1);
+    }
+    50% {
+      transform: translateY(-100%) scaleY(-1);
+    }
+    90%,
+    100% {
+      transform: translateY(-200%) scaleY(-1);
+    }
+  }
+  @keyframes l20-1 {
+    0%,
+    20% {
+      transform: rotate(0deg) translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: rotate(calc(var(--s, 1) * -90deg)) translate(0, 0) rotate(0deg);
+    }
+    100% {
+      transform: rotate(calc(var(--s, 1) * -90deg)) translate(0, -20px)
+        rotate(calc(var(--s, 1) * -90deg));
+    }
+  }
+}

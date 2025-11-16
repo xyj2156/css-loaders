@@ -1,0 +1,55 @@
+@scope (.__loading-colorful-15) {
+  & {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+      linear-gradient(#ff003c 0 0), linear-gradient(#ff003c 0 0), linear-gradient(#ff003c 0 0),
+      linear-gradient(#ff003c 0 0), linear-gradient(#00c176 0 0), linear-gradient(#00c176 0 0),
+      linear-gradient(#00c176 0 0), linear-gradient(#00c176 0 0), #ff003c;
+    background-position:
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%;
+    background-repeat: no-repeat;
+    animation: l15 2s infinite;
+  }
+  @keyframes l15 {
+    0% {
+      background-size:
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        0 0;
+    }
+    40%,
+    50% {
+      background-size:
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        51% 51%,
+        51% 51%,
+        51% 51%,
+        51% 51%;
+    }
+    90%,
+    100% {
+      background-size:
+        51% 51%,
+        51% 51%,
+        51% 51%,
+        51% 51%,
+        51% 51%,
+        51% 51%,
+        51% 51%,
+        51% 51%;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@scope (.__loading-dots-10) {
+  & {
+    width: 15px;
+    aspect-ratio: 1;
+    position: relative;
+  }
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: #000;
+  }
+  &::before {
+    box-shadow: -26px 0;
+    animation: l10-1 1.5s infinite linear;
+  }
+  &::after {
+    transform: rotate(0deg) translateX(26px);
+    animation: l10-2 1.5s infinite linear;
+  }
+  @keyframes l10-1 {
+    50% {
+      transform: translateX(26px);
+    }
+  }
+  @keyframes l10-2 {
+    100% {
+      transform: rotate(-360deg) translateX(26px);
+    }
+  }
+}

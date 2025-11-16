@@ -1,0 +1,20 @@
+@scope (.__loading-pulsing-10) {
+  & {
+    display: inline-grid;
+    font-size: 50px;
+  }
+  &:before,
+  &:after {
+    content: '💯';
+    grid-area: 1/1;
+  }
+  &:after {
+    animation: l10 1s infinite;
+  }
+  @keyframes l10 {
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+}

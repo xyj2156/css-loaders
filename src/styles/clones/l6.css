@@ -1,0 +1,37 @@
+@scope (.__loading-clones-6) {
+  & {
+    width: 30px;
+    aspect-ratio: 1;
+    background: #554236;
+    display: grid;
+    transform-origin: top right;
+    animation: l6-0 1s infinite linear;
+  }
+  &::before,
+  &::after {
+    content: '';
+    grid-area: 1/1;
+    background: #f77825;
+    transform-origin: inherit;
+    animation: inherit;
+    animation-name: l6-1;
+  }
+  &::after {
+    background: #60b99a;
+    --s: 180deg;
+  }
+  @keyframes l6-0 {
+    70%,
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes l6-1 {
+    30% {
+      transform: rotate(var(--s, 90deg));
+    }
+    70% {
+      transform: rotate(0);
+    }
+  }
+}

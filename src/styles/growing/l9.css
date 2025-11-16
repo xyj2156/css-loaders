@@ -1,0 +1,29 @@
+@scope (.__loading-growing-9) {
+  & {
+    height: 64px;
+    aspect-ratio: 1.5;
+    display: flex;
+    gap: 8px;
+  }
+  &:before,
+  &:after {
+    content: '';
+    border: 8px solid #bd1550;
+    border-radius: 50%;
+    box-sizing: content-box;
+    margin: auto;
+    aspect-ratio: 1;
+    animation: l9 infinite 1s steps(4, jump-none);
+  }
+  &:after {
+    animation-direction: reverse;
+  }
+  @keyframes l9 {
+    0% {
+      width: 0%;
+    }
+    to {
+      width: 75%;
+    }
+  }
+}

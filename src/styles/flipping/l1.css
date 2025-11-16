@@ -1,0 +1,16 @@
+@scope (.__loading-flipping-1) {
+  & {
+    width: 40px;
+    aspect-ratio: 1;
+    background: #000;
+    animation: l1 1s infinite;
+  }
+  @keyframes l1 {
+    0% {
+      transform: perspective(150px) rotateX(0deg);
+    }
+    100% {
+      transform: perspective(150px) rotateX(180deg);
+    }
+  }
+}

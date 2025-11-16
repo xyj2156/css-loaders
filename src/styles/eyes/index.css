@@ -1,0 +1,363 @@
+@scope (.__loading-eyes-1) {
+  & {
+    height: 30px;
+    aspect-ratio: 1;
+    display: grid;
+    background:
+      radial-gradient(farthest-side, #000 15%, #0000 18%),
+      radial-gradient(50% 100% at 50% 160%, #fff 95%, #0000) top/100% 50%,
+      radial-gradient(50% 100% at 50% -60%, #fff 95%, #0000) bottom/100% 50%;
+    background-repeat: no-repeat;
+  }
+  &:before {
+    content: '';
+    background: inherit;
+    opacity: 0.6;
+    animation: l1 1s infinite;
+  }
+  @keyframes l1 {
+    to {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+}
+@scope (.__loading-eyes-2) {
+  & {
+    height: 30px;
+    aspect-ratio: 2;
+    display: grid;
+    background:
+      radial-gradient(farthest-side, #000 15%, #0000 18%) 0 0/50% 100%,
+      radial-gradient(50% 100% at 50% 160%, #fff 95%, #0000) 0 0 /50% 50%,
+      radial-gradient(50% 100% at 50% -60%, #fff 95%, #0000) 0 100%/50% 50%;
+    background-repeat: repeat-x;
+    animation: l2 1.5s infinite linear;
+  }
+  @keyframes l2 {
+    0%,
+    15% {
+      background-position:
+        0 0,
+        0 0,
+        0 100%;
+    }
+    20%,
+    40% {
+      background-position:
+        5px 0,
+        0 0,
+        0 100%;
+    }
+    45%,
+    55% {
+      background-position:
+        0 0,
+        0 0,
+        0 100%;
+    }
+    60%,
+    80% {
+      background-position:
+        -5px 0,
+        0 0,
+        0 100%;
+    }
+    85%,
+    100% {
+      background-position:
+        0 0,
+        0 0,
+        0 100%;
+    }
+  }
+}
+@scope (.__loading-eyes-3) {
+  & {
+    height: 30px;
+    aspect-ratio: 2;
+    background:
+      radial-gradient(farthest-side, #000 15%, #0000 18%) 0 0/50% 100%,
+      radial-gradient(50% 100% at 50% 160%, #fff 95%, #0000) 0 0 /50% 50%,
+      radial-gradient(50% 100% at 50% -60%, #fff 95%, #0000) 0 100%/50% 50%;
+    background-repeat: repeat-x;
+    -webkit-mask: radial-gradient(50% 100%, #000 95%, #0000) 0 100%/50% 0% repeat-x;
+    animation: l3 1s infinite alternate ease-in;
+  }
+  @keyframes l3 {
+    0%,
+    70% {
+      -webkit-mask-size: 50% 100%;
+    }
+    85% {
+      -webkit-mask-size: 50% 0;
+    }
+    100% {
+      -webkit-mask-size: 50% 100%;
+    }
+  }
+}
+@scope (.__loading-eyes-4) {
+  & {
+    height: 60px;
+    aspect-ratio: 1;
+    display: grid;
+  }
+  &:before,
+  &:after {
+    content: '';
+    background:
+      radial-gradient(farthest-side, #000 15%, #0000 18%) 0 0/50% 100%,
+      radial-gradient(50% 100% at 50% 160%, #fff 95%, #0000) 0 0 /50% 50%,
+      radial-gradient(50% 100% at 50% -60%, #fff 95%, #0000) 0 100%/50% 50%;
+    background-repeat: repeat-x;
+    -webkit-mask: radial-gradient(50% 100%, #000 95%, #0000) 0 100%/50% 0% repeat-x;
+    animation: l4 1s infinite alternate ease-in;
+  }
+  &:after {
+    animation-duration: 0.7s;
+  }
+  @keyframes l4 {
+    0%,
+    70% {
+      -webkit-mask-size: 50% 100%;
+    }
+    85% {
+      -webkit-mask-size: 50% 0;
+    }
+    100% {
+      -webkit-mask-size: 50% 100%;
+    }
+  }
+}
+@scope (.__loading-eyes-5) {
+  & {
+    display: inline-flex;
+    gap: 10px;
+  }
+  &:before,
+  &:after {
+    content: '';
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, #000 95%, #0000) 35% 35%/6px 6px no-repeat #fff;
+    animation: l5 3s infinite;
+  }
+  @keyframes l5 {
+    0%,
+    11% {
+      background-position: 35% 35%;
+    }
+    14%,
+    36% {
+      background-position: 65% 35%;
+    }
+    38%,
+    61% {
+      background-position: 65% 65%;
+    }
+    64%,
+    86% {
+      background-position: 35% 65%;
+    }
+    88%,
+    100% {
+      background-position: 35% 35%;
+    }
+  }
+}
+@scope (.__loading-eyes-6) {
+  & {
+    display: inline-flex;
+    gap: 10px;
+  }
+  &:before,
+  &:after {
+    content: '';
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, #000 95%, #0000) 35% 35%/6px 6px no-repeat #fff;
+    transform: scaleX(var(--s, 1)) rotate(0deg);
+    animation: l6 1s infinite linear;
+  }
+  &:after {
+    --s: -1;
+    animation-delay: -0.1s;
+  }
+  @keyframes l6 {
+    100% {
+      transform: scaleX(var(--s, 1)) rotate(360deg);
+    }
+  }
+}
+@scope (.__loading-eyes-7) {
+  & {
+    display: inline-flex;
+    gap: 10px;
+  }
+  &:before,
+  &:after {
+    content: '';
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+      linear-gradient(#222 0 0) top/100% 40% no-repeat,
+      radial-gradient(farthest-side, #000 95%, #0000) 50%/8px 8px no-repeat #fff;
+    animation: l7 1.5s infinite alternate ease-in;
+  }
+  @keyframes l7 {
+    0%,
+    70% {
+      background-size:
+        100% 40%,
+        8px 8px;
+    }
+    85% {
+      background-size:
+        100% 120%,
+        8px 8px;
+    }
+    100% {
+      background-size:
+        100% 40%,
+        8px 8px;
+    }
+  }
+}
+@scope (.__loading-eyes-8) {
+  & {
+    display: inline-flex;
+    gap: 10px;
+  }
+  &:before,
+  &:after {
+    content: '';
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+      linear-gradient(#222 0 0) top/100% 40% no-repeat,
+      radial-gradient(farthest-side, #000 95%, #0000) 50%/8px 8px no-repeat #fff;
+    animation: 2.5s infinite;
+    animation-name: l8-1, e8-2;
+  }
+  @keyframes l8-1 {
+    0%,
+    40%,
+    100% {
+      background-size:
+        100% 40%,
+        8px 8px;
+    }
+    50%,
+    80% {
+      background-size:
+        100% 0%,
+        8px 8px;
+    }
+  }
+  @keyframes l8-2 {
+    0%,
+    50% {
+      background-position:
+        top,
+        50% 50%;
+    }
+    60%,
+    65% {
+      background-position:
+        top,
+        70% 50%;
+    }
+    70%,
+    75% {
+      background-position:
+        top,
+        30% 50%;
+    }
+    90%,
+    100% {
+      background-position:
+        top,
+        50% 50%;
+    }
+  }
+}
+@scope (.__loading-eyes-9) {
+  & {
+    display: inline-flex;
+    gap: 10px;
+  }
+  &:before,
+  &:after {
+    content: '';
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+      linear-gradient(#222 0 0) top/100% 0% no-repeat,
+      radial-gradient(farthest-side, #000 95%, #0000) 50%/8px 8px no-repeat #fff;
+    animation: l9 4s infinite ease-in;
+  }
+  @keyframes l9 {
+    0% {
+      background-size:
+        100% 0%,
+        8px 8px;
+      background-position:
+        top,
+        50% 50%;
+    }
+    80% {
+      background-size:
+        100% 70%,
+        8px 8px;
+      background-position:
+        top,
+        50% 70%;
+    }
+    84%,
+    100% {
+      background-size:
+        100% 0%,
+        8px 8px;
+      background-position:
+        top,
+        50% 50%;
+    }
+  }
+}
+@scope (.__loading-eyes-10) {
+  & {
+    display: inline-flex;
+    gap: 10px;
+  }
+  &:before,
+  &:after {
+    content: '';
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, #000 95%, #0000) 50%/8px 8px no-repeat #fff;
+    aspect-ratio: 1;
+    animation: l10 1.5s infinite alternate;
+  }
+  &:after {
+    --s: -1;
+  }
+  @keyframes l10 {
+    0%,
+    20% {
+      transform: scaleX(var(--s, 1)) rotate(0deg);
+      clip-path: inset(0);
+    }
+    60%,
+    100% {
+      transform: scaleX(var(--s, 1)) rotate(30deg);
+      clip-path: inset(40% 0 0);
+    }
+  }
+}

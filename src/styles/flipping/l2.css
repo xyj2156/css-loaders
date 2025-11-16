@@ -1,0 +1,25 @@
+@scope (.__loading-flipping-2) {
+  & {
+    width: 40px;
+    aspect-ratio: 1;
+    animation:
+      l2-1 2s infinite linear,
+      l2-2 1s infinite steps(1) alternate;
+  }
+  @keyframes l2-1 {
+    0% {
+      transform: perspective(150px) rotateX(0deg);
+    }
+    100% {
+      transform: perspective(150px) rotateX(360deg);
+    }
+  }
+  @keyframes l2-2 {
+    0% {
+      background: #ffa516;
+    }
+    50% {
+      background: #f03355;
+    }
+  }
+}

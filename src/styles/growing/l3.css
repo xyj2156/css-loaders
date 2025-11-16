@@ -1,0 +1,33 @@
+@scope (.__loading-growing-3) {
+  & {
+    --b: 15px;
+    width: calc(5 * var(--b));
+    aspect-ratio: 1 / cos(30deg);
+    display: grid;
+  }
+  &:before {
+    content: '';
+    background: #bd1550;
+    aspect-ratio: inherit;
+    clip-path: polygon(
+      50% 0,
+      100% 100%,
+      0 100%,
+      50% 0,
+      50% var(--b),
+      calc(var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
+      calc(100% - var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
+      50% var(--b)
+    );
+    margin: auto;
+    animation: l3 infinite 1s steps(4, jump-none);
+  }
+  @keyframes l3 {
+    0% {
+      width: 36%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+}

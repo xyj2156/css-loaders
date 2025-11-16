@@ -1,0 +1,43 @@
+@scope (.__loading-polygons-8) {
+  & {
+    display: inline-grid;
+    width: 80px;
+    aspect-ratio: 2;
+    box-shadow: 0 5px #574951;
+    overflow: hidden;
+  }
+  &:before,
+  &:after {
+    content: '';
+    grid-area: 1/1;
+    margin: 0 25%;
+    background: #83988e;
+    clip-path: polygon(97.55% 65.45%, 50% 100%, 2.45% 65.45%, 20.61% 9.55%, 79.39% 9.55%);
+    transform-origin: bottom;
+    animation:
+      l8-0 0.5s linear infinite,
+      l8-1 4s steps(8) infinite;
+  }
+  &:after {
+    animation-direction: reverse;
+    animation-delay:
+      0s,
+      -1.5s;
+  }
+  @keyframes l8-0 {
+    0% {
+      rotate: -36deg;
+    }
+    to {
+      rotate: 36deg;
+    }
+  }
+  @keyframes l8-1 {
+    0% {
+      translate: -232% 0;
+    }
+    to {
+      translate: 232% 0;
+    }
+  }
+}

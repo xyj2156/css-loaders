@@ -1,0 +1,19 @@
+@scope (.__loading-continuous-8) {
+  & {
+    width: 40px;
+    aspect-ratio: 1;
+    background: linear-gradient(
+        to bottom right,
+        #0000 calc(50% - 40px),
+        #fff 50%,
+        #0000 calc(50% + 40px)
+      )
+      bottom right/calc(200% + 80px) calc(200% + 80px) orange;
+    animation: l8 1s infinite;
+  }
+  @keyframes l8 {
+    100% {
+      background-position: top left;
+    }
+  }
+}

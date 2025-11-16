@@ -1,0 +1,23 @@
+@scope (.__loading-shapes-2) {
+  & {
+    width: 40px;
+    aspect-ratio: 1;
+    background: #25b09b;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    animation: l2 2s infinite cubic-bezier(0.3, 1, 0, 1);
+  }
+  @keyframes l2 {
+    25% {
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+    50% {
+      clip-path: polygon(0 0, 100% 100%, 0 100%);
+    }
+    75% {
+      clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    }
+    100% {
+      clip-path: polygon(100% 0, 100% 100%, 0 0);
+    }
+  }
+}

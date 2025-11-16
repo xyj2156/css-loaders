@@ -1,0 +1,46 @@
+@scope (.__loading-bouncing-8) {
+  & {
+    height: 60px;
+    aspect-ratio: 1;
+    border: 3px solid #524656;
+    position: relative;
+  }
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 20%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #cf4647;
+    animation:
+      l8-0 0.57s infinite alternate linear -0.13s,
+      l8-1 0.35s infinite alternate linear -0.23s;
+  }
+  &:after {
+    background: #45ada8;
+    animation:
+      l8-0 0.29s infinite alternate linear -0.11s,
+      l8-1 0.51s infinite alternate linear -0.34s;
+  }
+  @keyframes l8-0 {
+    0%,
+    5% {
+      bottom: 0%;
+    }
+    95%,
+    to {
+      bottom: 80%;
+    }
+  }
+  @keyframes l8-1 {
+    0%,
+    5% {
+      left: 0%;
+    }
+    95%,
+    to {
+      left: 80%;
+    }
+  }
+}

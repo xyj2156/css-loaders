@@ -1,0 +1,38 @@
+@scope (.__loading-growing-10) {
+  & {
+    height: 64px;
+    aspect-ratio: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  &:before,
+  &:after {
+    content: '';
+    border: 8px solid #bd1550;
+    box-sizing: content-box;
+    margin: auto;
+    aspect-ratio: 1;
+    animation:
+      l10-0 infinite 0.5s steps(4, jump-none) alternate,
+      l10-1 infinite 2s steps(2, jump-none);
+  }
+  &:after {
+    animation-delay: -0.3s;
+  }
+  @keyframes l10-0 {
+    0% {
+      width: 0%;
+    }
+    to {
+      width: 75%;
+    }
+  }
+  @keyframes l10-1 {
+    0% {
+      border-radius: 0%;
+    }
+    to {
+      border-radius: 100%;
+    }
+  }
+}

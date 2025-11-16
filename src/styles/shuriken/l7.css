@@ -1,0 +1,21 @@
+@scope (.__loading-shuriken-7) {
+  & {
+    width: 80px;
+    aspect-ratio: 1;
+    color: #8d7958;
+    background:
+      radial-gradient(150% 150% at left -40% top -40%, #0000 98%, currentColor) left top,
+      radial-gradient(150% 150% at right -40% top -40%, #0000 98%, currentColor) right top,
+      radial-gradient(150% 150% at left -40% bottom -40%, #0000 98%, currentColor) left bottom,
+      radial-gradient(150% 150% at right -40% bottom -40%, #0000 98%, currentColor) right bottom;
+    background-size: 50.3% 50.3%;
+    background-repeat: no-repeat;
+    -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+    animation: l7 1.5s infinite linear;
+  }
+  @keyframes l7 {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+}

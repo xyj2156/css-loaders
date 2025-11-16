@@ -1,0 +1,47 @@
+@scope (.__loading-shapes-34) {
+  & {
+    height: 60px;
+    aspect-ratio: 1;
+    --c: no-repeat linear-gradient(#514b82 0 0);
+    background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c);
+    animation:
+      l34-1 2s infinite alternate,
+      l34-2 2s infinite alternate;
+  }
+  @keyframes l34-1 {
+    0%,
+    20% {
+      background-size: 20px 20px;
+    }
+    40%,
+    60% {
+      background-size: 100% 20px;
+    }
+    80%,
+    100% {
+      background-size: 20px 20px;
+    }
+  }
+  @keyframes l34-2 {
+    0%,
+    40% {
+      background-position:
+        0 0,
+        100% 0,
+        50% 50%,
+        50% 50%,
+        0 100%,
+        100% 100%;
+    }
+    60%,
+    100% {
+      background-position:
+        50% 0,
+        50% 0,
+        0 50%,
+        100% 50%,
+        50% 100%,
+        50% 100%;
+    }
+  }
+}

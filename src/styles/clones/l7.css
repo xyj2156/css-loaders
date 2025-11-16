@@ -1,0 +1,60 @@
+@scope (.__loading-clones-7) {
+  & {
+    width: 28px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #f10c49;
+    animation: l7 2s infinite;
+  }
+  @keyframes l7 {
+    0%,
+    100% {
+      transform: translate(-30px, -30px);
+      box-shadow:
+        0 0 #f4dd51,
+        0 0 #e3aad6;
+    }
+    12.5% {
+      transform: translate(30px, -30px);
+      box-shadow:
+        -15px 0 #f4dd51,
+        -30px 0 #e3aad6;
+    }
+    25% {
+      transform: translate(30px, -30px);
+      box-shadow:
+        0 0 #f4dd51,
+        0 0 #e3aad6;
+    }
+    37.5% {
+      transform: translate(30px, 30px);
+      box-shadow:
+        0 -15px #f4dd51,
+        0 -30px #e3aad6;
+    }
+    50% {
+      transform: translate(30px, 30px);
+      box-shadow:
+        0 0 #f4dd51,
+        0 0 #e3aad6;
+    }
+    62.5% {
+      transform: translate(-30px, 30px);
+      box-shadow:
+        15px 0 #f4dd51,
+        30px 0 #e3aad6;
+    }
+    75% {
+      transform: translate(-30px, 30px);
+      box-shadow:
+        0 0 #f4dd51,
+        0 0 #e3aad6;
+    }
+    87.5% {
+      transform: translate(-30px, -30px);
+      box-shadow:
+        0 15px #f4dd51,
+        0 30px #e3aad6;
+    }
+  }
+}

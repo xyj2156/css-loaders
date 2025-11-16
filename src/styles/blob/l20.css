@@ -1,0 +1,27 @@
+@scope (.__loading-blob-20) {
+  & {
+    height: 80px;
+    width: 50px;
+    border: 10px solid #000;
+    box-sizing: border-box;
+    background:
+      conic-gradient(from 160deg at top, #fff 40deg, #0000 0) top,
+      conic-gradient(from -20deg at bottom, #fff 40deg, #0000 0) bottom,
+      radial-gradient(farthest-side, #fff 98%, #0000) bottom/100% 50%,
+      #000;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    filter: blur(4px) contrast(10);
+    animation: l20 1s infinite alternate;
+  }
+  @keyframes l20 {
+    0%,
+    30% {
+      background-position: top, bottom, bottom;
+    }
+    70%,
+    100% {
+      background-position: top, bottom, top;
+    }
+  }
+}

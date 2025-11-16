@@ -1,0 +1,42 @@
+@scope (.__loading-nature-16) {
+  & {
+    width: 20px;
+    height: 80px;
+    background: #935936;
+    position: relative;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -22px;
+    width: 25px;
+    height: 60px;
+    background:
+      radial-gradient(farthest-side, #fff 92%, #0000) 60% 6px/4px 4px,
+      radial-gradient(50% 60%, #53707b 92%, #0000) center/70% 55%,
+      radial-gradient(farthest-side, #53707b 92%, #0000) 50% 3px/14px 14px,
+      radial-gradient(142% 100% at bottom right, #0000 64%, #53707b 65%) bottom/57% 40%,
+      conic-gradient(from -120deg at right, #53707b 36deg, #0000 0) 100% 3px/51% 12px,
+      conic-gradient(from 120deg at top left, #0000, #ef524a 2deg 40deg, #0000 43deg) top/100% 10px;
+    background-repeat: no-repeat;
+    transform: rotate(-26deg);
+    transform-origin: 100% 80%;
+    animation: l16 0.25s infinite linear alternate;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    left: -6px;
+    bottom: 15px;
+    border-radius: 100px 0 0 100px;
+    background: #53707b;
+  }
+  @keyframes l16 {
+    100% {
+      transform: rotate(0);
+    }
+  }
+}

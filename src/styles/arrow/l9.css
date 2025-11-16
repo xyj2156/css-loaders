@@ -1,0 +1,24 @@
+@scope (.__loading-arrow-9) {
+  & {
+    width: 60px;
+    height: 30px;
+    color: #000;
+    display: flex;
+    background:
+      linear-gradient(currentColor 0 0) center/calc(100% - 30px) 10px,
+      conic-gradient(from -136deg at right, #0000, currentColor 1deg 90deg, #0000 91deg) right/15px
+        100%,
+      conic-gradient(from 44deg at left, #0000, currentColor 1deg 90deg, #0000 91deg) left / 15px
+        100%;
+    background-repeat: no-repeat;
+    animation: l9 0.5s infinite linear alternate;
+  }
+  @keyframes l9 {
+    0% {
+      transform: translate(-30px);
+    }
+    100% {
+      transform: translate(30px);
+    }
+  }
+}

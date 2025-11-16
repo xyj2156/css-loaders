@@ -1,0 +1,28 @@
+@scope (.__loading-zig-zag-8) {
+  & {
+    display: inline-grid;
+  }
+  &:before,
+  &:after {
+    content: '';
+    height: 27px;
+    aspect-ratio: 5;
+    --c: #000 90deg, #0000 0;
+    background:
+      conic-gradient(from 135deg at top, var(--c)),
+      conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+    background-size: 20% 50%;
+    background-repeat: repeat-x;
+    -webkit-mask: repeating-linear-gradient(90deg, #000 0 15%, #0000 0 50%) 0 0/200%;
+    animation: l8 0.8s infinite linear;
+  }
+  &:after {
+    animation-delay: -0.2s;
+    animation-direction: reverse;
+  }
+  @keyframes l8 {
+    to {
+      -webkit-mask-position: -100% 0;
+    }
+  }
+}

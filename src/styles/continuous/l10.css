@@ -1,0 +1,15 @@
+@scope (.__loading-continuous-10) {
+  & {
+    width: 120px;
+    height: 20px;
+    background: linear-gradient(#514b82 0 0) left -40px top 0/40px 100% no-repeat #eee;
+    -webkit-mask: conic-gradient(from 90deg at 5px 5px, #0000 25%, #000 0) 0 0 /
+      calc((100% - 5px) / 5) calc(100% - 5px);
+    animation: l10 1s infinite linear;
+  }
+  @keyframes l10 {
+    100% {
+      background-position: right -40px top 0;
+    }
+  }
+}

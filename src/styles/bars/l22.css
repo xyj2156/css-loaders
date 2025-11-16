@@ -1,0 +1,77 @@
+@scope (.__loading-bars-22) {
+  & {
+    width: 45px;
+    aspect-ratio: 1;
+    --c: no-repeat repeating-linear-gradient(90deg, #000 0 20%, #0000 0 40%);
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 100% 26%;
+    animation: l22 1.5s infinite;
+  }
+
+  @keyframes l22 {
+    0% {
+      background-position:
+        0 -20px,
+        0 -20px,
+        0 -20px,
+        0 -20px;
+    }
+    12.5% {
+      background-position:
+        0 -20px,
+        0 -20px,
+        0 -20px,
+        0 calc(3 * 100% / 3);
+    }
+    25% {
+      background-position:
+        0 -20px,
+        0 -20px,
+        0 calc(2 * 100% / 3),
+        0 calc(3 * 100% / 3);
+    }
+    37.5% {
+      background-position:
+        0 -20px,
+        0 calc(1 * 100% / 3),
+        0 calc(2 * 100% / 3),
+        0 calc(3 * 100% / 3);
+    }
+    45%,
+    50% {
+      background-position:
+        0 calc(0 * 100% / 3),
+        0 calc(1 * 100% / 3),
+        0 calc(2 * 100% / 3),
+        0 calc(3 * 100% / 3);
+    }
+    62.5% {
+      background-position:
+        0 calc(0 * 100% / 3),
+        0 calc(1 * 100% / 3),
+        0 calc(2 * 100% / 3),
+        0 50px;
+    }
+    75% {
+      background-position:
+        0 calc(0 * 100% / 3),
+        0 calc(1 * 100% / 3),
+        0 50px,
+        0 50px;
+    }
+    87.5% {
+      background-position:
+        0 calc(0 * 100% / 3),
+        0 50px,
+        0 50px,
+        0 50px;
+    }
+    100% {
+      background-position:
+        0 50px,
+        0 50px,
+        0 50px,
+        0 50px;
+    }
+  }
+}

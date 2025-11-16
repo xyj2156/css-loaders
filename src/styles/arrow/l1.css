@@ -1,0 +1,28 @@
+@scope (.__loading-arrow-1) {
+  & {
+    width: 100px;
+    height: 30px;
+    display: flex;
+  }
+  &:before {
+    content: '';
+    background: #000;
+    width: 15px;
+    clip-path: polygon(
+      0 10px,
+      calc(100% - 15px) 10px,
+      calc(100% - 15px) 0,
+      100% 50%,
+      calc(100% - 15px) 100%,
+      calc(100% - 15px) calc(100% - 10px),
+      0 calc(100% - 10px)
+    );
+    animation: l1 1.5s infinite linear;
+  }
+  @keyframes l1 {
+    90%,
+    100% {
+      flex-grow: 1;
+    }
+  }
+}

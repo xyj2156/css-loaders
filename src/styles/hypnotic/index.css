@@ -1,0 +1,610 @@
+@scope (.__loading-hypnotic-1) {
+  & {
+    width: 50px;
+    aspect-ratio: 1;
+    color: #000;
+    border: 2px solid;
+    display: grid;
+    box-sizing: border-box;
+    animation: l1 4s infinite linear;
+  }
+  &::before,
+  &::after {
+    content: '';
+    grid-area: 1/1;
+    margin: auto;
+    width: 70.7%;
+    aspect-ratio: 1;
+    border: 2px solid;
+    box-sizing: content-box;
+    animation: inherit;
+  }
+  &::after {
+    width: 50%;
+    aspect-ratio: 1;
+    border: 2px solid;
+    animation-duration: 2s;
+  }
+  @keyframes l1 {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+}
+@scope (.__loading-hypnotic-2) {
+  & {
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    color: #000;
+    border: 2px solid;
+    box-sizing: border-box;
+    position: relative;
+    transform-origin: left;
+    animation: l2 1s infinite linear;
+  }
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    margin: auto;
+    width: 50%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid;
+    box-sizing: content-box;
+    transform-origin: 50% calc(100% - 4px);
+    animation: inherit;
+  }
+  &::after {
+    inset: auto 0 calc(100% + 2px);
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+    transform-origin: 50% calc(200% - 2px);
+  }
+  @keyframes l2 {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+}
+@scope (.__loading-hypnotic-3) {
+  & {
+    width: 50px;
+    aspect-ratio: 1;
+    border: 2px solid;
+    --c: conic-gradient(from -90deg at calc(100% - 2px) calc(100% - 2px), #0000 0 90deg, #000 0);
+    background: var(--c), var(--c);
+    background-size: 16px 16px;
+    background-position: 0 0;
+    animation: l3 1s infinite;
+  }
+  @keyframes l3 {
+    100% {
+      background-position:
+        -16px -16px,
+        16px 16px;
+    }
+  }
+}
+@scope (.__loading-hypnotic-4) {
+  & {
+    width: 50px;
+    aspect-ratio: 1;
+    color: #000;
+    border: 2px solid;
+    box-sizing: border-box;
+    --c: radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 3px),
+      currentColor calc(100% - 2px) 98%,
+      #0000
+    );
+    background: var(--c), var(--c);
+    background-size: 23px 23px;
+    background-position:
+      0 0,
+      12px 12px;
+    animation: l4 1s infinite;
+  }
+  @keyframes l4 {
+    100% {
+      background-position:
+        -23px 0px,
+        12px 35px;
+    }
+  }
+}
+@scope (.__loading-hypnotic-5) {
+  & {
+    width: 50px;
+    aspect-ratio: 1.154;
+    display: grid;
+    color: #000;
+    background:
+      linear-gradient(
+          to bottom left,
+          #0000 calc(50% - 1px),
+          currentColor 0 calc(50% + 1px),
+          #0000 0
+        )
+        right/50% 100%,
+      linear-gradient(
+          to bottom right,
+          #0000 calc(50% - 1px),
+          currentColor 0 calc(50% + 1px),
+          #0000 0
+        )
+        left / 50% 100%,
+      linear-gradient(currentColor 0 0) bottom/100% 2px;
+    background-repeat: no-repeat;
+    transform-origin: 50% 66%;
+    animation: l5 4s infinite linear;
+  }
+  &::before,
+  &::after {
+    content: '';
+    grid-area: 1/1;
+    background: inherit;
+    transform-origin: inherit;
+    animation: inherit;
+  }
+  &::after {
+    animation-duration: 2s;
+  }
+  @keyframes l5 {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+}
+@scope (.__loading-hypnotic-6) {
+  & {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    color: #000;
+    background:
+      linear-gradient(90deg, currentColor 2px, #0000 0 calc(100% - 2px), currentColor 0) center/100%
+        14px,
+      linear-gradient(0deg, currentColor 2px, #0000 0 calc(100% - 2px), currentColor 0) center/14px
+        100%,
+      linear-gradient(currentColor 0 0) center/100% 2px,
+      linear-gradient(currentColor 0 0) center/2px 100%;
+    background-repeat: no-repeat;
+    animation: l6 4s infinite linear;
+  }
+  &::before,
+  &::after {
+    content: '';
+    grid-area: 1/1;
+    background: inherit;
+    transform-origin: inherit;
+    animation: inherit;
+  }
+  &::after {
+    animation-duration: 2s;
+  }
+  @keyframes l6 {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+}
+@scope (.__loading-hypnotic-7) {
+  & {
+    width: 50px;
+    aspect-ratio: 1;
+    color: #000;
+    border: 2px solid;
+    box-sizing: border-box;
+    background:
+      repeating-conic-gradient(#0000 0 90deg, currentColor 0 180deg),
+      repeating-conic-gradient(currentColor 0 90deg, #0000 0 180deg);
+    background-size: 16px 16px;
+    background-position: 0 0;
+    animation: l7 2s infinite;
+  }
+  @keyframes l7 {
+    100% {
+      background-position:
+        0px 32px,
+        16px 0px;
+    }
+  }
+}
+@scope (.__loading-hypnotic-8) {
+  & {
+    width: 50px;
+    aspect-ratio: 1;
+    color: #000;
+    border: 2px solid;
+    box-sizing: border-box;
+    background:
+      radial-gradient(farthest-side, currentColor 90%, #0000),
+      radial-gradient(farthest-side, #0000 90%, currentColor);
+    background-size: 16px 16px;
+    background-position: 0 0;
+    animation: l8 2s infinite;
+  }
+  @keyframes l8 {
+    100% {
+      background-position:
+        0px 32px,
+        -16px 0;
+    }
+  }
+}
+@scope (.__loading-hypnotic-9) {
+  & {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: repeating-conic-gradient(#0000, #000 1deg 18deg, #0000 20deg 36deg);
+    animation: l9 4s infinite linear;
+    position: relative;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    background: inherit;
+    animation: inherit;
+  }
+  @keyframes l9 {
+    100% {
+      transform: rotate(0.5turn);
+    }
+  }
+}
+@scope (.__loading-hypnotic-10) {
+  & {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+  }
+  &::before,
+  &::after {
+    content: '';
+    grid-area: 1/1;
+    border-radius: 50%;
+    background: repeating-conic-gradient(#0000, #000 1deg 18deg, #0000 20deg 36deg);
+    -webkit-mask: repeating-radial-gradient(farthest-side, #000 0 10%, #0000 0 20%);
+    animation: l10 4s infinite linear;
+  }
+  &::after {
+    -webkit-mask: repeating-radial-gradient(farthest-side, #0000 0 10%, #000 0 20%);
+    animation-direction: reverse;
+  }
+  @keyframes l10 {
+    100% {
+      transform: rotate(0.5turn);
+    }
+  }
+}
+@scope (.__loading-hypnotic-11) {
+  & {
+    width: 50px;
+    aspect-ratio: 1;
+    border: 2px solid;
+    box-sizing: border-box;
+    border-radius: 50%;
+    display: grid;
+    animation: l11 1.5s infinite linear;
+    transform-origin: 50% 80%;
+  }
+  &:before,
+  &:after {
+    content: '';
+    grid-area: 1/1;
+    border: inherit;
+    border-radius: 50%;
+    animation: inherit;
+    animation-duration: 1s;
+    transform-origin: inherit;
+  }
+  &:after {
+    --s: -1;
+  }
+  @keyframes l11 {
+    100% {
+      transform: rotate(calc(var(--s, 1) * 1turn));
+    }
+  }
+}
+@scope (.__loading-hypnotic-12) {
+  & {
+    width: 60px;
+    height: 25px;
+    border: 2px solid;
+    box-sizing: border-box;
+    border-radius: 50%;
+    display: grid;
+    animation: l2 2s infinite linear;
+  }
+  &:before,
+  &:after {
+    content: '';
+    grid-area: 1/1;
+    border: inherit;
+    border-radius: 50%;
+    animation: inherit;
+    animation-duration: 3s;
+  }
+  &:after {
+    --s: -1;
+  }
+  @keyframes l2 {
+    100% {
+      transform: rotate(calc(var(--s, 1) * 1turn));
+    }
+  }
+}
+@scope (.__loading-hypnotic-13) {
+  & {
+    width: 60px;
+    height: 30px;
+    display: flex;
+    --c: #0000 calc(100% - 5px), #000 calc(100% - 4px) 96%, #0000;
+    background:
+      radial-gradient(farthest-side at bottom, var(--c)) 0 0,
+      radial-gradient(farthest-side at top, var(--c)) 100% 100%;
+    background-size: calc(50% + 2px) 50%;
+    background-repeat: no-repeat;
+    animation: l13 2s infinite linear;
+  }
+  &:before {
+    content: '';
+    flex: 1;
+    background: inherit;
+    transform: rotate(90deg);
+  }
+  @keyframes l13 {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+}
+@scope (.__loading-hypnotic-14) {
+  & {
+    width: 60px;
+    height: 30px;
+    display: grid;
+    --c: #0000 calc(100% - 5px), #000 calc(100% - 4px) 96%, #0000;
+    background:
+      radial-gradient(farthest-side at bottom, var(--c)) 0 0,
+      radial-gradient(farthest-side at top, var(--c)) 100% 100%;
+    background-size: calc(50% + 2px) 50%;
+    background-repeat: no-repeat;
+    animation: l14 1.5s infinite linear;
+  }
+  &:before,
+  &:after {
+    content: '';
+    grid-area: 1/1;
+    background: inherit;
+    animation: inherit;
+    animation-duration: 2s;
+  }
+  &:after {
+    --s: -1;
+  }
+  @keyframes l14 {
+    100% {
+      transform: rotate(calc(var(--s, 1) * 1turn));
+    }
+  }
+}
+@scope (.__loading-hypnotic-15) {
+  & {
+    width: 50px;
+    aspect-ratio: 1;
+    border: 2px solid;
+    box-sizing: border-box;
+    --c: conic-gradient(from 180deg at 50% calc(100% - 2px), #000 90deg, #0000 0);
+    background: var(--c), var(--c);
+    background-position:
+      0 0,
+      8px 0;
+    background-size: 16px 9.6px;
+    animation: l15 1s infinite;
+  }
+  @keyframes l15 {
+    100% {
+      background-position:
+        0 -9.6px,
+        8px 9.6px;
+    }
+  }
+}
+@scope (.__loading-hypnotic-16) {
+  & {
+    width: 50px;
+    aspect-ratio: 1;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -48px;
+    --c: conic-gradient(from 180deg at 50% calc(100% - 2px), #000 90deg, #0000 0);
+    background: var(--c), var(--c);
+    background-position:
+      0 0,
+      8px 0;
+    background-size: 16px 9.6px;
+    animation: l16 2s infinite;
+  }
+  @keyframes l16 {
+    50% {
+      background-position:
+        0 -9.6px,
+        8px 9.6px;
+      transform: rotate(90deg);
+    }
+    100% {
+      background-position:
+        0 -19.2px,
+        8px 19.2px;
+      transform: rotate(180deg);
+    }
+  }
+}
+@scope (.__loading-hypnotic-17) {
+  & {
+    width: 30px;
+    aspect-ratio: 0.577;
+    color: #000;
+    display: grid;
+    background:
+      linear-gradient(currentColor 0 0) top / 100% 1px,
+      linear-gradient(currentColor 0 0) bottom/100% 1px,
+      linear-gradient(
+          to bottom right,
+          #0000 calc(50% - 2px),
+          currentColor calc(50% - 1px),
+          #0000 50%
+        )
+        top/100% calc(100% + 2px),
+      linear-gradient(
+          to bottom left,
+          #0000 calc(50% - 2px),
+          currentColor calc(50% - 1px),
+          #0000 50%
+        )
+        top/100% calc(100% + 2px);
+    background-repeat: no-repeat;
+    animation: l17 4s infinite linear;
+  }
+  &::before,
+  &::after {
+    content: '';
+    grid-area: 1/1;
+    background: inherit;
+    border: inherit;
+    animation: inherit;
+  }
+  &::after {
+    animation-duration: 2s;
+  }
+  @keyframes l17 {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+}
+@scope (.__loading-hypnotic-18) {
+  & {
+    width: 25px;
+    height: 50px;
+    display: grid;
+    color: #000;
+    background:
+      linear-gradient(currentColor 0 0) top/100% 2px,
+      radial-gradient(
+          farthest-side at top,
+          #0000 calc(100% - 2px),
+          currentColor calc(100% - 1px),
+          #0000
+        )
+        top,
+      linear-gradient(currentColor 0 0) bottom/100% 2px,
+      radial-gradient(
+          farthest-side at bottom,
+          #0000 calc(100% - 2px),
+          currentColor calc(100% - 1px),
+          #0000
+        )
+        bottom;
+    background-size:
+      100% 1px,
+      100% 50%;
+    background-repeat: no-repeat;
+    animation: l18 4s infinite linear;
+  }
+  &::before,
+  &::after {
+    content: '';
+    grid-area: 1/1;
+    background: inherit;
+    border: inherit;
+    animation: inherit;
+  }
+  &::after {
+    animation-duration: 2s;
+  }
+  @keyframes l18 {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+}
+@scope (.__loading-hypnotic-19) {
+  & {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+  }
+  &::before,
+  &::after {
+    content: '';
+    grid-area: 1/1;
+    border-radius: 50%;
+    background: repeating-radial-gradient(farthest-side, #0000 0%, #000 1% 10%, #0000 11% 30%);
+    -webkit-mask: repeating-conic-gradient(#000 0 36deg, #0000 0 72deg);
+    animation: l19 4s infinite linear;
+  }
+  &::after {
+    -webkit-mask: repeating-conic-gradient(#0000 0 36deg, #000 0 72deg);
+    animation-direction: reverse;
+  }
+  @keyframes l19 {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+}
+@scope (.__loading-hypnotic-20) {
+  & {
+    --b: 5px;
+    width: calc(12 * var(--b));
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+      repeating-radial-gradient(
+          calc(2 * var(--b)) at top,
+          #0000 -1px,
+          #000 0 calc(50% - 1px),
+          #0000 50% calc(100% - 1px)
+        )
+        calc(50% + var(--b)) 100%,
+      repeating-radial-gradient(
+          calc(2 * var(--b)) at bottom,
+          #000 -1px,
+          #0000 0 calc(50% - 1px),
+          #000 50% calc(100% - 1px)
+        )
+        50% 0;
+    background-size: 150% 50%;
+    background-repeat: no-repeat;
+    mask:
+      radial-gradient(
+          calc(1.5 * var(--b)) at calc(100% - var(--b) / 2) 0,
+          #0000 calc(100% / 3),
+          #000 calc(100% / 3 + 1px) 110%,
+          #0000 0
+        )
+        calc(50% + var(--b) / 2) 100% / calc(3 * var(--b)) 50% exclude no-repeat,
+      conic-gradient(#000 0 0);
+    animation: l20 1s infinite linear;
+  }
+  @keyframes l20 {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@scope (.__loading-growing-1) {
+  & {
+    width: 64px;
+    aspect-ratio: 1;
+    display: grid;
+  }
+  &:before {
+    content: '';
+    border: 8px solid #bd1550;
+    box-sizing: content-box;
+    margin: auto;
+    aspect-ratio: 1;
+    animation: l1 infinite 1s steps(4, jump-none);
+  }
+  @keyframes l1 {
+    0% {
+      width: 0%;
+    }
+    to {
+      width: 75%;
+    }
+  }
+}

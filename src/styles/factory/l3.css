@@ -1,0 +1,27 @@
+@scope (.__loading-factory-3) {
+  & {
+    width: 90px;
+    height: 14px;
+    box-shadow: 0 3px 0 #fff;
+    background: linear-gradient(#fff 0 0) 50%/2px 100% no-repeat;
+    display: grid;
+  }
+  &:before,
+  &:after {
+    content: '';
+    grid-area: 1/1;
+    background: radial-gradient(circle closest-side, var(--c, #fff) 92%, #0000) 0 0 / calc(100% / 4)
+      100%;
+    clip-path: inset(0 50% 0 0);
+    animation: l3 1s infinite linear;
+  }
+  &:after {
+    --c: red;
+    clip-path: inset(0 0 0 50%);
+  }
+  @keyframes l3 {
+    100% {
+      background-position: calc(100% / 3) 0;
+    }
+  }
+}

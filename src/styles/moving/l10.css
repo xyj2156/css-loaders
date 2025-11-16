@@ -1,0 +1,31 @@
+@scope (.__loading-moving-10) {
+  & {
+    height: 40px;
+    aspect-ratio: 1.5;
+    display: grid;
+  }
+  &:before,
+  &:after {
+    content: '';
+    background: #fff;
+    border-radius: 80px 80px 0 0;
+    animation: l10 1s infinite alternate both;
+  }
+  &:after {
+    transform: scale(-1);
+    animation-delay: 0.2s;
+  }
+  @keyframes l10 {
+    0%,
+    10% {
+      margin-inline: 0 33%;
+    }
+    50% {
+      margin-inline: 0 0;
+    }
+    90%,
+    100% {
+      margin-inline: 33% 0;
+    }
+  }
+}

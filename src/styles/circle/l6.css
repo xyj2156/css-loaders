@@ -1,0 +1,33 @@
+@scope (.__loading-circle-6) {
+  &,
+  &:before,
+  &:after {
+    width: 35px;
+    aspect-ratio: 1;
+    box-shadow: 0 0 0 3px inset #fff;
+    position: relative;
+    animation: l6 1.5s infinite 0.5s;
+  }
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: calc(100% + 5px);
+    animation-delay: 1s;
+  }
+  &:after {
+    left: -40px;
+    animation-delay: 0s;
+  }
+  @keyframes l6 {
+    0%,
+    55%,
+    100% {
+      border-radius: 0;
+    }
+    20%,
+    30% {
+      border-radius: 50%;
+    }
+  }
+}

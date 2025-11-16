@@ -1,0 +1,26 @@
+@scope (.__loading-glowing-3) {
+  & {
+    height: 80px;
+    aspect-ratio: 1;
+    padding: 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    position: relative;
+    mask:
+      conic-gradient(#000 0 0) content-box exclude,
+      conic-gradient(#000 0 0);
+    filter: blur(12px);
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(#0000 0 5%, #c02942, #0000 20% 50%);
+    animation: l3 1.5s linear infinite;
+  }
+  @keyframes l3 {
+    to {
+      rotate: 1turn;
+    }
+  }
+}

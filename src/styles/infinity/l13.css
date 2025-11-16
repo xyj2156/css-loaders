@@ -1,0 +1,54 @@
+@scope (.__loading-infinity-13) {
+  & {
+    width: 90px;
+    height: 14px;
+    background:
+      radial-gradient(circle 7px at bottom, #000 92%, #0000) calc(100% / 2) 0,
+      radial-gradient(circle 7px at top, #000 92%, #0000) calc(100% / 2) 100%,
+      conic-gradient(from 135deg at top, #000 90deg, #0000 0) 0 0,
+      conic-gradient(from -45deg at bottom, #000 90deg, #0000 0) 0 100%;
+    background-size: calc(100% / 2) 50%;
+    background-repeat: repeat-x;
+    animation: l13 3s infinite;
+  }
+  @keyframes l13 {
+    0% {
+      background-position:
+        calc(100% / 2) 0,
+        calc(100% / 2) 100%,
+        0 0,
+        0 100%;
+    }
+    20%,
+    30% {
+      background-position:
+        calc(3 * 100% / 4) 0,
+        calc(100% / 4) 100%,
+        calc(100% / 4) 0,
+        calc(100% / -4) 100%;
+    }
+    45%,
+    55% {
+      background-position:
+        100% 0,
+        0 100%,
+        calc(100% / 2) 0,
+        calc(100% / -2) 100%;
+    }
+    70%,
+    80% {
+      background-position:
+        calc(5 * 100% / 4) 0,
+        calc(100% / -4) 100%,
+        calc(3 * 100% / 4) 0,
+        calc(3 * 100% / -4) 100%;
+    }
+    100% {
+      background-position:
+        calc(3 * 100% / 2) 0,
+        calc(100% / -2) 100%,
+        100% 0,
+        -100% 100%;
+    }
+  }
+}

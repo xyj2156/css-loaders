@@ -1,0 +1,33 @@
+@scope (.__loading-shapes-11) {
+  & {
+    width: 40px;
+    aspect-ratio: 1;
+    display: grid;
+  }
+  &::before,
+  &::after {
+    content: '';
+    grid-area: 1/1;
+    background: #25b09b;
+    clip-path: polygon(0 0, 50% 50%, 0 100%);
+    animation: l11 2s infinite;
+  }
+  &::after {
+    animation-delay: -1.5s;
+    --s: 90deg;
+  }
+  @keyframes l11 {
+    0%,
+    12.5% {
+      transform: rotate(var(--s, 0deg)) rotate(0deg);
+    }
+    37.5%,
+    62.5% {
+      transform: rotate(var(--s, 0deg)) rotate(-180deg);
+    }
+    87.5%,
+    100% {
+      transform: rotate(var(--s, 0deg)) rotate(-360deg);
+    }
+  }
+}

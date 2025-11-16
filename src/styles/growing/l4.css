@@ -1,0 +1,37 @@
+@scope (.__loading-growing-4) {
+  & {
+    --b: 9px;
+    width: calc(8 * var(--b));
+    aspect-ratio: 1 / cos(30deg);
+    display: grid;
+  }
+  &:before {
+    content: '';
+    background: #bd1550;
+    aspect-ratio: inherit;
+    clip-path: polygon(
+      0 50%,
+      50% -50%,
+      100% 50%,
+      50% 150%,
+      0 50%,
+      var(--b) 50%,
+      calc(25% + var(--b) * cos(60deg)) calc(100% - var(--b) * sin(60deg)),
+      calc(75% - var(--b) * cos(60deg)) calc(100% - var(--b) * sin(60deg)),
+      calc(100% - var(--b)) 50%,
+      calc(75% - var(--b) * cos(60deg)) calc(var(--b) * sin(60deg)),
+      calc(25% + var(--b) * cos(60deg)) calc(var(--b) * sin(60deg)),
+      var(--b) 50%
+    );
+    margin: auto;
+    animation: l4 infinite 1s steps(4, jump-none);
+  }
+  @keyframes l4 {
+    0% {
+      width: 25%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@scope (.__loading-circle-3) {
+  & {
+    display: inline-flex;
+    gap: 5px;
+  }
+  &:before,
+  &:after {
+    content: '';
+    width: 35px;
+    aspect-ratio: 1;
+    box-shadow: 0 0 0 3px inset #fff;
+    animation: 2s infinite linear;
+    animation-name: l3-1, l3-2;
+    animation-delay: -1s, 0s;
+  }
+  &:after {
+    --s: -1;
+  }
+  @keyframes l3-1 {
+    0% {
+      border-radius: 50% 0 0 50%;
+    }
+    25% {
+      border-radius: 50% 50% 0 0;
+    }
+    50% {
+      border-radius: 0 50% 50% 0;
+    }
+    75% {
+      border-radius: 0 0 50% 50%;
+    }
+    100% {
+      border-radius: 50% 0 0 50%;
+    }
+  }
+  @keyframes l3-2 {
+    0% {
+      transform: scaleX(var(--s, 1)) rotate(0deg);
+    }
+    100% {
+      transform: scaleX(var(--s, 1)) rotate(-360deg);
+    }
+  }
+}

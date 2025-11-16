@@ -1,0 +1,32 @@
+@scope (.__loading-rolling-9) {
+  & {
+    display: inline-grid;
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: repeating-conic-gradient(from 30deg, #c02942 0 60deg, #0b486b 0 120deg);
+    animation: l9-0 3s linear infinite;
+  }
+  &:before,
+  &:after {
+    content: '';
+    grid-area: 1/1;
+    border-radius: 50%;
+    background: inherit;
+    transform: rotate(0turn) translate(100%, 0);
+    animation: l9-1 3s linear infinite;
+  }
+  &:after {
+    animation-delay: -1.5s;
+  }
+  @keyframes l9-0 {
+    to {
+      rotate: -1turn;
+    }
+  }
+  @keyframes l9-1 {
+    to {
+      transform: rotate(1turn) translate(100%, 0) rotate(1turn);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@scope (.__loading-infinity-8) {
+  & {
+    width: 90px;
+    height: 12px;
+    --c: #000 50%, #0000 0;
+    background:
+      linear-gradient(90deg, var(--c)) 0 0%,
+      linear-gradient(-90deg, var(--c)) 0 50%,
+      linear-gradient(90deg, var(--c)) 0 100%;
+    background-size: 8px calc(100% / 3);
+    background-repeat: repeat-x;
+    animation: l8 0.25s infinite linear;
+  }
+  @keyframes l8 {
+    100% {
+      background-position:
+        -8px 0%,
+        -8px 50%,
+        -8px 100%;
+    }
+  }
+}

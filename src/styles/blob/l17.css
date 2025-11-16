@@ -1,0 +1,63 @@
+@scope (.__loading-blob-17) {
+  & {
+    width: 80px;
+    aspect-ratio: 1;
+    border: 10px solid #000;
+    box-sizing: border-box;
+    background:
+      radial-gradient(farthest-side, #fff 98%, #0000) 50%/20px 20px,
+      radial-gradient(farthest-side, #fff 98%, #0000) 50%/20px 20px,
+      radial-gradient(farthest-side, #fff 98%, #0000) 50%/20px 20px,
+      radial-gradient(farthest-side, #fff 98%, #0000) 50%/20px 20px,
+      radial-gradient(farthest-side, #fff 98%, #0000) 50%/80% 80%,
+      #000;
+    background-repeat: no-repeat;
+    filter: blur(4px) contrast(10);
+    animation: l17 1s infinite alternate;
+  }
+  @keyframes l17 {
+    0% {
+      background-position: 50%, 50%, 50%, 50%, 50%, 50%, 50%;
+    }
+    25% {
+      background-position:
+        0 0,
+        50%,
+        50%,
+        50%,
+        50%,
+        50%,
+        50%;
+    }
+    50% {
+      background-position:
+        0 0,
+        100% 0,
+        50%,
+        50%,
+        50%,
+        50%,
+        50%;
+    }
+    75% {
+      background-position:
+        0 0,
+        100% 0,
+        100% 100%,
+        50%,
+        50%,
+        50%,
+        50%;
+    }
+    100% {
+      background-position:
+        0 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+        50%,
+        50%,
+        50%;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@scope (.__loading-zig-zag-5) {
+  & {
+    height: 27px;
+    aspect-ratio: 5;
+    --c: #000 90deg, #0000 0;
+    background:
+      conic-gradient(from 135deg at top, var(--c)),
+      conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+    background-size: 20% 50%;
+    background-repeat: repeat-x;
+    clip-path: inset(0 60% 0 0);
+    animation: l5 0.8s infinite linear alternate;
+  }
+  @keyframes l5 {
+    to {
+      clip-path: inset(0 0 0 60%);
+    }
+  }
+}

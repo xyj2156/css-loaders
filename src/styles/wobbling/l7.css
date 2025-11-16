@@ -1,0 +1,26 @@
+@scope (.__loading-wobbling-7) {
+  & {
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(at 30% 30%, #0000, #000a) red;
+    position: relative;
+    left: 0;
+    top: 0;
+    animation:
+      l7-1 0.6s,
+      l7-2 0.3s;
+    animation-timing-function: cubic-bezier(0.5, -200, 0.5, 200);
+    animation-iteration-count: infinite;
+  }
+  @keyframes l7-1 {
+    100% {
+      left: 1px;
+    }
+  }
+  @keyframes l7-2 {
+    100% {
+      top: 0.3px;
+    }
+  }
+}

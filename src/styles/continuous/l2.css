@@ -1,0 +1,13 @@
+@scope (.__loading-continuous-2) {
+  & {
+    width: 120px;
+    height: 20px;
+    background: linear-gradient(90deg, #0000, orange) left -50px top 0/50px 20px no-repeat lightblue;
+    animation: l2 1s infinite linear;
+  }
+  @keyframes l2 {
+    100% {
+      background-position: right -50px top 0;
+    }
+  }
+}

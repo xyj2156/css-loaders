@@ -1,0 +1,28 @@
+@scope (.__loading-wobbling-5) {
+  & {
+    width: 120px;
+    height: 20px;
+    clip-path: polygon(
+      10px 0,
+      calc(100% - 10px) 0,
+      100% 50%,
+      calc(100% - 10px) 100%,
+      10px 100%,
+      0 50%
+    );
+    background:
+      conic-gradient(from 135deg at top, #f03355 90deg, #0000 0) top left,
+      conic-gradient(from -45deg at bottom, #f03355 90deg, #0000 0) bottom left,
+      #ccc;
+    background-size: 20px 50%;
+    background-repeat: no-repeat;
+    animation: l5 1s infinite linear;
+  }
+  @keyframes l5 {
+    50% {
+      background-position:
+        top right,
+        bottom right;
+    }
+  }
+}

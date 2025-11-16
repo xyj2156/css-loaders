@@ -1,0 +1,31 @@
+@scope (.__loading-dancers-9) {
+  & {
+    width: 32px;
+    height: 16px;
+    display: flex;
+    animation: l9-0 1s infinite;
+  }
+  &:before,
+  &:after {
+    content: '';
+    flex: 1;
+    background: #3fb8af;
+    transform-origin: top right;
+    animation: l9-1 1s infinite;
+  }
+  &:after {
+    background: #ff3d7f;
+    transform-origin: top left;
+    --s: -1;
+  }
+  @keyframes l9-0 {
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes l9-1 {
+    100% {
+      transform: rotate(calc(var(--s, 1) * 90deg));
+    }
+  }
+}

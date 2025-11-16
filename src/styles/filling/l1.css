@@ -1,0 +1,21 @@
+@scope (.__loading-filling-1) {
+  & {
+    width: fit-content;
+    font-size: 40px;
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0000;
+    -webkit-text-stroke: 1px #000;
+    background: conic-gradient(#000 0 0) 0/0% 100% no-repeat text;
+    animation: l1 1s linear infinite;
+  }
+  &:before {
+    content: 'Loading';
+  }
+  @keyframes l1 {
+    to {
+      background-size: 120% 100%;
+    }
+  }
+}

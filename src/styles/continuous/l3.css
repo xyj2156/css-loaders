@@ -1,0 +1,15 @@
+@scope (.__loading-continuous-3) {
+  & {
+    width: 120px;
+    height: 20px;
+    transform: skewX(-45deg);
+    background: linear-gradient(#f03355 0 0) left -30px top 0/30px 20px no-repeat #ccc;
+    animation: l3 1s infinite linear;
+  }
+
+  @keyframes l3 {
+    100% {
+      background-position: right -30px top 0;
+    }
+  }
+}

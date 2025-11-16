@@ -1,0 +1,38 @@
+@scope (.__loading-moving-1) {
+  & {
+    height: 40px;
+    aspect-ratio: 1.5;
+    --c: no-repeat linear-gradient(#fff 0 0);
+    background: var(--c), var(--c);
+    background-size: 66% 50%;
+    animation: l1 1.5s infinite linear;
+  }
+  @keyframes l1 {
+    0% {
+      background-position:
+        0 0,
+        0 100%;
+    }
+    25% {
+      background-position:
+        100% 0,
+        0 100%;
+    }
+    47%,
+    53% {
+      background-position:
+        100% 0,
+        100% 100%;
+    }
+    75% {
+      background-position:
+        0 0,
+        100% 100%;
+    }
+    100% {
+      background-position:
+        0 0,
+        0 100%;
+    }
+  }
+}

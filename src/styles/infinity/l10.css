@@ -1,0 +1,20 @@
+@scope (.__loading-infinity-10) {
+  & {
+    width: 90px;
+    height: 12px;
+    --c: #000 50%, #0000 0;
+    background:
+      linear-gradient(90deg, var(--c)) 0 0,
+      linear-gradient(-90deg, var(--c)) 0 0;
+    background-size: 20px 100%;
+    background-repeat: repeat-x;
+    animation: l10 1s infinite linear;
+  }
+  @keyframes l10 {
+    100% {
+      background-position:
+        -20px 0,
+        20px 0;
+    }
+  }
+}

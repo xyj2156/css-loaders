@@ -1,0 +1,49 @@
+@scope (.__loading-shapes-10) {
+  & {
+    display: flex;
+    width: 50px;
+    aspect-ratio: 1;
+    animation: l10-0 1.5s infinite linear;
+  }
+  &:before,
+  &:after {
+    content: '';
+    width: 50%;
+    background: #514b82;
+    clip-path: polygon(0 0, 100% 50%, 0% 100%);
+    animation: inherit;
+    animation-name: l10-1;
+    transform-origin: bottom left;
+  }
+  &:before {
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    transform-origin: bottom right;
+    --s: -1;
+  }
+  @keyframes l10-0 {
+    0%,
+    34.99% {
+      transform: scaley(1);
+    }
+    35%,
+    70% {
+      transform: scaley(-1);
+    }
+    90%,
+    100% {
+      transform: scaley(-1) rotate(180deg);
+    }
+  }
+
+  @keyframes l10-1 {
+    0%,
+    10%,
+    70%,
+    100% {
+      transform: translateY(-100%) rotate(calc(var(--s, 1) * 135deg));
+    }
+    35% {
+      transform: translateY(0%) rotate(0deg);
+    }
+  }
+}
