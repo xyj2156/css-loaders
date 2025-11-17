@@ -1,33 +1,31 @@
-@scope (.__loading-pulsing-4) {
-  & {
-    width: 60px;
-    aspect-ratio: 1;
-    position: relative;
-  }
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    inset: 0;
-    background:
-      radial-gradient(circle 10px, #f85c00 94%, #0000),
-      repeating-conic-gradient(from -30deg, #0000 0 60deg, #f85c00 61deg 120deg);
-    -webkit-mask: radial-gradient(
-      circle 15px,
-      #000 calc(100% - 6px),
-      #0000 calc(100% - 5px) 94%,
-      #000
-    );
-  }
-  &:after {
-    animation: l4 1s infinite;
-    transform: perspective(300px) translateZ(0px);
-  }
-  @keyframes l4 {
-    to {
-      transform: perspective(300px) translateZ(150px);
-      opacity: 0;
-    }
+.__loading-pulsing-4 {
+  width: 60px;
+  aspect-ratio: 1;
+  position: relative;
+}
+.__loading-pulsing-4:before,
+.__loading-pulsing-4:after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  background:
+    radial-gradient(circle 10px, #f85c00 94%, #0000),
+    repeating-conic-gradient(from -30deg, #0000 0 60deg, #f85c00 61deg 120deg);
+  -webkit-mask: radial-gradient(
+    circle 15px,
+    #000 calc(100% - 6px),
+    #0000 calc(100% - 5px) 94%,
+    #000
+  );
+}
+.__loading-pulsing-4:after {
+  animation: __loading-pulsing-4-l4 1s infinite;
+  transform: perspective(300px) translateZ(0px);
+}
+@keyframes __loading-pulsing-4-l4 {
+  to {
+    transform: perspective(300px) translateZ(150px);
+    opacity: 0;
   }
 }

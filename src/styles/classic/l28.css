@@ -1,32 +1,30 @@
-@scope (.__loading-classic-28) {
-  & {
-    width: fit-content;
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 30px;
-    overflow: hidden;
-    animation: l28 2s infinite;
-  }
-  &::before {
-    content: 'Loading...';
-  }
+.__loading-classic-28 {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  overflow: hidden;
+  animation: __loading-classic-28-l28 2s infinite;
+}
+.__loading-classic-28::before {
+  content: 'Loading...';
+}
 
-  @keyframes l28 {
-    0%,
-    10% {
-      transform: perspective(300px) rotate(0) rotateY(0) rotateX(0);
-    }
-    30%,
-    36% {
-      transform: perspective(300px) rotate(0.5turn) rotateY(0) rotateX(0);
-    }
-    63%,
-    69% {
-      transform: perspective(300px) rotate(0.5turn) rotateY(180deg) rotateX(0);
-    }
-    90%,
-    100% {
-      transform: perspective(300px) rotate(0.5turn) rotateY(180deg) rotateX(180deg);
-    }
+@keyframes __loading-classic-28-l28 {
+  0%,
+  10% {
+    transform: perspective(300px) rotate(0) rotateY(0) rotateX(0);
+  }
+  30%,
+  36% {
+    transform: perspective(300px) rotate(0.5turn) rotateY(0) rotateX(0);
+  }
+  63%,
+  69% {
+    transform: perspective(300px) rotate(0.5turn) rotateY(180deg) rotateX(0);
+  }
+  90%,
+  100% {
+    transform: perspective(300px) rotate(0.5turn) rotateY(180deg) rotateX(180deg);
   }
 }

@@ -1,21 +1,19 @@
-@scope (.__loading-filling-12) {
-  & {
-    width: fit-content;
-    font-size: 40px;
-    font-family: monospace;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #0000;
-    -webkit-text-stroke: 1px #000;
-    background: linear-gradient(90deg, #0000 33%, #000 0 67%, #0000 0) 100%/300% 100% no-repeat text;
-    animation: l12 4s steps(14) infinite;
-  }
-  &:before {
-    content: 'Loading';
-  }
-  @keyframes l12 {
-    to {
-      background-position: 0;
-    }
+.__loading-filling-12 {
+  width: fit-content;
+  font-size: 40px;
+  font-family: monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0000;
+  -webkit-text-stroke: 1px #000;
+  background: linear-gradient(90deg, #0000 33%, #000 0 67%, #0000 0) 100%/300% 100% no-repeat text;
+  animation: __loading-filling-12-l12 4s steps(14) infinite;
+}
+.__loading-filling-12:before {
+  content: 'Loading';
+}
+@keyframes __loading-filling-12-l12 {
+  to {
+    background-position: 0;
   }
 }

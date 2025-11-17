@@ -1,44 +1,42 @@
-@scope (.__loading-filling-6) {
-  & {
-    width: fit-content;
-    font-size: 40px;
-    font-family: system-ui, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #0000;
-    -webkit-text-stroke: 1px #000;
-    background:
-      conic-gradient(from -135deg at 100% 50%, #000 90deg, #0000 0) text no-repeat,
-      conic-gradient(from -135deg at 1lh 50%, #0000 90deg, #000 0) text no-repeat;
-    animation: l6 2s linear infinite;
+.__loading-filling-6 {
+  width: fit-content;
+  font-size: 40px;
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0000;
+  -webkit-text-stroke: 1px #000;
+  background:
+    conic-gradient(from -135deg at 100% 50%, #000 90deg, #0000 0) text no-repeat,
+    conic-gradient(from -135deg at 1lh 50%, #0000 90deg, #000 0) text no-repeat;
+  animation: __loading-filling-6-l6 2s linear infinite;
+}
+.__loading-filling-6:before {
+  content: 'Loading';
+}
+@keyframes __loading-filling-6-l6 {
+  0% {
+    background-size: 0 200%;
+    background-position:
+      0 0,
+      100% 0;
   }
-  &:before {
-    content: 'Loading';
+  50% {
+    background-size: calc(60% + 0.5lh) 200%;
+    background-position:
+      0 0,
+      100% 0;
   }
-  @keyframes l6 {
-    0% {
-      background-size: 0 200%;
-      background-position:
-        0 0,
-        100% 0;
-    }
-    50% {
-      background-size: calc(60% + 0.5lh) 200%;
-      background-position:
-        0 0,
-        100% 0;
-    }
-    50.01% {
-      background-size: calc(60% + 0.5lh) 200%;
-      background-position:
-        0 100%,
-        100% 100%;
-    }
-    100% {
-      background-size: 0 200%;
-      background-position:
-        0 100%,
-        100% 100%;
-    }
+  50.01% {
+    background-size: calc(60% + 0.5lh) 200%;
+    background-position:
+      0 100%,
+      100% 100%;
+  }
+  100% {
+    background-size: 0 200%;
+    background-position:
+      0 100%,
+      100% 100%;
   }
 }

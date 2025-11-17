@@ -1,31 +1,29 @@
-@scope (.__loading-moving-10) {
-  & {
-    height: 40px;
-    aspect-ratio: 1.5;
-    display: grid;
+.__loading-moving-10 {
+  height: 40px;
+  aspect-ratio: 1.5;
+  display: grid;
+}
+.__loading-moving-10:before,
+.__loading-moving-10:after {
+  content: '';
+  background: #fff;
+  border-radius: 80px 80px 0 0;
+  animation: __loading-moving-10-l10 1s infinite alternate both;
+}
+.__loading-moving-10:after {
+  transform: scale(-1);
+  animation-delay: 0.2s;
+}
+@keyframes __loading-moving-10-l10 {
+  0%,
+  10% {
+    margin-inline: 0 33%;
   }
-  &:before,
-  &:after {
-    content: '';
-    background: #fff;
-    border-radius: 80px 80px 0 0;
-    animation: l10 1s infinite alternate both;
+  50% {
+    margin-inline: 0 0;
   }
-  &:after {
-    transform: scale(-1);
-    animation-delay: 0.2s;
-  }
-  @keyframes l10 {
-    0%,
-    10% {
-      margin-inline: 0 33%;
-    }
-    50% {
-      margin-inline: 0 0;
-    }
-    90%,
-    100% {
-      margin-inline: 33% 0;
-    }
+  90%,
+  100% {
+    margin-inline: 33% 0;
   }
 }

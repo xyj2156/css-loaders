@@ -1,20 +1,18 @@
-@scope (.__loading-shuriken-5) {
-  & {
-    width: 80px;
-    aspect-ratio: 1;
-    color: #8d7958;
-    background:
-      linear-gradient(currentColor 0 0) 50%/100% 15px,
-      linear-gradient(currentColor 0 0) 50%/15px 100%,
-      radial-gradient(circle 15px, currentColor 94%, #0000);
-    background-repeat: no-repeat;
-    -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
-    clip-path: polygon(0 30px, calc(100% - 30px) 0, 100% calc(100% - 30px), 30px 100%);
-    animation: l5 1.5s infinite linear;
-  }
-  @keyframes l5 {
-    100% {
-      transform: rotate(1turn);
-    }
+.__loading-shuriken-5 {
+  width: 80px;
+  aspect-ratio: 1;
+  color: #8d7958;
+  background:
+    linear-gradient(currentColor 0 0) 50%/100% 15px,
+    linear-gradient(currentColor 0 0) 50%/15px 100%,
+    radial-gradient(circle 15px, currentColor 94%, #0000);
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+  clip-path: polygon(0 30px, calc(100% - 30px) 0, 100% calc(100% - 30px), 30px 100%);
+  animation: __loading-shuriken-5-l5 1.5s infinite linear;
+}
+@keyframes __loading-shuriken-5-l5 {
+  100% {
+    transform: rotate(1turn);
   }
 }

@@ -68,7 +68,7 @@ api
           const file = `${path}/${id}.css`;
           const cls = `__loading-${name}-${i + 1}`;
           clss.push(cls);
-          const content = transStyle(`.${cls}`, `#${id}`, style);
+          const content = transStyle(cls, id, style);
           index.push(content);
           open(file, 'w', function (err, fd) {
             if (err) throw err;

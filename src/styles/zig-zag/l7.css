@@ -1,27 +1,25 @@
-@scope (.__loading-zig-zag-7) {
-  & {
-    display: inline-grid;
-  }
-  &:before,
-  &:after {
-    content: '';
-    height: 27px;
-    aspect-ratio: 5;
-    --c: #000 90deg, #0000 0;
-    background:
-      conic-gradient(from 135deg at top, var(--c)),
-      conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
-    background-size: 20% 50%;
-    background-repeat: repeat-x;
-    clip-path: inset(0 60% 0 0);
-    animation: l7 0.8s infinite linear alternate;
-  }
-  &:after {
-    animation-direction: alternate-reverse;
-  }
-  @keyframes l7 {
-    to {
-      clip-path: inset(0 0 0 60%);
-    }
+.__loading-zig-zag-7 {
+  display: inline-grid;
+}
+.__loading-zig-zag-7:before,
+.__loading-zig-zag-7:after {
+  content: '';
+  height: 27px;
+  aspect-ratio: 5;
+  --c: #000 90deg, #0000 0;
+  background:
+    conic-gradient(from 135deg at top, var(--c)),
+    conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 60% 0 0);
+  animation: __loading-zig-zag-7-l7 0.8s infinite linear alternate;
+}
+.__loading-zig-zag-7:after {
+  animation-direction: alternate-reverse;
+}
+@keyframes __loading-zig-zag-7-l7 {
+  to {
+    clip-path: inset(0 0 0 60%);
   }
 }

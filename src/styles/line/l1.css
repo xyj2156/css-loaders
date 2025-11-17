@@ -1,51 +1,49 @@
-@scope (.__loading-line-1) {
-  & {
-    width: 35px;
-    aspect-ratio: 1;
-    --c: no-repeat linear-gradient(#046d8b 0 0);
-    background:
-      var(--c) 0 0,
-      var(--c) 100% 0,
-      var(--c) 100% 100%,
-      var(--c) 0 100%;
-    animation: l1 1s infinite alternate;
+.__loading-line-1 {
+  width: 35px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(#046d8b 0 0);
+  background:
+    var(--c) 0 0,
+    var(--c) 100% 0,
+    var(--c) 100% 100%,
+    var(--c) 0 100%;
+  animation: __loading-line-1-l1 1s infinite alternate;
+}
+@keyframes __loading-line-1-l1 {
+  0% {
+    background-size:
+      0 4px,
+      4px 0,
+      0 4px,
+      4px 0;
   }
-  @keyframes l1 {
-    0% {
-      background-size:
-        0 4px,
-        4px 0,
-        0 4px,
-        4px 0;
-    }
-    25% {
-      background-size:
-        100% 4px,
-        4px 0,
-        0 4px,
-        4px 0;
-    }
-    50% {
-      background-size:
-        100% 4px,
-        4px 100%,
-        0 4px,
-        4px 0;
-    }
-    75% {
-      background-size:
-        100% 4px,
-        4px 100%,
-        100% 4px,
-        4px 0;
-    }
-    90%,
-    100% {
-      background-size:
-        100% 4px,
-        4px 100%,
-        100% 4px,
-        4px 100%;
-    }
+  25% {
+    background-size:
+      100% 4px,
+      4px 0,
+      0 4px,
+      4px 0;
+  }
+  50% {
+    background-size:
+      100% 4px,
+      4px 100%,
+      0 4px,
+      4px 0;
+  }
+  75% {
+    background-size:
+      100% 4px,
+      4px 100%,
+      100% 4px,
+      4px 0;
+  }
+  90%,
+  100% {
+    background-size:
+      100% 4px,
+      4px 100%,
+      100% 4px,
+      4px 100%;
   }
 }

@@ -1,22 +1,20 @@
-@scope (.__loading-rolling-4) {
-  & {
-    display: inline-grid;
-    width: 80px;
-    aspect-ratio: 2;
-    overflow: hidden;
-    border-image: 1 0/0 0 8px/0 0 8px repeating-linear-gradient(90deg, #0b486b 0 26%, #c02942 0 52%);
-  }
-  &:before {
-    content: '';
-    margin: 0 25%;
-    border-radius: 50%;
-    background: repeating-conic-gradient(#c02942 0 60deg, #0b486b 0 120deg);
-    transform: translate(-154%, 0) rotate(0turn);
-    animation: l4 3s linear infinite;
-  }
-  @keyframes l4 {
-    to {
-      transform: translate(160%, 0) rotate(1turn);
-    }
+.__loading-rolling-4 {
+  display: inline-grid;
+  width: 80px;
+  aspect-ratio: 2;
+  overflow: hidden;
+  border-image: 1 0/0 0 8px/0 0 8px repeating-linear-gradient(90deg, #0b486b 0 26%, #c02942 0 52%);
+}
+.__loading-rolling-4:before {
+  content: '';
+  margin: 0 25%;
+  border-radius: 50%;
+  background: repeating-conic-gradient(#c02942 0 60deg, #0b486b 0 120deg);
+  transform: translate(-154%, 0) rotate(0turn);
+  animation: __loading-rolling-4-l4 3s linear infinite;
+}
+@keyframes __loading-rolling-4-l4 {
+  to {
+    transform: translate(160%, 0) rotate(1turn);
   }
 }

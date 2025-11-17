@@ -1,14 +1,12 @@
-@scope (.__loading-dots-2) {
-  & {
-    width: 60px;
-    aspect-ratio: 4;
-    background: radial-gradient(circle closest-side, #000 90%, #0000) 0 / calc(100% / 3) 100%
-      no-repeat;
-    animation: l2 1s steps(3) infinite;
-  }
-  @keyframes l2 {
-    to {
-      background-position: 150%;
-    }
+.__loading-dots-2 {
+  width: 60px;
+  aspect-ratio: 4;
+  background: radial-gradient(circle closest-side, #000 90%, #0000) 0 / calc(100% / 3) 100%
+    no-repeat;
+  animation: __loading-dots-2-l2 1s steps(3) infinite;
+}
+@keyframes __loading-dots-2-l2 {
+  to {
+    background-position: 150%;
   }
 }

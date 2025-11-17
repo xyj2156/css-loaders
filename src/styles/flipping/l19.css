@@ -1,48 +1,46 @@
-@scope (.__loading-flipping-19) {
-  & {
-    width: 60px;
-    aspect-ratio: 1;
-    display: grid;
+.__loading-flipping-19 {
+  width: 60px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-flipping-19:before,
+.__loading-flipping-19:after {
+  content: '';
+  grid-area: 1/1;
+  color: #25b09b;
+  animation: __loading-flipping-19-l19 1.5s infinite linear;
+}
+.__loading-flipping-19:before {
+  margin: 5px 20px;
+  background: currentColor;
+}
+.__loading-flipping-19:after {
+  border: solid;
+  border-width: 5px 20px;
+  --s: 0;
+}
+@keyframes __loading-flipping-19-l19 {
+  0% {
+    transform: perspective(100px) rotate3d(1, var(--s, 1), 0, 0);
   }
-  &:before,
-  &:after {
-    content: '';
-    grid-area: 1/1;
-    color: #25b09b;
-    animation: l19 1.5s infinite linear;
+  25% {
+    transform: perspective(100px) rotate3d(1, var(--s, 1), 0, 90deg);
   }
-  &:before {
-    margin: 5px 20px;
-    background: currentColor;
+  25.01% {
+    transform: perspective(100px) rotate3d(1, var(--s, 1), 0, 90deg);
   }
-  &:after {
-    border: solid;
-    border-width: 5px 20px;
-    --s: 0;
+  40%,
+  60% {
+    transform: perspective(100px) rotate3d(1, var(--s, 1), 0, 180deg);
   }
-  @keyframes l19 {
-    0% {
-      transform: perspective(100px) rotate3d(1, var(--s, 1), 0, 0);
-    }
-    25% {
-      transform: perspective(100px) rotate3d(1, var(--s, 1), 0, 90deg);
-    }
-    25.01% {
-      transform: perspective(100px) rotate3d(1, var(--s, 1), 0, 90deg);
-    }
-    40%,
-    60% {
-      transform: perspective(100px) rotate3d(1, var(--s, 1), 0, 180deg);
-    }
-    75% {
-      transform: perspective(100px) rotate3d(1, var(--s, 1), 0, 270deg);
-    }
-    75.01% {
-      transform: perspective(100px) rotate3d(1, var(--s, 1), 0, 270deg);
-    }
-    90%,
-    100% {
-      transform: perspective(100px) rotate3d(1, var(--s, 1), 0, 360deg);
-    }
+  75% {
+    transform: perspective(100px) rotate3d(1, var(--s, 1), 0, 270deg);
+  }
+  75.01% {
+    transform: perspective(100px) rotate3d(1, var(--s, 1), 0, 270deg);
+  }
+  90%,
+  100% {
+    transform: perspective(100px) rotate3d(1, var(--s, 1), 0, 360deg);
   }
 }

@@ -1,41 +1,39 @@
-@scope (.__loading-thin-10) {
-  & {
-    height: 3px;
-    width: 60px;
-    background: linear-gradient(#000 0 0) right/51% 100% no-repeat;
-    display: flex;
-    animation: l10-0 2s linear infinite;
+.__loading-thin-10 {
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(#000 0 0) right/51% 100% no-repeat;
+  display: flex;
+  animation: __loading-thin-10-l10-0 2s linear infinite;
+}
+.__loading-thin-10:before,
+.__loading-thin-10:after {
+  content: '';
+  width: 15px;
+  background: #000;
+  animation: __loading-thin-10-l10-1 2s linear infinite;
+}
+.__loading-thin-10:after {
+  animation-delay: -1s;
+  --s: -1;
+}
+@keyframes __loading-thin-10-l10-1 {
+  0%,
+  100% {
+    transform: scaleX(var(--s, 1)) rotate(0);
   }
-  &:before,
-  &:after {
-    content: '';
-    width: 15px;
-    background: #000;
-    animation: l10-1 2s linear infinite;
+  25%,
+  75% {
+    transform: scaleX(var(--s, 1)) rotate(180deg);
   }
-  &:after {
-    animation-delay: -1s;
-    --s: -1;
-  }
-  @keyframes l10-1 {
-    0%,
-    100% {
-      transform: scaleX(var(--s, 1)) rotate(0);
-    }
-    25%,
-    75% {
-      transform: scaleX(var(--s, 1)) rotate(180deg);
-    }
-  }
+}
 
-  @keyframes l10-0 {
-    0%,
-    49.9% {
-      transform: scaleX(1);
-    }
-    50%,
-    100% {
-      transform: scaleX(-1);
-    }
+@keyframes __loading-thin-10-l10-0 {
+  0%,
+  49.9% {
+    transform: scaleX(1);
+  }
+  50%,
+  100% {
+    transform: scaleX(-1);
   }
 }

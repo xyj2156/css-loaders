@@ -1,553 +1,533 @@
-@scope (.__loading-moving-1) {
-  & {
-    height: 40px;
-    aspect-ratio: 1.5;
-    --c: no-repeat linear-gradient(#fff 0 0);
-    background: var(--c), var(--c);
-    background-size: 66% 50%;
-    animation: l1 1.5s infinite linear;
+.__loading-moving-1 {
+  height: 40px;
+  aspect-ratio: 1.5;
+  --c: no-repeat linear-gradient(#fff 0 0);
+  background: var(--c), var(--c);
+  background-size: 66% 50%;
+  animation: __loading-moving-1-l1 1.5s infinite linear;
+}
+@keyframes __loading-moving-1-l1 {
+  0% {
+    background-position:
+      0 0,
+      0 100%;
   }
-  @keyframes l1 {
-    0% {
-      background-position:
-        0 0,
-        0 100%;
-    }
-    25% {
-      background-position:
-        100% 0,
-        0 100%;
-    }
-    47%,
-    53% {
-      background-position:
-        100% 0,
-        100% 100%;
-    }
-    75% {
-      background-position:
-        0 0,
-        100% 100%;
-    }
-    100% {
-      background-position:
-        0 0,
-        0 100%;
-    }
+  25% {
+    background-position:
+      100% 0,
+      0 100%;
+  }
+  47%,
+  53% {
+    background-position:
+      100% 0,
+      100% 100%;
+  }
+  75% {
+    background-position:
+      0 0,
+      100% 100%;
+  }
+  100% {
+    background-position:
+      0 0,
+      0 100%;
   }
 }
-@scope (.__loading-moving-2) {
-  & {
-    height: 60px;
-    aspect-ratio: 1;
-    --c: no-repeat linear-gradient(#fff 0 0);
-    background: var(--c), var(--c), var(--c), var(--c);
-    background-size: 33.4% 33.4%;
-    animation: l2 2s infinite linear;
+.__loading-moving-2 {
+  height: 60px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(#fff 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 33.4% 33.4%;
+  animation: __loading-moving-2-l2 2s infinite linear;
+}
+@keyframes __loading-moving-2-l2 {
+  0% {
+    background-position:
+      0 0,
+      50% 0,
+      0 50%,
+      50% 50%;
   }
-  @keyframes l2 {
-    0% {
-      background-position:
-        0 0,
-        50% 0,
-        0 50%,
-        50% 50%;
-    }
-    12.5% {
-      background-position:
-        50% 0,
-        100% 0,
-        0 50%,
-        50% 50%;
-    }
-    25% {
-      background-position:
-        50% 0,
-        100% 0,
-        50% 50%,
-        100% 50%;
-    }
-    37.5% {
-      background-position:
-        50% 0,
-        100% 50%,
-        50% 50%,
-        100% 100%;
-    }
-    50% {
-      background-position:
-        50% 50%,
-        100% 50%,
-        50% 100%,
-        100% 100%;
-    }
-    62.5% {
-      background-position:
-        50% 50%,
-        100% 50%,
-        0 100%,
-        50% 100%;
-    }
-    75% {
-      background-position:
-        0 50%,
-        50% 50%,
-        0 100%,
-        50% 100%;
-    }
-    87.5% {
-      background-position:
-        0 0,
-        50% 50%,
-        0 50%,
-        50% 100%;
-    }
-    100% {
-      background-position:
-        0 0,
-        50% 0,
-        0 50%,
-        50% 50%;
-    }
+  12.5% {
+    background-position:
+      50% 0,
+      100% 0,
+      0 50%,
+      50% 50%;
+  }
+  25% {
+    background-position:
+      50% 0,
+      100% 0,
+      50% 50%,
+      100% 50%;
+  }
+  37.5% {
+    background-position:
+      50% 0,
+      100% 50%,
+      50% 50%,
+      100% 100%;
+  }
+  50% {
+    background-position:
+      50% 50%,
+      100% 50%,
+      50% 100%,
+      100% 100%;
+  }
+  62.5% {
+    background-position:
+      50% 50%,
+      100% 50%,
+      0 100%,
+      50% 100%;
+  }
+  75% {
+    background-position:
+      0 50%,
+      50% 50%,
+      0 100%,
+      50% 100%;
+  }
+  87.5% {
+    background-position:
+      0 0,
+      50% 50%,
+      0 50%,
+      50% 100%;
+  }
+  100% {
+    background-position:
+      0 0,
+      50% 0,
+      0 50%,
+      50% 50%;
   }
 }
-@scope (.__loading-moving-3) {
-  & {
-    height: 40px;
-    aspect-ratio: 1.5;
-    --c: no-repeat linear-gradient(#fff 0 0);
-    background: var(--c), var(--c), var(--c), var(--c);
-    background-size: 33.4% 50%;
-    animation: l3 2s infinite linear;
+.__loading-moving-3 {
+  height: 40px;
+  aspect-ratio: 1.5;
+  --c: no-repeat linear-gradient(#fff 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 33.4% 50%;
+  animation: __loading-moving-3-l3 2s infinite linear;
+}
+@keyframes __loading-moving-3-l3 {
+  0% {
+    background-position:
+      0 0,
+      50% 0,
+      0 100%,
+      50% 100%;
   }
-  @keyframes l3 {
-    0% {
-      background-position:
-        0 0,
-        50% 0,
-        0 100%,
-        50% 100%;
-    }
-    12.5% {
-      background-position:
-        0 0,
-        100% 0,
-        0 100%,
-        50% 100%;
-    }
-    25% {
-      background-position:
-        50% 0,
-        100% 0,
-        0 100%,
-        50% 100%;
-    }
-    37.5% {
-      background-position:
-        50% 0,
-        100% 0,
-        0 100%,
-        100% 100%;
-    }
-    50% {
-      background-position:
-        50% 0,
-        100% 0,
-        50% 100%,
-        100% 100%;
-    }
-    62.5% {
-      background-position:
-        0 0,
-        100% 0,
-        50% 100%,
-        100% 100%;
-    }
-    75% {
-      background-position:
-        0 0,
-        50% 0,
-        50% 100%,
-        100% 100%;
-    }
-    87.5% {
-      background-position:
-        0 0,
-        50% 0,
-        0 100%,
-        100% 100%;
-    }
-    100% {
-      background-position:
-        0 0,
-        50% 0,
-        0 100%,
-        50% 100%;
-    }
+  12.5% {
+    background-position:
+      0 0,
+      100% 0,
+      0 100%,
+      50% 100%;
+  }
+  25% {
+    background-position:
+      50% 0,
+      100% 0,
+      0 100%,
+      50% 100%;
+  }
+  37.5% {
+    background-position:
+      50% 0,
+      100% 0,
+      0 100%,
+      100% 100%;
+  }
+  50% {
+    background-position:
+      50% 0,
+      100% 0,
+      50% 100%,
+      100% 100%;
+  }
+  62.5% {
+    background-position:
+      0 0,
+      100% 0,
+      50% 100%,
+      100% 100%;
+  }
+  75% {
+    background-position:
+      0 0,
+      50% 0,
+      50% 100%,
+      100% 100%;
+  }
+  87.5% {
+    background-position:
+      0 0,
+      50% 0,
+      0 100%,
+      100% 100%;
+  }
+  100% {
+    background-position:
+      0 0,
+      50% 0,
+      0 100%,
+      50% 100%;
   }
 }
-@scope (.__loading-moving-4) {
-  & {
-    height: 80px;
-    aspect-ratio: 1;
-    display: grid;
+.__loading-moving-4 {
+  height: 80px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-moving-4:before,
+.__loading-moving-4:after {
+  content: '';
+  --c: no-repeat linear-gradient(#fff 0 0);
+  background: var(--c), var(--c);
+  background-size: 25% 50%;
+  animation: __loading-moving-4-l4 1.5s infinite linear;
+}
+.__loading-moving-4:after {
+  transform: scale(-1);
+}
+@keyframes __loading-moving-4-l4 {
+  0%,
+  10% {
+    background-position:
+      33.4% 100%,
+      66.6% 100%;
   }
-  &:before,
-  &:after {
-    content: '';
-    --c: no-repeat linear-gradient(#fff 0 0);
-    background: var(--c), var(--c);
-    background-size: 25% 50%;
-    animation: l4 1.5s infinite linear;
+  40% {
+    background-position:
+      33.4% 0,
+      100% 100%;
   }
-  &:after {
-    transform: scale(-1);
+  70% {
+    background-position:
+      0 100%,
+      66.6% 0;
   }
-  @keyframes l4 {
-    0%,
-    10% {
-      background-position:
-        33.4% 100%,
-        66.6% 100%;
-    }
-    40% {
-      background-position:
-        33.4% 0,
-        100% 100%;
-    }
-    70% {
-      background-position:
-        0 100%,
-        66.6% 0;
-    }
-    100% {
-      background-position:
-        33.4% 100%,
-        66.6% 100%;
-    }
+  100% {
+    background-position:
+      33.4% 100%,
+      66.6% 100%;
   }
 }
-@scope (.__loading-moving-5) {
-  & {
-    height: 80px;
-    aspect-ratio: 1;
-    display: grid;
+.__loading-moving-5 {
+  height: 80px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-moving-5:before,
+.__loading-moving-5:after {
+  content: '';
+  --c: no-repeat linear-gradient(#fff 0 0);
+  background: var(--c), var(--c);
+  background-size: 25% 50%;
+  animation: __loading-moving-5-l5 1.5s infinite linear;
+}
+.__loading-moving-5:after {
+  transform: scale(-1);
+}
+@keyframes __loading-moving-5-l5 {
+  0%,
+  5% {
+    background-position:
+      33.4% 100%,
+      66.6% 100%;
   }
-  &:before,
-  &:after {
-    content: '';
-    --c: no-repeat linear-gradient(#fff 0 0);
-    background: var(--c), var(--c);
-    background-size: 25% 50%;
-    animation: l5 1.5s infinite linear;
+  25% {
+    background-position:
+      33.4% 100%,
+      100% 0;
   }
-  &:after {
-    transform: scale(-1);
+  50% {
+    background-position:
+      0 0,
+      100% 0;
   }
-  @keyframes l5 {
-    0%,
-    5% {
-      background-position:
-        33.4% 100%,
-        66.6% 100%;
-    }
-    25% {
-      background-position:
-        33.4% 100%,
-        100% 0;
-    }
-    50% {
-      background-position:
-        0 0,
-        100% 0;
-    }
-    75% {
-      background-position:
-        0 0,
-        66.6% 100%;
-    }
-    95%,
-    100% {
-      background-position:
-        33.4% 100%,
-        66.6% 100%;
-    }
+  75% {
+    background-position:
+      0 0,
+      66.6% 100%;
+  }
+  95%,
+  100% {
+    background-position:
+      33.4% 100%,
+      66.6% 100%;
   }
 }
-@scope (.__loading-moving-6) {
-  & {
-    height: 40px;
-    aspect-ratio: 1.5;
-    --c: no-repeat linear-gradient(#fff 0 0);
-    background: var(--c), var(--c), var(--c), var(--c);
-    background-size: 33.4% 50%;
-    animation: l6 2s infinite linear;
+.__loading-moving-6 {
+  height: 40px;
+  aspect-ratio: 1.5;
+  --c: no-repeat linear-gradient(#fff 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 33.4% 50%;
+  animation: __loading-moving-6-l6 2s infinite linear;
+}
+@keyframes __loading-moving-6-l6 {
+  0% {
+    background-position:
+      0 0,
+      50% 0,
+      0 100%,
+      50% 100%;
   }
-  @keyframes l6 {
-    0% {
-      background-position:
-        0 0,
-        50% 0,
-        0 100%,
-        50% 100%;
-    }
-    12.5% {
-      background-position:
-        0 0,
-        100% 0,
-        0 100%,
-        50% 100%;
-    }
-    25% {
-      background-position:
-        0 0,
-        100% 0,
-        0 100%,
-        50% 0;
-    }
-    37.5% {
-      background-position:
-        0 0,
-        100% 0,
-        50% 100%,
-        50% 0;
-    }
-    50% {
-      background-position:
-        0 100%,
-        100% 0,
-        50% 100%,
-        50% 0;
-    }
-    62.5% {
-      background-position:
-        0 100%,
-        100% 0,
-        50% 100%,
-        0 0;
-    }
-    75% {
-      background-position:
-        0 100%,
-        100% 100%,
-        50% 100%,
-        0 0;
-    }
-    87.5% {
-      background-position:
-        0 100%,
-        100% 100%,
-        50% 0,
-        0 0;
-    }
-    100% {
-      background-position:
-        0 100%,
-        50% 100%,
-        50% 0,
-        0 0;
-    }
+  12.5% {
+    background-position:
+      0 0,
+      100% 0,
+      0 100%,
+      50% 100%;
+  }
+  25% {
+    background-position:
+      0 0,
+      100% 0,
+      0 100%,
+      50% 0;
+  }
+  37.5% {
+    background-position:
+      0 0,
+      100% 0,
+      50% 100%,
+      50% 0;
+  }
+  50% {
+    background-position:
+      0 100%,
+      100% 0,
+      50% 100%,
+      50% 0;
+  }
+  62.5% {
+    background-position:
+      0 100%,
+      100% 0,
+      50% 100%,
+      0 0;
+  }
+  75% {
+    background-position:
+      0 100%,
+      100% 100%,
+      50% 100%,
+      0 0;
+  }
+  87.5% {
+    background-position:
+      0 100%,
+      100% 100%,
+      50% 0,
+      0 0;
+  }
+  100% {
+    background-position:
+      0 100%,
+      50% 100%,
+      50% 0,
+      0 0;
   }
 }
-@scope (.__loading-moving-7) {
-  & {
-    height: 60px;
-    aspect-ratio: 1;
-    --c: no-repeat linear-gradient(#fff 0 0);
-    background: var(--c), var(--c), var(--c), var(--c);
-    background-size: 33.4% 33.4%;
-    animation: l7 1.5s infinite linear;
+.__loading-moving-7 {
+  height: 60px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(#fff 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 33.4% 33.4%;
+  animation: __loading-moving-7-l7 1.5s infinite linear;
+}
+@keyframes __loading-moving-7-l7 {
+  0%,
+  5% {
+    background-position:
+      0 0,
+      50% 0,
+      0 50%,
+      50% 50%;
   }
-  @keyframes l7 {
-    0%,
-    5% {
-      background-position:
-        0 0,
-        50% 0,
-        0 50%,
-        50% 50%;
-    }
-    25% {
-      background-position:
-        0 0,
-        100% 0,
-        0 100%,
-        50% 50%;
-    }
-    50% {
-      background-position:
-        50% 0,
-        100% 0,
-        0 100%,
-        0 50%;
-    }
-    75% {
-      background-position:
-        50% 0,
-        100% 50%,
-        0 100%,
-        0 0;
-    }
-    95%,
-    100% {
-      background-position:
-        50% 0,
-        50% 50%,
-        0 50%,
-        0 0;
-    }
+  25% {
+    background-position:
+      0 0,
+      100% 0,
+      0 100%,
+      50% 50%;
+  }
+  50% {
+    background-position:
+      50% 0,
+      100% 0,
+      0 100%,
+      0 50%;
+  }
+  75% {
+    background-position:
+      50% 0,
+      100% 50%,
+      0 100%,
+      0 0;
+  }
+  95%,
+  100% {
+    background-position:
+      50% 0,
+      50% 50%,
+      0 50%,
+      0 0;
   }
 }
-@scope (.__loading-moving-8) {
-  & {
-    height: 60px;
-    aspect-ratio: 2/3;
-    --c: no-repeat linear-gradient(#fff 0 0);
-    background: var(--c), var(--c), var(--c), var(--c);
-    background-size: 50% 33.4%;
-    animation: l8 1.5s infinite linear;
+.__loading-moving-8 {
+  height: 60px;
+  aspect-ratio: 2/3;
+  --c: no-repeat linear-gradient(#fff 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 50% 33.4%;
+  animation: __loading-moving-8-l8 1.5s infinite linear;
+}
+@keyframes __loading-moving-8-l8 {
+  0%,
+  5% {
+    background-position:
+      0 25%,
+      100% 25%,
+      0 75%,
+      100% 75%;
   }
-  @keyframes l8 {
-    0%,
-    5% {
-      background-position:
-        0 25%,
-        100% 25%,
-        0 75%,
-        100% 75%;
-    }
-    33% {
-      background-position:
-        0 50%,
-        100% 0,
-        0 100%,
-        100% 50%;
-    }
-    66% {
-      background-position:
-        0 50%,
-        0 0,
-        100% 100%,
-        100% 50%;
-    }
-    95%,
-    100% {
-      background-position:
-        0 75%,
-        0 25%,
-        100% 75%,
-        100% 25%;
-    }
+  33% {
+    background-position:
+      0 50%,
+      100% 0,
+      0 100%,
+      100% 50%;
+  }
+  66% {
+    background-position:
+      0 50%,
+      0 0,
+      100% 100%,
+      100% 50%;
+  }
+  95%,
+  100% {
+    background-position:
+      0 75%,
+      0 25%,
+      100% 75%,
+      100% 25%;
   }
 }
-@scope (.__loading-moving-9) {
-  & {
-    height: 40px;
-    aspect-ratio: 1.5;
-    --c: #fff 96%, #0000;
-    background:
-      radial-gradient(farthest-side at 100% 100%, var(--c)),
-      radial-gradient(farthest-side at 0 100%, var(--c)),
-      radial-gradient(farthest-side at 100% 0, var(--c)),
-      radial-gradient(farthest-side at 0 0, var(--c));
-    background-size: 33.4% 50%;
-    background-repeat: no-repeat;
-    animation: l9 2s infinite linear;
+.__loading-moving-9 {
+  height: 40px;
+  aspect-ratio: 1.5;
+  --c: #fff 96%, #0000;
+  background:
+    radial-gradient(farthest-side at 100% 100%, var(--c)),
+    radial-gradient(farthest-side at 0 100%, var(--c)),
+    radial-gradient(farthest-side at 100% 0, var(--c)),
+    radial-gradient(farthest-side at 0 0, var(--c));
+  background-size: 33.4% 50%;
+  background-repeat: no-repeat;
+  animation: __loading-moving-9-l9 2s infinite linear;
+}
+@keyframes __loading-moving-9-l9 {
+  0% {
+    background-position:
+      0 0,
+      50% 0,
+      0 100%,
+      50% 100%;
   }
-  @keyframes l9 {
-    0% {
-      background-position:
-        0 0,
-        50% 0,
-        0 100%,
-        50% 100%;
-    }
-    12.5% {
-      background-position:
-        0 0,
-        100% 0,
-        0 100%,
-        50% 100%;
-    }
-    25% {
-      background-position:
-        50% 0,
-        100% 0,
-        0 100%,
-        50% 100%;
-    }
-    37.5% {
-      background-position:
-        50% 0,
-        100% 0,
-        0 100%,
-        100% 100%;
-    }
-    50% {
-      background-position:
-        50% 0,
-        100% 0,
-        50% 100%,
-        100% 100%;
-    }
-    62.5% {
-      background-position:
-        0 0,
-        100% 0,
-        50% 100%,
-        100% 100%;
-    }
-    75% {
-      background-position:
-        0 0,
-        50% 0,
-        50% 100%,
-        100% 100%;
-    }
-    87.5% {
-      background-position:
-        0 0,
-        50% 0,
-        0 100%,
-        100% 100%;
-    }
-    100% {
-      background-position:
-        0 0,
-        50% 0,
-        0 100%,
-        50% 100%;
-    }
+  12.5% {
+    background-position:
+      0 0,
+      100% 0,
+      0 100%,
+      50% 100%;
+  }
+  25% {
+    background-position:
+      50% 0,
+      100% 0,
+      0 100%,
+      50% 100%;
+  }
+  37.5% {
+    background-position:
+      50% 0,
+      100% 0,
+      0 100%,
+      100% 100%;
+  }
+  50% {
+    background-position:
+      50% 0,
+      100% 0,
+      50% 100%,
+      100% 100%;
+  }
+  62.5% {
+    background-position:
+      0 0,
+      100% 0,
+      50% 100%,
+      100% 100%;
+  }
+  75% {
+    background-position:
+      0 0,
+      50% 0,
+      50% 100%,
+      100% 100%;
+  }
+  87.5% {
+    background-position:
+      0 0,
+      50% 0,
+      0 100%,
+      100% 100%;
+  }
+  100% {
+    background-position:
+      0 0,
+      50% 0,
+      0 100%,
+      50% 100%;
   }
 }
-@scope (.__loading-moving-10) {
-  & {
-    height: 40px;
-    aspect-ratio: 1.5;
-    display: grid;
+.__loading-moving-10 {
+  height: 40px;
+  aspect-ratio: 1.5;
+  display: grid;
+}
+.__loading-moving-10:before,
+.__loading-moving-10:after {
+  content: '';
+  background: #fff;
+  border-radius: 80px 80px 0 0;
+  animation: __loading-moving-10-l10 1s infinite alternate both;
+}
+.__loading-moving-10:after {
+  transform: scale(-1);
+  animation-delay: 0.2s;
+}
+@keyframes __loading-moving-10-l10 {
+  0%,
+  10% {
+    margin-inline: 0 33%;
   }
-  &:before,
-  &:after {
-    content: '';
-    background: #fff;
-    border-radius: 80px 80px 0 0;
-    animation: l10 1s infinite alternate both;
+  50% {
+    margin-inline: 0 0;
   }
-  &:after {
-    transform: scale(-1);
-    animation-delay: 0.2s;
-  }
-  @keyframes l10 {
-    0%,
-    10% {
-      margin-inline: 0 33%;
-    }
-    50% {
-      margin-inline: 0 0;
-    }
-    90%,
-    100% {
-      margin-inline: 33% 0;
-    }
+  90%,
+  100% {
+    margin-inline: 33% 0;
   }
 }

@@ -1,48 +1,46 @@
-@scope (.__loading-wobbling-11) {
-  & {
-    width: 30px;
-    aspect-ratio: 1;
-    display: grid;
-    transform: translateY(100%);
+.__loading-wobbling-11 {
+  width: 30px;
+  aspect-ratio: 1;
+  display: grid;
+  transform: translateY(100%);
+}
+.__loading-wobbling-11::before,
+.__loading-wobbling-11::after {
+  content: '';
+  grid-area: 1/1;
+  border-radius: 50%;
+  transform-origin: bottom;
+  position: relative;
+}
+.__loading-wobbling-11::before {
+  background: radial-gradient(at 30% 30%, #0000, #000a) red;
+  transform: scaleY(0.65);
+  top: 0;
+  animation: __loading-wobbling-11-l11-1, __loading-wobbling-11-l11-2;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0, 400, 1, 400), ease;
+  animation-iteration-count: infinite;
+}
+.__loading-wobbling-11::after {
+  background: #ccc;
+  filter: blur(8px);
+  transform: scaleY(0.3) translate(0px, 0px);
+  left: 0;
+  animation: __loading-wobbling-11-l11-3 2s cubic-bezier(0, 400, 1, 400) infinite;
+}
+@keyframes __loading-wobbling-11-l11-1 {
+  100% {
+    top: -0.2px;
   }
-  &::before,
-  &::after {
-    content: '';
-    grid-area: 1/1;
-    border-radius: 50%;
-    transform-origin: bottom;
-    position: relative;
+}
+@keyframes __loading-wobbling-11-l11-2 {
+  4%,
+  96% {
+    transform: scaleY(1);
   }
-  &::before {
-    background: radial-gradient(at 30% 30%, #0000, #000a) red;
-    transform: scaleY(0.65);
-    top: 0;
-    animation: l11-1, l11-2;
-    animation-duration: 2s;
-    animation-timing-function: cubic-bezier(0, 400, 1, 400), ease;
-    animation-iteration-count: infinite;
-  }
-  &::after {
-    background: #ccc;
-    filter: blur(8px);
-    transform: scaleY(0.3) translate(0px, 0px);
-    left: 0;
-    animation: l11-3 2s cubic-bezier(0, 400, 1, 400) infinite;
-  }
-  @keyframes l11-1 {
-    100% {
-      top: -0.2px;
-    }
-  }
-  @keyframes l11-2 {
-    4%,
-    96% {
-      transform: scaleY(1);
-    }
-  }
-  @keyframes l11-3 {
-    100% {
-      transform: scaleY(0.3) translate(0.1px, -0.1px);
-    }
+}
+@keyframes __loading-wobbling-11-l11-3 {
+  100% {
+    transform: scaleY(0.3) translate(0.1px, -0.1px);
   }
 }

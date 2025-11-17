@@ -1,116 +1,114 @@
-@scope (.__loading-colorful-11) {
-  & {
-    width: 50px;
-    aspect-ratio: 1;
-    display: flex;
-    --c: linear-gradient(90deg, #ffd412 25%, #abd406 0 50%, #ff821c 0 75%, #ffd412 0);
+.__loading-colorful-11 {
+  width: 50px;
+  aspect-ratio: 1;
+  display: flex;
+  --c: linear-gradient(90deg, #ffd412 25%, #abd406 0 50%, #ff821c 0 75%, #ffd412 0);
+}
+.__loading-colorful-11:before,
+.__loading-colorful-11:after {
+  content: '';
+  flex: 1;
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 400% 26%;
+  background-repeat: no-repeat;
+  animation: __loading-colorful-11-l11 2s infinite;
+}
+.__loading-colorful-11:after {
+  transform: scaleX(-1);
+}
+@keyframes __loading-colorful-11-l11 {
+  0% {
+    background-position:
+      calc(3 * 100% / 3) calc(0 * 100% / 3),
+      calc(3 * 100% / 3) calc(1 * 100% / 3),
+      calc(3 * 100% / 3) calc(2 * 100% / 3),
+      calc(3 * 100% / 3) calc(3 * 100% / 3);
   }
-  &:before,
-  &:after {
-    content: '';
-    flex: 1;
-    background: var(--c), var(--c), var(--c), var(--c);
-    background-size: 400% 26%;
-    background-repeat: no-repeat;
-    animation: l11 2s infinite;
+  8.33% {
+    background-position:
+      calc(2 * 100% / 3) calc(0 * 100% / 3),
+      calc(3 * 100% / 3) calc(1 * 100% / 3),
+      calc(3 * 100% / 3) calc(2 * 100% / 3),
+      calc(3 * 100% / 3) calc(3 * 100% / 3);
   }
-  &:after {
-    transform: scaleX(-1);
+  16.67% {
+    background-position:
+      calc(2 * 100% / 3) calc(0 * 100% / 3),
+      calc(2 * 100% / 3) calc(1 * 100% / 3),
+      calc(3 * 100% / 3) calc(2 * 100% / 3),
+      calc(3 * 100% / 3) calc(3 * 100% / 3);
   }
-  @keyframes l11 {
-    0% {
-      background-position:
-        calc(3 * 100% / 3) calc(0 * 100% / 3),
-        calc(3 * 100% / 3) calc(1 * 100% / 3),
-        calc(3 * 100% / 3) calc(2 * 100% / 3),
-        calc(3 * 100% / 3) calc(3 * 100% / 3);
-    }
-    8.33% {
-      background-position:
-        calc(2 * 100% / 3) calc(0 * 100% / 3),
-        calc(3 * 100% / 3) calc(1 * 100% / 3),
-        calc(3 * 100% / 3) calc(2 * 100% / 3),
-        calc(3 * 100% / 3) calc(3 * 100% / 3);
-    }
-    16.67% {
-      background-position:
-        calc(2 * 100% / 3) calc(0 * 100% / 3),
-        calc(2 * 100% / 3) calc(1 * 100% / 3),
-        calc(3 * 100% / 3) calc(2 * 100% / 3),
-        calc(3 * 100% / 3) calc(3 * 100% / 3);
-    }
-    25% {
-      background-position:
-        calc(2 * 100% / 3) calc(0 * 100% / 3),
-        calc(2 * 100% / 3) calc(1 * 100% / 3),
-        calc(2 * 100% / 3) calc(2 * 100% / 3),
-        calc(3 * 100% / 3) calc(3 * 100% / 3);
-    }
-    30%,
-    33.33% {
-      background-position:
-        calc(2 * 100% / 3) calc(0 * 100% / 3),
-        calc(2 * 100% / 3) calc(1 * 100% / 3),
-        calc(2 * 100% / 3) calc(2 * 100% / 3),
-        calc(2 * 100% / 3) calc(3 * 100% / 3);
-    }
-    41.67% {
-      background-position:
-        calc(1 * 100% / 3) calc(0 * 100% / 3),
-        calc(2 * 100% / 3) calc(1 * 100% / 3),
-        calc(2 * 100% / 3) calc(2 * 100% / 3),
-        calc(2 * 100% / 3) calc(3 * 100% / 3);
-    }
-    50% {
-      background-position:
-        calc(1 * 100% / 3) calc(0 * 100% / 3),
-        calc(1 * 100% / 3) calc(1 * 100% / 3),
-        calc(2 * 100% / 3) calc(2 * 100% / 3),
-        calc(2 * 100% / 3) calc(3 * 100% / 3);
-    }
-    58.33% {
-      background-position:
-        calc(1 * 100% / 3) calc(0 * 100% / 3),
-        calc(1 * 100% / 3) calc(1 * 100% / 3),
-        calc(1 * 100% / 3) calc(2 * 100% / 3),
-        calc(2 * 100% / 3) calc(3 * 100% / 3);
-    }
-    63%,
-    66.67% {
-      background-position:
-        calc(1 * 100% / 3) calc(0 * 100% / 3),
-        calc(1 * 100% / 3) calc(1 * 100% / 3),
-        calc(1 * 100% / 3) calc(2 * 100% / 3),
-        calc(1 * 100% / 3) calc(3 * 100% / 3);
-    }
-    75% {
-      background-position:
-        calc(0 * 100% / 3) calc(0 * 100% / 3),
-        calc(1 * 100% / 3) calc(1 * 100% / 3),
-        calc(1 * 100% / 3) calc(2 * 100% / 3),
-        calc(1 * 100% / 3) calc(3 * 100% / 3);
-    }
-    83.33% {
-      background-position:
-        calc(0 * 100% / 3) calc(0 * 100% / 3),
-        calc(0 * 100% / 3) calc(1 * 100% / 3),
-        calc(1 * 100% / 3) calc(2 * 100% / 3),
-        calc(1 * 100% / 3) calc(3 * 100% / 3);
-    }
-    91.67% {
-      background-position:
-        calc(0 * 100% / 3) calc(0 * 100% / 3),
-        calc(0 * 100% / 3) calc(1 * 100% / 3),
-        calc(0 * 100% / 3) calc(2 * 100% / 3),
-        calc(1 * 100% / 3) calc(3 * 100% / 3);
-    }
-    97%,
-    100% {
-      background-position:
-        calc(0 * 100% / 3) calc(0 * 100% / 3),
-        calc(0 * 100% / 3) calc(1 * 100% / 3),
-        calc(0 * 100% / 3) calc(2 * 100% / 3),
-        calc(0 * 100% / 3) calc(3 * 100% / 3);
-    }
+  25% {
+    background-position:
+      calc(2 * 100% / 3) calc(0 * 100% / 3),
+      calc(2 * 100% / 3) calc(1 * 100% / 3),
+      calc(2 * 100% / 3) calc(2 * 100% / 3),
+      calc(3 * 100% / 3) calc(3 * 100% / 3);
+  }
+  30%,
+  33.33% {
+    background-position:
+      calc(2 * 100% / 3) calc(0 * 100% / 3),
+      calc(2 * 100% / 3) calc(1 * 100% / 3),
+      calc(2 * 100% / 3) calc(2 * 100% / 3),
+      calc(2 * 100% / 3) calc(3 * 100% / 3);
+  }
+  41.67% {
+    background-position:
+      calc(1 * 100% / 3) calc(0 * 100% / 3),
+      calc(2 * 100% / 3) calc(1 * 100% / 3),
+      calc(2 * 100% / 3) calc(2 * 100% / 3),
+      calc(2 * 100% / 3) calc(3 * 100% / 3);
+  }
+  50% {
+    background-position:
+      calc(1 * 100% / 3) calc(0 * 100% / 3),
+      calc(1 * 100% / 3) calc(1 * 100% / 3),
+      calc(2 * 100% / 3) calc(2 * 100% / 3),
+      calc(2 * 100% / 3) calc(3 * 100% / 3);
+  }
+  58.33% {
+    background-position:
+      calc(1 * 100% / 3) calc(0 * 100% / 3),
+      calc(1 * 100% / 3) calc(1 * 100% / 3),
+      calc(1 * 100% / 3) calc(2 * 100% / 3),
+      calc(2 * 100% / 3) calc(3 * 100% / 3);
+  }
+  63%,
+  66.67% {
+    background-position:
+      calc(1 * 100% / 3) calc(0 * 100% / 3),
+      calc(1 * 100% / 3) calc(1 * 100% / 3),
+      calc(1 * 100% / 3) calc(2 * 100% / 3),
+      calc(1 * 100% / 3) calc(3 * 100% / 3);
+  }
+  75% {
+    background-position:
+      calc(0 * 100% / 3) calc(0 * 100% / 3),
+      calc(1 * 100% / 3) calc(1 * 100% / 3),
+      calc(1 * 100% / 3) calc(2 * 100% / 3),
+      calc(1 * 100% / 3) calc(3 * 100% / 3);
+  }
+  83.33% {
+    background-position:
+      calc(0 * 100% / 3) calc(0 * 100% / 3),
+      calc(0 * 100% / 3) calc(1 * 100% / 3),
+      calc(1 * 100% / 3) calc(2 * 100% / 3),
+      calc(1 * 100% / 3) calc(3 * 100% / 3);
+  }
+  91.67% {
+    background-position:
+      calc(0 * 100% / 3) calc(0 * 100% / 3),
+      calc(0 * 100% / 3) calc(1 * 100% / 3),
+      calc(0 * 100% / 3) calc(2 * 100% / 3),
+      calc(1 * 100% / 3) calc(3 * 100% / 3);
+  }
+  97%,
+  100% {
+    background-position:
+      calc(0 * 100% / 3) calc(0 * 100% / 3),
+      calc(0 * 100% / 3) calc(1 * 100% / 3),
+      calc(0 * 100% / 3) calc(2 * 100% / 3),
+      calc(0 * 100% / 3) calc(3 * 100% / 3);
   }
 }

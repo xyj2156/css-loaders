@@ -1,31 +1,29 @@
-@scope (.__loading-arcade-1) {
-  & {
-    width: 45px;
-    height: 30px;
-    animation: l1 2s infinite linear;
+.__loading-arcade-1 {
+  width: 45px;
+  height: 30px;
+  animation: __loading-arcade-1-l1 2s infinite linear;
+}
+@keyframes __loading-arcade-1-l1 {
+  0%,
+  25% {
+    background: linear-gradient(#e50021 0 0) 50% 0/66% 100% no-repeat;
   }
-  @keyframes l1 {
-    0%,
-    25% {
-      background: linear-gradient(#e50021 0 0) 50% 0/66% 100% no-repeat;
-    }
-    25.1%,
-    50% {
-      background:
-        linear-gradient(#004ce4 0 0) 0 0/100% 50% no-repeat,
-        linear-gradient(#004ce4 0 0) 0 0/33% 100% no-repeat;
-    }
-    50.1%,
-    75% {
-      background:
-        linear-gradient(#00e622 0 0) 100% 0/66% 50% no-repeat,
-        linear-gradient(#00e622 0 0) 0 100%/66% 50% no-repeat;
-    }
-    75.1%,
-    100% {
-      background:
-        linear-gradient(#9d0be6 0 0) 0 100%/100% 50% no-repeat,
-        linear-gradient(#9d0be6 0 0) 50% 0 /33% 50% no-repeat;
-    }
+  25.1%,
+  50% {
+    background:
+      linear-gradient(#004ce4 0 0) 0 0/100% 50% no-repeat,
+      linear-gradient(#004ce4 0 0) 0 0/33% 100% no-repeat;
+  }
+  50.1%,
+  75% {
+    background:
+      linear-gradient(#00e622 0 0) 100% 0/66% 50% no-repeat,
+      linear-gradient(#00e622 0 0) 0 100%/66% 50% no-repeat;
+  }
+  75.1%,
+  100% {
+    background:
+      linear-gradient(#9d0be6 0 0) 0 100%/100% 50% no-repeat,
+      linear-gradient(#9d0be6 0 0) 50% 0 /33% 50% no-repeat;
   }
 }

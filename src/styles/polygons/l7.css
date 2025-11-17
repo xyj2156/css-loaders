@@ -1,35 +1,33 @@
-@scope (.__loading-polygons-7) {
-  & {
-    display: inline-grid;
-    width: 80px;
-    aspect-ratio: 2;
-    box-shadow: 0 5px #574951;
-    overflow: hidden;
+.__loading-polygons-7 {
+  display: inline-grid;
+  width: 80px;
+  aspect-ratio: 2;
+  box-shadow: 0 5px #574951;
+  overflow: hidden;
+}
+.__loading-polygons-7:before {
+  content: '';
+  margin: 0 25%;
+  background: #83988e;
+  clip-path: polygon(97.55% 65.45%, 50% 100%, 2.45% 65.45%, 20.61% 9.55%, 79.39% 9.55%);
+  transform-origin: bottom;
+  animation:
+    __loading-polygons-7-l7-0 0.5s linear infinite,
+    __loading-polygons-7-l7-1 3s steps(6) infinite;
+}
+@keyframes __loading-polygons-7-l7-0 {
+  0% {
+    rotate: -36deg;
   }
-  &:before {
-    content: '';
-    margin: 0 25%;
-    background: #83988e;
-    clip-path: polygon(97.55% 65.45%, 50% 100%, 2.45% 65.45%, 20.61% 9.55%, 79.39% 9.55%);
-    transform-origin: bottom;
-    animation:
-      l7-0 0.5s linear infinite,
-      l7-1 3s steps(6) infinite;
+  to {
+    rotate: 36deg;
   }
-  @keyframes l7-0 {
-    0% {
-      rotate: -36deg;
-    }
-    to {
-      rotate: 36deg;
-    }
+}
+@keyframes __loading-polygons-7-l7-1 {
+  0% {
+    translate: -174% 0;
   }
-  @keyframes l7-1 {
-    0% {
-      translate: -174% 0;
-    }
-    to {
-      translate: 174% 0;
-    }
+  to {
+    translate: 174% 0;
   }
 }

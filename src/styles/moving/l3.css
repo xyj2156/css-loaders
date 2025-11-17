@@ -1,75 +1,73 @@
-@scope (.__loading-moving-3) {
-  & {
-    height: 40px;
-    aspect-ratio: 1.5;
-    --c: no-repeat linear-gradient(#fff 0 0);
-    background: var(--c), var(--c), var(--c), var(--c);
-    background-size: 33.4% 50%;
-    animation: l3 2s infinite linear;
+.__loading-moving-3 {
+  height: 40px;
+  aspect-ratio: 1.5;
+  --c: no-repeat linear-gradient(#fff 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 33.4% 50%;
+  animation: __loading-moving-3-l3 2s infinite linear;
+}
+@keyframes __loading-moving-3-l3 {
+  0% {
+    background-position:
+      0 0,
+      50% 0,
+      0 100%,
+      50% 100%;
   }
-  @keyframes l3 {
-    0% {
-      background-position:
-        0 0,
-        50% 0,
-        0 100%,
-        50% 100%;
-    }
-    12.5% {
-      background-position:
-        0 0,
-        100% 0,
-        0 100%,
-        50% 100%;
-    }
-    25% {
-      background-position:
-        50% 0,
-        100% 0,
-        0 100%,
-        50% 100%;
-    }
-    37.5% {
-      background-position:
-        50% 0,
-        100% 0,
-        0 100%,
-        100% 100%;
-    }
-    50% {
-      background-position:
-        50% 0,
-        100% 0,
-        50% 100%,
-        100% 100%;
-    }
-    62.5% {
-      background-position:
-        0 0,
-        100% 0,
-        50% 100%,
-        100% 100%;
-    }
-    75% {
-      background-position:
-        0 0,
-        50% 0,
-        50% 100%,
-        100% 100%;
-    }
-    87.5% {
-      background-position:
-        0 0,
-        50% 0,
-        0 100%,
-        100% 100%;
-    }
-    100% {
-      background-position:
-        0 0,
-        50% 0,
-        0 100%,
-        50% 100%;
-    }
+  12.5% {
+    background-position:
+      0 0,
+      100% 0,
+      0 100%,
+      50% 100%;
+  }
+  25% {
+    background-position:
+      50% 0,
+      100% 0,
+      0 100%,
+      50% 100%;
+  }
+  37.5% {
+    background-position:
+      50% 0,
+      100% 0,
+      0 100%,
+      100% 100%;
+  }
+  50% {
+    background-position:
+      50% 0,
+      100% 0,
+      50% 100%,
+      100% 100%;
+  }
+  62.5% {
+    background-position:
+      0 0,
+      100% 0,
+      50% 100%,
+      100% 100%;
+  }
+  75% {
+    background-position:
+      0 0,
+      50% 0,
+      50% 100%,
+      100% 100%;
+  }
+  87.5% {
+    background-position:
+      0 0,
+      50% 0,
+      0 100%,
+      100% 100%;
+  }
+  100% {
+    background-position:
+      0 0,
+      50% 0,
+      0 100%,
+      50% 100%;
   }
 }

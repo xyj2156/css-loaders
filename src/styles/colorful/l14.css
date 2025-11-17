@@ -1,50 +1,48 @@
-@scope (.__loading-colorful-14) {
-  & {
-    width: 50px;
-    aspect-ratio: 1;
-    transform: translate(-100%, 100%);
-    animation: l14 2s infinite;
+.__loading-colorful-14 {
+  width: 50px;
+  aspect-ratio: 1;
+  transform: translate(-100%, 100%);
+  animation: __loading-colorful-14-l14 2s infinite;
+}
+@keyframes __loading-colorful-14-l14 {
+  0% {
+    box-shadow:
+      50px -50px #b5ac01,
+      50px -50px #ecba09,
+      50px -50px #0000,
+      50px -50px #0000,
+      50px -50px #0000;
   }
-  @keyframes l14 {
-    0% {
-      box-shadow:
-        50px -50px #b5ac01,
-        50px -50px #ecba09,
-        50px -50px #0000,
-        50px -50px #0000,
-        50px -50px #0000;
-    }
-    25% {
-      box-shadow:
-        100px -50px #0000,
-        50px -50px #ecba09,
-        50px -50px #e86e1c,
-        50px -50px #0000,
-        50px -50px #0000;
-    }
-    50% {
-      box-shadow:
-        100px -50px #0000,
-        50px -100px #0000,
-        50px -50px #e86e1c,
-        50px -50px #d41e45,
-        50px -50px #0000;
-    }
-    75% {
-      box-shadow:
-        100px -50px #0000,
-        50px -100px #0000,
-        0px -50px #0000,
-        50px -50px #d41e45,
-        50px -50px #b5ac01;
-    }
-    100% {
-      box-shadow:
-        100px -50px #0000,
-        50px -100px #0000,
-        0px -50px #0000,
-        50px 0px #0000,
-        50px -50px #b5ac01;
-    }
+  25% {
+    box-shadow:
+      100px -50px #0000,
+      50px -50px #ecba09,
+      50px -50px #e86e1c,
+      50px -50px #0000,
+      50px -50px #0000;
+  }
+  50% {
+    box-shadow:
+      100px -50px #0000,
+      50px -100px #0000,
+      50px -50px #e86e1c,
+      50px -50px #d41e45,
+      50px -50px #0000;
+  }
+  75% {
+    box-shadow:
+      100px -50px #0000,
+      50px -100px #0000,
+      0px -50px #0000,
+      50px -50px #d41e45,
+      50px -50px #b5ac01;
+  }
+  100% {
+    box-shadow:
+      100px -50px #0000,
+      50px -100px #0000,
+      0px -50px #0000,
+      50px 0px #0000,
+      50px -50px #b5ac01;
   }
 }

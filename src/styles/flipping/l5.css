@@ -1,45 +1,43 @@
-@scope (.__loading-flipping-5) {
-  & {
-    width: 60px;
-    aspect-ratio: 1;
-    animation: l5-0 1s infinite steps(1);
+.__loading-flipping-5 {
+  width: 60px;
+  aspect-ratio: 1;
+  animation: __loading-flipping-5-l5-0 1s infinite steps(1);
+}
+.__loading-flipping-5::before,
+.__loading-flipping-5::after {
+  content: '';
+  position: absolute;
+  inset: 0 50% 50% 0;
+  transform-origin: bottom right;
+  animation:
+    __loading-flipping-5-l5-1 0.5s infinite linear alternate,
+    __loading-flipping-5-l5-2 0.5s infinite steps(1) alternate;
+}
+.__loading-flipping-5::after {
+  --s: -1, -1;
+}
+@keyframes __loading-flipping-5-l5-0 {
+  0% {
+    transform: scale(1, 1) rotate(0deg);
   }
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0 50% 50% 0;
-    transform-origin: bottom right;
-    animation:
-      l5-1 0.5s infinite linear alternate,
-      l5-2 0.5s infinite steps(1) alternate;
+  50% {
+    transform: scale(1, -1) rotate(90deg);
   }
-  &::after {
-    --s: -1, -1;
-  }
-  @keyframes l5-0 {
-    0% {
-      transform: scale(1, 1) rotate(0deg);
-    }
-    50% {
-      transform: scale(1, -1) rotate(90deg);
-    }
-  }
+}
 
-  @keyframes l5-1 {
-    0% {
-      transform: scale(var(--s, 1)) perspective(150px) rotateX(0deg);
-    }
-    100% {
-      transform: scale(var(--s, 1)) perspective(150px) rotateX(180deg);
-    }
+@keyframes __loading-flipping-5-l5-1 {
+  0% {
+    transform: scale(var(--s, 1)) perspective(150px) rotateX(0deg);
   }
-  @keyframes l5-2 {
-    0% {
-      background: #25b09b;
-    }
-    50% {
-      background: #514b82;
-    }
+  100% {
+    transform: scale(var(--s, 1)) perspective(150px) rotateX(180deg);
+  }
+}
+@keyframes __loading-flipping-5-l5-2 {
+  0% {
+    background: #25b09b;
+  }
+  50% {
+    background: #514b82;
   }
 }

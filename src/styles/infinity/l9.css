@@ -1,21 +1,19 @@
-@scope (.__loading-infinity-9) {
-  & {
-    width: 90px;
-    height: 14px;
-    color: #000;
-    background:
-      linear-gradient(90deg, #0000 16px, currentColor 0 30px, #0000 0),
-      radial-gradient(circle closest-side at 68% 50%, currentColor 92%, #0000),
-      conic-gradient(from 45deg at calc(100% - 7px) 50%, currentColor 90deg, #0000 0),
-      conic-gradient(from -135deg at 7px 50%, currentColor 90deg, #0000 0);
-    background-position: 0 0;
-    background-size: calc(3 * 100% / 4) 100%;
-    background-repeat: repeat-x;
-    animation: l9 2s infinite linear;
-  }
-  @keyframes l9 {
-    100% {
-      background-position: -300% 0;
-    }
+.__loading-infinity-9 {
+  width: 90px;
+  height: 14px;
+  color: #000;
+  background:
+    linear-gradient(90deg, #0000 16px, currentColor 0 30px, #0000 0),
+    radial-gradient(circle closest-side at 68% 50%, currentColor 92%, #0000),
+    conic-gradient(from 45deg at calc(100% - 7px) 50%, currentColor 90deg, #0000 0),
+    conic-gradient(from -135deg at 7px 50%, currentColor 90deg, #0000 0);
+  background-position: 0 0;
+  background-size: calc(3 * 100% / 4) 100%;
+  background-repeat: repeat-x;
+  animation: __loading-infinity-9-l9 2s infinite linear;
+}
+@keyframes __loading-infinity-9-l9 {
+  100% {
+    background-position: -300% 0;
   }
 }

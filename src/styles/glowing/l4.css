@@ -1,32 +1,30 @@
-@scope (.__loading-glowing-4) {
-  & {
-    height: 80px;
-    aspect-ratio: 1;
-    padding: 10px;
-    border-radius: 20px;
-    box-sizing: border-box;
-    position: relative;
-    mask:
-      conic-gradient(#000 0 0) content-box exclude,
-      conic-gradient(#000 0 0);
-    filter: blur(12px);
-    animation: l4-0 1.2s linear infinite alternate;
+.__loading-glowing-4 {
+  height: 80px;
+  aspect-ratio: 1;
+  padding: 10px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: relative;
+  mask:
+    conic-gradient(#000 0 0) content-box exclude,
+    conic-gradient(#000 0 0);
+  filter: blur(12px);
+  animation: __loading-glowing-4-l4-0 1.2s linear infinite alternate;
+}
+.__loading-glowing-4:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(#0000 0 5%, #c02942, #0000 20% 50%);
+  animation: __loading-glowing-4-l4-1 1s linear infinite;
+}
+@keyframes __loading-glowing-4-l4-0 {
+  to {
+    border-radius: 50%;
   }
-  &:before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-conic-gradient(#0000 0 5%, #c02942, #0000 20% 50%);
-    animation: l4-1 1s linear infinite;
-  }
-  @keyframes l4-0 {
-    to {
-      border-radius: 50%;
-    }
-  }
-  @keyframes l4-1 {
-    to {
-      rotate: 0.5turn;
-    }
+}
+@keyframes __loading-glowing-4-l4-1 {
+  to {
+    rotate: 0.5turn;
   }
 }

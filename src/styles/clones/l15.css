@@ -1,81 +1,79 @@
-@scope (.__loading-clones-15) {
-  & {
-    width: 32px;
-    height: 64px;
-    background:
-      radial-gradient(farthest-side at bottom, #f10c49 90%, #0000),
-      radial-gradient(farthest-side at top, #f10c49 90%, #0000),
-      radial-gradient(farthest-side at bottom, #f4dd51 90%, #0000),
-      radial-gradient(farthest-side at top, #f4dd51 90%, #0000),
-      radial-gradient(farthest-side at bottom, #e3aad6 90%, #0000),
-      radial-gradient(farthest-side at top, #e3aad6 90%, #0000);
-    background-size: 100% 25%;
-    background-repeat: no-repeat;
-    animation: l15 2s infinite;
+.__loading-clones-15 {
+  width: 32px;
+  height: 64px;
+  background:
+    radial-gradient(farthest-side at bottom, #f10c49 90%, #0000),
+    radial-gradient(farthest-side at top, #f10c49 90%, #0000),
+    radial-gradient(farthest-side at bottom, #f4dd51 90%, #0000),
+    radial-gradient(farthest-side at top, #f4dd51 90%, #0000),
+    radial-gradient(farthest-side at bottom, #e3aad6 90%, #0000),
+    radial-gradient(farthest-side at top, #e3aad6 90%, #0000);
+  background-size: 100% 25%;
+  background-repeat: no-repeat;
+  animation: __loading-clones-15-l15 2s infinite;
+}
+@keyframes __loading-clones-15-l15 {
+  0% {
+    background-position:
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3),
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3),
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3);
   }
-  @keyframes l15 {
-    0% {
-      background-position:
-        0 calc(1 * 100% / 3),
-        0 calc(2 * 100% / 3),
-        0 calc(1 * 100% / 3),
-        0 calc(2 * 100% / 3),
-        0 calc(1 * 100% / 3),
-        0 calc(2 * 100% / 3);
-    }
-    16.67% {
-      background-position:
-        0 calc(0 * 100% / 3),
-        0 calc(3 * 100% / 3),
-        0 calc(1 * 100% / 3),
-        0 calc(2 * 100% / 3),
-        0 calc(1 * 100% / 3),
-        0 calc(2 * 100% / 3);
-    }
-    33.33% {
-      background-position:
-        0 calc(0 * 100% / 3),
-        0 calc(3 * 100% / 3),
-        0 calc(0 * 100% / 3),
-        0 calc(3 * 100% / 3),
-        0 calc(1 * 100% / 3),
-        0 calc(2 * 100% / 3);
-    }
-    50% {
-      background-position:
-        0 calc(0 * 100% / 3),
-        0 calc(3 * 100% / 3),
-        0 calc(0 * 100% / 3),
-        0 calc(3 * 100% / 3),
-        0 calc(0 * 100% / 3),
-        0 calc(3 * 100% / 3);
-    }
-    66.67% {
-      background-position:
-        0 calc(1 * 100% / 3),
-        0 calc(2 * 100% / 3),
-        0 calc(0 * 100% / 3),
-        0 calc(3 * 100% / 3),
-        0 calc(0 * 100% / 3),
-        0 calc(3 * 100% / 3);
-    }
-    83.33% {
-      background-position:
-        0 calc(1 * 100% / 3),
-        0 calc(2 * 100% / 3),
-        0 calc(1 * 100% / 3),
-        0 calc(2 * 100% / 3),
-        0 calc(0 * 100% / 3),
-        0 calc(3 * 100% / 3);
-    }
-    100% {
-      background-position:
-        0 calc(1 * 100% / 3),
-        0 calc(2 * 100% / 3),
-        0 calc(1 * 100% / 3),
-        0 calc(2 * 100% / 3),
-        0 calc(1 * 100% / 3),
-        0 calc(2 * 100% / 3);
-    }
+  16.67% {
+    background-position:
+      0 calc(0 * 100% / 3),
+      0 calc(3 * 100% / 3),
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3),
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3);
+  }
+  33.33% {
+    background-position:
+      0 calc(0 * 100% / 3),
+      0 calc(3 * 100% / 3),
+      0 calc(0 * 100% / 3),
+      0 calc(3 * 100% / 3),
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3);
+  }
+  50% {
+    background-position:
+      0 calc(0 * 100% / 3),
+      0 calc(3 * 100% / 3),
+      0 calc(0 * 100% / 3),
+      0 calc(3 * 100% / 3),
+      0 calc(0 * 100% / 3),
+      0 calc(3 * 100% / 3);
+  }
+  66.67% {
+    background-position:
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3),
+      0 calc(0 * 100% / 3),
+      0 calc(3 * 100% / 3),
+      0 calc(0 * 100% / 3),
+      0 calc(3 * 100% / 3);
+  }
+  83.33% {
+    background-position:
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3),
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3),
+      0 calc(0 * 100% / 3),
+      0 calc(3 * 100% / 3);
+  }
+  100% {
+    background-position:
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3),
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3),
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3);
   }
 }

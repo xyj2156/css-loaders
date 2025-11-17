@@ -1,31 +1,29 @@
-@scope (.__loading-square-5) {
-  & {
-    display: inline-flex;
-    gap: 5px;
+.__loading-square-5 {
+  display: inline-flex;
+  gap: 5px;
+}
+.__loading-square-5:before,
+.__loading-square-5:after {
+  content: '';
+  width: 25px;
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 3px inset #fff;
+  animation: __loading-square-5-l5 1.5s infinite;
+}
+.__loading-square-5:after {
+  --s: -1;
+}
+@keyframes __loading-square-5-l5 {
+  0% {
+    transform: scaleX(var(--s, 1)) translate(0) scale(1);
   }
-  &:before,
-  &:after {
-    content: '';
-    width: 25px;
-    aspect-ratio: 1;
-    box-shadow: 0 0 0 3px inset #fff;
-    animation: l5 1.5s infinite;
+  33% {
+    transform: scaleX(var(--s, 1)) translate(calc(50% + 2.5px)) scale(1);
   }
-  &:after {
-    --s: -1;
+  66% {
+    transform: scaleX(var(--s, 1)) translate(calc(50% + 2.5px)) scale(2);
   }
-  @keyframes l5 {
-    0% {
-      transform: scaleX(var(--s, 1)) translate(0) scale(1);
-    }
-    33% {
-      transform: scaleX(var(--s, 1)) translate(calc(50% + 2.5px)) scale(1);
-    }
-    66% {
-      transform: scaleX(var(--s, 1)) translate(calc(50% + 2.5px)) scale(2);
-    }
-    100% {
-      transform: scaleX(var(--s, 1)) translate(0) scale(1);
-    }
+  100% {
+    transform: scaleX(var(--s, 1)) translate(0) scale(1);
   }
 }

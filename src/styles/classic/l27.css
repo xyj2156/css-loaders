@@ -1,23 +1,21 @@
-@scope (.__loading-classic-27) {
-  & {
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 30px;
-    display: inline-flex;
-  }
-  &::before {
-    content: 'Loadi';
-    animation: l27 2s infinite;
-  }
-  &::after {
-    content: 'ng...';
-    animation: l27 2s infinite 1s;
-  }
+.__loading-classic-27 {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  display: inline-flex;
+}
+.__loading-classic-27::before {
+  content: 'Loadi';
+  animation: __loading-classic-27-l27 2s infinite;
+}
+.__loading-classic-27::after {
+  content: 'ng...';
+  animation: __loading-classic-27-l27 2s infinite 1s;
+}
 
-  @keyframes l27 {
-    50%,
-    100% {
-      transform: rotate(1turn);
-    }
+@keyframes __loading-classic-27-l27 {
+  50%,
+  100% {
+    transform: rotate(1turn);
   }
 }

@@ -1,35 +1,33 @@
-@scope (.__loading-hypnotic-16) {
-  & {
-    width: 50px;
-    aspect-ratio: 1;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid;
-  }
-  &::before {
-    content: '';
-    position: absolute;
-    inset: -48px;
-    --c: conic-gradient(from 180deg at 50% calc(100% - 2px), #000 90deg, #0000 0);
-    background: var(--c), var(--c);
+.__loading-hypnotic-16 {
+  width: 50px;
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid;
+}
+.__loading-hypnotic-16::before {
+  content: '';
+  position: absolute;
+  inset: -48px;
+  --c: conic-gradient(from 180deg at 50% calc(100% - 2px), #000 90deg, #0000 0);
+  background: var(--c), var(--c);
+  background-position:
+    0 0,
+    8px 0;
+  background-size: 16px 9.6px;
+  animation: __loading-hypnotic-16-l16 2s infinite;
+}
+@keyframes __loading-hypnotic-16-l16 {
+  50% {
     background-position:
-      0 0,
-      8px 0;
-    background-size: 16px 9.6px;
-    animation: l16 2s infinite;
+      0 -9.6px,
+      8px 9.6px;
+    transform: rotate(90deg);
   }
-  @keyframes l16 {
-    50% {
-      background-position:
-        0 -9.6px,
-        8px 9.6px;
-      transform: rotate(90deg);
-    }
-    100% {
-      background-position:
-        0 -19.2px,
-        8px 19.2px;
-      transform: rotate(180deg);
-    }
+  100% {
+    background-position:
+      0 -19.2px,
+      8px 19.2px;
+    transform: rotate(180deg);
   }
 }

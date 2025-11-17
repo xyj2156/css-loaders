@@ -1,24 +1,22 @@
-@scope (.__loading-progress-6) {
-  & {
-    width: 120px;
-    height: 22px;
-    border-radius: 20px;
-    color: #514b82;
-    border: 2px solid;
-    position: relative;
-  }
-  &::before {
-    content: '';
-    position: absolute;
-    margin: 2px;
-    inset: 0 100% 0 0;
-    border-radius: inherit;
-    background: currentColor;
-    animation: l6 2s infinite;
-  }
-  @keyframes l6 {
-    100% {
-      inset: 0;
-    }
+.__loading-progress-6 {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  color: #514b82;
+  border: 2px solid;
+  position: relative;
+}
+.__loading-progress-6::before {
+  content: '';
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: __loading-progress-6-l6 2s infinite;
+}
+@keyframes __loading-progress-6-l6 {
+  100% {
+    inset: 0;
   }
 }

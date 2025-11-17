@@ -1,32 +1,30 @@
-@scope (.__loading-maze-8) {
-  & {
-    width: 40px;
-    aspect-ratio: 1;
-    background:
-      radial-gradient(farthest-side, #000 90%, #0000) 50%/8px 8px no-repeat,
-      conic-gradient(from -90deg at 15px 15px, #0000 90deg, #fff 0) 0 0/25px 25px;
-    animation: l8 1.5s infinite;
+.__loading-maze-8 {
+  width: 40px;
+  aspect-ratio: 1;
+  background:
+    radial-gradient(farthest-side, #000 90%, #0000) 50%/8px 8px no-repeat,
+    conic-gradient(from -90deg at 15px 15px, #0000 90deg, #fff 0) 0 0/25px 25px;
+  animation: __loading-maze-8-l8 1.5s infinite;
+}
+@keyframes __loading-maze-8-l8 {
+  0% {
+    background-position:
+      left -10px top 50%,
+      0 0;
   }
-  @keyframes l8 {
-    0% {
-      background-position:
-        left -10px top 50%,
-        0 0;
-    }
-    50% {
-      background-position:
-        right -10px top 50%,
-        0 0;
-    }
-    50.01% {
-      background-position:
-        right 50% top -10px,
-        0 0;
-    }
-    100% {
-      background-position:
-        right 50% bottom -10px,
-        0 0;
-    }
+  50% {
+    background-position:
+      right -10px top 50%,
+      0 0;
+  }
+  50.01% {
+    background-position:
+      right 50% top -10px,
+      0 0;
+  }
+  100% {
+    background-position:
+      right 50% bottom -10px,
+      0 0;
   }
 }

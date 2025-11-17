@@ -1,18 +1,16 @@
-@scope (.__loading-continuous-5) {
-  & {
-    width: 120px;
-    height: 20px;
-    background:
-      linear-gradient(#25b09b 0 0) left -40px top 0/40px 20px,
-      linear-gradient(#ddd 0 0) center/100% 50%;
-    background-repeat: no-repeat;
-    animation: l5 1s infinite linear;
-  }
-  @keyframes l5 {
-    100% {
-      background-position:
-        right -40px top 0,
-        center;
-    }
+.__loading-continuous-5 {
+  width: 120px;
+  height: 20px;
+  background:
+    linear-gradient(#25b09b 0 0) left -40px top 0/40px 20px,
+    linear-gradient(#ddd 0 0) center/100% 50%;
+  background-repeat: no-repeat;
+  animation: __loading-continuous-5-l5 1s infinite linear;
+}
+@keyframes __loading-continuous-5-l5 {
+  100% {
+    background-position:
+      right -40px top 0,
+      center;
   }
 }

@@ -1,54 +1,52 @@
-@scope (.__loading-shapes-30) {
-  & {
-    width: 40px;
-    aspect-ratio: 1;
-    display: grid;
-    animation: l30-0 1.5s infinite linear;
+.__loading-shapes-30 {
+  width: 40px;
+  aspect-ratio: 1;
+  display: grid;
+  animation: __loading-shapes-30-l30-0 1.5s infinite linear;
+}
+.__loading-shapes-30:before,
+.__loading-shapes-30:after {
+  content: '';
+  grid-area: 1/1;
+  background: #25b09b;
+  animation: inherit;
+  animation-name: __loading-shapes-30-l30-1;
+}
+.__loading-shapes-30:after {
+  transform-origin: bottom right;
+  --s: 1;
+}
+@keyframes __loading-shapes-30-l30-0 {
+  0%,
+  66% {
+    transform: scaleY(1);
   }
-  &:before,
-  &:after {
-    content: '';
-    grid-area: 1/1;
-    background: #25b09b;
-    animation: inherit;
-    animation-name: l30-1;
+  66.01%,
+  100% {
+    transform: scaleY(-1);
   }
-  &:after {
-    transform-origin: bottom right;
-    --s: 1;
+}
+@keyframes __loading-shapes-30-l30-1 {
+  0%,
+  10% {
+    transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 90deg));
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
   }
-  @keyframes l30-0 {
-    0%,
-    66% {
-      transform: scaleY(1);
-    }
-    66.01%,
-    100% {
-      transform: scaleY(-1);
-    }
+  33% {
+    transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 0deg));
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
   }
-  @keyframes l30-1 {
-    0%,
-    10% {
-      transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 90deg));
-      clip-path: polygon(0 0, 0 100%, 100% 100%);
-    }
-    33% {
-      transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 0deg));
-      clip-path: polygon(0 0, 0 100%, 100% 100%);
-    }
-    66% {
-      transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 0deg));
-      clip-path: polygon(0 0, 0 100%, 100% 0);
-    }
-    66.01% {
-      transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 0deg));
-      clip-path: polygon(0 0, 0 100%, 100% 100%);
-    }
-    90%,
-    100% {
-      transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 90deg));
-      clip-path: polygon(0 0, 0 100%, 100% 100%);
-    }
+  66% {
+    transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 0deg));
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+  }
+  66.01% {
+    transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 0deg));
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+  }
+  90%,
+  100% {
+    transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 90deg));
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
   }
 }

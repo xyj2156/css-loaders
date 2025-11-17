@@ -1,42 +1,40 @@
-@scope (.__loading-dancers-10) {
-  & {
-    width: 32px;
-    height: 16px;
-    display: flex;
+.__loading-dancers-10 {
+  width: 32px;
+  height: 16px;
+  display: flex;
+}
+.__loading-dancers-10:before,
+.__loading-dancers-10:after {
+  content: '';
+  flex: 1;
+  background: #3fb8af;
+  transform-origin: top right;
+  animation: __loading-dancers-10-l10-1 2s infinite;
+}
+.__loading-dancers-10:after {
+  background: #ff3d7f;
+  transform-origin: top left;
+  animation-delay: 0.25s;
+}
+@keyframes __loading-dancers-10-l10-1 {
+  0%,
+  5% {
+    transform: rotate(0);
   }
-  &:before,
-  &:after {
-    content: '';
-    flex: 1;
-    background: #3fb8af;
-    transform-origin: top right;
-    animation: l10-1 2s infinite;
+  20%,
+  30% {
+    transform: rotate(90deg);
   }
-  &:after {
-    background: #ff3d7f;
-    transform-origin: top left;
-    animation-delay: 0.25s;
+  45%,
+  55% {
+    transform: rotate(180deg);
   }
-  @keyframes l10-1 {
-    0%,
-    5% {
-      transform: rotate(0);
-    }
-    20%,
-    30% {
-      transform: rotate(90deg);
-    }
-    45%,
-    55% {
-      transform: rotate(180deg);
-    }
-    70%,
-    80% {
-      transform: rotate(270deg);
-    }
-    95%,
-    100% {
-      transform: rotate(360deg);
-    }
+  70%,
+  80% {
+    transform: rotate(270deg);
+  }
+  95%,
+  100% {
+    transform: rotate(360deg);
   }
 }

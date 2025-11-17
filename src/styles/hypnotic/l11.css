@@ -1,30 +1,28 @@
-@scope (.__loading-hypnotic-11) {
-  & {
-    width: 50px;
-    aspect-ratio: 1;
-    border: 2px solid;
-    box-sizing: border-box;
-    border-radius: 50%;
-    display: grid;
-    animation: l11 1.5s infinite linear;
-    transform-origin: 50% 80%;
-  }
-  &:before,
-  &:after {
-    content: '';
-    grid-area: 1/1;
-    border: inherit;
-    border-radius: 50%;
-    animation: inherit;
-    animation-duration: 1s;
-    transform-origin: inherit;
-  }
-  &:after {
-    --s: -1;
-  }
-  @keyframes l11 {
-    100% {
-      transform: rotate(calc(var(--s, 1) * 1turn));
-    }
+.__loading-hypnotic-11 {
+  width: 50px;
+  aspect-ratio: 1;
+  border: 2px solid;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: grid;
+  animation: __loading-hypnotic-11-l11 1.5s infinite linear;
+  transform-origin: 50% 80%;
+}
+.__loading-hypnotic-11:before,
+.__loading-hypnotic-11:after {
+  content: '';
+  grid-area: 1/1;
+  border: inherit;
+  border-radius: 50%;
+  animation: inherit;
+  animation-duration: 1s;
+  transform-origin: inherit;
+}
+.__loading-hypnotic-11:after {
+  --s: -1;
+}
+@keyframes __loading-hypnotic-11-l11 {
+  100% {
+    transform: rotate(calc(var(--s, 1) * 1turn));
   }
 }

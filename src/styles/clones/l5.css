@@ -1,53 +1,51 @@
-@scope (.__loading-clones-5) {
-  & {
-    width: 30px;
-    aspect-ratio: 1;
-    background: #554236;
-    display: grid;
-    transform-origin: top right;
-    animation: l5-0 4s infinite linear;
+.__loading-clones-5 {
+  width: 30px;
+  aspect-ratio: 1;
+  background: #554236;
+  display: grid;
+  transform-origin: top right;
+  animation: __loading-clones-5-l5-0 4s infinite linear;
+}
+.__loading-clones-5::before,
+.__loading-clones-5::after {
+  content: '';
+  grid-area: 1/1;
+  background: #f77825;
+  transform-origin: inherit;
+  animation: inherit;
+  animation-name: __loading-clones-5-l5-1;
+  animation-duration: 1s;
+}
+.__loading-clones-5::after {
+  background: #60b99a;
+  --s: 60deg;
+}
+@keyframes __loading-clones-5-l5-0 {
+  0%,
+  5% {
+    transform: rotate(0);
   }
-  &::before,
-  &::after {
-    content: '';
-    grid-area: 1/1;
-    background: #f77825;
-    transform-origin: inherit;
-    animation: inherit;
-    animation-name: l5-1;
-    animation-duration: 1s;
+  25%,
+  30% {
+    transform: rotate(90deg);
   }
-  &::after {
-    background: #60b99a;
-    --s: 60deg;
+  50%,
+  55% {
+    transform: rotate(180deg);
   }
-  @keyframes l5-0 {
-    0%,
-    5% {
-      transform: rotate(0);
-    }
-    25%,
-    30% {
-      transform: rotate(90deg);
-    }
-    50%,
-    55% {
-      transform: rotate(180deg);
-    }
-    75%,
-    80% {
-      transform: rotate(270deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  75%,
+  80% {
+    transform: rotate(270deg);
   }
-  @keyframes l5-1 {
-    50% {
-      transform: rotate(var(--s, 30deg));
-    }
-    100% {
-      transform: rotate(0);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes __loading-clones-5-l5-1 {
+  50% {
+    transform: rotate(var(--s, 30deg));
+  }
+  100% {
+    transform: rotate(0);
   }
 }

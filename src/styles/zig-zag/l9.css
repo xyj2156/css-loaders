@@ -1,28 +1,26 @@
-@scope (.__loading-zig-zag-9) {
-  & {
-    display: inline-grid;
-  }
-  &:before,
-  &:after {
-    content: '';
-    height: 27px;
-    aspect-ratio: 5;
-    --c: #000 90deg, #0000 0;
-    background:
-      conic-gradient(from 135deg at top, var(--c)),
-      conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
-    background-size: 20% 50%;
-    background-repeat: repeat-x;
-    clip-path: inset(0 100% 0 0);
-    animation: l9 1s infinite linear;
-  }
-  &:after {
-    scale: -1 1;
-  }
-  @keyframes l9 {
-    90%,
-    to {
-      clip-path: inset(0);
-    }
+.__loading-zig-zag-9 {
+  display: inline-grid;
+}
+.__loading-zig-zag-9:before,
+.__loading-zig-zag-9:after {
+  content: '';
+  height: 27px;
+  aspect-ratio: 5;
+  --c: #000 90deg, #0000 0;
+  background:
+    conic-gradient(from 135deg at top, var(--c)),
+    conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-zig-zag-9-l9 1s infinite linear;
+}
+.__loading-zig-zag-9:after {
+  scale: -1 1;
+}
+@keyframes __loading-zig-zag-9-l9 {
+  90%,
+  to {
+    clip-path: inset(0);
   }
 }

@@ -1,56 +1,54 @@
-@scope (.__loading-colorful-5) {
-  & {
-    width: 40px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background:
-      radial-gradient(farthest-side, #ed303c 94%, #0000),
-      radial-gradient(farthest-side, #3b8183 94%, #0000),
-      radial-gradient(farthest-side, #fad089 94%, #0000),
-      radial-gradient(farthest-side, #ff9c5b 94%, #0000), #ed303c;
-    background-size: 105% 105%;
-    background-repeat: no-repeat;
-    animation: l5 2s infinite;
+.__loading-colorful-5 {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side, #ed303c 94%, #0000),
+    radial-gradient(farthest-side, #3b8183 94%, #0000),
+    radial-gradient(farthest-side, #fad089 94%, #0000),
+    radial-gradient(farthest-side, #ff9c5b 94%, #0000), #ed303c;
+  background-size: 105% 105%;
+  background-repeat: no-repeat;
+  animation: __loading-colorful-5-l5 2s infinite;
+}
+@keyframes __loading-colorful-5-l5 {
+  0% {
+    background-position:
+      50% -50px,
+      -40px 50%,
+      50% calc(100% + 50px),
+      calc(100% + 50px) 50%;
   }
-  @keyframes l5 {
-    0% {
-      background-position:
-        50% -50px,
-        -40px 50%,
-        50% calc(100% + 50px),
-        calc(100% + 50px) 50%;
-    }
-    20%,
-    25% {
-      background-position:
-        50% -50px,
-        -50px 50%,
-        50% calc(100% + 50px),
-        50% 50%;
-    }
-    45%,
-    50% {
-      background-position:
-        50% -50px,
-        -50px 50%,
-        50% 50%,
-        50% 50%;
-    }
-    75%,
-    75% {
-      background-position:
-        50% -50px,
-        50% 50%,
-        50% 50%,
-        50% 50%;
-    }
-    95%,
-    100% {
-      background-position:
-        50% 50%,
-        50% 50%,
-        50% 50%,
-        50% 50%;
-    }
+  20%,
+  25% {
+    background-position:
+      50% -50px,
+      -50px 50%,
+      50% calc(100% + 50px),
+      50% 50%;
+  }
+  45%,
+  50% {
+    background-position:
+      50% -50px,
+      -50px 50%,
+      50% 50%,
+      50% 50%;
+  }
+  75%,
+  75% {
+    background-position:
+      50% -50px,
+      50% 50%,
+      50% 50%,
+      50% 50%;
+  }
+  95%,
+  100% {
+    background-position:
+      50% 50%,
+      50% 50%,
+      50% 50%,
+      50% 50%;
   }
 }

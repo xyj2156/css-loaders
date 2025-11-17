@@ -1,35 +1,33 @@
-@scope (.__loading-dots-46) {
-  & {
-    width: 32px;
-    aspect-ratio: 1;
-    --_g: no-repeat radial-gradient(farthest-side, #000 90%, #0000);
-    background: var(--_g), var(--_g), var(--_g), var(--_g);
-    background-size: 40% 40%;
-    animation: l46 1s infinite;
+.__loading-dots-46 {
+  width: 32px;
+  aspect-ratio: 1;
+  --_g: no-repeat radial-gradient(farthest-side, #000 90%, #0000);
+  background: var(--_g), var(--_g), var(--_g), var(--_g);
+  background-size: 40% 40%;
+  animation: __loading-dots-46-l46 1s infinite;
+}
+@keyframes __loading-dots-46-l46 {
+  0% {
+    background-position:
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%;
   }
-  @keyframes l46 {
-    0% {
-      background-position:
-        0 0,
-        100% 0,
-        100% 100%,
-        0 100%;
-    }
-    40%,
-    50% {
-      background-position:
-        100% 100%,
-        100% 0,
-        0 0,
-        0 100%;
-    }
-    90%,
-    100% {
-      background-position:
-        100% 100%,
-        0 100%,
-        0 0,
-        100% 0;
-    }
+  40%,
+  50% {
+    background-position:
+      100% 100%,
+      100% 0,
+      0 0,
+      0 100%;
+  }
+  90%,
+  100% {
+    background-position:
+      100% 100%,
+      0 100%,
+      0 0,
+      100% 0;
   }
 }

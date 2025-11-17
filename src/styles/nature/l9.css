@@ -1,46 +1,44 @@
-@scope (.__loading-nature-9) {
-  & {
-    width: 80px;
-    height: 40px;
+.__loading-nature-9 {
+  width: 80px;
+  height: 40px;
+  background: #4dbefa;
+  position: relative;
+  overflow: hidden;
+  animation: __loading-nature-9-l9-0 1.5s infinite steps(10);
+}
+.__loading-nature-9:before,
+.__loading-nature-9:after {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  --rad: radial-gradient(1px 4px, #eee 92%, #0000);
+  background:
+    var(--rad) 20% 0,
+    var(--rad) 70% 7%;
+  background-size: var(--w, 20px) var(--h, 18px);
+  animation: __loading-nature-9-l9-1 0.2s linear infinite;
+  transform: skew(-10deg);
+}
+.__loading-nature-9:after {
+  --h: 12px;
+  --w: 16px;
+  animation-duration: 0.3s;
+}
+@keyframes __loading-nature-9-l9-0 {
+  0%,
+  15%,
+  20%,
+  30%,
+  100% {
     background: #4dbefa;
-    position: relative;
-    overflow: hidden;
-    animation: l9-0 1.5s infinite steps(10);
   }
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    inset: -50%;
-    --rad: radial-gradient(1px 4px, #eee 92%, #0000);
-    background:
-      var(--rad) 20% 0,
-      var(--rad) 70% 7%;
-    background-size: var(--w, 20px) var(--h, 18px);
-    animation: l9-1 0.2s linear infinite;
-    transform: skew(-10deg);
+  10%,
+  22% {
+    background: #7accf7;
   }
-  &:after {
-    --h: 12px;
-    --w: 16px;
-    animation-duration: 0.3s;
-  }
-  @keyframes l9-0 {
-    0%,
-    15%,
-    20%,
-    30%,
-    100% {
-      background: #4dbefa;
-    }
-    10%,
-    22% {
-      background: #7accf7;
-    }
-  }
-  @keyframes l9-1 {
-    100% {
-      transform: skew(-10deg) translateY(var(--h, 18px));
-    }
+}
+@keyframes __loading-nature-9-l9-1 {
+  100% {
+    transform: skew(-10deg) translateY(var(--h, 18px));
   }
 }

@@ -1,34 +1,32 @@
-@scope (.__loading-square-3) {
-  & {
-    display: inline-flex;
-    gap: 5px;
-    animation: l3-0 1s infinite;
-    transform-origin: 50% calc(100% + 2.5px);
+.__loading-square-3 {
+  display: inline-flex;
+  gap: 5px;
+  animation: __loading-square-3-l3-0 1s infinite;
+  transform-origin: 50% calc(100% + 2.5px);
+}
+.__loading-square-3:before,
+.__loading-square-3:after {
+  content: '';
+  width: 25px;
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 3px inset #fff;
+}
+.__loading-square-3:after {
+  transform-origin: -2.5px calc(100% + 2.5px);
+  animation: __loading-square-3-l3-1 1s infinite;
+}
+@keyframes __loading-square-3-l3-1 {
+  50%,
+  100% {
+    transform: rotate(180deg);
   }
-  &:before,
-  &:after {
-    content: '';
-    width: 25px;
-    aspect-ratio: 1;
-    box-shadow: 0 0 0 3px inset #fff;
+}
+@keyframes __loading-square-3-l3-0 {
+  0%,
+  50% {
+    transform: rotate(0deg);
   }
-  &:after {
-    transform-origin: -2.5px calc(100% + 2.5px);
-    animation: l3-1 1s infinite;
-  }
-  @keyframes l3-1 {
-    50%,
-    100% {
-      transform: rotate(180deg);
-    }
-  }
-  @keyframes l3-0 {
-    0%,
-    50% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(90deg);
-    }
+  100% {
+    transform: rotate(90deg);
   }
 }

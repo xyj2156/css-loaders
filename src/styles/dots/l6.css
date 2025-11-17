@@ -1,26 +1,24 @@
-@scope (.__loading-dots-6) {
-  & {
-    width: 15px;
-    aspect-ratio: 1;
-    background: #000;
-    border-radius: 50%;
-    animation: l6 1s infinite linear alternate;
+.__loading-dots-6 {
+  width: 15px;
+  aspect-ratio: 1;
+  background: #000;
+  border-radius: 50%;
+  animation: __loading-dots-6-l6 1s infinite linear alternate;
+}
+@keyframes __loading-dots-6-l6 {
+  0% {
+    box-shadow:
+      15px 0,
+      -25px 0;
   }
-  @keyframes l6 {
-    0% {
-      box-shadow:
-        15px 0,
-        -25px 0;
-    }
-    50% {
-      box-shadow:
-        15px 0,
-        -15px 0;
-    }
-    100% {
-      box-shadow:
-        25px 0,
-        -15px 0;
-    }
+  50% {
+    box-shadow:
+      15px 0,
+      -15px 0;
+  }
+  100% {
+    box-shadow:
+      25px 0,
+      -15px 0;
   }
 }

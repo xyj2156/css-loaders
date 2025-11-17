@@ -1,31 +1,29 @@
-@scope (.__loading-rolling-7) {
-  & {
-    display: inline-grid;
-    width: 40px;
-    aspect-ratio: 1;
-  }
-  &:before,
-  &:after {
-    content: '';
-    grid-area: 1/1;
-    border-radius: 50%;
-    background: repeating-conic-gradient(#c02942 0 60deg, #0b486b 0 120deg);
-    animation: l7 2s infinite alternate ease-in-out;
-    rotate: 90deg;
-  }
-  &:before {
-    translate: 0 -100%;
-  }
-  &:after {
-    padding: 20%;
-    mask:
-      conic-gradient(from 120deg, #0000 120deg, #000 0) content-box exclude,
-      conic-gradient(from 120deg, #0000 120deg, #000 0);
-    animation-direction: alternate-reverse;
-  }
-  @keyframes l7 {
-    to {
-      rotate: -90deg;
-    }
+.__loading-rolling-7 {
+  display: inline-grid;
+  width: 40px;
+  aspect-ratio: 1;
+}
+.__loading-rolling-7:before,
+.__loading-rolling-7:after {
+  content: '';
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: repeating-conic-gradient(#c02942 0 60deg, #0b486b 0 120deg);
+  animation: __loading-rolling-7-l7 2s infinite alternate ease-in-out;
+  rotate: 90deg;
+}
+.__loading-rolling-7:before {
+  translate: 0 -100%;
+}
+.__loading-rolling-7:after {
+  padding: 20%;
+  mask:
+    conic-gradient(from 120deg, #0000 120deg, #000 0) content-box exclude,
+    conic-gradient(from 120deg, #0000 120deg, #000 0);
+  animation-direction: alternate-reverse;
+}
+@keyframes __loading-rolling-7-l7 {
+  to {
+    rotate: -90deg;
   }
 }

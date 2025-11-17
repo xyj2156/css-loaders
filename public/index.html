@@ -1,11 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <title>css-loaders preview</title>
-    <link rel="stylesheet" href="/all.min.css">
+    <link rel="stylesheet" href="/all.css">
+    <style>
+        * {box-sizing: border-box}
+        html, body {width: 100%;height: 100%;margin: 0;padding: 0;}
+        body {display: flex;justify-content: center;align-items: center}
+
+        ::-webkit-scrollbar {
+            width:  3px;
+            height: 3px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background:    #f1f1f1;
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background:    #888;
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        #xyj {
+            width:     90%;
+            height:    90%;
+
+            display:   flex;
+            flex-wrap: nowrap;
+
+
+            .left, .right {overflow: auto;height: 100%;}
+            .left {
+                width:       150px;
+                flex-shrink: 0;
+                ol {
+                    margin: 0;
+                    li {
+                        cursor: pointer;
+                        & + li {margin: 5px 0;}
+                    }
+                }
+            }
+            .right {
+                padding:         10px;
+                word-break:      break-all;
+                white-space:     break-spaces;
+
+                display:         flex;
+                flex-wrap:       wrap;
+
+                & > div {
+                    width:           250px;
+                    height:          100px;
+
+                    display:         flex;
+                    justify-content: center;
+                    align-items:     center;
+                }
+            }
+        }
+    </style>
 </head>
 <body>
+<div id="xyj">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+<script type="text/javascript" charset="UTF-8">
+    (function () {
+        const left = document.querySelector('#xyj .left');
+        const right = document.querySelector('#xyj .right');
+        fetch('/index.json').then(res => res.json()).then(function (json) {
+            const li = [];
+            const keys = Object.keys(json);
+            keys.forEach(function (key) {
+                li.push(`<li class="cursor-pointer" data-key="${key}">${key}</li>`);
+            });
+            const ol = document.createElement('ol');
+            ol.innerHTML = li.join('');
+            ol.addEventListener('click', function (e) {
+                if (e.target.tagName !== 'LI') {
+                    return;
+                }
+                const key = e.target.dataset.key;
+                show(key);
+            });
+            left.appendChild(ol);
+            show(keys[0]);
 
+
+            function show(key) {
+                const content = json[key];
+                const html = [];
+                content.forEach(function (item) {
+                    html.push(`<div><div class="${item}"></div></div>`);
+                });
+                right.innerHTML = html.join('');
+            }
+        });
+    }());
+</script>
 </body>
 </html>

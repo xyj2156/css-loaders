@@ -1,25 +1,23 @@
-@scope (.__loading-hypnotic-19) {
-  & {
-    width: 50px;
-    aspect-ratio: 1;
-    display: grid;
-  }
-  &::before,
-  &::after {
-    content: '';
-    grid-area: 1/1;
-    border-radius: 50%;
-    background: repeating-radial-gradient(farthest-side, #0000 0%, #000 1% 10%, #0000 11% 30%);
-    -webkit-mask: repeating-conic-gradient(#000 0 36deg, #0000 0 72deg);
-    animation: l19 4s infinite linear;
-  }
-  &::after {
-    -webkit-mask: repeating-conic-gradient(#0000 0 36deg, #000 0 72deg);
-    animation-direction: reverse;
-  }
-  @keyframes l19 {
-    100% {
-      transform: rotate(1turn);
-    }
+.__loading-hypnotic-19 {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-hypnotic-19::before,
+.__loading-hypnotic-19::after {
+  content: '';
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: repeating-radial-gradient(farthest-side, #0000 0%, #000 1% 10%, #0000 11% 30%);
+  -webkit-mask: repeating-conic-gradient(#000 0 36deg, #0000 0 72deg);
+  animation: __loading-hypnotic-19-l19 4s infinite linear;
+}
+.__loading-hypnotic-19::after {
+  -webkit-mask: repeating-conic-gradient(#0000 0 36deg, #000 0 72deg);
+  animation-direction: reverse;
+}
+@keyframes __loading-hypnotic-19-l19 {
+  100% {
+    transform: rotate(1turn);
   }
 }

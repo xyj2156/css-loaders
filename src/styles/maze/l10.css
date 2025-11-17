@@ -1,69 +1,67 @@
-@scope (.__loading-maze-10) {
-  & {
-    height: 30px;
-    aspect-ratio: 2;
-    background:
-      radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
-      radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
-      radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
-      radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
-      radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px,
-      linear-gradient(#fff 0 0) center/100% 10px,
-      linear-gradient(#fff 0 0) right/50% 100%;
-    background-repeat: no-repeat;
-    animation: l10 2s infinite;
+.__loading-maze-10 {
+  height: 30px;
+  aspect-ratio: 2;
+  background:
+    radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
+    radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
+    radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
+    radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
+    radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px,
+    linear-gradient(#fff 0 0) center/100% 10px,
+    linear-gradient(#fff 0 0) right/50% 100%;
+  background-repeat: no-repeat;
+  animation: __loading-maze-10-l10 2s infinite;
+}
+@keyframes __loading-maze-10-l10 {
+  0% {
+    background-position:
+      top 1px right 1px,
+      right 1px bottom 1px,
+      top 1px left 31px,
+      bottom 1px left 31px,
+      -10px 50%,
+      50%,
+      right;
   }
-  @keyframes l10 {
-    0% {
-      background-position:
-        top 1px right 1px,
-        right 1px bottom 1px,
-        top 1px left 31px,
-        bottom 1px left 31px,
-        -10px 50%,
-        50%,
-        right;
-    }
-    50%,
-    60% {
-      background-position:
-        top 1px right 1px,
-        right 1px bottom 1px,
-        top 1px left 31px,
-        bottom 1px left 31px,
-        left 75% top 50%,
-        50%,
-        right;
-    }
-    80% {
-      background-position:
-        75% 50%,
-        75% 50%,
-        75% 50%,
-        75% 50%,
-        left 75% top 50%,
-        50%,
-        right;
-    }
-    80.01% {
-      background-position:
-        75% 50%,
-        75% 50%,
-        75% 50%,
-        75% 50%,
-        -10px 50%,
-        50%,
-        right;
-    }
-    100% {
-      background-position:
-        top 1px right 1px,
-        right 1px bottom 1px,
-        top 1px left 31px,
-        bottom 1px left 31px,
-        -10px 50%,
-        50%,
-        right;
-    }
+  50%,
+  60% {
+    background-position:
+      top 1px right 1px,
+      right 1px bottom 1px,
+      top 1px left 31px,
+      bottom 1px left 31px,
+      left 75% top 50%,
+      50%,
+      right;
+  }
+  80% {
+    background-position:
+      75% 50%,
+      75% 50%,
+      75% 50%,
+      75% 50%,
+      left 75% top 50%,
+      50%,
+      right;
+  }
+  80.01% {
+    background-position:
+      75% 50%,
+      75% 50%,
+      75% 50%,
+      75% 50%,
+      -10px 50%,
+      50%,
+      right;
+  }
+  100% {
+    background-position:
+      top 1px right 1px,
+      right 1px bottom 1px,
+      top 1px left 31px,
+      bottom 1px left 31px,
+      -10px 50%,
+      50%,
+      right;
   }
 }

@@ -1,30 +1,23 @@
-@scope (.__loading-3d-1) {
-  & {
-    --s: 25px;
+.__loading-3d-1 {
+  --s: 25px;
 
-    --_d: calc(0.353 * var(--s));
-    width: calc(var(--s) + var(--_d));
-    aspect-ratio: 1;
-    clip-path: polygon(
-      var(--_d) 0,
-      100% 0,
-      100% calc(100% - var(--_d)),
-      calc(100% - var(--_d)) 100%,
-      0 100%,
-      0 var(--_d)
-    );
-    background: conic-gradient(
-      from -90deg at var(--s) var(--_d),
-      #fff 135deg,
-      #666 0 270deg,
-      #aaa 0
-    );
-    animation: l1 1s infinite cubic-bezier(0.5, 300, 0.5, -300);
-  }
-  @keyframes l1 {
-    50%,
-    100% {
-      transform: translateY(0.1px);
-    }
+  --_d: calc(0.353 * var(--s));
+  width: calc(var(--s) + var(--_d));
+  aspect-ratio: 1;
+  clip-path: polygon(
+    var(--_d) 0,
+    100% 0,
+    100% calc(100% - var(--_d)),
+    calc(100% - var(--_d)) 100%,
+    0 100%,
+    0 var(--_d)
+  );
+  background: conic-gradient(from -90deg at var(--s) var(--_d), #fff 135deg, #666 0 270deg, #aaa 0);
+  animation: __loading-3d-1-l1 1s infinite cubic-bezier(0.5, 300, 0.5, -300);
+}
+@keyframes __loading-3d-1-l1 {
+  50%,
+  100% {
+    transform: translateY(0.1px);
   }
 }

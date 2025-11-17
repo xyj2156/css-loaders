@@ -1,34 +1,32 @@
-@scope (.__loading-dots-20) {
-  & {
-    height: 15px;
-    aspect-ratio: 6;
-    display: flex;
+.__loading-dots-20 {
+  height: 15px;
+  aspect-ratio: 6;
+  display: flex;
+}
+.__loading-dots-20:before,
+.__loading-dots-20:after {
+  content: '';
+  flex: 1;
+  padding-left: calc(100% / 6);
+  background: radial-gradient(closest-side at calc(100% / 3) 50%, #000 90%, #0000) 0/75% 100%
+    content-box;
+  animation: __loading-dots-20-l20 2s infinite;
+}
+.__loading-dots-20:after {
+  --_s: -1;
+}
+@keyframes __loading-dots-20-l20 {
+  0% {
+    transform: scale(var(--_s, 1)) translate(0) rotate(0);
   }
-  &:before,
-  &:after {
-    content: '';
-    flex: 1;
-    padding-left: calc(100% / 6);
-    background: radial-gradient(closest-side at calc(100% / 3) 50%, #000 90%, #0000) 0/75% 100%
-      content-box;
-    animation: l20 2s infinite;
+  25% {
+    transform: scale(var(--_s, 1)) translate(-25%) rotate(0);
   }
-  &:after {
-    --_s: -1;
+  50% {
+    transform: scale(var(--_s, 1)) translate(-25%) rotate(1turn);
   }
-  @keyframes l20 {
-    0% {
-      transform: scale(var(--_s, 1)) translate(0) rotate(0);
-    }
-    25% {
-      transform: scale(var(--_s, 1)) translate(-25%) rotate(0);
-    }
-    50% {
-      transform: scale(var(--_s, 1)) translate(-25%) rotate(1turn);
-    }
-    75%,
-    100% {
-      transform: scale(var(--_s, 1)) translate(0) rotate(1turn);
-    }
+  75%,
+  100% {
+    transform: scale(var(--_s, 1)) translate(0) rotate(1turn);
   }
 }

@@ -1,43 +1,31 @@
-@scope (.__loading-hypnotic-5) {
-  & {
-    width: 50px;
-    aspect-ratio: 1.154;
-    display: grid;
-    color: #000;
-    background:
-      linear-gradient(
-          to bottom left,
-          #0000 calc(50% - 1px),
-          currentColor 0 calc(50% + 1px),
-          #0000 0
-        )
-        right/50% 100%,
-      linear-gradient(
-          to bottom right,
-          #0000 calc(50% - 1px),
-          currentColor 0 calc(50% + 1px),
-          #0000 0
-        )
-        left / 50% 100%,
-      linear-gradient(currentColor 0 0) bottom/100% 2px;
-    background-repeat: no-repeat;
-    transform-origin: 50% 66%;
-    animation: l5 4s infinite linear;
-  }
-  &::before,
-  &::after {
-    content: '';
-    grid-area: 1/1;
-    background: inherit;
-    transform-origin: inherit;
-    animation: inherit;
-  }
-  &::after {
-    animation-duration: 2s;
-  }
-  @keyframes l5 {
-    100% {
-      transform: rotate(1turn);
-    }
+.__loading-hypnotic-5 {
+  width: 50px;
+  aspect-ratio: 1.154;
+  display: grid;
+  color: #000;
+  background:
+    linear-gradient(to bottom left, #0000 calc(50% - 1px), currentColor 0 calc(50% + 1px), #0000 0)
+      right/50% 100%,
+    linear-gradient(to bottom right, #0000 calc(50% - 1px), currentColor 0 calc(50% + 1px), #0000 0)
+      left / 50% 100%,
+    linear-gradient(currentColor 0 0) bottom/100% 2px;
+  background-repeat: no-repeat;
+  transform-origin: 50% 66%;
+  animation: __loading-hypnotic-5-l5 4s infinite linear;
+}
+.__loading-hypnotic-5::before,
+.__loading-hypnotic-5::after {
+  content: '';
+  grid-area: 1/1;
+  background: inherit;
+  transform-origin: inherit;
+  animation: inherit;
+}
+.__loading-hypnotic-5::after {
+  animation-duration: 2s;
+}
+@keyframes __loading-hypnotic-5-l5 {
+  100% {
+    transform: rotate(1turn);
   }
 }

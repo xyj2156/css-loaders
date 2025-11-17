@@ -1,28 +1,26 @@
-@scope (.__loading-colorful-19) {
-  & {
-    width: 40px;
-    aspect-ratio: 0.577;
-    clip-path: polygon(0 0, 100% 100%, 0 100%, 100% 0);
-    position: relative;
-    animation: l19 2s infinite linear;
-    overflow: hidden;
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    inset: -150% -150%;
-    background: repeating-conic-gradient(
-      from 30deg,
-      #ffabab 0 60deg,
-      #abe4ff 0 120deg,
-      #ff7373 0 180deg
-    );
-    animation: inherit;
-    animation-direction: reverse;
-  }
-  @keyframes l19 {
-    100% {
-      transform: rotate(360deg);
-    }
+.__loading-colorful-19 {
+  width: 40px;
+  aspect-ratio: 0.577;
+  clip-path: polygon(0 0, 100% 100%, 0 100%, 100% 0);
+  position: relative;
+  animation: __loading-colorful-19-l19 2s infinite linear;
+  overflow: hidden;
+}
+.__loading-colorful-19:before {
+  content: '';
+  position: absolute;
+  inset: -150% -150%;
+  background: repeating-conic-gradient(
+    from 30deg,
+    #ffabab 0 60deg,
+    #abe4ff 0 120deg,
+    #ff7373 0 180deg
+  );
+  animation: inherit;
+  animation-direction: reverse;
+}
+@keyframes __loading-colorful-19-l19 {
+  100% {
+    transform: rotate(360deg);
   }
 }

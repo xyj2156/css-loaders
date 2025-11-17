@@ -1,15 +1,12 @@
-@scope (.__loading-factory-1) {
-  & {
-    width: 90px;
-    height: 14px;
-    box-shadow: 0 3px 0 #fff;
-    background: repeating-linear-gradient(90deg, #fff 0 14px, #0000 0 100%) 0 0 / calc(100% / 4)
-      100%;
-    animation: l1 1s infinite linear;
-  }
-  @keyframes l1 {
-    100% {
-      background-position: calc(100% / 3) 0;
-    }
+.__loading-factory-1 {
+  width: 90px;
+  height: 14px;
+  box-shadow: 0 3px 0 #fff;
+  background: repeating-linear-gradient(90deg, #fff 0 14px, #0000 0 100%) 0 0 / calc(100% / 4) 100%;
+  animation: __loading-factory-1-l1 1s infinite linear;
+}
+@keyframes __loading-factory-1-l1 {
+  100% {
+    background-position: calc(100% / 3) 0;
   }
 }

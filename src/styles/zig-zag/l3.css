@@ -1,20 +1,18 @@
-@scope (.__loading-zig-zag-3) {
-  & {
-    height: 27px;
-    aspect-ratio: 5;
-    --c: #000 90deg, #0000 0;
-    background:
-      conic-gradient(from 135deg at top, var(--c)),
-      conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
-    background-size: 20% 50%;
-    background-repeat: repeat-x;
-    clip-path: inset(0 50%);
-    animation: l3 1s infinite linear;
-  }
-  @keyframes l3 {
-    90%,
-    to {
-      clip-path: inset(0);
-    }
+.__loading-zig-zag-3 {
+  height: 27px;
+  aspect-ratio: 5;
+  --c: #000 90deg, #0000 0;
+  background:
+    conic-gradient(from 135deg at top, var(--c)),
+    conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 50%);
+  animation: __loading-zig-zag-3-l3 1s infinite linear;
+}
+@keyframes __loading-zig-zag-3-l3 {
+  90%,
+  to {
+    clip-path: inset(0);
   }
 }

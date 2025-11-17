@@ -1,40 +1,38 @@
-@scope (.__loading-glowing-6) {
-  & {
-    height: 80px;
-    aspect-ratio: 1;
-    position: relative;
-    clip-path: polygon(
-      100% 50%,
-      85.36% 85.36%,
-      50% 100%,
-      14.64% 85.36%,
-      0% 50%,
-      14.64% 14.64%,
-      50% 0%,
-      85.36% 14.64%,
-      100% 50%,
-      74.75% 25.25%,
-      50% 15%,
-      25.25% 25.25%,
-      15% 50%,
-      25.25% 74.75%,
-      50% 85%,
-      74.75% 74.75%,
-      85% 50%,
-      74.75% 25.25%
-    );
-    filter: blur(12px);
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: conic-gradient(#0000 35%, #0b486b, #0000 65%);
-    animation: l6 2s linear infinite;
-  }
-  @keyframes l6 {
-    to {
-      rotate: 1turn;
-    }
+.__loading-glowing-6 {
+  height: 80px;
+  aspect-ratio: 1;
+  position: relative;
+  clip-path: polygon(
+    100% 50%,
+    85.36% 85.36%,
+    50% 100%,
+    14.64% 85.36%,
+    0% 50%,
+    14.64% 14.64%,
+    50% 0%,
+    85.36% 14.64%,
+    100% 50%,
+    74.75% 25.25%,
+    50% 15%,
+    25.25% 25.25%,
+    15% 50%,
+    25.25% 74.75%,
+    50% 85%,
+    74.75% 74.75%,
+    85% 50%,
+    74.75% 25.25%
+  );
+  filter: blur(12px);
+}
+.__loading-glowing-6:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(#0000 35%, #0b486b, #0000 65%);
+  animation: __loading-glowing-6-l6 2s linear infinite;
+}
+@keyframes __loading-glowing-6-l6 {
+  to {
+    rotate: 1turn;
   }
 }

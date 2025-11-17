@@ -1,37 +1,35 @@
-@scope (.__loading-eyes-5) {
-  & {
-    display: inline-flex;
-    gap: 10px;
+.__loading-eyes-5 {
+  display: inline-flex;
+  gap: 10px;
+}
+.__loading-eyes-5:before,
+.__loading-eyes-5:after {
+  content: '';
+  height: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #000 95%, #0000) 35% 35%/6px 6px no-repeat #fff;
+  animation: __loading-eyes-5-l5 3s infinite;
+}
+@keyframes __loading-eyes-5-l5 {
+  0%,
+  11% {
+    background-position: 35% 35%;
   }
-  &:before,
-  &:after {
-    content: '';
-    height: 20px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: radial-gradient(farthest-side, #000 95%, #0000) 35% 35%/6px 6px no-repeat #fff;
-    animation: l5 3s infinite;
+  14%,
+  36% {
+    background-position: 65% 35%;
   }
-  @keyframes l5 {
-    0%,
-    11% {
-      background-position: 35% 35%;
-    }
-    14%,
-    36% {
-      background-position: 65% 35%;
-    }
-    38%,
-    61% {
-      background-position: 65% 65%;
-    }
-    64%,
-    86% {
-      background-position: 35% 65%;
-    }
-    88%,
-    100% {
-      background-position: 35% 35%;
-    }
+  38%,
+  61% {
+    background-position: 65% 65%;
+  }
+  64%,
+  86% {
+    background-position: 35% 65%;
+  }
+  88%,
+  100% {
+    background-position: 35% 35%;
   }
 }

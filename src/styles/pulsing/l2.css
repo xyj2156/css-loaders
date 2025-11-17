@@ -1,29 +1,27 @@
-@scope (.__loading-pulsing-2) {
-  & {
-    width: 20px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: #000;
-    box-shadow: 0 0 0 0 #0004;
-    animation: l2 1.5s infinite linear;
-    position: relative;
-  }
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    box-shadow: 0 0 0 0 #0004;
-    animation: inherit;
-    animation-delay: -0.5s;
-  }
-  &:after {
-    animation-delay: -1s;
-  }
-  @keyframes l2 {
-    100% {
-      box-shadow: 0 0 0 40px #0000;
-    }
+.__loading-pulsing-2 {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #000;
+  box-shadow: 0 0 0 0 #0004;
+  animation: __loading-pulsing-2-l2 1.5s infinite linear;
+  position: relative;
+}
+.__loading-pulsing-2:before,
+.__loading-pulsing-2:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 #0004;
+  animation: inherit;
+  animation-delay: -0.5s;
+}
+.__loading-pulsing-2:after {
+  animation-delay: -1s;
+}
+@keyframes __loading-pulsing-2-l2 {
+  100% {
+    box-shadow: 0 0 0 40px #0000;
   }
 }

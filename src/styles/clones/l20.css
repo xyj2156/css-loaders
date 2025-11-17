@@ -1,69 +1,67 @@
-@scope (.__loading-clones-20) {
-  & {
-    width: 60px;
-    aspect-ratio: 1;
-    background:
-      linear-gradient(#f77825 0 0), linear-gradient(#f77825 0 0), linear-gradient(#f77825 0 0),
-      linear-gradient(#f77825 0 0), linear-gradient(#60b99a 0 0), linear-gradient(#60b99a 0 0),
-      linear-gradient(#554236 0 0), linear-gradient(#554236 0 0);
-    background-size:
-      25% 25%,
-      25% 25%,
-      25% 25%,
-      25% 25%,
-      25% 50%,
-      25% 50%,
-      50% 25%,
-      50% 25%;
-    background-repeat: no-repeat;
-    animation: l20 1.5s infinite alternate;
+.__loading-clones-20 {
+  width: 60px;
+  aspect-ratio: 1;
+  background:
+    linear-gradient(#f77825 0 0), linear-gradient(#f77825 0 0), linear-gradient(#f77825 0 0),
+    linear-gradient(#f77825 0 0), linear-gradient(#60b99a 0 0), linear-gradient(#60b99a 0 0),
+    linear-gradient(#554236 0 0), linear-gradient(#554236 0 0);
+  background-size:
+    25% 25%,
+    25% 25%,
+    25% 25%,
+    25% 25%,
+    25% 50%,
+    25% 50%,
+    50% 25%,
+    50% 25%;
+  background-repeat: no-repeat;
+  animation: __loading-clones-20-l20 1.5s infinite alternate;
+}
+@keyframes __loading-clones-20-l20 {
+  0%,
+  10% {
+    background-position:
+      calc(1 * 100% / 3) calc(1 * 100% / 3),
+      calc(2 * 100% / 3) calc(1 * 100% / 3),
+      calc(1 * 100% / 3) calc(2 * 100% / 3),
+      calc(2 * 100% / 3) calc(2 * 100% / 3),
+      calc(1 * 100% / 3) 50%,
+      calc(2 * 100% / 3) 50%,
+      50% calc(1 * 100% / 3),
+      50% calc(2 * 100% / 3);
   }
-  @keyframes l20 {
-    0%,
-    10% {
-      background-position:
-        calc(1 * 100% / 3) calc(1 * 100% / 3),
-        calc(2 * 100% / 3) calc(1 * 100% / 3),
-        calc(1 * 100% / 3) calc(2 * 100% / 3),
-        calc(2 * 100% / 3) calc(2 * 100% / 3),
-        calc(1 * 100% / 3) 50%,
-        calc(2 * 100% / 3) 50%,
-        50% calc(1 * 100% / 3),
-        50% calc(2 * 100% / 3);
-    }
-    33% {
-      background-position:
-        calc(0 * 100% / 3) calc(0 * 100% / 3),
-        calc(3 * 100% / 3) calc(0 * 100% / 3),
-        calc(0 * 100% / 3) calc(3 * 100% / 3),
-        calc(3 * 100% / 3) calc(3 * 100% / 3),
-        calc(1 * 100% / 3) 50%,
-        calc(2 * 100% / 3) 50%,
-        50% calc(1 * 100% / 3),
-        50% calc(2 * 100% / 3);
-    }
-    66% {
-      background-position:
-        calc(0 * 100% / 3) calc(0 * 100% / 3),
-        calc(3 * 100% / 3) calc(0 * 100% / 3),
-        calc(0 * 100% / 3) calc(3 * 100% / 3),
-        calc(3 * 100% / 3) calc(3 * 100% / 3),
-        calc(0 * 100% / 3) 50%,
-        calc(3 * 100% / 3) 50%,
-        50% calc(1 * 100% / 3),
-        50% calc(2 * 100% / 3);
-    }
-    90%,
-    100% {
-      background-position:
-        calc(0 * 100% / 3) calc(0 * 100% / 3),
-        calc(3 * 100% / 3) calc(0 * 100% / 3),
-        calc(0 * 100% / 3) calc(3 * 100% / 3),
-        calc(3 * 100% / 3) calc(3 * 100% / 3),
-        calc(0 * 100% / 3) 50%,
-        calc(3 * 100% / 3) 50%,
-        50% calc(0 * 100% / 3),
-        50% calc(3 * 100% / 3);
-    }
+  33% {
+    background-position:
+      calc(0 * 100% / 3) calc(0 * 100% / 3),
+      calc(3 * 100% / 3) calc(0 * 100% / 3),
+      calc(0 * 100% / 3) calc(3 * 100% / 3),
+      calc(3 * 100% / 3) calc(3 * 100% / 3),
+      calc(1 * 100% / 3) 50%,
+      calc(2 * 100% / 3) 50%,
+      50% calc(1 * 100% / 3),
+      50% calc(2 * 100% / 3);
+  }
+  66% {
+    background-position:
+      calc(0 * 100% / 3) calc(0 * 100% / 3),
+      calc(3 * 100% / 3) calc(0 * 100% / 3),
+      calc(0 * 100% / 3) calc(3 * 100% / 3),
+      calc(3 * 100% / 3) calc(3 * 100% / 3),
+      calc(0 * 100% / 3) 50%,
+      calc(3 * 100% / 3) 50%,
+      50% calc(1 * 100% / 3),
+      50% calc(2 * 100% / 3);
+  }
+  90%,
+  100% {
+    background-position:
+      calc(0 * 100% / 3) calc(0 * 100% / 3),
+      calc(3 * 100% / 3) calc(0 * 100% / 3),
+      calc(0 * 100% / 3) calc(3 * 100% / 3),
+      calc(3 * 100% / 3) calc(3 * 100% / 3),
+      calc(0 * 100% / 3) 50%,
+      calc(3 * 100% / 3) 50%,
+      50% calc(0 * 100% / 3),
+      50% calc(3 * 100% / 3);
   }
 }

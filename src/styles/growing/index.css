@@ -1,348 +1,328 @@
-@scope (.__loading-growing-1) {
-  & {
-    width: 64px;
-    aspect-ratio: 1;
-    display: grid;
+.__loading-growing-1 {
+  width: 64px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-growing-1:before {
+  content: '';
+  border: 8px solid #bd1550;
+  box-sizing: content-box;
+  margin: auto;
+  aspect-ratio: 1;
+  animation: __loading-growing-1-l1 infinite 1s steps(4, jump-none);
+}
+@keyframes __loading-growing-1-l1 {
+  0% {
+    width: 0%;
   }
-  &:before {
-    content: '';
-    border: 8px solid #bd1550;
-    box-sizing: content-box;
-    margin: auto;
-    aspect-ratio: 1;
-    animation: l1 infinite 1s steps(4, jump-none);
-  }
-  @keyframes l1 {
-    0% {
-      width: 0%;
-    }
-    to {
-      width: 75%;
-    }
+  to {
+    width: 75%;
   }
 }
-@scope (.__loading-growing-2) {
-  & {
-    width: 64px;
-    aspect-ratio: 1;
-    display: grid;
+.__loading-growing-2 {
+  width: 64px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-growing-2:before {
+  content: '';
+  border: 8px solid #bd1550;
+  border-radius: 50%;
+  box-sizing: content-box;
+  margin: auto;
+  aspect-ratio: 1;
+  animation: __loading-growing-2-l2 infinite 1s steps(4, jump-none);
+}
+@keyframes __loading-growing-2-l2 {
+  0% {
+    width: 0%;
   }
-  &:before {
-    content: '';
-    border: 8px solid #bd1550;
-    border-radius: 50%;
-    box-sizing: content-box;
-    margin: auto;
-    aspect-ratio: 1;
-    animation: l2 infinite 1s steps(4, jump-none);
-  }
-  @keyframes l2 {
-    0% {
-      width: 0%;
-    }
-    to {
-      width: 75%;
-    }
+  to {
+    width: 75%;
   }
 }
-@scope (.__loading-growing-3) {
-  & {
-    --b: 15px;
-    width: calc(5 * var(--b));
-    aspect-ratio: 1 / cos(30deg);
-    display: grid;
+.__loading-growing-3 {
+  --b: 15px;
+  width: calc(5 * var(--b));
+  aspect-ratio: 1 / cos(30deg);
+  display: grid;
+}
+.__loading-growing-3:before {
+  content: '';
+  background: #bd1550;
+  aspect-ratio: inherit;
+  clip-path: polygon(
+    50% 0,
+    100% 100%,
+    0 100%,
+    50% 0,
+    50% var(--b),
+    calc(var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
+    calc(100% - var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
+    50% var(--b)
+  );
+  margin: auto;
+  animation: __loading-growing-3-l3 infinite 1s steps(4, jump-none);
+}
+@keyframes __loading-growing-3-l3 {
+  0% {
+    width: 36%;
   }
-  &:before {
-    content: '';
-    background: #bd1550;
-    aspect-ratio: inherit;
-    clip-path: polygon(
-      50% 0,
-      100% 100%,
-      0 100%,
-      50% 0,
-      50% var(--b),
-      calc(var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
-      calc(100% - var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
-      50% var(--b)
-    );
-    margin: auto;
-    animation: l3 infinite 1s steps(4, jump-none);
-  }
-  @keyframes l3 {
-    0% {
-      width: 36%;
-    }
-    to {
-      width: 100%;
-    }
+  to {
+    width: 100%;
   }
 }
-@scope (.__loading-growing-4) {
-  & {
-    --b: 9px;
-    width: calc(8 * var(--b));
-    aspect-ratio: 1 / cos(30deg);
-    display: grid;
+.__loading-growing-4 {
+  --b: 9px;
+  width: calc(8 * var(--b));
+  aspect-ratio: 1 / cos(30deg);
+  display: grid;
+}
+.__loading-growing-4:before {
+  content: '';
+  background: #bd1550;
+  aspect-ratio: inherit;
+  clip-path: polygon(
+    0 50%,
+    50% -50%,
+    100% 50%,
+    50% 150%,
+    0 50%,
+    var(--b) 50%,
+    calc(25% + var(--b) * cos(60deg)) calc(100% - var(--b) * sin(60deg)),
+    calc(75% - var(--b) * cos(60deg)) calc(100% - var(--b) * sin(60deg)),
+    calc(100% - var(--b)) 50%,
+    calc(75% - var(--b) * cos(60deg)) calc(var(--b) * sin(60deg)),
+    calc(25% + var(--b) * cos(60deg)) calc(var(--b) * sin(60deg)),
+    var(--b) 50%
+  );
+  margin: auto;
+  animation: __loading-growing-4-l4 infinite 1s steps(4, jump-none);
+}
+@keyframes __loading-growing-4-l4 {
+  0% {
+    width: 25%;
   }
-  &:before {
-    content: '';
-    background: #bd1550;
-    aspect-ratio: inherit;
-    clip-path: polygon(
-      0 50%,
-      50% -50%,
-      100% 50%,
-      50% 150%,
-      0 50%,
-      var(--b) 50%,
-      calc(25% + var(--b) * cos(60deg)) calc(100% - var(--b) * sin(60deg)),
-      calc(75% - var(--b) * cos(60deg)) calc(100% - var(--b) * sin(60deg)),
-      calc(100% - var(--b)) 50%,
-      calc(75% - var(--b) * cos(60deg)) calc(var(--b) * sin(60deg)),
-      calc(25% + var(--b) * cos(60deg)) calc(var(--b) * sin(60deg)),
-      var(--b) 50%
-    );
-    margin: auto;
-    animation: l4 infinite 1s steps(4, jump-none);
-  }
-  @keyframes l4 {
-    0% {
-      width: 25%;
-    }
-    to {
-      width: 100%;
-    }
+  to {
+    width: 100%;
   }
 }
-@scope (.__loading-growing-5) {
-  & {
-    width: 80px;
-    aspect-ratio: 1;
-    display: grid;
+.__loading-growing-5 {
+  width: 80px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-growing-5:before {
+  content: '';
+  background: #bd1550;
+  aspect-ratio: inherit;
+  aspect-ratio: 1;
+  clip-path: polygon(
+    79.39% 90.45%,
+    50% 69%,
+    20.61% 90.45%,
+    31.93% 55.87%,
+    2.45% 34.55%,
+    38.83% 34.63%,
+    50% 0%,
+    61.17% 34.63%,
+    97.55% 34.55%,
+    68.07% 55.87%,
+    79.39% 90.45%,
+    50% 69%,
+    calc(50% - 0px) calc(69% - 6.84px),
+    calc(79.39% - 10.58px) calc(90.45% - 14.56px),
+    calc(68.07% - 6.51px) calc(55.87% - 2.11px),
+    calc(97.55% - 17.12px) calc(34.55% - -5.56px),
+    calc(61.17% - 4.02px) calc(34.63% - -5.53px),
+    calc(50% - 0px) calc(0% - -18px),
+    calc(38.83% - -4.02px) calc(34.63% - -5.53px),
+    calc(2.45% - -17.12px) calc(34.55% - -5.56px),
+    calc(31.93% - -6.51px) calc(55.87% - 2.11px),
+    calc(20.61% - -10.58px) calc(90.45% - 14.56px),
+    calc(50% - 0px) calc(69% - 6.84px),
+    calc(79.39% - 10.58px) calc(90.45% - 14.56px)
+  );
+  margin: auto;
+  animation: __loading-growing-5-l5 infinite 1s steps(4, jump-none);
+}
+@keyframes __loading-growing-5-l5 {
+  0% {
+    width: 45%;
   }
-  &:before {
-    content: '';
-    background: #bd1550;
-    aspect-ratio: inherit;
-    aspect-ratio: 1;
-    clip-path: polygon(
-      79.39% 90.45%,
-      50% 69%,
-      20.61% 90.45%,
-      31.93% 55.87%,
-      2.45% 34.55%,
-      38.83% 34.63%,
-      50% 0%,
-      61.17% 34.63%,
-      97.55% 34.55%,
-      68.07% 55.87%,
-      79.39% 90.45%,
-      50% 69%,
-      calc(50% - 0px) calc(69% - 6.84px),
-      calc(79.39% - 10.58px) calc(90.45% - 14.56px),
-      calc(68.07% - 6.51px) calc(55.87% - 2.11px),
-      calc(97.55% - 17.12px) calc(34.55% - -5.56px),
-      calc(61.17% - 4.02px) calc(34.63% - -5.53px),
-      calc(50% - 0px) calc(0% - -18px),
-      calc(38.83% - -4.02px) calc(34.63% - -5.53px),
-      calc(2.45% - -17.12px) calc(34.55% - -5.56px),
-      calc(31.93% - -6.51px) calc(55.87% - 2.11px),
-      calc(20.61% - -10.58px) calc(90.45% - 14.56px),
-      calc(50% - 0px) calc(69% - 6.84px),
-      calc(79.39% - 10.58px) calc(90.45% - 14.56px)
-    );
-    margin: auto;
-    animation: l5 infinite 1s steps(4, jump-none);
-  }
-  @keyframes l5 {
-    0% {
-      width: 45%;
-    }
-    to {
-      width: 100%;
-    }
+  to {
+    width: 100%;
   }
 }
-@scope (.__loading-growing-6) {
-  & {
-    width: 80px;
-    aspect-ratio: 1;
-    display: grid;
+.__loading-growing-6 {
+  width: 80px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-growing-6:before {
+  content: '';
+  background: #bd1550;
+  aspect-ratio: inherit;
+  aspect-ratio: 1;
+  clip-path: polygon(
+    91.57% 77.78%,
+    65.56% 73.28%,
+    59.75% 99.04%,
+    44.54% 77.46%,
+    22.22% 91.57%,
+    26.72% 65.56%,
+    0.96% 59.75%,
+    22.54% 44.54%,
+    8.43% 22.22%,
+    34.44% 26.72%,
+    40.25% 0.96%,
+    55.46% 22.54%,
+    77.78% 8.43%,
+    73.28% 34.44%,
+    99.04% 40.25%,
+    77.46% 55.46%,
+    91.57% 77.78%,
+    65.56% 73.28%,
+    calc(65.56% - 5.6px) calc(73.28% - 8.38px),
+    calc(91.57% - 14.97px) calc(77.78% - 10px),
+    calc(77.46% - 9.89px) calc(55.46% - 1.97px),
+    calc(99.04% - 17.65px) calc(40.25% - -3.51px),
+    calc(73.28% - 8.38px) calc(34.44% - -5.6px),
+    calc(77.78% - 10px) calc(8.43% - -14.97px),
+    calc(55.46% - 1.97px) calc(22.54% - -9.89px),
+    calc(40.25% - -3.51px) calc(0.96% - -17.65px),
+    calc(34.44% - -5.6px) calc(26.72% - -8.38px),
+    calc(8.43% - -14.97px) calc(22.22% - -10px),
+    calc(22.54% - -9.89px) calc(44.54% - -1.97px),
+    calc(0.96% - -17.65px) calc(59.75% - 3.51px),
+    calc(26.72% - -8.38px) calc(65.56% - 5.6px),
+    calc(22.22% - -10px) calc(91.57% - 14.97px),
+    calc(44.54% - -1.97px) calc(77.46% - 9.89px),
+    calc(59.75% - 3.51px) calc(99.04% - 17.65px),
+    calc(65.56% - 5.6px) calc(73.28% - 8.38px),
+    calc(91.57% - 14.97px) calc(77.78% - 10px)
+  );
+  margin: auto;
+  animation: __loading-growing-6-l6 infinite 1s steps(4, jump-none);
+}
+@keyframes __loading-growing-6-l6 {
+  0% {
+    width: 45%;
   }
-  &:before {
-    content: '';
-    background: #bd1550;
-    aspect-ratio: inherit;
-    aspect-ratio: 1;
-    clip-path: polygon(
-      91.57% 77.78%,
-      65.56% 73.28%,
-      59.75% 99.04%,
-      44.54% 77.46%,
-      22.22% 91.57%,
-      26.72% 65.56%,
-      0.96% 59.75%,
-      22.54% 44.54%,
-      8.43% 22.22%,
-      34.44% 26.72%,
-      40.25% 0.96%,
-      55.46% 22.54%,
-      77.78% 8.43%,
-      73.28% 34.44%,
-      99.04% 40.25%,
-      77.46% 55.46%,
-      91.57% 77.78%,
-      65.56% 73.28%,
-      calc(65.56% - 5.6px) calc(73.28% - 8.38px),
-      calc(91.57% - 14.97px) calc(77.78% - 10px),
-      calc(77.46% - 9.89px) calc(55.46% - 1.97px),
-      calc(99.04% - 17.65px) calc(40.25% - -3.51px),
-      calc(73.28% - 8.38px) calc(34.44% - -5.6px),
-      calc(77.78% - 10px) calc(8.43% - -14.97px),
-      calc(55.46% - 1.97px) calc(22.54% - -9.89px),
-      calc(40.25% - -3.51px) calc(0.96% - -17.65px),
-      calc(34.44% - -5.6px) calc(26.72% - -8.38px),
-      calc(8.43% - -14.97px) calc(22.22% - -10px),
-      calc(22.54% - -9.89px) calc(44.54% - -1.97px),
-      calc(0.96% - -17.65px) calc(59.75% - 3.51px),
-      calc(26.72% - -8.38px) calc(65.56% - 5.6px),
-      calc(22.22% - -10px) calc(91.57% - 14.97px),
-      calc(44.54% - -1.97px) calc(77.46% - 9.89px),
-      calc(59.75% - 3.51px) calc(99.04% - 17.65px),
-      calc(65.56% - 5.6px) calc(73.28% - 8.38px),
-      calc(91.57% - 14.97px) calc(77.78% - 10px)
-    );
-    margin: auto;
-    animation: l6 infinite 1s steps(4, jump-none);
-  }
-  @keyframes l6 {
-    0% {
-      width: 45%;
-    }
-    to {
-      width: 100%;
-    }
+  to {
+    width: 100%;
   }
 }
-@scope (.__loading-growing-7) {
-  & {
-    width: 64px;
-    aspect-ratio: 1;
-    display: grid;
+.__loading-growing-7 {
+  width: 64px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-growing-7:before {
+  content: '';
+  border: 8px solid #bd1550;
+  box-sizing: content-box;
+  margin: auto;
+  aspect-ratio: 1;
+  animation: __loading-growing-7-l7 infinite 1s steps(4, jump-none);
+}
+@keyframes __loading-growing-7-l7 {
+  0% {
+    width: 0%;
+    rotate: 0;
   }
-  &:before {
-    content: '';
-    border: 8px solid #bd1550;
-    box-sizing: content-box;
-    margin: auto;
-    aspect-ratio: 1;
-    animation: l7 infinite 1s steps(4, jump-none);
-  }
-  @keyframes l7 {
-    0% {
-      width: 0%;
-      rotate: 0;
-    }
-    to {
-      width: 75%;
-      rotate: 90deg;
-    }
+  to {
+    width: 75%;
+    rotate: 90deg;
   }
 }
-@scope (.__loading-growing-8) {
-  & {
-    width: 64px;
-    aspect-ratio: 1;
-    display: grid;
+.__loading-growing-8 {
+  width: 64px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-growing-8:before,
+.__loading-growing-8:after {
+  content: '';
+  grid-area: 1/1;
+  border: 8px solid #bd1550;
+  box-sizing: content-box;
+  margin: auto;
+  aspect-ratio: 1;
+  animation: __loading-growing-8-l8 infinite 1s steps(4, jump-none);
+}
+.__loading-growing-8:after {
+  animation-delay: -0.5s;
+  border-radius: 50%;
+}
+@keyframes __loading-growing-8-l8 {
+  0% {
+    width: 0%;
   }
-  &:before,
-  &:after {
-    content: '';
-    grid-area: 1/1;
-    border: 8px solid #bd1550;
-    box-sizing: content-box;
-    margin: auto;
-    aspect-ratio: 1;
-    animation: l8 infinite 1s steps(4, jump-none);
-  }
-  &:after {
-    animation-delay: -0.5s;
-    border-radius: 50%;
-  }
-  @keyframes l8 {
-    0% {
-      width: 0%;
-    }
-    to {
-      width: 75%;
-    }
+  to {
+    width: 75%;
   }
 }
-@scope (.__loading-growing-9) {
-  & {
-    height: 64px;
-    aspect-ratio: 1.5;
-    display: flex;
-    gap: 8px;
+.__loading-growing-9 {
+  height: 64px;
+  aspect-ratio: 1.5;
+  display: flex;
+  gap: 8px;
+}
+.__loading-growing-9:before,
+.__loading-growing-9:after {
+  content: '';
+  border: 8px solid #bd1550;
+  border-radius: 50%;
+  box-sizing: content-box;
+  margin: auto;
+  aspect-ratio: 1;
+  animation: __loading-growing-9-l9 infinite 1s steps(4, jump-none);
+}
+.__loading-growing-9:after {
+  animation-direction: reverse;
+}
+@keyframes __loading-growing-9-l9 {
+  0% {
+    width: 0%;
   }
-  &:before,
-  &:after {
-    content: '';
-    border: 8px solid #bd1550;
-    border-radius: 50%;
-    box-sizing: content-box;
-    margin: auto;
-    aspect-ratio: 1;
-    animation: l9 infinite 1s steps(4, jump-none);
-  }
-  &:after {
-    animation-direction: reverse;
-  }
-  @keyframes l9 {
-    0% {
-      width: 0%;
-    }
-    to {
-      width: 75%;
-    }
+  to {
+    width: 75%;
   }
 }
-@scope (.__loading-growing-10) {
-  & {
-    height: 64px;
-    aspect-ratio: 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.__loading-growing-10 {
+  height: 64px;
+  aspect-ratio: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.__loading-growing-10:before,
+.__loading-growing-10:after {
+  content: '';
+  border: 8px solid #bd1550;
+  box-sizing: content-box;
+  margin: auto;
+  aspect-ratio: 1;
+  animation:
+    __loading-growing-10-l10-0 infinite 0.5s steps(4, jump-none) alternate,
+    __loading-growing-10-l10-1 infinite 2s steps(2, jump-none);
+}
+.__loading-growing-10:after {
+  animation-delay: -0.3s;
+}
+@keyframes __loading-growing-10-l10-0 {
+  0% {
+    width: 0%;
   }
-  &:before,
-  &:after {
-    content: '';
-    border: 8px solid #bd1550;
-    box-sizing: content-box;
-    margin: auto;
-    aspect-ratio: 1;
-    animation:
-      l10-0 infinite 0.5s steps(4, jump-none) alternate,
-      l10-1 infinite 2s steps(2, jump-none);
+  to {
+    width: 75%;
   }
-  &:after {
-    animation-delay: -0.3s;
+}
+@keyframes __loading-growing-10-l10-1 {
+  0% {
+    border-radius: 0%;
   }
-  @keyframes l10-0 {
-    0% {
-      width: 0%;
-    }
-    to {
-      width: 75%;
-    }
-  }
-  @keyframes l10-1 {
-    0% {
-      border-radius: 0%;
-    }
-    to {
-      border-radius: 100%;
-    }
+  to {
+    border-radius: 100%;
   }
 }

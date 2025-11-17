@@ -1,16 +1,14 @@
-@scope (.__loading-classic-1) {
-  & {
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 30px;
-    animation: l1 1s linear infinite alternate;
-  }
-  &:before {
-    content: 'Loading...';
-  }
-  @keyframes l1 {
-    to {
-      opacity: 0;
-    }
+.__loading-classic-1 {
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 30px;
+  animation: __loading-classic-1-l1 1s linear infinite alternate;
+}
+.__loading-classic-1:before {
+  content: 'Loading...';
+}
+@keyframes __loading-classic-1-l1 {
+  to {
+    opacity: 0;
   }
 }

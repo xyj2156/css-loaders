@@ -1,56 +1,54 @@
-@scope (.__loading-dancers-2) {
-  & {
-    width: 40px;
-    aspect-ratio: 1;
-    position: relative;
-  }
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
+.__loading-dancers-2 {
+  width: 40px;
+  aspect-ratio: 1;
+  position: relative;
+}
+.__loading-dancers-2:before,
+.__loading-dancers-2:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: -8px 0 0 -8px;
+  width: 16px;
+  aspect-ratio: 1;
+  background: #3fb8af;
+  animation:
+    __loading-dancers-2-l2-1 2s infinite,
+    __loading-dancers-2-l2-2 1s infinite;
+}
+.__loading-dancers-2:after {
+  background: #ff3d7f;
+  animation-delay: -1s, 0s;
+}
+@keyframes __loading-dancers-2-l2-1 {
+  0% {
     top: 0;
     left: 0;
-    margin: -8px 0 0 -8px;
-    width: 16px;
-    aspect-ratio: 1;
-    background: #3fb8af;
-    animation:
-      l2-1 2s infinite,
-      l2-2 1s infinite;
   }
-  &:after {
-    background: #ff3d7f;
-    animation-delay: -1s, 0s;
+  25% {
+    top: 100%;
+    left: 0;
   }
-  @keyframes l2-1 {
-    0% {
-      top: 0;
-      left: 0;
-    }
-    25% {
-      top: 100%;
-      left: 0;
-    }
-    50% {
-      top: 100%;
-      left: 100%;
-    }
-    75% {
-      top: 0;
-      left: 100%;
-    }
-    100% {
-      top: 0;
-      left: 0;
-    }
+  50% {
+    top: 100%;
+    left: 100%;
   }
-  @keyframes l2-2 {
-    40%,
-    50% {
-      transform: rotate(0.25turn) scale(0.5);
-    }
-    100% {
-      transform: rotate(0.5turn) scale(1);
-    }
+  75% {
+    top: 0;
+    left: 100%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+@keyframes __loading-dancers-2-l2-2 {
+  40%,
+  50% {
+    transform: rotate(0.25turn) scale(0.5);
+  }
+  100% {
+    transform: rotate(0.5turn) scale(1);
   }
 }

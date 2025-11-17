@@ -1,22 +1,20 @@
-@scope (.__loading-shapes-1) {
-  & {
-    width: 40px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: #f03355;
+.__loading-shapes-1 {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f03355;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  animation: __loading-shapes-1-l1 2s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes __loading-shapes-1-l1 {
+  33% {
+    border-radius: 0;
+    background: #514b82;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    animation: l1 2s infinite cubic-bezier(0.3, 1, 0, 1);
   }
-  @keyframes l1 {
-    33% {
-      border-radius: 0;
-      background: #514b82;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-    66% {
-      border-radius: 0;
-      background: #ffa516;
-      clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
-    }
+  66% {
+    border-radius: 0;
+    background: #ffa516;
+    clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
   }
 }

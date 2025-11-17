@@ -1,59 +1,57 @@
-@scope (.__loading-eyes-8) {
-  & {
-    display: inline-flex;
-    gap: 10px;
+.__loading-eyes-8 {
+  display: inline-flex;
+  gap: 10px;
+}
+.__loading-eyes-8:before,
+.__loading-eyes-8:after {
+  content: '';
+  height: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    linear-gradient(#222 0 0) top/100% 40% no-repeat,
+    radial-gradient(farthest-side, #000 95%, #0000) 50%/8px 8px no-repeat #fff;
+  animation: 2.5s infinite;
+  animation-name: __loading-eyes-8-l8-1, e8-2;
+}
+@keyframes __loading-eyes-8-l8-1 {
+  0%,
+  40%,
+  100% {
+    background-size:
+      100% 40%,
+      8px 8px;
   }
-  &:before,
-  &:after {
-    content: '';
-    height: 20px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background:
-      linear-gradient(#222 0 0) top/100% 40% no-repeat,
-      radial-gradient(farthest-side, #000 95%, #0000) 50%/8px 8px no-repeat #fff;
-    animation: 2.5s infinite;
-    animation-name: l8-1, e8-2;
+  50%,
+  80% {
+    background-size:
+      100% 0%,
+      8px 8px;
   }
-  @keyframes l8-1 {
-    0%,
-    40%,
-    100% {
-      background-size:
-        100% 40%,
-        8px 8px;
-    }
-    50%,
-    80% {
-      background-size:
-        100% 0%,
-        8px 8px;
-    }
+}
+@keyframes __loading-eyes-8-l8-2 {
+  0%,
+  50% {
+    background-position:
+      top,
+      50% 50%;
   }
-  @keyframes l8-2 {
-    0%,
-    50% {
-      background-position:
-        top,
-        50% 50%;
-    }
-    60%,
-    65% {
-      background-position:
-        top,
-        70% 50%;
-    }
-    70%,
-    75% {
-      background-position:
-        top,
-        30% 50%;
-    }
-    90%,
-    100% {
-      background-position:
-        top,
-        50% 50%;
-    }
+  60%,
+  65% {
+    background-position:
+      top,
+      70% 50%;
+  }
+  70%,
+  75% {
+    background-position:
+      top,
+      30% 50%;
+  }
+  90%,
+  100% {
+    background-position:
+      top,
+      50% 50%;
   }
 }

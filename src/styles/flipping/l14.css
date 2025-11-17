@@ -1,55 +1,53 @@
-@scope (.__loading-flipping-14) {
-  & {
-    width: 60px;
-    aspect-ratio: 1;
-    display: flex;
+.__loading-flipping-14 {
+  width: 60px;
+  aspect-ratio: 1;
+  display: flex;
+}
+.__loading-flipping-14::before,
+.__loading-flipping-14::after {
+  content: '';
+  flex: 1;
+  animation: __loading-flipping-14-l14 1.5s -0.25s infinite linear alternate both;
+}
+.__loading-flipping-14::after {
+  --s: -1, -1;
+  animation-delay: 0.5s;
+}
+@keyframes __loading-flipping-14-l14 {
+  0%,
+  30% {
+    transform: scale(var(--s, 1)) translate(0px) perspective(150px) rotateY(0deg);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 75%, 0 25%);
+    background: #fa6900;
   }
-  &::before,
-  &::after {
-    content: '';
-    flex: 1;
-    animation: l14 1.5s -0.25s infinite linear alternate both;
+  37.5% {
+    transform: scale(var(--s, 1)) translate(-10px) perspective(150px) rotateX(0deg);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 75%, 0 25%);
+    background: #fa6900;
   }
-  &::after {
-    --s: -1, -1;
-    animation-delay: 0.5s;
+  50% {
+    transform: scale(var(--s, 1)) translate(-10px) perspective(150px) rotateX(-90deg);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 75%, 0 25%);
+    background: #fa6900;
+    border-radius: 0;
   }
-  @keyframes l14 {
-    0%,
-    30% {
-      transform: scale(var(--s, 1)) translate(0px) perspective(150px) rotateY(0deg);
-      clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 75%, 0 25%);
-      background: #fa6900;
-    }
-    37.5% {
-      transform: scale(var(--s, 1)) translate(-10px) perspective(150px) rotateX(0deg);
-      clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 75%, 0 25%);
-      background: #fa6900;
-    }
-    50% {
-      transform: scale(var(--s, 1)) translate(-10px) perspective(150px) rotateX(-90deg);
-      clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 75%, 0 25%);
-      background: #fa6900;
-      border-radius: 0;
-    }
-    50.01% {
-      transform: scale(var(--s, 1)) translate(-10px) perspective(150px) rotateX(-90.1deg);
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 25%);
-      background: #2fb8ac;
-      border-radius: 100px 0 0 100px;
-    }
-    62.5% {
-      transform: scale(var(--s, 1)) translate(-10px) perspective(150px) rotateX(-180deg);
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 25%);
-      background: #2fb8ac;
-      border-radius: 100px 0 0 100px;
-    }
-    70%,
-    100% {
-      transform: scale(var(--s, 1)) translate(0px) perspective(150px) rotateX(-180deg);
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 25%);
-      background: #2fb8ac;
-      border-radius: 100px 0 0 100px;
-    }
+  50.01% {
+    transform: scale(var(--s, 1)) translate(-10px) perspective(150px) rotateX(-90.1deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 25%);
+    background: #2fb8ac;
+    border-radius: 100px 0 0 100px;
+  }
+  62.5% {
+    transform: scale(var(--s, 1)) translate(-10px) perspective(150px) rotateX(-180deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 25%);
+    background: #2fb8ac;
+    border-radius: 100px 0 0 100px;
+  }
+  70%,
+  100% {
+    transform: scale(var(--s, 1)) translate(0px) perspective(150px) rotateX(-180deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 25%);
+    background: #2fb8ac;
+    border-radius: 100px 0 0 100px;
   }
 }

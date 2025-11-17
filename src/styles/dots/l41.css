@@ -1,39 +1,37 @@
-@scope (.__loading-dots-41) {
-  & {
-    height: 15px;
-    aspect-ratio: 5;
-    display: flex;
-    justify-content: space-between;
-    --_g: no-repeat radial-gradient(farthest-side, #000 95%, #0000);
-    background:
-      var(--_g) calc(1 * 100% / 3) 0,
-      var(--_g) calc(2 * 100% / 3) 0;
-    background-size: 20% 100%;
+.__loading-dots-41 {
+  height: 15px;
+  aspect-ratio: 5;
+  display: flex;
+  justify-content: space-between;
+  --_g: no-repeat radial-gradient(farthest-side, #000 95%, #0000);
+  background:
+    var(--_g) calc(1 * 100% / 3) 0,
+    var(--_g) calc(2 * 100% / 3) 0;
+  background-size: 20% 100%;
+}
+.__loading-dots-41:before,
+.__loading-dots-41:after {
+  content: '';
+  height: inherit;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #000;
+  animation: __loading-dots-41-l41 1s infinite;
+}
+.__loading-dots-41:after {
+  --s: -1, -1;
+}
+@keyframes __loading-dots-41-l41 {
+  0% {
+    transform: scale(var(--s, 1)) translate(0, 0);
   }
-  &:before,
-  &:after {
-    content: '';
-    height: inherit;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: #000;
-    animation: l41 1s infinite;
+  33% {
+    transform: scale(var(--s, 1)) translate(0, 130%);
   }
-  &:after {
-    --s: -1, -1;
+  66% {
+    transform: scale(var(--s, 1)) translate(400%, 130%);
   }
-  @keyframes l41 {
-    0% {
-      transform: scale(var(--s, 1)) translate(0, 0);
-    }
-    33% {
-      transform: scale(var(--s, 1)) translate(0, 130%);
-    }
-    66% {
-      transform: scale(var(--s, 1)) translate(400%, 130%);
-    }
-    100% {
-      transform: scale(var(--s, 1)) translate(400%, 0);
-    }
+  100% {
+    transform: scale(var(--s, 1)) translate(400%, 0);
   }
 }

@@ -1,32 +1,30 @@
-@scope (.__loading-wobbling-6) {
-  & {
-    width: 120px;
-    height: 21px;
-    background: linear-gradient(#000 0 0) left/10px 100% no-repeat #ddd;
-    animation: l6 1s infinite cubic-bezier(0, 0.2, 1, 1);
-    position: relative;
-  }
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 7px;
-    background: linear-gradient(#000 0 0) left/10px 100% no-repeat #ddd;
-    animation: inherit;
-  }
-  &:before {
-    top: 0;
-    animation-timing-function: cubic-bezier(0, 0, 1, 1);
-  }
-  &:after {
-    bottom: 0;
-    animation-timing-function: cubic-bezier(0, 0.4, 1, 1);
-  }
-  @keyframes l6 {
-    50% {
-      background-position: right;
-    }
+.__loading-wobbling-6 {
+  width: 120px;
+  height: 21px;
+  background: linear-gradient(#000 0 0) left/10px 100% no-repeat #ddd;
+  animation: __loading-wobbling-6-l6 1s infinite cubic-bezier(0, 0.2, 1, 1);
+  position: relative;
+}
+.__loading-wobbling-6:before,
+.__loading-wobbling-6:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 7px;
+  background: linear-gradient(#000 0 0) left/10px 100% no-repeat #ddd;
+  animation: inherit;
+}
+.__loading-wobbling-6:before {
+  top: 0;
+  animation-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+.__loading-wobbling-6:after {
+  bottom: 0;
+  animation-timing-function: cubic-bezier(0, 0.4, 1, 1);
+}
+@keyframes __loading-wobbling-6-l6 {
+  50% {
+    background-position: right;
   }
 }

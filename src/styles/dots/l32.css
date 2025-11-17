@@ -1,31 +1,29 @@
-@scope (.__loading-dots-32) {
-  & {
-    height: 15px;
-    aspect-ratio: 5;
-    display: grid;
-    --_g: no-repeat radial-gradient(farthest-side, #000 94%, #0000);
-  }
-  &:before,
-  &:after {
-    content: '';
-    grid-area: 1/1;
-    background:
-      var(--_g) left,
-      var(--_g) right;
-    background-size: 20% 100%;
-    animation: l32 1s infinite;
-  }
-  &:after {
-    background:
-      var(--_g) calc(1 * 100% / 3),
-      var(--_g) calc(2 * 100% / 3);
-    background-size: 20% 100%;
-    animation-direction: reverse;
-  }
-  @keyframes l32 {
-    80%,
-    100% {
-      transform: rotate(0.5turn);
-    }
+.__loading-dots-32 {
+  height: 15px;
+  aspect-ratio: 5;
+  display: grid;
+  --_g: no-repeat radial-gradient(farthest-side, #000 94%, #0000);
+}
+.__loading-dots-32:before,
+.__loading-dots-32:after {
+  content: '';
+  grid-area: 1/1;
+  background:
+    var(--_g) left,
+    var(--_g) right;
+  background-size: 20% 100%;
+  animation: __loading-dots-32-l32 1s infinite;
+}
+.__loading-dots-32:after {
+  background:
+    var(--_g) calc(1 * 100% / 3),
+    var(--_g) calc(2 * 100% / 3);
+  background-size: 20% 100%;
+  animation-direction: reverse;
+}
+@keyframes __loading-dots-32-l32 {
+  80%,
+  100% {
+    transform: rotate(0.5turn);
   }
 }

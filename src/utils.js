@@ -4,26 +4,26 @@
  * @param {function|undefined} callback 回调函数，可以是异步的，等待执行完毕后才会执行下一个元素
  */
 export function asyncEach(arr, callback) {
-    if (!Array.isArray(arr)) {
-        throw new TypeError('First argument must be an array');
-    }
-    if (typeof callback !== 'function') {
-        throw new TypeError('Second argument must be a function');
-    }
+  if (!Array.isArray(arr)) {
+    throw new TypeError('First argument must be an array');
+  }
+  if (typeof callback !== 'function') {
+    throw new TypeError('Second argument must be a function');
+  }
 
-    return new Promise(async (resolve, reject) => {
-        try {
-            for (let i = 0; i < arr.length; i++) {
-                const result = callback(arr[i], i, arr);
-                if (result && typeof result.then === 'function') {
-                    await result;
-                }
-            }
-            resolve();
-        } catch (error) {
-            reject(error);
+  return new Promise(async (resolve, reject) => {
+    try {
+      for (let i = 0; i < arr.length; i++) {
+        const result = callback(arr[i], i, arr);
+        if (result && typeof result.then === 'function') {
+          await result;
         }
-    });
+      }
+      resolve();
+    } catch (error) {
+      reject(error);
+    }
+  });
 }
 
 /**
@@ -35,17 +35,15 @@ export function asyncEach(arr, callback) {
  * @throws {TypeError} 当参数类型不正确时
  */
 export function transStyle(scope, origin, content) {
-    if (typeof scope !== 'string' || typeof origin !== 'string' || typeof content !== 'string') {
-        throw new TypeError('All arguments must be strings');
-    }
+  if (
+    typeof scope !== 'string' ||
+    typeof origin !== 'string' ||
+    typeof content !== 'string'
+  ) {
+    throw new TypeError('All arguments must be strings');
+  }
 
-    if (!content.trim()) {
-        return `@scope(${scope}){}`;
-    }
-
-    // 使用正则表达式优化替换逻辑
-    const pattern = new RegExp(`(^|[^a-zA-Z0-9_-])${origin}`, 'g');
-    const transformed = content.replace(pattern, '$1&');
-
-    return `@scope(${scope}){${transformed}}`;
+  return content
+    .replaceAll(`#${origin}`, `.${scope}`)
+    .replaceAll(origin, `${scope}-${origin}`);
 }

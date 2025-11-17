@@ -1,21 +1,19 @@
-@scope (.__loading-filling-2) {
-  & {
-    width: fit-content;
-    font-size: 40px;
-    font-family: system-ui, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #0000;
-    -webkit-text-stroke: 1px #000;
-    background: linear-gradient(90deg, #0000 33%, #000 0 67%, #0000 0) 0/300% 100% no-repeat text;
-    animation: l2 2s linear infinite;
-  }
-  &:before {
-    content: 'Loading';
-  }
-  @keyframes l2 {
-    0% {
-      background-position: 100%;
-    }
+.__loading-filling-2 {
+  width: fit-content;
+  font-size: 40px;
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0000;
+  -webkit-text-stroke: 1px #000;
+  background: linear-gradient(90deg, #0000 33%, #000 0 67%, #0000 0) 0/300% 100% no-repeat text;
+  animation: __loading-filling-2-l2 2s linear infinite;
+}
+.__loading-filling-2:before {
+  content: 'Loading';
+}
+@keyframes __loading-filling-2-l2 {
+  0% {
+    background-position: 100%;
   }
 }

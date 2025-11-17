@@ -1,40 +1,38 @@
-@scope (.__loading-bouncing-12) {
-  & {
-    height: 60px;
-    aspect-ratio: 1;
-    position: relative;
-    background:
-      conic-gradient(at 20px 40px, #0000 25%, #524656 0),
-      conic-gradient(from -90deg at 40px 20px, #0000 75%, #524656 0);
-    clip-path: inset(-100% 0);
+.__loading-bouncing-12 {
+  height: 60px;
+  aspect-ratio: 1;
+  position: relative;
+  background:
+    conic-gradient(at 20px 40px, #0000 25%, #524656 0),
+    conic-gradient(from -90deg at 40px 20px, #0000 75%, #524656 0);
+  clip-path: inset(-100% 0);
+}
+.__loading-bouncing-12:before {
+  content: '';
+  position: absolute;
+  inset: auto 75% 0 0;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #cf4647;
+  animation:
+    __loading-bouncing-12-l12-0 0.5s cubic-bezier(0, 600, 1, 600) infinite,
+    __loading-bouncing-12-l12-1 2s linear infinite;
+}
+@keyframes __loading-bouncing-12-l12-0 {
+  0%,
+  2% {
+    bottom: 0%;
   }
-  &:before {
-    content: '';
-    position: absolute;
-    inset: auto 75% 0 0;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: #cf4647;
-    animation:
-      l12-0 0.5s cubic-bezier(0, 600, 1, 600) infinite,
-      l12-1 2s linear infinite;
+  98%,
+  to {
+    bottom: 0.1%;
   }
-  @keyframes l12-0 {
-    0%,
-    2% {
-      bottom: 0%;
-    }
-    98%,
-    to {
-      bottom: 0.1%;
-    }
+}
+@keyframes __loading-bouncing-12-l12-1 {
+  0% {
+    translate: -18px -80px;
   }
-  @keyframes l12-1 {
-    0% {
-      translate: -18px -80px;
-    }
-    to {
-      translate: 62px 0;
-    }
+  to {
+    translate: 62px 0;
   }
 }

@@ -1,506 +1,466 @@
-@scope (.__loading-infinity-1) {
-  & {
-    width: 90px;
-    height: 14px;
-    background: repeating-linear-gradient(90deg, #000 0 calc(25% - 5px), #0000 0 25%)
-      left/calc(4 * 100%/3) 100%;
-    animation: l1 0.5s infinite linear;
-  }
-  @keyframes l1 {
-    100% {
-      background-position: right;
-    }
+.__loading-infinity-1 {
+  width: 90px;
+  height: 14px;
+  background: repeating-linear-gradient(90deg, #000 0 calc(25% - 5px), #0000 0 25%)
+    left/calc(4 * 100%/3) 100%;
+  animation: __loading-infinity-1-l1 0.5s infinite linear;
+}
+@keyframes __loading-infinity-1-l1 {
+  100% {
+    background-position: right;
   }
 }
-@scope (.__loading-infinity-2) {
-  & {
-    width: 90px;
-    height: 14px;
-    background: radial-gradient(circle closest-side, #000 92%, #0000) calc(100% / 3) 0 /
-      calc(100% / 4) 100%;
-    animation: l2 0.5s infinite linear;
-  }
-  @keyframes l2 {
-    100% {
-      background-position: 0 0;
-    }
-  }
+.__loading-infinity-2 {
+  width: 90px;
+  height: 14px;
+  background: radial-gradient(circle closest-side, #000 92%, #0000) calc(100% / 3) 0 /
+    calc(100% / 4) 100%;
+  animation: __loading-infinity-2-l2 0.5s infinite linear;
 }
-@scope (.__loading-infinity-3) {
-  & {
-    width: calc(80px / cos(45deg));
-    height: 14px;
-    background: repeating-linear-gradient(-45deg, #000 0 15px, #0000 0 20px) left/200% 100%;
-    animation: l3 2s infinite linear;
-  }
-  @keyframes l3 {
-    100% {
-      background-position: right;
-    }
-  }
-}
-@scope (.__loading-infinity-4) {
-  & {
-    width: calc(80px / cos(45deg));
-    height: 14px;
-    --c: #000 0 15px, #0000 0 20px;
-    background:
-      repeating-linear-gradient(135deg, var(--c)) left top,
-      repeating-linear-gradient(45deg, var(--c)) left bottom;
-    background-size: 200% 50%;
-    background-repeat: no-repeat;
-    animation: l4 2s infinite linear;
-  }
-  @keyframes l4 {
-    100% {
-      background-position:
-        top right,
-        bottom right;
-    }
-  }
-}
-@scope (.__loading-infinity-5) {
-  & {
-    width: 90px;
-    height: 14px;
-    color: #000;
-    background:
-      radial-gradient(circle 10px at right 7px top 50%, #0000 92%, currentColor),
-      radial-gradient(circle 10px at right 0 top 50%, currentColor 92%, #0000);
-    background-size: calc(100% / 3) 100%;
-    background-position: 50% 0%;
-    animation: l5 0.5s infinite linear;
-  }
-  @keyframes l5 {
-    100% {
-      background-position: 0% 0%;
-    }
-  }
-}
-@scope (.__loading-infinity-6) {
-  & {
-    width: 90px;
-    height: 14px;
-    --c: 50%, #000 90deg, #0000 0;
-    background:
-      conic-gradient(from 45deg at calc(100% - 7px) var(--c)),
-      conic-gradient(from -135deg at 7px var(--c));
-    background-position: calc(100% / 3) 0;
-    background-size: calc(100% / 4) 100%;
-    animation: l6 0.5s infinite linear;
-  }
-  @keyframes l6 {
-    100% {
-      background-position: 0 0;
-    }
-  }
-}
-@scope (.__loading-infinity-7) {
-  & {
-    width: 90px;
-    height: 14px;
-    color: #000;
-    background:
-      linear-gradient(90deg, currentColor 50%, #0000 0) repeat-x,
-      conic-gradient(from 45deg at right 7px top 50%, currentColor 90deg, #0000 0);
-    background-position: calc(100% / 3) 50%;
-    background-size:
-      calc(100% / 4) 60%,
-      calc(100% / 4) 100%;
-    animation: l7 0.5s infinite linear;
-  }
-  @keyframes l7 {
-    100% {
-      background-position: 0 50%;
-    }
-  }
-}
-@scope (.__loading-infinity-8) {
-  & {
-    width: 90px;
-    height: 12px;
-    --c: #000 50%, #0000 0;
-    background:
-      linear-gradient(90deg, var(--c)) 0 0%,
-      linear-gradient(-90deg, var(--c)) 0 50%,
-      linear-gradient(90deg, var(--c)) 0 100%;
-    background-size: 8px calc(100% / 3);
-    background-repeat: repeat-x;
-    animation: l8 0.25s infinite linear;
-  }
-  @keyframes l8 {
-    100% {
-      background-position:
-        -8px 0%,
-        -8px 50%,
-        -8px 100%;
-    }
-  }
-}
-@scope (.__loading-infinity-9) {
-  & {
-    width: 90px;
-    height: 14px;
-    color: #000;
-    background:
-      linear-gradient(90deg, #0000 16px, currentColor 0 30px, #0000 0),
-      radial-gradient(circle closest-side at 68% 50%, currentColor 92%, #0000),
-      conic-gradient(from 45deg at calc(100% - 7px) 50%, currentColor 90deg, #0000 0),
-      conic-gradient(from -135deg at 7px 50%, currentColor 90deg, #0000 0);
+@keyframes __loading-infinity-2-l2 {
+  100% {
     background-position: 0 0;
-    background-size: calc(3 * 100% / 4) 100%;
-    background-repeat: repeat-x;
-    animation: l9 2s infinite linear;
-  }
-  @keyframes l9 {
-    100% {
-      background-position: -300% 0;
-    }
   }
 }
-@scope (.__loading-infinity-10) {
-  & {
-    width: 90px;
-    height: 12px;
-    --c: #000 50%, #0000 0;
-    background:
-      linear-gradient(90deg, var(--c)) 0 0,
-      linear-gradient(-90deg, var(--c)) 0 0;
-    background-size: 20px 100%;
-    background-repeat: repeat-x;
-    animation: l10 1s infinite linear;
-  }
-  @keyframes l10 {
-    100% {
-      background-position:
-        -20px 0,
-        20px 0;
-    }
+.__loading-infinity-3 {
+  width: calc(80px / cos(45deg));
+  height: 14px;
+  background: repeating-linear-gradient(-45deg, #000 0 15px, #0000 0 20px) left/200% 100%;
+  animation: __loading-infinity-3-l3 2s infinite linear;
+}
+@keyframes __loading-infinity-3-l3 {
+  100% {
+    background-position: right;
   }
 }
-@scope (.__loading-infinity-11) {
-  & {
-    width: 90px;
-    height: 14px;
-    --c: #000 92%, #0000;
-    background:
-      radial-gradient(circle 7px at bottom, var(--c)) 0 0,
-      radial-gradient(circle 7px at top, var(--c)) 0 100%;
-    background-size: calc(100% / 4) 50%;
-    background-repeat: repeat-x;
-    animation: l11 1s infinite;
-  }
-  @keyframes l11 {
-    80%,
-    100% {
-      background-position:
-        calc(100% / 3) 0,
-        calc(100% / -3) 100%;
-    }
+.__loading-infinity-4 {
+  width: calc(80px / cos(45deg));
+  height: 14px;
+  --c: #000 0 15px, #0000 0 20px;
+  background:
+    repeating-linear-gradient(135deg, var(--c)) left top,
+    repeating-linear-gradient(45deg, var(--c)) left bottom;
+  background-size: 200% 50%;
+  background-repeat: no-repeat;
+  animation: __loading-infinity-4-l4 2s infinite linear;
+}
+@keyframes __loading-infinity-4-l4 {
+  100% {
+    background-position:
+      top right,
+      bottom right;
   }
 }
-@scope (.__loading-infinity-12) {
-  & {
-    width: 90px;
-    height: 14px;
-    --c: #000 90deg, #0000 0;
-    background:
-      conic-gradient(from 135deg at top, var(--c)) 0 0,
-      conic-gradient(from -45deg at bottom, var(--c)) 0 100%;
-    background-size: calc(100% / 4) 50%;
-    background-repeat: repeat-x;
-    animation: l12 1s infinite;
-  }
-  @keyframes l12 {
-    80%,
-    100% {
-      background-position:
-        calc(100% / 3) 0,
-        calc(100% / -3) 100%;
-    }
+.__loading-infinity-5 {
+  width: 90px;
+  height: 14px;
+  color: #000;
+  background:
+    radial-gradient(circle 10px at right 7px top 50%, #0000 92%, currentColor),
+    radial-gradient(circle 10px at right 0 top 50%, currentColor 92%, #0000);
+  background-size: calc(100% / 3) 100%;
+  background-position: 50% 0%;
+  animation: __loading-infinity-5-l5 0.5s infinite linear;
+}
+@keyframes __loading-infinity-5-l5 {
+  100% {
+    background-position: 0% 0%;
   }
 }
-@scope (.__loading-infinity-13) {
-  & {
-    width: 90px;
-    height: 14px;
-    background:
-      radial-gradient(circle 7px at bottom, #000 92%, #0000) calc(100% / 2) 0,
-      radial-gradient(circle 7px at top, #000 92%, #0000) calc(100% / 2) 100%,
-      conic-gradient(from 135deg at top, #000 90deg, #0000 0) 0 0,
-      conic-gradient(from -45deg at bottom, #000 90deg, #0000 0) 0 100%;
-    background-size: calc(100% / 2) 50%;
-    background-repeat: repeat-x;
-    animation: l13 3s infinite;
-  }
-  @keyframes l13 {
-    0% {
-      background-position:
-        calc(100% / 2) 0,
-        calc(100% / 2) 100%,
-        0 0,
-        0 100%;
-    }
-    20%,
-    30% {
-      background-position:
-        calc(3 * 100% / 4) 0,
-        calc(100% / 4) 100%,
-        calc(100% / 4) 0,
-        calc(100% / -4) 100%;
-    }
-    45%,
-    55% {
-      background-position:
-        100% 0,
-        0 100%,
-        calc(100% / 2) 0,
-        calc(100% / -2) 100%;
-    }
-    70%,
-    80% {
-      background-position:
-        calc(5 * 100% / 4) 0,
-        calc(100% / -4) 100%,
-        calc(3 * 100% / 4) 0,
-        calc(3 * 100% / -4) 100%;
-    }
-    100% {
-      background-position:
-        calc(3 * 100% / 2) 0,
-        calc(100% / -2) 100%,
-        100% 0,
-        -100% 100%;
-    }
+.__loading-infinity-6 {
+  width: 90px;
+  height: 14px;
+  --c: 50%, #000 90deg, #0000 0;
+  background:
+    conic-gradient(from 45deg at calc(100% - 7px) var(--c)),
+    conic-gradient(from -135deg at 7px var(--c));
+  background-position: calc(100% / 3) 0;
+  background-size: calc(100% / 4) 100%;
+  animation: __loading-infinity-6-l6 0.5s infinite linear;
+}
+@keyframes __loading-infinity-6-l6 {
+  100% {
+    background-position: 0 0;
   }
 }
-@scope (.__loading-infinity-14) {
-  & {
-    width: 90px;
-    height: 14px;
-    --c: #000 92%, #0000;
-    background:
-      radial-gradient(circle closest-side, var(--c)) calc(100% / -4) 0,
-      radial-gradient(circle closest-side, var(--c)) calc(100% / 4) 0;
-    background-size: calc(100% / 2) 100%;
-    animation: l14 1.5s infinite;
-  }
-  @keyframes l14 {
-    0% {
-      background-position:
-        calc(100% / -4) 0,
-        calc(100% / 4) 0;
-    }
-    50% {
-      background-position:
-        calc(100% / -4) -14px,
-        calc(100% / 4) 14px;
-    }
-    100% {
-      background-position:
-        calc(100% / 4) -14px,
-        calc(3 * 100% / 4) 14px;
-    }
+.__loading-infinity-7 {
+  width: 90px;
+  height: 14px;
+  color: #000;
+  background:
+    linear-gradient(90deg, currentColor 50%, #0000 0) repeat-x,
+    conic-gradient(from 45deg at right 7px top 50%, currentColor 90deg, #0000 0);
+  background-position: calc(100% / 3) 50%;
+  background-size:
+    calc(100% / 4) 60%,
+    calc(100% / 4) 100%;
+  animation: __loading-infinity-7-l7 0.5s infinite linear;
+}
+@keyframes __loading-infinity-7-l7 {
+  100% {
+    background-position: 0 50%;
   }
 }
-@scope (.__loading-infinity-15) {
-  & {
-    width: 60px;
-    aspect-ratio: 1;
-    --g: conic-gradient(from -90deg at 10px 10px, #000 90deg, #0000 0);
-    background:
-      var(--g),
-      var(--g) 10px 10px,
-      var(--g) 20px 20px;
-    background-size: 50% 50%;
-    animation: l15 1s infinite;
-  }
-  @keyframes l15 {
-    90%,
-    100% {
-      background-position:
-        -30px 30px,
-        -20px 40px,
-        -10px 50px;
-    }
+.__loading-infinity-8 {
+  width: 90px;
+  height: 12px;
+  --c: #000 50%, #0000 0;
+  background:
+    linear-gradient(90deg, var(--c)) 0 0%,
+    linear-gradient(-90deg, var(--c)) 0 50%,
+    linear-gradient(90deg, var(--c)) 0 100%;
+  background-size: 8px calc(100% / 3);
+  background-repeat: repeat-x;
+  animation: __loading-infinity-8-l8 0.25s infinite linear;
+}
+@keyframes __loading-infinity-8-l8 {
+  100% {
+    background-position:
+      -8px 0%,
+      -8px 50%,
+      -8px 100%;
   }
 }
-@scope (.__loading-infinity-16) {
-  & {
-    width: 60px;
-    aspect-ratio: 1;
-    --g: conic-gradient(from -90deg at 10px 10px, #000 90deg, #0000 0);
-    background: var(--g), var(--g), var(--g);
-    background-size: 50% 50%;
-    animation: l16 1s infinite;
-  }
-  @keyframes l16 {
-    0% {
-      background-position:
-        0 0,
-        10px 10px,
-        20px 20px;
-    }
-    50% {
-      background-position:
-        0 20px,
-        10px 10px,
-        20px 0;
-    }
-    100% {
-      background-position:
-        20px 20px,
-        10px 10px,
-        0 0;
-    }
+.__loading-infinity-9 {
+  width: 90px;
+  height: 14px;
+  color: #000;
+  background:
+    linear-gradient(90deg, #0000 16px, currentColor 0 30px, #0000 0),
+    radial-gradient(circle closest-side at 68% 50%, currentColor 92%, #0000),
+    conic-gradient(from 45deg at calc(100% - 7px) 50%, currentColor 90deg, #0000 0),
+    conic-gradient(from -135deg at 7px 50%, currentColor 90deg, #0000 0);
+  background-position: 0 0;
+  background-size: calc(3 * 100% / 4) 100%;
+  background-repeat: repeat-x;
+  animation: __loading-infinity-9-l9 2s infinite linear;
+}
+@keyframes __loading-infinity-9-l9 {
+  100% {
+    background-position: -300% 0;
   }
 }
-@scope (.__loading-infinity-17) {
-  & {
-    width: 60px;
-    aspect-ratio: 1;
-    --g: conic-gradient(from -90deg at 10px 10px, #000 90deg, #0000 0);
-    background: var(--g), var(--g), var(--g);
-    background-size: 50% 50%;
-    animation: l17 1s infinite;
-  }
-  @keyframes l17 {
-    0% {
-      background-position:
-        0 0,
-        10px 10px,
-        20px 20px;
-    }
-    33% {
-      background-position:
-        -30px 0,
-        10px 10px,
-        20px 20px;
-    }
-    66% {
-      background-position:
-        -30px 0,
-        -20px 10px,
-        20px 20px;
-    }
-    100% {
-      background-position:
-        -30px 0,
-        -20px 10px,
-        -10px 20px;
-    }
+.__loading-infinity-10 {
+  width: 90px;
+  height: 12px;
+  --c: #000 50%, #0000 0;
+  background:
+    linear-gradient(90deg, var(--c)) 0 0,
+    linear-gradient(-90deg, var(--c)) 0 0;
+  background-size: 20px 100%;
+  background-repeat: repeat-x;
+  animation: __loading-infinity-10-l10 1s infinite linear;
+}
+@keyframes __loading-infinity-10-l10 {
+  100% {
+    background-position:
+      -20px 0,
+      20px 0;
   }
 }
-@scope (.__loading-infinity-18) {
-  & {
-    width: 60px;
-    aspect-ratio: 1;
-    --g: conic-gradient(from -90deg at 10px 10px, #000 90deg, #0000 0);
-    background: var(--g), var(--g), var(--g);
-    background-size: 50% 50%;
-    animation: l18 1s infinite;
-  }
-  @keyframes l18 {
-    0% {
-      background-position:
-        0 0,
-        10px 10px,
-        20px 20px;
-    }
-    33% {
-      background-position:
-        -30px 0,
-        10px 10px,
-        20px 20px;
-    }
-    66% {
-      background-position:
-        -30px 0,
-        10px 40px,
-        20px 20px;
-    }
-    100% {
-      background-position:
-        -30px 0,
-        10px 40px,
-        50px 20px;
-    }
+.__loading-infinity-11 {
+  width: 90px;
+  height: 14px;
+  --c: #000 92%, #0000;
+  background:
+    radial-gradient(circle 7px at bottom, var(--c)) 0 0,
+    radial-gradient(circle 7px at top, var(--c)) 0 100%;
+  background-size: calc(100% / 4) 50%;
+  background-repeat: repeat-x;
+  animation: __loading-infinity-11-l11 1s infinite;
+}
+@keyframes __loading-infinity-11-l11 {
+  80%,
+  100% {
+    background-position:
+      calc(100% / 3) 0,
+      calc(100% / -3) 100%;
   }
 }
-@scope (.__loading-infinity-19) {
-  & {
-    width: 60px;
-    aspect-ratio: 1;
-    --g: conic-gradient(from -90deg at 10px 10px, #000 90deg, #0000 0);
-    background: var(--g), var(--g), var(--g);
-    background-size: 50% 50%;
-    animation: l19 1s infinite;
-  }
-  @keyframes l19 {
-    0% {
-      background-position:
-        0 0,
-        10px 10px,
-        20px 20px;
-    }
-    33% {
-      background-position: 10px 10px;
-    }
-    66% {
-      background-position:
-        0 20px,
-        10px 10px,
-        20px 0;
-    }
-    100% {
-      background-position:
-        0 0,
-        10px 10px,
-        20px 20px;
-    }
+.__loading-infinity-12 {
+  width: 90px;
+  height: 14px;
+  --c: #000 90deg, #0000 0;
+  background:
+    conic-gradient(from 135deg at top, var(--c)) 0 0,
+    conic-gradient(from -45deg at bottom, var(--c)) 0 100%;
+  background-size: calc(100% / 4) 50%;
+  background-repeat: repeat-x;
+  animation: __loading-infinity-12-l12 1s infinite;
+}
+@keyframes __loading-infinity-12-l12 {
+  80%,
+  100% {
+    background-position:
+      calc(100% / 3) 0,
+      calc(100% / -3) 100%;
   }
 }
-@scope (.__loading-infinity-20) {
-  & {
-    width: 60px;
-    display: flex;
-    align-items: flex-start;
-    aspect-ratio: 1;
+.__loading-infinity-13 {
+  width: 90px;
+  height: 14px;
+  background:
+    radial-gradient(circle 7px at bottom, #000 92%, #0000) calc(100% / 2) 0,
+    radial-gradient(circle 7px at top, #000 92%, #0000) calc(100% / 2) 100%,
+    conic-gradient(from 135deg at top, #000 90deg, #0000 0) 0 0,
+    conic-gradient(from -45deg at bottom, #000 90deg, #0000 0) 0 100%;
+  background-size: calc(100% / 2) 50%;
+  background-repeat: repeat-x;
+  animation: __loading-infinity-13-l13 3s infinite;
+}
+@keyframes __loading-infinity-13-l13 {
+  0% {
+    background-position:
+      calc(100% / 2) 0,
+      calc(100% / 2) 100%,
+      0 0,
+      0 100%;
   }
-  &:before,
-  &:after {
-    content: '';
-    flex: 1;
-    aspect-ratio: 1;
-    --g: conic-gradient(from -90deg at 10px 10px, #000 90deg, #0000 0);
-    background: var(--g), var(--g), var(--g);
-    filter: drop-shadow(30px 30px 0 #000);
-    animation: l20 1s infinite;
+  20%,
+  30% {
+    background-position:
+      calc(3 * 100% / 4) 0,
+      calc(100% / 4) 100%,
+      calc(100% / 4) 0,
+      calc(100% / -4) 100%;
   }
-  &:after {
-    transform: scaleX(-1);
+  45%,
+  55% {
+    background-position:
+      100% 0,
+      0 100%,
+      calc(100% / 2) 0,
+      calc(100% / -2) 100%;
   }
-  @keyframes l20 {
-    0% {
-      background-position:
-        0 0,
-        10px 10px,
-        20px 20px;
-    }
-    33% {
-      background-position: 10px 10px;
-    }
-    66% {
-      background-position:
-        0 20px,
-        10px 10px,
-        20px 0;
-    }
-    100% {
-      background-position:
-        0 0,
-        10px 10px,
-        20px 20px;
-    }
+  70%,
+  80% {
+    background-position:
+      calc(5 * 100% / 4) 0,
+      calc(100% / -4) 100%,
+      calc(3 * 100% / 4) 0,
+      calc(3 * 100% / -4) 100%;
+  }
+  100% {
+    background-position:
+      calc(3 * 100% / 2) 0,
+      calc(100% / -2) 100%,
+      100% 0,
+      -100% 100%;
+  }
+}
+.__loading-infinity-14 {
+  width: 90px;
+  height: 14px;
+  --c: #000 92%, #0000;
+  background:
+    radial-gradient(circle closest-side, var(--c)) calc(100% / -4) 0,
+    radial-gradient(circle closest-side, var(--c)) calc(100% / 4) 0;
+  background-size: calc(100% / 2) 100%;
+  animation: __loading-infinity-14-l14 1.5s infinite;
+}
+@keyframes __loading-infinity-14-l14 {
+  0% {
+    background-position:
+      calc(100% / -4) 0,
+      calc(100% / 4) 0;
+  }
+  50% {
+    background-position:
+      calc(100% / -4) -14px,
+      calc(100% / 4) 14px;
+  }
+  100% {
+    background-position:
+      calc(100% / 4) -14px,
+      calc(3 * 100% / 4) 14px;
+  }
+}
+.__loading-infinity-15 {
+  width: 60px;
+  aspect-ratio: 1;
+  --g: conic-gradient(from -90deg at 10px 10px, #000 90deg, #0000 0);
+  background:
+    var(--g),
+    var(--g) 10px 10px,
+    var(--g) 20px 20px;
+  background-size: 50% 50%;
+  animation: __loading-infinity-15-l15 1s infinite;
+}
+@keyframes __loading-infinity-15-l15 {
+  90%,
+  100% {
+    background-position:
+      -30px 30px,
+      -20px 40px,
+      -10px 50px;
+  }
+}
+.__loading-infinity-16 {
+  width: 60px;
+  aspect-ratio: 1;
+  --g: conic-gradient(from -90deg at 10px 10px, #000 90deg, #0000 0);
+  background: var(--g), var(--g), var(--g);
+  background-size: 50% 50%;
+  animation: __loading-infinity-16-l16 1s infinite;
+}
+@keyframes __loading-infinity-16-l16 {
+  0% {
+    background-position:
+      0 0,
+      10px 10px,
+      20px 20px;
+  }
+  50% {
+    background-position:
+      0 20px,
+      10px 10px,
+      20px 0;
+  }
+  100% {
+    background-position:
+      20px 20px,
+      10px 10px,
+      0 0;
+  }
+}
+.__loading-infinity-17 {
+  width: 60px;
+  aspect-ratio: 1;
+  --g: conic-gradient(from -90deg at 10px 10px, #000 90deg, #0000 0);
+  background: var(--g), var(--g), var(--g);
+  background-size: 50% 50%;
+  animation: __loading-infinity-17-l17 1s infinite;
+}
+@keyframes __loading-infinity-17-l17 {
+  0% {
+    background-position:
+      0 0,
+      10px 10px,
+      20px 20px;
+  }
+  33% {
+    background-position:
+      -30px 0,
+      10px 10px,
+      20px 20px;
+  }
+  66% {
+    background-position:
+      -30px 0,
+      -20px 10px,
+      20px 20px;
+  }
+  100% {
+    background-position:
+      -30px 0,
+      -20px 10px,
+      -10px 20px;
+  }
+}
+.__loading-infinity-18 {
+  width: 60px;
+  aspect-ratio: 1;
+  --g: conic-gradient(from -90deg at 10px 10px, #000 90deg, #0000 0);
+  background: var(--g), var(--g), var(--g);
+  background-size: 50% 50%;
+  animation: __loading-infinity-18-l18 1s infinite;
+}
+@keyframes __loading-infinity-18-l18 {
+  0% {
+    background-position:
+      0 0,
+      10px 10px,
+      20px 20px;
+  }
+  33% {
+    background-position:
+      -30px 0,
+      10px 10px,
+      20px 20px;
+  }
+  66% {
+    background-position:
+      -30px 0,
+      10px 40px,
+      20px 20px;
+  }
+  100% {
+    background-position:
+      -30px 0,
+      10px 40px,
+      50px 20px;
+  }
+}
+.__loading-infinity-19 {
+  width: 60px;
+  aspect-ratio: 1;
+  --g: conic-gradient(from -90deg at 10px 10px, #000 90deg, #0000 0);
+  background: var(--g), var(--g), var(--g);
+  background-size: 50% 50%;
+  animation: __loading-infinity-19-l19 1s infinite;
+}
+@keyframes __loading-infinity-19-l19 {
+  0% {
+    background-position:
+      0 0,
+      10px 10px,
+      20px 20px;
+  }
+  33% {
+    background-position: 10px 10px;
+  }
+  66% {
+    background-position:
+      0 20px,
+      10px 10px,
+      20px 0;
+  }
+  100% {
+    background-position:
+      0 0,
+      10px 10px,
+      20px 20px;
+  }
+}
+.__loading-infinity-20 {
+  width: 60px;
+  display: flex;
+  align-items: flex-start;
+  aspect-ratio: 1;
+}
+.__loading-infinity-20:before,
+.__loading-infinity-20:after {
+  content: '';
+  flex: 1;
+  aspect-ratio: 1;
+  --g: conic-gradient(from -90deg at 10px 10px, #000 90deg, #0000 0);
+  background: var(--g), var(--g), var(--g);
+  filter: drop-shadow(30px 30px 0 #000);
+  animation: __loading-infinity-20-l20 1s infinite;
+}
+.__loading-infinity-20:after {
+  transform: scaleX(-1);
+}
+@keyframes __loading-infinity-20-l20 {
+  0% {
+    background-position:
+      0 0,
+      10px 10px,
+      20px 20px;
+  }
+  33% {
+    background-position: 10px 10px;
+  }
+  66% {
+    background-position:
+      0 20px,
+      10px 10px,
+      20px 0;
+  }
+  100% {
+    background-position:
+      0 0,
+      10px 10px,
+      20px 20px;
   }
 }

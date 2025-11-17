@@ -1,48 +1,46 @@
-@scope (.__loading-flipping-7) {
-  & {
-    width: 60px;
-    aspect-ratio: 1;
-    color: #ffa516;
-    background:
-      linear-gradient(currentColor 0 0) 100% 0,
-      linear-gradient(currentColor 0 0) 0 100%;
-    background-size: 50.1% 50.1%;
-    background-repeat: no-repeat;
-    animation: l7-0 1s infinite steps(1);
+.__loading-flipping-7 {
+  width: 60px;
+  aspect-ratio: 1;
+  color: #ffa516;
+  background:
+    linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 0 100%;
+  background-size: 50.1% 50.1%;
+  background-repeat: no-repeat;
+  animation: __loading-flipping-7-l7-0 1s infinite steps(1);
+}
+.__loading-flipping-7::before,
+.__loading-flipping-7::after {
+  content: '';
+  position: absolute;
+  inset: 0 50% 50% 0;
+  background: currentColor;
+  transform: scale(var(--s, 1)) perspective(150px) rotateY(0deg);
+  transform-origin: bottom right;
+  animation: __loading-flipping-7-l7-1 0.5s infinite linear alternate;
+}
+.__loading-flipping-7::after {
+  --s: -1, -1;
+}
+@keyframes __loading-flipping-7-l7-0 {
+  0% {
+    transform: scaleX(1) rotate(0deg);
   }
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0 50% 50% 0;
-    background: currentColor;
-    transform: scale(var(--s, 1)) perspective(150px) rotateY(0deg);
-    transform-origin: bottom right;
-    animation: l7-1 0.5s infinite linear alternate;
+  50% {
+    transform: scaleX(-1) rotate(-90deg);
   }
-  &::after {
-    --s: -1, -1;
+}
+@keyframes __loading-flipping-7-l7-1 {
+  49.99% {
+    transform: scale(var(--s, 1)) perspective(150px) rotateX(-90deg);
+    filter: grayscale(0);
   }
-  @keyframes l7-0 {
-    0% {
-      transform: scaleX(1) rotate(0deg);
-    }
-    50% {
-      transform: scaleX(-1) rotate(-90deg);
-    }
+  50% {
+    transform: scale(var(--s, 1)) perspective(150px) rotateX(-90deg);
+    filter: grayscale(0.8);
   }
-  @keyframes l7-1 {
-    49.99% {
-      transform: scale(var(--s, 1)) perspective(150px) rotateX(-90deg);
-      filter: grayscale(0);
-    }
-    50% {
-      transform: scale(var(--s, 1)) perspective(150px) rotateX(-90deg);
-      filter: grayscale(0.8);
-    }
-    100% {
-      transform: scale(var(--s, 1)) perspective(150px) rotateX(-180deg);
-      filter: grayscale(0.8);
-    }
+  100% {
+    transform: scale(var(--s, 1)) perspective(150px) rotateX(-180deg);
+    filter: grayscale(0.8);
   }
 }

@@ -1,119 +1,117 @@
-@scope (.__loading-line-7) {
-  & {
-    width: 60px;
-    aspect-ratio: 1;
-    --c: no-repeat linear-gradient(#046d8b 0 0);
-    background:
-      var(--c) 0 38px,
-      var(--c) right 18px bottom 18px,
-      var(--c) right 18px top 18px,
-      var(--c) 18px 18px,
-      var(--c) 18px 100%,
-      var(--c) 100% 100%,
-      var(--c) 100% 0,
-      var(--c) 0 0;
-    animation: l7 1.5s infinite alternate;
+.__loading-line-7 {
+  width: 60px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(#046d8b 0 0);
+  background:
+    var(--c) 0 38px,
+    var(--c) right 18px bottom 18px,
+    var(--c) right 18px top 18px,
+    var(--c) 18px 18px,
+    var(--c) 18px 100%,
+    var(--c) 100% 100%,
+    var(--c) 100% 0,
+    var(--c) 0 0;
+  animation: __loading-line-7-l7 1.5s infinite alternate;
+}
+@keyframes __loading-line-7-l7 {
+  0% {
+    background-size:
+      0 4px,
+      4px 0,
+      0 4px,
+      4px 0,
+      0 4px,
+      4px 0,
+      0 4px,
+      4px 0;
   }
-  @keyframes l7 {
-    0% {
-      background-size:
-        0 4px,
-        4px 0,
-        0 4px,
-        4px 0,
-        0 4px,
-        4px 0,
-        0 4px,
-        4px 0;
-    }
-    12.5% {
-      background-size:
-        40px 4px,
-        4px 0,
-        0 4px,
-        4px 0,
-        0 4px,
-        4px 0,
-        0 4px,
-        4px 0;
-    }
-    25% {
-      background-size:
-        40px 4px,
-        4px 20px,
-        0 4px,
-        4px 0,
-        0 4px,
-        4px 0,
-        0 4px,
-        4px 0;
-    }
-    37.5% {
-      background-size:
-        40px 4px,
-        4px 20px,
-        20px 4px,
-        4px 0,
-        0 4px,
-        4px 0,
-        0 4px,
-        4px 0;
-    }
-    50% {
-      background-size:
-        40px 4px,
-        4px 20px,
-        20px 4px,
-        4px 40px,
-        0 4px,
-        4px 0,
-        0 4px,
-        4px 0;
-    }
-    62.5% {
-      background-size:
-        40px 4px,
-        4px 20px,
-        20px 4px,
-        4px 40px,
-        40px 4px,
-        4px 0,
-        0 4px,
-        4px 0;
-    }
-    75% {
-      background-size:
-        40px 4px,
-        4px 20px,
-        20px 4px,
-        4px 40px,
-        40px 4px,
-        4px 100%,
-        0 4px,
-        4px 0;
-    }
-    87.5% {
-      background-size:
-        40px 4px,
-        4px 20px,
-        20px 4px,
-        4px 40px,
-        40px 4px,
-        4px 100%,
-        100% 4px,
-        4px 0;
-    }
-    95%,
-    100% {
-      background-size:
-        40px 4px,
-        4px 20px,
-        20px 4px,
-        4px 40px,
-        40px 4px,
-        4px 100%,
-        100% 4px,
-        4px 40px;
-    }
+  12.5% {
+    background-size:
+      40px 4px,
+      4px 0,
+      0 4px,
+      4px 0,
+      0 4px,
+      4px 0,
+      0 4px,
+      4px 0;
+  }
+  25% {
+    background-size:
+      40px 4px,
+      4px 20px,
+      0 4px,
+      4px 0,
+      0 4px,
+      4px 0,
+      0 4px,
+      4px 0;
+  }
+  37.5% {
+    background-size:
+      40px 4px,
+      4px 20px,
+      20px 4px,
+      4px 0,
+      0 4px,
+      4px 0,
+      0 4px,
+      4px 0;
+  }
+  50% {
+    background-size:
+      40px 4px,
+      4px 20px,
+      20px 4px,
+      4px 40px,
+      0 4px,
+      4px 0,
+      0 4px,
+      4px 0;
+  }
+  62.5% {
+    background-size:
+      40px 4px,
+      4px 20px,
+      20px 4px,
+      4px 40px,
+      40px 4px,
+      4px 0,
+      0 4px,
+      4px 0;
+  }
+  75% {
+    background-size:
+      40px 4px,
+      4px 20px,
+      20px 4px,
+      4px 40px,
+      40px 4px,
+      4px 100%,
+      0 4px,
+      4px 0;
+  }
+  87.5% {
+    background-size:
+      40px 4px,
+      4px 20px,
+      20px 4px,
+      4px 40px,
+      40px 4px,
+      4px 100%,
+      100% 4px,
+      4px 0;
+  }
+  95%,
+  100% {
+    background-size:
+      40px 4px,
+      4px 20px,
+      20px 4px,
+      4px 40px,
+      40px 4px,
+      4px 100%,
+      100% 4px,
+      4px 40px;
   }
 }

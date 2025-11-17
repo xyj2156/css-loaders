@@ -1,45 +1,43 @@
-@scope (.__loading-polygons-12) {
-  & {
-    display: inline-grid;
-    width: 30px;
-    aspect-ratio: 1;
-    background: #574951;
-    animation:
-      l12-0 4s steps(4) infinite,
-      l12-1 6s linear infinite;
+.__loading-polygons-12 {
+  display: inline-grid;
+  width: 30px;
+  aspect-ratio: 1;
+  background: #574951;
+  animation:
+    __loading-polygons-12-l12-0 4s steps(4) infinite,
+    __loading-polygons-12-l12-1 6s linear infinite;
+}
+.__loading-polygons-12:before,
+.__loading-polygons-12:after {
+  content: '';
+  grid-area: 1/1;
+  background: #83988e;
+  clip-path: polygon(100% 50%, 65.45% 97.55%, 9.55% 79.39%, 9.55% 20.61%, 65.45% 2.45%);
+  transform-origin: right;
+  translate: -100% 50%;
+  scale: 1.7;
+  animation: __loading-polygons-12-l12-2 1s linear infinite;
+}
+.__loading-polygons-12:after {
+  clip-path: polygon(90.45% 79.39%, 34.55% 97.55%, 0% 50%, 34.55% 2.45%, 90.45% 20.61%);
+  transform-origin: left;
+  translate: 100% -50%;
+}
+@keyframes __loading-polygons-12-l12-0 {
+  to {
+    rotate: 1turn;
   }
-  &:before,
-  &:after {
-    content: '';
-    grid-area: 1/1;
-    background: #83988e;
-    clip-path: polygon(100% 50%, 65.45% 97.55%, 9.55% 79.39%, 9.55% 20.61%, 65.45% 2.45%);
-    transform-origin: right;
-    translate: -100% 50%;
-    scale: 1.7;
-    animation: l12-2 1s linear infinite;
+}
+@keyframes __loading-polygons-12-l12-1 {
+  to {
+    transform: rotate(1turn);
   }
-  &:after {
-    clip-path: polygon(90.45% 79.39%, 34.55% 97.55%, 0% 50%, 34.55% 2.45%, 90.45% 20.61%);
-    transform-origin: left;
-    translate: 100% -50%;
+}
+@keyframes __loading-polygons-12-l12-2 {
+  0% {
+    rotate: 36deg;
   }
-  @keyframes l12-0 {
-    to {
-      rotate: 1turn;
-    }
-  }
-  @keyframes l12-1 {
-    to {
-      transform: rotate(1turn);
-    }
-  }
-  @keyframes l12-2 {
-    0% {
-      rotate: 36deg;
-    }
-    to {
-      rotate: -126deg;
-    }
+  to {
+    rotate: -126deg;
   }
 }

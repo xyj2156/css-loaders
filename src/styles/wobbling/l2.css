@@ -1,14 +1,12 @@
-@scope (.__loading-wobbling-2) {
-  & {
-    width: 120px;
-    height: 20px;
-    border-radius: 20px;
-    background: radial-gradient(farthest-side, orange 94%, #0000) left/20px 20px no-repeat lightblue;
-    animation: l2 1s infinite linear;
-  }
-  @keyframes l2 {
-    50% {
-      background-position: right;
-    }
+.__loading-wobbling-2 {
+  width: 120px;
+  height: 20px;
+  border-radius: 20px;
+  background: radial-gradient(farthest-side, orange 94%, #0000) left/20px 20px no-repeat lightblue;
+  animation: __loading-wobbling-2-l2 1s infinite linear;
+}
+@keyframes __loading-wobbling-2-l2 {
+  50% {
+    background-position: right;
   }
 }

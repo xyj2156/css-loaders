@@ -1,27 +1,25 @@
-@scope (.__loading-maze-7) {
-  & {
-    width: 40px;
-    aspect-ratio: 1;
-    background:
-      radial-gradient(farthest-side, #000 90%, #0000) 50%/8px 8px no-repeat,
-      conic-gradient(from -90deg at 15px 15px, #0000 90deg, #fff 0) 0 0/25px 25px;
-    animation: l7 1s infinite;
+.__loading-maze-7 {
+  width: 40px;
+  aspect-ratio: 1;
+  background:
+    radial-gradient(farthest-side, #000 90%, #0000) 50%/8px 8px no-repeat,
+    conic-gradient(from -90deg at 15px 15px, #0000 90deg, #fff 0) 0 0/25px 25px;
+  animation: __loading-maze-7-l7 1s infinite;
+}
+@keyframes __loading-maze-7-l7 {
+  0% {
+    background-position:
+      50%,
+      0 0;
   }
-  @keyframes l7 {
-    0% {
-      background-position:
-        50%,
-        0 0;
-    }
-    50% {
-      background-position:
-        50%,
-        25px 0;
-    }
-    100% {
-      background-position:
-        50%,
-        25px 25px;
-    }
+  50% {
+    background-position:
+      50%,
+      25px 0;
+  }
+  100% {
+    background-position:
+      50%,
+      25px 25px;
   }
 }

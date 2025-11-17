@@ -1,41 +1,39 @@
-@scope (.__loading-colorful-13) {
-  & {
-    width: 50px;
-    aspect-ratio: 1;
-    display: grid;
-    --c: #cff09e 25%, #79bd9a 0 50%, #0b486b 0 75%, #cff09e 0;
+.__loading-colorful-13 {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  --c: #cff09e 25%, #79bd9a 0 50%, #0b486b 0 75%, #cff09e 0;
+}
+.__loading-colorful-13:before,
+.__loading-colorful-13:after {
+  content: '';
+  background: linear-gradient(90deg, var(--c)), linear-gradient(-90deg, var(--c));
+  background-size: 400% 52%;
+  background-repeat: no-repeat;
+  animation: __loading-colorful-13-l13 2s infinite;
+}
+@keyframes __loading-colorful-13-l13 {
+  0% {
+    background-position:
+      calc(3 * 100% / 3) 0,
+      calc(0 * 100% / 3) 100%;
   }
-  &:before,
-  &:after {
-    content: '';
-    background: linear-gradient(90deg, var(--c)), linear-gradient(-90deg, var(--c));
-    background-size: 400% 52%;
-    background-repeat: no-repeat;
-    animation: l13 2s infinite;
+  23%,
+  33% {
+    background-position:
+      calc(2 * 100% / 3) 0,
+      calc(1 * 100% / 3) 100%;
   }
-  @keyframes l13 {
-    0% {
-      background-position:
-        calc(3 * 100% / 3) 0,
-        calc(0 * 100% / 3) 100%;
-    }
-    23%,
-    33% {
-      background-position:
-        calc(2 * 100% / 3) 0,
-        calc(1 * 100% / 3) 100%;
-    }
-    56%,
-    66% {
-      background-position:
-        calc(1 * 100% / 3) 0,
-        calc(2 * 100% / 3) 100%;
-    }
-    90%,
-    100% {
-      background-position:
-        calc(0 * 100% / 3) 0,
-        calc(3 * 100% / 3) 100%;
-    }
+  56%,
+  66% {
+    background-position:
+      calc(1 * 100% / 3) 0,
+      calc(2 * 100% / 3) 100%;
+  }
+  90%,
+  100% {
+    background-position:
+      calc(0 * 100% / 3) 0,
+      calc(3 * 100% / 3) 100%;
   }
 }

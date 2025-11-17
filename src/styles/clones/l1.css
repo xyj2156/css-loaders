@@ -1,35 +1,33 @@
-@scope (.__loading-clones-1) {
-  & {
-    width: 25px;
-    aspect-ratio: 1;
-    background: #60b99a;
-    animation: l1 1.5s infinite;
+.__loading-clones-1 {
+  width: 25px;
+  aspect-ratio: 1;
+  background: #60b99a;
+  animation: __loading-clones-1-l1 1.5s infinite;
+}
+@keyframes __loading-clones-1-l1 {
+  0%,
+  100% {
+    transform: translate(-30px, -30px);
+    box-shadow:
+      0 0 #f77825,
+      0 0 #554236;
   }
-  @keyframes l1 {
-    0%,
-    100% {
-      transform: translate(-30px, -30px);
-      box-shadow:
-        0 0 #f77825,
-        0 0 #554236;
-    }
-    40% {
-      transform: translate(30px, 30px);
-      box-shadow:
-        -10px -10px #f77825,
-        -20px -20px #554236;
-    }
-    50% {
-      transform: translate(30px, 30px);
-      box-shadow:
-        0 0 #f77825,
-        0 0 #554236;
-    }
-    90% {
-      transform: translate(-30px, -30px);
-      box-shadow:
-        10px 10px #f77825,
-        20px 20px #554236;
-    }
+  40% {
+    transform: translate(30px, 30px);
+    box-shadow:
+      -10px -10px #f77825,
+      -20px -20px #554236;
+  }
+  50% {
+    transform: translate(30px, 30px);
+    box-shadow:
+      0 0 #f77825,
+      0 0 #554236;
+  }
+  90% {
+    transform: translate(-30px, -30px);
+    box-shadow:
+      10px 10px #f77825,
+      20px 20px #554236;
   }
 }

@@ -1,29 +1,27 @@
-@scope (.__loading-dots-34) {
-  & {
-    height: 15px;
-    aspect-ratio: 4;
-    display: grid;
-  }
-  &:before,
-  &:after {
-    content: '';
-    grid-area: 1/1;
-    --_g: no-repeat radial-gradient(farthest-side, #000 94%, #0000);
-    background:
-      var(--_g) left,
-      var(--_g) right;
-    background-size: 25% 100%;
-    animation: l34 1s infinite;
-    transform: translate(var(--d, 0)) rotate(0);
-  }
-  &:after {
-    --d: 37.5%;
-    animation-delay: 0.5s;
-  }
-  @keyframes l34 {
-    50%,
-    100% {
-      transform: translate(var(--d, 0)) rotate(0.5turn);
-    }
+.__loading-dots-34 {
+  height: 15px;
+  aspect-ratio: 4;
+  display: grid;
+}
+.__loading-dots-34:before,
+.__loading-dots-34:after {
+  content: '';
+  grid-area: 1/1;
+  --_g: no-repeat radial-gradient(farthest-side, #000 94%, #0000);
+  background:
+    var(--_g) left,
+    var(--_g) right;
+  background-size: 25% 100%;
+  animation: __loading-dots-34-l34 1s infinite;
+  transform: translate(var(--d, 0)) rotate(0);
+}
+.__loading-dots-34:after {
+  --d: 37.5%;
+  animation-delay: 0.5s;
+}
+@keyframes __loading-dots-34-l34 {
+  50%,
+  100% {
+    transform: translate(var(--d, 0)) rotate(0.5turn);
   }
 }

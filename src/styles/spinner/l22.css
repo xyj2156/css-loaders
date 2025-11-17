@@ -1,28 +1,26 @@
-@scope (.__loading-spinner-22) {
-  & {
-    width: 50px;
-    aspect-ratio: 1;
-    display: grid;
-    border-radius: 50%;
-    background: conic-gradient(#25b09b 25%, #f03355 0 50%, #514b82 0 75%, #ffa516 0);
-    animation: l22 2s infinite linear;
-  }
-  &::before,
-  &::after {
-    content: '';
-    grid-area: 1/1;
-    margin: 15%;
-    border-radius: 50%;
-    background: inherit;
-    animation: inherit;
-  }
-  &::after {
-    margin: 25%;
-    animation-duration: 3s;
-  }
-  @keyframes l22 {
-    100% {
-      transform: rotate(1turn);
-    }
+.__loading-spinner-22 {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border-radius: 50%;
+  background: conic-gradient(#25b09b 25%, #f03355 0 50%, #514b82 0 75%, #ffa516 0);
+  animation: __loading-spinner-22-l22 2s infinite linear;
+}
+.__loading-spinner-22::before,
+.__loading-spinner-22::after {
+  content: '';
+  grid-area: 1/1;
+  margin: 15%;
+  border-radius: 50%;
+  background: inherit;
+  animation: inherit;
+}
+.__loading-spinner-22::after {
+  margin: 25%;
+  animation-duration: 3s;
+}
+@keyframes __loading-spinner-22-l22 {
+  100% {
+    transform: rotate(1turn);
   }
 }

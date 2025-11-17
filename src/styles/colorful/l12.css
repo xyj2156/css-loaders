@@ -1,39 +1,37 @@
-@scope (.__loading-colorful-12) {
-  & {
-    width: 50px;
-    aspect-ratio: 1;
-    background:
-      linear-gradient(#ed303c 0 0),
-      linear-gradient(#3b8183 0 0),
-      linear-gradient(#ff9c5b 0 0) #ed303c;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: l12 2s infinite;
+.__loading-colorful-12 {
+  width: 50px;
+  aspect-ratio: 1;
+  background:
+    linear-gradient(#ed303c 0 0),
+    linear-gradient(#3b8183 0 0),
+    linear-gradient(#ff9c5b 0 0) #ed303c;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: __loading-colorful-12-l12 2s infinite;
+}
+@keyframes __loading-colorful-12-l12 {
+  0% {
+    background-size:
+      100% 100%,
+      100% 100%,
+      100% 100%;
   }
-  @keyframes l12 {
-    0% {
-      background-size:
-        100% 100%,
-        100% 100%,
-        100% 100%;
-    }
-    33% {
-      background-size:
-        0px 0px,
-        100% 100%,
-        100% 100%;
-    }
-    66% {
-      background-size:
-        0px 0px,
-        0px 0px,
-        100% 100%;
-    }
-    100% {
-      background-size:
-        0px 0px,
-        0px 0px,
-        0px 0px;
-    }
+  33% {
+    background-size:
+      0px 0px,
+      100% 100%,
+      100% 100%;
+  }
+  66% {
+    background-size:
+      0px 0px,
+      0px 0px,
+      100% 100%;
+  }
+  100% {
+    background-size:
+      0px 0px,
+      0px 0px,
+      0px 0px;
   }
 }

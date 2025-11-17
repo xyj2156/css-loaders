@@ -1,39 +1,37 @@
-@scope (.__loading-polygons-1) {
-  & {
-    display: inline-grid;
-    width: 90px;
-    aspect-ratio: 1;
-    clip-path: polygon(
-      100% 50%,
-      85.36% 85.36%,
-      50% 100%,
-      14.64% 85.36%,
-      0% 50%,
-      14.64% 14.64%,
-      50% 0%,
-      85.36% 14.64%
-    );
-    background: #574951;
-    animation: l1 6s infinite linear;
-  }
-  &:before,
-  &:after {
-    content: '';
-    grid-area: 1/1;
-    background: #83988e;
-    clip-path: inherit;
-    margin: 10%;
-    animation: inherit;
-    animation-duration: 12s;
-  }
-  &:after {
-    background: #bcdea5;
-    margin: 20%;
-    animation-duration: 18s;
-  }
-  @keyframes l1 {
-    to {
-      rotate: 1turn;
-    }
+.__loading-polygons-1 {
+  display: inline-grid;
+  width: 90px;
+  aspect-ratio: 1;
+  clip-path: polygon(
+    100% 50%,
+    85.36% 85.36%,
+    50% 100%,
+    14.64% 85.36%,
+    0% 50%,
+    14.64% 14.64%,
+    50% 0%,
+    85.36% 14.64%
+  );
+  background: #574951;
+  animation: __loading-polygons-1-l1 6s infinite linear;
+}
+.__loading-polygons-1:before,
+.__loading-polygons-1:after {
+  content: '';
+  grid-area: 1/1;
+  background: #83988e;
+  clip-path: inherit;
+  margin: 10%;
+  animation: inherit;
+  animation-duration: 12s;
+}
+.__loading-polygons-1:after {
+  background: #bcdea5;
+  margin: 20%;
+  animation-duration: 18s;
+}
+@keyframes __loading-polygons-1-l1 {
+  to {
+    rotate: 1turn;
   }
 }

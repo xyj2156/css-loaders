@@ -1,23 +1,21 @@
-@scope (.__loading-shuriken-9) {
-  & {
-    width: 80px;
-    aspect-ratio: 1;
-    --c: #8d7958 98%, #0000;
-    background:
-      radial-gradient(50% 70% at 50% 120%, var(--c)) top,
-      radial-gradient(70% 50% at -20% 50%, var(--c)) right,
-      radial-gradient(50% 70% at 50% -20%, var(--c)) bottom,
-      radial-gradient(70% 50% at 120% 50%, var(--c)) left;
-    background-size:
-      100% 50.1%,
-      50.1% 100%;
-    background-repeat: no-repeat;
-    -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
-    animation: l9 1.5s infinite linear;
-  }
-  @keyframes l9 {
-    100% {
-      transform: rotate(1turn);
-    }
+.__loading-shuriken-9 {
+  width: 80px;
+  aspect-ratio: 1;
+  --c: #8d7958 98%, #0000;
+  background:
+    radial-gradient(50% 70% at 50% 120%, var(--c)) top,
+    radial-gradient(70% 50% at -20% 50%, var(--c)) right,
+    radial-gradient(50% 70% at 50% -20%, var(--c)) bottom,
+    radial-gradient(70% 50% at 120% 50%, var(--c)) left;
+  background-size:
+    100% 50.1%,
+    50.1% 100%;
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+  animation: __loading-shuriken-9-l9 1.5s infinite linear;
+}
+@keyframes __loading-shuriken-9-l9 {
+  100% {
+    transform: rotate(1turn);
   }
 }

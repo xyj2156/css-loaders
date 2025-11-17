@@ -1,47 +1,45 @@
-@scope (.__loading-bars-25) {
-  & {
-    width: 45px;
-    aspect-ratio: 1;
-    --c: no-repeat repeating-linear-gradient(90deg, #000 0 calc(100% / 7), #0000 0 calc(200% / 7));
-    background: var(--c), var(--c), var(--c), var(--c);
-    background-size: 140% 26%;
-    animation: l25 0.75s infinite;
+.__loading-bars-25 {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat repeating-linear-gradient(90deg, #000 0 calc(100% / 7), #0000 0 calc(200% / 7));
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 140% 26%;
+  animation: __loading-bars-25-l25 0.75s infinite;
+}
+@keyframes __loading-bars-25-l25 {
+  0% {
+    background-position:
+      0 calc(0 * 100% / 3),
+      100% calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3),
+      100% calc(3 * 100% / 3);
   }
-  @keyframes l25 {
-    0% {
-      background-position:
-        0 calc(0 * 100% / 3),
-        100% calc(1 * 100% / 3),
-        0 calc(2 * 100% / 3),
-        100% calc(3 * 100% / 3);
-    }
-    25% {
-      background-position:
-        100% calc(0 * 100% / 3),
-        100% calc(1 * 100% / 3),
-        0 calc(2 * 100% / 3),
-        100% calc(3 * 100% / 3);
-    }
-    50% {
-      background-position:
-        100% calc(0 * 100% / 3),
-        0 calc(1 * 100% / 3),
-        0 calc(2 * 100% / 3),
-        100% calc(3 * 100% / 3);
-    }
-    75% {
-      background-position:
-        100% calc(0 * 100% / 3),
-        0 calc(1 * 100% / 3),
-        100% calc(2 * 100% / 3),
-        100% calc(3 * 100% / 3);
-    }
-    100% {
-      background-position:
-        100% calc(0 * 100% / 3),
-        0 calc(1 * 100% / 3),
-        100% calc(2 * 100% / 3),
-        0 calc(3 * 100% / 3);
-    }
+  25% {
+    background-position:
+      100% calc(0 * 100% / 3),
+      100% calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3),
+      100% calc(3 * 100% / 3);
+  }
+  50% {
+    background-position:
+      100% calc(0 * 100% / 3),
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3),
+      100% calc(3 * 100% / 3);
+  }
+  75% {
+    background-position:
+      100% calc(0 * 100% / 3),
+      0 calc(1 * 100% / 3),
+      100% calc(2 * 100% / 3),
+      100% calc(3 * 100% / 3);
+  }
+  100% {
+    background-position:
+      100% calc(0 * 100% / 3),
+      0 calc(1 * 100% / 3),
+      100% calc(2 * 100% / 3),
+      0 calc(3 * 100% / 3);
   }
 }

@@ -1,40 +1,38 @@
-@scope (.__loading-circle-9) {
-  & {
-    width: 75px;
-    aspect-ratio: 1;
-    --g1: conic-gradient(from 90deg at 2px 2px, #0000 90deg, #fff 0);
-    --g2: conic-gradient(from -90deg at 13px 13px, #0000 90deg, #fff 0);
-    background:
-      var(--g1), var(--g1), var(--g1), var(--g1), var(--g1), var(--g1), var(--g1), var(--g1),
-      var(--g2), var(--g2), var(--g2), var(--g2), var(--g2), var(--g2), var(--g2), var(--g2);
-    background-size: 15px 15px;
-    background-repeat: no-repeat;
-    animation: l9 1s infinite alternate linear;
+.__loading-circle-9 {
+  width: 75px;
+  aspect-ratio: 1;
+  --g1: conic-gradient(from 90deg at 2px 2px, #0000 90deg, #fff 0);
+  --g2: conic-gradient(from -90deg at 13px 13px, #0000 90deg, #fff 0);
+  background:
+    var(--g1), var(--g1), var(--g1), var(--g1), var(--g1), var(--g1), var(--g1), var(--g1),
+    var(--g2), var(--g2), var(--g2), var(--g2), var(--g2), var(--g2), var(--g2), var(--g2);
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  animation: __loading-circle-9-l9 1s infinite alternate linear;
+}
+@keyframes __loading-circle-9-l9 {
+  0%,
+  30% {
+    background-position:
+      0 0,
+      50% 0,
+      100% 0,
+      0 50%,
+      100% 50%,
+      0 100%,
+      50% 100%,
+      100% 100%;
   }
-  @keyframes l9 {
-    0%,
-    30% {
-      background-position:
-        0 0,
-        50% 0,
-        100% 0,
-        0 50%,
-        100% 50%,
-        0 100%,
-        50% 100%,
-        100% 100%;
-    }
-    70%,
-    100% {
-      background-position:
-        15% 15%,
-        50% 0,
-        85% 15%,
-        0 50%,
-        100% 50%,
-        15% 85%,
-        50% 100%,
-        85% 85%;
-    }
+  70%,
+  100% {
+    background-position:
+      15% 15%,
+      50% 0,
+      85% 15%,
+      0 50%,
+      100% 50%,
+      15% 85%,
+      50% 100%,
+      85% 85%;
   }
 }

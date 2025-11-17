@@ -1,77 +1,75 @@
-@scope (.__loading-line-17) {
-  & {
-    width: 50px;
-    aspect-ratio: 1;
-    display: flex;
+.__loading-line-17 {
+  width: 50px;
+  aspect-ratio: 1;
+  display: flex;
+}
+.__loading-line-17:before,
+.__loading-line-17:after {
+  content: '';
+  flex: 1;
+  margin: 0 0 0 -2px;
+  --c: no-repeat linear-gradient(#046d8b 0 0);
+  background:
+    var(--c) 0 0,
+    var(--c) 100% 0,
+    var(--c) 100% 100%,
+    var(--c) 0 100%,
+    var(--c) 0 50%;
+  animation: __loading-line-17-l17 1s infinite alternate;
+}
+.__loading-line-17:before {
+  transform: scale(-1);
+  margin: 0 -2px 0 0;
+}
+@keyframes __loading-line-17-l17 {
+  0%,
+  5% {
+    background-size:
+      0 4px,
+      4px 0,
+      0 4px,
+      4px 0,
+      0 4px;
   }
-  &:before,
-  &:after {
-    content: '';
-    flex: 1;
-    margin: 0 0 0 -2px;
-    --c: no-repeat linear-gradient(#046d8b 0 0);
-    background:
-      var(--c) 0 0,
-      var(--c) 100% 0,
-      var(--c) 100% 100%,
-      var(--c) 0 100%,
-      var(--c) 0 50%;
-    animation: l17 1s infinite alternate;
+  20% {
+    background-size:
+      100% 4px,
+      4px 0,
+      0 4px,
+      4px 0,
+      0 4px;
   }
-  &:before {
-    transform: scale(-1);
-    margin: 0 -2px 0 0;
+  40% {
+    background-size:
+      100% 4px,
+      4px 100%,
+      0 4px,
+      4px 0,
+      0 4px;
   }
-  @keyframes l17 {
-    0%,
-    5% {
-      background-size:
-        0 4px,
-        4px 0,
-        0 4px,
-        4px 0,
-        0 4px;
-    }
-    20% {
-      background-size:
-        100% 4px,
-        4px 0,
-        0 4px,
-        4px 0,
-        0 4px;
-    }
-    40% {
-      background-size:
-        100% 4px,
-        4px 100%,
-        0 4px,
-        4px 0,
-        0 4px;
-    }
-    60% {
-      background-size:
-        100% 4px,
-        4px 100%,
-        100% 4px,
-        4px 0,
-        0 4px;
-    }
-    80% {
-      background-size:
-        100% 4px,
-        4px 100%,
-        100% 4px,
-        4px 50%,
-        0 4px;
-    }
-    95%,
-    100% {
-      background-size:
-        100% 4px,
-        4px 100%,
-        100% 4px,
-        4px 50%,
-        100% 4px;
-    }
+  60% {
+    background-size:
+      100% 4px,
+      4px 100%,
+      100% 4px,
+      4px 0,
+      0 4px;
+  }
+  80% {
+    background-size:
+      100% 4px,
+      4px 100%,
+      100% 4px,
+      4px 50%,
+      0 4px;
+  }
+  95%,
+  100% {
+    background-size:
+      100% 4px,
+      4px 100%,
+      100% 4px,
+      4px 50%,
+      100% 4px;
   }
 }

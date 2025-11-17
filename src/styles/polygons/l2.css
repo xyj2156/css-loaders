@@ -1,49 +1,47 @@
-@scope (.__loading-polygons-2) {
-  & {
-    display: inline-grid;
-    width: 90px;
-    aspect-ratio: 1;
-    clip-path: polygon(
-      100% 50%,
-      85.36% 85.36%,
-      50% 100%,
-      14.64% 85.36%,
-      0% 50%,
-      14.64% 14.64%,
-      50% 0%,
-      85.36% 14.64%
-    );
-    background: #574951;
-    animation: l2 6s infinite linear;
-  }
-  &:before,
-  &:after {
-    content: '';
-    grid-area: 1/1;
-    background: #83988e;
-    clip-path: polygon(
-      100% 50%,
-      81.17% 89.09%,
-      38.87% 98.75%,
-      4.95% 71.69%,
-      4.95% 28.31%,
-      38.87% 1.25%,
-      81.17% 10.91%
-    );
-    margin: 10%;
-    animation: inherit;
-    animation-duration: 10s;
-  }
-  &:after {
-    background: #bcdea5;
-    clip-path: polygon(100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%, 25% 6.7%, 75% 6.7%);
-    margin: 20%;
-    animation-duration: 3s;
-    animation-direction: reverse;
-  }
-  @keyframes l2 {
-    to {
-      rotate: 1turn;
-    }
+.__loading-polygons-2 {
+  display: inline-grid;
+  width: 90px;
+  aspect-ratio: 1;
+  clip-path: polygon(
+    100% 50%,
+    85.36% 85.36%,
+    50% 100%,
+    14.64% 85.36%,
+    0% 50%,
+    14.64% 14.64%,
+    50% 0%,
+    85.36% 14.64%
+  );
+  background: #574951;
+  animation: __loading-polygons-2-l2 6s infinite linear;
+}
+.__loading-polygons-2:before,
+.__loading-polygons-2:after {
+  content: '';
+  grid-area: 1/1;
+  background: #83988e;
+  clip-path: polygon(
+    100% 50%,
+    81.17% 89.09%,
+    38.87% 98.75%,
+    4.95% 71.69%,
+    4.95% 28.31%,
+    38.87% 1.25%,
+    81.17% 10.91%
+  );
+  margin: 10%;
+  animation: inherit;
+  animation-duration: 10s;
+}
+.__loading-polygons-2:after {
+  background: #bcdea5;
+  clip-path: polygon(100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%, 25% 6.7%, 75% 6.7%);
+  margin: 20%;
+  animation-duration: 3s;
+  animation-direction: reverse;
+}
+@keyframes __loading-polygons-2-l2 {
+  to {
+    rotate: 1turn;
   }
 }

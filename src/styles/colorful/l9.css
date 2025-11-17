@@ -1,37 +1,35 @@
-@scope (.__loading-colorful-9) {
-  & {
-    width: 50px;
-    aspect-ratio: 1.154;
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
-    position: relative;
+.__loading-colorful-9 {
+  width: 50px;
+  aspect-ratio: 1.154;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  position: relative;
+}
+.__loading-colorful-9::before {
+  content: '';
+  position: absolute;
+  inset: -150% -100% -50%;
+  background: repeating-conic-gradient(
+    from 30deg,
+    #ffabab 0 60deg,
+    #abe4ff 0 120deg,
+    #ff7373 0 180deg
+  );
+  animation: __loading-colorful-9-l9 2s infinite;
+}
+@keyframes __loading-colorful-9-l9 {
+  0% {
+    transform: rotate(0);
   }
-  &::before {
-    content: '';
-    position: absolute;
-    inset: -150% -100% -50%;
-    background: repeating-conic-gradient(
-      from 30deg,
-      #ffabab 0 60deg,
-      #abe4ff 0 120deg,
-      #ff7373 0 180deg
-    );
-    animation: l9 2s infinite;
+  23%,
+  33% {
+    transform: rotate(60deg);
   }
-  @keyframes l9 {
-    0% {
-      transform: rotate(0);
-    }
-    23%,
-    33% {
-      transform: rotate(60deg);
-    }
-    56%,
-    66% {
-      transform: rotate(120deg);
-    }
-    90%,
-    100% {
-      transform: rotate(180deg);
-    }
+  56%,
+  66% {
+    transform: rotate(120deg);
+  }
+  90%,
+  100% {
+    transform: rotate(180deg);
   }
 }

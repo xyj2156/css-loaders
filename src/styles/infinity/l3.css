@@ -1,13 +1,11 @@
-@scope (.__loading-infinity-3) {
-  & {
-    width: calc(80px / cos(45deg));
-    height: 14px;
-    background: repeating-linear-gradient(-45deg, #000 0 15px, #0000 0 20px) left/200% 100%;
-    animation: l3 2s infinite linear;
-  }
-  @keyframes l3 {
-    100% {
-      background-position: right;
-    }
+.__loading-infinity-3 {
+  width: calc(80px / cos(45deg));
+  height: 14px;
+  background: repeating-linear-gradient(-45deg, #000 0 15px, #0000 0 20px) left/200% 100%;
+  animation: __loading-infinity-3-l3 2s infinite linear;
+}
+@keyframes __loading-infinity-3-l3 {
+  100% {
+    background-position: right;
   }
 }

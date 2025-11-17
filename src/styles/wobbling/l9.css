@@ -1,19 +1,17 @@
-@scope (.__loading-wobbling-9) {
-  & {
-    width: 80px;
-    height: 20px;
-    color: #514b82;
-    background:
-      radial-gradient(farthest-side, currentColor 98%, #0000) left / 20px 20px,
-      radial-gradient(farthest-side, currentColor 98%, #0000) right / 20px 20px,
-      radial-gradient(farthest-side, #000 98%, #0000) center/5px 5px,
-      linear-gradient(currentColor 0 0) center/100% 2px;
-    background-repeat: no-repeat;
-    animation: l9 1s cubic-bezier(0.5, -150, 0.5, 150) infinite;
-  }
-  @keyframes l9 {
-    100% {
-      transform: rotate(1deg);
-    }
+.__loading-wobbling-9 {
+  width: 80px;
+  height: 20px;
+  color: #514b82;
+  background:
+    radial-gradient(farthest-side, currentColor 98%, #0000) left / 20px 20px,
+    radial-gradient(farthest-side, currentColor 98%, #0000) right / 20px 20px,
+    radial-gradient(farthest-side, #000 98%, #0000) center/5px 5px,
+    linear-gradient(currentColor 0 0) center/100% 2px;
+  background-repeat: no-repeat;
+  animation: __loading-wobbling-9-l9 1s cubic-bezier(0.5, -150, 0.5, 150) infinite;
+}
+@keyframes __loading-wobbling-9-l9 {
+  100% {
+    transform: rotate(1deg);
   }
 }

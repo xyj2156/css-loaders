@@ -1,80 +1,78 @@
-@scope (.__loading-cut-6) {
-  & {
-    width: 74px;
-    height: calc(27px * 0.866 + 6px);
-    display: grid;
+.__loading-cut-6 {
+  width: 74px;
+  height: calc(27px * 0.866 + 6px);
+  display: grid;
+}
+.__loading-cut-6:before,
+.__loading-cut-6:after {
+  content: '';
+  grid-area: 1/1;
+  background: #fd135a;
+  --c1: conic-gradient(from 150deg at top, #000 60deg, #0000 0);
+  --c2: conic-gradient(from -30deg at bottom, #000 60deg, #0000 0);
+  --s: 27px calc(27px * 0.866);
+  clip-path: polygon(17px 0, calc(100% - 17px) 0, 100% 100%, 0 100%);
+  -webkit-mask:
+    var(--c1) left 6px top 4px,
+    var(--c2) center,
+    var(--c1) right 6px top 4px,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-mask-repeat: no-repeat;
+  animation: __loading-cut-6-l6 2s infinite both;
+}
+.__loading-cut-6:after {
+  transform: rotate(180deg);
+  transform-origin: 50% 99%;
+  animation-delay: 0.5s;
+}
+@keyframes __loading-cut-6-l6 {
+  0% {
+    -webkit-mask-size:
+      0 0,
+      0 0,
+      0 0,
+      auto;
   }
-  &:before,
-  &:after {
-    content: '';
-    grid-area: 1/1;
-    background: #fd135a;
-    --c1: conic-gradient(from 150deg at top, #000 60deg, #0000 0);
-    --c2: conic-gradient(from -30deg at bottom, #000 60deg, #0000 0);
-    --s: 27px calc(27px * 0.866);
-    clip-path: polygon(17px 0, calc(100% - 17px) 0, 100% 100%, 0 100%);
-    -webkit-mask:
-      var(--c1) left 6px top 4px,
-      var(--c2) center,
-      var(--c1) right 6px top 4px,
-      linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    -webkit-mask-repeat: no-repeat;
-    animation: l6 2s infinite both;
+  8.33% {
+    -webkit-mask-size:
+      var(--s),
+      0 0,
+      0 0,
+      auto;
   }
-  &:after {
-    transform: rotate(180deg);
-    transform-origin: 50% 99%;
-    animation-delay: 0.5s;
+  16.67% {
+    -webkit-mask-size:
+      var(--s),
+      var(--s),
+      0 0,
+      auto;
   }
-  @keyframes l6 {
-    0% {
-      -webkit-mask-size:
-        0 0,
-        0 0,
-        0 0,
-        auto;
-    }
-    8.33% {
-      -webkit-mask-size:
-        var(--s),
-        0 0,
-        0 0,
-        auto;
-    }
-    16.67% {
-      -webkit-mask-size:
-        var(--s),
-        var(--s),
-        0 0,
-        auto;
-    }
-    25%,
-    50% {
-      -webkit-mask-size: var(--s), var(--s), var(--s), auto;
-    }
-    58.33% {
-      -webkit-mask-size:
-        0 0,
-        var(--s),
-        var(--s),
-        auto;
-    }
-    66.67% {
-      -webkit-mask-size:
-        0 0,
-        0 0,
-        var(--s),
-        auto;
-    }
-    75%,
-    100% {
-      -webkit-mask-size:
-        0 0,
-        0 0,
-        0 0,
-        auto;
-    }
+  25%,
+  50% {
+    -webkit-mask-size: var(--s), var(--s), var(--s), auto;
+  }
+  58.33% {
+    -webkit-mask-size:
+      0 0,
+      var(--s),
+      var(--s),
+      auto;
+  }
+  66.67% {
+    -webkit-mask-size:
+      0 0,
+      0 0,
+      var(--s),
+      auto;
+  }
+  75%,
+  100% {
+    -webkit-mask-size:
+      0 0,
+      0 0,
+      0 0,
+      auto;
   }
 }

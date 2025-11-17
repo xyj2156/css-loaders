@@ -1,49 +1,47 @@
-@scope (.__loading-circle-7) {
-  &,
-  &:before,
-  &:after {
-    width: 35px;
-    aspect-ratio: 1;
-    box-shadow: 0 0 0 3px inset #fff;
-    position: relative;
-    animation: 1.5s infinite 0.5s;
-    animation-name: l7-1, l7-2;
+.__loading-circle-7,
+.__loading-circle-7:before,
+.__loading-circle-7:after {
+  width: 35px;
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 3px inset #fff;
+  position: relative;
+  animation: 1.5s infinite 0.5s;
+  animation-name: __loading-circle-7-l7-1, __loading-circle-7-l7-2;
+}
+.__loading-circle-7:before,
+.__loading-circle-7:after {
+  content: '';
+  position: absolute;
+  left: calc(100% + 5px);
+  animation-delay: 1s, 0s;
+}
+.__loading-circle-7:after {
+  left: -40px;
+  animation-delay: 0s, 1s;
+}
+@keyframes __loading-circle-7-l7-1 {
+  0%,
+  55%,
+  100% {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    left: calc(100% + 5px);
-    animation-delay: 1s, 0s;
+  20%,
+  30% {
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
   }
-  &:after {
-    left: -40px;
-    animation-delay: 0s, 1s;
+}
+@keyframes __loading-circle-7-l7-2 {
+  0%,
+  55%,
+  100% {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
   }
-  @keyframes l7-1 {
-    0%,
-    55%,
-    100% {
-      border-top-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-    20%,
-    30% {
-      border-top-left-radius: 50%;
-      border-bottom-right-radius: 50%;
-    }
-  }
-  @keyframes l7-2 {
-    0%,
-    55%,
-    100% {
-      border-bottom-left-radius: 0;
-      border-top-right-radius: 0;
-    }
-    20%,
-    30% {
-      border-bottom-left-radius: 50%;
-      border-top-right-radius: 50%;
-    }
+  20%,
+  30% {
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
   }
 }

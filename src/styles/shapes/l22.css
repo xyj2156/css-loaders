@@ -1,51 +1,49 @@
-@scope (.__loading-shapes-22) {
-  & {
-    width: 36px;
-    aspect-ratio: 1;
-    color: #514b82;
-    background: conic-gradient(from 134deg at top, currentColor 92deg, #0000 0);
-    position: relative;
-    animation: l22-0 2s infinite linear;
+.__loading-shapes-22 {
+  width: 36px;
+  aspect-ratio: 1;
+  color: #514b82;
+  background: conic-gradient(from 134deg at top, currentColor 92deg, #0000 0);
+  position: relative;
+  animation: __loading-shapes-22-l22-0 2s infinite linear;
+}
+.__loading-shapes-22:before,
+.__loading-shapes-22:after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background: currentColor;
+  transform-origin: top right;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  inset: auto 100% 0 auto;
+  animation: __loading-shapes-22-l22-1 1s infinite linear alternate;
+}
+.__loading-shapes-22:after {
+  inset: auto auto 0 100%;
+  transform-origin: top left;
+  --s: -1;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+@keyframes __loading-shapes-22-l22-0 {
+  0%,
+  49.99% {
+    transform: scaleY(1);
   }
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    background: currentColor;
-    transform-origin: top right;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%);
-    inset: auto 100% 0 auto;
-    animation: l22-1 1s infinite linear alternate;
+  50%,
+  90% {
+    transform: scaleY(-1);
   }
-  &:after {
-    inset: auto auto 0 100%;
-    transform-origin: top left;
-    --s: -1;
-    clip-path: polygon(0 0, 100% 100%, 0 100%);
+  100% {
+    transform: scaleY(-1) rotate(180deg);
   }
-  @keyframes l22-0 {
-    0%,
-    49.99% {
-      transform: scaleY(1);
-    }
-    50%,
-    90% {
-      transform: scaleY(-1);
-    }
-    100% {
-      transform: scaleY(-1) rotate(180deg);
-    }
+}
+@keyframes __loading-shapes-22-l22-1 {
+  0%,
+  30% {
+    transform: rotate(calc(var(--s, 1) * 0));
   }
-  @keyframes l22-1 {
-    0%,
-    30% {
-      transform: rotate(calc(var(--s, 1) * 0));
-    }
-    70%,
-    100% {
-      transform: rotate(calc(var(--s, 1) * 180deg));
-    }
+  70%,
+  100% {
+    transform: rotate(calc(var(--s, 1) * 180deg));
   }
 }

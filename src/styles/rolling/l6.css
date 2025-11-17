@@ -1,30 +1,28 @@
-@scope (.__loading-rolling-6) {
-  & {
-    display: inline-grid;
-    width: 40px;
-    aspect-ratio: 1;
-  }
-  &:before,
-  &:after {
-    content: '';
-    grid-area: 1/1;
-    border-radius: 50%;
-    background: repeating-conic-gradient(#c02942 0 60deg, #0b486b 0 120deg);
-    animation: l6 4s linear infinite;
-  }
-  &:before {
-    translate: 0 -100%;
-  }
-  &:after {
-    padding: 20%;
-    mask:
-      conic-gradient(#000 0 0) content-box exclude,
-      conic-gradient(#000 0 0);
-    animation-direction: reverse;
-  }
-  @keyframes l6 {
-    to {
-      rotate: 1turn;
-    }
+.__loading-rolling-6 {
+  display: inline-grid;
+  width: 40px;
+  aspect-ratio: 1;
+}
+.__loading-rolling-6:before,
+.__loading-rolling-6:after {
+  content: '';
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: repeating-conic-gradient(#c02942 0 60deg, #0b486b 0 120deg);
+  animation: __loading-rolling-6-l6 4s linear infinite;
+}
+.__loading-rolling-6:before {
+  translate: 0 -100%;
+}
+.__loading-rolling-6:after {
+  padding: 20%;
+  mask:
+    conic-gradient(#000 0 0) content-box exclude,
+    conic-gradient(#000 0 0);
+  animation-direction: reverse;
+}
+@keyframes __loading-rolling-6-l6 {
+  to {
+    rotate: 1turn;
   }
 }

@@ -1,29 +1,27 @@
-@scope (.__loading-infinity-14) {
-  & {
-    width: 90px;
-    height: 14px;
-    --c: #000 92%, #0000;
-    background:
-      radial-gradient(circle closest-side, var(--c)) calc(100% / -4) 0,
-      radial-gradient(circle closest-side, var(--c)) calc(100% / 4) 0;
-    background-size: calc(100% / 2) 100%;
-    animation: l14 1.5s infinite;
+.__loading-infinity-14 {
+  width: 90px;
+  height: 14px;
+  --c: #000 92%, #0000;
+  background:
+    radial-gradient(circle closest-side, var(--c)) calc(100% / -4) 0,
+    radial-gradient(circle closest-side, var(--c)) calc(100% / 4) 0;
+  background-size: calc(100% / 2) 100%;
+  animation: __loading-infinity-14-l14 1.5s infinite;
+}
+@keyframes __loading-infinity-14-l14 {
+  0% {
+    background-position:
+      calc(100% / -4) 0,
+      calc(100% / 4) 0;
   }
-  @keyframes l14 {
-    0% {
-      background-position:
-        calc(100% / -4) 0,
-        calc(100% / 4) 0;
-    }
-    50% {
-      background-position:
-        calc(100% / -4) -14px,
-        calc(100% / 4) 14px;
-    }
-    100% {
-      background-position:
-        calc(100% / 4) -14px,
-        calc(3 * 100% / 4) 14px;
-    }
+  50% {
+    background-position:
+      calc(100% / -4) -14px,
+      calc(100% / 4) 14px;
+  }
+  100% {
+    background-position:
+      calc(100% / 4) -14px,
+      calc(3 * 100% / 4) 14px;
   }
 }

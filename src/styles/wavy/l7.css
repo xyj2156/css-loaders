@@ -1,19 +1,17 @@
-@scope (.__loading-wavy-7) {
-  & {
-    height: 30px;
-    aspect-ratio: 6;
-    --c: #0000 64%, #000 66% 98%, #0000 101%;
-    background:
-      radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
-      radial-gradient(35% 146% at 50% -59%, var(--c)) 25% 100%;
-    background-size: calc(100% / 3) 50%;
-    background-repeat: repeat-x;
-    -webkit-mask: repeating-linear-gradient(90deg, #000 0 15%, #0000 0 50%) 0 0/200%;
-    animation: l7 0.8s infinite linear;
-  }
-  @keyframes l7 {
-    to {
-      -webkit-mask-position: -100% 0;
-    }
+.__loading-wavy-7 {
+  height: 30px;
+  aspect-ratio: 6;
+  --c: #0000 64%, #000 66% 98%, #0000 101%;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--c)) 25% 100%;
+  background-size: calc(100% / 3) 50%;
+  background-repeat: repeat-x;
+  -webkit-mask: repeating-linear-gradient(90deg, #000 0 15%, #0000 0 50%) 0 0/200%;
+  animation: __loading-wavy-7-l7 0.8s infinite linear;
+}
+@keyframes __loading-wavy-7-l7 {
+  to {
+    -webkit-mask-position: -100% 0;
   }
 }

@@ -1,28 +1,26 @@
-@scope (.__loading-colorful-18) {
-  & {
-    width: 60px;
-    aspect-ratio: 1;
-    background:
-      linear-gradient(90deg, #cee879 50%, #ff5254 0) top/100% 50% no-repeat,
-      linear-gradient(90deg, #fcb653 50%, #5cacc4 0);
-    -webkit-mask: linear-gradient(#000 0 0) 0 0/50% 50% no-repeat;
-    animation: l18 2s infinite;
+.__loading-colorful-18 {
+  width: 60px;
+  aspect-ratio: 1;
+  background:
+    linear-gradient(90deg, #cee879 50%, #ff5254 0) top/100% 50% no-repeat,
+    linear-gradient(90deg, #fcb653 50%, #5cacc4 0);
+  -webkit-mask: linear-gradient(#000 0 0) 0 0/50% 50% no-repeat;
+  animation: __loading-colorful-18-l18 2s infinite;
+}
+@keyframes __loading-colorful-18-l18 {
+  0% {
+    -webkit-mask-position: 0 0;
   }
-  @keyframes l18 {
-    0% {
-      -webkit-mask-position: 0 0;
-    }
-    25% {
-      -webkit-mask-position: 100% 0;
-    }
-    50% {
-      -webkit-mask-position: 100% 100%;
-    }
-    75% {
-      -webkit-mask-position: 0 100%;
-    }
-    100% {
-      -webkit-mask-position: 0 0;
-    }
+  25% {
+    -webkit-mask-position: 100% 0;
+  }
+  50% {
+    -webkit-mask-position: 100% 100%;
+  }
+  75% {
+    -webkit-mask-position: 0 100%;
+  }
+  100% {
+    -webkit-mask-position: 0 0;
   }
 }

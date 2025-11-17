@@ -1,25 +1,23 @@
-@scope (.__loading-shuriken-8) {
-  & {
-    width: 80px;
-    aspect-ratio: 1;
-    --c: #8d7958 91%, #0000;
-    background:
-      radial-gradient(30% 50% at -3px 55%, var(--c)) top right,
-      radial-gradient(30% 50% at -3px 45%, var(--c)) bottom right,
-      radial-gradient(30% 50% at calc(100% + 3px) 55%, var(--c)) top left,
-      radial-gradient(30% 50% at calc(100% + 3px) 45%, var(--c)) bottom left,
-      radial-gradient(50% 30% at 45% calc(100% + 3px), var(--c)) top right,
-      radial-gradient(50% 30% at 45% -3px, var(--c)) bottom right,
-      radial-gradient(50% 30% at 55% calc(100% + 3px), var(--c)) top left,
-      radial-gradient(50% 30% at 55% -3px, var(--c)) bottom left;
-    background-size: 50.1% 50.1%;
-    background-repeat: no-repeat;
-    -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
-    animation: l8 1.5s infinite linear;
-  }
-  @keyframes l8 {
-    100% {
-      transform: rotate(1turn);
-    }
+.__loading-shuriken-8 {
+  width: 80px;
+  aspect-ratio: 1;
+  --c: #8d7958 91%, #0000;
+  background:
+    radial-gradient(30% 50% at -3px 55%, var(--c)) top right,
+    radial-gradient(30% 50% at -3px 45%, var(--c)) bottom right,
+    radial-gradient(30% 50% at calc(100% + 3px) 55%, var(--c)) top left,
+    radial-gradient(30% 50% at calc(100% + 3px) 45%, var(--c)) bottom left,
+    radial-gradient(50% 30% at 45% calc(100% + 3px), var(--c)) top right,
+    radial-gradient(50% 30% at 45% -3px, var(--c)) bottom right,
+    radial-gradient(50% 30% at 55% calc(100% + 3px), var(--c)) top left,
+    radial-gradient(50% 30% at 55% -3px, var(--c)) bottom left;
+  background-size: 50.1% 50.1%;
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+  animation: __loading-shuriken-8-l8 1.5s infinite linear;
+}
+@keyframes __loading-shuriken-8-l8 {
+  100% {
+    transform: rotate(1turn);
   }
 }

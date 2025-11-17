@@ -1,16 +1,14 @@
-@scope (.__loading-spinner-9) {
-  & {
-    width: 50px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background:
-      radial-gradient(farthest-side, #f03355 95%, #0000) 50% 1px/12px 12px no-repeat,
-      radial-gradient(farthest-side, #0000 calc(100% - 14px), #ccc 0);
-    animation: l9 2s infinite linear;
-  }
-  @keyframes l9 {
-    to {
-      transform: rotate(1turn);
-    }
+.__loading-spinner-9 {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side, #f03355 95%, #0000) 50% 1px/12px 12px no-repeat,
+    radial-gradient(farthest-side, #0000 calc(100% - 14px), #ccc 0);
+  animation: __loading-spinner-9-l9 2s infinite linear;
+}
+@keyframes __loading-spinner-9-l9 {
+  to {
+    transform: rotate(1turn);
   }
 }

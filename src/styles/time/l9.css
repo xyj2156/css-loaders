@@ -1,48 +1,46 @@
-@scope (.__loading-time-9) {
-  & {
-    width: 50px;
-    aspect-ratio: 1;
-    color: #ce0800;
-    border: 7px solid;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background:
-      radial-gradient(circle 3px, #000 95%, #0000),
-      linear-gradient(180deg, #000 50%, #0000 0) center/3px 70%,
-      linear-gradient(90deg, #000 50%, #0000 0) center/50% 3px;
-    background-repeat: no-repeat;
-    position: relative;
-    animation: l9 1s infinite;
+.__loading-time-9 {
+  width: 50px;
+  aspect-ratio: 1;
+  color: #ce0800;
+  border: 7px solid;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle 3px, #000 95%, #0000),
+    linear-gradient(180deg, #000 50%, #0000 0) center/3px 70%,
+    linear-gradient(90deg, #000 50%, #0000 0) center/50% 3px;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: __loading-time-9-l9 1s infinite;
+}
+.__loading-time-9:before,
+.__loading-time-9:after {
+  content: '';
+  position: absolute;
+  border-radius: 20px 20px 0 0;
+  inset: -20px calc(50% - 10px);
+  transform: rotate(40deg);
+  background:
+    linear-gradient(currentColor 0 0) top / 100% 10px,
+    linear-gradient(currentColor 0 0) bottom/3px 10px;
+  background-repeat: no-repeat;
+}
+.__loading-time-9:after {
+  transform: rotate(-40deg);
+}
+@keyframes __loading-time-9-l9 {
+  0%,
+  70%,
+  100% {
+    transform: translateY(0) rotate(0);
   }
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    border-radius: 20px 20px 0 0;
-    inset: -20px calc(50% - 10px);
-    transform: rotate(40deg);
-    background:
-      linear-gradient(currentColor 0 0) top / 100% 10px,
-      linear-gradient(currentColor 0 0) bottom/3px 10px;
-    background-repeat: no-repeat;
+  75%,
+  85%,
+  95% {
+    transform: translateY(-3px) rotate(10deg);
   }
-  &:after {
-    transform: rotate(-40deg);
-  }
-  @keyframes l9 {
-    0%,
-    70%,
-    100% {
-      transform: translateY(0) rotate(0);
-    }
-    75%,
-    85%,
-    95% {
-      transform: translateY(-3px) rotate(10deg);
-    }
-    80%,
-    90% {
-      transform: translateY(-3px) rotate(-10deg);
-    }
+  80%,
+  90% {
+    transform: translateY(-3px) rotate(-10deg);
   }
 }

@@ -1,33 +1,31 @@
-@scope (.__loading-hypnotic-1) {
-  & {
-    width: 50px;
-    aspect-ratio: 1;
-    color: #000;
-    border: 2px solid;
-    display: grid;
-    box-sizing: border-box;
-    animation: l1 4s infinite linear;
-  }
-  &::before,
-  &::after {
-    content: '';
-    grid-area: 1/1;
-    margin: auto;
-    width: 70.7%;
-    aspect-ratio: 1;
-    border: 2px solid;
-    box-sizing: content-box;
-    animation: inherit;
-  }
-  &::after {
-    width: 50%;
-    aspect-ratio: 1;
-    border: 2px solid;
-    animation-duration: 2s;
-  }
-  @keyframes l1 {
-    100% {
-      transform: rotate(1turn);
-    }
+.__loading-hypnotic-1 {
+  width: 50px;
+  aspect-ratio: 1;
+  color: #000;
+  border: 2px solid;
+  display: grid;
+  box-sizing: border-box;
+  animation: __loading-hypnotic-1-l1 4s infinite linear;
+}
+.__loading-hypnotic-1::before,
+.__loading-hypnotic-1::after {
+  content: '';
+  grid-area: 1/1;
+  margin: auto;
+  width: 70.7%;
+  aspect-ratio: 1;
+  border: 2px solid;
+  box-sizing: content-box;
+  animation: inherit;
+}
+.__loading-hypnotic-1::after {
+  width: 50%;
+  aspect-ratio: 1;
+  border: 2px solid;
+  animation-duration: 2s;
+}
+@keyframes __loading-hypnotic-1-l1 {
+  100% {
+    transform: rotate(1turn);
   }
 }

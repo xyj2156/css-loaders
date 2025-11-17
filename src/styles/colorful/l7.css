@@ -1,41 +1,39 @@
-@scope (.__loading-colorful-7) {
-  & {
-    width: 50px;
-    aspect-ratio: 1.154;
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
-    display: grid;
-    background: #3a89c9;
+.__loading-colorful-7 {
+  width: 50px;
+  aspect-ratio: 1.154;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  display: grid;
+  background: #3a89c9;
+}
+.__loading-colorful-7::before,
+.__loading-colorful-7::after {
+  content: '';
+  grid-area: 1/1;
+  background: inherit;
+  clip-path: inherit;
+  transform-origin: 50% 66%;
+  animation: __loading-colorful-7-l7-1 2s infinite;
+}
+.__loading-colorful-7::before {
+  background: #9cc4e4;
+  animation: __loading-colorful-7-l7-2 2s infinite 1s;
+}
+@keyframes __loading-colorful-7-l7-1 {
+  0%,
+  99.9% {
+    transform: scale(1);
   }
-  &::before,
-  &::after {
-    content: '';
-    grid-area: 1/1;
-    background: inherit;
-    clip-path: inherit;
-    transform-origin: 50% 66%;
-    animation: l7-1 2s infinite;
+  50%,
+  99% {
+    transform: scale(0);
   }
-  &::before {
-    background: #9cc4e4;
-    animation: l7-2 2s infinite 1s;
+}
+@keyframes __loading-colorful-7-l7-2 {
+  0%,
+  51% {
+    transform: scale(1);
   }
-  @keyframes l7-1 {
-    0%,
-    99.9% {
-      transform: scale(1);
-    }
-    50%,
-    99% {
-      transform: scale(0);
-    }
-  }
-  @keyframes l7-2 {
-    0%,
-    51% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(0);
-    }
+  50% {
+    transform: scale(0);
   }
 }

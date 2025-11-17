@@ -1,33 +1,31 @@
-@scope (.__loading-dots-31) {
-  & {
-    height: 15px;
-    aspect-ratio: 4;
-    display: grid;
-    animation: l31-0 1s infinite;
+.__loading-dots-31 {
+  height: 15px;
+  aspect-ratio: 4;
+  display: grid;
+  animation: __loading-dots-31-l31-0 1s infinite;
+}
+.__loading-dots-31:before,
+.__loading-dots-31:after {
+  content: '';
+  grid-area: 1/1;
+  --_g: no-repeat radial-gradient(farthest-side, #000 94%, #0000);
+  background:
+    var(--_g) left,
+    var(--_g) right;
+  background-size: 25% 100%;
+}
+.__loading-dots-31:after {
+  transform: rotate(0) translate(37.5%) rotate(0);
+  animation: inherit;
+  animation-name: __loading-dots-31-l31-1;
+}
+@keyframes __loading-dots-31-l31-0 {
+  100% {
+    transform: translate(37.5%);
   }
-  &:before,
-  &:after {
-    content: '';
-    grid-area: 1/1;
-    --_g: no-repeat radial-gradient(farthest-side, #000 94%, #0000);
-    background:
-      var(--_g) left,
-      var(--_g) right;
-    background-size: 25% 100%;
-  }
-  &:after {
-    transform: rotate(0) translate(37.5%) rotate(0);
-    animation: inherit;
-    animation-name: l31-1;
-  }
-  @keyframes l31-0 {
-    100% {
-      transform: translate(37.5%);
-    }
-  }
-  @keyframes l31-1 {
-    100% {
-      transform: rotate(-0.5turn) translate(37.5%) rotate(0.5turn);
-    }
+}
+@keyframes __loading-dots-31-l31-1 {
+  100% {
+    transform: rotate(-0.5turn) translate(37.5%) rotate(0.5turn);
   }
 }

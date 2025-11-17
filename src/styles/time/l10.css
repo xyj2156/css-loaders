@@ -1,48 +1,46 @@
-@scope (.__loading-time-10) {
-  & {
-    width: 60px;
-    height: 40px;
-    position: relative;
+.__loading-time-10 {
+  width: 60px;
+  height: 40px;
+  position: relative;
+}
+.__loading-time-10::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(farthest-side at bottom, #ffc10a 92%, #0000) top / 30px 15px,
+    radial-gradient(farthest-side at top left, #0000 92%, #ffc10a) bottom left / 15px 20px,
+    radial-gradient(farthest-side at top right, #0000 92%, #ffc10a) bottom right/ 15px 20px,
+    linear-gradient(#ffc10a 0 0) bottom/30px 26px;
+  background-repeat: no-repeat;
+  transform-origin: 50% -3px;
+  animation: __loading-time-10-l10-1 0.5s infinite alternate linear;
+}
+.__loading-time-10::before {
+  content: '';
+  position: absolute;
+  inset: -6px calc(50% - 10px) -10px;
+  background:
+    radial-gradient(farthest-side, #ff9f04 90%, #0000) top / 10px 10px,
+    radial-gradient(farthest-side, #ff9f04 90%, #0000) bottom/20px 20px;
+  background-repeat: no-repeat;
+  transform-origin: 50% 3px;
+  animation: __loading-time-10-l10-2 0.5s infinite alternate linear;
+}
+@keyframes __loading-time-10-l10-1 {
+  0% {
+    transform: rotate(-30deg);
   }
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(farthest-side at bottom, #ffc10a 92%, #0000) top / 30px 15px,
-      radial-gradient(farthest-side at top left, #0000 92%, #ffc10a) bottom left / 15px 20px,
-      radial-gradient(farthest-side at top right, #0000 92%, #ffc10a) bottom right/ 15px 20px,
-      linear-gradient(#ffc10a 0 0) bottom/30px 26px;
-    background-repeat: no-repeat;
-    transform-origin: 50% -3px;
-    animation: l10-1 0.5s infinite alternate linear;
+  100% {
+    transform: rotate(30deg);
   }
-  &::before {
-    content: '';
-    position: absolute;
-    inset: -6px calc(50% - 10px) -10px;
-    background:
-      radial-gradient(farthest-side, #ff9f04 90%, #0000) top / 10px 10px,
-      radial-gradient(farthest-side, #ff9f04 90%, #0000) bottom/20px 20px;
-    background-repeat: no-repeat;
-    transform-origin: 50% 3px;
-    animation: l10-2 0.5s infinite alternate linear;
-  }
-  @keyframes l10-1 {
-    0% {
-      transform: rotate(-30deg);
-    }
-    100% {
-      transform: rotate(30deg);
-    }
-  }
+}
 
-  @keyframes l10-2 {
-    0% {
-      transform: rotate(-20deg);
-    }
-    100% {
-      transform: rotate(20deg);
-    }
+@keyframes __loading-time-10-l10-2 {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
   }
 }

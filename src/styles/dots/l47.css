@@ -1,13 +1,11 @@
-@scope (.__loading-dots-47) {
-  & {
-    height: 15px;
-    aspect-ratio: 5;
-    background: radial-gradient(closest-side at 37.5% 50%, #000 94%, #0000) 0 / calc(80% / 3) 100%;
-    animation: l47 0.75s infinite;
-  }
-  @keyframes l47 {
-    100% {
-      background-position: 36.36%;
-    }
+.__loading-dots-47 {
+  height: 15px;
+  aspect-ratio: 5;
+  background: radial-gradient(closest-side at 37.5% 50%, #000 94%, #0000) 0 / calc(80% / 3) 100%;
+  animation: __loading-dots-47-l47 0.75s infinite;
+}
+@keyframes __loading-dots-47-l47 {
+  100% {
+    background-position: 36.36%;
   }
 }

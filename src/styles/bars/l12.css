@@ -1,49 +1,47 @@
-@scope (.__loading-bars-12) {
-  & {
-    width: 40px;
-    aspect-ratio: 1;
-    --c: no-repeat linear-gradient(#000 0 0);
-    --m: no-repeat radial-gradient(circle closest-side, #0000 92%, #000);
-    background:
-      var(--c) 0 50%,
-      var(--c) 50% 50%,
-      var(--c) 100% 50%;
-    background-size: 8px calc(50% + 8px);
-    -webkit-mask: var(--m), var(--m), var(--m);
-    -webkit-mask-size: 8px 150%;
-    animation: l12 1s infinite alternate;
+.__loading-bars-12 {
+  width: 40px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(#000 0 0);
+  --m: no-repeat radial-gradient(circle closest-side, #0000 92%, #000);
+  background:
+    var(--c) 0 50%,
+    var(--c) 50% 50%,
+    var(--c) 100% 50%;
+  background-size: 8px calc(50% + 8px);
+  -webkit-mask: var(--m), var(--m), var(--m);
+  -webkit-mask-size: 8px 150%;
+  animation: __loading-bars-12-l12 1s infinite alternate;
+}
+@keyframes __loading-bars-12-l12 {
+  0%,
+  100% {
+    -webkit-mask-position:
+      0 50%,
+      50% 50%,
+      100% 50%;
   }
-  @keyframes l12 {
-    0%,
-    100% {
-      -webkit-mask-position:
-        0 50%,
-        50% 50%,
-        100% 50%;
-    }
-    20% {
-      -webkit-mask-position:
-        0 100%,
-        50% 50%,
-        100% 50%;
-    }
-    40% {
-      -webkit-mask-position:
-        0 0,
-        50% 100%,
-        100% 50%;
-    }
-    60% {
-      -webkit-mask-position:
-        0 50%,
-        50% 0,
-        100% 100%;
-    }
-    80% {
-      -webkit-mask-position:
-        0 50%,
-        50% 50%,
-        100% 0;
-    }
+  20% {
+    -webkit-mask-position:
+      0 100%,
+      50% 50%,
+      100% 50%;
+  }
+  40% {
+    -webkit-mask-position:
+      0 0,
+      50% 100%,
+      100% 50%;
+  }
+  60% {
+    -webkit-mask-position:
+      0 50%,
+      50% 0,
+      100% 100%;
+  }
+  80% {
+    -webkit-mask-position:
+      0 50%,
+      50% 50%,
+      100% 0;
   }
 }

@@ -1,34 +1,32 @@
-@scope (.__loading-thin-9) {
-  & {
-    height: 6px;
-    width: 60px;
-    --c: no-repeat repeating-linear-gradient(90deg, #000 0 3px, #0000 0 6px);
-    background: var(--c), var(--c);
-    background-size: 100% 3px;
-    animation: l9 1s infinite;
+.__loading-thin-9 {
+  height: 6px;
+  width: 60px;
+  --c: no-repeat repeating-linear-gradient(90deg, #000 0 3px, #0000 0 6px);
+  background: var(--c), var(--c);
+  background-size: 100% 3px;
+  animation: __loading-thin-9-l9 1s infinite;
+}
+@keyframes __loading-thin-9-l9 {
+  0%,
+  70%,
+  100% {
+    background-position:
+      0 50%,
+      3px 50%;
   }
-  @keyframes l9 {
-    0%,
-    70%,
-    100% {
-      background-position:
-        0 50%,
-        3px 50%;
-    }
-    23.33% {
-      background-position:
-        0 0,
-        3px 100%;
-    }
-    46.67% {
-      background-position:
-        3px 0,
-        0 100%;
-    }
-    69.99% {
-      background-position:
-        3px 50%,
-        0 50%;
-    }
+  23.33% {
+    background-position:
+      0 0,
+      3px 100%;
+  }
+  46.67% {
+    background-position:
+      3px 0,
+      0 100%;
+  }
+  69.99% {
+    background-position:
+      3px 50%,
+      0 50%;
   }
 }

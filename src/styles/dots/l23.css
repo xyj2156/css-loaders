@@ -1,68 +1,66 @@
-@scope (.__loading-dots-23) {
-  & {
-    width: 50px;
-    height: 28px;
-    --_g: no-repeat radial-gradient(farthest-side, #000 94%, #0000);
-    background:
-      var(--_g) 50% 0,
-      var(--_g) 100% 0;
-    background-size: 12px 12px;
-    position: relative;
-    animation: l23-0 1.5s linear infinite;
+.__loading-dots-23 {
+  width: 50px;
+  height: 28px;
+  --_g: no-repeat radial-gradient(farthest-side, #000 94%, #0000);
+  background:
+    var(--_g) 50% 0,
+    var(--_g) 100% 0;
+  background-size: 12px 12px;
+  position: relative;
+  animation: __loading-dots-23-l23-0 1.5s linear infinite;
+}
+.__loading-dots-23:before {
+  content: '';
+  position: absolute;
+  height: 12px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #000;
+  left: 0;
+  top: 0;
+  animation:
+    __loading-dots-23-l23-1 1.5s linear infinite,
+    __loading-dots-23-l23-2 0.5s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+@keyframes __loading-dots-23-l23-0 {
+  0%,
+  31% {
+    background-position:
+      50% 0,
+      100% 0;
   }
-  &:before {
-    content: '';
-    position: absolute;
-    height: 12px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: #000;
-    left: 0;
-    top: 0;
-    animation:
-      l23-1 1.5s linear infinite,
-      l23-2 0.5s cubic-bezier(0, 200, 0.8, 200) infinite;
+  33% {
+    background-position:
+      50% 100%,
+      100% 0;
   }
-  @keyframes l23-0 {
-    0%,
-    31% {
-      background-position:
-        50% 0,
-        100% 0;
-    }
-    33% {
-      background-position:
-        50% 100%,
-        100% 0;
-    }
-    43%,
-    64% {
-      background-position:
-        50% 0,
-        100% 0;
-    }
-    66% {
-      background-position:
-        50% 0,
-        100% 100%;
-    }
-    79% {
-      background-position:
-        50% 0,
-        100% 0;
-    }
-    100% {
-      transform: translateX(calc(-100% / 3));
-    }
+  43%,
+  64% {
+    background-position:
+      50% 0,
+      100% 0;
   }
-  @keyframes l23-1 {
-    100% {
-      left: calc(100% + 7px);
-    }
+  66% {
+    background-position:
+      50% 0,
+      100% 100%;
   }
-  @keyframes l23-2 {
-    100% {
-      top: -0.1px;
-    }
+  79% {
+    background-position:
+      50% 0,
+      100% 0;
+  }
+  100% {
+    transform: translateX(calc(-100% / 3));
+  }
+}
+@keyframes __loading-dots-23-l23-1 {
+  100% {
+    left: calc(100% + 7px);
+  }
+}
+@keyframes __loading-dots-23-l23-2 {
+  100% {
+    top: -0.1px;
   }
 }

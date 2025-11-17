@@ -1,31 +1,29 @@
-@scope (.__loading-time-8) {
-  & {
-    width: fit-content;
-    background: #000;
-    padding: 0 8px;
-    font-size: 30px;
-    font-family: monospace;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 8px;
-    position: relative;
-  }
-  &::before {
-    content: '08:00';
-    white-space: pre;
-    animation: l8 0.5s infinite;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    inset: auto auto 100% 10px;
-    height: 5px;
-    width: 40%;
-    background: linear-gradient(90deg, red 40%, #0000 0 60%, #444 0);
-  }
-  @keyframes l8 {
-    100% {
-      content: '  :  ';
-    }
+.__loading-time-8 {
+  width: fit-content;
+  background: #000;
+  padding: 0 8px;
+  font-size: 30px;
+  font-family: monospace;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  position: relative;
+}
+.__loading-time-8::before {
+  content: '08:00';
+  white-space: pre;
+  animation: __loading-time-8-l8 0.5s infinite;
+}
+.__loading-time-8::after {
+  content: '';
+  position: absolute;
+  inset: auto auto 100% 10px;
+  height: 5px;
+  width: 40%;
+  background: linear-gradient(90deg, red 40%, #0000 0 60%, #444 0);
+}
+@keyframes __loading-time-8-l8 {
+  100% {
+    content: '  :  ';
   }
 }

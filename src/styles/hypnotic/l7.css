@@ -1,22 +1,20 @@
-@scope (.__loading-hypnotic-7) {
-  & {
-    width: 50px;
-    aspect-ratio: 1;
-    color: #000;
-    border: 2px solid;
-    box-sizing: border-box;
-    background:
-      repeating-conic-gradient(#0000 0 90deg, currentColor 0 180deg),
-      repeating-conic-gradient(currentColor 0 90deg, #0000 0 180deg);
-    background-size: 16px 16px;
-    background-position: 0 0;
-    animation: l7 2s infinite;
-  }
-  @keyframes l7 {
-    100% {
-      background-position:
-        0px 32px,
-        16px 0px;
-    }
+.__loading-hypnotic-7 {
+  width: 50px;
+  aspect-ratio: 1;
+  color: #000;
+  border: 2px solid;
+  box-sizing: border-box;
+  background:
+    repeating-conic-gradient(#0000 0 90deg, currentColor 0 180deg),
+    repeating-conic-gradient(currentColor 0 90deg, #0000 0 180deg);
+  background-size: 16px 16px;
+  background-position: 0 0;
+  animation: __loading-hypnotic-7-l7 2s infinite;
+}
+@keyframes __loading-hypnotic-7-l7 {
+  100% {
+    background-position:
+      0px 32px,
+      16px 0px;
   }
 }

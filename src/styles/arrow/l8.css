@@ -1,28 +1,25 @@
-@scope (.__loading-arrow-8) {
-  & {
-    width: 30px;
-    height: 30px;
-    color: #000;
-    display: flex;
-    background:
-      linear-gradient(currentColor 0 0) center/calc(100% - 30px) 10px,
-      conic-gradient(from -136deg at right, #0000, currentColor 1deg 90deg, #0000 91deg) right/15px
-        100%,
-      conic-gradient(from 44deg at left, #0000, currentColor 1deg 90deg, #0000 91deg) left / 15px
-        100%;
-    background-repeat: no-repeat;
-    animation: l8 0.5s infinite alternate;
-  }
-  &:before {
-    content: '';
-    flex: 1;
-    background: inherit;
-    transform: rotate(90deg);
-  }
-  @keyframes l8 {
-    90%,
-    100% {
-      width: 80px;
-    }
+.__loading-arrow-8 {
+  width: 30px;
+  height: 30px;
+  color: #000;
+  display: flex;
+  background:
+    linear-gradient(currentColor 0 0) center/calc(100% - 30px) 10px,
+    conic-gradient(from -136deg at right, #0000, currentColor 1deg 90deg, #0000 91deg) right/15px
+      100%,
+    conic-gradient(from 44deg at left, #0000, currentColor 1deg 90deg, #0000 91deg) left / 15px 100%;
+  background-repeat: no-repeat;
+  animation: __loading-arrow-8-l8 0.5s infinite alternate;
+}
+.__loading-arrow-8:before {
+  content: '';
+  flex: 1;
+  background: inherit;
+  transform: rotate(90deg);
+}
+@keyframes __loading-arrow-8-l8 {
+  90%,
+  100% {
+    width: 80px;
   }
 }

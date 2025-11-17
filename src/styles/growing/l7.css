@@ -1,25 +1,23 @@
-@scope (.__loading-growing-7) {
-  & {
-    width: 64px;
-    aspect-ratio: 1;
-    display: grid;
+.__loading-growing-7 {
+  width: 64px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-growing-7:before {
+  content: '';
+  border: 8px solid #bd1550;
+  box-sizing: content-box;
+  margin: auto;
+  aspect-ratio: 1;
+  animation: __loading-growing-7-l7 infinite 1s steps(4, jump-none);
+}
+@keyframes __loading-growing-7-l7 {
+  0% {
+    width: 0%;
+    rotate: 0;
   }
-  &:before {
-    content: '';
-    border: 8px solid #bd1550;
-    box-sizing: content-box;
-    margin: auto;
-    aspect-ratio: 1;
-    animation: l7 infinite 1s steps(4, jump-none);
-  }
-  @keyframes l7 {
-    0% {
-      width: 0%;
-      rotate: 0;
-    }
-    to {
-      width: 75%;
-      rotate: 90deg;
-    }
+  to {
+    width: 75%;
+    rotate: 90deg;
   }
 }

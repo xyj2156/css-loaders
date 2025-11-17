@@ -1,27 +1,25 @@
-@scope (.__loading-factory-4) {
-  & {
-    width: 90px;
-    height: 14px;
-    box-shadow: 0 3px 0 #fff;
-    display: grid;
-  }
-  &:before,
-  &:after {
-    content: '';
-    grid-area: 1/1;
-    background: radial-gradient(circle closest-side, var(--c, red) 92%, #0000) 0 0 / calc(100% / 4)
-      100%;
-    animation: l4 1s infinite linear;
-  }
-  &:after {
-    --c: #000;
-    background-color: #fff;
-    box-shadow: 0 -2px 0 0 #fff;
-    clip-path: inset(-2px calc(50% - 10px));
-  }
-  @keyframes l4 {
-    100% {
-      background-position: calc(100% / 3) 0;
-    }
+.__loading-factory-4 {
+  width: 90px;
+  height: 14px;
+  box-shadow: 0 3px 0 #fff;
+  display: grid;
+}
+.__loading-factory-4:before,
+.__loading-factory-4:after {
+  content: '';
+  grid-area: 1/1;
+  background: radial-gradient(circle closest-side, var(--c, red) 92%, #0000) 0 0 / calc(100% / 4)
+    100%;
+  animation: __loading-factory-4-l4 1s infinite linear;
+}
+.__loading-factory-4:after {
+  --c: #000;
+  background-color: #fff;
+  box-shadow: 0 -2px 0 0 #fff;
+  clip-path: inset(-2px calc(50% - 10px));
+}
+@keyframes __loading-factory-4-l4 {
+  100% {
+    background-position: calc(100% / 3) 0;
   }
 }

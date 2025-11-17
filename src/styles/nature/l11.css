@@ -1,24 +1,22 @@
-@scope (.__loading-nature-11) {
-  & {
-    width: calc(6 * 30px);
-    height: 50px;
-    display: flex;
-    color: #8d7958;
-    filter: drop-shadow(30px 25px 0 currentColor) drop-shadow(60px 0 0 currentColor)
-      drop-shadow(120px 0 0 currentColor);
-    clip-path: inset(0 100% 0 0);
-    animation: l11 2s infinite steps(7);
-  }
-  &:before {
-    content: '';
-    width: 30px;
-    height: 25px;
-    background: currentColor;
-    clip-path: polygon(0 50%, 30% 40%, 100% 0, 60% 40%, 100% 50%, 60% 60%, 100% 100%, 30% 60%);
-  }
-  @keyframes l11 {
-    100% {
-      clip-path: inset(0 -30px 0 0);
-    }
+.__loading-nature-11 {
+  width: calc(6 * 30px);
+  height: 50px;
+  display: flex;
+  color: #8d7958;
+  filter: drop-shadow(30px 25px 0 currentColor) drop-shadow(60px 0 0 currentColor)
+    drop-shadow(120px 0 0 currentColor);
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-nature-11-l11 2s infinite steps(7);
+}
+.__loading-nature-11:before {
+  content: '';
+  width: 30px;
+  height: 25px;
+  background: currentColor;
+  clip-path: polygon(0 50%, 30% 40%, 100% 0, 60% 40%, 100% 50%, 60% 60%, 100% 100%, 30% 60%);
+}
+@keyframes __loading-nature-11-l11 {
+  100% {
+    clip-path: inset(0 -30px 0 0);
   }
 }
