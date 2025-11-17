@@ -12,6 +12,8 @@ import {
 } from 'node:fs';
 import { resolve } from 'node:path';
 
+const force = process.argv.includes('--force') || process.argv.includes('-f');
+
 const api = axios.create({
   baseURL: 'https://css-loaders.com/',
   headers: {
@@ -31,6 +33,7 @@ api
 
     // 获取菜单用于进一步抓取
     const list = root.querySelectorAll('#menu ul li a');
+    const json = {};
 
     asyncEach(list, function (item) {
       const count = item.querySelector('small').innerText;
@@ -48,23 +51,24 @@ api
         rmSync(path);
         mkdirSync(path, { recursive: true });
       } else {
-        console.log('目录已存在,当做已经采集过', path);
-        return Promise.resolve();
+        if (!force) {
+          console.log('目录已存在,当做已经采集过', path);
+          return Promise.resolve();
+        }
       }
 
       return api.get(href).then(function (html) {
         const root = parse(html);
         const articles = root.querySelectorAll('.load-container article');
         const index = [];
+        const clss = [];
         articles.forEach(function (article, i) {
           const id = article.querySelector('div').id;
           const style = article.querySelector('style').innerText;
           const file = `${path}/${id}.css`;
-          const content = transStyle(
-            `.__loading-${name}-${i + 1}`,
-            `#${id}`,
-            style,
-          );
+          const cls = `__loading-${name}-${i + 1}`;
+          clss.push(cls);
+          const content = transStyle(`.${cls}`, `#${id}`, style);
           index.push(content);
           open(file, 'w', function (err, fd) {
             if (err) throw err;
@@ -75,8 +79,16 @@ api
           });
         });
 
+        json[name] = clss;
         if (Number(count) === articles.length) {
           console.log(name, '采集完成');
+          open(`${path}/index.json`, 'w', function (err, fd) {
+            if (err) throw err;
+            write(fd, JSON.stringify(clss), 'utf-8', function (err) {
+              if (err) throw err;
+            });
+          });
+
           open(`${path}/index.css`, 'w', function (err, fd) {
             if (err) throw err;
             write(fd, index.join('\n'), 'utf-8', function (err) {
@@ -91,6 +103,13 @@ api
       });
     })
       .then(function () {
+        open(`${style()}/index.json`, 'w', function (err, fd) {
+          if (err) throw err;
+          write(fd, JSON.stringify(json), 'utf-8', function (err) {
+            if (err) throw err;
+            closeSync(fd);
+          });
+        });
         console.log('分类 菜单成功');
       })
       .catch(function () {

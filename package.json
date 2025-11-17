@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "pnpm run dev && node src/main.js",
+    "collect": "node src/collector.js -f && prettier --write ./src/styles",
     "dev": "node src/collector.js && prettier --write ./src/styles",
+    "preview": "node src/preview.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
