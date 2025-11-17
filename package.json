@@ -2,7 +2,18 @@
   "name": "web",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/all.min.css",
+  "exports": {
+    ".": {
+      "import": "./dist/all.min.css",
+      "require": "./dist/all.min.css"
+    },
+    "./styles/*": {
+      "import": "./src/styles/*",
+      "require": "./src/styles/*"
+    },
+    "./dist/*": "./dist/*"
+  },
   "type": "module",
   "scripts": {
     "build": "node src/main.js",
