@@ -4,9 +4,26 @@
   "description": "",
   "main": "dist/all.min.css",
   "exports": {
-    ".": "./dist/all.min.css",
-    "./*": "./dist/*",
-    "./styles/*": "./src/styles/*"
+    ".": {
+      "import": "./dist/all.min.css",
+      "require": "./dist/all.min.css",
+      "types": "./dist/all.min.css"
+    },
+    "./*": {
+      "import": "./dist/*.css",
+      "require": "./dist/*.css",
+      "types": "./dist/*.css"
+    },
+    "./dist/*": {
+      "import": "./dist/*",
+      "require": "./dist/*",
+      "types": "./dist/*"
+    },
+    "./style/*": {
+      "import": "./src/styles/*",
+      "require": "./src/styles/*",
+      "types": "./style/*"
+    }
   },
   "type": "module",
   "scripts": {
