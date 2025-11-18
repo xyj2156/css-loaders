@@ -1,26 +1,19 @@
 {
-  "name": "css-loaders",
+  "name": "@xyj2156/css-loading",
   "version": "1.0.0",
   "description": "",
   "main": "dist/all.min.css",
   "exports": {
-    ".": {
-      "import": "./dist/all.min.css",
-      "require": "./dist/all.min.css"
-    },
-    "./styles/*": {
-      "import": "./src/styles/*",
-      "require": "./src/styles/*"
-    },
-    "./dist/*": "./dist/*"
+    ".": "./dist/all.min.css",
+    "./*": "./dist/*",
+    "./styles/*": "./src/styles/*"
   },
   "type": "module",
   "scripts": {
     "build": "node src/main.js",
     "collect": "node src/collector.js -f && prettier --write ./src/styles",
     "dev": "node src/collector.js && prettier --write ./src/styles",
-    "preview": "pnpm build && node src/preview.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preview": "pnpm build && node src/preview.js"
   },
   "keywords": [],
   "author": "xyj2156",
