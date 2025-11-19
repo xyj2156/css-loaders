@@ -29,7 +29,10 @@ const server = createServer((req, res) => {
 
   // 构建文件路径
   let filePath =
-    transPublicPath(url) || transDistPath(url) || transStylesPath(url);
+    transPublicPath(url) ||
+    transDistPath(url) ||
+    transOptimizesPath(url) ||
+    transStylesPath(url);
 
   if (!filePath) {
     res.writeHead(404, { 'Content-Type': 'text/html' });
@@ -93,4 +96,8 @@ function transDistPath(url) {
 
 function transStylesPath(url) {
   return trans('src', 'styles', url);
+}
+
+function transOptimizesPath(url) {
+  return trans('src', 'optimizes', url);
 }

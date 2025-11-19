@@ -5,16 +5,16 @@
   "main": "dist/all.min.css",
   "exports": {
     ".": "./dist/all.min.css",
-    "./dist/*": "./dist/*",
     "./style/*": "./src/styles/*",
+    "./optimize/*": "./src/optimizes/*",
     "./*": "./dist/*"
   },
   "type": "module",
   "scripts": {
-    "build": "node src/main.js",
+    "build": "node src/main.js && prettier --write ./src/optimizes",
     "collect": "node src/collector.js -f && prettier --write ./src/styles",
     "dev": "node src/collector.js && prettier --write ./src/styles",
-    "preview": "pnpm build && node src/preview.js"
+    "preview": "node src/preview.js"
   },
   "keywords": [],
   "author": "xyj2156",
