@@ -1,0 +1,27 @@
+.__loading-3d-11 {
+  --s: var(--size, 40px);
+  --g: calc(var(--s) * 0.125); /* 5px is 0.125 of 40px */
+  --c1: var(--color-1, #0000);
+  --c2: var(--color-2, #111);
+  --c3: var(--color-3, #fe4365);
+  --c4: var(--color-4, #fff);
+
+  height: calc(var(--s) + var(--g));
+  aspect-ratio: 3;
+  background:
+    radial-gradient(
+      calc(var(--s) / sqrt(2)) at calc(50% - 0.1 * var(--s)) calc(50% - 0.2 * var(--s)),
+      var(--c1) 5%,
+      60%,
+      var(--c2) 98%
+    ),
+    linear-gradient(var(--c3) 0 0) no-repeat var(--c4);
+  background-size: calc(100% / 3) 100%;
+  mask: radial-gradient(calc(var(--s) / 2), #000 calc(100% - calc(var(--s) * 0.025)), #0000) 0 / calc(100% / 3) 100%;
+  animation: __loading-3d-11-l11 steps(3) 1.5s infinite;
+}
+@keyframes __loading-3d-11-l11 {
+  to {
+    background-position: 0, 150%;
+  }
+}

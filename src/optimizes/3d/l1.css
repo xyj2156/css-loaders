@@ -1,0 +1,26 @@
+.__loading-3d-1 {
+  --s: var(--size, 25px);
+  --c1:var(--color-1, #fff);
+  --c2:var(--color-2, #666);
+  --c3:var(--color-3, #aaa);
+
+  --_d: calc(0.353 * var(--s));
+  width: calc(var(--s) + var(--_d));
+  aspect-ratio: 1;
+  clip-path: polygon(
+    var(--_d) 0,
+    100% 0,
+    100% calc(100% - var(--_d)),
+    calc(100% - var(--_d)) 100%,
+    0 100%,
+    0 var(--_d)
+  );
+  background: conic-gradient(from -90deg at var(--s) var(--_d), var(--c1) 135deg, var(--c2) 0 270deg, var(--c3) 0);
+  animation: __loading-3d-1-l1 1s infinite cubic-bezier(0.5, 300, 0.5, -300);
+}
+@keyframes __loading-3d-1-l1 {
+  50%,
+  100% {
+    transform: translateY(0.1px);
+  }
+}

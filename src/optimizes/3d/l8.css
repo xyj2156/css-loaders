@@ -1,0 +1,47 @@
+.__loading-3d-8 {
+  --s: var(--size, 25px);
+  --g: calc(var(--s) / 5);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #666);
+  --c3: var(--color-3, #aaa);
+
+  height: calc(1.353 * var(--s) + var(--g));
+  aspect-ratio: 3;
+  display: grid;
+  justify-items: end;
+  overflow: hidden;
+  --_m: linear-gradient(90deg, #0000, #000 calc(var(--s) * 0.6) calc(100% - calc(var(--s) * 0.6)), #0000);
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+}
+.__loading-3d-8:before {
+  content: '';
+  width: calc(4 * 100% / 3);
+  background: conic-gradient(
+    from -90deg at var(--s) calc(0.353 * var(--s)),
+    var(--c1) 135deg,
+    var(--c2) 0 270deg,
+    var(--c3) 0
+  );
+  --_m:
+    linear-gradient(
+      to bottom right,
+      #0000 calc(0.25 * var(--s)),
+      #000 0 calc(100% - calc(0.25 * var(--s)) - 1.414 * var(--g)),
+      #0000 0
+    ),
+    conic-gradient(from -90deg at right var(--g) bottom var(--g), #000 90deg, #0000 0);
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  background-size: calc(100% / 4) 100%;
+  -webkit-mask-size: calc(100% / 4) 100%;
+  mask-size: calc(100% / 4) 100%;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  animation: __loading-3d-8-l8 1s infinite linear;
+}
+@keyframes __loading-3d-8-l8 {
+  to {
+    transform: translate(calc(100% / 4));
+  }
+}

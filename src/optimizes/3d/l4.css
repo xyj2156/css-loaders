@@ -1,0 +1,48 @@
+.__loading-3d-4 {
+  --s: var(--size, 25px);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #666);
+  --c3: var(--color-3, #aaa);
+
+  --_d: calc(0.353 * var(--s));
+  width: calc(var(--s) + var(--_d));
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-3d-4:before,
+.__loading-3d-4:after {
+  content: '';
+  clip-path: polygon(
+    var(--_d) 0,
+    100% 0,
+    100% calc(100% - var(--_d)),
+    calc(100% - var(--_d)) 100%,
+    0 100%,
+    0 var(--_d)
+  );
+  background: conic-gradient(from -90deg at var(--s) var(--_d), var(--c1) 135deg, var(--c2) 0 270deg, var(--c3) 0);
+  animation: __loading-3d-4-l4 1.2s infinite;
+}
+.__loading-3d-4:before {
+  z-index: 1;
+  margin-bottom: calc(var(--_d) / -2 - 1px);
+}
+.__loading-3d-4:after {
+  margin-top: calc(var(--_d) / -2 - 1px);
+  animation-delay: 0.6s;
+}
+@keyframes __loading-3d-4-l4 {
+  0% {
+    transform: translate(0);
+  }
+  16.67% {
+    transform: translate(calc(-0.4 * var(--s)));
+  }
+  33.33% {
+    transform: translate(calc(0.4 * var(--s)));
+  }
+  50%,
+  100% {
+    transform: translate(0);
+  }
+}

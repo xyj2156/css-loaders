@@ -1,0 +1,51 @@
+.__loading-3d-6 {
+  --s: var(--size, 20px);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #666);
+  --c3: var(--color-3, #aaa);
+
+  --_d: calc(0.353 * var(--s));
+  width: calc(var(--s) + var(--_d));
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-3d-6:before,
+.__loading-3d-6:after {
+  content: '';
+  grid-area: 1/1;
+  clip-path: polygon(
+    var(--_d) 0,
+    100% 0,
+    100% calc(100% - var(--_d)),
+    calc(100% - var(--_d)) 100%,
+    0 100%,
+    0 var(--_d)
+  );
+  background: conic-gradient(
+    from -90deg at calc(100% - var(--_d)) var(--_d),
+    var(--c1) 135deg,
+    var(--c2) 0 270deg,
+    var(--c3) 0
+  );
+  animation: __loading-3d-6-l6 2s infinite;
+}
+.__loading-3d-6:after {
+  animation-delay: -1s;
+}
+@keyframes __loading-3d-6-l6 {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(calc(1.5 * var(--s)), 0);
+  }
+  50% {
+    transform: translate(calc(1.5 * var(--s)), calc(1.5 * var(--s)));
+  }
+  75% {
+    transform: translate(0, calc(1.5 * var(--s)));
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

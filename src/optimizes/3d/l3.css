@@ -1,0 +1,31 @@
+.__loading-3d-3 {
+  --s: 25px;
+  --color-1: #fff;
+  --color-2: #666;
+  --color-3: #aaa;
+  --_d: calc(0.353 * var(--s));
+
+  height: calc(var(--s) + var(--_d));
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-3d-3:before {
+  content: '';
+  height: 100%;
+  margin: auto 0;
+  clip-path: polygon(
+    var(--_d) 0,
+    100% 0,
+    100% calc(100% - var(--_d)),
+    calc(100% - var(--_d)) 100%,
+    0 100%,
+    0 var(--_d)
+  );
+  background: conic-gradient(from -90deg at var(--s) var(--_d), var(--color-1) 135deg, var(--color-2) 0 270deg, var(--color-3) 0);
+  animation: __loading-3d-3-l3 0.8s infinite alternate;
+}
+@keyframes __loading-3d-3-l3 {
+  100% {
+    height: 40%;
+  }
+}
