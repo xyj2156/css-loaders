@@ -1,0 +1,37 @@
+.__loading-bars-3 {
+  --s:var(--size,40px);
+  --c1:var(--color1,#000);
+
+  width: var(--s);
+  height: calc(var(--s) * 0.65);
+  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  background:
+    var(--c) 0 100%,
+    var(--c) 50% 100%,
+    var(--c) 100% 100%;
+  background-size: calc(var(--s) * 0.2) calc(100% - 4px);
+  position: relative;
+}
+.__loading-bars-3:before {
+  content: '';
+  position: absolute;
+  width: calc(var(--s) * 0.2);
+  height: calc(var(--s) * 0.2);
+  border-radius: 50%;
+  background: var(--c1);
+  left: 0;
+  top: 0;
+  animation:
+    __loading-bars-3-l3-1 1.5s linear infinite alternate,
+    __loading-bars-3-l3-2 0.75s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+@keyframes __loading-bars-3-l3-1 {
+  100% {
+    left: calc(100% - var(--s) * 0.2);
+  }
+}
+@keyframes __loading-bars-3-l3-2 {
+  100% {
+    top: -0.1px;
+  }
+}

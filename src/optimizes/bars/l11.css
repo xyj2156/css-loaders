@@ -1,0 +1,46 @@
+.__loading-bars-11 {
+  --s: var(--size, 40px);
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  background: var(--c), var(--c), var(--c);
+  background-size: calc(var(--s)/5) calc(50% + calc(var(--s)/5));
+  -webkit-mask: radial-gradient(circle closest-side, #0000 92%, #000) 0/calc(var(--s)/5) 100%;
+  animation: __loading-bars-11-l11 0.75s infinite alternate linear;
+}
+@keyframes __loading-bars-11-l11 {
+  0%,
+  10% {
+    background-position:
+      0 100%,
+      50% 100%,
+      100% 100%;
+  }
+  25% {
+    background-position:
+      0 50%,
+      50% 100%,
+      100% 100%;
+  }
+  50% {
+    background-position:
+      0 0,
+      50% 50%,
+      100% 100%;
+  }
+  75% {
+    background-position:
+      0 0,
+      50% 0,
+      100% 50%;
+  }
+  90%,
+  100% {
+    background-position:
+      0 0,
+      50% 0,
+      100% 0;
+  }
+}
