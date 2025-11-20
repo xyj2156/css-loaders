@@ -58,14 +58,24 @@
         align-content: flex-start;
 
         & > div {
-          width:           calc(25% - 20px);
-          height:          150px;
+          position:          relative;
+          counter-increment: item;
 
-          margin:          10px;
+          width:             calc(25% - 20px);
+          height:            150px;
 
-          display:         flex;
-          justify-content: center;
-          align-items:     center;
+          margin:            10px;
+
+          display:           flex;
+          justify-content:   center;
+          align-items:       center;
+
+          &:before {
+            content:  counter(item) "";
+            position: absolute;
+            top:      5px;
+            left:     5px;
+          }
         }
 
         @media (max-width: 1024px) {
