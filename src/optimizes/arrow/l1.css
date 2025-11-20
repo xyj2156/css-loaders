@@ -1,0 +1,29 @@
+.__loading-arrow-1 {
+  --s: var(--size, 100px);
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  height: calc(var(--s) * 0.3);
+  display: flex;
+}
+.__loading-arrow-1:before {
+  content: '';
+  background: var(--c1);
+  width: calc(var(--s) * 0.15);
+  clip-path: polygon(
+    0 calc(var(--s) * 0.1),
+    calc(100% - calc(var(--s) * 0.15)) calc(var(--s) * 0.1),
+    calc(100% - calc(var(--s) * 0.15)) 0,
+    100% 50%,
+    calc(100% - calc(var(--s) * 0.15)) 100%,
+    calc(100% - calc(var(--s) * 0.15)) calc(100% - calc(var(--s) * 0.1)),
+    0 calc(100% - calc(var(--s) * 0.1))
+  );
+  animation: __loading-arrow-1-l1 1.5s infinite linear;
+}
+@keyframes __loading-arrow-1-l1 {
+  90%,
+  100% {
+    flex-grow: 1;
+  }
+}

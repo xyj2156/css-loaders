@@ -1,0 +1,30 @@
+.__loading-arrow-6 {
+  --s: var(--size, 50px);
+  --cx: var(--color-x, #000);
+
+  width: var(--s);
+  height: calc(var(--s) * 1.2);
+  color: var(--cx);
+  display: grid;
+}
+.__loading-arrow-6:before,
+.__loading-arrow-6:after {
+  content: '';
+  background:
+    linear-gradient(90deg, currentColor calc(100% - calc(var(--s) * 0.3)), #0000 0) 0 50%/100% calc(var(--s) * 0.2),
+    conic-gradient(from -136deg at calc(var(--s) * 0.3) 50%, #0000, currentColor 1deg 90deg, #0000 91deg) calc(var(--s) * 0.7)
+      0/100% 100%;
+  background-repeat: repeat-x;
+  animation: __loading-arrow-6-l6 1s infinite;
+}
+.__loading-arrow-6:after {
+  transform: scaleX(-1);
+}
+@keyframes __loading-arrow-6-l6 {
+  80%,
+  100% {
+    background-position:
+      var(--s) 50%,
+      calc(var(--s) * 1.7) 0;
+  }
+}

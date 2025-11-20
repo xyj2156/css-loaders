@@ -1,0 +1,35 @@
+.__loading-arrow-5 {
+  --s:var(--size, 50px);
+  --c1:var(--color-1, #000);
+
+  width: var(--s);
+  height: calc(var(--s) * 0.6);
+  display: grid;
+  overflow: hidden;
+}
+.__loading-arrow-5:before,
+.__loading-arrow-5:after {
+  content: '';
+  grid-area: 1/1;
+  background: var(--c1);
+  clip-path: polygon(
+    0 calc(var(--s) * 0.2),
+    calc(100% - calc(var(--s) * 0.3)) calc(var(--s) * 0.2),
+    calc(100% - calc(var(--s) * 0.3)) 0,
+    100% 50%,
+    calc(100% - calc(var(--s) * 0.3)) 100%,
+    calc(100% - calc(var(--s) * 0.3)) calc(100% - calc(var(--s) * 0.2)),
+    0 calc(100% - calc(var(--s) * 0.2))
+  );
+  animation: __loading-arrow-5-l5 1s infinite;
+  transform: translate(calc(0% + var(--_s, 0%)));
+}
+.__loading-arrow-5:after {
+  --_s: -100%;
+}
+@keyframes __loading-arrow-5-l5 {
+  80%,
+  100% {
+    transform: translate(calc(100% + var(--_s, 0%)));
+  }
+}

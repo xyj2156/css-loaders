@@ -1,0 +1,24 @@
+.__loading-arrow-9 {
+  --s: var(--size, 60px);
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  height: calc(var(--s) * 0.5);
+  color: var(--c1);
+  display: flex;
+  background:
+    linear-gradient(currentColor 0 0) center/calc(100% - calc(var(--s) * 0.5)) calc(var(--s) * 0.1667),
+    conic-gradient(from -136deg at right, #0000, currentColor 1deg 90deg, #0000 91deg) right/calc(var(--s) * 0.25)
+      100%,
+    conic-gradient(from 44deg at left, #0000, currentColor 1deg 90deg, #0000 91deg) left / calc(var(--s) * 0.25) 100%;
+  background-repeat: no-repeat;
+  animation: __loading-arrow-9-l9 0.5s infinite linear alternate;
+}
+@keyframes __loading-arrow-9-l9 {
+  0% {
+    transform: translate(calc(var(--s) * -0.5));
+  }
+  100% {
+    transform: translate(calc(var(--s) * 0.5));
+  }
+}

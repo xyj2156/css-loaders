@@ -1,0 +1,36 @@
+.__loading-arrow-3 {
+  --s: var(--size, 100px);
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  height: calc(var(--s) * 0.3);
+  display: flex;
+}
+.__loading-arrow-3:before,
+.__loading-arrow-3:after {
+  content: '';
+  flex: 1;
+  margin: 0 calc(var(--s) * 0.05);
+  background: var(--c1);
+  clip-path: polygon(
+    0 calc(var(--s) * 0.1),
+    calc(100% - calc(var(--s) * 0.15)) calc(var(--s) * 0.1),
+    calc(100% - calc(var(--s) * 0.15)) 0,
+    100% 50%,
+    calc(100% - calc(var(--s) * 0.15)) 100%,
+    calc(100% - calc(var(--s) * 0.15)) calc(100% - calc(var(--s) * 0.1)),
+    0 calc(100% - calc(var(--s) * 0.1))
+  );
+  animation: __loading-arrow-3-l3 0.5s infinite alternate;
+}
+.__loading-arrow-3:after {
+  --_s: -1;
+}
+@keyframes __loading-arrow-3-l3 {
+  0% {
+    transform: scaleX(var(--_s, 1)) translate(calc(var(--s) * -0.04));
+  }
+  100% {
+    transform: scaleX(var(--_s, 1)) translate(calc(var(--s) * 0.04));
+  }
+}
