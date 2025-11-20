@@ -67,6 +67,19 @@
           justify-content: center;
           align-items:     center;
         }
+
+        @media (max-width: 1024px) {
+          & > div {
+            width: calc(33.333% - 20px);
+          }
+
+        }
+
+        @media (max-width: 768px) {
+          & > div {
+            width: calc(100% - 20px);
+          }
+        }
       }
     }
   </style>
@@ -94,10 +107,15 @@
           return;
         }
         const key = e.target.dataset.key;
+        const url = new URL(window.location);
+        url.searchParams.set('type', key);
+        window.history.replaceState({}, '', url);
         show(key);
       });
       left.appendChild(ol);
-      show(keys[0]);
+      const urlParams = new URLSearchParams(window.location.search);
+      const type = urlParams.get('type');
+      show(keys.includes(type) ? type : keys[0]);
 
 
       function show(key) {
