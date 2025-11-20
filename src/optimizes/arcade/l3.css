@@ -1,0 +1,38 @@
+.__loading-arcade-3 {
+  --s: var(--size, 80px);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+
+  width: var(--s);
+  height: calc(var(--s) * 0.875);
+  border: calc(var(--s) * 0.0625) solid var(--c1);
+  padding: 0 calc(var(--s) * 0.1);
+  box-sizing: border-box;
+  background:
+    linear-gradient(var(--c2) 0 0) 0 0/calc(var(--s) * 0.1) calc(var(--s) * 0.25),
+    linear-gradient(var(--c2) 0 0) 100% 0/calc(var(--s) * 0.1) calc(var(--s) * 0.25),
+    radial-gradient(farthest-side, var(--c2) 90%, #0000) 0 calc(var(--s) * 0.0625)/calc(var(--s) * 0.1) calc(var(--s) * 0.1) content-box,
+    var(--c1);
+  background-repeat: no-repeat;
+  animation: __loading-arcade-3-l3 2s infinite linear;
+}
+@keyframes __loading-arcade-3-l3 {
+  25% {
+    background-position:
+      0 0,
+      100% 100%,
+      100% calc(100% - calc(var(--s) * 0.0625));
+  }
+  50% {
+    background-position:
+      0 100%,
+      100% 100%,
+      0 calc(100% - calc(var(--s) * 0.0625));
+  }
+  75% {
+    background-position:
+      0 100%,
+      100% 0,
+      100% calc(var(--s) * 0.0625);
+  }
+}

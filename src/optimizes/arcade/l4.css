@@ -1,0 +1,22 @@
+.__loading-arcade-4 {
+  --s:var(--size, 50px);
+  --c1:var(--color-1, #ffcc00);
+  --c2:var(--color-2, #000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side, var(--c2) 98%, #0000) 55% 20%/8px 8px no-repeat,
+    var(--c1);
+  box-shadow: 2px -6px 12px 0px inset rgba(0, 0, 0, 0.7);
+  animation: __loading-arcade-4-l4 0.5s infinite steps(5) alternate;
+}
+@keyframes __loading-arcade-4-l4 {
+  0% {
+    clip-path: polygon(50% 50%, 100% 0, 100% 0, 0 0, 0 100%, 100% 100%, 100% 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 100% 65%, 100% 0, 0 0, 0 100%, 100% 100%, 100% 35%);
+  }
+}

@@ -1,0 +1,67 @@
+.__loading-arcade-2 {
+  --s:var(--size,45px);
+  --c1:var(--color-1,#004ce4);
+  --c2:var(--color-2,#00e622);
+  --c3:var(--color-3,#e50021);
+
+  width: var(--s);
+  height: calc(var(--s) * 2/3);
+  background:
+    linear-gradient(var(--c1) 0 0) 0 100%/100% 50%,
+    linear-gradient(var(--c1) 0 0) 0 0 / calc(100% / 3) 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  clip-path: inset(-100% 0 0 0);
+  animation: __loading-arcade-2-l2-0 2s infinite steps(4);
+}
+.__loading-arcade-2::before,
+.__loading-arcade-2::after {
+  content: '';
+  position: absolute;
+  inset: -50% 0 50%;
+  background:
+    linear-gradient(var(--c2) 0 0) 0 0 / calc(2 * 100% / 3) 50%,
+    linear-gradient(var(--c2) 0 0) 100% 100% / calc(2 * 100% / 3) 50%;
+  background-repeat: no-repeat;
+  animation: inherit;
+  animation-name: __loading-arcade-2-l2-1;
+}
+.__loading-arcade-2::after {
+  inset: -100% 0 100%;
+  background:
+    linear-gradient(var(--c3) 0 0) 0 0/100% 50%,
+    linear-gradient(var(--c3) 0 0) 100% 0 / calc(100% / 3) 100%;
+  background-repeat: no-repeat;
+  animation-name: __loading-arcade-2-l2-2;
+}
+@keyframes __loading-arcade-2-l2-0 {
+  0% {
+    transform: translateY(-250%);
+    clip-path: inset(100% 0 0 0);
+  }
+  25%,
+  100% {
+    transform: translateY(0);
+    clip-path: inset(-100% 0 0 0);
+  }
+}
+@keyframes __loading-arcade-2-l2-1 {
+  0%,
+  25% {
+    transform: translateY(-250%);
+  }
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes __loading-arcade-2-l2-2 {
+  0%,
+  50% {
+    transform: translateY(-250%);
+  }
+  75%,
+  100% {
+    transform: translateY(0);
+  }
+}

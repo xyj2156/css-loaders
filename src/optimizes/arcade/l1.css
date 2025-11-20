@@ -1,0 +1,32 @@
+.__loading-arcade-1 {
+  --s:       var(--size, 45px);
+  --c1:      #e50021;
+  --c2:      #004ce4;
+  --c3:      #00e622;
+  --c4:      #9d0be6;
+
+  width:     var(--s);
+  height:    calc(var(--s) * 0.667);
+  animation: __loading-arcade-1-l1 2s infinite linear;
+}
+@keyframes __loading-arcade-1-l1 {
+  0%,
+  25% {
+    background: linear-gradient(var(--c1) 0 0) 50% 0/calc(var(--s) * 0.667) 100% no-repeat;
+  }
+  25.1%,
+  50% {
+    background: linear-gradient(var(--c2) 0 0) 0 0/100% 50% no-repeat,
+                linear-gradient(var(--c2) 0 0) 0 0/calc(var(--s) * 0.333) 100% no-repeat;
+  }
+  50.1%,
+  75% {
+    background: linear-gradient(var(--c3) 0 0) 100% 0/calc(var(--s) * 0.667) 50% no-repeat,
+                linear-gradient(var(--c3) 0 0) 0 100%/calc(var(--s) * 0.667) 50% no-repeat;
+  }
+  75.1%,
+  100% {
+    background: linear-gradient(var(--c4) 0 0) 0 100%/100% 50% no-repeat,
+                linear-gradient(var(--c4) 0 0) 50% 0 /calc(var(--s) * 0.333) 50% no-repeat;
+  }
+}

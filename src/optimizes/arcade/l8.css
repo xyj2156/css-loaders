@@ -1,0 +1,119 @@
+.__loading-arcade-8 {
+  --s: var(--size, 17px);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #25adda);
+
+  width: fit-content;
+  font-size: var(--s);
+  font-family: monospace;
+  line-height: 1.4;
+  font-weight: bold;
+  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c), var(--c);
+  background-size: calc(1ch + 1px) 100%;
+  border-bottom: calc(var(--s) * 0.59) solid #0000;
+  position: relative;
+  animation: __loading-arcade-8-l8-0 3s infinite linear;
+  clip-path: inset(-20px 0);
+}
+.__loading-arcade-8::before {
+  content: var(--content, 'Loading');
+}
+.__loading-arcade-8::after {
+  content: '';
+  position: absolute;
+  width: calc(var(--s) * 0.59);
+  height: calc(var(--s) * 0.82);
+  background: var(--c2);
+  left: calc(var(--s) * -0.59);
+  bottom: 100%;
+  animation: __loading-arcade-8-l8-1 3s infinite linear;
+}
+@keyframes __loading-arcade-8-l8-0 {
+  0%,
+  12.5% {
+    background-position:
+      calc(0 * 100% / 6) 0,
+      calc(1 * 100% / 6) 0,
+      calc(2 * 100% / 6) 0,
+      calc(3 * 100% / 6) 0,
+      calc(4 * 100% / 6) 0,
+      calc(5 * 100% / 6) 0,
+      calc(6 * 100% / 6) 0;
+  }
+  25% {
+    background-position:
+      calc(0 * 100% / 6) calc(var(--s) * 2.35),
+      calc(1 * 100% / 6) 0,
+      calc(2 * 100% / 6) 0,
+      calc(3 * 100% / 6) 0,
+      calc(4 * 100% / 6) 0,
+      calc(5 * 100% / 6) 0,
+      calc(6 * 100% / 6) 0;
+  }
+  37.5% {
+    background-position:
+      calc(0 * 100% / 6) calc(var(--s) * 2.35),
+      calc(1 * 100% / 6) calc(var(--s) * 2.35),
+      calc(2 * 100% / 6) 0,
+      calc(3 * 100% / 6) 0,
+      calc(4 * 100% / 6) 0,
+      calc(5 * 100% / 6) 0,
+      calc(6 * 100% / 6) 0;
+  }
+  50% {
+    background-position:
+      calc(0 * 100% / 6) calc(var(--s) * 2.35),
+      calc(1 * 100% / 6) calc(var(--s) * 2.35),
+      calc(2 * 100% / 6) calc(var(--s) * 2.35),
+      calc(3 * 100% / 6) 0,
+      calc(4 * 100% / 6) 0,
+      calc(5 * 100% / 6) 0,
+      calc(6 * 100% / 6) 0;
+  }
+  62.5% {
+    background-position:
+      calc(0 * 100% / 6) calc(var(--s) * 2.35),
+      calc(1 * 100% / 6) calc(var(--s) * 2.35),
+      calc(2 * 100% / 6) calc(var(--s) * 2.35),
+      calc(3 * 100% / 6) calc(var(--s) * 2.35),
+      calc(4 * 100% / 6) 0,
+      calc(5 * 100% / 6) 0,
+      calc(6 * 100% / 6) 0;
+  }
+  75% {
+    background-position:
+      calc(0 * 100% / 6) calc(var(--s) * 2.35),
+      calc(1 * 100% / 6) calc(var(--s) * 2.35),
+      calc(2 * 100% / 6) calc(var(--s) * 2.35),
+      calc(3 * 100% / 6) calc(var(--s) * 2.35),
+      calc(4 * 100% / 6) calc(var(--s) * 2.35),
+      calc(5 * 100% / 6) 0,
+      calc(6 * 100% / 6) 0;
+  }
+  87.4% {
+    background-position:
+      calc(0 * 100% / 6) calc(var(--s) * 2.35),
+      calc(1 * 100% / 6) calc(var(--s) * 2.35),
+      calc(2 * 100% / 6) calc(var(--s) * 2.35),
+      calc(3 * 100% / 6) calc(var(--s) * 2.35),
+      calc(4 * 100% / 6) calc(var(--s) * 2.35),
+      calc(5 * 100% / 6) calc(var(--s) * 2.35),
+      calc(6 * 100% / 6) 0;
+  }
+  100% {
+    background-position:
+      calc(0 * 100% / 6) calc(var(--s) * 2.35),
+      calc(1 * 100% / 6) calc(var(--s) * 2.35),
+      calc(2 * 100% / 6) calc(var(--s) * 2.35),
+      calc(3 * 100% / 6) calc(var(--s) * 2.35),
+      calc(4 * 100% / 6) calc(var(--s) * 2.35),
+      calc(5 * 100% / 6) calc(var(--s) * 2.35),
+      calc(6 * 100% / 6) calc(var(--s) * 2.35);
+  }
+}
+@keyframes __loading-arcade-8-l8-1 {
+  100% {
+    left: 115%;
+  }
+}

@@ -1,0 +1,46 @@
+.__loading-arcade-5 {
+  --s:var(--size,90px);
+  --c1:var(--color-1,#eeee89);
+  --c2:var(--color-2,#ffff2d);
+
+  width: var(--s);
+  height: calc(var(--s) * 0.267);
+  padding: calc(var(--s) * 0.022) 0;
+  box-sizing: border-box;
+  display: flex;
+  animation: __loading-arcade-5-l5-0 3s infinite steps(6);
+  background:
+    linear-gradient(#000 0 0) 0 0/0% 100% no-repeat,
+    radial-gradient(circle 3px, var(--c1) 90%, #0000) 0 0/20% 100% #000;
+  overflow: hidden;
+}
+.__loading-arcade-5::before {
+  content: '';
+  width: calc(var(--s) * 0.222);
+  transform: translate(-100%);
+  border-radius: 50%;
+  background: var(--c2);
+  animation:
+    __loading-arcade-5-l5-1 0.25s 0.153s infinite steps(5) alternate,
+    __loading-arcade-5-l5-2 3s infinite linear;
+}
+@keyframes __loading-arcade-5-l5-1 {
+  0% {
+    clip-path: polygon(50% 50%, 100% 0, 100% 0, 0 0, 0 100%, 100% 100%, 100% 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 100% 65%, 100% 0, 0 0, 0 100%, 100% 100%, 100% 35%);
+  }
+}
+@keyframes __loading-arcade-5-l5-2 {
+  100% {
+    transform: translate(var(--s));
+  }
+}
+@keyframes __loading-arcade-5-l5-0 {
+  100% {
+    background-size:
+      120% 100%,
+      20% 100%;
+  }
+}

@@ -1,0 +1,99 @@
+.__loading-arcade-9 {
+  --c:var(--content, 'Loding');
+  --s:var(--size, 17px);
+  --c1:var(--color-1, #000);
+  --c2:var(--color-2, red);
+
+  width: fit-content;
+  font-size: var(--s);
+  font-family: monospace;
+  line-height: 1.4;
+  font-weight: bold;
+  background:
+    linear-gradient(var(--c1) 0 0) left,
+    linear-gradient(var(--c1) 0 0) right;
+  background-repeat: no-repeat;
+  border-right: calc(var(--s) * 0.29) solid #0000;
+  border-left: calc(var(--s) * 0.29) solid #0000;
+  background-origin: border-box;
+  position: relative;
+  animation: __loading-arcade-9-l9-0 2s infinite;
+}
+.__loading-arcade-9::before {
+  content: var(--c);
+}
+.__loading-arcade-9::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: calc(var(--s) * 1.29);
+  height: calc(var(--s) * 3.53);
+  background:
+    linear-gradient(90deg, var(--c1) calc(var(--s) * 0.24), #0000 0 calc(100% - calc(var(--s) * 0.24)), var(--c1) 0) bottom / calc(var(--s) * 1.29) calc(var(--s) * 1.18),
+    linear-gradient(90deg, var(--c2) calc(var(--s) * 0.24), #0000 0 calc(100% - calc(var(--s) * 0.24)), var(--c2) 0) bottom calc(var(--s) * 0.59) left 0/calc(var(--s) * 1.29) calc(var(--s) * 0.35),
+    linear-gradient(var(--c1) 0 0) bottom calc(var(--s) * 0.18) left 0 /calc(var(--s) * 1.29) calc(var(--s) * 0.47),
+    linear-gradient(var(--c1) 0 0) bottom 0 left 50%/calc(var(--s) * 0.47) calc(var(--s) * 0.94);
+  background-repeat: no-repeat;
+  animation: __loading-arcade-9-l9-1 2s infinite;
+}
+@keyframes __loading-arcade-9-l9-0 {
+  0%,
+  25% {
+    background-size: 50% 100%;
+  }
+  25.1%,
+  75% {
+    background-size:
+      0 0,
+      50% 100%;
+  }
+  75.1%,
+  100% {
+    background-size:
+      0 0,
+      0 0;
+  }
+}
+@keyframes __loading-arcade-9-l9-1 {
+  25% {
+    background-position:
+      bottom,
+      bottom calc(var(--s) * 3.18) left 0,
+      bottom calc(var(--s) * 0.18) left 0,
+      bottom 0 left 50%;
+    left: 0;
+  }
+  25.1% {
+    background-position:
+      bottom,
+      bottom calc(var(--s) * 0.59) left 0,
+      bottom calc(var(--s) * 0.18) left 0,
+      bottom 0 left 50%;
+    left: 0;
+  }
+  50% {
+    background-position:
+      bottom,
+      bottom calc(var(--s) * 0.59) left 0,
+      bottom calc(var(--s) * 0.18) left 0,
+      bottom 0 left 50%;
+    left: calc(100% - calc(var(--s) * 1.29));
+  }
+  75% {
+    background-position:
+      bottom,
+      bottom calc(var(--s) * 3.18) left 0,
+      bottom calc(var(--s) * 0.18) left 0,
+      bottom 0 left 50%;
+    left: calc(100% - calc(var(--s) * 1.29));
+  }
+  75.1% {
+    background-position:
+      bottom,
+      bottom calc(var(--s) * 0.59) left 0,
+      bottom calc(var(--s) * 0.18) left 0,
+      bottom 0 left 50%;
+    left: calc(100% - calc(var(--s) * 1.29));
+  }
+}
