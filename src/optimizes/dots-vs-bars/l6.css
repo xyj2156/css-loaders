@@ -1,0 +1,96 @@
+.__loading-dots-vs-bars-6 {
+  --s: var(--size, 40px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 1.5s);
+  --d2: var(--duration-2, 0.5s);
+
+  width: var(--s);
+  height: calc(var(--s) * 0.5);
+  --c: no-repeat radial-gradient(farthest-side, var(--c1) 93%, #0000);
+  background:
+    var(--c) 0 0,
+    var(--c) 50% 0;
+  background-size: calc(var(--s) * 0.2) calc(var(--s) * 0.2);
+  position: relative;
+  clip-path: inset(-200% -100% 0 0);
+  animation: __loading-dots-vs-bars-6-l6-0 var(--d1) linear infinite;
+}
+.__loading-dots-vs-bars-6:before {
+  content: '';
+  position: absolute;
+  width: calc(var(--s) * 0.2);
+  height: calc(var(--s) * 0.3);
+  background: var(--c1);
+  left: calc(var(--s) * -0.4);
+  top: 0;
+  animation:
+    __loading-dots-vs-bars-6-l6-1 var(--d1) linear infinite,
+    __loading-dots-vs-bars-6-l6-2 var(--d2) cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+.__loading-dots-vs-bars-6:after {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto auto;
+  width: calc(var(--s) * 0.2);
+  height: calc(var(--s) * 0.2);
+  border-radius: 50%;
+  background: var(--c1);
+  animation: __loading-dots-vs-bars-6-l6-3 var(--d1) linear infinite;
+}
+@keyframes __loading-dots-vs-bars-6-l6-0 {
+  0%,
+  30% {
+    background-position:
+      0 0,
+      50% 0;
+  }
+  33% {
+    background-position:
+      0 100%,
+      50% 0;
+  }
+  41%,
+  63% {
+    background-position:
+      0 0,
+      50% 0;
+  }
+  66% {
+    background-position:
+      0 0,
+      50% 100%;
+  }
+  74%,
+  100% {
+    background-position:
+      0 0,
+      50% 0;
+  }
+}
+@keyframes __loading-dots-vs-bars-6-l6-1 {
+  90% {
+    transform: translateY(0);
+  }
+  95% {
+    transform: translateY(calc(var(--s) * 0.375));
+  }
+  100% {
+    transform: translateY(calc(var(--s) * 0.375));
+    left: calc(100% - calc(var(--s) * 0.2));
+  }
+}
+@keyframes __loading-dots-vs-bars-6-l6-2 {
+  100% {
+    top: -0.1px;
+  }
+}
+@keyframes __loading-dots-vs-bars-6-l6-3 {
+  0%,
+  80%,
+  100% {
+    transform: translate(0);
+  }
+  90% {
+    transform: translate(calc(var(--s) * 0.65));
+  }
+}

@@ -1,0 +1,42 @@
+.__loading-dots-vs-bars-18 {
+  --s:var(--size, 40px);
+  --c1:var(--color-1, #000);
+  --d1:var(--duration-1, 1.5s);
+  --d2:var(--duration-2, 1.5s);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  --c: linear-gradient(var(--c1) 0 0);
+  --m: radial-gradient(farthest-side, var(--c1) 92%, #0000);
+  background:
+    var(--m) center / calc(var(--s) * 0.3) calc(var(--s) * 0.3),
+    var(--c) left 50% top calc(var(--s) * -0.5)/calc(var(--s) * 0.2) calc(var(--s) * 0.4),
+    var(--c) left 50% bottom calc(var(--s) * -0.5)/calc(var(--s) * 0.2) calc(var(--s) * 0.4),
+    var(--c) top 50% left calc(var(--s) * -0.5)/calc(var(--s) * 0.4) calc(var(--s) * 0.2),
+    var(--c) top 50% right calc(var(--s) * -0.5)/calc(var(--s) * 0.4) calc(var(--s) * 0.2);
+  background-repeat: no-repeat;
+  animation:
+    __loading-dots-vs-bars-18-l18-1 var(--d1) infinite,
+    __loading-dots-vs-bars-18-l18-2 var(--d2) infinite;
+}
+@keyframes __loading-dots-vs-bars-18-l18-1 {
+  30%,
+  70% {
+    background-position:
+      center,
+      left 50% top calc(50% - calc(var(--s) * 0.2)),
+      left 50% bottom calc(50% - calc(var(--s) * 0.2)),
+      top 50% left calc(50% - calc(var(--s) * 0.2)),
+      top 50% right calc(50% - calc(var(--s) * 0.2));
+  }
+}
+@keyframes __loading-dots-vs-bars-18-l18-2 {
+  0%,
+  40% {
+    transform: rotate(0);
+  }
+  60%,
+  100% {
+    transform: rotate(90deg);
+  }
+}

@@ -1,0 +1,103 @@
+.__loading-dots-vs-bars-10 {
+  --s: var(--size, 70px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 3s);
+
+  width: var(--s);
+  height: calc(var(--s) * 0.43);
+  overflow: hidden;
+  position: relative;
+}
+.__loading-dots-vs-bars-10:before {
+  content: '';
+  position: absolute;
+  width: calc(var(--s) * 0.114);
+  height: calc(var(--s) * 0.114);
+  border-radius: 50%;
+  inset: 0;
+  margin: auto;
+  background: var(--c1);
+  transform-origin: bottom;
+  animation: __loading-dots-vs-bars-10-l10-1 var(--d1) infinite;
+}
+.__loading-dots-vs-bars-10:after {
+  content: '';
+  position: absolute;
+  width: calc(var(--s) * 0.114);
+  height: calc(var(--s) * 0.2);
+  bottom: calc(50% - calc(var(--s) * 0.057));
+  background: var(--c1);
+  animation: __loading-dots-vs-bars-10-l10-2 var(--d1) infinite;
+}
+@keyframes __loading-dots-vs-bars-10-l10-1 {
+  0%,
+  10% {
+    transform: translate(0) scale(1);
+    box-shadow:
+      calc(var(--s) * 0.857) 0,
+      calc(var(--s) * 0.857) 0;
+  }
+  20%,
+  40% {
+    transform: translate(calc(var(--s) * 0.286)) scale(1);
+    box-shadow:
+      calc(var(--s) * 0.857) 0,
+      calc(var(--s) * 0.857) 0;
+  }
+  48% {
+    transform: translate(calc(var(--s) * 0.286)) scale(1);
+    box-shadow:
+      calc(var(--s) * 0.114) 0,
+      calc(var(--s) * 0.857) 0;
+  }
+  50% {
+    transform: translate(calc(var(--s) * 0.286)) scale(1.5);
+    box-shadow:
+      0 0,
+      calc(var(--s) * 0.857) 0;
+  }
+  58% {
+    transform: translate(calc(var(--s) * 0.286)) scale(1.5);
+    box-shadow:
+      0 0,
+      calc(var(--s) * 0.114) 0;
+  }
+  60%,
+  70% {
+    transform: translate(calc(var(--s) * 0.286)) scale(2);
+    box-shadow:
+      0 0,
+      0 0;
+  }
+
+  85% {
+    transform: translate(calc(var(--s) * -0.714)) scale(2);
+    box-shadow:
+      0 0,
+      0 0;
+  }
+  87% {
+    transform: translate(calc(var(--s) * -0.714)) scale(1);
+    box-shadow:
+      0 0,
+      0 0;
+  }
+  100% {
+    transform: translate(0) scale(1);
+    box-shadow:
+      0 0,
+      0 0;
+  }
+}
+@keyframes __loading-dots-vs-bars-10-l10-2 {
+  20%,
+  70% {
+    left: 50%;
+  }
+  0%,
+  10%,
+  85%,
+  100% {
+    left: calc(var(--s) * -0.357);
+  }
+}

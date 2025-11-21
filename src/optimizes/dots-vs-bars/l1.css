@@ -1,0 +1,51 @@
+.__loading-dots-vs-bars-1 {
+  --s: var(--size, 40px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 1s);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  --c: linear-gradient(var(--c1) 0 0);
+  --r1: radial-gradient(farthest-side at bottom, var(--c1) 93%, #0000);
+  --r2: radial-gradient(farthest-side at top, var(--c1) 93%, #0000);
+  background:
+    var(--c), var(--r1), var(--r2), var(--c), var(--r1), var(--r2), var(--c), var(--r1), var(--r2);
+  background-repeat: no-repeat;
+  animation: __loading-dots-vs-bars-1-l1 var(--d1) infinite alternate;
+}
+@keyframes __loading-dots-vs-bars-1-l1 {
+  0%,
+  10% {
+    background-size:
+      calc(var(--s) * 0.2) 0,
+      calc(var(--s) * 0.2) calc(var(--s) * 0.1),
+      calc(var(--s) * 0.2) calc(var(--s) * 0.1);
+    background-position:
+      0 50%,
+      0 calc(50% - calc(var(--s) * 0.05)),
+      0 calc(50% + calc(var(--s) * 0.05)),
+      50% 50%,
+      50% calc(50% - calc(var(--s) * 0.05)),
+      50% calc(50% + calc(var(--s) * 0.05)),
+      100% 50%,
+      100% calc(50% - calc(var(--s) * 0.05)),
+      100% calc(50% + calc(var(--s) * 0.05));
+  }
+  90%,
+  100% {
+    background-size:
+      calc(var(--s) * 0.2) 100%,
+      calc(var(--s) * 0.2) calc(var(--s) * 0.1),
+      calc(var(--s) * 0.2) calc(var(--s) * 0.1);
+    background-position:
+      0 50%,
+      0 calc(-1 * var(--s) * 0.05),
+      0 calc(100% + calc(var(--s) * 0.05)),
+      50% 50%,
+      50% calc(-1 * var(--s) * 0.05),
+      50% calc(100% + calc(var(--s) * 0.05)),
+      100% 50%,
+      100% calc(-1 * var(--s) * 0.05),
+      100% calc(100% + calc(var(--s) * 0.05));
+  }
+}

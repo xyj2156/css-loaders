@@ -1,0 +1,44 @@
+.__loading-dots-vs-bars-5 {
+  --s:var(--size, 40px);
+  --c1:var(--color-1, #000);
+  --d1:var(--duration-1, 2s);
+  --d2:var(--duration-2, 0.5s);
+
+  width: var(--s);
+  height: calc(var(--s) * 0.75);
+  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  background:
+    var(--c) 0 100%/calc(var(--s) * 0.2) 100%,
+    var(--c) 50% 100%/calc(var(--s) * 0.2) calc(var(--s) * 0.5),
+    var(--c) 100% 100%/calc(var(--s) * 0.2) calc(var(--s) * 0.25);
+  position: relative;
+  clip-path: inset(-100% 0);
+}
+.__loading-dots-vs-bars-5:before {
+  content: '';
+  position: absolute;
+  width: calc(var(--s) * 0.2);
+  height: calc(var(--s) * 0.2);
+  border-radius: 50%;
+  background: var(--c1);
+  left: calc(var(--s) * -0.4);
+  top: 0;
+  animation:
+    __loading-dots-vs-bars-5-l5-1 var(--d1) linear infinite,
+    __loading-dots-vs-bars-5-l5-2 var(--d2) cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+@keyframes __loading-dots-vs-bars-5-l5-1 {
+  0% {
+    left: calc(var(--s) * -0.4);
+    transform: translateY(calc(var(--s) * -0.2));
+  }
+  100% {
+    left: calc(100% + calc(var(--s) * 0.2));
+    transform: translateY(calc(var(--s) * 0.55));
+  }
+}
+@keyframes __loading-dots-vs-bars-5-l5-2 {
+  100% {
+    top: -0.1px;
+  }
+}
