@@ -1,28 +1,32 @@
 .__loading-arcade-5 {
-  --s:var(--size,90px);
-  --c1:var(--color-1,#eeee89);
-  --c2:var(--color-2,#ffff2d);
+  --s: var(--size, 90px);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #eeee89);
+  --c3: var(--color-3, #ffff2d);
+  --d1: var(--duration-1, 3s);
+  --d2: var(--duration-2, 0.25s);
+  --d3: var(--duration-3, 0.153s);
 
   width: var(--s);
-  height: calc(var(--s) * 0.267);
-  padding: calc(var(--s) * 0.022) 0;
+  height: calc(var(--s) * 8 / 30);
+  padding: calc(var(--s) * 2 / 90) 0;
   box-sizing: border-box;
   display: flex;
-  animation: __loading-arcade-5-l5-0 3s infinite steps(6);
+  animation: __loading-arcade-5-l5-0 var(--d1) infinite steps(6);
   background:
-    linear-gradient(#000 0 0) 0 0/0% 100% no-repeat,
-    radial-gradient(circle 3px, var(--c1) 90%, #0000) 0 0/20% 100% #000;
+    linear-gradient(var(--c1) 0 0) 0 0/0% 100% no-repeat,
+    radial-gradient(circle calc(var(--s) * 3 / 90), var(--c2) 90%, #0000) 0 0/20% 100% #000;
   overflow: hidden;
 }
 .__loading-arcade-5::before {
   content: '';
-  width: calc(var(--s) * 0.222);
+  width: calc(var(--s) * 20 / 90);
   transform: translate(-100%);
   border-radius: 50%;
-  background: var(--c2);
+  background: var(--c3);
   animation:
-    __loading-arcade-5-l5-1 0.25s 0.153s infinite steps(5) alternate,
-    __loading-arcade-5-l5-2 3s infinite linear;
+    __loading-arcade-5-l5-1 var(--d2) var(--d3) infinite steps(5) alternate,
+    __loading-arcade-5-l5-2 var(--d1) infinite linear;
 }
 @keyframes __loading-arcade-5-l5-1 {
   0% {

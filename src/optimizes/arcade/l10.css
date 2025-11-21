@@ -1,131 +1,61 @@
 .__loading-arcade-10 {
-  --s: var(--size, 17px);
+  --s: var(--size, 34px);
   --c1: var(--color-1, #f92033);
   --c2: var(--color-2, #fdc98d);
   --c3: var(--color-3, #643700);
   --c4: var(--color-4, #222a87);
   --c5: var(--color-5, #feee49);
   --c6: var(--color-6, #000);
+  --d1: var(--duration-1, 2s);
+  --d2: var(--duration-2, -0.1px);
+  --c:var(--content, 'Loading');
 
   width: fit-content;
-  font-size: var(--s);
+  font-size: calc(var(--s) / 2);
   font-family: monospace;
   line-height: 1.4;
   font-weight: bold;
-  padding: calc(var(--s) * 1.76) 2px calc(var(--s) * 2.94);
+  padding: calc(var(--s) * 0.88) calc(var(--s) / 17) calc(var(--s) * 1.47);
   background: linear-gradient(var(--c6) 0 0) 0 0/100% 100% content-box padding-box no-repeat;
   position: relative;
   overflow: hidden;
-  animation: __loading-arcade-10-l10-0 2s infinite cubic-bezier(1, 175, 0.5, 175);
+  animation: __loading-arcade-10-l10-0 var(--d1) infinite cubic-bezier(1, 175, 0.5, 175);
 }
+
 .__loading-arcade-10::before {
-  content: 'Loading';
+  content: var(--c);
   display: inline-block;
-  animation: __loading-arcade-10-l10-2 2s infinite;
+  animation: __loading-arcade-10-l10-2 var(--d1) infinite;
 }
+
 .__loading-arcade-10::after {
   content: '';
   position: absolute;
-  width: calc(var(--s) * 2);
-  height: calc(var(--s) * 1.65);
+  width: var(--s);
+  height: calc(var(--s) * 0.82);
   top: 110%;
-  left: calc(50% - var(--s));
+  left: calc(50% - calc(var(--s) / 2));
   background:
-    linear-gradient(90deg, transparent calc(var(--s) * 0.71), var(--c1) 0 calc(var(--s) * 1.29), transparent 0 calc(var(--s) * 1.53), var(--c2) 0 calc(var(--s) * 1.88), transparent) bottom
-      calc(var(--s) * 1.53) left 50%,
-    linear-gradient(90deg, transparent calc(var(--s) * 0.59), var(--c1) 0 calc(var(--s) * 1.65), var(--c2) 0 calc(var(--s) * 1.88), transparent 0) bottom calc(var(--s) * 1.41) left 50%,
-    linear-gradient(
-        90deg,
-        transparent calc(var(--s) * 0.59),
-        var(--c3) 0 calc(var(--s) * 0.94),
-        var(--c2) 0 calc(var(--s) * 1.18),
-        var(--c6) 0 calc(var(--s) * 1.29),
-        var(--c2) 0 calc(var(--s) * 1.41),
-        var(--c6) 0 calc(var(--s) * 1.53),
-        var(--c1) 0 calc(var(--s) * 1.88),
-        transparent 0
-      )
-      bottom calc(var(--s) * 1.29) left 50%,
-    linear-gradient(
-        90deg,
-        transparent calc(var(--s) * 0.47),
-        var(--c3) 0 calc(var(--s) * 0.59),
-        var(--c2) 0 calc(var(--s) * 0.71),
-        var(--c3) 0 calc(var(--s) * 0.82),
-        var(--c2) 0 calc(var(--s) * 1.18),
-        var(--c6) 0 calc(var(--s) * 1.29),
-        var(--c2) 0 calc(var(--s) * 1.65),
-        var(--c1) 0 calc(var(--s) * 1.88),
-        transparent 0
-      )
-      bottom calc(var(--s) * 1.18) left 50%,
-    linear-gradient(
-        90deg,
-        transparent calc(var(--s) * 0.47),
-        var(--c3) 0 calc(var(--s) * 0.59),
-        var(--c2) 0 calc(var(--s) * 0.71),
-        var(--c3) 0 calc(var(--s) * 0.94),
-        var(--c2) 0 calc(var(--s) * 1.29),
-        var(--c6) 0 calc(var(--s) * 1.41),
-        var(--c2) 0 calc(var(--s) * 1.76),
-        var(--c1) 0 calc(var(--s) * 1.88),
-        transparent 0
-      )
-      bottom calc(var(--s) * 1.06) left 50%,
-    linear-gradient(
-        90deg,
-        transparent calc(var(--s) * 0.47),
-        var(--c3) 0 calc(var(--s) * 0.71),
-        var(--c2) 0 calc(var(--s) * 1.18),
-        var(--c6) 0 calc(var(--s) * 1.65),
-        var(--c1) 0 calc(var(--s) * 1.76),
-        transparent 0
-      )
-      bottom calc(var(--s) * 0.94) left 50%,
-    linear-gradient(90deg, transparent calc(var(--s) * 0.71), var(--c2) 0 calc(var(--s) * 1.53), var(--c1) 0 calc(var(--s) * 1.76), transparent 0) bottom calc(var(--s) * 0.82) left 50%,
-    linear-gradient(
-        90deg,
-        var(--c2) calc(var(--s) * 0.35),
-        var(--c1) 0 calc(var(--s) * 0.82),
-        var(--c4) 0 calc(var(--s) * 0.94),
-        var(--c1) 0 calc(var(--s) * 1.29),
-        var(--c4) 0 calc(var(--s) * 1.41),
-        var(--c1) 0 calc(var(--s) * 1.65),
-        transparent 0 calc(var(--s) * 1.88),
-        var(--c3) 0
-      )
-      bottom calc(var(--s) * 0.71) left 50%,
-    linear-gradient(
-        90deg,
-        var(--c2) calc(var(--s) * 0.35),
-        var(--c1) 0 calc(var(--s) * 0.94),
-        var(--c4) 0 calc(var(--s) * 1.06),
-        var(--c1) 0 calc(var(--s) * 1.41),
-        var(--c1) 0 calc(var(--s) * 1.53),
-        transparent 0 calc(var(--s) * 1.76),
-        var(--c3) 0
-      )
-      bottom calc(var(--s) * 0.59) left 50%,
-    linear-gradient(
-        90deg,
-        transparent calc(var(--s) * 0.59),
-        var(--c1) 0 calc(var(--s) * 0.94),
-        var(--c4) 0 calc(var(--s) * 1.41),
-        var(--c5) 0 calc(var(--s) * 1.53),
-        var(--c4) 0 calc(var(--s) * 1.76),
-        var(--c3) 0
-      )
-      bottom calc(var(--s) * 0.47) left 50%,
-    linear-gradient(90deg, transparent calc(var(--s) * 0.71), var(--c4) 0 calc(var(--s) * 1.06), var(--c5) 0 calc(var(--s) * 1.18), var(--c4) 0 calc(var(--s) * 1.76), var(--c3) 0)
-      bottom calc(var(--s) * 0.35) left 50%,
-    linear-gradient(90deg, transparent calc(var(--s) * 0.47), var(--c3) 0 calc(var(--s) * 0.71), var(--c4) 0 calc(var(--s) * 1.76), var(--c3) 0) bottom calc(var(--s) * 0.24) left 50%,
-    linear-gradient(90deg, transparent calc(var(--s) * 0.35), var(--c3) 0 calc(var(--s) * 0.82), var(--c4) 0 calc(var(--s) * 1.53), transparent 0) bottom calc(var(--s) * 0.12) left 50%,
-    linear-gradient(90deg, transparent calc(var(--s) * 0.35), var(--c3) 0 calc(var(--s) * 0.59), transparent 0) bottom 0 left 50%;
-  background-size: calc(var(--s) * 2) calc(var(--s) * 0.12);
+    linear-gradient(90deg, #0000 calc(var(--s) * 0.35), var(--c1) 0 calc(var(--s) * 0.65), #0000 0 calc(var(--s) * 0.76), var(--c2) 0 calc(var(--s) * 0.94), #0000 0) bottom calc(var(--s) * 0.76) left 50%,
+    linear-gradient(90deg, #0000 calc(var(--s) * 0.29), var(--c1) 0 calc(var(--s) * 0.82), var(--c2) 0 calc(var(--s) * 0.94), #0000 0) bottom calc(var(--s) * 0.71) left 50%,
+    linear-gradient(90deg, #0000 calc(var(--s) * 0.29), var(--c3) 0 calc(var(--s) * 0.47), var(--c2) 0 calc(var(--s) * 0.59), var(--c6) 0 calc(var(--s) * 0.65), var(--c2) 0 calc(var(--s) * 0.71), var(--c6) 0 calc(var(--s) * 0.76), var(--c1) 0 calc(var(--s) * 0.94), #0000 0) bottom calc(var(--s) * 0.65) left 50%,
+    linear-gradient(90deg, #0000 calc(var(--s) * 0.24), var(--c3) 0 calc(var(--s) * 0.29), var(--c2) 0 calc(var(--s) * 0.35), var(--c3) 0 calc(var(--s) * 0.41), var(--c2) 0 calc(var(--s) * 0.59), var(--c6) 0 calc(var(--s) * 0.65), var(--c2) 0 calc(var(--s) * 0.82), var(--c1) 0 calc(var(--s) * 0.94), #0000 0) bottom calc(var(--s) * 0.59) left 50%,
+    linear-gradient(90deg, #0000 calc(var(--s) * 0.24), var(--c3) 0 calc(var(--s) * 0.29), var(--c2) 0 calc(var(--s) * 0.35), var(--c3) 0 calc(var(--s) * 0.47), var(--c2) 0 calc(var(--s) * 0.65), var(--c6) 0 calc(var(--s) * 0.71), var(--c2) 0 calc(var(--s) * 0.88), var(--c1) 0 calc(var(--s) * 0.94), #0000 0) bottom calc(var(--s) * 0.53) left 50%,
+    linear-gradient(90deg, #0000 calc(var(--s) * 0.24), var(--c3) 0 calc(var(--s) * 0.35), var(--c2) 0 calc(var(--s) * 0.59), var(--c6) 0 calc(var(--s) * 0.82), var(--c1) 0 calc(var(--s) * 0.88), #0000 0) bottom calc(var(--s) * 0.47) left 50%,
+    linear-gradient(90deg, #0000 calc(var(--s) * 0.35), var(--c2) 0 calc(var(--s) * 0.76), var(--c1) 0 calc(var(--s) * 0.88), #0000 0) bottom calc(var(--s) * 0.41) left 50%,
+    linear-gradient(90deg, var(--c2) calc(var(--s) * 0.18), var(--c1) 0 calc(var(--s) * 0.41), var(--c4) 0 calc(var(--s) * 0.47), var(--c1) 0 calc(var(--s) * 0.65), var(--c4) 0 calc(var(--s) * 0.71), var(--c1) 0 calc(var(--s) * 0.82), #0000 0 calc(var(--s) * 0.94), var(--c3) 0) bottom calc(var(--s) * 0.35) left 50%,
+    linear-gradient(90deg, var(--c2) calc(var(--s) * 0.18), var(--c1) 0 calc(var(--s) * 0.47), var(--c4) 0 calc(var(--s) * 0.53), var(--c1) 0 calc(var(--s) * 0.71), var(--c1) 0 calc(var(--s) * 0.76), #0000 0 calc(var(--s) * 0.88), var(--c3) 0) bottom calc(var(--s) * 0.29) left 50%,
+    linear-gradient(90deg, #0000 calc(var(--s) * 0.29), var(--c1) 0 calc(var(--s) * 0.47), var(--c4) 0 calc(var(--s) * 0.71), var(--c5) 0 calc(var(--s) * 0.76), var(--c4) 0 calc(var(--s) * 0.88), var(--c3) 0) bottom calc(var(--s) * 0.24) left 50%,
+    linear-gradient(90deg, #0000 calc(var(--s) * 0.35), var(--c4) 0 calc(var(--s) * 0.53), var(--c5) 0 calc(var(--s) * 0.59), var(--c4) 0 calc(var(--s) * 0.88), var(--c3) 0) bottom calc(var(--s) * 0.18) left 50%,
+    linear-gradient(90deg, #0000 calc(var(--s) * 0.24), var(--c3) 0 calc(var(--s) * 0.35), var(--c4) 0 calc(var(--s) * 0.88), var(--c3) 0) bottom calc(var(--s) * 0.12) left 50%,
+    linear-gradient(90deg, #0000 calc(var(--s) * 0.18), var(--c3) 0 calc(var(--s) * 0.41), var(--c4) 0 calc(var(--s) * 0.76), #0000 0) bottom calc(var(--s) * 0.06) left 50%,
+    linear-gradient(90deg, #0000 calc(var(--s) * 0.18), var(--c3) 0 calc(var(--s) * 0.29), #0000 0) bottom 0px left 50%;
+  background-size: var(--s) calc(var(--s) / 17);
   background-repeat: no-repeat;
   animation: inherit;
   animation-name: __loading-arcade-10-l10-1;
 }
+
 @keyframes __loading-arcade-10-l10-0 {
   0%,
   30% {
@@ -133,15 +63,17 @@
   }
   50%,
   100% {
-    background-position: 0 -0.1px;
+    background-position: 0 var(--d2);
   }
 }
+
 @keyframes __loading-arcade-10-l10-1 {
   50%,
   100% {
     top: 109.5%;
   }
 }
+
 @keyframes __loading-arcade-10-l10-2 {
   0%,
   30% {

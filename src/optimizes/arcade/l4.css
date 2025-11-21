@@ -1,16 +1,17 @@
 .__loading-arcade-4 {
-  --s:var(--size, 50px);
-  --c1:var(--color-1, #ffcc00);
-  --c2:var(--color-2, #000);
+  --s: var(--size, 50px);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #ffcc00);
+  --d1: var(--duration-1, 0.5s);
 
   width: var(--s);
   aspect-ratio: 1;
   border-radius: 50%;
   background:
-    radial-gradient(farthest-side, var(--c2) 98%, #0000) 55% 20%/8px 8px no-repeat,
-    var(--c1);
-  box-shadow: 2px -6px 12px 0px inset rgba(0, 0, 0, 0.7);
-  animation: __loading-arcade-4-l4 0.5s infinite steps(5) alternate;
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 55% 20%/calc(var(--s) * 0.16) calc(var(--s) * 0.16) no-repeat,
+    var(--c2);
+  box-shadow: calc(var(--s) * 0.04) calc(var(--s) * -0.12) calc(var(--s) * 0.24) 0px inset rgba(0, 0, 0, 0.7);
+  animation: __loading-arcade-4-l4 var(--d1) infinite steps(5) alternate;
 }
 @keyframes __loading-arcade-4-l4 {
   0% {
