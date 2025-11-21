@@ -38,11 +38,12 @@ api
     asyncEach(list, function (item) {
       const count = item.querySelector('small').innerText;
       const href = item.getAttribute('href');
-      const name = item.firstChild.innerText
-        .trim()
-        .split(' ')
-        .pop()
-        .toLowerCase();
+
+      const name = (function () {
+        const arr = item.firstChild.innerText.trim().split(' ');
+        arr.shift();
+        return arr.join('-').toLowerCase();
+      })();
 
       const path = style(name);
       if (!existsSync(path)) {
