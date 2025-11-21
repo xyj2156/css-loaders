@@ -113,7 +113,39 @@
     "__loading-bars-17",
     "__loading-bars-18",
     "__loading-bars-19",
-    "__loading-bars-20"
+    "__loading-bars-20",
+    "__loading-bars-21",
+    "__loading-bars-22",
+    "__loading-bars-23",
+    "__loading-bars-24",
+    "__loading-bars-25",
+    "__loading-bars-26",
+    "__loading-bars-27",
+    "__loading-bars-28",
+    "__loading-bars-29",
+    "__loading-bars-30"
+  ],
+  "dots-vs-bars": [
+    "__loading-dots-vs-bars-1",
+    "__loading-dots-vs-bars-2",
+    "__loading-dots-vs-bars-3",
+    "__loading-dots-vs-bars-4",
+    "__loading-dots-vs-bars-5",
+    "__loading-dots-vs-bars-6",
+    "__loading-dots-vs-bars-7",
+    "__loading-dots-vs-bars-8",
+    "__loading-dots-vs-bars-9",
+    "__loading-dots-vs-bars-10",
+    "__loading-dots-vs-bars-11",
+    "__loading-dots-vs-bars-12",
+    "__loading-dots-vs-bars-13",
+    "__loading-dots-vs-bars-14",
+    "__loading-dots-vs-bars-15",
+    "__loading-dots-vs-bars-16",
+    "__loading-dots-vs-bars-17",
+    "__loading-dots-vs-bars-18",
+    "__loading-dots-vs-bars-19",
+    "__loading-dots-vs-bars-20"
   ],
   "spinner": [
     "__loading-spinner-1",
@@ -514,7 +546,20 @@
     "__loading-circle-7",
     "__loading-circle-8",
     "__loading-circle-9",
-    "__loading-circle-10"
+    "__loading-circle-10",
+    "__loading-circle-11"
+  ],
+  "square-vs-circle": [
+    "__loading-square-vs-circle-1",
+    "__loading-square-vs-circle-2",
+    "__loading-square-vs-circle-3",
+    "__loading-square-vs-circle-4",
+    "__loading-square-vs-circle-5",
+    "__loading-square-vs-circle-6",
+    "__loading-square-vs-circle-7",
+    "__loading-square-vs-circle-8",
+    "__loading-square-vs-circle-9",
+    "__loading-square-vs-circle-10"
   ],
   "colorful": [
     "__loading-colorful-1",

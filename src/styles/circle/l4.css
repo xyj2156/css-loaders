@@ -1,28 +1,45 @@
 .__loading-circle-4 {
-  height: 35px;
+  width: 65px;
   aspect-ratio: 1;
-  border: 3px solid #fff;
-  animation: __loading-circle-4-l4 2s infinite;
+  position: relative;
+}
+.__loading-circle-4:before,
+.__loading-circle-4:after {
+  content: '';
+  position: absolute;
+  border-radius: 50px;
+  box-shadow: 0 0 0 3px inset #fff;
+  animation: __loading-circle-4-l4 2.5s infinite;
+}
+.__loading-circle-4:after {
+  animation-delay: -1.25s;
 }
 @keyframes __loading-circle-4-l4 {
   0% {
-    aspect-ratio: 1;
-    border-radius: 50px;
+    inset: 0 35px 35px 0;
+  }
+  12.5% {
+    inset: 0 35px 0 0;
   }
   25% {
-    aspect-ratio: 2;
-    border-radius: 50px;
+    inset: 35px 35px 0 0;
+  }
+  37.5% {
+    inset: 35px 0 0 0;
   }
   50% {
-    aspect-ratio: 2;
-    border-radius: 0;
+    inset: 35px 0 0 35px;
+  }
+  62.5% {
+    inset: 0 0 0 35px;
   }
   75% {
-    aspect-ratio: 1;
-    border-radius: 0;
+    inset: 0 0 35px 35px;
+  }
+  87.5% {
+    inset: 0 0 35px 0;
   }
   100% {
-    aspect-ratio: 1;
-    border-radius: 50px;
+    inset: 0 35px 35px 0;
   }
 }

@@ -1,47 +1,43 @@
 .__loading-bars-1 {
-  width: 40px;
+  width: 45px;
   aspect-ratio: 1;
-  --c: linear-gradient(#000 0 0);
-  --r1: radial-gradient(farthest-side at bottom, #000 93%, #0000);
-  --r2: radial-gradient(farthest-side at top, #000 93%, #0000);
+  --c: no-repeat linear-gradient(#000 0 0);
   background:
-    var(--c), var(--r1), var(--r2), var(--c), var(--r1), var(--r2), var(--c), var(--r1), var(--r2);
-  background-repeat: no-repeat;
-  animation: __loading-bars-1-l1 1s infinite alternate;
+    var(--c) 0% 50%,
+    var(--c) 50% 50%,
+    var(--c) 100% 50%;
+  background-size: 20% 100%;
+  animation: __loading-bars-1-l1 1s infinite linear;
 }
 @keyframes __loading-bars-1-l1 {
-  0%,
-  10% {
+  0% {
     background-size:
-      8px 0,
-      8px 4px,
-      8px 4px;
-    background-position:
-      0 50%,
-      0 calc(50% - 2px),
-      0 calc(50% + 2px),
-      50% 50%,
-      50% calc(50% - 2px),
-      50% calc(50% + 2px),
-      100% 50%,
-      100% calc(50% - 2px),
-      100% calc(50% + 2px);
+      20% 100%,
+      20% 100%,
+      20% 100%;
   }
-  90%,
+  33% {
+    background-size:
+      20% 10%,
+      20% 100%,
+      20% 100%;
+  }
+  50% {
+    background-size:
+      20% 100%,
+      20% 10%,
+      20% 100%;
+  }
+  66% {
+    background-size:
+      20% 100%,
+      20% 100%,
+      20% 10%;
+  }
   100% {
     background-size:
-      8px 100%,
-      8px 4px,
-      8px 4px;
-    background-position:
-      0 50%,
-      0 -2px,
-      0 calc(100% + 2px),
-      50% 50%,
-      50% -2px,
-      50% calc(100% + 2px),
-      100% 50%,
-      100% -2px,
-      100% calc(100% + 2px);
+      20% 100%,
+      20% 100%,
+      20% 100%;
   }
 }

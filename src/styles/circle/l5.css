@@ -7,40 +7,21 @@
 .__loading-circle-5:after {
   content: '';
   position: absolute;
+  inset: 0 auto auto 0;
+  aspect-ratio: 1;
   border-radius: 50px;
   box-shadow: 0 0 0 3px inset #fff;
-  animation: __loading-circle-5-l5 2.5s infinite;
+  animation: __loading-circle-5-l5 1s infinite linear alternate;
 }
 .__loading-circle-5:after {
-  animation-delay: -1.25s;
-  border-radius: 0;
+  inset: auto 0 0 auto;
+  animation-delay: -1s;
 }
 @keyframes __loading-circle-5-l5 {
   0% {
-    inset: 0 35px 35px 0;
-  }
-  12.5% {
-    inset: 0 35px 0 0;
-  }
-  25% {
-    inset: 35px 35px 0 0;
-  }
-  37.5% {
-    inset: 35px 0 0 0;
-  }
-  50% {
-    inset: 35px 0 0 35px;
-  }
-  62.5% {
-    inset: 0 0 0 35px;
-  }
-  75% {
-    inset: 0 0 35px 35px;
-  }
-  87.5% {
-    inset: 0 0 35px 0;
+    width: 20px;
   }
   100% {
-    inset: 0 35px 35px 0;
+    width: 50px;
   }
 }

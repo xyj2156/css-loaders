@@ -1,48 +1,27 @@
 .__loading-bars-19 {
-  width: 40px;
+  width: 45px;
   aspect-ratio: 1;
-  --c: linear-gradient(#000 0 0);
-  --m: radial-gradient(farthest-side, #000 90%, #0000);
-  background: var(--c), var(--m), var(--c);
-  background-size:
-    16px 8px,
-    10px 10px;
-  background-repeat: no-repeat;
-  animation:
-    __loading-bars-19-l19-1 0.5s infinite alternate,
-    __loading-bars-19-l19-2 4s infinite linear 0.5s;
+  --c: conic-gradient(from -90deg, #000 90deg, #0000 0);
+  background: var(--c), var(--c);
+  background-size: 40% 40%;
+  animation: __loading-bars-19-l19 1s infinite alternate;
 }
-@keyframes __loading-bars-19-l19-1 {
+@keyframes __loading-bars-19-l19 {
   0%,
   10% {
     background-position:
-      calc(50% - 8px) 50%,
-      50% 10%,
-      calc(50% + 8px) 50%;
+      0 0,
+      0 calc(100% / 3);
   }
-  80%,
+  50% {
+    background-position:
+      0 0,
+      calc(100% / 3) calc(100% / 3);
+  }
+  90%,
   100% {
     background-position:
-      -20px 50%,
-      50% 50%,
-      calc(100% + 20px) 50%;
-  }
-}
-@keyframes __loading-bars-19-l19-2 {
-  0%,
-  24.99% {
-    transform: rotate(0);
-  }
-  25%,
-  49.99% {
-    transform: rotate(90deg);
-  }
-  50%,
-  74.99% {
-    transform: rotate(180deg);
-  }
-  75%,
-  100% {
-    transform: rotate(270deg);
+      0 0,
+      calc(100% / 3) 0;
   }
 }

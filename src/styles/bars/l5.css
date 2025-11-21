@@ -1,39 +1,37 @@
 .__loading-bars-5 {
-  width: 40px;
-  height: 30px;
+  width: 45px;
+  aspect-ratio: 0.75;
   --c: no-repeat linear-gradient(#000 0 0);
   background:
-    var(--c) 0 100%/8px 30px,
-    var(--c) 50% 100%/8px 20px,
-    var(--c) 100% 100%/8px 10px;
-  position: relative;
-  clip-path: inset(-100% 0);
+    var(--c) 0% 100%,
+    var(--c) 50% 100%,
+    var(--c) 100% 100%;
+  background-size: 20% 65%;
+  animation: __loading-bars-5-l5 1s infinite linear;
 }
-.__loading-bars-5:before {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #000;
-  left: -16px;
-  top: 0;
-  animation:
-    __loading-bars-5-l5-1 2s linear infinite,
-    __loading-bars-5-l5-2 0.5s cubic-bezier(0, 200, 0.8, 200) infinite;
-}
-@keyframes __loading-bars-5-l5-1 {
-  0% {
-    left: -16px;
-    transform: translateY(-8px);
+@keyframes __loading-bars-5-l5 {
+  20% {
+    background-position:
+      0% 50%,
+      50% 100%,
+      100% 100%;
   }
-  100% {
-    left: calc(100% + 8px);
-    transform: translateY(22px);
+  40% {
+    background-position:
+      0% 0%,
+      50% 50%,
+      100% 100%;
   }
-}
-@keyframes __loading-bars-5-l5-2 {
-  100% {
-    top: -0.1px;
+  60% {
+    background-position:
+      0% 100%,
+      50% 0%,
+      100% 50%;
+  }
+  80% {
+    background-position:
+      0% 100%,
+      50% 100%,
+      100% 0%;
   }
 }

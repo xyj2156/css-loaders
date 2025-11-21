@@ -1,93 +1,25 @@
 .__loading-bars-9 {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  aspect-ratio: 0.75;
   --c: no-repeat linear-gradient(#000 0 0);
   background:
-    var(--c) 0 0,
-    var(--c) 0 100%,
-    var(--c) 50% 0,
-    var(--c) 50% 100%,
-    var(--c) 100% 0,
-    var(--c) 100% 100%;
-  background-size: 8px 50%;
-  animation: __loading-bars-9-l9-0 2s infinite;
-  position: relative;
-  overflow: hidden;
+    var(--c) 0% 50%,
+    var(--c) 50% 50%,
+    var(--c) 100% 50%;
+  background-size: 20% 60%;
+  animation: __loading-bars-9-l9 1s infinite;
 }
-.__loading-bars-9:before {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #000;
-  top: calc(50% - 4px);
-  left: -8px;
-  animation: inherit;
-  animation-name: __loading-bars-9-l9-1;
-}
-@keyframes __loading-bars-9-l9-0 {
-  16.67% {
-    background-size:
-      8px 30%,
-      8px 30%,
-      8px 50%,
-      8px 50%,
-      8px 50%,
-      8px 50%;
+@keyframes __loading-bars-9-l9 {
+  33% {
+    background-position:
+      0% 0%,
+      50% 100%,
+      100% 0%;
   }
-  33.33% {
-    background-size:
-      8px 30%,
-      8px 30%,
-      8px 30%,
-      8px 30%,
-      8px 50%,
-      8px 50%;
-  }
-  50% {
-    background-size:
-      8px 30%,
-      8px 30%,
-      8px 30%,
-      8px 30%,
-      8px 50%,
-      8px 50%;
-  }
-  66.67% {
-    background-size:
-      8px 50%,
-      8px 50%,
-      8px 30%,
-      8px 30%,
-      8px 50%,
-      8px 50%;
-  }
-  83.33% {
-    background-size:
-      8px 50%,
-      8px 50%,
-      8px 50%,
-      8px 50%,
-      8px 50%,
-      8px 50%;
-  }
-}
-@keyframes __loading-bars-9-l9-1 {
-  20% {
-    left: 0px;
-  }
-  40%,
-  70% {
-    left: calc(50% - 4px);
-  }
-  80%,
-  85% {
-    left: 8px;
-    top: calc(50% - 4px);
-  }
-  100% {
-    left: 8px;
-    top: -8px;
+  66% {
+    background-position:
+      0% 100%,
+      50% 0%,
+      100% 100%;
   }
 }

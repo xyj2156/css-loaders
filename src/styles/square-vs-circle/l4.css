@@ -1,0 +1,28 @@
+.__loading-square-vs-circle-4 {
+  height: 35px;
+  aspect-ratio: 1;
+  border: 3px solid #fff;
+  animation: __loading-square-vs-circle-4-l4 2s infinite;
+}
+@keyframes __loading-square-vs-circle-4-l4 {
+  0% {
+    aspect-ratio: 1;
+    border-radius: 50px;
+  }
+  25% {
+    aspect-ratio: 2;
+    border-radius: 50px;
+  }
+  50% {
+    aspect-ratio: 2;
+    border-radius: 0;
+  }
+  75% {
+    aspect-ratio: 1;
+    border-radius: 0;
+  }
+  100% {
+    aspect-ratio: 1;
+    border-radius: 50px;
+  }
+}

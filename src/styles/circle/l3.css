@@ -1,42 +1,23 @@
 .__loading-circle-3 {
-  display: inline-flex;
-  gap: 5px;
+  width: 65px;
+  height: 30px;
+  position: relative;
 }
-.__loading-circle-3:before,
-.__loading-circle-3:after {
+.__loading-circle-3:before {
   content: '';
-  width: 35px;
-  aspect-ratio: 1;
+  position: absolute;
+  border-radius: 50px;
   box-shadow: 0 0 0 3px inset #fff;
-  animation: 2s infinite linear;
-  animation-name: __loading-circle-3-l3-1, __loading-circle-3-l3-2;
-  animation-delay: -1s, 0s;
+  animation: __loading-circle-3-l3 0.75s infinite alternate;
 }
-.__loading-circle-3:after {
-  --s: -1;
-}
-@keyframes __loading-circle-3-l3-1 {
+@keyframes __loading-circle-3-l3 {
   0% {
-    border-radius: 50% 0 0 50%;
-  }
-  25% {
-    border-radius: 50% 50% 0 0;
+    inset: 0 35px 0 0;
   }
   50% {
-    border-radius: 0 50% 50% 0;
-  }
-  75% {
-    border-radius: 0 0 50% 50%;
+    inset: 0 0 0 0;
   }
   100% {
-    border-radius: 50% 0 0 50%;
-  }
-}
-@keyframes __loading-circle-3-l3-2 {
-  0% {
-    transform: scaleX(var(--s, 1)) rotate(0deg);
-  }
-  100% {
-    transform: scaleX(var(--s, 1)) rotate(-360deg);
+    inset: 0 0 0 35px;
   }
 }

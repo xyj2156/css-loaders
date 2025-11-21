@@ -1,0 +1,38 @@
+.__loading-square-vs-circle-8 {
+  width: 75px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-square-vs-circle-8:before,
+.__loading-square-vs-circle-8:after {
+  content: '';
+  grid-area: 1/1;
+  width: 35px;
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 3px #fff inset;
+  filter: drop-shadow(40px 40px 0 #fff);
+  animation: __loading-square-vs-circle-8-l8 2s infinite alternate;
+}
+.__loading-square-vs-circle-8:after {
+  margin: 0 0 0 auto;
+  filter: drop-shadow(-40px 40px 0 #fff);
+  animation-delay: -1s;
+}
+@keyframes __loading-square-vs-circle-8-l8 {
+  0%,
+  10% {
+    border-radius: 0;
+  }
+  30%,
+  40% {
+    border-radius: 50% 0;
+  }
+  60%,
+  70% {
+    border-radius: 50%;
+  }
+  90%,
+  100% {
+    border-radius: 0 50%;
+  }
+}

@@ -1,92 +1,48 @@
 .__loading-bars-7 {
-  width: 40px;
-  aspect-ratio: 1;
+  width: 45px;
+  aspect-ratio: 0.75;
   --c: no-repeat linear-gradient(#000 0 0);
   background:
-    var(--c) 0 0,
-    var(--c) 0 100%,
-    var(--c) 50% 0,
-    var(--c) 50% 100%,
-    var(--c) 100% 0,
-    var(--c) 100% 100%;
-  background-size: 8px 50%;
-  animation: __loading-bars-7-l7-0 1s infinite;
-  position: relative;
-  overflow: hidden;
+    var(--c) 0% 50%,
+    var(--c) 50% 50%,
+    var(--c) 100% 50%;
+  animation: __loading-bars-7-l7 1s infinite linear alternate;
 }
-.__loading-bars-7:before {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #000;
-  top: calc(50% - 4px);
-  left: -8px;
-  animation: inherit;
-  animation-name: __loading-bars-7-l7-1;
-}
-
-@keyframes __loading-bars-7-l7-0 {
-  16.67% {
+@keyframes __loading-bars-7-l7 {
+  0% {
     background-size:
-      8px 30%,
-      8px 30%,
-      8px 50%,
-      8px 50%,
-      8px 50%,
-      8px 50%;
+      20% 50%,
+      20% 50%,
+      20% 50%;
   }
-  33.33% {
-    background-size:
-      8px 30%,
-      8px 30%,
-      8px 30%,
-      8px 30%,
-      8px 50%,
-      8px 50%;
-  }
-  50% {
-    background-size:
-      8px 30%,
-      8px 30%,
-      8px 30%,
-      8px 30%,
-      8px 30%,
-      8px 30%;
-  }
-  66.67% {
-    background-size:
-      8px 50%,
-      8px 50%,
-      8px 30%,
-      8px 30%,
-      8px 30%,
-      8px 30%;
-  }
-  83.33% {
-    background-size:
-      8px 50%,
-      8px 50%,
-      8px 50%,
-      8px 50%,
-      8px 30%,
-      8px 30%;
-  }
-}
-
-@keyframes __loading-bars-7-l7-1 {
   20% {
-    left: 0px;
+    background-size:
+      20% 20%,
+      20% 50%,
+      20% 50%;
   }
   40% {
-    left: calc(50% - 4px);
+    background-size:
+      20% 100%,
+      20% 20%,
+      20% 50%;
   }
   60% {
-    left: calc(100% - 8px);
+    background-size:
+      20% 50%,
+      20% 100%,
+      20% 20%;
   }
-  80%,
+  80% {
+    background-size:
+      20% 50%,
+      20% 50%,
+      20% 100%;
+  }
   100% {
-    left: 100%;
+    background-size:
+      20% 50%,
+      20% 50%,
+      20% 50%;
   }
 }

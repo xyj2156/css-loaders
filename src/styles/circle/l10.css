@@ -1,35 +1,41 @@
 .__loading-circle-10 {
-  width: 75px;
+  width: 65px;
   aspect-ratio: 1;
-  --g: no-repeat
-    radial-gradient(farthest-side, #0000 calc(95% - 2px), #fff calc(100% - 2px) 98%, #0000 101%);
-  background: var(--g), var(--g), var(--g), var(--g), var(--g), var(--g), var(--g), var(--g);
-  background-size: 15px 15px;
-  animation: __loading-circle-10-l10 1s infinite alternate linear;
+  --g: radial-gradient(farthest-side, #0000 calc(95% - 3px), #fff calc(100% - 3px) 98%, #0000 101%)
+    no-repeat;
+  background: var(--g), var(--g), var(--g);
+  background-size: 30px 30px;
+  animation: __loading-circle-10-l10 1.5s infinite;
 }
 @keyframes __loading-circle-10-l10 {
-  0%,
-  30% {
+  0% {
     background-position:
       0 0,
-      50% 0,
-      100% 0,
-      0 50%,
-      100% 50%,
       0 100%,
-      50% 100%,
       100% 100%;
   }
-  70%,
+  25% {
+    background-position:
+      100% 0,
+      0 100%,
+      100% 100%;
+  }
+  50% {
+    background-position:
+      100% 0,
+      0 0,
+      100% 100%;
+  }
+  75% {
+    background-position:
+      100% 0,
+      0 0,
+      0 100%;
+  }
   100% {
     background-position:
-      15% 15%,
-      50% 0,
-      85% 15%,
-      0 50%,
-      100% 50%,
-      15% 85%,
-      50% 100%,
-      85% 85%;
+      100% 100%,
+      0 0,
+      0 100%;
   }
 }

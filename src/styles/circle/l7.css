@@ -1,47 +1,30 @@
-.__loading-circle-7,
-.__loading-circle-7:before,
-.__loading-circle-7:after {
-  width: 35px;
+.__loading-circle-7 {
+  width: 50px;
   aspect-ratio: 1;
-  box-shadow: 0 0 0 3px inset #fff;
+  box-shadow: 0 0 0 3px #fff inset;
+  border-radius: 50%;
   position: relative;
-  animation: 1.5s infinite 0.5s;
-  animation-name: __loading-circle-7-l7-1, __loading-circle-7-l7-2;
 }
 .__loading-circle-7:before,
 .__loading-circle-7:after {
   content: '';
   position: absolute;
-  left: calc(100% + 5px);
-  animation-delay: 1s, 0s;
+  top: 5px;
+  left: calc(50% - 12.5px);
+  box-shadow: inherit;
+  width: 25px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform-origin: 50% calc(100% - 5px);
+  animation: __loading-circle-7-l7 1.5s linear infinite;
 }
 .__loading-circle-7:after {
-  left: -40px;
-  animation-delay: 0s, 1s;
+  top: calc(100% + 2px);
+  transform-origin: 50% -27px;
+  animation-delay: -0.75s;
 }
-@keyframes __loading-circle-7-l7-1 {
-  0%,
-  55%,
-  100% {
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  20%,
-  30% {
-    border-top-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-  }
-}
-@keyframes __loading-circle-7-l7-2 {
-  0%,
-  55%,
-  100% {
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-  20%,
-  30% {
-    border-bottom-left-radius: 50%;
-    border-top-right-radius: 50%;
+@keyframes __loading-circle-7-l7 {
+  to {
+    transform: rotate(360deg);
   }
 }

@@ -1,0 +1,37 @@
+.__loading-dots-vs-bars-18 {
+  width: 40px;
+  aspect-ratio: 1;
+  --c: linear-gradient(#000 0 0);
+  --m: radial-gradient(farthest-side, #000 92%, #0000);
+  background:
+    var(--m) center / 12px 12px,
+    var(--c) left 50% top -20px/8px 16px,
+    var(--c) left 50% bottom -20px/8px 16px,
+    var(--c) top 50% left -20px/16px 8px,
+    var(--c) top 50% right -20px/16px 8px;
+  background-repeat: no-repeat;
+  animation:
+    __loading-dots-vs-bars-18-l18-1 1.5s infinite,
+    __loading-dots-vs-bars-18-l18-2 1.5s infinite;
+}
+@keyframes __loading-dots-vs-bars-18-l18-1 {
+  30%,
+  70% {
+    background-position:
+      center,
+      left 50% top calc(50% - 8px),
+      left 50% bottom calc(50% - 8px),
+      top 50% left calc(50% - 8px),
+      top 50% right calc(50% - 8px);
+  }
+}
+@keyframes __loading-dots-vs-bars-18-l18-2 {
+  0%,
+  40% {
+    transform: rotate(0);
+  }
+  60%,
+  100% {
+    transform: rotate(90deg);
+  }
+}
