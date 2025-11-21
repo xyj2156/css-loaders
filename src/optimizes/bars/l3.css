@@ -1,37 +1,23 @@
 .__loading-bars-3 {
-  --s:var(--size,40px);
-  --c1:var(--color1,#000);
+  --c1: var(--color-1, #000);
+  --s: var(--size, 45px);
+  --d1: var(--duration-1, 1s);
 
   width: var(--s);
-  height: calc(var(--s) * 0.65);
-  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  aspect-ratio: 1;
   background:
-    var(--c) 0 100%,
-    var(--c) 50% 100%,
-    var(--c) 100% 100%;
-  background-size: calc(var(--s) * 0.2) calc(100% - 4px);
-  position: relative;
+    linear-gradient(#0000 calc(1 * 100% / 6), var(--c1) 0 calc(3 * 100% / 6), #0000 0) left bottom,
+    linear-gradient(#0000 calc(2 * 100% / 6), var(--c1) 0 calc(4 * 100% / 6), #0000 0) center bottom,
+    linear-gradient(#0000 calc(3 * 100% / 6), var(--c1) 0 calc(5 * 100% / 6), #0000 0) right bottom;
+  background-size: 20% 600%;
+  background-repeat: no-repeat;
+  animation: __loading-bars-3-l3 var(--d1) infinite linear;
 }
-.__loading-bars-3:before {
-  content: '';
-  position: absolute;
-  width: calc(var(--s) * 0.2);
-  height: calc(var(--s) * 0.2);
-  border-radius: 50%;
-  background: var(--c1);
-  left: 0;
-  top: 0;
-  animation:
-    __loading-bars-3-l3-1 1.5s linear infinite alternate,
-    __loading-bars-3-l3-2 0.75s cubic-bezier(0, 200, 0.8, 200) infinite;
-}
-@keyframes __loading-bars-3-l3-1 {
+@keyframes __loading-bars-3-l3 {
   100% {
-    left: calc(100% - var(--s) * 0.2);
-  }
-}
-@keyframes __loading-bars-3-l3-2 {
-  100% {
-    top: -0.1px;
+    background-position:
+      left top,
+      center top,
+      right top;
   }
 }

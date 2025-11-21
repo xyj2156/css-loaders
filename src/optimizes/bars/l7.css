@@ -1,95 +1,52 @@
 .__loading-bars-7 {
-  --s: var(--size, 40px);
+  --s: var(--size, 45px);
   --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 1s);
 
   width: var(--s);
-  aspect-ratio: 1;
+  aspect-ratio: 0.75;
   --c: no-repeat linear-gradient(var(--c1) 0 0);
   background:
-    var(--c) 0 0,
-    var(--c) 0 100%,
-    var(--c) 50% 0,
-    var(--c) 50% 100%,
-    var(--c) 100% 0,
-    var(--c) 100% 100%;
-  background-size: calc(var(--s) * 0.2) 50%;
-  animation: __loading-bars-7-l7-0 1s infinite;
-  position: relative;
-  overflow: hidden;
+    var(--c) 0% 50%,
+    var(--c) 50% 50%,
+    var(--c) 100% 50%;
+  animation: __loading-bars-7-l7 var(--d1) infinite linear alternate;
 }
-.__loading-bars-7:before {
-  content: '';
-  position: absolute;
-  width: calc(var(--s) * 0.2);
-  height: calc(var(--s) * 0.2);
-  border-radius: 50%;
-  background: var(--c1);
-  top: calc(50% - calc(var(--s) * 0.1));
-  left: calc(var(--s) * -0.2);
-  animation: inherit;
-  animation-name: __loading-bars-7-l7-1;
-}
-
-@keyframes __loading-bars-7-l7-0 {
-  16.67% {
+@keyframes __loading-bars-7-l7 {
+  0% {
     background-size:
-      calc(var(--s) * 0.2) 30%,
-      calc(var(--s) * 0.2) 30%,
-      calc(var(--s) * 0.2) 50%,
-      calc(var(--s) * 0.2) 50%,
-      calc(var(--s) * 0.2) 50%,
-      calc(var(--s) * 0.2) 50%;
+      20% 50%,
+      20% 50%,
+      20% 50%;
   }
-  33.33% {
-    background-size:
-      calc(var(--s) * 0.2) 30%,
-      calc(var(--s) * 0.2) 30%,
-      calc(var(--s) * 0.2) 30%,
-      calc(var(--s) * 0.2) 30%,
-      calc(var(--s) * 0.2) 50%,
-      calc(var(--s) * 0.2) 50%;
-  }
-  50% {
-    background-size:
-      calc(var(--s) * 0.2) 30%,
-      calc(var(--s) * 0.2) 30%,
-      calc(var(--s) * 0.2) 30%,
-      calc(var(--s) * 0.2) 30%,
-      calc(var(--s) * 0.2) 30%,
-      calc(var(--s) * 0.2) 30%;
-  }
-  66.67% {
-    background-size:
-      calc(var(--s) * 0.2) 50%,
-      calc(var(--s) * 0.2) 50%,
-      calc(var(--s) * 0.2) 30%,
-      calc(var(--s) * 0.2) 30%,
-      calc(var(--s) * 0.2) 30%,
-      calc(var(--s) * 0.2) 30%;
-  }
-  83.33% {
-    background-size:
-      calc(var(--s) * 0.2) 50%,
-      calc(var(--s) * 0.2) 50%,
-      calc(var(--s) * 0.2) 50%,
-      calc(var(--s) * 0.2) 50%,
-      calc(var(--s) * 0.2) 30%,
-      calc(var(--s) * 0.2) 30%;
-  }
-}
-
-@keyframes __loading-bars-7-l7-1 {
   20% {
-    left: 0px;
+    background-size:
+      20% 20%,
+      20% 50%,
+      20% 50%;
   }
   40% {
-    left: calc(50% - calc(var(--s) * 0.1));
+    background-size:
+      20% 100%,
+      20% 20%,
+      20% 50%;
   }
   60% {
-    left: calc(100% - calc(var(--s) * 0.2));
+    background-size:
+      20% 50%,
+      20% 100%,
+      20% 20%;
   }
-  80%,
+  80% {
+    background-size:
+      20% 50%,
+      20% 50%,
+      20% 100%;
+  }
   100% {
-    left: 100%;
+    background-size:
+      20% 50%,
+      20% 50%,
+      20% 50%;
   }
 }

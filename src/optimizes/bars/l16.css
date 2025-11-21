@@ -1,82 +1,40 @@
 .__loading-bars-16 {
-  --s: var(--size, 40px);
+  --s: var(--size, 45px);
   --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 1s);
+  --d2: var(--duration-2, 1s);
 
   width: var(--s);
   aspect-ratio: 1;
-  --c: linear-gradient(var(--c1) 0 0);
-  --m: radial-gradient(farthest-side, var(--c1) 92%, #0000);
-  background: var(--c), var(--m), var(--c), var(--m), var(--c), var(--m);
-  background-size:
-    calc(var(--s) * 0.2) calc(var(--s) * 0.3),
-    calc(var(--s) * 0.2) calc(var(--s) * 0.2);
-  background-repeat: no-repeat;
-  animation: __loading-bars-16-l16 1s infinite linear alternate;
+  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  background: var(--c), var(--c), var(--c);
+  animation:
+    __loading-bars-16-l16-1 var(--d1) infinite,
+    __loading-bars-16-l16-2 var(--d2) infinite;
 }
-@keyframes __loading-bars-16-l16 {
+@keyframes __loading-bars-16-l16-1 {
   0%,
-  5% {
+  100% {
+    background-size: 20% 100%;
+  }
+  33%,
+  66% {
+    background-size: 20% 40%;
+  }
+}
+@keyframes __loading-bars-16-l16-2 {
+  0%,
+  33% {
     background-position:
-      0 50%,
       0 0,
-      50% 50%,
-      50% 0,
-      100% 50%,
+      50% 100%,
       100% 0;
   }
-  16.67% {
-    background-position:
-      0 50%,
-      0 calc(50% - calc(var(--s) * 0.25)),
-      50% 50%,
-      50% 0,
-      100% 50%,
-      100% 0;
-  }
-  33.33% {
-    background-position:
-      0 calc(50% + calc(var(--s) * 0.25)),
-      0 50%,
-      50% 50%,
-      50% 0,
-      100% 50%,
-      100% 0;
-  }
-  50% {
-    background-position:
-      0 calc(50% + calc(var(--s) * 0.25)),
-      0 50%,
-      50% 50%,
-      50% calc(50% - calc(var(--s) * 0.25)),
-      100% 50%,
-      100% 0;
-  }
-  66.67% {
-    background-position:
-      0 calc(50% + calc(var(--s) * 0.25)),
-      0 50%,
-      50% calc(50% + calc(var(--s) * 0.25)),
-      50% 50%,
-      100% 50%,
-      100% 0;
-  }
-  83.33% {
-    background-position:
-      0 calc(50% + calc(var(--s) * 0.25)),
-      0 50%,
-      50% calc(50% + calc(var(--s) * 0.25)),
-      50% 50%,
-      100% 50%,
-      100% calc(50% - calc(var(--s) * 0.25));
-  }
-  95%,
+  66%,
   100% {
     background-position:
-      0 calc(50% + calc(var(--s) * 0.25)),
-      0 50%,
-      50% calc(50% + calc(var(--s) * 0.25)),
-      50% 50%,
-      100% calc(50% + calc(var(--s) * 0.25)),
-      100% 50%;
+      0 100%,
+      50% 0,
+      100% 100%;
   }
 }

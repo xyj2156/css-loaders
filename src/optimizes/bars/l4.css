@@ -1,71 +1,41 @@
 .__loading-bars-4 {
-  --s:var(--size, 40px);
-  --c1:var(--color-1, #000);
+  --s: var(--size, 45px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 1s);
+  --_c: no-repeat linear-gradient(var(--c1) calc(50% - 10px), #0000 0 calc(50% + 10px), var(--c1) 0);
 
   width: var(--s);
-  height: calc(var(--s) * 0.5);
-  --c: no-repeat radial-gradient(farthest-side, var(--c1) 93%, #0000);
+  aspect-ratio: 1;
   background:
-    var(--c) 0 0,
-    var(--c) 50% 0,
-    var(--c) 100% 0;
-  background-size: calc(var(--s) * 0.2) calc(var(--s) * 0.2);
-  position: relative;
-  animation: __loading-bars-4-l4-0 1s linear infinite alternate;
+    var(--_c) 0% 100%,
+    var(--_c) 50% 100%,
+    var(--_c) 100% 100%;
+  background-size: calc(20% * var(--s) / 45) calc(200% + 20px);
+  animation: __loading-bars-4-l4 var(--d1) infinite linear;
 }
-.__loading-bars-4:before {
-  content: '';
-  position: absolute;
-  width: calc(var(--s) * 0.2);
-  height: calc(var(--s) * 0.3);
-  background: var(--c1);
-  left: 0;
-  top: 0;
-  animation:
-    __loading-bars-4-l4-1 1s linear infinite alternate,
-    __loading-bars-4-l4-2 0.5s cubic-bezier(0, 200, 0.8, 200) infinite;
-}
-@keyframes __loading-bars-4-l4-0 {
-  0% {
+@keyframes __loading-bars-4-l4 {
+  33% {
     background-position:
-      0 100%,
-      50% 0,
-      100% 0;
-  }
-  8%,
-  42% {
-    background-position:
-      0 0,
-      50% 0,
-      100% 0;
+      0% 50%,
+      50% 100%,
+      100% 100%;
   }
   50% {
     background-position:
-      0 0,
-      50% 100%,
-      100% 0;
-  }
-  58%,
-  92% {
-    background-position:
-      0 0,
-      50% 0,
-      100% 0;
-  }
-  100% {
-    background-position:
-      0 0,
-      50% 0,
+      0% 0%,
+      50% 50%,
       100% 100%;
   }
-}
-@keyframes __loading-bars-4-l4-1 {
-  100% {
-    left: calc(100% - var(--s) * 0.2);
+  66% {
+    background-position:
+      0% 0%,
+      50% 0%,
+      100% 50%;
   }
-}
-@keyframes __loading-bars-4-l4-2 {
   100% {
-    top: -0.1px;
+    background-position:
+      0% 0%,
+      50% 0%,
+      100% 0%;
   }
 }
