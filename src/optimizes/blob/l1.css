@@ -1,12 +1,13 @@
 .__loading-blob-1 {
   --s: var(--size, 50px);
   --c1: var(--color-1, #006cff);
+  --d1: var(--duration-1, 3s);
 
   width: var(--s);
   aspect-ratio: 1;
   background: var(--c1);
   border-radius: 50%;
-  animation: __loading-blob-1-l1 3s infinite linear;
+  animation: __loading-blob-1-l1 var(--d1) infinite linear;
 }
 @keyframes __loading-blob-1-l1 {
   12.5% {

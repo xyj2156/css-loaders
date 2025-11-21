@@ -2,6 +2,8 @@
   --s: var(--size, 100px);
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #ffff00);
+  --d1: var(--duration-1, 2s);
+  --d2: var(--duration-2, -1s);
 
   width: var(--s);
   aspect-ratio: 1;
@@ -19,10 +21,10 @@
   width: calc(var(--s) * 0.4);
   height: calc(var(--s) * 0.4);
   background: var(--c2);
-  animation: __loading-blob-7-l7 2s infinite;
+  animation: __loading-blob-7-l7 var(--d1) infinite;
 }
 .__loading-blob-7:after {
-  animation-delay: -1s;
+  animation-delay: var(--d2);
 }
 @keyframes __loading-blob-7-l7 {
   0% {

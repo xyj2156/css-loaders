@@ -2,6 +2,7 @@
   --s: var(--size, 80px);
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #ff00ff);
+  --d1: var(--duration-1, 2s);
 
   width: var(--s);
   aspect-ratio: 1;
@@ -21,7 +22,7 @@
 }
 .__loading-blob-9:after {
   margin: calc(var(--s) / 4.7);
-  animation: __loading-blob-9-l9 2s infinite;
+  animation: __loading-blob-9-l9 var(--d1) infinite;
 }
 @keyframes __loading-blob-9-l9 {
   12.5% {

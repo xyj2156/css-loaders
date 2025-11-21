@@ -2,6 +2,7 @@
   --s: var(--size, 50px);
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #000);
+  --d1: var(--duration-1, 1s);
 
   height: var(--s);
   aspect-ratio: 2;
@@ -15,7 +16,7 @@
     var(--c2);
   background-repeat: no-repeat;
   filter: blur(calc(var(--s) / 12.5)) contrast(10);
-  animation: __loading-blob-14-l14 1s infinite;
+  animation: __loading-blob-14-l14 var(--d1) infinite;
 }
 @keyframes __loading-blob-14-l14 {
   100% {

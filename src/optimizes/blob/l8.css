@@ -3,6 +3,8 @@
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #ff00ff);
   --c3: var(--color-3, #000);
+  --d1: var(--duration-1, 2s);
+  --d2: var(--duration-2, 0.5s);
 
   width: var(--s);
   aspect-ratio: 1;
@@ -29,13 +31,13 @@
 }
 .__loading-blob-8:before {
   mask-image: linear-gradient(var(--c3) ,var(--c3)), linear-gradient(var(--c3), var(--c3));
-  animation: __loading-blob-8-l8-1 2s infinite;
+  animation: __loading-blob-8-l8-1 var(--d1) infinite;
 }
 .__loading-blob-8:after {
   mask-image: linear-gradient(var(--c3), var(--c3));
   animation:
-    __loading-blob-8-l8-1 2s infinite,
-    __loading-blob-8-l8-2 0.5s infinite cubic-bezier(0.5, 200, 0.5, -200);
+    __loading-blob-8-l8-1 var(--d1) infinite,
+    __loading-blob-8-l8-2 var(--d2) infinite cubic-bezier(0.5, 200, 0.5, -200);
 }
 
 @keyframes __loading-blob-8-l8-1 {

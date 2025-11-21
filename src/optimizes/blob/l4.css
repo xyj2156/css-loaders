@@ -2,6 +2,7 @@
   --s: var(--size, 100px);
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #ff00ff);
+  --d1: var(--duration-1, 2s);
 
   width: var(--s);
   aspect-ratio: 1;
@@ -19,7 +20,7 @@
   margin: calc(var(--s) * 0.3) 0;
   border-radius: calc(var(--s) * 1);
   background: var(--c2);
-  animation: __loading-blob-4-l4 2s infinite linear;
+  animation: __loading-blob-4-l4 var(--d1) infinite linear;
 }
 .__loading-blob-4:after {
   --_s: -1;

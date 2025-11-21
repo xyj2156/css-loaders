@@ -2,6 +2,8 @@
   --s: var(--size, 70px);
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #ff00ff);
+  --d1: var(--duration-1, 3s);
+  --d2: var(--duration-2, -0.8s);
 
   width: var(--s);
   height: var(--s);
@@ -16,12 +18,12 @@
 .__loading-blob-2:after {
   content: '';
   grid-area: 1/1;
-  animation: __loading-blob-2-l2 3s infinite linear;
+  animation: __loading-blob-2-l2 var(--d1) infinite linear;
   background: var(--c2);
   border-radius: 50%;
 }
 .__loading-blob-2:after {
-  animation-delay: -0.8s;
+  animation-delay: var(--d2);
 }
 @keyframes __loading-blob-2-l2 {
   12.5% {

@@ -2,6 +2,7 @@
   --s: var(--size, 80px);
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #000);
+  --d1: var(--duration-1, 2s);
 
   width: var(--s);
   aspect-ratio: 1;
@@ -14,7 +15,7 @@
     conic-gradient(from -90deg at calc(var(--s) / 2) calc(var(--s) / 2), #0000 90deg, var(--c1) 0) content-box,
     var(--c2);
   filter: blur(calc(var(--s) / 20)) contrast(10);
-  animation: __loading-blob-11-l11 2s infinite;
+  animation: __loading-blob-11-l11 var(--d1) infinite;
 }
 @keyframes __loading-blob-11-l11 {
   0% {

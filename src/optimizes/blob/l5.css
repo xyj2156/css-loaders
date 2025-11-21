@@ -2,6 +2,7 @@
   --s: var(--size, 100px);
   --c1: var(--color-1, #00ffff);
   --c2: var(--color-2, #fff);
+  --d1: var(--duration-1, 2s);
 
   width: var(--s);
   height: var(--s);
@@ -27,7 +28,7 @@
   margin: auto;
   border-radius: 50%;
   background: var(--c1);
-  animation: __loading-blob-5-l5 2s infinite linear;
+  animation: __loading-blob-5-l5 var(--d1) infinite linear;
 }
 @keyframes __loading-blob-5-l5 {
   0% {

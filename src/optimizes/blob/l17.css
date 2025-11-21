@@ -2,6 +2,7 @@
   --s: var(--size, 80px);
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #000);
+  --d1: var(--duration-1, 1s);
 
   --s1: calc(var(--s) / 4);
   width: var(--s);
@@ -9,15 +10,15 @@
   border: calc(var(--s) / 8) solid var(--c2);
   box-sizing: border-box;
   background:
-    radial-gradient(farthest-side, #fff 98%, #0000) 50%/var(--s1) var(--s1),
-    radial-gradient(farthest-side, #fff 98%, #0000) 50%/var(--s1) var(--s1),
-    radial-gradient(farthest-side, #fff 98%, #0000) 50%/var(--s1) var(--s1),
-    radial-gradient(farthest-side, #fff 98%, #0000) 50%/var(--s1) var(--s1),
-    radial-gradient(farthest-side, #fff 98%, #0000) 50%/80% 80%,
-    #000;
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50%/var(--s1) var(--s1),
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50%/var(--s1) var(--s1),
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50%/var(--s1) var(--s1),
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50%/var(--s1) var(--s1),
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50%/80% 80%,
+    var(--c2);
   background-repeat: no-repeat;
   filter: blur(calc(var(--s) / 20)) contrast(10);
-  animation: __loading-blob-17-l17 1s infinite alternate;
+  animation: __loading-blob-17-l17 var(--d1) infinite alternate;
 }
 @keyframes __loading-blob-17-l17 {
   0% {

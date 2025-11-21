@@ -3,6 +3,7 @@
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #000);
   --c3: var(--color-3, #0000);
+  --d1: var(--duration-1, 1s);
 
   height: calc(var(--s) * 1.6);
   width: var(--s);
@@ -16,7 +17,7 @@
   background-size: 100% 50%;
   background-repeat: no-repeat;
   filter: blur(calc(var(--s) * 0.08)) contrast(10);
-  animation: __loading-blob-20-l20 1s infinite alternate;
+  animation: __loading-blob-20-l20 var(--d1) infinite alternate;
 }
 @keyframes __loading-blob-20-l20 {
   0%,
