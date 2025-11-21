@@ -1,0 +1,44 @@
+.__loading-bouncing-12 {
+  --s: var(--size, 60px);
+  --c1: var(--color-1, #524656);
+  --c2: var(--color-2, #cf4647);
+  --d1: var(--duration-1, 0.5s);
+  --d2: var(--duration-2, 2s);
+
+  height: var(--s);
+  aspect-ratio: 1;
+  position: relative;
+  background:
+    conic-gradient(at calc(var(--s) * 20 / 60) calc(var(--s) * 40 / 60), #0000 25%, var(--c1) 0),
+    conic-gradient(from -90deg at calc(var(--s) * 40 / 60) calc(var(--s) * 20 / 60), #0000 75%, var(--c1) 0);
+  clip-path: inset(-100% 0);
+}
+.__loading-bouncing-12:before {
+  content: '';
+  position: absolute;
+  inset: auto 75% 0 0;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--c2);
+  animation:
+    __loading-bouncing-12-l12-0 var(--d1) cubic-bezier(0, 600, 1, 600) infinite,
+    __loading-bouncing-12-l12-1 var(--d2) linear infinite;
+}
+@keyframes __loading-bouncing-12-l12-0 {
+  0%,
+  2% {
+    bottom: 0%;
+  }
+  98%,
+  to {
+    bottom: 0.1%;
+  }
+}
+@keyframes __loading-bouncing-12-l12-1 {
+  0% {
+    translate: calc(var(--s) * -18 / 60) calc(var(--s) * -80 / 60);
+  }
+  to {
+    translate: calc(var(--s) * 62 / 60) 0;
+  }
+}

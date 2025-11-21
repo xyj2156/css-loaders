@@ -1,0 +1,42 @@
+.__loading-bouncing-1 {
+  --s: var(--size, 60px);
+  --cx: var(--color-x, #524656);
+  --c1: var(--color-1, #cf4647);
+  --d1: var(--duration-1, 0.5s);
+  --d2: var(--duration-2, 2s);
+
+  height: var(--s);
+  aspect-ratio: 2;
+  border-bottom: 3px solid var(--cx);
+  position: relative;
+  overflow: hidden;
+}
+.__loading-bouncing-1:before {
+  content: '';
+  position: absolute;
+  inset: auto 42.5% 0;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--c1);
+  animation:
+    __loading-bouncing-1-l1-0 var(--d1) cubic-bezier(0, 900, 1, 900) infinite,
+    __loading-bouncing-1-l1-1 var(--d2) linear infinite;
+}
+@keyframes __loading-bouncing-1-l1-0 {
+  0%,
+  2% {
+    bottom: 0%;
+  }
+  98%,
+  to {
+    bottom: 0.1%;
+  }
+}
+@keyframes __loading-bouncing-1-l1-1 {
+  0% {
+    translate: -500%;
+  }
+  to {
+    translate: 500%;
+  }
+}
