@@ -3,6 +3,8 @@
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #666);
   --c3: var(--color-3, #aaa);
+  --d1: var(--duration-1, 1.2s);
+  --d2: var(--duration-2, 0.6s);
 
   --_d: calc(0.353 * var(--s));
   width: calc(var(--s) + var(--_d));
@@ -27,14 +29,14 @@
     var(--c2) 0 270deg,
     var(--c3) 0
   );
-  animation: __loading-3d-5-l5 1.2s infinite;
+  animation: __loading-3d-5-l5 var(--d1) infinite;
 }
 .__loading-3d-5:before {
   margin-right: calc(var(--_d) / -2 - 1px);
 }
 .__loading-3d-5:after {
   margin-left: calc(var(--_d) / -2 - 1px);
-  animation-delay: 0.6s;
+  animation-delay: var(--d2);
 }
 @keyframes __loading-3d-5-l5 {
   0% {

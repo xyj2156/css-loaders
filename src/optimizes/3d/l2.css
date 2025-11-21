@@ -3,13 +3,14 @@
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #666);
   --c3: var(--color-3, #aaa);
+  --d1: var(--duration-1, 0.8s);
 
   --_d: calc(0.353 * var(--s));
   width: calc(var(--s) + var(--_d));
   aspect-ratio: 1;
   display: grid;
   filter: drop-shadow(0 0 0 var(--c1));
-  animation: __loading-3d-2-l2 0.8s infinite;
+  animation: __loading-3d-2-l2 var(--d1) infinite;
 }
 .__loading-3d-2:before {
   content: '';

@@ -3,6 +3,7 @@
   --g: calc(var(--s) / 8);
   --c1: var(--color-1, #fe4365);
   --c2: var(--color-2, #111);
+  --d1: var(--duration-1, 1.5s);
 
   height: calc(2 * (var(--s) + var(--g)));
   aspect-ratio: 1;
@@ -16,7 +17,7 @@
     linear-gradient(var(--c1) 0 0) no-repeat #fff;
   background-size: 50% 50%;
   mask: radial-gradient(calc(var(--s) / 2), #000 calc(100% - calc(var(--s) / 40)), #0000) 0 0/50% 50%;
-  animation: __loading-3d-12-l12 steps(3) 1.5s infinite;
+  animation: __loading-3d-12-l12 steps(3) var(--d1) infinite;
 }
 @keyframes __loading-3d-12-l12 {
   0%,

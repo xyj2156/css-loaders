@@ -3,8 +3,9 @@
   --color-1: #fff;
   --color-2: #666;
   --color-3: #aaa;
-  --_d: calc(0.353 * var(--s));
+  --d1: var(--duration-1, 0.8s);
 
+  --_d: calc(0.353 * var(--s));
   height: calc(var(--s) + var(--_d));
   aspect-ratio: 1;
   display: grid;
@@ -22,7 +23,7 @@
     0 var(--_d)
   );
   background: conic-gradient(from -90deg at var(--s) var(--_d), var(--color-1) 135deg, var(--color-2) 0 270deg, var(--color-3) 0);
-  animation: __loading-3d-3-l3 0.8s infinite alternate;
+  animation: __loading-3d-3-l3 var(--d1) infinite alternate;
 }
 @keyframes __loading-3d-3-l3 {
   100% {
