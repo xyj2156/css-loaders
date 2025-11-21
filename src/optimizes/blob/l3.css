@@ -1,0 +1,32 @@
+.__loading-blob-3 {
+  --s:var(--size, 120px);
+  --c1:var(--color, #fff);
+  --c2:var(--color, #ff00ff);
+
+  width: var(--s);
+  height: calc(var(--s) / 2);
+  padding: calc(var(--s) / 12);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  background: var(--c1);
+  filter: blur(calc(var(--s)/24)) contrast(10) hue-rotate(60deg);
+  mix-blend-mode: darken;
+}
+.__loading-blob-3:before,
+.__loading-blob-3:after {
+  content: '';
+  width: calc(var(--s) / 3);
+  border-radius: 50%;
+  background: var(--c2);
+  animation: __loading-blob-3-l3 1s infinite alternate;
+}
+.__loading-blob-3:after {
+  --_s: -1;
+}
+@keyframes __loading-blob-3-l3 {
+  90%,
+  100% {
+    transform: translate(calc(var(--_s, 1) * calc(var(--s) / 4)));
+  }
+}

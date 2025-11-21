@@ -1,0 +1,39 @@
+.__loading-blob-6 {
+  --s: var(--size, 100px);
+  --c1: var(--color-1, #ff0000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  padding: calc(var(--s) / 10);
+  box-sizing: border-box;
+  display: grid;
+  background: #fff;
+  filter: blur(3px) contrast(7) hue-rotate(290deg);
+  mix-blend-mode: darken;
+}
+.__loading-blob-6:before {
+  content: '';
+  margin: auto;
+  width: calc(var(--s) * 0.3);
+  height: calc(var(--s) * 0.3);
+  border-radius: 50%;
+  color: var(--c1);
+  background: currentColor;
+  box-shadow:
+    calc(var(--s) * -0.3) 0,
+    calc(var(--s) * 0.3) 0,
+    0 calc(var(--s) * 0.3),
+    0 calc(var(--s) * -0.3);
+  animation: __loading-blob-6-l6 1s infinite alternate;
+}
+@keyframes __loading-blob-6-l6 {
+  90%,
+  100% {
+    box-shadow:
+      calc(var(--s) * -0.1) 0,
+      calc(var(--s) * 0.1) 0,
+      0 calc(var(--s) * 0.1),
+      0 calc(var(--s) * -0.1);
+    transform: rotate(180deg);
+  }
+}

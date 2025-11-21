@@ -1,0 +1,35 @@
+.__loading-blob-11 {
+  --s: var(--size, 80px);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border: calc(var(--s) / 8) solid #0000;
+  padding: calc(var(--s) / 16);
+  box-sizing: border-box;
+  background:
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 0 0/calc(var(--s) / 4) calc(var(--s) / 4) no-repeat,
+    conic-gradient(from 90deg at calc(var(--s) / 8) calc(var(--s) / 8), #0000 90deg, var(--c1) 0) content-box,
+    conic-gradient(from -90deg at calc(var(--s) / 2) calc(var(--s) / 2), #0000 90deg, var(--c1) 0) content-box,
+    var(--c2);
+  filter: blur(calc(var(--s) / 20)) contrast(10);
+  animation: __loading-blob-11-l11 2s infinite;
+}
+@keyframes __loading-blob-11-l11 {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0;
+  }
+}

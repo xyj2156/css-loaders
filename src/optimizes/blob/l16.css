@@ -1,0 +1,36 @@
+.__loading-blob-16 {
+  --s: var(--size, 80px);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border: calc(var(--s) / 8) solid var(--c2);
+  box-sizing: border-box;
+  background:
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50%/calc(var(--s) * 0.375) calc(var(--s) * 0.375),
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50%/calc(var(--s) * 0.375) calc(var(--s) * 0.375),
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50%/80% 80%,
+    var(--c2);
+  background-repeat: no-repeat;
+  filter: blur(calc(var(--s) / 20)) contrast(10);
+  animation: __loading-blob-16-l16 1s infinite alternate;
+}
+@keyframes __loading-blob-16-l16 {
+  0%,
+  30% {
+    background-position: 50%, 50%, 50%;
+  }
+  60% {
+    background-position:
+      0 0,
+      50%,
+      50%;
+  }
+  100% {
+    background-position:
+      50%,
+      100% 100%,
+      50%;
+  }
+}

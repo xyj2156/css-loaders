@@ -1,0 +1,38 @@
+.__loading-blob-19 {
+  --s: var(--size, 80px);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border: calc(var(--s) / 8) solid var(--c2);
+  box-sizing: border-box;
+  background:
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) top,
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) top,
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) left,
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) right,
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) bottom,
+    var(--c2);
+  background-size: calc(var(--s) / 4) calc(var(--s) / 4);
+  background-repeat: no-repeat;
+  filter: blur(calc(var(--s) / 20)) contrast(10);
+  animation: __loading-blob-19-l19 2s infinite;
+}
+@keyframes __loading-blob-19-l19 {
+  0% {
+    background-position: top, top, left, right, bottom;
+  }
+  25% {
+    background-position: right, top, left, right, bottom;
+  }
+  50% {
+    background-position: bottom, top, left, right, bottom;
+  }
+  75% {
+    background-position: left, top, left, right, bottom;
+  }
+  100% {
+    background-position: top, top, left, right, bottom;
+  }
+}

@@ -1,0 +1,30 @@
+.__loading-blob-12 {
+  --s: var(--size, 80px);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border: calc(var(--s) / 8) solid #0000;
+  box-sizing: border-box;
+  background:
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 0 0/calc(var(--s) / 4) calc(var(--s) / 4),
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 100% 0/calc(var(--s) / 4) calc(var(--s) / 4),
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 100% 100%/calc(var(--s) / 4) calc(var(--s) / 4),
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 0 100%/calc(var(--s) / 4) calc(var(--s) / 4),
+    linear-gradient(var(--c1) 0 0) 50%/calc(var(--s) / 2) calc(var(--s) / 2),
+    var(--c2);
+  background-repeat: no-repeat;
+  filter: blur(calc(var(--s) / 20)) contrast(10);
+  animation: __loading-blob-12-l12 0.8s infinite;
+}
+@keyframes __loading-blob-12-l12 {
+  100% {
+    background-position:
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 0,
+      center;
+  }
+}
