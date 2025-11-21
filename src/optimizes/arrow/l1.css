@@ -1,6 +1,7 @@
 .__loading-arrow-1 {
   --s: var(--size, 100px);
   --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 1.5s);
 
   width: var(--s);
   height: calc(var(--s) * 0.3);
@@ -19,7 +20,7 @@
     calc(100% - calc(var(--s) * 0.15)) calc(100% - calc(var(--s) * 0.1)),
     0 calc(100% - calc(var(--s) * 0.1))
   );
-  animation: __loading-arrow-1-l1 1.5s infinite linear;
+  animation: __loading-arrow-1-l1 var(--d1) infinite linear;
 }
 @keyframes __loading-arrow-1-l1 {
   90%,

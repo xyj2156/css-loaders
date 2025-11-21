@@ -1,6 +1,7 @@
 .__loading-arrow-5 {
   --s:var(--size, 50px);
   --c1:var(--color-1, #000);
+  --d1:var(--duration-1, 1s);
 
   width: var(--s);
   height: calc(var(--s) * 0.6);
@@ -21,7 +22,7 @@
     calc(100% - calc(var(--s) * 0.3)) calc(100% - calc(var(--s) * 0.2)),
     0 calc(100% - calc(var(--s) * 0.2))
   );
-  animation: __loading-arrow-5-l5 1s infinite;
+  animation: __loading-arrow-5-l5 var(--d1) infinite;
   transform: translate(calc(0% + var(--_s, 0%)));
 }
 .__loading-arrow-5:after {

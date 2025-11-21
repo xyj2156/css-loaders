@@ -1,6 +1,7 @@
 .__loading-arrow-4 {
   --s: var(--size, 40px);
   --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 0.5s);
 
   width: var(--s);
   height: calc(var(--s) * 0.75);
@@ -20,7 +21,7 @@
     calc(100% - calc(var(--s) * 0.375)) calc(100% - calc(var(--s) * 0.25)),
     0 calc(100% - calc(var(--s) * 0.25))
   );
-  animation: __loading-arrow-4-l4 0.5s infinite alternate;
+  animation: __loading-arrow-4-l4 var(--d1) infinite alternate;
 }
 .__loading-arrow-4:after {
   --_s: -1;

@@ -1,10 +1,11 @@
 .__loading-arrow-7 {
   --s:var(--size, 110px);
-  --cx:var(--color-x, #000);
+  --c1:var(--color-1, #000);
+  --d1:var(--duration-1, 0.5s);
 
   width: var(--s);
   height: calc(var(--s) * 0.27);
-  color: var(--cx);
+  color: var(--c1);
   display: flex;
   background:
     linear-gradient(currentColor 0 0) left / calc(var(--s) * 0.27) calc(var(--s) * 0.09),
@@ -14,7 +15,7 @@
     conic-gradient(from 44deg at calc(100% - calc(var(--s) * 0.136)) 50%, #0000, currentColor 1deg 90deg, #0000 91deg)
       calc(100% - calc(var(--s) * 0.27)) 0/100% 100%;
   background-repeat: no-repeat;
-  animation: __loading-arrow-7-l7 0.5s infinite alternate;
+  animation: __loading-arrow-7-l7 var(--d1) infinite alternate;
 }
 .__loading-arrow-7:before {
   content: '';

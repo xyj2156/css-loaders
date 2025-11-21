@@ -1,6 +1,7 @@
 .__loading-arrow-8 {
   --s: var(--size, 30px);
   --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 0.5s);
 
   width: var(--s);
   height: var(--s);
@@ -12,7 +13,7 @@
       100%,
     conic-gradient(from 44deg at left, #0000, currentColor 1deg 90deg, #0000 91deg) left / calc(var(--s) / 2) 100%;
   background-repeat: no-repeat;
-  animation: __loading-arrow-8-l8 0.5s infinite alternate;
+  animation: __loading-arrow-8-l8 var(--d1) infinite alternate;
 }
 .__loading-arrow-8:before {
   content: '';
