@@ -1,0 +1,31 @@
+.__loading-blob-20 {
+  --s: var(--size, 50px);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+  --d1: var(--duration-1, 1s);
+
+  height: calc(var(--s) * 1.6);
+  width: var(--s);
+  border: calc(var(--s) * 0.2) solid var(--c1);
+  box-sizing: border-box;
+  background:
+    conic-gradient(from 160deg at top, var(--c2) 40deg, #0000 0) top,
+    conic-gradient(from -20deg at bottom, var(--c2) 40deg, #0000 0) bottom,
+    radial-gradient(farthest-side, var(--c2) 98%, #0000) bottom/100% 50%,
+    var(--c1);
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  filter: blur(calc(var(--s) * 0.08)) contrast(10);
+  animation: __loading-blob-20-l20 var(--d1) infinite alternate;
+}
+
+@keyframes __loading-blob-20-l20 {
+  0%,
+  30% {
+    background-position: top, bottom, bottom;
+  }
+  70%,
+  100% {
+    background-position: top, bottom, top;
+  }
+}

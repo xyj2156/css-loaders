@@ -1,0 +1,44 @@
+.__loading-circle-1 {
+  --s: var(--size, 65px);
+  --c1: var(--color-1, #fff);
+  --d1: var(--duration-1, 1s);
+
+  width: var(--s);
+  display: grid;
+  --mask:
+    radial-gradient(
+      calc(var(--s) * 12 / 65) at left calc(var(--s) * 15 / 65) top 50%,
+      #0000 95%,
+      #000
+    ),
+    radial-gradient(
+      calc(var(--s) * 12 / 65) at right calc(var(--s) * 15 / 65) top 50%,
+      #0000 95%,
+      #000
+    );
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  animation: __loading-circle-1-l1 var(--d1) infinite alternate;
+}
+
+.__loading-circle-1:before,
+.__loading-circle-1:after {
+  content: '';
+  grid-area: 1/1;
+  height: calc(var(--s) * 30 / 65);
+  aspect-ratio: 1;
+  background: var(--c1);
+  border-radius: 50%;
+}
+
+.__loading-circle-1:after {
+  margin-left: auto;
+}
+
+@keyframes __loading-circle-1-l1 {
+  to {
+    width: calc(var(--s) * 40 / 65);
+  }
+}

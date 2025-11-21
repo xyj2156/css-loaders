@@ -1,0 +1,66 @@
+.__loading-bouncing-11 {
+  --s: var(--size, 60px);
+  --c1: var(--color-1, #cf4647);
+  --c2: var(--color-2, #524656);
+  --d1: var(--duration-1, 0.5s);
+  --d2: var(--duration-2, 3s);
+
+  height: var(--s);
+  aspect-ratio: 1;
+  position: relative;
+  border: 3px solid #0000;
+  animation: __loading-bouncing-11-l11-1 var(--d2) linear infinite;
+}
+
+.__loading-bouncing-11:before {
+  content: '';
+  position: absolute;
+  inset: auto 35% 0;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--c1);
+  animation: __loading-bouncing-11-l11-0 var(--d1) cubic-bezier(0, 500, 1, 500) infinite;
+}
+
+.__loading-bouncing-11:after {
+  content: '';
+  position: absolute;
+  --b: 4px;
+  inset: calc(-1 * var(--b)) auto calc(-1 * var(--b)) 50%;
+  aspect-ratio: 1 / cos(30deg);
+  translate: -50% 0;
+  clip-path: polygon(
+    0 50%,
+    50% -50%,
+    100% 50%,
+    50% 150%,
+    0 50%,
+    var(--b) 50%,
+    calc(25% + var(--b) * cos(60deg)) calc(100% - var(--b) * sin(60deg)),
+    calc(75% - var(--b) * cos(60deg)) calc(100% - var(--b) * sin(60deg)),
+    calc(100% - var(--b)) 50%,
+    calc(75% - var(--b) * cos(60deg)) calc(var(--b) * sin(60deg)),
+    calc(25% + var(--b) * cos(60deg)) calc(var(--b) * sin(60deg)),
+    var(--b) 50%
+  );
+  background: var(--c2);
+  animation: inherit;
+  animation-direction: reverse;
+}
+
+@keyframes __loading-bouncing-11-l11-0 {
+  0%,
+  2% {
+    bottom: 0%;
+  }
+  98%,
+  to {
+    bottom: 0.1%;
+  }
+}
+
+@keyframes __loading-bouncing-11-l11-1 {
+  to {
+    rotate: 1turn;
+  }
+}

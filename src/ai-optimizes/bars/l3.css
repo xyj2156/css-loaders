@@ -1,0 +1,27 @@
+.__loading-bars-3 {
+  --s: var(--size, 45px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 1s);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    linear-gradient(var(--c1) 0 calc(1 * 100% / 6), var(--c1) 0 calc(3 * 100% / 6), var(--c1) 0 0)
+      left bottom,
+    linear-gradient(var(--c1) 0 calc(2 * 100% / 6), var(--c1) 0 calc(4 * 100% / 6), var(--c1) 0 0)
+      center bottom,
+    linear-gradient(var(--c1) 0 calc(3 * 100% / 6), var(--c1) 0 calc(5 * 100% / 6), var(--c1) 0 0)
+      right bottom;
+  background-size: 20% 600%;
+  background-repeat: no-repeat;
+  animation: __loading-bars-3-l3 var(--d1) infinite linear;
+}
+
+@keyframes __loading-bars-3-l3 {
+  100% {
+    background-position:
+      left top,
+      center top,
+      right top;
+  }
+}

@@ -1,0 +1,79 @@
+.__loading-bars-21 {
+  --s: var(--size, 45px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 1.5s);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  --c: no-repeat repeating-linear-gradient(90deg, var(--c1) 0 20%, #0000 0 40%);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 100% 26%;
+  animation: __loading-bars-21-l21 var(--d1) infinite;
+}
+
+@keyframes __loading-bars-21-l21 {
+  0% {
+    background-position:
+      -50px calc(0 * 100% / 3),
+      -50px calc(1 * 100% / 3),
+      -50px calc(2 * 100% / 3),
+      -50px calc(3 * 100% / 3);
+  }
+  12.5% {
+    background-position:
+      0 calc(0 * 100% / 3),
+      -50px calc(1 * 100% / 3),
+      -50px calc(2 * 100% / 3),
+      -50px calc(3 * 100% / 3);
+  }
+  25% {
+    background-position:
+      0 calc(0 * 100% / 3),
+      0 calc(1 * 100% / 3),
+      -50px calc(2 * 100% / 3),
+      -50px calc(3 * 100% / 3);
+  }
+  37.5% {
+    background-position:
+      0 calc(0 * 100% / 3),
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3),
+      -50px calc(3 * 100% / 3);
+  }
+  45%,
+  55% {
+    background-position:
+      0 calc(0 * 100% / 3),
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3),
+      0 calc(3 * 100% / 3);
+  }
+  62.5% {
+    background-position:
+      50px calc(0 * 100% / 3),
+      0 calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3),
+      0 calc(3 * 100% / 3);
+  }
+  75% {
+    background-position:
+      50px calc(0 * 100% / 3),
+      50px calc(1 * 100% / 3),
+      0 calc(2 * 100% / 3),
+      0 calc(3 * 100% / 3);
+  }
+  87.5% {
+    background-position:
+      50px calc(0 * 100% / 3),
+      50px calc(1 * 100% / 3),
+      50px calc(2 * 100% / 3),
+      0 calc(3 * 100% / 3);
+  }
+  100% {
+    background-position:
+      50px calc(0 * 100% / 3),
+      50px calc(1 * 100% / 3),
+      50px calc(2 * 100% / 3),
+      50px calc(3 * 100% / 3);
+  }
+}

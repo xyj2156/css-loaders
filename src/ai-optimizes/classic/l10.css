@@ -1,0 +1,39 @@
+.__loading-classic-10 {
+  --c: var(--content, Loading);
+  --s: var(--size, 30px);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #8a9b0f);
+  --c3: var(--color-3, #c02942);
+  --c4: var(--color-4, #00a0b0);
+  --d1: var(--duration-1, 5s);
+
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: var(--s);
+  color: #0000;
+  background: linear-gradient(90deg, var(--c1) 25%, var(--c2) 0 50%, var(--c3) 0 75%, var(--c4) 0) 0
+    0/400% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: __loading-classic-10-l10 var(--d1) infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+.__loading-classic-10:before {
+  content: var(--c, 'Loading...');
+}
+
+@keyframes __loading-classic-10-l10 {
+  25% {
+    background-position: calc(1 * 100% / 3) 0;
+  }
+  50% {
+    background-position: calc(2 * 100% / 3) 0;
+  }
+  75% {
+    background-position: calc(3 * 100% / 3) 0;
+  }
+  100% {
+    background-position: calc(4 * 100% / 3) 0;
+  }
+}

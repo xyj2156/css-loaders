@@ -1,0 +1,30 @@
+.__loading-bars-9 {
+  --s: var(--size, 45px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 1s);
+
+  width: var(--s);
+  aspect-ratio: 0.75;
+  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  background:
+    var(--c) 0% 50%,
+    var(--c) 50% 50%,
+    var(--c) 100% 50%;
+  background-size: 20% 60%;
+  animation: __loading-bars-9-l9 var(--d1) infinite;
+}
+
+@keyframes __loading-bars-9-l9 {
+  33% {
+    background-position:
+      0% 0%,
+      50% 100%,
+      100% 0%;
+  }
+  66% {
+    background-position:
+      0% 100%,
+      50% 0%,
+      100% 100%;
+  }
+}

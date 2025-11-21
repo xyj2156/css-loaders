@@ -1,0 +1,37 @@
+.__loading-arcade-1 {
+  --s: var(--size, 45px);
+  --c1: var(--color-1, #e50021);
+  --c2: var(--color-2, #004ce4);
+  --c3: var(--color-3, #00e622);
+  --c4: var(--color-4, #9d0be6);
+  --d1: var(--duration-1, 2s);
+
+  width: var(--s);
+  height: calc(var(--s) * 2 / 3);
+  animation: __loading-arcade-1-l1 var(--d1) infinite linear;
+}
+
+@keyframes __loading-arcade-1-l1 {
+  0%,
+  25% {
+    background: linear-gradient(var(--c1) 0 0) 50% 0 / 66% 100% no-repeat;
+  }
+  25.1%,
+  50% {
+    background:
+      linear-gradient(var(--c2) 0 0) 0 0 / 100% 50% no-repeat,
+      linear-gradient(var(--c2) 0 0) 0 0 / 33% 100% no-repeat;
+  }
+  50.1%,
+  75% {
+    background:
+      linear-gradient(var(--c3) 0 0) 100% 0 / 66% 50% no-repeat,
+      linear-gradient(var(--c3) 0 0) 0 100% / 66% 50% no-repeat;
+  }
+  75.1%,
+  100% {
+    background:
+      linear-gradient(var(--c4) 0 0) 0 100% / 100% 50% no-repeat,
+      linear-gradient(var(--c4) 0 0) 50% 0 / 33% 50% no-repeat;
+  }
+}

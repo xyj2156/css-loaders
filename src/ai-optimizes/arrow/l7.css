@@ -1,0 +1,43 @@
+.__loading-arrow-7 {
+  --s: var(--size, 110px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 0.5s);
+
+  width: var(--s);
+  height: calc(var(--s) * 30 / 110);
+  color: var(--c1);
+  display: flex;
+  background:
+    linear-gradient(currentColor 0 0) left / calc(var(--s) * 30 / 110) calc(var(--s) * 10 / 110),
+    linear-gradient(currentColor 0 0) right / calc(var(--s) * 30 / 110) calc(var(--s) * 10 / 110),
+    conic-gradient(
+        from -136deg at calc(var(--s) * 15 / 110) 50%,
+        #0000,
+        currentColor 1deg 90deg,
+        #0000 91deg
+      )
+      calc(var(--s) * 30 / 110) 0 / 100% 100%,
+    conic-gradient(
+        from 44deg at calc(100% - calc(var(--s) * 15 / 110)) 50%,
+        #0000,
+        currentColor 1deg 90deg,
+        #0000 91deg
+      )
+      calc(100% - calc(var(--s) * 30 / 110)) 0 / 100% 100%;
+  background-repeat: no-repeat;
+  animation: __loading-arrow-7-l7 var(--d1) infinite alternate;
+}
+
+.__loading-arrow-7:before {
+  content: '';
+  flex: 1;
+  background: inherit;
+  transform: rotate(90deg);
+}
+
+@keyframes __loading-arrow-7-l7 {
+  90%,
+  100% {
+    width: calc(var(--s) * 93 / 110);
+  }
+}

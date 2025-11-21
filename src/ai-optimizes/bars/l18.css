@@ -1,0 +1,41 @@
+.__loading-bars-18 {
+  --s: var(--size, 45px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 1s);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  background: var(--c), var(--c), var(--c);
+  animation:
+    __loading-bars-18-l18-1 var(--d1) infinite,
+    __loading-bars-18-l18-2 var(--d1) infinite;
+}
+
+@keyframes __loading-bars-18-l18-1 {
+  0%,
+  100% {
+    background-size: 20% 100%;
+  }
+  33%,
+  66% {
+    background-size: 20% 20%;
+  }
+}
+
+@keyframes __loading-bars-18-l18-2 {
+  0%,
+  33% {
+    background-position:
+      0 0,
+      50% 50%,
+      100% 100%;
+  }
+  66%,
+  100% {
+    background-position:
+      100% 0,
+      50% 50%,
+      0 100%;
+  }
+}

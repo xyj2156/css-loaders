@@ -1,0 +1,42 @@
+.__loading-3d-7 {
+  --s: var(--size, 25px);
+  --c1: var(--color-1, #ff1818);
+  --c2: var(--color-2, #fff);
+  --c3: var(--color-3, #666);
+  --c4: var(--color-4, #aaa);
+  --d1: var(--duration-1, 1.5s);
+
+  height: calc(1.353 * var(--s) + var(--g));
+  aspect-ratio: 3;
+  background:
+    linear-gradient(var(--c1) 0 0) left/33% 100% no-repeat,
+    conic-gradient(
+      from -90deg at var(--s) calc(0.353 * var(--s)),
+      var(--c2) 135deg,
+      var(--c3) 0 270deg,
+      var(--c4) 0
+    );
+  background-blend-mode: multiply;
+  --_m:
+    linear-gradient(
+      to bottom right,
+      #0000 calc(0.25 * var(--s)),
+      #000 0 calc(100% - calc(0.25 * var(--s)) - 1.414 * var(--g)),
+      #0000 0
+    ),
+    conic-gradient(from -90deg at right var(--g) bottom var(--g), #000 90deg, #0000 0);
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  background-size: calc(100% / 3) 100%;
+  -webkit-mask-size: calc(100% / 3) 100%;
+  mask-size: calc(100% / 3) 100%;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  animation: __loading-3d-7-l7 steps(3) var(--d1) infinite;
+}
+
+@keyframes __loading-3d-7-l7 {
+  to {
+    background-position: 150% 0%;
+  }
+}

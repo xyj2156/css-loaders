@@ -1,0 +1,34 @@
+.__loading-classic-12 {
+  --c: var(--content, Loading);
+  --s: var(--size, 30px);
+  --c1: var(--color-1, black);
+  --d1: var(--duration-1, 1s);
+
+  font-weight: bold;
+  font-family: monospace;
+  font-size: var(--s);
+  display: inline-grid;
+  overflow: hidden;
+}
+
+.__loading-classic-12:before,
+.__loading-classic-12:after {
+  content: var(--c);
+  grid-area: 1/1;
+  clip-path: inset(0 -200% 50%);
+  text-shadow: -10ch 0 0;
+  animation: __loading-classic-12-l12 var(--d1) infinite;
+}
+
+.__loading-classic-12:after {
+  clip-path: inset(50% -200% 0%);
+  text-shadow: 10ch 0 0;
+  --s: -1;
+}
+
+@keyframes __loading-classic-12-l12 {
+  50%,
+  100% {
+    transform: translateX(calc(var(--s, 1) * 100%));
+  }
+}

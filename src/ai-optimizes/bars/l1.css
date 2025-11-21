@@ -1,0 +1,48 @@
+.__loading-bars-1 {
+  --s: var(--size, 45px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 1s);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  background:
+    var(--c) 0% 50%,
+    var(--c) 50% 50%,
+    var(--c) 100% 50%;
+  background-size: calc(var(--s) * 0.2) var(--s);
+  animation: __loading-bars-1-l1 var(--d1) infinite linear;
+}
+
+@keyframes __loading-bars-1-l1 {
+  0% {
+    background-size:
+      calc(var(--s) * 0.2) var(--s),
+      calc(var(--s) * 0.2) var(--s),
+      calc(var(--s) * 0.2) var(--s);
+  }
+  33% {
+    background-size:
+      calc(var(--s) * 0.2) calc(var(--s) * 0.1),
+      calc(var(--s) * 0.2) var(--s),
+      calc(var(--s) * 0.2) var(--s);
+  }
+  50% {
+    background-size:
+      calc(var(--s) * 0.2) var(--s),
+      calc(var(--s) * 0.2) calc(var(--s) * 0.1),
+      calc(var(--s) * 0.2) var(--s);
+  }
+  66% {
+    background-size:
+      calc(var(--s) * 0.2) var(--s),
+      calc(var(--s) * 0.2) var(--s),
+      calc(var(--s) * 0.2) calc(var(--s) * 0.1);
+  }
+  100% {
+    background-size:
+      calc(var(--s) * 0.2) var(--s),
+      calc(var(--s) * 0.2) var(--s),
+      calc(var(--s) * 0.2) var(--s);
+  }
+}

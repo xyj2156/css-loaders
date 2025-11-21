@@ -1,0 +1,28 @@
+.__loading-circle-6 {
+  --s: var(--size, 50px);
+  --c1: var(--color-1, #fff);
+  --d1: var(--duration-1, 1.5s);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 calc(var(--s) * 0.06) var(--c1) inset;
+  border-radius: 50%;
+  position: relative;
+  animation: __loading-circle-6-l6 var(--d1) linear infinite;
+}
+
+.__loading-circle-6:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  box-shadow: inherit;
+  width: calc(var(--s) * 0.5);
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+@keyframes __loading-circle-6-l6 {
+  to {
+    transform: rotate(360deg);
+  }
+}

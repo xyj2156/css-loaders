@@ -1,0 +1,28 @@
+.__loading-classic-7 {
+  --c: var(--content, Loading);
+  --s: var(--size, 30px);
+  --c1: var(--color-1, #c02942);
+  --c2: var(--color-2, #000);
+  --d1: var(--duration-1, 2s);
+
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: var(--s);
+  color: #0000;
+  background: linear-gradient(90deg, var(--c1) calc(50% + 0.5ch), var(--c2) 0)
+    right/calc(200% + 1ch) 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: __loading-classic-7-l7 var(--d1) infinite steps(11);
+}
+
+.__loading-classic-7:before {
+  content: var(--c);
+}
+
+@keyframes __loading-classic-7-l7 {
+  to {
+    background-position: left;
+  }
+}

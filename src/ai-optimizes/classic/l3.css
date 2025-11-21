@@ -1,0 +1,25 @@
+.__loading-classic-3 {
+  --c: var(--content, Loading);
+  --s: var(--size, 30px);
+  --c1: var(--color-1, currentColor);
+  --d1: var(--duration-1, 2s);
+
+  width: fit-content;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: var(--s);
+  padding: 0 5px 8px 0;
+  background: repeating-linear-gradient(90deg, var(--c1) 0 8%, #0000 0 10%) 200% 100%/200% 3px
+    no-repeat;
+  animation: __loading-classic-3-l3 var(--d1) steps(6) infinite;
+}
+
+.__loading-classic-3:before {
+  content: var(--c);
+}
+
+@keyframes __loading-classic-3-l3 {
+  to {
+    background-position: 80% 100%;
+  }
+}

@@ -1,0 +1,57 @@
+.__loading-circle-9 {
+  --s: var(--size, 100px);
+  --c1: var(--color-1, #fff);
+  --d1: var(--duration-1, 1s);
+
+  width: var(--s);
+  height: calc(var(--s) * 0.4);
+  --g: radial-gradient(
+      farthest-side,
+      #0000 calc(95% - 3px),
+      var(--c1) calc(100% - 3px) 98%,
+      #0000 101%
+    )
+    no-repeat;
+  background: var(--g), var(--g), var(--g);
+  background-size: calc(var(--s) * 0.3) calc(var(--s) * 0.3);
+  animation: __loading-circle-9-l9 var(--d1) infinite alternate;
+}
+
+@keyframes __loading-circle-9-l9 {
+  0% {
+    background-position:
+      0 50%,
+      50% 50%,
+      100% 50%;
+  }
+  20% {
+    background-position:
+      0 0,
+      50% 50%,
+      100% 50%;
+  }
+  40% {
+    background-position:
+      0 100%,
+      50% 0,
+      100% 50%;
+  }
+  60% {
+    background-position:
+      0 50%,
+      50% 100%,
+      100% 0;
+  }
+  80% {
+    background-position:
+      0 50%,
+      50% 50%,
+      100% 100%;
+  }
+  100% {
+    background-position:
+      0 50%,
+      50% 50%,
+      100% 50%;
+  }
+}

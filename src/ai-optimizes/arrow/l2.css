@@ -1,0 +1,38 @@
+.__loading-arrow-2 {
+  --s: var(--size, 100px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 1s);
+
+  width: var(--s);
+  height: calc(var(--s) * 0.3);
+  display: flex;
+  justify-content: center;
+}
+
+.__loading-arrow-2:before,
+.__loading-arrow-2:after {
+  content: '';
+  background: var(--c1);
+  width: calc(var(--s) * 0.15);
+  clip-path: polygon(
+    0 calc(var(--s) * 0.1),
+    calc(100% - calc(var(--s) * 0.15)) calc(var(--s) * 0.1),
+    calc(100% - calc(var(--s) * 0.15)) 0,
+    100% 50%,
+    calc(100% - calc(var(--s) * 0.15)) 100%,
+    calc(100% - calc(var(--s) * 0.15)) calc(100% - calc(var(--s) * 0.1)),
+    0 calc(100% - calc(var(--s) * 0.1))
+  );
+  animation: __loading-arrow-2-l2 var(--d1) infinite linear;
+}
+
+.__loading-arrow-2:before {
+  transform: scaleX(-1);
+}
+
+@keyframes __loading-arrow-2-l2 {
+  90%,
+  100% {
+    flex-grow: 0.5;
+  }
+}

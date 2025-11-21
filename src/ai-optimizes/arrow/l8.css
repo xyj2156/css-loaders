@@ -1,0 +1,32 @@
+.__loading-arrow-8 {
+  --s: var(--size, 30px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 0.5s);
+
+  width: var(--s);
+  height: var(--s);
+  color: var(--c1);
+  display: flex;
+  background:
+    linear-gradient(currentColor 0 0) center/calc(100% - var(--s)) 10px,
+    conic-gradient(from -136deg at right, #0000, currentColor 1deg 90deg, #0000 91deg)
+      right/calc(var(--s) / 2) 100%,
+    conic-gradient(from 44deg at left, #0000, currentColor 1deg 90deg, #0000 91deg) left /
+      calc(var(--s) / 2) 100%;
+  background-repeat: no-repeat;
+  animation: __loading-arrow-8-l8 var(--d1) infinite alternate;
+}
+
+.__loading-arrow-8:before {
+  content: '';
+  flex: 1;
+  background: inherit;
+  transform: rotate(90deg);
+}
+
+@keyframes __loading-arrow-8-l8 {
+  90%,
+  100% {
+    width: calc(var(--s) * 2.67);
+  }
+}

@@ -1,0 +1,32 @@
+.__loading-blob-18 {
+  --s: var(--size, 80px);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+  --d1: var(--duration-1, 0.8s);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border: calc(var(--s) * 0.125) solid var(--c1);
+  box-sizing: border-box;
+  background:
+    radial-gradient(farthest-side at right, var(--c2) 98%, #0000) 20% 50%/40% 80%,
+    radial-gradient(farthest-side at left, var(--c2) 98%, #0000) 80% 50%/40% 80%,
+    var(--c1);
+  background-repeat: no-repeat;
+  filter: blur(calc(var(--s) * 0.05)) contrast(10);
+  animation: __loading-blob-18-l18 var(--d1) infinite alternate;
+}
+
+@keyframes __loading-blob-18-l18 {
+  0%,
+  20% {
+    background-position:
+      20% 50%,
+      80% 50%;
+  }
+  100% {
+    background-position:
+      80% 50%,
+      20% 50%;
+  }
+}

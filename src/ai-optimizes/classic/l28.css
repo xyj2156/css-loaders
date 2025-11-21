@@ -1,0 +1,36 @@
+.__loading-classic-28 {
+  --c: var(--content, Loading);
+  --s: var(--size, fit-content);
+  --c1: var(--color-1, black);
+  --d1: var(--duration-1, 2s);
+
+  width: var(--s);
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  overflow: hidden;
+  animation: __loading-classic-28-l28 var(--d1) infinite;
+}
+
+.__loading-classic-28::before {
+  content: var(--c);
+}
+
+@keyframes __loading-classic-28-l28 {
+  0%,
+  10% {
+    transform: perspective(300px) rotate(0) rotateY(0) rotateX(0);
+  }
+  30%,
+  36% {
+    transform: perspective(300px) rotate(0.5turn) rotateY(0) rotateX(0);
+  }
+  63%,
+  69% {
+    transform: perspective(300px) rotate(0.5turn) rotateY(180deg) rotateX(0);
+  }
+  90%,
+  100% {
+    transform: perspective(300px) rotate(0.5turn) rotateY(180deg) rotateX(180deg);
+  }
+}

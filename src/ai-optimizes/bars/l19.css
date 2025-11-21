@@ -1,0 +1,31 @@
+.__loading-bars-19 {
+  --s: var(--size, 45px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 1s);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  --c: conic-gradient(from -90deg, var(--c1) 90deg, #0000 0);
+  background: var(--c), var(--c);
+  background-size: 40% 40%;
+  animation: __loading-bars-19-l19 var(--d1) infinite alternate;
+}
+@keyframes __loading-bars-19-l19 {
+  0%,
+  10% {
+    background-position:
+      0 0,
+      0 calc(100% / 3);
+  }
+  50% {
+    background-position:
+      0 0,
+      calc(100% / 3) calc(100% / 3);
+  }
+  90%,
+  100% {
+    background-position:
+      0 0,
+      calc(100% / 3) 0;
+  }
+}

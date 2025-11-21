@@ -1,0 +1,69 @@
+.__loading-bars-12 {
+  --s: var(--size, 45px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 1s);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  background:
+    var(--c) 0 0,
+    var(--c) 0 100%,
+    var(--c) 50% 0,
+    var(--c) 50% 100%,
+    var(--c) 100% 0,
+    var(--c) 100% 100%;
+  animation: __loading-bars-12-l12 var(--d1) infinite;
+}
+
+@keyframes __loading-bars-12-l12 {
+  0%,
+  100% {
+    background-size: 20% 50%;
+  }
+  16.67% {
+    background-size:
+      20% 30%,
+      20% 30%,
+      20% 50%,
+      20% 50%,
+      20% 50%,
+      20% 50%;
+  }
+  33.33% {
+    background-size:
+      20% 30%,
+      20% 30%,
+      20% 30%,
+      20% 30%,
+      20% 50%,
+      20% 50%;
+  }
+  50% {
+    background-size:
+      20% 30%,
+      20% 30%,
+      20% 30%,
+      20% 30%,
+      20% 30%,
+      20% 30%;
+  }
+  66.67% {
+    background-size:
+      20% 50%,
+      20% 50%,
+      20% 30%,
+      20% 30%,
+      20% 30%,
+      20% 30%;
+  }
+  83.33% {
+    background-size:
+      20% 50%,
+      20% 50%,
+      20% 50%,
+      20% 50%,
+      20% 30%,
+      20% 30%;
+  }
+}

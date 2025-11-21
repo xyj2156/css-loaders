@@ -1,0 +1,55 @@
+.__loading-arcade-5 {
+  --s: var(--size, 90px);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #eeee89);
+  --c3: var(--color-3, #ffff2d);
+  --d1: var(--duration-1, 3s);
+  --d2: var(--duration-2, 0.25s);
+  --d3: var(--duration-3, 0.153s);
+  --d4: var(--duration-4, 3s);
+
+  width: var(--s);
+  height: calc(var(--s) * 24 / 90);
+  padding: calc(var(--s) * 2 / 90) 0;
+  box-sizing: border-box;
+  display: flex;
+  animation: __loading-arcade-5-l5-0 var(--d1) infinite steps(6);
+  background:
+    linear-gradient(var(--c1) 0 0) 0 0/0% 100% no-repeat,
+    radial-gradient(circle calc(var(--s) * 3 / 90), var(--c2) 90%, #0000) 0 0/20% 100% var(--c1);
+  overflow: hidden;
+}
+
+.__loading-arcade-5::before {
+  content: '';
+  width: calc(var(--s) * 20 / 90);
+  transform: translate(-100%);
+  border-radius: 50%;
+  background: var(--c3);
+  animation:
+    __loading-arcade-5-l5-1 var(--d2) var(--d3) infinite steps(5) alternate,
+    __loading-arcade-5-l5-2 var(--d4) infinite linear;
+}
+
+@keyframes __loading-arcade-5-l5-1 {
+  0% {
+    clip-path: polygon(50% 50%, 100% 0, 100% 0, 0 0, 0 100%, 100% 100%, 100% 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 100% 65%, 100% 0, 0 0, 0 100%, 100% 100%, 100% 35%);
+  }
+}
+
+@keyframes __loading-arcade-5-l5-2 {
+  100% {
+    transform: translate(var(--s));
+  }
+}
+
+@keyframes __loading-arcade-5-l5-0 {
+  100% {
+    background-size:
+      120% 100%,
+      20% 100%;
+  }
+}

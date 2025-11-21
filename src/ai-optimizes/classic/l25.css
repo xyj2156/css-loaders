@@ -1,0 +1,52 @@
+.__loading-classic-25 {
+  --c: var(--content, Loading);
+  --s: var(--size, 30px);
+  --c1: var(--color-1, black);
+  --d1: var(--duration-1, 1s);
+
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: var(--s);
+  animation: __loading-classic-25-l25 var(--d1) infinite;
+  color: var(--c1);
+}
+
+.__loading-classic-25::before {
+  content: var(--c);
+}
+
+@keyframes __loading-classic-25-l25 {
+  0%,
+  12.5% {
+    transform: translate(10px, 0);
+  }
+  13%,
+  25% {
+    transform: translate(4px, -4px);
+  }
+  26%,
+  37.5% {
+    transform: translate(2px, 8px);
+  }
+  38%,
+  50% {
+    transform: translate(12px, -6px);
+  }
+  51%,
+  62.5% {
+    transform: translate(0, 12px);
+  }
+  63%,
+  75% {
+    transform: translate(-8px, -4px);
+  }
+  76%,
+  86.5% {
+    transform: translate(-12px, 6px);
+  }
+  87%,
+  100% {
+    transform: translate(6px, 0);
+  }
+}

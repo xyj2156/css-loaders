@@ -1,0 +1,47 @@
+.__loading-bars-14 {
+  --s: var(--size, 45px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 0.5s);
+  --d2: var(--duration-2, 2s);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c);
+  animation:
+    __loading-bars-14-l14-1 var(--d1) infinite alternate,
+    __loading-bars-14-l14-2 var(--d2) infinite;
+}
+
+@keyframes __loading-bars-14-l14-1 {
+  0%,
+  10% {
+    background-size: calc(var(--s) * 0.2) var(--s);
+  }
+  100% {
+    background-size: calc(var(--s) * 0.2) calc(var(--s) * 0.2);
+  }
+}
+
+@keyframes __loading-bars-14-l14-2 {
+  0%,
+  49.9% {
+    background-position:
+      0 0,
+      0 100%,
+      50% 50%,
+      50% 50%,
+      100% 0,
+      100% 100%;
+  }
+  50%,
+  100% {
+    background-position:
+      0 50%,
+      0 50%,
+      50% 0,
+      50% 100%,
+      100% 50%,
+      100% 50%;
+  }
+}

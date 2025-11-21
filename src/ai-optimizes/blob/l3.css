@@ -1,0 +1,36 @@
+.__loading-blob-3 {
+  --s: var(--size, 120px);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #ff00ff);
+  --d1: var(--duration-1, 1s);
+
+  width: var(--s);
+  height: calc(var(--s) / 2);
+  padding: calc(var(--s) / 12);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  background: var(--c1);
+  filter: blur(calc(var(--s) / 24)) contrast(10) hue-rotate(60deg);
+  mix-blend-mode: darken;
+}
+
+.__loading-blob-3:before,
+.__loading-blob-3:after {
+  content: '';
+  width: calc(var(--s) / 3);
+  border-radius: 50%;
+  background: var(--c2);
+  animation: __loading-blob-3-l3 var(--d1) infinite alternate;
+}
+
+.__loading-blob-3:after {
+  --s: -1;
+}
+
+@keyframes __loading-blob-3-l3 {
+  90%,
+  100% {
+    transform: translate(calc(var(--s, 1) * calc(var(--s) / 4)));
+  }
+}

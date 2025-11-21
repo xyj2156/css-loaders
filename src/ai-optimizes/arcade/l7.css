@@ -1,0 +1,51 @@
+.__loading-arcade-7 {
+  --s: var(--size, 70px);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #000);
+  --c3: var(--color-3, lightblue);
+  --d1: var(--duration-1, 2s);
+  --d2: var(--duration-2, 2s);
+
+  width: var(--s);
+  height: calc(var(--s) * 5 / 7);
+  box-sizing: border-box;
+  background:
+    conic-gradient(from 135deg at top, #0000, var(--c1) 1deg 90deg, #0000 91deg) right
+      calc(var(--s) * -20 / 70) bottom calc(var(--s) * 8 / 70) calc(var(--s) * 18 / 70)
+      calc(var(--s) * 9 / 70),
+    linear-gradient(var(--c1) 0 0) bottom / 100% calc(var(--s) * 8 / 70),
+    var(--c2);
+  background-repeat: no-repeat;
+  border-bottom: calc(var(--s) * 8 / 70) solid var(--c2);
+  position: relative;
+  animation: __loading-arcade-7-l7-0 var(--d1) infinite linear;
+}
+
+.__loading-arcade-7::before {
+  content: '';
+  position: absolute;
+  width: calc(var(--s) * 10 / 70);
+  height: calc(var(--s) * 14 / 70);
+  background: var(--c3);
+  left: calc(var(--s) * 10 / 70);
+  animation: __loading-arcade-7-l7-1 var(--d2) infinite cubic-bezier(0, 200, 1, 200);
+}
+
+@keyframes __loading-arcade-7-l7-0 {
+  100% {
+    background-position:
+      left calc(var(--s) * -20 / 70) bottom calc(var(--s) * 8 / 70),
+      bottom;
+  }
+}
+
+@keyframes __loading-arcade-7-l7-1 {
+  0%,
+  50% {
+    bottom: calc(var(--s) * 8 / 70);
+  }
+  90%,
+  100% {
+    bottom: calc(var(--s) * 8.1 / 70);
+  }
+}

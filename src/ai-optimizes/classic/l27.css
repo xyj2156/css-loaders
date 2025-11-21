@@ -1,0 +1,28 @@
+.__loading-classic-27 {
+  --s: var(--size, 30px);
+  --c1: var(--color-1, black);
+  --d1: var(--duration-1, 2s);
+  --d2: var(--duration-2, 1s);
+
+  font-weight: bold;
+  font-family: monospace;
+  font-size: var(--s);
+  display: inline-flex;
+}
+
+.__loading-classic-27::before {
+  content: 'Loadi';
+  animation: __loading-classic-27-l27 var(--d1) infinite;
+}
+
+.__loading-classic-27::after {
+  content: 'ng...';
+  animation: __loading-classic-27-l27 var(--d1) infinite var(--d2);
+}
+
+@keyframes __loading-classic-27-l27 {
+  50%,
+  100% {
+    transform: rotate(1turn);
+  }
+}

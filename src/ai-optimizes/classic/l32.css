@@ -1,0 +1,32 @@
+.__loading-classic-32 {
+  --c: var(--content, Loading);
+  --s: var(--size, 30px);
+  --c1: var(--color-1, 255 0 0);
+  --c2: var(--color-2, 0 255 0);
+  --c3: var(--color-3, 0 0 255);
+  --d1: var(--duration-1, 1s);
+
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  text-shadow:
+    0 0 0 rgb(var(--c1)),
+    0 0 0 rgb(var(--c2)),
+    0 0 0 rgb(var(--c3));
+  font-size: var(--s);
+  animation: __loading-classic-32-l32 var(--d1) infinite cubic-bezier(0.5, -2000, 0.5, 2000);
+}
+
+.__loading-classic-32:before {
+  content: var(--c);
+}
+
+@keyframes __loading-classic-32-l32 {
+  25%,
+  100% {
+    text-shadow:
+      0.03px -0.01px 0.01px rgb(var(--c1)),
+      0.02px 0.02px 0 rgb(var(--c2)),
+      -0.02px 0.02px 0 rgb(var(--c3));
+  }
+}

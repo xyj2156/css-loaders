@@ -1,0 +1,40 @@
+.__loading-arrow-3 {
+  --s: var(--size, 100px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 0.5s);
+
+  width: var(--s);
+  height: 30px;
+  display: flex;
+}
+
+.__loading-arrow-3:before,
+.__loading-arrow-3:after {
+  content: '';
+  flex: 1;
+  margin: 0 5px;
+  background: var(--c1);
+  clip-path: polygon(
+    0 10px,
+    calc(100% - 15px) 10px,
+    calc(100% - 15px) 0,
+    100% 50%,
+    calc(100% - 15px) 100%,
+    calc(100% - 15px) calc(100% - 10px),
+    0 calc(100% - 10px)
+  );
+  animation: __loading-arrow-3-l3 var(--d1) infinite alternate;
+}
+
+.__loading-arrow-3:after {
+  --s: -1;
+}
+
+@keyframes __loading-arrow-3-l3 {
+  0% {
+    transform: scaleX(var(--s, 1)) translate(-4px);
+  }
+  100% {
+    transform: scaleX(var(--s, 1)) translate(4px);
+  }
+}

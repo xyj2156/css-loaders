@@ -1,0 +1,64 @@
+.__loading-arrow-10 {
+  --s: var(--size, 30px);
+  --c1: var(--color-1, currentColor);
+  --d1: var(--duration-1, 2s);
+
+  width: var(--s);
+  height: calc(var(--s) * 2);
+  padding-top: calc(var(--s) * 2);
+  box-sizing: border-box;
+  display: grid;
+  background:
+    linear-gradient(var(--c1) 0 0) bottom/10px calc(100% - 15px),
+    conic-gradient(from 134deg at top, #0000, var(--c1) 1deg 90deg, #0000 91deg) top/100% 15px;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  animation: __loading-arrow-10-l10-0 var(--d1) infinite;
+}
+
+.__loading-arrow-10:before,
+.__loading-arrow-10:after {
+  content: '';
+  grid-area: 1/1;
+  background: inherit;
+  background-size:
+    10px calc(100% - 25px),
+    100% 25px;
+  animation: __loading-arrow-10-l10-1 var(--d1) infinite;
+}
+
+.__loading-arrow-10:after {
+  background-size:
+    10px calc(100% - 30px),
+    100% 30px;
+  animation: __loading-arrow-10-l10-2 var(--d1) infinite;
+}
+
+@keyframes __loading-arrow-10-l10-0 {
+  25%,
+  100% {
+    padding-top: 0px;
+  }
+}
+
+@keyframes __loading-arrow-10-l10-1 {
+  0%,
+  25% {
+    margin: 60px -10px 0;
+  }
+  50%,
+  100% {
+    margin: 8px -10px 0;
+  }
+}
+
+@keyframes __loading-arrow-10-l10-2 {
+  0%,
+  50% {
+    margin: 60px -15px 0;
+  }
+  75%,
+  100% {
+    margin: 20px -15px 0;
+  }
+}

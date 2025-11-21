@@ -1,0 +1,41 @@
+.__loading-arrow-4 {
+  --s: var(--size, 40px);
+  --c1: var(--color-1, #000);
+  --d1: var(--duration-1, 0.5s);
+
+  width: var(--s);
+  height: calc(var(--s) * 0.75);
+  display: grid;
+}
+
+.__loading-arrow-4:before,
+.__loading-arrow-4:after {
+  content: '';
+  grid-area: 1/1;
+  background: var(--c1);
+  clip-path: polygon(
+    0 calc(var(--s) * 0.25),
+    calc(100% - calc(var(--s) * 0.375)) calc(var(--s) * 0.25),
+    calc(100% - calc(var(--s) * 0.375)) 0,
+    100% 50%,
+    calc(100% - calc(var(--s) * 0.375)) 100%,
+    calc(100% - calc(var(--s) * 0.375)) calc(100% - calc(var(--s) * 0.25)),
+    0 calc(100% - calc(var(--s) * 0.25))
+  );
+  animation: __loading-arrow-4-l4 var(--d1) infinite alternate;
+}
+
+.__loading-arrow-4:after {
+  --s: calc(var(--size, 40px) * -1);
+}
+
+@keyframes __loading-arrow-4-l4 {
+  0% {
+    transform: scale(var(--s, 1)) translate(calc(var(--s) * 0.3), calc(var(--s) * -0.15))
+      translate(calc(var(--s) * 0.1));
+  }
+  100% {
+    transform: scale(var(--s, 1)) translate(calc(var(--s) * 0.3), calc(var(--s) * -0.15))
+      translate(calc(var(--s) * -0.1));
+  }
+}

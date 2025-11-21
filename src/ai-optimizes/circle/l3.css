@@ -1,0 +1,29 @@
+.__loading-circle-3 {
+  --s: var(--size, 65px);
+  --c1: var(--color-1, #fff);
+  --d1: var(--duration-1, 0.75s);
+
+  width: var(--s);
+  height: calc(var(--s) * 30 / 65);
+  position: relative;
+}
+
+.__loading-circle-3:before {
+  content: '';
+  position: absolute;
+  border-radius: calc(var(--s) * 50 / 65);
+  box-shadow: 0 0 0 calc(var(--s) * 3 / 65) inset var(--c1);
+  animation: __loading-circle-3-l3 var(--d1) infinite alternate;
+}
+
+@keyframes __loading-circle-3-l3 {
+  0% {
+    inset: 0 calc(var(--s) * 35 / 65) 0 0;
+  }
+  50% {
+    inset: 0 0 0 0;
+  }
+  100% {
+    inset: 0 0 0 calc(var(--s) * 35 / 65);
+  }
+}
