@@ -66,8 +66,9 @@ const server = createServer((req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+const host = process.env.HOST || 'localhost';
+server.listen(PORT, host, () => {
+  console.log(`Server running on http://${host}:${PORT}`);
 });
 
 function trans() {
