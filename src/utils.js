@@ -1,3 +1,6 @@
+import { dirname } from 'path';
+import fs from 'node:fs';
+
 /**
  * 依次循环数组中的元素
  * @param {array} arr 循环用的数组
@@ -46,4 +49,19 @@ export function transStyle(scope, origin, content) {
   return content
     .replaceAll(`#${origin}`, `.${scope}`)
     .replaceAll(origin, `${scope}-${origin}`);
+}
+
+/**
+ * 写入文件
+ * @param {string} filename - 文件路径
+ * @param {string|NonSharedBuffer} content - 文件内容
+ * @returns {void}
+ * @throws {Error} 当写入文件时出错
+ */
+export function writeFile(filename, content) {
+  const dir = dirname(filename);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+  fs.writeFileSync(filename, content);
 }
