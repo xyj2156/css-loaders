@@ -6,8 +6,8 @@
   --c4: var(--color-4, #222a87);
   --c5: var(--color-5, #feee49);
   --c6: var(--color-6, #000);
-  --d: var(--duration, 2000ms);
-  --d1: var(--duration-1, var(--d));
+  --d:  var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
   --c:var(--content, 'Loading');
 
   width: fit-content;

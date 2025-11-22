@@ -1,8 +1,8 @@
 .__loading-bars-24 {
   --s: var(--size, 45px);
   --c1: var(--color-1, #000);
-  --d: var(--duration, 750ms);
-  --d1: var(--duration-1, var(--d));
+  --d:  var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.75));
 
   width: var(--s);
   aspect-ratio: 0.8;

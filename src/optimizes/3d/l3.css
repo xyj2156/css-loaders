@@ -3,8 +3,8 @@
   --color-1: #fff;
   --color-2: #666;
   --color-3: #aaa;
-  --d:  var(--duration, 800ms);
-  --d1: var(--duration-1, var(--d));
+  --d:  var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.8));
 
   --_d: calc(0.353 * var(--s));
   height: calc(var(--s) + var(--_d));

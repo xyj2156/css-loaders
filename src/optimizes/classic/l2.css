@@ -1,0 +1,26 @@
+.__loading-classic-2 {
+  --c: var(--content, 'Loading...');
+  --s: var(--size, 30px);
+  --c1: var(--color-1, currentColor);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+
+  color: var(--c1);
+  width: fit-content;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: var(--s);
+  padding-bottom: calc(var(--s) / 15 * 4);
+  background: linear-gradient(var(--c1) 0 0) 0 100%/0% 3px no-repeat;
+  animation: __loading-classic-2-l2 var(--d1) linear infinite;
+}
+
+.__loading-classic-2:before {
+  content: var(--c);
+}
+
+@keyframes __loading-classic-2-l2 {
+  to {
+    background-size: 100% 3px;
+  }
+}

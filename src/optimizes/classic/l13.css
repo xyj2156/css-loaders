@@ -1,0 +1,37 @@
+.__loading-classic-13 {
+  --c: var(--content, 'Loading...');
+  --s: var(--size, 30px);
+  --c1: var(--color-1, #000);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --d2: var(--duration-2, var(--d));
+
+  font-weight: bold;
+  font-family: monospace;
+  font-size: var(--s);
+  display: inline-grid;
+  overflow: hidden;
+}
+
+.__loading-classic-13:before,
+.__loading-classic-13:after {
+  content: var(--c);
+  grid-area: 1/1;
+  clip-path: inset(0 -200% 50%);
+  text-shadow: -10ch 0 0;
+  animation: __loading-classic-13-l13 var(--d1) infinite;
+}
+
+.__loading-classic-13:after {
+  clip-path: inset(50% -200% 0%);
+  text-shadow: 10ch 0 0;
+  --_s: -1;
+  animation-delay: var(--d2);
+}
+
+@keyframes __loading-classic-13-l13 {
+  25%,
+  100% {
+    transform: translateX(calc(var(--_s, 1) * 100%));
+  }
+}

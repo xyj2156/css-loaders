@@ -1,0 +1,43 @@
+.__loading-classic-23 {
+  --c:  var(--content, 'Loading...');
+  --s:  var(--size, 30px);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+  --d:  var(--duration, 1s);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: var(--s);
+  overflow: hidden;
+}
+
+.__loading-classic-23::before {
+  content: var(--c);
+  color: #0000;
+  text-shadow:
+    0 0 0 var(--c1),
+    10ch 0 0 var(--c2),
+    20ch 0 0 var(--c1);
+  background: linear-gradient(90deg, #0000 calc(100% / 3), var(--c1) 0 calc(2 * 100% / 3), #0000 0)
+    left/300% 100%;
+  animation: __loading-classic-23-l23 var(--d1) infinite;
+}
+
+@keyframes __loading-classic-23-l23 {
+  50% {
+    background-position: center;
+    text-shadow:
+      -10ch 0 0 var(--c1),
+      0 0 0 var(--c2),
+      10ch 0 0 var(--c1);
+  }
+  100% {
+    background-position: right;
+    text-shadow:
+      -20ch 0 0 var(--c1),
+      -10ch 0 0 var(--c2),
+      0 0 0 var(--c1);
+  }
+}

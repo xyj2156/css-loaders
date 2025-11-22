@@ -1,0 +1,42 @@
+.__loading-classic-30 {
+  --c: var(--content, 'Loading...');
+  --s: var(--size, 30px);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0000);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+
+  font-weight: bold;
+  font-family: monospace;
+  font-size: var(--s);
+  display: inline-grid;
+}
+
+.__loading-classic-30:before,
+.__loading-classic-30:after {
+  content: var(--c, 'Loading...');
+  grid-area: 1/1;
+  line-height: 1em;
+  mask: linear-gradient(90deg, var(--c1) 50%, var(--c2) 0) 0 50%/2ch 100%;
+  mask-position: calc(var(--_s, 0) * 1ch) 50%;
+  animation: __loading-classic-30-l30 var(--d1) infinite;
+}
+
+.__loading-classic-30:after {
+  --_s: -1;
+}
+
+@keyframes __loading-classic-30-l30 {
+  33% {
+    transform: translateY(calc(var(--_s, 1) * 50%));
+    mask-position: calc(var(--_s, 0) * 1ch) 50%;
+  }
+  66% {
+    transform: translateY(calc(var(--_s, 1) * 50%));
+    mask-position: calc(var(--_s, 0) * 1ch + 1ch) 50%;
+  }
+  100% {
+    transform: translateY(calc(var(--_s, 1) * 0%));
+    mask-position: calc(var(--_s, 0) * 1ch + 1ch) 50%;
+  }
+}

@@ -1,0 +1,61 @@
+.__loading-classic-34 {
+  --c: var(--content, 'Loading...');
+  --s: var(--size, 30px);
+  --c1: var(--color-1, currentColor);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  white-space: pre;
+  font-size: var(--s);
+  color: var(--c1);
+}
+
+.__loading-classic-34:before {
+  content: var(--c);
+  animation: __loading-classic-34-l34 var(--d1) infinite alternate;
+}
+
+@keyframes __loading-classic-34-l34 {
+  0%,
+  15%,
+  75%,
+  100% {
+    content: var(--c);
+  }
+  20% {
+    content: var(--c);
+  }
+  25% {
+    content: 'Lo ding...';
+  }
+  30% {
+    content: 'Load ng...';
+  }
+  35% {
+    content: ' oading...';
+  }
+  40% {
+    content: 'L ading...';
+  }
+  45% {
+    content: 'Loadin ...';
+  }
+  50% {
+    content: 'Loa ing...';
+  }
+  55% {
+    content: 'Loading  .';
+  }
+  60% {
+    content: ' oa ing...';
+  }
+  65% {
+    content: 'L ading...';
+  }
+  70% {
+    content: 'Load n ...';
+  }
+}

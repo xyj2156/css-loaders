@@ -1,0 +1,28 @@
+.__loading-classic-38 {
+  --s: var(--size, 30px);
+  --c1: var(--color-1, currentColor);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  white-space: pre;
+  font-size: var(--s);
+  line-height: 1.2em;
+  height: 1.2em;
+  overflow: hidden;
+  color: var(--c1);
+}
+.__loading-classic-38:before {
+  content: "Loading...\AgodnLai...\Aoiaglni...\ALiongad...\Agindola...\Analoidg...";
+  white-space: pre;
+  display: inline-block;
+  animation: __loading-classic-38-l38 var(--d1) infinite steps(6);
+}
+
+@keyframes __loading-classic-38-l38 {
+  100% {
+    transform: translateY(-100%);
+  }
+}

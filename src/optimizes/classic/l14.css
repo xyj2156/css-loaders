@@ -1,0 +1,39 @@
+.__loading-classic-14 {
+  --c: var(--content, 'Loading...');
+  --s: var(--size, 30px);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #000);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+
+  width: fit-content;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: var(--s);
+  overflow: hidden;
+  color: #0000;
+  text-shadow:
+    0 0 0 var(--c1),
+    10ch 0 0 var(--c2);
+  background: linear-gradient(var(--c1) 0 0) bottom left/0% 3px no-repeat;
+  animation: __loading-classic-14-l14 var(--d1) infinite;
+}
+
+.__loading-classic-14:before {
+  content: var(--c);
+}
+
+@keyframes __loading-classic-14-l14 {
+  80% {
+    text-shadow:
+      0 0 0 var(--c1),
+      10ch 0 0 var(--c2);
+    background-size: 100% 3px;
+  }
+  100% {
+    text-shadow:
+      calc(-1 * 10ch) 0 0 var(--c1),
+      0 0 0 var(--c2);
+  }
+}

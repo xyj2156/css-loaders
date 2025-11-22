@@ -6,8 +6,8 @@
   --c3: var(--color-3, #666);
   --c4: var(--color-4, #aaa);
   --c5: var(--color-5, #000);
-  --d:  var(--duration, 1500ms);
-  --d1: var(--duration-1, var(--d));
+  --d:  var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
 
   height: calc(1.353 * var(--s) + var(--g));
   aspect-ratio: 3;

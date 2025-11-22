@@ -1,8 +1,8 @@
 .__loading-arrow-10 {
   --s:var(--size, 30px);
   --c1:var(--color-1, currentColor);
-  --d:var(--duration, 2000ms);
-  --d1:var(--duration-1, var(--d));
+  --d:  var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
 
   width: var(--s);
   height: calc(var(--s) * 2);

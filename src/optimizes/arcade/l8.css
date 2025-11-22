@@ -3,9 +3,9 @@
   --c: var(--content, 'Loging');
   --c1: var(--color-1, #000);
   --c2: var(--color-2, #25adda);
-  --d: var(--duration, 3000ms);
-  --d1: var(--duration-1, var(--d));
-  --d2: var(--duration-2, var(--d));
+  --d:  var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 3));
+  --d2: var(--duration-1, calc(var(--d) * 3));
 
   width: fit-content;
   font-size: var(--s);

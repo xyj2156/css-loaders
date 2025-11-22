@@ -1,8 +1,8 @@
 .__loading-bars-29 {
   --s: var(--size, 9px);
   --c1: var(--color-1, #000);
-  --d: var(--duration, 2000ms);
-  --d1: var(--duration-1, var(--d));
+  --d:  var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
 
   --2s: calc(2 * var(--s));
   --_2s: calc(var(--s) * -2);

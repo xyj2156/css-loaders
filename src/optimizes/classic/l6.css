@@ -1,0 +1,28 @@
+.__loading-classic-6 {
+  --c: var(--content, 'Loading...');
+  --s: var(--size, 11ch);
+  --c1: var(--color-1, #000);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  color: #0000;
+  overflow: hidden;
+  text-shadow:
+    0 0 var(--c1),
+    var(--s) 0 var(--c1);
+  animation: __loading-classic-6-l6 var(--d1) infinite linear;
+}
+.__loading-classic-6:before {
+  content: var(--c);
+}
+@keyframes __loading-classic-6-l6 {
+  to {
+    text-shadow:
+      calc(-1 * var(--s)) 0 var(--c1),
+      0ch 0 var(--c1);
+  }
+}

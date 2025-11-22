@@ -1,0 +1,49 @@
+.__loading-classic-31 {
+  --c: var(--content, 'Loading...');
+  --s: var(--size, 10ch);
+  --c1: var(--color-1, #000);
+  --d:  var(--duration, 1s);
+  --d1: var(--duration-1, var(--d));
+
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  line-height: 2em;
+  letter-spacing: var(--s);
+  width: var(--s);
+  overflow: hidden;
+  white-space: nowrap;
+  color: #0000;
+  text-shadow:
+    calc(0 * var(--s)) 0 var(--c1),
+    calc(-1 * var(--s)) 0 var(--c1),
+    calc(-2 * var(--s)) 0 var(--c1),
+    calc(-3 * var(--s)) 0 var(--c1),
+    calc(-4 * var(--s)) 0 var(--c1),
+    calc(-5 * var(--s)) 0 var(--c1),
+    calc(-6 * var(--s)) 0 var(--c1),
+    calc(-7 * var(--s)) 0 var(--c1),
+    calc(-8 * var(--s)) 0 var(--c1),
+    calc(-9 * var(--s)) 0 var(--c1);
+  animation: __loading-classic-31-l31 var(--d1) infinite cubic-bezier(0.5, -150, 0.5, 150);
+}
+.__loading-classic-31:before {
+  content: var(--c);
+}
+
+@keyframes __loading-classic-31-l31 {
+  15%,
+  100% {
+    text-shadow:
+      calc(0 * var(--s) + 0.1px) 0 var(--c1),
+      calc(-1 * var(--s)) 0.01em var(--c1),
+      calc(-2 * var(--s) - 0.2px) 0 var(--c1),
+      calc(-3 * var(--s) + 0.1px) 0.01em var(--c1),
+      calc(-4 * var(--s)) -0.01em var(--c1),
+      calc(-5 * var(--s) - 0.1px) 0 var(--c1),
+      calc(-6 * var(--s) - 0.2px) 0.015em var(--c1),
+      calc(-7 * var(--s) - 0.1px) 0.02em var(--c1),
+      calc(-8 * var(--s)) -0.01em var(--c1),
+      calc(-9 * var(--s) + 0.2px) -0.01em var(--c1);
+  }
+}

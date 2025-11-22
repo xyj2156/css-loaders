@@ -1,0 +1,29 @@
+.__loading-classic-39 {
+  --s: var(--size, 30px);
+  --c1: var(--color-1, currentColor);
+  --d:  var(--duration, 1s);
+  --d1: var(--duration-1, var(--d));
+
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  white-space: pre;
+  font-size: var(--s);
+  line-height: 1.2em;
+  height: 1.2em;
+  overflow: hidden;
+  color: var(--c1);
+}
+
+.__loading-classic-39:before {
+  content: 'Loading...\A⌰oading...\A⌰⍜ading...\A⌰⍜⏃ding...\A⌰⍜⏃⎅ing...\A⌰⍜⏃⎅⟟ng...\A⌰⍜⏃⎅⟟⋏g...\A⌰⍜⏃⎅⟟⋏☌...\A⌰⍜⏃⎅⟟⋏☌⟒..\A⌰⍜⏃⎅⟟⋏☌⟒⏁.\A⌰⍜⏃⎅⟟⋏☌⟒⏁⋔';
+  white-space: pre;
+  display: inline-block;
+  animation: __loading-classic-39-l39 var(--d1) infinite steps(11) alternate;
+}
+
+@keyframes __loading-classic-39-l39 {
+  100% {
+    transform: translateY(-100%);
+  }
+}

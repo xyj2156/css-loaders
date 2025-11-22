@@ -1,0 +1,42 @@
+.__loading-classic-22 {
+  --c: var(--content, 'Loading...');
+  --s: var(--size, 30px);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+  --d:var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: var(--s);
+  background: linear-gradient(
+      135deg,
+      #0000 calc(50% - 0.5em),
+      var(--c1) 0 calc(50% + 0.5em),
+      #0000 0
+    )
+    right/300% 100%;
+  animation: __loading-classic-22-l22 var(--d1) infinite;
+}
+
+.__loading-classic-22::before {
+  content: var(--c);
+  color: #0000;
+  padding: 0 5px;
+  background: inherit;
+  background-image: linear-gradient(
+    135deg,
+    var(--c1) calc(50% - 0.5em),
+    var(--c2) 0 calc(50% + 0.5em),
+    var(--c1) 0
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes __loading-classic-22-l22 {
+  100% {
+    background-position: left;
+  }
+}

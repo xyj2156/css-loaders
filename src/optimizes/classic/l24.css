@@ -1,0 +1,31 @@
+.__loading-classic-24 {
+  --c:  var(--content, 'Loading...');
+  --s:  var(--size, 30px);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+  --d:  var(--duration, 1s);
+  --d1: var(--duration-1, var(--d));
+
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: var(--s);
+  background: radial-gradient(circle closest-side, var(--c1) 94%, #0000) right/calc(200% - 1em) 100%;
+  animation: __loading-classic-24-l24 var(--d1) infinite alternate linear;
+}
+
+.__loading-classic-24::before {
+  content: var(--c);
+  line-height: 1em;
+  color: #0000;
+  background: inherit;
+  background-image: radial-gradient(circle closest-side, var(--c2) 94%, var(--c1));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes __loading-classic-24-l24 {
+  100% {
+    background-position: left;
+  }
+}
