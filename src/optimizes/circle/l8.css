@@ -1,0 +1,49 @@
+.__loading-circle-8 {
+  --s: var(--size, 50px);
+  --c1: var(--color-1, #fff);
+  --d: var(--duration, 1500ms);
+  --d1: var(--duration-1, var(--d));
+
+  width: var(--s);
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 3px var(--c1) inset;
+  border-radius: 50%;
+  position: relative;
+  animation: __loading-circle-8-l8-0 var(--d1) linear infinite;
+}
+
+.__loading-circle-8:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 2px);
+  box-shadow: inherit;
+  width: calc(var(--s) * 0.5);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: __loading-circle-8-l8-1 var(--d1) linear infinite;
+}
+
+@keyframes __loading-circle-8-l8-1 {
+  0% {
+    transform-origin: calc(var(--s) * -0.54) 50%;
+    width: calc(var(--s) * 0.4);
+    transform: translateY(-50%) rotate(0);
+  }
+  100% {
+    transform-origin: calc(var(--s) * -0.24) 50%;
+    width: var(--s);
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+@keyframes __loading-circle-8-l8-0 {
+  0% {
+    width: var(--s);
+    transform: translate(0);
+  }
+  100% {
+    width: calc(var(--s) * 0.4);
+    transform: translate(calc(var(--s) * 0.74));
+  }
+}

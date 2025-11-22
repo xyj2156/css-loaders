@@ -1,0 +1,39 @@
+.__loading-circle-7 {
+  --s: var(--size, 50px);
+  --c1: var(--color-1, #fff);
+  --d: var(--duration, 1500ms);
+  --d1: var(--duration-1, var(--d));
+  --d2: var(--duration-2, calc(var(--d) * -0.5));
+
+  width: var(--s);
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 calc(var(--s) * 0.06) var(--c1) inset;
+  border-radius: 50%;
+  position: relative;
+}
+
+.__loading-circle-7:before,
+.__loading-circle-7:after {
+  content: '';
+  position: absolute;
+  top: calc(var(--s) * 0.1);
+  left: calc(50% - calc(var(--s) * 0.25));
+  box-shadow: inherit;
+  width: calc(var(--s) * 0.5);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform-origin: 50% calc(100% - calc(var(--s) * 0.1));
+  animation: __loading-circle-7-l7 var(--d1) linear infinite;
+}
+
+.__loading-circle-7:after {
+  top: calc(100% + calc(var(--s) * 0.04));
+  transform-origin: 50% calc(var(--s) * -0.54);
+  animation-delay: var(--d2);
+}
+
+@keyframes __loading-circle-7-l7 {
+  to {
+    transform: rotate(360deg);
+  }
+}

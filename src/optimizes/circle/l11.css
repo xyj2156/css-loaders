@@ -1,0 +1,38 @@
+.__loading-circle-11 {
+  --s: var(--size, 50px);
+  --c1: var(--color-1, #fff);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 7));
+  --d2: var(--duration-2, calc(var(--d) * 1.5));
+
+  width: var(--s);
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 3px var(--c1) inset;
+  border-radius: 50%;
+  position: relative;
+  animation: __loading-circle-11-l11 var(--d1) infinite;
+}
+
+.__loading-circle-11:before,
+.__loading-circle-11:after {
+  content: '';
+  position: absolute;
+  top: calc(100% + 3px);
+  left: calc(50% - 12.5px);
+  box-shadow: inherit;
+  width: calc(var(--s) * 0.5);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform-origin: 50% -28px;
+  animation: __loading-circle-11-l11 var(--d2) infinite;
+}
+
+.__loading-circle-11:after {
+  animation-delay: calc(var(--d2) * -0.5);
+}
+
+@keyframes __loading-circle-11-l11 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
