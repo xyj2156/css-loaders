@@ -1,0 +1,33 @@
+.__loading-colorful-18 {
+  --s:var(--size, 60px);
+  --c1:var(--color-1, #cee879);
+  --c2:var(--color-2, #fcb653);
+  --c3:var(--color-3, #5cacc4);
+  --c4:var(--color-4, #ff5254);
+
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    linear-gradient(90deg, var(--c1) 50%, var(--c4) 0) top/100% 50% no-repeat,
+    linear-gradient(90deg, var(--c2) 50%, var(--c3) 0);
+  mask: linear-gradient(#000 0 0) 0 0/50% 50% no-repeat;
+  animation: __loading-colorful-18-l18 2s infinite;
+}
+@keyframes __loading-colorful-18-l18 {
+  0% {
+    -webkit-mask-position: 0 0;
+  }
+  25% {
+    -webkit-mask-position: 100% 0;
+  }
+  50% {
+    -webkit-mask-position: 100% 100%;
+  }
+  75% {
+    -webkit-mask-position: 0 100%;
+  }
+  100% {
+    -webkit-mask-position: 0 0;
+  }
+}

@@ -1,0 +1,62 @@
+.__loading-colorful-3 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2.5));
+  --c1: var(--color-1, #00aaff);
+  --c2: var(--color-2, #f1bbbb);
+  --c3: var(--color-3, #aa00ff);
+  --c4: var(--color-4, #ff00aa);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    linear-gradient(45deg, var(--c1) 50%, #0000 0),
+    linear-gradient(-45deg, var(--c2) 50%, #0000 0),
+    linear-gradient(45deg, #0000 50%, var(--c3) 0),
+    linear-gradient(-45deg, #0000 50%, var(--c4) 0),
+    var(--c1);
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  animation: __loading-colorful-3-l3 var(--d1) infinite;
+}
+@keyframes __loading-colorful-3-l3 {
+  0% {
+    background-position:
+      100% 0,
+      0 0,
+      0 100%,
+      100% 100%;
+  }
+  15%,
+  25% {
+    background-position:
+      100% 0,
+      0 0,
+      0 100%,
+      0 0;
+  }
+  40%,
+  50% {
+    background-position:
+      100% 0,
+      0 0,
+      100% 0,
+      0 0;
+  }
+  65%,
+  75% {
+    background-position:
+      100% 0,
+      100% 100%,
+      100% 0,
+      0 0;
+  }
+  90%,
+  100% {
+    background-position:
+      0 100%,
+      100% 100%,
+      100% 0,
+      0 0;
+  }
+}

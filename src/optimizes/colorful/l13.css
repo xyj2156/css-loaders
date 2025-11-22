@@ -1,0 +1,43 @@
+.__loading-colorful-13 {
+  --s: var(--size, 50px);
+  --c1:var(--color-1, #cff09e);
+  --c2:var(--color-2, #79bd9a);
+  --c3:var(--color-3, #0b486b);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+  --c: var(--c1) 25%, var(--c2) 0 50%, var(--c3) 0 75%, var(--c1) 0;
+}
+.__loading-colorful-13:before,
+.__loading-colorful-13:after {
+  content: '';
+  background: linear-gradient(90deg, var(--c)) no-repeat, linear-gradient(-90deg, var(--c)) no-repeat;
+  background-size: 400% 52%;
+  animation: __loading-colorful-13-l13 2s infinite;
+}
+@keyframes __loading-colorful-13-l13 {
+  0% {
+    background-position:
+      calc(3 * 100% / 3) 0,
+      calc(0 * 100% / 3) 100%;
+  }
+  23%,
+  33% {
+    background-position:
+      calc(2 * 100% / 3) 0,
+      calc(1 * 100% / 3) 100%;
+  }
+  56%,
+  66% {
+    background-position:
+      calc(1 * 100% / 3) 0,
+      calc(2 * 100% / 3) 100%;
+  }
+  90%,
+  100% {
+    background-position:
+      calc(0 * 100% / 3) 0,
+      calc(3 * 100% / 3) 100%;
+  }
+}

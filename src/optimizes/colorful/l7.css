@@ -1,0 +1,46 @@
+.__loading-colorful-7 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --d2: var(--duration-2, var(--d));
+  --c1: var(--color-1, #3a89c9);
+  --c2: var(--color-2, #9cc4e4);
+
+  width: var(--s);
+  aspect-ratio: 1.154;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  display: grid;
+  background: var(--c1);
+}
+.__loading-colorful-7::before,
+.__loading-colorful-7::after {
+  content: '';
+  grid-area: 1/1;
+  background: inherit;
+  clip-path: inherit;
+  transform-origin: 50% 66%;
+  animation: __loading-colorful-7-l7-1 var(--d1) infinite;
+}
+.__loading-colorful-7::before {
+  background: var(--c2);
+  animation: __loading-colorful-7-l7-2 var(--d1) infinite var(--d2);
+}
+@keyframes __loading-colorful-7-l7-1 {
+  0%,
+  99.9% {
+    transform: scale(1);
+  }
+  50%,
+  99% {
+    transform: scale(0);
+  }
+}
+@keyframes __loading-colorful-7-l7-2 {
+  0%,
+  51% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0);
+  }
+}

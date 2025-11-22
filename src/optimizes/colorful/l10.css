@@ -1,0 +1,118 @@
+.__loading-colorful-10 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+
+  --c1: var(--color-1, #ffd412);
+  --c2: var(--color-2, #abd406);
+  --c3: var(--color-3, #ff821c);
+
+  width: var(--s);
+  aspect-ratio: 2;
+  --c: linear-gradient(var(--c1) 25%, var(--c2) 0 50%, var(--c3) 0 75%, var(--c1) 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 400%;
+  background-position:
+    calc(0 * 100% / 3) 100%,
+    calc(1 * 100% / 3) 100%,
+    calc(2 * 100% / 3) 100%,
+    calc(3 * 100% / 3) 100%;
+  background-repeat: no-repeat;
+  animation: __loading-colorful-10-l10 var(--d1) infinite;
+}
+@keyframes __loading-colorful-10-l10 {
+  0% {
+    background-position:
+      calc(0 * 100% / 3) calc(3 * 100% / 3),
+      calc(1 * 100% / 3) calc(3 * 100% / 3),
+      calc(2 * 100% / 3) calc(3 * 100% / 3),
+      calc(3 * 100% / 3) calc(3 * 100% / 3);
+  }
+  8.33% {
+    background-position:
+      calc(0 * 100% / 3) calc(2 * 100% / 3),
+      calc(1 * 100% / 3) calc(3 * 100% / 3),
+      calc(2 * 100% / 3) calc(3 * 100% / 3),
+      calc(3 * 100% / 3) calc(3 * 100% / 3);
+  }
+  16.67% {
+    background-position:
+      calc(0 * 100% / 3) calc(2 * 100% / 3),
+      calc(1 * 100% / 3) calc(2 * 100% / 3),
+      calc(2 * 100% / 3) calc(3 * 100% / 3),
+      calc(3 * 100% / 3) calc(3 * 100% / 3);
+  }
+  25% {
+    background-position:
+      calc(0 * 100% / 3) calc(2 * 100% / 3),
+      calc(1 * 100% / 3) calc(2 * 100% / 3),
+      calc(2 * 100% / 3) calc(2 * 100% / 3),
+      calc(3 * 100% / 3) calc(3 * 100% / 3);
+  }
+  30%,
+  33.33% {
+    background-position:
+      calc(0 * 100% / 3) calc(2 * 100% / 3),
+      calc(1 * 100% / 3) calc(2 * 100% / 3),
+      calc(2 * 100% / 3) calc(2 * 100% / 3),
+      calc(3 * 100% / 3) calc(2 * 100% / 3);
+  }
+  41.67% {
+    background-position:
+      calc(0 * 100% / 3) calc(1 * 100% / 3),
+      calc(1 * 100% / 3) calc(2 * 100% / 3),
+      calc(2 * 100% / 3) calc(2 * 100% / 3),
+      calc(3 * 100% / 3) calc(2 * 100% / 3);
+  }
+  50% {
+    background-position:
+      calc(0 * 100% / 3) calc(1 * 100% / 3),
+      calc(1 * 100% / 3) calc(1 * 100% / 3),
+      calc(2 * 100% / 3) calc(2 * 100% / 3),
+      calc(3 * 100% / 3) calc(2 * 100% / 3);
+  }
+  58.33% {
+    background-position:
+      calc(0 * 100% / 3) calc(1 * 100% / 3),
+      calc(1 * 100% / 3) calc(1 * 100% / 3),
+      calc(2 * 100% / 3) calc(1 * 100% / 3),
+      calc(3 * 100% / 3) calc(2 * 100% / 3);
+  }
+  63%,
+  66.67% {
+    background-position:
+      calc(0 * 100% / 3) calc(1 * 100% / 3),
+      calc(1 * 100% / 3) calc(1 * 100% / 3),
+      calc(2 * 100% / 3) calc(1 * 100% / 3),
+      calc(3 * 100% / 3) calc(1 * 100% / 3);
+  }
+  75% {
+    background-position:
+      calc(0 * 100% / 3) calc(0 * 100% / 3),
+      calc(1 * 100% / 3) calc(1 * 100% / 3),
+      calc(2 * 100% / 3) calc(1 * 100% / 3),
+      calc(3 * 100% / 3) calc(1 * 100% / 3);
+  }
+  83.33% {
+    background-position:
+      calc(0 * 100% / 3) calc(0 * 100% / 3),
+      calc(1 * 100% / 3) calc(0 * 100% / 3),
+      calc(2 * 100% / 3) calc(1 * 100% / 3),
+      calc(3 * 100% / 3) calc(1 * 100% / 3);
+  }
+  91.67% {
+    background-position:
+      calc(0 * 100% / 3) calc(0 * 100% / 3),
+      calc(1 * 100% / 3) calc(0 * 100% / 3),
+      calc(2 * 100% / 3) calc(0 * 100% / 3),
+      calc(3 * 100% / 3) calc(1 * 100% / 3);
+  }
+  97%,
+  100% {
+    background-position:
+      calc(0 * 100% / 3) calc(0 * 100% / 3),
+      calc(1 * 100% / 3) calc(0 * 100% / 3),
+      calc(2 * 100% / 3) calc(0 * 100% / 3),
+      calc(3 * 100% / 3) calc(0 * 100% / 3);
+  }
+}

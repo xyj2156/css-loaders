@@ -1,0 +1,121 @@
+.__loading-colorful-16 {
+  --s:var(--size, 50px);
+  --c1:var(--color-1, #cc333f);
+  --c2:var(--color-2, #00a0b0);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    linear-gradient(var(--c1) 0 0), linear-gradient(var(--c1) 0 0), linear-gradient(var(--c1) 0 0),
+    linear-gradient(var(--c1) 0 0), linear-gradient(var(--c2) 0 0), linear-gradient(var(--c2) 0 0),
+    linear-gradient(var(--c2) 0 0), linear-gradient(var(--c2) 0 0), var(--c1);
+  background-position:
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%;
+  background-repeat: no-repeat;
+  animation: __loading-colorful-16-l16 2s infinite;
+}
+@keyframes __loading-colorful-16-l16 {
+  0% {
+    background-size:
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+  12.5% {
+    background-size:
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      51% 51%;
+  }
+  25% {
+    background-size:
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      51% 51%,
+      51% 51%;
+  }
+  37.5% {
+    background-size:
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      51% 51%,
+      51% 51%,
+      51% 51%;
+  }
+  50% {
+    background-size:
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      51% 51%,
+      51% 51%,
+      51% 51%,
+      51% 51%;
+  }
+  62.5% {
+    background-size:
+      0 0,
+      0 0,
+      0 0,
+      51% 51%,
+      51% 51%,
+      51% 51%,
+      51% 51%,
+      51% 51%;
+  }
+  75% {
+    background-size:
+      0 0,
+      0 0,
+      51% 51%,
+      51% 51%,
+      51% 51%,
+      51% 51%,
+      51% 51%,
+      51% 51%;
+  }
+  87.5% {
+    background-size:
+      0 0,
+      51% 51%,
+      51% 51%,
+      51% 51%,
+      51% 51%,
+      51% 51%,
+      51% 51%,
+      51% 51%;
+  }
+  100% {
+    background-size:
+      51% 51%,
+      51% 51%,
+      51% 51%,
+      51% 51%,
+      51% 51%,
+      51% 51%,
+      51% 51%,
+      51% 51%;
+  }
+}

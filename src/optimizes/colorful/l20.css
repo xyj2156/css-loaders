@@ -1,0 +1,35 @@
+.__loading-colorful-20 {
+  --s:var(--size, 70px);
+  --c1:var(--color-1, #8a8780);
+  --c2:var(--color-2, #94ba65);
+  --c3:var(--color-3, #2790b0);
+  --c4:var(--color-4, #2b4e72);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background: conic-gradient(
+    from -45deg,
+    var(--c1) 90deg,
+    var(--c2) 0 180deg,
+    var(--c3) 0 270deg,
+    var(--c4) 0 0
+  );
+  animation: __loading-colorful-20-l20 2s infinite;
+}
+@keyframes __loading-colorful-20-l20 {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 50% 50%);
+  }
+  25% {
+    clip-path: polygon(100% 0, 100% 100%, 50% 50%);
+  }
+  50% {
+    clip-path: polygon(100% 100%, 0 100%, 50% 50%);
+  }
+  75% {
+    clip-path: polygon(0 100%, 0 0, 50% 50%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 50% 50%);
+  }
+}

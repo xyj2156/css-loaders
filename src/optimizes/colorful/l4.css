@@ -1,0 +1,40 @@
+.__loading-colorful-4 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.3));
+  --d2: var(--duration-2, calc(var(--d) * 0.5));
+  --d3: var(--duration-3, calc(var(--d) * 0.8));
+  --d4: var(--duration-4, var(--d));
+  --c1: var(--color-1, #ed303c);
+  --c2: var(--color-2, #ff9c5b);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side, var(--c1) 94%, #0000),
+    radial-gradient(farthest-side, var(--c2) 94%, #0000), var(--c1);
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: __loading-colorful-4-l4 var(--d) infinite;
+}
+
+@keyframes __loading-colorful-4-l4 {
+  0% {
+    background-size:
+      0 0,
+      0 0;
+  }
+  30%,
+  50% {
+    background-size:
+      0 0,
+      120% 120%;
+  }
+  80%,
+  100% {
+    background-size:
+      120% 120%,
+      120% 120%;
+  }
+}

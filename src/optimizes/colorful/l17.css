@@ -1,0 +1,36 @@
+.__loading-colorful-17 {
+  --s:var(--size, 40px);
+  --c1:var(--color-1, #00da3c);
+  --c2:var(--color-2, #00cbe7);
+  --c3:var(--color-3, #fd8603);
+  --c4:var(--color-4, #f4f328);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-top: -30px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  transform-origin: 50% 116.5%;
+  animation: __loading-colorful-17-l17 2s infinite linear;
+}
+.__loading-colorful-17:before {
+  content: '';
+  min-width: 233%;
+  height: 233%;
+  background:
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) top,
+    radial-gradient(farthest-side, var(--c2) 90%, #0000) left,
+    radial-gradient(farthest-side, var(--c3) 90%, #0000) bottom,
+    radial-gradient(farthest-side, var(--c4) 90%, #0000) right;
+  background-size: 43% 43%;
+  background-repeat: no-repeat;
+  animation: inherit;
+  animation-direction: reverse;
+}
+@keyframes __loading-colorful-17-l17 {
+  100% {
+    transform: rotate(360deg);
+  }
+}

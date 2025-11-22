@@ -1,0 +1,55 @@
+.__loading-colorful-14 {
+  --s:var(--size, 50px);
+  --c1:var(--color-1, #b5ac01);
+  --c2:var(--color-2, #ecba09);
+  --c3:var(--color-3, #e86e1c);
+  --c4:var(--color-4, #d41e45);
+  
+  
+  width: var(--s);
+  aspect-ratio: 1;
+  transform: translate(-100%, 100%);
+  animation: __loading-colorful-14-l14 2s infinite;
+}
+@keyframes __loading-colorful-14-l14 {
+  0% {
+    box-shadow:
+      50px -50px var(--c1),
+      50px -50px var(--c2),
+      50px -50px #0000,
+      50px -50px #0000,
+      50px -50px #0000;
+  }
+  25% {
+    box-shadow:
+      100px -50px #0000,
+      50px -50px var(--c2),
+      50px -50px var(--c3),
+      50px -50px #0000,
+      50px -50px #0000;
+  }
+  50% {
+    box-shadow:
+      100px -50px #0000,
+      50px -100px #0000,
+      50px -50px var(--c3),
+      50px -50px var(--c4),
+      50px -50px #0000;
+  }
+  75% {
+    box-shadow:
+      100px -50px #0000,
+      50px -100px #0000,
+      0 -50px #0000,
+      50px -50px var(--c4),
+      50px -50px var(--c1);
+  }
+  100% {
+    box-shadow:
+      100px -50px #0000,
+      50px -100px #0000,
+      0 -50px #0000,
+      50px 0 #0000,
+      50px -50px var(--c1);
+  }
+}
