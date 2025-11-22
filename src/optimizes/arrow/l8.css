@@ -1,7 +1,8 @@
 .__loading-arrow-8 {
   --s: var(--size, 30px);
   --c1: var(--color-1, #000);
-  --d1: var(--duration-1, 0.5s);
+  --d: var(--duration, 500ms);
+  --d1: var(--duration-1, var(--d));
 
   width: var(--s);
   height: var(--s);

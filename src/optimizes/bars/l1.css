@@ -1,7 +1,8 @@
 .__loading-bars-1 {
   --s: var(--size, 45px);
   --c: no-repeat linear-gradient(var(--color, #000) 0 0);
-  --d1: var(--duration-1, 1s);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
 
   width: var(--s);
   aspect-ratio: 1;

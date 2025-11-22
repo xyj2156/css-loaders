@@ -1,10 +1,11 @@
 .__loading-arcade-8 {
   --s: var(--size, 17px);
-  --c:var(--content, 'Loging');
+  --c: var(--content, 'Loging');
   --c1: var(--color-1, #000);
   --c2: var(--color-2, #25adda);
-  --d1: var(--duration-1, 3s);
-  --d2: var(--duration-2, 3s);
+  --d: var(--duration, 3000ms);
+  --d1: var(--duration-1, var(--d));
+  --d2: var(--duration-2, var(--d));
 
   width: fit-content;
   font-size: var(--s);

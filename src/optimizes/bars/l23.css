@@ -1,13 +1,15 @@
 .__loading-bars-23 {
-  --s:var(--size, 45px);
-  --c1:var(--color-1, #000);
+  --s: var(--size, 45px);
+  --c1: var(--color-1, #000);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
 
   height: var(--s);
   aspect-ratio: 1.6;
   --c: no-repeat repeating-linear-gradient(90deg, var(--c1) 0 20%, #0000 0 40%);
   background: var(--c), var(--c), var(--c), var(--c);
   background-size: 62.5% 26%;
-  animation: __loading-bars-23-l23 1s infinite;
+  animation: __loading-bars-23-l23 var(--d1) infinite;
 }
 @keyframes __loading-bars-23-l23 {
   0%,

@@ -4,8 +4,9 @@
   --c2: var(--color-2, red);
   --c3: var(--color-3, #000);
   --c4: var(--color-4, lightblue);
-  --d1: var(--duration-1, 1s);
-  --d2: var(--duration-2, 2s);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --d2: var(--duration-2, calc(var(--d) * 2));
 
   width: var(--s);
   height: calc(var(--s) * 0.75);

@@ -1,6 +1,8 @@
 .__loading-bars-30 {
   --s: var(--size, 9px);
   --c1: var(--color-1, #000);
+  --d: var(--duration, 2000ms);
+  --d1: var(--duration-1, var(--d));
 
   width: var(--s);
   height: var(--s);
@@ -18,7 +20,7 @@
     calc(-2 * var(--s)) calc(2 * var(--s)),
     0 calc(2 * var(--s)),
     calc(2 * var(--s)) calc(2 * var(--s));
-  animation: __loading-bars-30-l30 2s infinite;
+  animation: __loading-bars-30-l30 var(--d) infinite;
 }
 @keyframes __loading-bars-30-l30 {
   10% {

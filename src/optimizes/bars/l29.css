@@ -1,14 +1,17 @@
 .__loading-bars-29 {
-  --s:var(--size, 9px);
-  
-  --2s:  calc(2 * var(--s));
+  --s: var(--size, 9px);
+  --c1: var(--color-1, #000);
+  --d: var(--duration, 2000ms);
+  --d1: var(--duration-1, var(--d));
+
+  --2s: calc(2 * var(--s));
   --_2s: calc(var(--s) * -2);
-  --_s:  calc(var(--s) * -1);
+  --_s: calc(var(--s) * -1);
   
   width: var(--s);
   height: var(--s);
-  background: #000;
-  color: #000;
+  background: var(--c1);
+  color: var(--c1);
   box-shadow:
     var(--_2s) var(--_s),
     0 var(--_s),
@@ -21,7 +24,7 @@
     var(--_2s) var(--2s),
     0 var(--2s),
     var(--2s) var(--2s);
-  animation: __loading-bars-29-l29 2s infinite;
+  animation: __loading-bars-29-l29 var(--d) infinite;
 }
 
 @keyframes __loading-bars-29-l29 {

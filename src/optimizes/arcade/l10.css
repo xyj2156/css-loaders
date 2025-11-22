@@ -6,8 +6,8 @@
   --c4: var(--color-4, #222a87);
   --c5: var(--color-5, #feee49);
   --c6: var(--color-6, #000);
-  --d1: var(--duration-1, 2s);
-  --d2: var(--duration-2, -0.1px);
+  --d: var(--duration, 2000ms);
+  --d1: var(--duration-1, var(--d));
   --c:var(--content, 'Loading');
 
   width: fit-content;
@@ -59,11 +59,11 @@
 @keyframes __loading-arcade-10-l10-0 {
   0%,
   30% {
-    background-position: 0 0px;
+    background-position: 0 0;
   }
   50%,
   100% {
-    background-position: 0 var(--d2);
+    background-position: 0 -0.1px;
   }
 }
 

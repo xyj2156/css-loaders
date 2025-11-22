@@ -1,7 +1,8 @@
 .__loading-bars-4 {
   --s: var(--size, 45px);
   --c1: var(--color-1, #000);
-  --d1: var(--duration-1, 1s);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
   --_c: no-repeat linear-gradient(var(--c1) calc(50% - 10px), #0000 0 calc(50% + 10px), var(--c1) 0);
 
   width: var(--s);
