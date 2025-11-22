@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import { extname, join } from 'node:path';
 
 const __dirname = process.cwd();
+const ai = process.argv[2] || undefined;
 
 // MIME类型映射
 const mimeTypes = {
@@ -100,5 +101,5 @@ function transStylesPath(url) {
 }
 
 function transOptimizesPath(url) {
-  return trans('src', 'optimizes', url);
+  return trans('src', `${ai ? 'ai-' : ''}optimizes`, url);
 }
