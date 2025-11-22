@@ -1,7 +1,8 @@
 .__loading-dots-vs-bars-2 {
   --s: var(--size, 40px);
   --c1: var(--color-1, #000);
-  --d1: var(--duration-1, 1s);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
 
   width: var(--s);
   aspect-ratio: 1;

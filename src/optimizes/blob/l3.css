@@ -2,7 +2,8 @@
   --s:var(--size, 120px);
   --c1:var(--color, #fff);
   --c2:var(--color, #ff00ff);
-  --d1:var(--duration-1, 1s);
+  --d:var(--duration, 1000ms);
+  --d1:var(--duration-1, var(--d));
 
   width: var(--s);
   height: calc(var(--s) / 2);

@@ -3,8 +3,9 @@
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #ff00ff);
   --c3: var(--color-3, #000);
-  --d1: var(--duration-1, 2s);
-  --d2: var(--duration-2, 0.5s);
+  --d: var(--duration, 2000ms);
+  --d1: var(--duration-1, var(--d));
+  --d2: var(--duration-2, calc(var(--d) / 4));
 
   width: var(--s);
   aspect-ratio: 1;

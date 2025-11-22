@@ -1,7 +1,8 @@
 .__loading-blob-1 {
   --s: var(--size, 50px);
   --c1: var(--color-1, #006cff);
-  --d1: var(--duration-1, 3s);
+  --d: var(--duration, 3000ms);
+  --d1: var(--duration-1, var(--d));
 
   width: var(--s);
   aspect-ratio: 1;

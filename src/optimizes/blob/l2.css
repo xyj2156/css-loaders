@@ -2,8 +2,9 @@
   --s: var(--size, 70px);
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #ff00ff);
-  --d1: var(--duration-1, 3s);
-  --d2: var(--duration-2, -0.8s);
+  --d: var(--duration, 3000ms);
+  --d1: var(--duration-1, var(--d));
+  --d2: var(--duration-2, calc(var(--d) * -0.2667));
 
   width: var(--s);
   height: var(--s);

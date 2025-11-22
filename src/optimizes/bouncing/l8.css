@@ -3,14 +3,15 @@
   --c1: var(--color-1, #524656);
   --c2: var(--color-2, #cf4647);
   --c3: var(--color-3, #45ada8);
-  --d1: var(--duration-1, 0.57s);
-  --d2: var(--duration-2, 0.35s);
-  --d3: var(--duration-3, 0.29s);
-  --d4: var(--duration-4, 0.51s);
-  --d5: var(--duration-5, -0.13s);
-  --d6: var(--duration-6, -0.23s);
-  --d7: var(--duration-7, -0.11s);
-  --d8: var(--duration-8, -0.34s);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.57));
+  --d2: var(--duration-2, calc(var(--d) * 0.35));
+  --d3: var(--duration-3, calc(var(--d) * 0.29));
+  --d4: var(--duration-4, calc(var(--d) * 0.51));
+  --d5: var(--duration-5, calc(var(--d) * -0.13));
+  --d6: var(--duration-6, calc(var(--d) * -0.23));
+  --d7: var(--duration-7, calc(var(--d) * -0.11));
+  --d8: var(--duration-8, calc(var(--d) * -0.34));
 
   height: var(--s);
   aspect-ratio: 1;

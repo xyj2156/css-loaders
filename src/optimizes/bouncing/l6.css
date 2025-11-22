@@ -2,7 +2,8 @@
   --s: var(--size, 60px);
   --c1: var(--color-1, #cf4647);
   --c2: var(--color-2, #524656);
-  --d1: var(--duration-1, 0.5s);
+  --d: var(--duration, 500ms);
+  --d1: var(--duration-1, var(--d));
 
   height: var(--s);
   aspect-ratio: 1;
