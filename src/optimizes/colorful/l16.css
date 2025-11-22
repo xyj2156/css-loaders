@@ -1,7 +1,9 @@
 .__loading-colorful-16 {
-  --s:var(--size, 50px);
-  --c1:var(--color-1, #cc333f);
-  --c2:var(--color-2, #00a0b0);
+  --s: var(--size, 50px);
+  --c1: var(--color-1, #cc333f);
+  --c2: var(--color-2, #00a0b0);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, calc(var(--d) * 2));
 
   width: var(--s);
   aspect-ratio: 1;
@@ -16,7 +18,7 @@
     100% 100%,
     0 100%;
   background-repeat: no-repeat;
-  animation: __loading-colorful-16-l16 2s infinite;
+  animation: __loading-colorful-16-l16 var(--d1) infinite;
 }
 @keyframes __loading-colorful-16-l16 {
   0% {

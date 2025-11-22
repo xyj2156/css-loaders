@@ -1,9 +1,11 @@
 .__loading-colorful-17 {
-  --s:var(--size, 40px);
-  --c1:var(--color-1, #00da3c);
-  --c2:var(--color-2, #00cbe7);
-  --c3:var(--color-3, #fd8603);
-  --c4:var(--color-4, #f4f328);
+  --s: var(--size, 40px);
+  --c1: var(--color-1, #00da3c);
+  --c2: var(--color-2, #00cbe7);
+  --c3: var(--color-3, #fd8603);
+  --c4: var(--color-4, #f4f328);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, calc(var(--d) * 2));
 
   width: var(--s);
   aspect-ratio: 1;
@@ -13,7 +15,7 @@
   justify-content: center;
   overflow: hidden;
   transform-origin: 50% 116.5%;
-  animation: __loading-colorful-17-l17 2s infinite linear;
+  animation: __loading-colorful-17-l17 var(--d1) infinite linear;
 }
 .__loading-colorful-17:before {
   content: '';

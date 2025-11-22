@@ -3,12 +3,14 @@
   --c1:var(--color-1, #ffabab);
   --c2:var(--color-2, #abe4ff);
   --c3:var(--color-3, #ff7373);
+  --d:var(--duration, 1s);
+  --d1:var(--duration-1, calc(var(--d) * 2));
 
   width: var(--s);
   aspect-ratio: 0.577;
   clip-path: polygon(0 0, 100% 100%, 0 100%, 100% 0);
   position: relative;
-  animation: __loading-colorful-19-l19 2s infinite linear;
+  animation: __loading-colorful-19-l19 var(--d1) infinite linear;
   overflow: hidden;
 }
 .__loading-colorful-19:before {
