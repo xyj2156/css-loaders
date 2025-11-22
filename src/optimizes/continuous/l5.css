@@ -1,0 +1,23 @@
+.__loading-continuous-5 {
+  --s: var(--size, 120px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #25b09b);
+  --c2: var(--color-2, #ddd);
+
+  width: var(--s);
+  height: calc(var(--s) / 6);
+  background:
+    linear-gradient(var(--c1) 0 0) left calc(var(--s) / -3) top 0 / calc(var(--s) / 3)
+      calc(var(--s) / 6),
+    linear-gradient(var(--c2) 0 0) center/100% 50%;
+  background-repeat: no-repeat;
+  animation: __loading-continuous-5-l5 var(--d1) infinite linear;
+}
+@keyframes __loading-continuous-5-l5 {
+  100% {
+    background-position:
+      right calc(var(--s) / -3) top 0,
+      center;
+  }
+}

@@ -1,0 +1,18 @@
+.__loading-continuous-9 {
+  --s: var(--size, 120px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #f03355);
+  --c2: var(--color-2, #ccc);
+
+  width: var(--s);
+  height: 20px;
+  background: radial-gradient(circle closest-side, var(--c1) 94%, #0000) 50% 50% / calc(50% + 10px)
+    70% repeat-x var(--c2);
+  animation: __loading-continuous-9-l9 var(--d1) infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes __loading-continuous-9-l9 {
+  100% {
+    background-position: calc(200% - 5px);
+  }
+}

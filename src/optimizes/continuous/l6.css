@@ -1,0 +1,23 @@
+.__loading-continuous-6 {
+  --s: var(--size, 120px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  height: calc(var(--s) / 6);
+  background:
+    radial-gradient(circle calc(var(--s) / 12), var(--c1) 95%, #0000) right /
+      calc(200% + calc(var(--s) / 12)) 100%,
+    linear-gradient(var(--c1) 0 0) center/100% calc(var(--s) / 20);
+  background-repeat: no-repeat;
+  mask: radial-gradient(circle calc(var(--s) / 30), #0000 93%, var(--c1))
+    right/calc(200% + calc(var(--s) / 12)) 100%;
+  animation: __loading-continuous-6-l6 var(--d1) infinite linear;
+}
+@keyframes __loading-continuous-6-l6 {
+  100% {
+    background-position: left;
+    -webkit-mask-position: left;
+  }
+}

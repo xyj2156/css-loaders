@@ -1,0 +1,33 @@
+.__loading-continuous-4 {
+  --s: var(--size, 120px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #514b82);
+
+  width: var(--s);
+  height: calc(var(--s) * 0.183);
+  border-radius: calc(var(--s) * 0.333);
+  color: var(--c1);
+  border: calc(var(--s) * 0.017) solid;
+  position: relative;
+  overflow: hidden;
+}
+.__loading-continuous-4::before {
+  content: '';
+  position: absolute;
+  margin: calc(var(--s) * 0.017);
+  width: calc(var(--s) * 0.117);
+  top: 0;
+  bottom: 0;
+  left: calc(var(--s) * -0.167);
+  border-radius: inherit;
+  background: currentColor;
+  box-shadow: calc(var(--s) * -0.083) 0 calc(var(--s) * 0.1) calc(var(--s) * 0.025) currentColor;
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%, -30px 50%);
+  animation: l14 var(--d1) infinite linear;
+}
+@keyframes l14 {
+  100% {
+    left: calc(100% + calc(var(--s) * 0.167));
+  }
+}

@@ -1,0 +1,19 @@
+.__loading-continuous-1 {
+  --s: var(--size, 120px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #0001);
+  --c2: var(--color-2, #0005);
+  --c3: var(--color-3, #f2f2f2);
+
+  width: var(--s);
+  height: calc(var(--s) / 6);
+  background: linear-gradient(90deg, var(--c1) 33%, var(--c2) 50%, var(--c1) 66%) var(--c3);
+  background-size: 300% 100%;
+  animation: __loading-continuous-1-l1 var(--d1) infinite linear;
+}
+@keyframes __loading-continuous-1-l1 {
+  0% {
+    background-position: right;
+  }
+}

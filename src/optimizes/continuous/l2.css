@@ -1,0 +1,18 @@
+.__loading-continuous-2 {
+  --s: var(--size, 120px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, lightblue);
+  --c2: var(--color-2, orange);
+
+  width: var(--s);
+  height: calc(var(--s) / 6);
+  background: linear-gradient(90deg, #0000, var(--c2)) left calc(var(--s) * -2.5) top 0 /
+    calc(var(--s) * 2.5) var(--s) no-repeat var(--c1);
+  animation: __loading-continuous-2-l2 var(--d1) infinite linear;
+}
+@keyframes __loading-continuous-2-l2 {
+  100% {
+    background-position: right calc(var(--s) * -2.5) top 0;
+  }
+}
