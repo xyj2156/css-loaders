@@ -1,0 +1,61 @@
+.__loading-dancers-8 {
+  --s: var(--size, 16px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2.5));
+  --d2: var(--duration-2, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #3fb8af);
+  --c2: var(--color-2, #ff3d7f);
+
+  --_a: var(--s);
+  --_b: calc(var(--s) * 1);
+  --_c: calc(var(--s) * 1);
+
+  --__a: calc(var(--_a) * 1);
+  --__b: calc(var(--_b) * 1);
+  --__c: calc(var(--_c) * 1);
+
+  width: var(--_a);
+  aspect-ratio: 1;
+  background: var(--c1);
+  position: relative;
+  animation: __loading-dancers-8-l8-0 var(--d1) infinite linear alternate;
+}
+.__loading-dancers-8:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--c2);
+  transform: translate(100%);
+  transform-origin: top left;
+  animation: __loading-dancers-8-l8-1 var(--d2) infinite alternate;
+}
+@keyframes __loading-dancers-8-l8-0 {
+  0%,
+  19.9%,
+  80%,
+  100% {
+    transform: scale(1, 1);
+  }
+  20%,
+  39.9% {
+    transform: scale(-1, 1);
+  }
+  40%,
+  59.9% {
+    transform: scale(-1, -1);
+  }
+  60%,
+  79.9% {
+    transform: scale(1, -1);
+  }
+}
+@keyframes __loading-dancers-8-l8-1 {
+  0%,
+  20% {
+    transform: translate(100%) rotate(0);
+  }
+  80%,
+  100% {
+    transform: translate(100%) rotate(-180deg);
+  }
+}

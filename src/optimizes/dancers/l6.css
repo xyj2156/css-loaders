@@ -1,0 +1,38 @@
+.__loading-dancers-6 {
+  --s: var(--size, 16px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #3fb8af);
+  --c2: var(--color-2, #ff3d7f);
+
+  --_a: var(--s);
+  --_b: calc(var(--s) * 1);
+  --_c: calc(var(--s) * 1);
+
+  --__a: calc(var(--_a) * 1);
+  --__b: calc(var(--_b) * 1);
+  --__c: calc(var(--_c) * 1);
+
+  width: var(--_a);
+  aspect-ratio: 1;
+  background: var(--c1);
+  box-shadow: 0 calc(var(--_b) * -1) var(--c2);
+  animation: __loading-dancers-6-l6 var(--d1) infinite;
+}
+@keyframes __loading-dancers-6-l6 {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  25% {
+    transform: translate(0, 0) rotate(90deg);
+  }
+  50% {
+    transform: translate(100%, -100%) rotate(180deg);
+  }
+  75% {
+    transform: translate(100%, -100%) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
