@@ -1,0 +1,37 @@
+.__loading-clones-19 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.9));
+  --d2: var(--duration-2, var(--d));
+  --c1: var(--color-1, #60b99a);
+  --c2: var(--color-2, #f77825);
+  --c3: var(--color-3, #554236);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    linear-gradient(var(--c1) 0 0) calc(1 * 100% / 3) 50%/25% 50%,
+    linear-gradient(var(--c1) 0 0) calc(2 * 100% / 3) 50%/25% 50%,
+    linear-gradient(var(--c2) 0 0) 50% calc(1 * 100% / 3) / 50% 25%,
+    linear-gradient(var(--c2) 0 0) 50% calc(2 * 100% / 3) / 50% 25%,
+    linear-gradient(var(--c3) 0 0) calc(1 * 100% / 3) calc(1 * 100% / 3) / 25% 25%,
+    linear-gradient(var(--c3) 0 0) calc(2 * 100% / 3) calc(1 * 100% / 3) / 25% 25%,
+    linear-gradient(var(--c3) 0 0) calc(1 * 100% / 3) calc(2 * 100% / 3) / 25% 25%,
+    linear-gradient(var(--c3) 0 0) calc(2 * 100% / 3) calc(2 * 100% / 3) / 25% 25%;
+  background-repeat: no-repeat;
+  animation: __loading-clones-19-l19 var(--d2) infinite alternate;
+}
+@keyframes __loading-clones-19-l19 {
+  90%,
+  100% {
+    background-position:
+      0 50%,
+      100% 50%,
+      50% 0,
+      50% 100%,
+      0 0,
+      100% 0,
+      0 100%,
+      100% 100%;
+  }
+}

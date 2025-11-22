@@ -1,0 +1,33 @@
+.__loading-clones-14 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --d2: var(--duration-2, calc(var(--d) * 2));
+  --c1: var(--color-1, #bf1e62);
+  --c2: var(--color-2, #ffa588);
+  --c3: var(--color-3, #027b7f);
+
+  width: var(--s);
+  aspect-ratio: 1.154;
+  display: grid;
+  background: conic-gradient(from 149deg at top, #0000, var(--c1) 1deg 60deg, #0000 61deg);
+  animation: __loading-clones-14-l14 var(--d1) infinite cubic-bezier(0.5, 500, 0.5, -500);
+  transform-origin: top;
+}
+.__loading-clones-14:before,
+.__loading-clones-14:after {
+  content: '';
+  grid-area: 1/1;
+  background: conic-gradient(from 149deg at top, #0000, var(--c2) 1deg 60deg, #0000 61deg);
+  transform-origin: inherit;
+  animation: inherit;
+}
+.__loading-clones-14:after {
+  background: conic-gradient(from 149deg at top, #0000, var(--c3) 1deg 60deg, #0000 61deg);
+  animation-timing-function: cubic-bezier(0.5, 800, 0.5, -800);
+}
+@keyframes __loading-clones-14-l14 {
+  100% {
+    transform: rotate(0.2deg);
+  }
+}

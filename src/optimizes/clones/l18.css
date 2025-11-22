@@ -1,0 +1,62 @@
+.__loading-clones-18 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #60b99a);
+  --c2: var(--color-2, #f77825);
+  --c3: var(--color-3, #554236);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    linear-gradient(45deg, var(--c1) 50%, #0000 0),
+    linear-gradient(45deg, #0000 50%, var(--c1) 0),
+    linear-gradient(-45deg, var(--c2) 50%, #0000 0),
+    linear-gradient(-45deg, #0000 50%, var(--c2) 0),
+    linear-gradient(var(--c3) 0 0);
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  animation: __loading-clones-18-l18 var(--d1) infinite;
+}
+@keyframes __loading-clones-18-l18 {
+  0% {
+    background-position:
+      50% 50%,
+      50% 50%,
+      50% 50%,
+      50% 50%,
+      50% 50%;
+  }
+  25% {
+    background-position:
+      0 100%,
+      100% 0,
+      50% 50%,
+      50% 50%,
+      50% 50%;
+  }
+  50% {
+    background-position:
+      0 100%,
+      100% 0,
+      100% 100%,
+      0 0,
+      50% 50%;
+  }
+  75% {
+    background-position:
+      50% 50%,
+      50% 50%,
+      100% 100%,
+      0 0,
+      50% 50%;
+  }
+  100% {
+    background-position:
+      50% 50%,
+      50% 50%,
+      50% 50%,
+      50% 50%,
+      50% 50%;
+  }
+}

@@ -1,0 +1,45 @@
+.__loading-clones-13 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1500ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.667));
+  --c1: var(--color-1, #027b7f);
+  --c2: var(--color-2, #ffa588);
+  --c3: var(--color-3, #bf1e62);
+
+  width: var(--s);
+  aspect-ratio: 1.154;
+  background: repeating-conic-gradient(
+    from -30deg,
+    var(--c1) 0 60deg,
+    var(--c2) 0 120deg,
+    var(--c3) 0 180deg
+  );
+  animation: __loading-clones-13-l13 var(--d) infinite alternate;
+}
+@keyframes __loading-clones-13-l13 {
+  0%,
+  10% {
+    clip-path: polygon(
+      50% 50%,
+      25% 100%,
+      25% 100%,
+      25% 100%,
+      25% 100%,
+      75% 100%,
+      75% 100%,
+      75% 100%
+    );
+  }
+  33%,
+  43% {
+    clip-path: polygon(50% 50%, 0 50%, 0 50%, 0 50%, 25% 100%, 75% 100%, 100% 50%, 100% 50%);
+  }
+  66%,
+  76% {
+    clip-path: polygon(50% 50%, 25% 0, 25% 0, 0 50%, 25% 100%, 75% 100%, 100% 50%, 75% 0);
+  }
+  95%,
+  100% {
+    clip-path: polygon(50% 50%, 75% 0, 25% 0, 0 50%, 25% 100%, 75% 100%, 100% 50%, 75% 0);
+  }
+}

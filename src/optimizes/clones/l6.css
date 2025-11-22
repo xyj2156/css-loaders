@@ -1,0 +1,43 @@
+.__loading-clones-6 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.7));
+  --d2: var(--duration-2, var(--d));
+  --c1: var(--color-1, #554236);
+  --c2: var(--color-2, #f77825);
+  --c3: var(--color-3, #60b99a);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background: var(--c1);
+  display: grid;
+  transform-origin: top right;
+  animation: __loading-clones-6-l6-0 var(--d2) infinite linear;
+}
+.__loading-clones-6::before,
+.__loading-clones-6::after {
+  content: '';
+  grid-area: 1/1;
+  background: var(--c2);
+  transform-origin: inherit;
+  animation: inherit;
+  animation-name: __loading-clones-6-l6-1;
+}
+.__loading-clones-6::after {
+  background: var(--c3);
+  --_s: 180deg;
+}
+@keyframes __loading-clones-6-l6-0 {
+  70%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes __loading-clones-6-l6-1 {
+  30% {
+    transform: rotate(var(--_s, 90deg));
+  }
+  70% {
+    transform: rotate(0);
+  }
+}
