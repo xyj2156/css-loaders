@@ -5,7 +5,8 @@
   --c3: var(--color-3, #666);
   --c4: var(--color-4, #aaa);
   --g: calc(var(--s) / 5); /* 将5px改为--s的1/5 */
-  --d1: var(--duration-1, 1s);
+  --d:  var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
 
   width: calc(3 * (1.353 * var(--s) + var(--g)));
   display: grid;

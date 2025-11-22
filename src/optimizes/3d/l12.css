@@ -3,7 +3,8 @@
   --g: calc(var(--s) / 8);
   --c1: var(--color-1, #fe4365);
   --c2: var(--color-2, #111);
-  --d1: var(--duration-1, 1.5s);
+  --d:  var(--duration, 1500ms);
+  --d1: var(--d);
 
   height: calc(2 * (var(--s) + var(--g)));
   aspect-ratio: 1;

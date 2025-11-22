@@ -3,7 +3,9 @@
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #666);
   --c3: var(--color-3, #aaa);
-  --d1: var(--duration-1, 0.8s);
+  --c4: var(--color-3, #fff);
+  --d:  var(--duration, 800ms);
+  --d1: var(--duration-1, var(--d));
 
   --_d: calc(0.353 * var(--s));
   width: calc(var(--s) + var(--_d));
@@ -26,6 +28,6 @@
 }
 @keyframes __loading-3d-2-l2 {
   50% {
-    filter: drop-shadow(0 0 calc(0.2 * var(--s)) var(--c1));
+    filter: drop-shadow(0 0 calc(0.2 * var(--s)) var(--c4));
   }
 }

@@ -3,8 +3,9 @@
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #666);
   --c3: var(--color-3, #aaa);
-  --d1: var(--duration-1, 1.2s);
-  --d2: var(--duration-2, 0.6s);
+  --d:  var(--duration, 1200ms);
+  --d1: var(--duration-1, var(--d));
+  --d2: var(--duration-2, calc(var(--d) / 2));
 
   --_d: calc(0.353 * var(--s));
   width: calc(var(--s) + var(--_d));
