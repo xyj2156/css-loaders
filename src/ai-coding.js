@@ -50,46 +50,41 @@ fs.readdirSync(styles)
 asyncEach(allFiles, function ([file, target]) {
   const content = fs.readFileSync(file, 'utf-8');
   const answer = (function () {
+    const a = `
+修改1：
+设置css变量 --d 为 var(--duration,1000ms),禁止修改--d的值。
+根据 --d 计算得出 --dx, x为数字,
+--dx(x为数字)值为 --duration-x 或根据--d计算得出的默认值
+css样式中动画时长使用--dx，禁止直接使用 --d
+
+修改2：
+如果内容中还有--s变量重命名--_s
+提取宽度或文字大小为css变量 --s;文件中其他也根据宽度计算：
+--s值为 --size 或者默认值
+
+修改3：
+提取颜色为css变量，按照 --cx 格式提取
+--cx值为 --color-x，或默认值 x为数字
+
+格式：
+--cx 格式如下 --c1:var(--color-1,默认值),--c2:var(--color-2,默认值)
+--d 格式如下 --d:var(--duration, 默认值) 默认值值由s转换为ms
+--dx 格式如下 --d1:var(--duration-1,根据--d计算的值),--d2:var(--duration-2,根据--d计算的值)
+
+最终要求：
+--c，--s,--cx,--dx 放到类样式顶部，不要在伪类放css变量
+变量顺序 --s --d --dx --cx
+变量与其他样式用空行隔开
+
+    `;
     if (content.includes('Loading')) {
       return `
-伪类content为Loading 则提取伪类内容Loading 为css变量--c, 如果文件中相同变量则重命名为--_c
---c值为 --content 或默认值 Loading
+提取伪类content 为css变量--c, 如果文件中相同变量则重命名为--_c
+--c值为 --content 或默认值
 
-提取宽度为css变量 --s;文件中其他也根据宽度计算：
---s值为 --size 或者默认值
-
-提取颜色为css变量，按照 --cx 格式提取
---cx值为 --color-x，或默认值 x为数字
-
-提取动画时长为 --dx x为数字,
---dx(x为数字)值为 --duration-x 或默认值 负数的时长也提取
-
---cx 格式如下 --c1:var(--color-1,默认值),--c2:var(--color-2,默认值)
---dx 格式如下 --d1:var(--duration-1,默认值),--d2:var(--duration-2,默认值)
-
-
---c，--s,--cx,--dx 放到类样式顶部，不要在伪类放css变量
-变量顺序 --c --s --cx --dx
-变量与其他样式用空行隔开`.trim();
+${a}`.trim();
     }
-    return `
-提取宽度为css变量 --s;文件中其他也根据宽度计算：
---s值为 --size 或者默认值
-
-提取颜色为css变量，按照 --cx 格式提取
---cx值为 --color-x，或默认值 x为数字
-
-提取动画时长为 --dx x为数字,
---dx(x为数字)值为 --duration-x 或默认值 负数的时长也提取
-
---cx 格式如下 --c1:var(--color-1,默认值),--c2:var(--color-2,默认值)
---dx 格式如下 --d1:var(--duration-1,默认值),--d2:var(--duration-2,默认值)
-
-
---c，--s,--cx,--dx 放到类样式顶部，不要在伪类放css变量
-变量顺序 --s --cx --dx
-变量与其他样式用空行隔开
-`.trim();
+    return a;
   })();
   return trans(content, answer)
     .then(function (content) {
