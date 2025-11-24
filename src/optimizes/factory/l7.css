@@ -1,0 +1,71 @@
+.__loading-factory-7 {
+  --s: var(--size, 90px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #ccc);
+
+  width: var(--s);
+  height: calc(var(--s) * 14 / 90);
+  box-shadow: 0 3px 0 var(--c1);
+  position: relative;
+  clip-path: inset(calc(var(--s) * -40 / 90) 0 calc(var(--s) * -5 / 90));
+}
+.__loading-factory-7:before {
+  content: '';
+  position: absolute;
+  inset: auto calc(50% - calc(var(--s) * 17 / 90)) 0;
+  height: calc(var(--s) * 50 / 90);
+  --g: no-repeat linear-gradient(var(--c2) 0 0);
+  background: var(--g), var(--g), var(--g), var(--g);
+  background-size: calc(var(--s) * 16 / 90) calc(var(--s) * 14 / 90);
+  animation:
+    __loading-factory-7-l7-1 var(--d1) infinite linear,
+    __loading-factory-7-l7-2 var(--d1) infinite linear;
+}
+@keyframes __loading-factory-7-l7-1 {
+  0%,
+  100% {
+    background-position:
+      0 calc(var(--s) * -50 / 90),
+      100% calc(var(--s) * -50 / 90);
+  }
+  17.5% {
+    background-position:
+      0 100%,
+      100% calc(var(--s) * -50 / 90),
+      0 calc(var(--s) * -50 / 90),
+      100% calc(var(--s) * -50 / 90);
+  }
+  35% {
+    background-position:
+      0 100%,
+      100% 100%,
+      0 calc(var(--s) * -50 / 90),
+      100% calc(var(--s) * -50 / 90);
+  }
+  52.5% {
+    background-position:
+      0 100%,
+      100% 100%,
+      0 calc(100% - calc(var(--s) * 16 / 90)),
+      100% calc(var(--s) * -50 / 90);
+  }
+  70%,
+  98% {
+    background-position:
+      0 100%,
+      100% 100%,
+      0 calc(100% - calc(var(--s) * 16 / 90)),
+      100% calc(100% - calc(var(--s) * 16 / 90));
+  }
+}
+@keyframes __loading-factory-7-l7-2 {
+  0%,
+  70% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(200%);
+  }
+}

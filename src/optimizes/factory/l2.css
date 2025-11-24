@@ -1,0 +1,30 @@
+.__loading-factory-2 {
+  --s: var(--size, 90px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #fff);
+  width: var(--s);
+  height: calc(var(--s) / 6.43);
+  box-shadow: 0 3px 0 var(--c1);
+  background: linear-gradient(var(--c1) 0 0) center/calc(var(--s) / 45) 100% no-repeat;
+  display: grid;
+}
+
+.__loading-factory-2:before,
+.__loading-factory-2:after {
+  content: '';
+  grid-area: 1/1;
+  background: repeating-linear-gradient(90deg, var(--c1) 0 calc(var(--s) / 6.43), #0000 0 100%) 0 0 / calc(100% / 4) 100%;
+  clip-path: inset(0 50% 0 0);
+  animation: __loading-factory-2-l2 var(--d1) infinite linear;
+}
+
+.__loading-factory-2:before {
+  background: radial-gradient(circle calc(var(--s) / 12.86) at calc(var(--s) / 12.86) 50%, var(--c1) 92%, #0000) 0 0 / calc(100% / 4) 100%;
+  clip-path: inset(0 0 0 50%);
+}
+@keyframes __loading-factory-2-l2 {
+  100% {
+    background-position: calc(100% / 3) 0;
+  }
+}

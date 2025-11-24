@@ -1,0 +1,33 @@
+.__loading-factory-4 {
+  --s: var(--size, 90px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, red);
+  --c2: var(--color-2, #fff);
+  --c3: var(--color-3, #000);
+
+  width: var(--s);
+  height: calc(var(--s) * 14 / 90);
+  box-shadow: 0 calc(var(--s) / 30) 0 var(--c2);
+  display: grid;
+}
+.__loading-factory-4:before,
+.__loading-factory-4:after {
+  content: '';
+  grid-area: 1/1;
+  background:
+    radial-gradient(circle closest-side, var(--__c, var(--c1)) 92%, #0000) 0 0 /
+    calc(100% / 4) 100%;
+  animation: __loading-factory-4-l4 var(--d1) infinite linear;
+}
+.__loading-factory-4:after {
+  --__c: var(--c3);
+  background-color: var(--c2);
+  box-shadow: 0 -2px 0 0 var(--c2);
+  clip-path: inset(calc(var(--s) / -45) calc(50% - calc(var(--s) * 10 / 90)));
+}
+@keyframes __loading-factory-4-l4 {
+  100% {
+    background-position: calc(100% / 3) 0;
+  }
+}

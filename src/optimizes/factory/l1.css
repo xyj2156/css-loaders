@@ -1,0 +1,17 @@
+.__loading-factory-1 {
+  --s: var(--size, 90px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #fff);
+
+  width: var(--s);
+  height: calc(var(--s) * 14 / 90);
+  box-shadow: 0 3px 0 var(--c1);
+  background: repeating-linear-gradient(90deg, var(--c1) 0 calc(var(--s) * 14 / 90), #0000 0 100%) 0 0 / calc(100% / 4) 100%;
+  animation: __loading-factory-1-l1 var(--d1) infinite linear;
+}
+@keyframes __loading-factory-1-l1 {
+  100% {
+    background-position: calc(100% / 3) 0;
+  }
+}

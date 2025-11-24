@@ -1,0 +1,30 @@
+.__loading-factory-8 {
+  --s: 90px;
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #ccc);
+  --c2: var(--color-2, #fff);
+
+  width: var(--s);
+  height: calc(var(--s) / 3);
+  box-shadow: 0 3px 0 var(--c2);
+  --g: repeat-x
+    repeating-linear-gradient(90deg, var(--c1) 0 calc(var(--s) * 16 / 90), #0000 0 calc(var(--s) * 18 / 90), var(--c1) 0 calc(var(--s) * 34 / 90), #0000 0 100%);
+  background: var(--g), var(--g);
+  background-size:
+    calc(var(--s) * 2 / 3) calc(var(--s) * 14 / 90),
+    calc(var(--s) * 2 / 3) calc(var(--s) * 14 / 90);
+  animation: __loading-factory-8-l8 var(--d1) infinite linear;
+}
+@keyframes __loading-factory-8-l8 {
+  0% {
+    background-position:
+      0 0,
+      0 100%;
+  }
+  100% {
+    background-position:
+      calc(var(--s) * 2 / 3) 0,
+      calc(var(--s) * 2 / 3) 100%;
+  }
+}

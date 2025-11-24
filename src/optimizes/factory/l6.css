@@ -1,0 +1,50 @@
+.__loading-factory-6 {
+  --s: var(--size, 90px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #ccc);
+  --c3: var(--color-3, lightblue);
+
+  width: var(--s);
+  height: calc(var(--s) * 14 / 90);
+  box-shadow: 0 3px 0 var(--c1);
+  position: relative;
+  display: grid;
+  clip-path: inset(calc(var(--s) * -2 / 3) 0 calc(var(--s) * -1 / 18));
+}
+.__loading-factory-6:after {
+  content: '';
+  position: relative;
+  background: repeating-linear-gradient(
+      90deg,
+      #0000 0 calc(50% - calc(var(--s) * 8 / 90)),
+      var(--c2) 0 calc(50% + calc(var(--s) * 8 / 90)),
+      #0000 0 100%
+    )
+    0 0 / calc(100% / 3) 100%;
+  animation: __loading-factory-6-l6-1 var(--d1) infinite;
+}
+.__loading-factory-6:before {
+  content: '';
+  position: absolute;
+  width: calc(var(--s) * 14 / 90);
+  aspect-ratio: 1;
+  left: calc(50% - calc(var(--s) * 7 / 90));
+  bottom: 0;
+  border-radius: 50%;
+  background: var(--c3);
+  animation: __loading-factory-6-l6-2 var(--d1) infinite;
+}
+@keyframes __loading-factory-6-l6-1 {
+  50%,
+  100% {
+    background-position: calc(100% / 2) 0;
+  }
+}
+@keyframes __loading-factory-6-l6-2 {
+  0%,
+  50% {
+    transform: translateY(calc(var(--s) * -80 / 90));
+  }
+}
