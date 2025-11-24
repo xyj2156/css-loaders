@@ -1,0 +1,66 @@
+.__loading-eyes-8 {
+  --s: var(--size, 20px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2.5));
+  --c1: var(--color-1, #222);
+  --c2: var(--color-2, #fff);
+
+  display: inline-flex;
+  gap: calc(var(--s) * 0.5);
+}
+
+.__loading-eyes-8:before,
+.__loading-eyes-8:after {
+  content: '';
+  height: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    linear-gradient(var(--c1) 0 0) top/100% 40% no-repeat,
+    radial-gradient(farthest-side, #000 95%, #0000) 50%/calc(var(--s) * 0.4) calc(var(--s) * 0.4) no-repeat var(--c2);
+  animation: var(--d1) infinite;
+  animation-name: __loading-eyes-8-l8-1, __loading-eyes-8-l8-2;
+}
+
+@keyframes __loading-eyes-8-l8-1 {
+  0%,
+  40%,
+  100% {
+    background-size:
+      100% 40%,
+      calc(var(--s) * 0.4) calc(var(--s) * 0.4);
+  }
+  50%,
+  80% {
+    background-size:
+      100% 0%,
+      calc(var(--s) * 0.4) calc(var(--s) * 0.4);
+  }
+}
+
+@keyframes __loading-eyes-8-l8-2 {
+  0%,
+  50% {
+    background-position:
+      top,
+      50% 50%;
+  }
+  60%,
+  65% {
+    background-position:
+      top,
+      70% 50%;
+  }
+  70%,
+  75% {
+    background-position:
+      top,
+      30% 50%;
+  }
+  90%,
+  100% {
+    background-position:
+      top,
+      50% 50%;
+  }
+}

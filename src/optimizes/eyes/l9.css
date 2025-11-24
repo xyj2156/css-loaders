@@ -1,0 +1,48 @@
+.__loading-eyes-9 {
+  --s: var(--size, 20px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 4));
+  --c1: var(--color-1, #222);
+  --c2: var(--color-2, #fff);
+
+  display: inline-flex;
+  gap: calc(var(--s) / 2);
+}
+.__loading-eyes-9:before,
+.__loading-eyes-9:after {
+  content: '';
+  height: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    linear-gradient(var(--c1) 0 0) top/100% 0 no-repeat,
+    radial-gradient(farthest-side, #000 95%, #0000) 50% calc(var(--s) * 0.4)/calc(var(--s) * 0.4) calc(var(--s) * 0.4) no-repeat var(--c2);
+  animation: __loading-eyes-9-l9 var(--d1) infinite ease-in;
+}
+@keyframes __loading-eyes-9-l9 {
+  0% {
+    background-size:
+      100% 0,
+      calc(var(--s) * 0.4) calc(var(--s) * 0.4);
+    background-position:
+      top,
+      50% 50%;
+  }
+  80% {
+    background-size:
+      100% 70%,
+      calc(var(--s) * 0.4) calc(var(--s) * 0.4);
+    background-position:
+      top,
+      50% 70%;
+  }
+  84%,
+  100% {
+    background-size:
+      100% 0,
+      calc(var(--s) * 0.4) calc(var(--s) * 0.4);
+    background-position:
+      top,
+      50% 50%;
+  }
+}

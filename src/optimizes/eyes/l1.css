@@ -1,0 +1,26 @@
+.__loading-eyes-1 {
+  --s: 30px;
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  height: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+  background:
+    radial-gradient(farthest-side, #000 15%, #0000 18%),
+    radial-gradient(50% 100% at 50% 160%, #fff 95%, #0000) top/100% 50%,
+    radial-gradient(50% 100% at 50% -60%, #fff 95%, #0000) bottom/100% 50%;
+  background-repeat: no-repeat;
+}
+
+.__loading-eyes-1:before {
+  content: '';
+  background: inherit;
+  opacity: 0.6;
+  animation: __loading-eyes-1-l1 var(--d1) infinite;
+}
+@keyframes __loading-eyes-1-l1 {
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}

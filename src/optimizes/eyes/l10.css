@@ -1,0 +1,37 @@
+.__loading-eyes-10 {
+  --s: var(--size, 20px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 3 / 2));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+
+  --__a: calc(var(--s) / 5 * 2);
+
+  display: inline-flex;
+  gap: calc(var(--s) / 2);
+}
+.__loading-eyes-10:before,
+.__loading-eyes-10:after {
+  content: '';
+  height: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, var(--c1) 95%, #0000) 50% / var(--__a) var(--__a)
+    no-repeat var(--c2);
+  animation: __loading-eyes-10-l10 var(--d1) infinite alternate;
+}
+.__loading-eyes-10:after {
+  --_s: -1;
+}
+@keyframes __loading-eyes-10-l10 {
+  0%,
+  20% {
+    transform: scaleX(var(--_s, 1)) rotate(0deg);
+    clip-path: inset(0);
+  }
+  60%,
+  100% {
+    transform: scaleX(var(--_s, 1)) rotate(30deg);
+    clip-path: inset(40% 0 0);
+  }
+}

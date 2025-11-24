@@ -1,5 +1,5 @@
 .__loading-3d-1 {
-  --s: var(--size, 25px);
+  --_s: var(--size, 25px);
   --c1:var(--color-1, #fff);
   --c2:var(--color-2, #666);
   --c3:var(--color-3, #aaa);

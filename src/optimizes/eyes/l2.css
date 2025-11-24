@@ -1,0 +1,54 @@
+.__loading-eyes-2 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration, var(--d));
+  --c1: var(--color-1, #fff);
+
+  height: var(--s);
+  aspect-ratio: 2;
+  display: grid;
+  background:
+    radial-gradient(farthest-side, #000 15%, #0000 18%) 0 0/50% 100%,
+    radial-gradient(50% 100% at 50% 160%, var(--c1) 95%, #0000) 0 0 /50% 50%,
+    radial-gradient(50% 100% at 50% -60%, var(--c1) 95%, #0000) 0 100%/50% 50%;
+  background-repeat: repeat-x;
+  animation: __loading-eyes-2-l2 var(--d1) infinite linear;
+}
+
+@keyframes __loading-eyes-2-l2 {
+  0%,
+  15% {
+    background-position:
+      0 0,
+      0 0,
+      0 100%;
+  }
+  20%,
+  40% {
+    background-position:
+      calc(var(--s) * (1/6)) 0,
+      0 0,
+      0 100%;
+  }
+  45%,
+  55% {
+    background-position:
+      0 0,
+      0 0,
+      0 100%;
+  }
+  60%,
+  80% {
+    background-position:
+      calc(var(--s) * (-1/6)) 0,
+      0 0,
+      0 100%;
+  }
+  85%,
+  100% {
+    background-position:
+      0 0,
+      0 0,
+      0 100%;
+  }
+}

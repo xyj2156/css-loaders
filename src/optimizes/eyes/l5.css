@@ -1,0 +1,39 @@
+.__loading-eyes-5 {
+  --s: var(--size, 20px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 3));
+  display: inline-flex;
+  gap: calc(var(--s) * 0.5);
+}
+
+.__loading-eyes-5:before,
+.__loading-eyes-5:after {
+  content: '';
+  height: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, var(--c1, #000) 95%, #0000) 35% 35%/calc(var(--s) * 0.3) calc(var(--s) * 0.3) no-repeat var(--c2, #fff);
+  animation: __loading-eyes-5-l5 var(--d1) infinite;
+}
+@keyframes __loading-eyes-5-l5 {
+  0%,
+  11% {
+    background-position: 35% 35%;
+  }
+  14%,
+  36% {
+    background-position: 65% 35%;
+  }
+  38%,
+  61% {
+    background-position: 65% 65%;
+  }
+  64%,
+  86% {
+    background-position: 35% 65%;
+  }
+  88%,
+  100% {
+    background-position: 35% 35%;
+  }
+}
