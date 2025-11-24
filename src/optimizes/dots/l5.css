@@ -1,0 +1,40 @@
+.__loading-dots-5 {
+  --s: var(--size, 15px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0002);
+  --__a: calc(var(--s) * 4/3);
+  --__b: calc(var(--s) * -4/3);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: __loading-dots-5-l5 var(--d1) infinite linear alternate;
+}
+@keyframes __loading-dots-5-l5 {
+  0% {
+    box-shadow:
+      var(--__a) 0 var(--c1),
+      var(--__b) 0 var(--c2);
+    background: var(--c1);
+  }
+  33% {
+    box-shadow:
+      var(--__a) 0 var(--c1),
+      var(--__b) 0 var(--c2);
+    background: var(--c2);
+  }
+  66% {
+    box-shadow:
+      var(--__a) 0 var(--c2),
+      var(--__b) 0 var(--c1);
+    background: var(--c2);
+  }
+  100% {
+    box-shadow:
+      var(--__a) 0 var(--c2),
+      var(--__b) 0 var(--c1);
+    background: var(--c1);
+  }
+}

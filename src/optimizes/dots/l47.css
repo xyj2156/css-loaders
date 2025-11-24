@@ -1,0 +1,16 @@
+.__loading-dots-47 {
+  --s: var(--size, 15px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.75));
+  --c1: var(--color-1, #000);
+
+  height: var(--s);
+  aspect-ratio: 5;
+  background: radial-gradient(closest-side at 37.5% 50%, var(--c1) 94%, #0000) 0 / calc(80% / 3) 100%;
+  animation: __loading-dots-47-l47 var(--d1) infinite;
+}
+@keyframes __loading-dots-47-l47 {
+  100% {
+    background-position: 36.36%;
+  }
+}

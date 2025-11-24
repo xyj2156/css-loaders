@@ -1,0 +1,26 @@
+.__loading-dots-38 {
+  --s: var(--size, 35px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #000);
+  --_g: no-repeat radial-gradient(farthest-side, var(--c1) 94%, #0000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    var(--_g) 0 0,
+    var(--_g) 100% 0,
+    var(--_g) 100% 100%,
+    var(--_g) 0 100%;
+  background-size: 40% 40%;
+  animation: __loading-dots-38-l38 var(--d1) infinite;
+}
+@keyframes __loading-dots-38-l38 {
+  100% {
+    background-position:
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 0;
+  }
+}

@@ -1,0 +1,33 @@
+.__loading-dots-6 {
+  --s: var(--size, 15px);
+  --c1: var(--color-1, #000);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, var(--d));
+
+  --__a: calc(var(--s) * 5 / 3);
+  --__b: calc(var(--s) * -5 / 3);
+  --__c: calc(var(--s) * -1);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background: var(--c1);
+  border-radius: 50%;
+  animation: __loading-dots-6-l6 var(--d1) infinite linear alternate;
+}
+@keyframes __loading-dots-6-l6 {
+  0% {
+    box-shadow:
+      var(--s) 0,
+      var(--__b) 0;
+  }
+  50% {
+    box-shadow:
+      var(--s) 0,
+      var(--__c) 0;
+  }
+  100% {
+    box-shadow:
+      var(--__a) 0,
+      var(--__c) 0;
+  }
+}

@@ -1,0 +1,37 @@
+.__loading-dots-22 {
+  --s: var(--size, 17px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --d2: var(--duration-2, var(--d));
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--c1);
+  display: grid;
+  animation: __loading-dots-22-l22-0 var(--d1) infinite linear;
+}
+.__loading-dots-22:before,
+.__loading-dots-22:after {
+  content: '';
+  grid-area: 1/1;
+  margin: calc(var(--s) / 100 * 15);
+  border-radius: 50%;
+  background: inherit;
+  transform: rotate(0deg) translate(150%);
+  animation: __loading-dots-22-l22 var(--d2) infinite;
+}
+.__loading-dots-22:after {
+  animation-delay: calc(var(--d2) / -2);
+}
+@keyframes __loading-dots-22-l22-0 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@keyframes __loading-dots-22-l22 {
+  100% {
+    transform: rotate(1turn) translate(150%);
+  }
+}

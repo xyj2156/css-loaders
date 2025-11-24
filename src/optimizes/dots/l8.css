@@ -1,0 +1,42 @@
+.__loading-dots-8 {
+  --s: var(--size, 15px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--druation-1, var(--d));
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 5/3);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.__loading-dots-8::before,
+.__loading-dots-8::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--c1);
+}
+
+.__loading-dots-8::before {
+  box-shadow: calc(var(--_a) * -1) 0;
+  animation: __loading-dots-8-l8-1 var(--d1) infinite linear;
+}
+
+.__loading-dots-8::after {
+  transform: rotate(0deg) translateX(var(--_a));
+  animation: __loading-dots-8-l8-2 var(--d1) infinite linear;
+}
+
+@keyframes __loading-dots-8-l8-1 {
+  100% {
+    transform: translateX(var(--_a));
+  }
+}
+
+@keyframes __loading-dots-8-l8-2 {
+  100% {
+    transform: rotate(-180deg) translateX(var(--_a));
+  }
+}

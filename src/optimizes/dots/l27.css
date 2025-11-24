@@ -1,0 +1,45 @@
+.__loading-dots-27 {
+  --s: var(--size, 15px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0000);
+  --_a: no-repeat radial-gradient(farthest-side, var(--c1) 94%, var(--c2));
+
+  height: var(--s);
+  aspect-ratio: 4;
+  background:
+    var(--_a) left,
+    var(--_a) right;
+  background-size: 25% 100%;
+  display: grid;
+}
+
+.__loading-dots-27:before,
+.__loading-dots-27:after {
+  content: '';
+  grid-area: 1/1;
+  margin: auto;
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--c1);
+  clip-path: inset(0 0 49%);
+  transform-origin: -100% 50%;
+  animation: __loading-dots-27-l27 var(--d1) infinite alternate;
+}
+
+.__loading-dots-27:after {
+  --__a: -1;
+  transform-origin: 200% 50%;
+}
+
+@keyframes __loading-dots-27-l27 {
+  0%,
+  40% {
+    transform: scaleY(var(--__a, 1)) rotate(0);
+  }
+  100% {
+    transform: scaleY(var(--__a, 1)) rotate(calc(var(--__a, 1) * -90deg));
+  }
+}

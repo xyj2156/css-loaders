@@ -1,0 +1,46 @@
+.__loading-dots-3 {
+  --s:var(--size,60px);
+  --d:var(--duration,1000ms);
+  --d1:var(--duration-1,calc(var(--d)*1));
+  --c1:var(--color-1,#000);
+  --c2:var(--color-2,#0000);
+
+  --_a:no-repeat radial-gradient(circle closest-side,var(--c1) 90%,var(--c2));
+  --__a:calc(var(--s)/3);
+  --__b:calc(var(--s)/2);
+
+  width: var(--s);
+  aspect-ratio: 2;
+  background:
+    var(--_a) 0% 50%,
+    var(--_a) 50% 50%,
+    var(--_a) 100% 50%;
+  background-size: var(--__a) 50%;
+  animation: __loading-dots-3-l3 var(--d1) infinite linear;
+}
+@keyframes __loading-dots-3-l3 {
+  20% {
+    background-position:
+      0% 0%,
+      50% 50%,
+      100% 50%;
+  }
+  40% {
+    background-position:
+      0% 100%,
+      50% 0%,
+      100% 50%;
+  }
+  60% {
+    background-position:
+      0% 50%,
+      50% 100%,
+      100% 0%;
+  }
+  80% {
+    background-position:
+      0% 50%,
+      50% 50%,
+      100% 100%;
+  }
+}

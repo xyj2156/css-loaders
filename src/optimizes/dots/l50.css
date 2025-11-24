@@ -1,0 +1,44 @@
+.__loading-dots-50 {
+  --s: var(--size, 15px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+  --_g: no-repeat radial-gradient(farthest-side, var(--c1) 90%, #0000);
+
+  height: var(--s);
+  aspect-ratio: 4;
+  background:
+    var(--_g) left,
+    var(--_g) right;
+  background-size: 25% 100%;
+  display: flex;
+}
+.__loading-dots-50:before {
+  content: '';
+  flex: 1;
+  background: inherit;
+  animation: __loading-dots-50-l50 var(--d1) infinite;
+}
+@keyframes __loading-dots-50-l50 {
+  0% {
+    transform: translate(37.5%) rotate(0);
+  }
+  16.67% {
+    transform: translate(37.5%) rotate(90deg);
+  }
+  33.33% {
+    transform: translate(-37.5%) rotate(90deg);
+  }
+  50% {
+    transform: translate(-37.5%) rotate(180deg);
+  }
+  66.67% {
+    transform: translate(-37.5%) rotate(270deg);
+  }
+  83.33% {
+    transform: translate(37.5%) rotate(270deg);
+  }
+  100% {
+    transform: translate(37.5%) rotate(360deg);
+  }
+}

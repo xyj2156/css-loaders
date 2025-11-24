@@ -1,0 +1,34 @@
+.__loading-dots-31 {
+  --s: var(--size, 15px);
+  --d: var(--duration, 1000ms);
+  --c1: var(--color-1, #000);
+  height: var(--s);
+  aspect-ratio: 4;
+  display: grid;
+  animation: __loading-dots-31-l31-0 var(--d) infinite;
+}
+.__loading-dots-31:before,
+.__loading-dots-31:after {
+  content: '';
+  grid-area: 1/1;
+  --_g: no-repeat radial-gradient(farthest-side, var(--c1) 94%, #0000);
+  background:
+    var(--_g) left,
+    var(--_g) right;
+  background-size: 25% 100%;
+}
+.__loading-dots-31:after {
+  transform: rotate(0) translate(37.5%) rotate(0);
+  animation: inherit;
+  animation-name: __loading-dots-31-l31-1;
+}
+@keyframes __loading-dots-31-l31-0 {
+  100% {
+    transform: translate(37.5%);
+  }
+}
+@keyframes __loading-dots-31-l31-1 {
+  100% {
+    transform: rotate(-0.5turn) translate(37.5%) rotate(0.5turn);
+  }
+}

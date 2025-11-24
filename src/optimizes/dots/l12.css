@@ -1,0 +1,40 @@
+.__loading-dots-12 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1s);
+  --d1: var(--duraion-1, var(--d));
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(farthest-side, var(--c1) 90%, #0000);
+  background:
+    var(--_g) 0 50%,
+    var(--_g) 50% 50%,
+    var(--_g) 50% 50%,
+    var(--_g) 100% 50%;
+  background-size: 25% 50%;
+  animation: __loading-dots-12-l12 var(--d1) infinite linear;
+}
+@keyframes __loading-dots-12-l12 {
+  33% {
+    background-position:
+      0 0,
+      50% 100%,
+      50% 100%,
+      100% 0;
+  }
+  66% {
+    background-position:
+      50% 0,
+      0 100%,
+      100% 100%,
+      50% 0;
+  }
+  100% {
+    background-position:
+      50% 50%,
+      0 50%,
+      100% 50%,
+      50% 50%;
+  }
+}

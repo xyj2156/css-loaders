@@ -1,0 +1,32 @@
+.__loading-dots-21 {
+  --s: var(--size, 4px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #000);
+
+  color: var(--c1);
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow:
+    calc(19 * var(--s) / 4) 0 0 calc(7 * var(--s) / 4),
+    calc(38 * var(--s) / 4) 0 0 calc(3 * var(--s) / 4),
+    calc(57 * var(--s) / 4) 0 0 0;
+  transform: translateX(calc(-38 * var(--s) / 4));
+  animation: __loading-dots-21-l21 var(--d1) infinite alternate linear;
+}
+
+@keyframes __loading-dots-21-l21 {
+  50% {
+    box-shadow:
+      calc(19 * var(--s) / 4) 0 0 calc(3 * var(--s) / 4),
+      calc(38 * var(--s) / 4) 0 0 calc(7 * var(--s) / 4),
+      calc(57 * var(--s) / 4) 0 0 calc(3 * var(--s) / 4);
+  }
+  100% {
+    box-shadow:
+      calc(19 * var(--s) / 4) 0 0 0,
+      calc(38 * var(--s) / 4) 0 0 calc(3 * var(--s) / 4),
+      calc(57 * var(--s) / 4) 0 0 calc(7 * var(--s) / 4);
+  }
+}

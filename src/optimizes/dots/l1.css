@@ -1,0 +1,23 @@
+.__loading-dots-1 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1000ms);
+
+  --d1: var(--duration-1, calc(var(--d) * 1));
+
+  --c1: var(--color-1, #000);
+
+  --_a: var(--s);
+  --_b: calc(var(--_a) * 4);
+  --_c: calc(var(--_a) / 3);
+
+  width: var(--s);
+  aspect-ratio: 4;
+  background: radial-gradient(circle closest-side, var(--c1) 90%, #0000) 0 / calc(var(--_c)) 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-dots-1-l1 var(--d1) steps(4) infinite;
+}
+@keyframes __loading-dots-1-l1 {
+  to {
+    clip-path: inset(0 -34% 0 0);
+  }
+}

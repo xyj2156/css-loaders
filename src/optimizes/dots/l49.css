@@ -1,0 +1,39 @@
+.__loading-dots-49 {
+  --s: var(--size, 15px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #000);
+  --_g: no-repeat radial-gradient(farthest-side, var(--c1) 90%, #0000);
+
+  height: var(--s);
+  aspect-ratio: 4;
+  background:
+    var(--_g) left,
+    var(--_g) right;
+  background-size: 25% 100%;
+  display: grid;
+}
+.__loading-dots-49:before,
+.__loading-dots-49:after {
+  content: '';
+  height: inherit;
+  aspect-ratio: 1;
+  grid-area: 1/1;
+  margin: auto;
+  border-radius: 50%;
+  transform-origin: -100% 50%;
+  background: var(--c1);
+  animation: __loading-dots-49-l49 var(--d1) infinite linear;
+}
+.__loading-dots-49:after {
+  transform-origin: 200% 50%;
+  --_s: -1;
+  animation-delay: calc(var(--d1) * -0.5);
+}
+
+@keyframes __loading-dots-49-l49 {
+  58%,
+  100% {
+    transform: rotate(calc(var(--_s, 1) * 1turn));
+  }
+}

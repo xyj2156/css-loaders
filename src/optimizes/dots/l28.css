@@ -1,0 +1,96 @@
+.__loading-dots-28 {
+  --s: var(--size, 12px);
+  --d: var(--duration, 1000ms);
+  --d2: var(--duration-2, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--c1);
+  clip-path: inset(-220%);
+  animation: __loading-dots-28-l28 var(--d2) infinite linear;
+}
+@keyframes __loading-dots-28-l28 {
+  0% {
+    box-shadow:
+      0 0 0 0 var(--c1),
+      calc(var(--s) / 12 * 40) 0,
+      calc(var(--s) / 12 * -40) 0,
+      0 calc(var(--s) / 12 * 40),
+      0 calc(var(--s) / 12 * -40);
+  }
+  10% {
+    box-shadow:
+      0 0 0 0,
+      calc(var(--s) / 12 * 12) 0,
+      calc(var(--s) / 12 * -40) 0,
+      0 calc(var(--s) / 12 * 40),
+      0 calc(var(--s) / 12 * -40);
+  }
+  20% {
+    box-shadow:
+      0 0 0 calc(var(--s) / 12 * 4),
+      0 0,
+      calc(var(--s) / 12 * -40) 0,
+      0 calc(var(--s) / 12 * 40),
+      0 calc(var(--s) / 12 * -40);
+  }
+  30% {
+    box-shadow:
+      0 0 0 calc(var(--s) / 12 * 4),
+      0 0,
+      calc(var(--s) / 12 * -12) 0,
+      0 calc(var(--s) / 12 * 40),
+      0 calc(var(--s) / 12 * -40);
+  }
+  40% {
+    box-shadow:
+      0 0 0 calc(var(--s) / 12 * 8),
+      0 0,
+      0 0,
+      0 calc(var(--s) / 12 * 40),
+      0 calc(var(--s) / 12 * -40);
+  }
+  50% {
+    box-shadow:
+      0 0 0 calc(var(--s) / 12 * 8),
+      0 0,
+      0 0,
+      0 calc(var(--s) / 12 * 12),
+      0 calc(var(--s) / 12 * -40);
+  }
+  60% {
+    box-shadow:
+      0 0 0 calc(var(--s) / 12 * 12),
+      0 0,
+      0 0,
+      0 0,
+      0 calc(var(--s) / 12 * -40);
+  }
+  70% {
+    box-shadow:
+      0 0 0 calc(var(--s) / 12 * 12),
+      0 0,
+      0 0,
+      0 0,
+      0 calc(var(--s) / 12 * -12);
+  }
+  80% {
+    box-shadow:
+      0 0 0 calc(var(--s) / 12 * 16),
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+  90%,
+  100% {
+    box-shadow:
+      0 0 0 0,
+      calc(var(--s) / 12 * 40) 0,
+      calc(var(--s) / 12 * -40) 0,
+      0 calc(var(--s) / 12 * 40),
+      0 calc(var(--s) / 12 * -40);
+  }
+}

@@ -1,0 +1,46 @@
+.__loading-dots-14 {
+  --s: var(--size, 64px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 1/2);
+  --_b: calc(var(--s) * 1/16);
+  --__a: var(--c1) 90%, #0000;
+  width: var(--s);
+  aspect-ratio: 2;
+  background:
+    radial-gradient(farthest-side, var(--__a)) 0 50%/25% 50%,
+    radial-gradient(farthest-side at bottom, var(--__a)) 50% calc(50% - var(--_b)) / 25% 25%,
+    radial-gradient(farthest-side at top, var(--__a)) 50% calc(50% + var(--_b)) / 25% 25%,
+    radial-gradient(farthest-side at bottom, var(--__a)) 100% calc(50% - var(--_b)) / 25% 25%,
+    radial-gradient(farthest-side at top, var(--__a)) 100% calc(50% + var(--_b)) / 25% 25%;
+  background-repeat: no-repeat;
+  animation: __loading-dots-14-l14 var(--d1) infinite;
+}
+@keyframes __loading-dots-14-l14 {
+  25% {
+    background-position:
+      0 50%,
+      50% 0,
+      50% 100%,
+      100% 0,
+      100% 100%;
+  }
+  50% {
+    background-position:
+      100% 50%,
+      0 0,
+      0 100%,
+      50% 0,
+      50% 100%;
+  }
+  75%,
+  100% {
+    background-position:
+      100% 50%,
+      0 calc(50% - var(--_b)),
+      0 calc(50% + var(--_b)),
+      50% calc(50% - var(--_b)),
+      50% calc(50% + var(--_b));
+  }
+}

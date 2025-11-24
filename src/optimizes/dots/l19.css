@@ -1,0 +1,57 @@
+.__loading-dots-19 {
+  --s: var(--size, 15px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  clip-path: inset(calc(var(--s) * -3));
+  box-shadow:
+    calc(var(--s) * -4) var(--s),
+    calc(var(--s) * -4) var(--s),
+    calc(var(--s) * -4) var(--s);
+  transform: translateY(calc(var(--s) * -1));
+  animation: __loading-dots-19-l19 var(--d1) infinite linear;
+}
+
+@keyframes __loading-dots-19-l19 {
+  16.67% {
+    box-shadow:
+      calc(var(--s) * -4) var(--s),
+      calc(var(--s) * -4) var(--s),
+      calc(var(--s) * 1.267) var(--s);
+  }
+  33.33% {
+    box-shadow:
+      calc(var(--s) * -4) var(--s),
+      0px var(--s),
+      calc(var(--s) * 1.267) var(--s);
+  }
+  40%,
+  60% {
+    box-shadow:
+      calc(var(--s) * -1.267) var(--s),
+      0px var(--s),
+      calc(var(--s) * 1.267) var(--s);
+  }
+  66.67% {
+    box-shadow:
+      calc(var(--s) * -1.267) var(--s),
+      0px var(--s),
+      calc(var(--s) * 4) var(--s);
+  }
+  83.33% {
+    box-shadow:
+      calc(var(--s) * -1.267) var(--s),
+      calc(var(--s) * 4) var(--s),
+      calc(var(--s) * 4) var(--s);
+  }
+  100% {
+    box-shadow:
+      calc(var(--s) * 4) var(--s),
+      calc(var(--s) * 4) var(--s),
+      calc(var(--s) * 4) var(--s);
+  }
+}

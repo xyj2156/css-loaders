@@ -1,0 +1,60 @@
+.__loading-dots-40 {
+  --s: var(--size, 15px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.75));
+  --d2: var(--duration-2, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #000);
+
+  height: var(--s);
+  aspect-ratio: 5;
+  --_g: no-repeat radial-gradient(farthest-side, var(--c1) 94%, #0000);
+  background: var(--_g), var(--_g), var(--_g), var(--_g);
+  background-size: 20% 100%;
+  animation:
+    __loading-dots-40-l40-1 var(--d1) infinite alternate,
+    __loading-dots-40-l40-2 var(--d2) infinite alternate;
+}
+
+@keyframes __loading-dots-40-l40-1 {
+  0%,
+  10% {
+    background-position:
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+  33% {
+    background-position:
+      0 0,
+      calc(100% / 3) 0,
+      calc(100% / 3) 0,
+      calc(100% / 3) 0;
+  }
+  66% {
+    background-position:
+      0 0,
+      calc(100% / 3) 0,
+      calc(2 * 100% / 3) 0,
+      calc(2 * 100% / 3) 0;
+  }
+  90%,
+  100% {
+    background-position:
+      0 0,
+      calc(100% / 3) 0,
+      calc(2 * 100% / 3) 0,
+      100% 0;
+  }
+}
+
+@keyframes __loading-dots-40-l40-2 {
+  0%,
+  49.99% {
+    transform: scale(1);
+  }
+  50%,
+  100% {
+    transform: scale(-1);
+  }
+}
