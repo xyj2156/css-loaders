@@ -1,0 +1,64 @@
+.__loading-growing-6 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #bd1550);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+}
+
+.__loading-growing-6:before {
+  content: '';
+  background: var(--c1);
+  aspect-ratio: 1;
+  clip-path: polygon(
+    91.57% 77.78%,
+    65.56% 73.28%,
+    59.75% 99.04%,
+    44.54% 77.46%,
+    22.22% 91.57%,
+    26.72% 65.56%,
+    0.96% 59.75%,
+    22.54% 44.54%,
+    8.43% 22.22%,
+    34.44% 26.72%,
+    40.25% 0.96%,
+    55.46% 22.54%,
+    77.78% 8.43%,
+    73.28% 34.44%,
+    99.04% 40.25%,
+    77.46% 55.46%,
+    91.57% 77.78%,
+    65.56% 73.28%,
+    calc(65.56% - calc(5.6 * var(--s) / 80)) calc(73.28% - calc(8.38 * var(--s) / 80)),
+    calc(91.57% - calc(14.97 * var(--s) / 80)) calc(77.78% - calc(10 * var(--s) / 80)),
+    calc(77.46% - calc(9.89 * var(--s) / 80)) calc(55.46% - calc(1.97 * var(--s) / 80)),
+    calc(99.04% - calc(17.65 * var(--s) / 80)) calc(40.25% - calc(-3.51 * var(--s) / 80)),
+    calc(73.28% - calc(8.38 * var(--s) / 80)) calc(34.44% - calc(-5.6 * var(--s) / 80)),
+    calc(77.78% - calc(10 * var(--s) / 80)) calc(8.43% - calc(-14.97 * var(--s) / 80)),
+    calc(55.46% - calc(1.97 * var(--s) / 80)) calc(22.54% - calc(-9.89 * var(--s) / 80)),
+    calc(40.25% - calc(-3.51 * var(--s) / 80)) calc(0.96% - calc(-17.65 * var(--s) / 80)),
+    calc(34.44% - calc(-5.6 * var(--s) / 80)) calc(26.72% - calc(-8.38 * var(--s) / 80)),
+    calc(8.43% - calc(-14.97 * var(--s) / 80)) calc(22.22% - calc(-10 * var(--s) / 80)),
+    calc(22.54% - calc(-9.89 * var(--s) / 80)) calc(44.54% - calc(-1.97 * var(--s) / 80)),
+    calc(0.96% - calc(-17.65 * var(--s) / 80)) calc(59.75% - calc(3.51 * var(--s) / 80)),
+    calc(26.72% - calc(-8.38 * var(--s) / 80)) calc(65.56% - calc(5.6 * var(--s) / 80)),
+    calc(22.22% - calc(-10 * var(--s) / 80)) calc(91.57% - calc(14.97 * var(--s) / 80)),
+    calc(44.54% - calc(-1.97 * var(--s) / 80)) calc(77.46% - calc(9.89 * var(--s) / 80)),
+    calc(59.75% - calc(3.51 * var(--s) / 80)) calc(99.04% - calc(17.65 * var(--s) / 80)),
+    calc(65.56% - calc(5.6 * var(--s) / 80)) calc(73.28% - calc(8.38 * var(--s) / 80)),
+    calc(91.57% - calc(14.97 * var(--s) / 80)) calc(77.78% - calc(10 * var(--s) / 80))
+  );
+  margin: auto;
+  animation: __loading-growing-6-l6 infinite var(--d1) steps(4, jump-none);
+}
+@keyframes __loading-growing-6-l6 {
+  0% {
+    width: 45%;
+  }
+  to {
+    width: 100%;
+  }
+}

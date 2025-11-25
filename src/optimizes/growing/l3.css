@@ -1,0 +1,36 @@
+.__loading-growing-3 {
+  --s: var(--size, 75px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #bd1550);
+  --b: calc(var(--s) / 5);
+
+  width: var(--s);
+  aspect-ratio: 1 / cos(30deg);
+  display: grid;
+}
+.__loading-growing-3:before {
+  content: '';
+  background: var(--c1);
+  aspect-ratio: inherit;
+  clip-path: polygon(
+    50% 0,
+    100% 100%,
+    0 100%,
+    50% 0,
+    50% var(--b),
+    calc(var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
+    calc(100% - var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
+    50% var(--b)
+  );
+  margin: auto;
+  animation: __loading-growing-3-l3 infinite var(--d1) steps(4, jump-none);
+}
+@keyframes __loading-growing-3-l3 {
+  0% {
+    width: 36%;
+  }
+  to {
+    width: 100%;
+  }
+}

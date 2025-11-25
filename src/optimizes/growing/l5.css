@@ -1,0 +1,51 @@
+.__loading-growing-5 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-growing-5:before {
+  --c1: var(--color-1, #bd1550);
+  content: '';
+  background: var(--c1);
+  aspect-ratio: 1;
+  clip-path: polygon(
+    79.39% 90.45%,
+    50% 69%,
+    20.61% 90.45%,
+    31.93% 55.87%,
+    2.45% 34.55%,
+    38.83% 34.63%,
+    50% 0%,
+    61.17% 34.63%,
+    97.55% 34.55%,
+    68.07% 55.87%,
+    79.39% 90.45%,
+    50% 69%,
+    calc(50% - 0px) calc(69% - 6.84px),
+    calc(79.39% - 10.58px) calc(90.45% - 14.56px),
+    calc(68.07% - 6.51px) calc(55.87% - 2.11px),
+    calc(97.55% - 17.12px) calc(34.55% - -5.56px),
+    calc(61.17% - 4.02px) calc(34.63% - -5.53px),
+    calc(50% - 0px) calc(0% - -18px),
+    calc(38.83% - -4.02px) calc(34.63% - -5.53px),
+    calc(2.45% - -17.12px) calc(34.55% - -5.56px),
+    calc(31.93% - -6.51px) calc(55.87% - 2.11px),
+    calc(20.61% - -10.58px) calc(90.45% - 14.56px),
+    calc(50% - 0px) calc(69% - 6.84px),
+    calc(79.39% - 10.58px) calc(90.45% - 14.56px)
+  );
+  margin: auto;
+  animation: __loading-growing-5-l5 infinite var(--d1) steps(4, jump-none);
+}
+@keyframes __loading-growing-5-l5 {
+  0% {
+    width: 45%;
+  }
+  to {
+    width: 100%;
+  }
+}

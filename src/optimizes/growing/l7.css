@@ -1,0 +1,28 @@
+.__loading-growing-7 {
+  --s: var(--size, 64px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #bd1550);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-growing-7:before {
+  content: '';
+  border: calc(var(--s) / 8) solid var(--c1);
+  box-sizing: content-box;
+  margin: auto;
+  aspect-ratio: 1;
+  animation: __loading-growing-7-l7 infinite var(--d1) steps(4, jump-none);
+}
+@keyframes __loading-growing-7-l7 {
+  0% {
+    width: 0;
+    rotate: 0;
+  }
+  to {
+    width: 75%;
+    rotate: 90deg;
+  }
+}
