@@ -1,0 +1,49 @@
+.__loading-filling-5 {
+  --s: var(--size, 40px);
+  --c: var(--content, 'Loading');
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+
+  width: fit-content;
+  font-size: var(--s);
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0000;
+  -webkit-text-stroke: 1px var(--c1);
+  --g: conic-gradient(var(--c1) 0 0) no-repeat text;
+  background:
+    var(--g) 0,
+    var(--g) 100%,
+    var(--g) 0 0,
+    var(--g) 0 100%;
+  animation: __loading-filling-5-l5 var(--d1) linear infinite;
+}
+.__loading-filling-5:before {
+  content: var(--c);
+}
+@keyframes __loading-filling-5-l5 {
+  0%,
+  100% {
+    background-size:
+      0 100%,
+      0 100%,
+      100% 0,
+      100% 0;
+  }
+  50% {
+    background-size:
+      55% 100%,
+      55% 100%,
+      100% 0,
+      100% 0;
+  }
+  50.01% {
+    background-size:
+      0 100%,
+      0 100%,
+      100% 55%,
+      100% 55%;
+  }
+}

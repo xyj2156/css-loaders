@@ -1,0 +1,25 @@
+.__loading-filling-4 {
+  --s: var(--size, 40px);
+  --c: var(--content, 'Loading');
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #000);
+
+  width: fit-content;
+  font-size: var(--s);
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0000;
+  -webkit-text-stroke: 1px var(--c1);
+  background: conic-gradient(var(--c1) 0 0) 50%/0 100% no-repeat text;
+  animation: __loading-filling-4-l4 var(--d1) linear infinite;
+}
+.__loading-filling-4:before {
+  content: var(--c);
+}
+@keyframes __loading-filling-4-l4 {
+  to {
+    background-size: 120% 100%;
+  }
+}

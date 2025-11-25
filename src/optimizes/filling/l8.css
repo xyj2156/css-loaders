@@ -1,0 +1,64 @@
+.__loading-filling-8 {
+  --s: var(--size, 40px);
+  --c:var(--content, 'Loading');
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+
+  width: fit-content;
+  font-size: var(--s);
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0000;
+  -webkit-text-stroke: 1px var(--c1);
+  background: conic-gradient(var(--c1) 0 0) text;
+  animation: __loading-filling-8-l8 var(--d1) linear infinite;
+}
+.__loading-filling-8:before {
+  content: var(--c);
+}
+@keyframes __loading-filling-8-l8 {
+  0%,
+  2%,
+  8%,
+  11%,
+  15%,
+  21%,
+  30%,
+  32%,
+  35%,
+  40%,
+  46%,
+  47%,
+  53%,
+  61%,
+  70%,
+  72%,
+  77%,
+  80%,
+  86% {
+    background-size: 0 0;
+  }
+  1%,
+  9%,
+  10%,
+  16%,
+  20%,
+  31%,
+  34%,
+  41%,
+  45%,
+  48%,
+  52%,
+  55%,
+  60%,
+  73%,
+  76%,
+  81%,
+  85%,
+  96%,
+  100% {
+    background-size: 100% 100%;
+  }
+}

@@ -1,0 +1,28 @@
+.__loading-filling-3 {
+  --s: var(--size, 40px);
+  --c: var(--content, 'Loading');
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0000);
+
+  width: fit-content;
+  font-size: var(--s);
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0000;
+  -webkit-text-stroke: 1px var(--c1);
+  background: linear-gradient(-60deg, var(--c2) 45%, var(--c1) 0 55%, var(--c2) 0) 0/300% 100% no-repeat text;
+  animation: __loading-filling-3-l3 var(--d1) linear infinite;
+}
+
+.__loading-filling-3:before {
+  content: var(--c);
+}
+
+@keyframes __loading-filling-3-l3 {
+  0% {
+    background-position: 100%;
+  }
+}

@@ -1,0 +1,82 @@
+.__loading-filling-19 {
+  --c: var(--content, 'Loading');
+  --s: var(--size, 40px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0000);
+
+  width: fit-content;
+  font-size: var(--s);
+  font-family: monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--c2);
+  -webkit-text-stroke: 1px var(--c1);
+  --g: conic-gradient(var(--c1) 0 0) no-repeat text;
+  background:
+    var(--g) 0,
+    var(--g) 1ch,
+    var(--g) 2ch,
+    var(--g) 3ch,
+    var(--g) 4ch,
+    var(--g) 5ch,
+    var(--g) 6ch;
+  background-position-y: 100%;
+  animation: __loading-filling-19-l19 var(--d1) linear infinite alternate;
+}
+.__loading-filling-19:before {
+  content: var(--c);
+}
+@keyframes __loading-filling-19-l19 {
+  0% {
+    background-size:
+      1ch 0,
+      1ch 0,
+      1ch 0,
+      1ch 0,
+      1ch 0,
+      1ch 0,
+      1ch 0;
+  }
+  25% {
+    background-size:
+      1ch 100%,
+      1ch 50%,
+      1ch 0,
+      1ch 0,
+      1ch 0,
+      1ch 50%,
+      1ch 100%;
+  }
+  50% {
+    background-size:
+      1ch 100%,
+      1ch 100%,
+      1ch 50%,
+      1ch 0,
+      1ch 50%,
+      1ch 100%,
+      1ch 100%;
+  }
+  75% {
+    background-size:
+      1ch 100%,
+      1ch 100%,
+      1ch 100%,
+      1ch 50%,
+      1ch 100%,
+      1ch 100%,
+      1ch 100%;
+  }
+  to {
+    background-size:
+      1ch 100%,
+      1ch 100%,
+      1ch 100%,
+      1ch 100%,
+      1ch 100%,
+      1ch 100%,
+      1ch 100%;
+  }
+}

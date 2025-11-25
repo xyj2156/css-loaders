@@ -1,0 +1,26 @@
+.__loading-filling-14 {
+  --c: var(--content, 'Loading');
+  --s: var(--size, 40px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0000);
+
+  width: fit-content;
+  font-size: var(--s);
+  font-family: monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--c2);
+  -webkit-text-stroke: 1px var(--c1);
+  background: conic-gradient(var(--c1) 0 0) 0/1ch 100% no-repeat text;
+  animation: __loading-filling-14-l14 var(--d1) steps(7, jump-none) infinite alternate;
+}
+.__loading-filling-14:before {
+  content: var(--c);
+}
+@keyframes __loading-filling-14-l14 {
+  to {
+    background-position: 100%;
+  }
+}
