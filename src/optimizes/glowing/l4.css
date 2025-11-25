@@ -1,0 +1,36 @@
+.__loading-glowing-4 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.2));
+  --d2: var(--duration-2, var(--d));
+  --c1: var(--color-1, #c02942);
+
+  height: var(--s);
+  aspect-ratio: 1;
+  padding: calc(var(--s) * 0.125);
+  border-radius: calc(var(--s) * 0.25);
+  box-sizing: border-box;
+  position: relative;
+  mask:
+    conic-gradient(#000 0 0) content-box exclude,
+    conic-gradient(#000 0 0);
+  filter: blur(calc(var(--s) * 0.15));
+  animation: __loading-glowing-4-l4-0 var(--d1) linear infinite alternate;
+}
+.__loading-glowing-4:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(#0000 0 5%, var(--c1), #0000 20% 50%);
+  animation: __loading-glowing-4-l4-1 var(--d2) linear infinite;
+}
+@keyframes __loading-glowing-4-l4-0 {
+  to {
+    border-radius: 50%;
+  }
+}
+@keyframes __loading-glowing-4-l4-1 {
+  to {
+    rotate: 0.5turn;
+  }
+}

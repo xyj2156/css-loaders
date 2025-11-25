@@ -1,0 +1,40 @@
+.__loading-glowing-9 {
+  --s: var(--size, 100px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #fa6900);
+  --g: /calc(30.259% + 5.027px) calc(30.259% + 5.027px)
+    radial-gradient(#0000 calc(70% - 8px), #000 calc(71% - 8px) 70%, #0000 71%) no-repeat;
+
+  height: var(--s);
+  aspect-ratio: 1;
+  position: relative;
+  mask:
+    radial-gradient(
+        100% 100%,
+        #0000 calc((30.259% + 5.027px) / 0.964 - 8.306px),
+        #000 calc((30.259% + 5.027px) / 0.964 - 8.306px + 1px)
+      )
+      intersect,
+    100% 50% var(--g),
+    81.174% 89.092% var(--g),
+    38.874% 98.746% var(--g),
+    4.952% 71.694% var(--g),
+    4.952% 28.306% var(--g),
+    38.874% 1.254% var(--g),
+    81.174% 10.908% var(--g);
+  filter: blur(calc(var(--s) * 3 / 35));
+}
+
+.__loading-glowing-9:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(#0000 35%, var(--c1), #0000 65%);
+  animation: __loading-glowing-9-l9 var(--d1) linear infinite;
+}
+@keyframes __loading-glowing-9-l9 {
+  to {
+    rotate: 1turn;
+  }
+}

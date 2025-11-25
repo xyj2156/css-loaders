@@ -1,0 +1,29 @@
+.__loading-glowing-11 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0000);
+
+  height: var(--s);
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  position: relative;
+  mask:
+    radial-gradient(var(--c2) 47%, var(--c1) 48% 71%, var(--c2) 72%) exclude,
+    conic-gradient(var(--c1) 0 0) no-clip;
+  animation: __loading-glowing-11-l11 var(--d1) linear infinite;
+}
+.__loading-glowing-11:before {
+  content: '';
+  position: absolute;
+  inset: 0 35% 70%;
+  border-radius: 50%;
+  background: var(--c1);
+  filter: blur(calc(var(--s) * 3 / 16));
+}
+@keyframes __loading-glowing-11-l11 {
+  to {
+    rotate: 1turn;
+  }
+}

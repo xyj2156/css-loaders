@@ -1,0 +1,34 @@
+.__loading-glowing-5 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #0b486b);
+  --b: 25%;
+
+  height: var(--s);
+  aspect-ratio: 1 / cos(30deg);
+  position: relative;
+  clip-path: polygon(
+    50% 0,
+    100% 100%,
+    0 100%,
+    50% 0,
+    50% var(--b),
+    calc(var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
+    calc(100% - var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
+    50% var(--b)
+  );
+  filter: blur(calc(var(--s) * 3 / 20));
+}
+.__loading-glowing-5:before {
+  content: '';
+  position: absolute;
+  inset: -8% 0;
+  background: conic-gradient(#0000 35%, var(--c1), #0000 65%);
+  animation: __loading-glowing-5-l5 var(--d1) linear infinite;
+}
+@keyframes __loading-glowing-5-l5 {
+  to {
+    rotate: 1turn;
+  }
+}

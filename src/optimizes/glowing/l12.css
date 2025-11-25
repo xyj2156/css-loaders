@@ -1,0 +1,53 @@
+.__loading-glowing-12 {
+  --s: var(--size, 100px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #000);
+
+  --__z: calc(var(--s) * -1);
+  height: calc(var(--s) * 0.8);
+  aspect-ratio: 1;
+  position: relative;
+  clip-path: polygon(
+    evenodd,
+    var(--__z) var(--__z),
+    calc(100% - var(--__z)) var(--__z),
+    calc(100% - var(--__z)) calc(100% - var(--__z)),
+    var(--__z) calc(100% - var(--__z)),
+    var(--__z) var(--__z),
+    100% 50%,
+    85.36% 85.36%,
+    50% 100%,
+    14.64% 85.36%,
+    0% 50%,
+    14.64% 14.64%,
+    50% 0%,
+    85.36% 14.64%,
+    100% 50%,
+    74.75% 25.25%,
+    50% 15%,
+    25.25% 25.25%,
+    15% 50%,
+    25.25% 74.75%,
+    50% 85%,
+    74.75% 74.75%,
+    85% 50%,
+    74.75% 25.25%,
+    100% 50%
+  );
+}
+.__loading-glowing-12:before {
+  content: '';
+  position: absolute;
+  inset: 0 35% 70%;
+  border-radius: 50%;
+  background: var(--c1);
+  filter: blur(calc(var(--s) * 0.15));
+  transform-origin: 50% 165%;
+  animation: __loading-glowing-12-l12 var(--d1) linear infinite;
+}
+@keyframes __loading-glowing-12-l12 {
+  to {
+    rotate: 1turn;
+  }
+}
