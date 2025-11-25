@@ -1,0 +1,66 @@
+.__loading-flipping-12 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 4));
+  --d2: var(--duration-2, calc(var(--d) * 0.5));
+  --d3: var(--duration-3, var(--d));
+  --c1: var(--color-1, #a79c8e);
+
+  --_150: calc(var(--s) / 2 * 5);
+  --_-10: calc(var(--s) / 6 * -1);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: flex;
+  animation: __loading-flipping-12-l12-0 var(--d1) infinite linear var(--d2);
+}
+.__loading-flipping-12::before,
+.__loading-flipping-12::after {
+  content: '';
+  flex: 1;
+  background: var(--c1);
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  animation: __loading-flipping-12-l12-1 var(--d3) infinite linear;
+}
+.__loading-flipping-12::after {
+  transform: scale(-1);
+  animation: none;
+}
+@keyframes __loading-flipping-12-l12-0 {
+  0%,
+  12.49% {
+    transform: rotate(0deg);
+  }
+  12.5%,
+  37.49% {
+    transform: rotate(90deg);
+  }
+  37.5%,
+  62.49% {
+    transform: rotate(180deg);
+  }
+  62.5%,
+  87.49% {
+    transform: rotate(270deg);
+  }
+  87.5%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes __loading-flipping-12-l12-1 {
+  0%,
+  5% {
+    transform: translate(0px) perspective(var(--_150)) rotateY(0deg);
+  }
+  33% {
+    transform: translate(var(--_-10)) perspective(var(--_150)) rotateX(0deg);
+  }
+  66% {
+    transform: translate(var(--_-10)) perspective(var(--_150)) rotateX(-180deg);
+  }
+  95%,
+  100% {
+    transform: translate(0px) perspective(var(--_150)) rotateX(-180deg);
+  }
+}

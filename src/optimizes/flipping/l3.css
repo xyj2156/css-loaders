@@ -1,0 +1,38 @@
+.__loading-flipping-3 {
+  --c: #ffa516;
+  --s: var(--size, 40px);
+  --d: var(--duration, 1000ms);
+  --d1: calc(var(--duration-1, var(--d)) * 2);
+  --d2: calc(var(--duration-2, var(--d)) * 3);
+  --c1: var(--color-1, #ffa516);
+  --c2: var(--color-2, #f03355);
+  --c3: var(--color-3, #25b09b);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  animation:
+    __loading-flipping-3-l3-1 var(--d1) infinite linear,
+    __loading-flipping-3-l3-2 var(--d2) infinite steps(1) calc(var(--d) * -0.5);
+}
+@keyframes __loading-flipping-3-l3-1 {
+  0% {
+    transform: perspective(calc(var(--s) * 15 / 4)) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(calc(var(--s) * 15 / 4)) rotateX(180deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(calc(var(--s) * 15 / 4)) rotateX(180deg) rotateY(180deg);
+  }
+}
+@keyframes __loading-flipping-3-l3-2 {
+  0% {
+    background: var(--c1);
+  }
+  33% {
+    background: var(--c2);
+  }
+  66% {
+    background: var(--c3);
+  }
+}

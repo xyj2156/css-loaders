@@ -1,0 +1,65 @@
+.__loading-flipping-14 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --d2: var(--duration-2, calc(var(--d) * -0.25));
+  --d3: var(--duration-3, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #fa6900);
+  --c2: var(--color-2, #2fb8ac);
+
+  --_150: calc(var(--s) / 2 * 5);
+  --_100: calc(var(--s) / 3 * 5);
+  --_-10: calc(var(--s) / 6 * -1);
+
+  width: 60px;
+  aspect-ratio: 1;
+  display: flex;
+}
+.__loading-flipping-14::before,
+.__loading-flipping-14::after {
+  content: '';
+  flex: 1;
+  animation: __loading-flipping-14-l14 var(--d1) var(--d2) infinite linear alternate both;
+}
+.__loading-flipping-14::after {
+  --_s: -1, -1;
+  animation-delay: var(--d3);
+}
+@keyframes __loading-flipping-14-l14 {
+  0%,
+  30% {
+    transform: scale(var(--_s, 1)) translate(0px) perspective(var(--_150, var(--_150))) rotateY(0deg);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 75%, 0 25%);
+    background: var(--c1);
+  }
+  37.5% {
+    transform: scale(var(--_s, 1)) translate(var(--_-10)) perspective(var(--_150, var(--_150))) rotateX(0deg);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 75%, 0 25%);
+    background: var(--c1);
+  }
+  50% {
+    transform: scale(var(--_s, 1)) translate(var(--_-10)) perspective(var(--_150, var(--_150))) rotateX(-90deg);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 75%, 0 25%);
+    background: var(--c1);
+    border-radius: 0;
+  }
+  50.01% {
+    transform: scale(var(--_s, 1)) translate(var(--_-10)) perspective(var(--_150, var(--_150))) rotateX(-90.1deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 25%);
+    background: var(--c2);
+    border-radius: var(--_100) 0 0 var(--_100);
+  }
+  62.5% {
+    transform: scale(var(--_s, 1)) translate(var(--_-10)) perspective(var(--_150, var(--_150))) rotateX(-180deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 25%);
+    background: var(--c2);
+    border-radius: var(--_100) 0 0 var(--_100);
+  }
+  70%,
+  100% {
+    transform: scale(var(--_s, 1)) translate(0px) perspective(var(--_150, var(--_150))) rotateX(-180deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 25%);
+    background: var(--c2);
+    border-radius: var(--_100) 0 0 var(--_100);
+  }
+}

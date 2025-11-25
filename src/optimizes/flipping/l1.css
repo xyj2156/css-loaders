@@ -1,0 +1,19 @@
+.__loading-flipping-1 {
+  --c1: var(--color-1, #000);
+  --s: var(--size, 40px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background: var(--c1);
+  animation: __loading-flipping-1-l1 var(--d1) infinite;
+}
+@keyframes __loading-flipping-1-l1 {
+  0% {
+    transform: perspective(calc(var(--s) /4 * 15)) rotateX(0deg);
+  }
+  100% {
+    transform: perspective(calc(var(--s) /4 * 15)) rotateX(180deg);
+  }
+}
