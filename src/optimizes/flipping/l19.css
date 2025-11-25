@@ -1,0 +1,55 @@
+.__loading-flipping-19 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+}
+
+.__loading-flipping-19:before,
+.__loading-flipping-19:after {
+  content: '';
+  grid-area: 1/1;
+  --c1: var(--color-1, #25b09b);
+  color: var(--c1);
+  animation: __loading-flipping-19-l19 var(--d1) infinite linear;
+}
+
+.__loading-flipping-19:before {
+  margin: calc(var(--s) * 5 / 60) calc(var(--s) * 20 / 60);
+  background: currentColor;
+}
+
+.__loading-flipping-19:after {
+  border: solid;
+  border-width: calc(var(--s) * 5 / 60) calc(var(--s) * 20 / 60);
+  --__z: 0;
+}
+
+@keyframes __loading-flipping-19-l19 {
+  0% {
+    transform: perspective(calc(var(--s) * 100 / 60)) rotate3d(1, var(--__z, 1), 0, 0);
+  }
+  25% {
+    transform: perspective(calc(var(--s) * 100 / 60)) rotate3d(1, var(--__z, 1), 0, 90deg);
+  }
+  25.01% {
+    transform: perspective(calc(var(--s) * 100 / 60)) rotate3d(1, var(--__z, 1), 0, 90deg);
+  }
+  40%,
+  60% {
+    transform: perspective(calc(var(--s) * 100 / 60)) rotate3d(1, var(--__z, 1), 0, 180deg);
+  }
+  75% {
+    transform: perspective(calc(var(--s) * 100 / 60)) rotate3d(1, var(--__z, 1), 0, 270deg);
+  }
+  75.01% {
+    transform: perspective(calc(var(--s) * 100 / 60)) rotate3d(1, var(--__z, 1), 0, 270deg);
+  }
+  90%,
+  100% {
+    transform: perspective(calc(var(--s) * 100 / 60)) rotate3d(1, var(--__z, 1), 0, 360deg);
+  }
+}

@@ -1,0 +1,63 @@
+.__loading-flipping-18 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --d2: var(--duration-2, calc(var(--d) * 0.5));
+  --d3: var(--duration-3, calc(var(--d) * 0.25));
+  --c1: var(--color-1, #fc3a51);
+
+  width: var(--s);
+  height: var(--s);
+  display: flex;
+  color: var(--c1);
+  --c: #0000 calc(100% - calc(var(--s) / 3)), currentColor calc(100% - calc(var(--s) / 3.16)) 98%, #0000;
+  background:
+    radial-gradient(farthest-side at left, var(--c)) right / 50% 100%,
+    radial-gradient(farthest-side at top, var(--c)) bottom/100% 50%;
+  background-repeat: no-repeat;
+  animation: __loading-flipping-18-l18-0 var(--d1) infinite linear var(--d3);
+}
+
+.__loading-flipping-18::before {
+  content: '';
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(farthest-side at bottom right, var(--c));
+  animation: __loading-flipping-18-l18-1 var(--d2) infinite linear;
+}
+
+@keyframes __loading-flipping-18-l18-0 {
+  0%,
+  12.49% {
+    transform: rotate(0deg);
+  }
+  12.5%,
+  37.49% {
+    transform: rotate(90deg);
+  }
+  37.5%,
+  62.49% {
+    transform: rotate(180deg);
+  }
+  62.5%,
+  87.49% {
+    transform: rotate(270deg);
+  }
+  87.5%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes __loading-flipping-18-l18-1 {
+  0% {
+    transform: perspective(calc(var(--s) * 2.5)) rotateY(0) rotate(0);
+  }
+  50% {
+    transform: perspective(calc(var(--s) * 2.5)) rotateY(180deg) rotate(0);
+  }
+  80%,
+  100% {
+    transform: perspective(calc(var(--s) * 2.5)) rotateY(180deg) rotate(90deg);
+  }
+}

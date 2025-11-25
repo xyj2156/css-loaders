@@ -1,0 +1,57 @@
+.__loading-flipping-15 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --d2: var(--duration-2, calc(var(--d) * 2));
+  --d3: var(--duration-3, calc(var(--d) * -0.5));
+  --c1: var(--color-1, #fc3a51);
+  --c2: var(--color-2, #eb9f9f);
+
+  --_-10: calc(var(--s) / -8);
+  --_150: calc(var(--s) * 15 / 8);
+
+  width: var(--s);
+  height: calc(var(--s) / 2);
+  display: flex;
+}
+.__loading-flipping-15::before,
+.__loading-flipping-15::after {
+  content: '';
+  flex: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  background: var(--c1);
+  animation:
+    __loading-flipping-15-l15-1 var(--d1) infinite linear alternate,
+    __loading-flipping-15-l15-2 var(--d2) infinite linear var(--d3);
+}
+.__loading-flipping-15::after {
+  --__z: -1, -1;
+}
+@keyframes __loading-flipping-15-l15-1 {
+  0%,
+  10% {
+    transform: scale(var(--__z, 1)) translate(0px) perspective(var(--_150)) rotateY(0deg);
+  }
+  33% {
+    transform: scale(var(--__z, 1)) translate(var(--_-10)) perspective(var(--_150))
+      rotateX(0deg);
+  }
+  66% {
+    transform: scale(var(--__z, 1)) translate(var(--_-10)) perspective(var(--_150))
+      rotateX(-180deg);
+  }
+  90%,
+  100% {
+    transform: scale(var(--__z, 1)) translate(0px) perspective(var(--_150)) rotateX(-180deg);
+  }
+}
+@keyframes __loading-flipping-15-l15-2 {
+  0%,
+  49.99% {
+    background: var(--c1);
+  }
+  50%,
+  100% {
+    background: var(--c2);
+  }
+}
