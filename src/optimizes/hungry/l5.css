@@ -1,0 +1,72 @@
+.__loading-hungry-5 {
+  --width:var(--size, 80px);
+  --height:calc(var(--width) * 15 / 16);
+
+  --d:var(--duration, 1s);
+  --d1:var(--duration-1, calc(var(--d) * 3));
+
+  /* 提取的px尺寸 */
+  --size-8px: calc(var(--width) * 1 / 10);
+  --size-18px: calc(var(--width) * 9 / 40);
+  --size-40px: calc(var(--width) * 1 / 2);
+  --size-43px: calc(var(--width) * 43 / 80);
+  --size-58px: calc(var(--width) * 29 / 40);
+  --pos-15px: calc(var(--width) * 3 / 16);
+  --pos-4px: calc(var(--width) * 1 / 20);
+  --pos-14px: calc(var(--width) * 7 / 40);
+  --pos-27px: calc(var(--width) * 27 / 80);
+  --pos-24px: calc(var(--width) * 3 / 10);
+
+  /* 提取的颜色 */
+  --c1:var(--color-1, #f7b261);
+  --c2:var(--color-2, #b97850);
+  --c3:var(--color-3, #734b46);
+  --c4:var(--color-4, #0000);
+
+  width: var(--width);
+  height: var(--height);
+  --__w: no-repeat radial-gradient(farthest-side, var(--c1) 85%, var(--c2), var(--c4));
+  --__x: no-repeat radial-gradient(farthest-side, var(--c3) 94%, var(--c4));
+  --__y: var(--size-8px) var(--size-8px), var(--size-8px) var(--size-8px), var(--size-8px) var(--size-8px), var(--size-40px) var(--size-40px);
+  --__z: 0 0, 0 0, 0 0, 0 0;
+  background:
+    var(--__x) 55% 47%,
+    var(--__x) 60% 66%,
+    var(--__x) 37% 43%,
+    var(--__w) 50% 50%,
+    var(--__x) var(--pos-15px) var(--pos-4px),
+    var(--__x) var(--pos-4px) var(--pos-14px),
+    var(--__x) var(--pos-27px) var(--size-18px),
+    var(--__w) 0 0,
+    var(--__x) calc(100% - var(--pos-15px)) var(--pos-4px),
+    var(--__x) calc(100% - var(--pos-4px)) var(--pos-14px),
+    var(--__x) calc(100% - var(--pos-27px)) var(--size-18px),
+    var(--__w) 100% 0/var(--size-40px) var(--size-40px),
+    var(--__x) var(--pos-24px) 47px,
+    var(--__x) 50% var(--size-43px),
+    var(--__x) 60% var(--size-58px),
+    var(--__w) 50% 100%;
+  animation: __loading-hungry-5-l5 var(--d1) infinite;
+}
+@keyframes __loading-hungry-5-l5 {
+  0%,
+  20% {
+    background-size: var(--__y), var(--__y), var(--__y), var(--__y);
+  }
+  20.01%,
+  40% {
+    background-size: var(--__z), var(--__y), var(--__y), var(--__y);
+  }
+  40.01%,
+  60% {
+    background-size: var(--__z), var(--__z), var(--__y), var(--__y);
+  }
+  60.01%,
+  80% {
+    background-size: var(--__z), var(--__z), var(--__z), var(--__y);
+  }
+  80.01%,
+  100% {
+    background-size: var(--__z), var(--__z), var(--__z), var(--__z);
+  }
+}

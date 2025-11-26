@@ -1,0 +1,175 @@
+.__loading-hungry-2 {
+  --s: var(--size, 35px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 3));
+  --c1: var(--color-1, #91d2e2);
+  --c2: var(--color-2, #1296a7);
+  --c3: var(--color-3, #e0a267);
+  --__1: calc(var(--s) * 80 / 35);
+  --__2: calc(var(--s) * 20 / 35);
+  --__3: calc(var(--s) * 15 / 35);
+  --__4: calc(var(--s) * 10 / 35);
+  --__5: calc(var(--s) * 4 / 35);
+  --__6: calc(var(--s) * 25 / 35);
+  --__7: calc(var(--s) * 30 / 35);
+
+  width: var(--s);
+  height: var(--__1);
+  position: relative;
+}
+
+.__loading-hungry-2:after {
+  content: '';
+  position: absolute;
+  inset: 0 0 var(--__2);
+  border-radius: var(--__3) var(--__3) var(--__4) var(--__4);
+  padding: calc(var(--s) * 1 / 35);
+  background: repeating-linear-gradient(-45deg, var(--c1) 0 calc(var(--s) * 8 / 35), var(--c2) 0 calc(var(--s) * 12 / 35)) content-box;
+  --c: radial-gradient(farthest-side, #000 94%, #0000);
+  -webkit-mask:
+    linear-gradient(#0000 0 0),
+    var(--c) calc(var(--s) * -10 / 35) calc(var(--s) * -10 / 35),
+    var(--c) calc(var(--s) * 15 / 35) calc(var(--s) * -14 / 35),
+    var(--c) calc(var(--s) * 9 / 35) calc(var(--s) * -6 / 35),
+    var(--c) calc(var(--s) * -12 / 35) calc(var(--s) * 9 / 35),
+    var(--c) calc(var(--s) * 14 / 35) calc(var(--s) * 9 / 35),
+    var(--c) calc(var(--s) * 23 / 35) calc(var(--s) * 27 / 35),
+    var(--c) calc(var(--s) * -8 / 35) calc(var(--s) * 35 / 35),
+    var(--c) 50% 50%,
+    linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0),
+    var(--c) calc(var(--s) * -10 / 35) calc(var(--s) * -10 / 35),
+    var(--c) calc(var(--s) * 15 / 35) calc(var(--s) * -14 / 35),
+    var(--c) calc(var(--s) * 9 / 35) calc(var(--s) * -6 / 35),
+    var(--c) calc(var(--s) * -12 / 35) calc(var(--s) * 9 / 35),
+    var(--c) calc(var(--s) * 14 / 35) calc(var(--s) * 9 / 35),
+    var(--c) calc(var(--s) * 23 / 35) calc(var(--s) * 27 / 35),
+    var(--c) calc(var(--s) * -8 / 35) calc(var(--s) * 35 / 35),
+    var(--c) 50% 50%,
+    linear-gradient(#0000 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude, add, add, add, add, add, add, add, add;
+  mask-repeat: no-repeat;
+  animation: __loading-hungry-2-l2 var(--d1) infinite;
+}
+
+.__loading-hungry-2:before {
+  content: '';
+  position: absolute;
+  inset: 50% calc(50% - var(--__5)) 0;
+  background: var(--c3);
+  border-radius: calc(var(--s) * 50 / 35);
+}
+
+@keyframes __loading-hungry-2-l2 {
+  0% {
+    -webkit-mask-size:
+      auto,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+  10% {
+    -webkit-mask-size:
+      auto,
+      var(--__6) var(--__6),
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+  20% {
+    -webkit-mask-size:
+      auto,
+      var(--__6) var(--__6),
+      var(--__6) var(--__6),
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+  30% {
+    -webkit-mask-size:
+      auto,
+      var(--__6) var(--__6),
+      var(--__6) var(--__6),
+      var(--__7) var(--__7),
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+  40% {
+    -webkit-mask-size:
+      auto,
+      var(--__6) var(--__6),
+      var(--__6) var(--__6),
+      var(--__7) var(--__7),
+      var(--__7) var(--__7),
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+  50% {
+    -webkit-mask-size:
+      auto,
+      var(--__6) var(--__6),
+      var(--__6) var(--__6),
+      var(--__7) var(--__7),
+      var(--__7) var(--__7),
+      var(--__6) var(--__6),
+      0 0,
+      0 0,
+      0 0;
+  }
+  60% {
+    -webkit-mask-size:
+      auto,
+      var(--__6) var(--__6),
+      var(--__6) var(--__6),
+      var(--__7) var(--__7),
+      var(--__7) var(--__7),
+      var(--__6) var(--__6),
+      var(--__6) var(--__6),
+      0 0,
+      0 0;
+  }
+  70% {
+    -webkit-mask-size:
+      auto,
+      var(--__6) var(--__6),
+      var(--__6) var(--__6),
+      var(--__7) var(--__7),
+      var(--__7) var(--__7),
+      var(--__6) var(--__6),
+      var(--__6) var(--__6),
+      var(--__6) var(--__6),
+      0 0;
+  }
+  80%,
+  100% {
+    -webkit-mask-size:
+      auto,
+      var(--__6) var(--__6),
+      var(--__6) var(--__6),
+      var(--__7) var(--__7),
+      var(--__7) var(--__7),
+      var(--__6) var(--__6),
+      var(--__6) var(--__6),
+      var(--__6) var(--__6),
+      200% 200%;
+  }
+}
