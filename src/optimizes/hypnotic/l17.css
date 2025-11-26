@@ -1,0 +1,40 @@
+.__loading-hypnotic-17 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 4));
+  --d2: var(--duration-2, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  aspect-ratio: 0.577;
+  color: var(--c1);
+  display: grid;
+  --__1: calc(50% - 1px);
+  --__2: calc(50% - 2px);
+  --__3: calc(100% + 2px);
+  background:
+    linear-gradient(currentColor 0 0) top / 100% 1px,
+    linear-gradient(currentColor 0 0) bottom/100% 1px,
+    linear-gradient(to bottom right, #0000 var(--__2), currentColor var(--__1), #0000 50%)
+      top/100% var(--__3),
+    linear-gradient(to bottom left, #0000 var(--__2), currentColor var(--__1), #0000 50%)
+      top/100% var(--__3);
+  background-repeat: no-repeat;
+  animation: __loading-hypnotic-17-l17 var(--d1) infinite linear;
+}
+.__loading-hypnotic-17::before,
+.__loading-hypnotic-17::after {
+  content: '';
+  grid-area: 1/1;
+  background: inherit;
+  border: inherit;
+  animation: inherit;
+}
+.__loading-hypnotic-17::after {
+  animation-duration: var(--d2);
+}
+@keyframes __loading-hypnotic-17-l17 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

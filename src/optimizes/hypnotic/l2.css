@@ -1,0 +1,45 @@
+.__loading-hypnotic-2 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --d2: var(--duration-2, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #000);
+
+  --_2: calc(var(--s) / 20);
+  --_border:min(var(--_2), 5px);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: var(--c1);
+  border: var(--_border) solid;
+  box-sizing: border-box;
+  position: relative;
+  transform-origin: left;
+  animation: __loading-hypnotic-2-l2 var(--d1) infinite linear;
+}
+.__loading-hypnotic-2::before,
+.__loading-hypnotic-2::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  margin: auto;
+  width: 50%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: var(--_border) solid;
+  box-sizing: content-box;
+  transform-origin: 50% calc(100% - calc(var(--s) / 10));
+  animation: inherit;
+}
+.__loading-hypnotic-2::after {
+  inset: auto 0 calc(100% + calc(var(--s) / 20));
+  animation-duration: var(--d2);
+  animation-direction: reverse;
+  transform-origin: 50% calc(200% - calc(var(--s) / 20));
+}
+@keyframes __loading-hypnotic-2-l2 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

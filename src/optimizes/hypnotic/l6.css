@@ -1,0 +1,37 @@
+.__loading-hypnotic-6 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 4));
+  --d2: var(--duration-2, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+  color: var(--c1);
+  background:
+    linear-gradient(90deg, currentColor calc(var(--s) * 0.04), #0000 0 calc(100% - calc(var(--s) * 0.04)), currentColor 0) center/100%
+      calc(var(--s) * 0.28),
+    linear-gradient(0deg, currentColor calc(var(--s) * 0.04), #0000 0 calc(100% - calc(var(--s) * 0.04)), currentColor 0) center/calc(var(--s) * 0.28)
+      100%,
+    linear-gradient(currentColor 0 0) center/100% calc(var(--s) * 0.04),
+    linear-gradient(currentColor 0 0) center/calc(var(--s) * 0.04) 100%;
+  background-repeat: no-repeat;
+  animation: __loading-hypnotic-6-l6 var(--d1) infinite linear;
+}
+.__loading-hypnotic-6::before,
+.__loading-hypnotic-6::after {
+  content: '';
+  grid-area: 1/1;
+  background: inherit;
+  transform-origin: inherit;
+  animation: inherit;
+}
+.__loading-hypnotic-6::after {
+  animation-duration: var(--d2);
+}
+@keyframes __loading-hypnotic-6-l6 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

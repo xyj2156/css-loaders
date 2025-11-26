@@ -1,0 +1,28 @@
+.__loading-hypnotic-10 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 4));
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-hypnotic-10::before,
+.__loading-hypnotic-10::after {
+  --c1: #000;
+  --c2: #0000;
+  content: '';
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: repeating-conic-gradient(var(--c2), var(--c1) 1deg 18deg, var(--c2) 20deg 36deg);
+  mask: repeating-radial-gradient(farthest-side, var(--c1) 0 10%, var(--c2) 0 20%);
+  animation: __loading-hypnotic-10-l10 var(--d1) infinite linear;
+}
+.__loading-hypnotic-10::after {
+  mask: repeating-radial-gradient(farthest-side, var(--c2) 0 10%, var(--c1) 0 20%);
+  animation-direction: reverse;
+}
+@keyframes __loading-hypnotic-10-l10 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}

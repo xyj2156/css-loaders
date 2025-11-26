@@ -1,0 +1,34 @@
+.__loading-hypnotic-12 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --d2: var(--duration-2, calc(var(--d) * 3));
+
+  width: var(--s);
+  height: calc(var(--s) * 25 / 60);
+  border: calc(var(--s) / 30) solid;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: grid;
+  animation: l2 var(--d1) infinite linear;
+}
+
+.__loading-hypnotic-12:before,
+.__loading-hypnotic-12:after {
+  content: '';
+  grid-area: 1/1;
+  border: inherit;
+  border-radius: 50%;
+  animation: inherit;
+  animation-duration: var(--d2);
+}
+
+.__loading-hypnotic-12:after {
+  --__z: -1;
+}
+
+@keyframes l2 {
+  100% {
+    transform: rotate(calc(var(--__z, 1) * 1turn));
+  }
+}

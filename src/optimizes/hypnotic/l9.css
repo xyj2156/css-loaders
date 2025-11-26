@@ -1,0 +1,26 @@
+.__loading-hypnotic-9 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 4));
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: repeating-conic-gradient(#0000, var(--c1) 1deg 18deg, #0000 20deg 36deg);
+  animation: __loading-hypnotic-9-l9 var(--d1) infinite linear;
+  position: relative;
+}
+.__loading-hypnotic-9::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  background: inherit;
+  animation: inherit;
+}
+@keyframes __loading-hypnotic-9-l9 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}

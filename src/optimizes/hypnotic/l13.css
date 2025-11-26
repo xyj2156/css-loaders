@@ -1,0 +1,29 @@
+.__loading-hypnotic-13 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0000);
+
+  width: var(--s);
+  height: calc(var(--s) / 2);
+  display: flex;
+  --c: var(--c2) calc(100% - 5px), var(--c1) calc(100% - 4px) 96%, var(--c2);
+  background:
+    radial-gradient(farthest-side at bottom, var(--c)) 0 0,
+    radial-gradient(farthest-side at top, var(--c)) 100% 100%;
+  background-size: calc(50% + 2px) 50%;
+  background-repeat: no-repeat;
+  animation: __loading-hypnotic-13-l13 var(--d1) infinite linear;
+}
+.__loading-hypnotic-13:before {
+  content: '';
+  flex: 1;
+  background: inherit;
+  transform: rotate(90deg);
+}
+@keyframes __loading-hypnotic-13-l13 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

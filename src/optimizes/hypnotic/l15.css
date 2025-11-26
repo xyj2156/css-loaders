@@ -1,0 +1,26 @@
+.__loading-hypnotic-15 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) / 1));
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border: calc(var(--s) / 25) solid;
+  box-sizing: border-box;
+  --__c: conic-gradient(from 180deg at 50% calc(100% - calc(var(--s) / 25)), var(--c1) 90deg, #0000 0);
+  background: var(--__c), var(--__c);
+  background-position:
+    0 0,
+    calc(var(--s) / 6.25) 0;
+  background-size: calc(var(--s) / 3.125) calc(var(--s) / 5.208);
+  animation: __loading-hypnotic-15-l15 var(--d1) infinite;
+}
+
+@keyframes __loading-hypnotic-15-l15 {
+  100% {
+    background-position:
+      0 calc(var(--s) / -5.208),
+      calc(var(--s) / 6.25) calc(var(--s) / 5.208);
+  }
+}

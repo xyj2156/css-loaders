@@ -1,0 +1,29 @@
+.__loading-hypnotic-19 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 4));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-hypnotic-19::before,
+.__loading-hypnotic-19::after {
+  content: '';
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: repeating-radial-gradient(farthest-side, var(--c2) 0%, var(--c1) 1% 10%, var(--c2) 11% 30%);
+  -webkit-mask: repeating-conic-gradient(var(--c1) 0 36deg, var(--c2) 0 72deg);
+  animation: __loading-hypnotic-19-l19 var(--d1) infinite linear;
+}
+.__loading-hypnotic-19::after {
+  -webkit-mask: repeating-conic-gradient(var(--c2) 0 36deg, var(--c1) 0 72deg);
+  animation-direction: reverse;
+}
+@keyframes __loading-hypnotic-19-l19 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

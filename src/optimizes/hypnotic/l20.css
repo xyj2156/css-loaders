@@ -1,0 +1,46 @@
+.__loading-hypnotic-20 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0000);
+
+  --__z: calc(var(--s) / 12);
+  --__x1: calc(50% - 1px);
+  --__x2: calc(100% - 1px);
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    repeating-radial-gradient(
+        calc(2 * var(--__z)) at top,
+        var(--c2) -1px,
+        var(--c1) 0 var(--__x1),
+        var(--c2) 50% var(--__x2)
+      )
+      calc(50% + var(--__z)) 100%,
+    repeating-radial-gradient(
+        calc(2 * var(--__z)) at bottom,
+        var(--c1) -1px,
+        var(--c2) 0 var(--__x1),
+        var(--c1) 50% var(--__x2)
+      )
+      50% 0;
+  background-size: 150% 50%;
+  background-repeat: no-repeat;
+  mask:
+    radial-gradient(
+        calc(1.5 * var(--__z)) at calc(100% - var(--__z) / 2) 0,
+        var(--c2) calc(100% / 3),
+        var(--c1) calc(100% / 3 + 1px) 110%,
+        var(--c2) 0
+      )
+      calc(50% + var(--__z) / 2) 100% / calc(3 * var(--__z)) 50% exclude no-repeat,
+    conic-gradient(var(--c1) 0 0);
+  animation: __loading-hypnotic-20-l20 var(--d1) infinite linear;
+}
+@keyframes __loading-hypnotic-20-l20 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

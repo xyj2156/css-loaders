@@ -1,0 +1,34 @@
+.__loading-hypnotic-11 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --d2: var(--duration-2, calc(var(--d) * 1));
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border: calc(var(--s) / 25) solid var(--c1);
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: grid;
+  animation: __loading-hypnotic-11-l11 var(--d1) infinite linear;
+  transform-origin: 50% 80%;
+}
+.__loading-hypnotic-11:before,
+.__loading-hypnotic-11:after {
+  content: '';
+  grid-area: 1/1;
+  border: inherit;
+  border-radius: 50%;
+  animation: inherit;
+  animation-duration: var(--d2);
+  transform-origin: inherit;
+}
+.__loading-hypnotic-11:after {
+  --__z: -1;
+}
+@keyframes __loading-hypnotic-11-l11 {
+  100% {
+    transform: rotate(calc(var(--__z, 1) * 1turn));
+  }
+}

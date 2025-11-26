@@ -1,0 +1,50 @@
+.__loading-hypnotic-18 {
+  --s: var(--size, 25px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --d2: var(--duration-2, calc(var(--d) * 4));
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  height: calc(var(--s) * 2);
+  display: grid;
+  color: var(--c1);
+  background:
+    linear-gradient(currentColor 0 0) top/100% calc(var(--s) / 12.5),
+    radial-gradient(
+        farthest-side at top,
+        #0000 calc(100% - calc(var(--s) / 12.5)),
+        currentColor calc(100% - calc(var(--s) / 25)),
+        #0000
+      )
+      top,
+    linear-gradient(currentColor 0 0) bottom/100% calc(var(--s) / 12.5),
+    radial-gradient(
+        farthest-side at bottom,
+        #0000 calc(100% - calc(var(--s) / 12.5)),
+        currentColor calc(100% - calc(var(--s) / 25)),
+        #0000
+      )
+      bottom;
+  background-size:
+    100% calc(var(--s) / 25),
+    100% 50%;
+  background-repeat: no-repeat;
+  animation: __loading-hypnotic-18-l18 var(--d2) infinite linear;
+}
+.__loading-hypnotic-18::before,
+.__loading-hypnotic-18::after {
+  content: '';
+  grid-area: 1/1;
+  background: inherit;
+  border: inherit;
+  animation: inherit;
+}
+.__loading-hypnotic-18::after {
+  animation-duration: var(--d1);
+}
+@keyframes __loading-hypnotic-18-l18 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

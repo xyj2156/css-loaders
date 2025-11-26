@@ -1,0 +1,34 @@
+.__loading-hypnotic-4 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) / 1));
+  --c1: var(--color-1, #000);
+  --__1: calc(var(--s) * 0.46);
+  --__2: calc(var(--s) * 0.24);
+  --__3: calc(var(--s) * 0.7);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  color: var(--c1);
+  border: calc(var(--s) * 0.04) solid;
+  box-sizing: border-box;
+  --c: radial-gradient(
+    farthest-side,
+    #0000 calc(100% - calc(var(--s) * 0.06)),
+    currentColor calc(100% - calc(var(--s) * 0.04)) 98%,
+    #0000
+  );
+  background: var(--c), var(--c);
+  background-size: var(--__1) var(--__1);
+  background-position:
+    0 0,
+    var(--__2) var(--__2);
+  animation: __loading-hypnotic-4-l4 var(--d1) infinite;
+}
+@keyframes __loading-hypnotic-4-l4 {
+  100% {
+    background-position:
+      calc(var(--__1) * -1) 0,
+      var(--__2) var(--__3);
+  }
+}

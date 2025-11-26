@@ -1,0 +1,41 @@
+.__loading-hypnotic-16 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+  border: calc(var(--s) / 25) solid;
+}
+
+.__loading-hypnotic-16::before {
+  content: '';
+  position: absolute;
+  inset: calc(var(--s) * -0.96);
+  --c: conic-gradient(from 180deg at 50% calc(100% - calc(var(--s) / 25)), var(--c1) 90deg, #0000 0);
+  background: var(--c), var(--c);
+  background-position:
+    0 0,
+    calc(var(--s) / 6.25) 0;
+  background-size: calc(var(--s) / 3.125) calc(var(--s) * 0.192);
+  animation: __loading-hypnotic-16-l16 var(--d1) infinite;
+}
+
+@keyframes __loading-hypnotic-16-l16 {
+  50% {
+    background-position:
+      0 calc(var(--s) * -0.192),
+      calc(var(--s) / 6.25) calc(var(--s) * 0.192);
+    transform: rotate(90deg);
+  }
+
+  100% {
+    background-position:
+      0 calc(var(--s) * -0.384),
+      calc(var(--s) / 6.25) calc(var(--s) * 0.384);
+    transform: rotate(180deg);
+  }
+}
