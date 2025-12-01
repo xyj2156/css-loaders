@@ -1,0 +1,116 @@
+.__loading-line-13 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #046d8b);
+
+  --_-2: calc(var(--s) / -40);
+  --_4: calc(var(--s) / 20);
+  --_20: calc(var(--s) / 4);
+  --_40: calc(var(--s) / 2);
+
+  width: var(--s);
+  height: var(--_40);
+  display: flex;
+}
+.__loading-line-13:before,
+.__loading-line-13:after {
+  content: '';
+  margin: 0 var(--_-2) 0 0;
+  flex: 1;
+  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  animation:
+    __loading-line-13-l13-1 var(--d) infinite linear,
+    __loading-line-13-l13-2 var(--d) infinite linear;
+}
+.__loading-line-13:after {
+  transform: scale(-1);
+  margin: 0 0 0 var(--_-2);
+}
+@keyframes __loading-line-13-l13-1 {
+  0%,
+  3% {
+    background-size:
+      0 var(--_4),
+      var(--_4) 0,
+      0 var(--_4),
+      var(--_4) 0;
+  }
+  12.5% {
+    background-size:
+      50% var(--_4),
+      var(--_4) 0,
+      0 var(--_4),
+      var(--_4) 0;
+  }
+  25% {
+    background-size:
+      50% var(--_4),
+      var(--_4) 50%,
+      0 var(--_4),
+      var(--_4) 0;
+  }
+  37.5% {
+    background-size:
+      50% var(--_4),
+      var(--_4) 50%,
+      50% var(--_4),
+      var(--_4) 0;
+  }
+  46%,
+  54% {
+    background-size:
+      50% var(--_4),
+      var(--_4) 50%,
+      50% var(--_4),
+      var(--_4) 50%;
+  }
+  62.5% {
+    background-size:
+      0 var(--_4),
+      var(--_4) 50%,
+      50% var(--_4),
+      var(--_4) 50%;
+  }
+  75% {
+    background-size:
+      0 var(--_4),
+      var(--_4) 0,
+      50% var(--_4),
+      var(--_4) 50%;
+  }
+  87.5% {
+    background-size:
+      0 var(--_4),
+      var(--_4) 0,
+      0 var(--_4),
+      var(--_4) 50%;
+  }
+  96%,
+  100% {
+    background-size:
+      0 var(--_4),
+      var(--_4) 0,
+      0 var(--_4),
+      var(--_4) 0;
+  }
+}
+@keyframes __loading-line-13-l13-2 {
+  0%,
+  49.9% {
+    background-position:
+      0 var(--_20),
+      50% var(--_20),
+      var(--_20) 100%,
+      100% 100%;
+  }
+  50%,
+  100% {
+    background-position:
+      right var(--_20) top var(--_20),
+      50% 100%,
+      100% 100%,
+      100% var(--_20);
+  }
+}

@@ -1,0 +1,56 @@
+.__loading-line-1 {
+  --s:var(--size, 35px);
+  --d:var(--duration, 1s);
+  --d1:var(--duration-1, var(--d));
+  --c1:var(--color-1, #046d8b);
+
+  --_4:calc(var(--s) * 4 / 35);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  --__z: no-repeat linear-gradient(var(--c1) 0 0);
+  background:
+    var(--__z) 0 0,
+    var(--__z) 100% 0,
+    var(--__z) 100% 100%,
+    var(--__z) 0 100%;
+  animation: __loading-line-1-l1 var(--d) infinite alternate;
+}
+@keyframes __loading-line-1-l1 {
+  0% {
+    background-size:
+      0 var(--_4),
+      var(--_4) 0,
+      0 var(--_4),
+      var(--_4) 0;
+  }
+  25% {
+    background-size:
+      100% var(--_4),
+      var(--_4) 0,
+      0 var(--_4),
+      var(--_4) 0;
+  }
+  50% {
+    background-size:
+      100% var(--_4),
+      var(--_4) 100%,
+      0 var(--_4),
+      var(--_4) 0;
+  }
+  75% {
+    background-size:
+      100% var(--_4),
+      var(--_4) 100%,
+      100% var(--_4),
+      var(--_4) 0;
+  }
+  90%,
+  100% {
+    background-size:
+      100% var(--_4),
+      var(--_4) 100%,
+      100% var(--_4),
+      var(--_4) 100%;
+  }
+}

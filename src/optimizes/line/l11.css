@@ -1,0 +1,75 @@
+.__loading-line-11 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.25));
+  --c1: var(--color-1, #046d8b);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-line-11:before,
+.__loading-line-11:after {
+  content: '';
+  grid-area: 1/1;
+  --__1: calc(100% / 3);
+  --__2: calc(2 * 100% / 3);
+  --c: #0000 var(--__1), var(--c1) 0 var(--__2), #0000 0;
+  --__3: linear-gradient(90deg, var(--c));
+  --__4: linear-gradient(0deg, var(--c));
+  background: var(--__3), var(--__4), var(--__3), var(--__4);
+  background-size:
+    300% 4px,
+    4px 300%;
+  background-repeat: no-repeat;
+  animation: __loading-line-11-l11 var(--d) infinite linear;
+}
+.__loading-line-11:after {
+  margin: calc(var(--s) * 0.2);
+  transform: scaleX(-1);
+  animation-delay: calc(var(--d1) * -1);
+}
+@keyframes __loading-line-11-l11 {
+  0% {
+    background-position:
+      50% 0,
+      100% 100%,
+      0 100%,
+      0 0;
+  }
+  25% {
+    background-position:
+      0 0,
+      100% 50%,
+      0 100%,
+      0 0;
+  }
+  50% {
+    background-position:
+      0 0,
+      100% 0,
+      50% 100%,
+      0 0;
+  }
+  75% {
+    background-position:
+      0 0,
+      100% 0,
+      100% 100%,
+      0 50%;
+  }
+  75.01% {
+    background-position:
+      100% 0,
+      100% 0,
+      100% 100%,
+      0 50%;
+  }
+  100% {
+    background-position:
+      50% 0,
+      100% 0,
+      100% 100%,
+      0 100%;
+  }
+}

@@ -1,0 +1,96 @@
+.__loading-line-14 {
+  --s: var(--size, 60px);
+  --c1: var(--color-1, #046d8b);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, var(--d));
+
+  --_3: calc(var(--s) / 20);
+  --_4: calc(var(--s) / 15);
+  --_6: calc(var(--s) / 10);
+  --_13: calc(var(--s) * 13 / 60);
+  --_14: calc(var(--s) * 14 / 60);
+  --_24: calc(var(--s) * 24 / 60);
+  --_30: calc(var(--s) / 2);
+  --_36: calc(var(--s) * 36 / 60);
+
+  --__z: no-repeat linear-gradient(var(--c1) 0 0);
+
+  width: var(--s);
+  height: var(--_30);
+  display: grid;
+}
+.__loading-line-14:before,
+.__loading-line-14:after {
+  content: '';
+  grid-area: 1/1;
+  background: var(--__z), var(--__z), var(--__z);
+  animation:
+    __loading-line-14-l14-1 var(--d1) infinite linear,
+    __loading-line-14-l14-2 var(--d1) infinite linear;
+}
+.__loading-line-14:after {
+  transform: scale(-1);
+}
+@keyframes __loading-line-14-l14-1 {
+  0%,
+  3% {
+    background-size:
+      0 var(--_4),
+      var(--_4) 0,
+      0 var(--_4);
+  }
+  16.67% {
+    background-size:
+      calc(50% - var(--_6)) var(--_4),
+      var(--_4) 0,
+      0 var(--_4);
+  }
+  33.33% {
+    background-size:
+      calc(50% - var(--_6)) var(--_4),
+      var(--_4) var(--_14),
+      0 var(--_4);
+  }
+  46%,
+  54% {
+    background-size:
+      calc(50% - var(--_6)) var(--_4),
+      var(--_4) var(--_14),
+      calc(50% + var(--_6)) var(--_4);
+  }
+  66.67% {
+    background-size:
+      0 var(--_4),
+      var(--_4) var(--_14),
+      calc(50% + var(--_6)) var(--_4);
+  }
+  83.33% {
+    background-size:
+      0 var(--_4),
+      var(--_4) 0,
+      calc(50% + var(--_6)) var(--_4);
+  }
+  96%,
+  100% {
+    background-size:
+      0 var(--_4),
+      var(--_4) 0,
+      0 var(--_4);
+  }
+}
+@keyframes __loading-line-14-l14-2 {
+  0%,
+  49.9% {
+    background-position:
+      0 50%,
+      left calc(50% - var(--_6)) bottom var(--_13),
+      left var(--_24) top var(--_3);
+  }
+  50%,
+  100% {
+    background-position:
+      right var(--_36) top 50%,
+      left calc(50% - var(--_6)) top var(--_3),
+      right 0 top var(--_3);
+  }
+}

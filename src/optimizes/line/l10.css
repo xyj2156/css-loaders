@@ -1,0 +1,115 @@
+.__loading-line-10 {
+  --s:var(--size, 40px);
+  --d:var(--duration, 1s);
+  --d1:calc(var(--d) * 2);
+  --c1:var(--color-1, #046d8b);
+
+  --_4:calc(var(--s) / 10);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-line-10::before,
+.__loading-line-10::after {
+  content: '';
+  grid-area: 1/1;
+  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  background:
+    var(--c) 0 0,
+    var(--c) 100% 0,
+    var(--c) 100% 100%,
+    var(--c) 0 100%;
+  animation:
+    __loading-line-10-l10-1 var(--d1) infinite linear,
+    __loading-line-10-l10-2 var(--d1) infinite linear;
+}
+.__loading-line-10::after {
+  margin: 25%;
+  transform: scale(-1);
+}
+@keyframes __loading-line-10-l10-1 {
+  0% {
+    background-size:
+      0 var(--_4),
+      var(--_4) 0,
+      0 var(--_4),
+      var(--_4) 0;
+  }
+  12.5% {
+    background-size:
+      100% var(--_4),
+      var(--_4) 0,
+      0 var(--_4),
+      var(--_4) 0;
+  }
+  25% {
+    background-size:
+      100% var(--_4),
+      var(--_4) 100%,
+      0 var(--_4),
+      var(--_4) 0;
+  }
+  37.5% {
+    background-size:
+      100% var(--_4),
+      var(--_4) 100%,
+      100% var(--_4),
+      var(--_4) 0;
+  }
+  45%,
+  55% {
+    background-size:
+      100% var(--_4),
+      var(--_4) 100%,
+      100% var(--_4),
+      var(--_4) 100%;
+  }
+  62.5% {
+    background-size:
+      0 var(--_4),
+      var(--_4) 100%,
+      100% var(--_4),
+      var(--_4) 100%;
+  }
+  75% {
+    background-size:
+      0 var(--_4),
+      var(--_4) 0,
+      100% var(--_4),
+      var(--_4) 100%;
+  }
+  87.5% {
+    background-size:
+      0 var(--_4),
+      var(--_4) 0,
+      0 var(--_4),
+      var(--_4) 100%;
+  }
+  100% {
+    background-size:
+      0 var(--_4),
+      var(--_4) 0,
+      0 var(--_4),
+      var(--_4) 0;
+  }
+}
+
+@keyframes __loading-line-10-l10-2 {
+  0%,
+  49.9% {
+    background-position:
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%;
+  }
+  50%,
+  100% {
+    background-position:
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 0;
+  }
+}
