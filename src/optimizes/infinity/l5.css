@@ -1,0 +1,21 @@
+.__loading-infinity-5 {
+  --s: var(--size, 90px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  height: calc(var(--s) * 7 / 45);
+  color: var(--c1);
+  background:
+    radial-gradient(circle calc(var(--s) / 9) at right calc(var(--s) * 7 / 90) top 50%, #0000 92%, currentColor),
+    radial-gradient(circle calc(var(--s) / 9) at right 0 top 50%, currentColor 92%, #0000);
+  background-size: calc(100% / 3) 100%;
+  background-position: 50% 0%;
+  animation: __loading-infinity-5-l5 var(--d1) infinite linear;
+}
+@keyframes __loading-infinity-5-l5 {
+  100% {
+    background-position: 0 0;
+  }
+}

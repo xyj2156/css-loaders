@@ -1,0 +1,23 @@
+.__loading-infinity-4 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0000);
+  --__z: var(--c1) 0 calc(var(--s) * 3/16), var(--c2) 0 calc(var(--s) * 1/4);
+  width: calc(var(--s) / cos(45deg));
+  height: calc(var(--s) * 0.175);
+  background:
+    repeating-linear-gradient(135deg, var(--__z)) left top,
+    repeating-linear-gradient(45deg, var(--__z)) left bottom;
+  background-size: 200% 50%;
+  background-repeat: no-repeat;
+  animation: __loading-infinity-4-l4 var(--d1) infinite linear;
+}
+@keyframes __loading-infinity-4-l4 {
+  100% {
+    background-position:
+      top right,
+      bottom right;
+  }
+}

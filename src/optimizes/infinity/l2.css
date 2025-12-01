@@ -1,0 +1,17 @@
+.__loading-infinity-2 {
+  --s: var(--size, 90px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  height: calc(var(--s) * 14 / 90);
+  background: radial-gradient(circle closest-side, var(--c1) 92%, #0000) calc(100% / 3) 0 /
+    calc(100% / 4) 100%;
+  animation: __loading-infinity-2-l2 var(--d1) infinite linear;
+}
+@keyframes __loading-infinity-2-l2 {
+  100% {
+    background-position: 0 0;
+  }
+}

@@ -1,0 +1,16 @@
+.__loading-infinity-3 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+
+  width: calc(var(--s) / cos(45deg));
+  height: calc(var(--s) * 7 / 40);
+  background: repeating-linear-gradient(-45deg, var(--c1) 0 calc(var(--s) * 15 / 80), #0000 0 calc(var(--s) / 4)) left/200% 100%;
+  animation: __loading-infinity-3-l3 var(--d1) infinite linear;
+}
+@keyframes __loading-infinity-3-l3 {
+  100% {
+    background-position: right;
+  }
+}

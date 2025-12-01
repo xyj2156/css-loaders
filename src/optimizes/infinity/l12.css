@@ -1,0 +1,25 @@
+.__loading-infinity-12 {
+  --s: var(--size, 90px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #000);
+  --__1: calc(var(--s) / 4);
+
+  width: var(--s);
+  height: calc(var(--s) * 5 / 32);
+  --__z: var(--c1) 90deg, #0000 0;
+  background:
+    conic-gradient(from 135deg at top, var(--__z)) 0 0,
+    conic-gradient(from -45deg at bottom, var(--__z)) 0 100%;
+  background-size: var(--__1) 50%;
+  background-repeat: repeat-x;
+  animation: __loading-infinity-12-l12 var(--d1) infinite;
+}
+@keyframes __loading-infinity-12-l12 {
+  80%,
+  100% {
+    background-position:
+      calc(100% / 3) 0,
+      calc(100% / -3) 100%;
+  }
+}

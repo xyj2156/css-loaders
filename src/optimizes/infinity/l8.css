@@ -1,0 +1,30 @@
+.__loading-infinity-8 {
+  --s: var(--size, 90px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.25));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0000);
+
+  --_8: calc(var(--s) * 4 / 45);
+  --_-8: calc(var(--_8) * -1);
+
+  width: var(--s);
+  height: calc(var(--s) * 12 / 90);
+  --__z: var(--c1) 50%, var(--c2) 0;
+  background:
+    linear-gradient(90deg, var(--__z)) 0 0,
+    linear-gradient(-90deg, var(--__z)) 0 50%,
+    linear-gradient(90deg, var(--__z)) 0 100%;
+  background-size: var(--_8) calc(100% / 3);
+  background-repeat: repeat-x;
+  animation: __loading-infinity-8-l8 var(--d1) infinite linear;
+}
+
+@keyframes __loading-infinity-8-l8 {
+  100% {
+    background-position:
+      var(--_-8) 0,
+      var(--_-8) 50%,
+      var(--_-8) 100%;
+  }
+}

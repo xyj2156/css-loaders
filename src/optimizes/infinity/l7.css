@@ -1,0 +1,23 @@
+.__loading-infinity-7 {
+  --s: var(--size, 90px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #000);
+
+  width: var(--s);
+  height: calc(var(--s) * 14 / 90);
+  color: var(--c1);
+  background:
+    linear-gradient(90deg, currentColor 50%, #0000 0) repeat-x,
+    conic-gradient(from 45deg at right calc(var(--s) * 7 / 90) top 50%, currentColor 90deg, #0000 0);
+  background-position: calc(100% / 3) 50%;
+  background-size:
+    calc(100% / 4) 60%,
+    calc(100% / 4) 100%;
+  animation: __loading-infinity-7-l7 var(--d1) infinite linear;
+}
+@keyframes __loading-infinity-7-l7 {
+  100% {
+    background-position: 0 50%;
+  }
+}

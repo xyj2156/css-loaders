@@ -1,0 +1,45 @@
+.__loading-infinity-18 {
+  --s: var(--size, 60px);
+  --c1: var(--color-1, #000);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, var(--d));
+
+  --10: calc(var(--s) / 6);
+  --20: calc(var(--s) / 3);
+  --30: calc(var(--s) / 2);
+  --40: calc(var(--s) * 2 / 3);
+  --50: calc(var(--s) * 5 / 6);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  --g: conic-gradient(from -90deg at var(--10) var(--10), var(--c1) 90deg, #0000 0);
+  background: var(--g), var(--g), var(--g);
+  background-size: 50% 50%;
+  animation: __loading-infinity-18-l18 var(--d1) infinite;
+}
+@keyframes __loading-infinity-18-l18 {
+  0% {
+    background-position:
+      0 0,
+      var(--10) var(--10),
+      var(--20) var(--20);
+  }
+  33% {
+    background-position:
+      calc(-1 * var(--30)) 0,
+      var(--10) var(--10),
+      var(--20) var(--20);
+  }
+  66% {
+    background-position:
+      calc(-1 * var(--30)) 0,
+      var(--10) var(--40),
+      var(--20) var(--20);
+  }
+  100% {
+    background-position:
+      calc(-1 * var(--30)) 0,
+      var(--10) var(--40),
+      var(--50) var(--20);
+  }
+}

@@ -1,0 +1,54 @@
+.__loading-infinity-20 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0000);
+
+  --_10: calc(var(--s) / 6);
+  --_20: calc(var(--s) / 3);
+
+  width: var(--s);
+  display: flex;
+  align-items: flex-start;
+  aspect-ratio: 1;
+}
+
+.__loading-infinity-20:before,
+.__loading-infinity-20:after {
+  content: '';
+  flex: 1;
+  aspect-ratio: 1;
+  --g: conic-gradient(from -90deg at var(--_10) var(--_10), var(--c1) 90deg, var(--c2) 0);
+  background: var(--g), var(--g), var(--g);
+  filter: drop-shadow(calc(var(--s) / 2) calc(var(--s) / 2) 0 var(--c1));
+  animation: __loading-infinity-20-l20 var(--d1) infinite;
+}
+
+.__loading-infinity-20:after {
+  transform: scaleX(-1);
+}
+
+@keyframes __loading-infinity-20-l20 {
+  0% {
+    background-position:
+      0 0,
+      var(--_10) var(--_10),
+      var(--_20) var(--_20);
+  }
+  33% {
+    background-position: var(--_10) var(--_10);
+  }
+  66% {
+    background-position:
+      0 var(--_20),
+      var(--_10) var(--_10),
+      var(--_20) 0;
+  }
+  100% {
+    background-position:
+      0 0,
+      var(--_10) var(--_10),
+      var(--_20) var(--_20);
+  }
+}
