@@ -1,0 +1,80 @@
+.__loading-maze-4 {
+  --s: var(--size, 70px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+  --c3: var(--color-3, #0000);
+  --__1: calc(var(--s) * 4 / 70);
+  --__2: calc(var(--s) * 10 / 70);
+  --__3: calc(var(--s) * 8 / 70);
+  --__4: calc(var(--s) * 60 / 70);
+  --__5: calc(var(--s) * 30 / 70);
+  --__6: calc(var(--s) * 15 / 70);
+
+  width: var(--s);
+  height: calc(var(--s) * 40 / 70);
+  outline: var(--__1) solid var(--c2);
+  background:
+    radial-gradient(farthest-side, var(--c1) 90%, var(--c3)) 0 0/var(--__3) var(--__3) no-repeat,
+    linear-gradient(var(--c2) 0 0) 50%/var(--__2) 100% no-repeat,
+    conic-gradient(from 90deg at var(--__2) var(--__2), var(--c3) 90deg, var(--c2) 0),
+    conic-gradient(from -90deg at var(--__4) var(--__5), var(--c3) 90deg, var(--c2) 0);
+  animation: __loading-maze-4-l4 var(--d1) infinite;
+}
+@keyframes __loading-maze-4-l4 {
+  0% {
+    background-position:
+      0 0,
+      50%;
+    clip-path: circle(var(--__6) at left var(--__1) top var(--__1));
+  }
+  12.5% {
+    background-position:
+      50% 0,
+      50%;
+    clip-path: circle(var(--__6) at left 50% top var(--__1));
+  }
+  25% {
+    background-position:
+      50% 100%,
+      50%;
+    clip-path: circle(var(--__6) at left 50% bottom var(--__1));
+  }
+  37.5% {
+    background-position:
+      100% 100%,
+      50%;
+    clip-path: circle(var(--__6) at right var(--__1) bottom var(--__1));
+  }
+  50% {
+    background-position:
+      100% 0,
+      50%;
+    clip-path: circle(var(--__6) at right var(--__1) top var(--__1));
+  }
+  62.5% {
+    background-position:
+      50% 0,
+      50%;
+    clip-path: circle(var(--__6) at right 50% top var(--__1));
+  }
+  75% {
+    background-position:
+      50% 100%,
+      50%;
+    clip-path: circle(var(--__6) at right 50% bottom var(--__1));
+  }
+  82.5% {
+    background-position:
+      0 100%,
+      50%;
+    clip-path: circle(var(--__6) at left var(--__1) bottom var(--__1));
+  }
+  100% {
+    background-position:
+      0 0,
+      50%;
+    clip-path: circle(var(--__6) at left var(--__1) top var(--__1));
+  }
+}

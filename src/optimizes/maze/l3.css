@@ -1,0 +1,46 @@
+.__loading-maze-3 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+  --c3: var(--color-3, #0000);
+
+  --outline-width: calc(var(--s) / 20);
+  --dot-size: calc(var(--s) / 5);
+  --gradient-pos-1: calc(var(--s) / 4);
+  --gradient-pos-2: calc(var(--s) * 3 / 4);
+  --circle-radius: calc(var(--s) * 3 / 5);
+  --circle-offset: calc(var(--s) / 10);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  outline: var(--outline-width) solid var(--c2);
+  background:
+    radial-gradient(farthest-side, var(--c1) 90%, var(--c3)) 0 0/var(--dot-size) var(--dot-size) no-repeat,
+    conic-gradient(from 90deg at var(--gradient-pos-1) var(--gradient-pos-1), var(--c3) 90deg, var(--c2) 0),
+    conic-gradient(from -90deg at var(--gradient-pos-2) var(--gradient-pos-2), var(--c3) 90deg, var(--c2) 0);
+  animation: __loading-maze-3-l3 var(--d1) infinite;
+}
+@keyframes __loading-maze-3-l3 {
+  0% {
+    background-position: 0 0;
+    clip-path: circle(var(--circle-radius) at left var(--circle-offset) top var(--circle-offset));
+  }
+  25% {
+    background-position: 100% 0;
+    clip-path: circle(var(--circle-radius) at right var(--circle-offset) top var(--circle-offset));
+  }
+  50% {
+    background-position: 100% 100%;
+    clip-path: circle(var(--circle-radius) at right var(--circle-offset) bottom var(--circle-offset));
+  }
+  75% {
+    background-position: 0 100%;
+    clip-path: circle(var(--circle-radius) at left var(--circle-offset) bottom var(--circle-offset));
+  }
+  100% {
+    background-position: 0 0;
+    clip-path: circle(var(--circle-radius) at left var(--circle-offset) top var(--circle-offset));
+  }
+}

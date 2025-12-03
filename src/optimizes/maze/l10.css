@@ -1,0 +1,81 @@
+.__loading-maze-10 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, red);
+  --c2: var(--color-2, #000);
+  --c3: var(--color-3, #fff);
+
+  --dot-size: calc(var(--s) / 3.75);
+  --bar-height: calc(var(--s) / 3);
+  --offset-small: calc(var(--s) / 30);
+  --offset-large: calc(var(--s) - var(--offset-small));
+  --neg-offset: calc(var(--s) / -3);
+
+  height: var(--s);
+  aspect-ratio: 2;
+  background:
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0/var(--dot-size) var(--dot-size),
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0/var(--dot-size) var(--dot-size),
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0/var(--dot-size) var(--dot-size),
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0/var(--dot-size) var(--dot-size),
+    radial-gradient(farthest-side, var(--c2) 90%, #0000) 0 0/var(--dot-size) var(--dot-size),
+    linear-gradient(var(--c3) 0 0) center/100% var(--bar-height),
+    linear-gradient(var(--c3) 0 0) right/50% 100%;
+  background-repeat: no-repeat;
+  animation: __loading-maze-10-l10 var(--d1) infinite;
+}
+
+@keyframes __loading-maze-10-l10 {
+  0% {
+    background-position:
+      top var(--offset-small) right var(--offset-small),
+      right var(--offset-small) bottom var(--offset-small),
+      top var(--offset-small) left var(--offset-large),
+      bottom var(--offset-small) left var(--offset-large),
+      var(--neg-offset) 50%,
+      50%,
+      right;
+  }
+  50%,
+  60% {
+    background-position:
+      top var(--offset-small) right var(--offset-small),
+      right var(--offset-small) bottom var(--offset-small),
+      top var(--offset-small) left var(--offset-large),
+      bottom var(--offset-small) left var(--offset-large),
+      left 75% top 50%,
+      50%,
+      right;
+  }
+  80% {
+    background-position:
+      75% 50%,
+      75% 50%,
+      75% 50%,
+      75% 50%,
+      left 75% top 50%,
+      50%,
+      right;
+  }
+  80.01% {
+    background-position:
+      75% 50%,
+      75% 50%,
+      75% 50%,
+      75% 50%,
+      var(--neg-offset) 50%,
+      50%,
+      right;
+  }
+  100% {
+    background-position:
+      top var(--offset-small) right var(--offset-small),
+      right var(--offset-small) bottom var(--offset-small),
+      top var(--offset-small) left var(--offset-large),
+      bottom var(--offset-small) left var(--offset-large),
+      var(--neg-offset) 50%,
+      50%,
+      right;
+  }
+}

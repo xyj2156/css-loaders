@@ -1,0 +1,37 @@
+.__loading-maze-7 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.25));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+  --c3: var(--color-3, #0000);
+
+  --__1: calc(var(--s) * 1 / 5);
+  --__2: calc(var(--s) * 5 / 8);
+  --__3: calc(var(--s) * 3 / 8);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    radial-gradient(farthest-side, var(--c1) 90%, var(--c3)) 50%/var(--__1) var(--__1) no-repeat,
+    conic-gradient(from -90deg at var(--__3) var(--__3), var(--c3) 90deg, var(--c2) 0) 0 0/var(--__2) var(--__2);
+  animation: __loading-maze-7-l7 var(--d) infinite;
+}
+
+@keyframes __loading-maze-7-l7 {
+  0% {
+    background-position:
+      50%,
+      0 0;
+  }
+  50% {
+    background-position:
+      50%,
+      var(--__2) 0;
+  }
+  100% {
+    background-position:
+      50%,
+      var(--__2) var(--__2);
+  }
+}
