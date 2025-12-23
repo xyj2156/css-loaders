@@ -1,0 +1,50 @@
+.__loading-moving-5 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1s);
+  --d1:var(--duration-1, calc(var(--d) * 3 / 2));
+  --c1: var(--color-1, #ccc);
+
+  height: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-moving-5:before,
+.__loading-moving-5:after {
+  content: '';
+  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  background: var(--c), var(--c);
+  background-size: calc(25% * 1) calc(50% * 1);
+  animation: __loading-moving-5-l5 var(--d1) infinite linear;
+}
+.__loading-moving-5:after {
+  transform: scale(-1);
+}
+@keyframes __loading-moving-5-l5 {
+  0%,
+  5% {
+    background-position:
+      33.4% 100%,
+      66.6% 100%;
+  }
+  25% {
+    background-position:
+      33.4% 100%,
+      100% 0;
+  }
+  50% {
+    background-position:
+      0 0,
+      100% 0;
+  }
+  75% {
+    background-position:
+      0 0,
+      66.6% 100%;
+  }
+  95%,
+  100% {
+    background-position:
+      33.4% 100%,
+      66.6% 100%;
+  }
+}

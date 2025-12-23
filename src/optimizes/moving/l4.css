@@ -1,0 +1,43 @@
+.__loading-moving-4 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1s);
+  --d1:var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #ccc);
+  height: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-moving-4:before,
+.__loading-moving-4:after {
+  content: '';
+  --__z: no-repeat linear-gradient(var(--c1) 0 0);
+  background: var(--__z), var(--__z);
+  background-size: 25% 50%;
+  animation: __loading-moving-4-l4 var(--d1) infinite linear;
+}
+.__loading-moving-4:after {
+  transform: scale(-1);
+}
+@keyframes __loading-moving-4-l4 {
+  0%,
+  10% {
+    background-position:
+      33.4% 100%,
+      66.6% 100%;
+  }
+  40% {
+    background-position:
+      33.4% 0,
+      100% 100%;
+  }
+  70% {
+    background-position:
+      0 100%,
+      66.6% 0;
+  }
+  100% {
+    background-position:
+      33.4% 100%,
+      66.6% 100%;
+  }
+}

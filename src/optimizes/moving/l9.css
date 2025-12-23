@@ -1,0 +1,82 @@
+.__loading-moving-9 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1s);
+  --d1:var(--duration-1,calc(var(--d) * 2));
+  --c1: var(--color-1, #ccc);
+  height: var(--s, 40px);
+  aspect-ratio: 1.5;
+  --__z: var(--c1) 96%, #0000;
+  background:
+    radial-gradient(farthest-side at 100% 100%, var(--__z)),
+    radial-gradient(farthest-side at 0 100%, var(--__z)),
+    radial-gradient(farthest-side at 100% 0, var(--__z)),
+    radial-gradient(farthest-side at 0 0, var(--__z));
+  background-size: calc(100%/3) 50%;
+  background-repeat: no-repeat;
+  animation: __loading-moving-9-l9 var(--d1) infinite linear;
+}
+@keyframes __loading-moving-9-l9 {
+  0% {
+    background-position:
+      0 0,
+      50% 0,
+      0 100%,
+      50% 100%;
+  }
+  12.5% {
+    background-position:
+      0 0,
+      100% 0,
+      0 100%,
+      50% 100%;
+  }
+  25% {
+    background-position:
+      50% 0,
+      100% 0,
+      0 100%,
+      50% 100%;
+  }
+  37.5% {
+    background-position:
+      50% 0,
+      100% 0,
+      0 100%,
+      100% 100%;
+  }
+  50% {
+    background-position:
+      50% 0,
+      100% 0,
+      50% 100%,
+      100% 100%;
+  }
+  62.5% {
+    background-position:
+      0 0,
+      100% 0,
+      50% 100%,
+      100% 100%;
+  }
+  75% {
+    background-position:
+      0 0,
+      50% 0,
+      50% 100%,
+      100% 100%;
+  }
+  87.5% {
+    background-position:
+      0 0,
+      50% 0,
+      0 100%,
+      100% 100%;
+  }
+  100% {
+    background-position:
+      0 0,
+      50% 0,
+      0 100%,
+      50% 100%;
+  }
+}

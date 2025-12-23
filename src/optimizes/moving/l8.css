@@ -1,0 +1,45 @@
+.__loading-moving-8 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1s);
+  --d1:var(--duration-1, calc(var(--d) * 3 / 2));
+  --c1: var(--color-1, #ccc);
+
+  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  height: var(--s);
+  aspect-ratio: 2/3;
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 50% 33.4%;
+  animation: __loading-moving-8-l8 var(--d1) infinite linear;
+}
+@keyframes __loading-moving-8-l8 {
+  0%,
+  5% {
+    background-position:
+      0 25%,
+      100% 25%,
+      0 75%,
+      100% 75%;
+  }
+  33% {
+    background-position:
+      0 50%,
+      100% 0,
+      0 100%,
+      100% 50%;
+  }
+  66% {
+    background-position:
+      0 50%,
+      0 0,
+      100% 100%,
+      100% 50%;
+  }
+  95%,
+  100% {
+    background-position:
+      0 75%,
+      0 25%,
+      100% 75%,
+      100% 25%;
+  }
+}
