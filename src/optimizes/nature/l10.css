@@ -1,0 +1,50 @@
+.__loading-nature-10 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #ffd738);
+  --c3: var(--color-3, #4dbefa);
+
+  --__4: calc(var(--s) / 20);
+  --__15: calc(var(--s) * 15 / 80);
+  --__20: calc(var(--s) / 4);
+  --__36: calc(var(--s) * 36 / 80);
+  --__40: calc(var(--s) / 2);
+  --__-40: calc(var(--s) / -2);
+
+  --c: radial-gradient(farthest-side, var(--c1) 96%, #0000);
+  --l: 105%;
+
+  width: var(--s);
+  height: var(--__40);
+  background: radial-gradient(circle 25px at top right, var(--c2) 40%, #0000), var(--c3);
+  position: relative;
+  overflow: hidden;
+}
+.__loading-nature-10:before,
+.__loading-nature-10:after {
+  content: '';
+  position: absolute;
+  top: var(--__4);
+  left: var(--__-40);
+  width: var(--__36);
+  height: var(--__20);
+  background:
+    var(--c) 100% 100% /30% 60%,
+    var(--c) 70% 0 /50% 100%,
+    var(--c) 0 100% /36% 68%,
+    var(--c) 27% 18% /26% 40%,
+    linear-gradient(var(--c1) 0 0) bottom/67% 58%;
+  background-repeat: no-repeat;
+  animation: __loading-nature-10-l10 var(--d1) linear infinite;
+}
+.__loading-nature-10:after {
+  top: var(--__15);
+  --l: 200%;
+}
+@keyframes __loading-nature-10-l10 {
+  100% {
+    left: var(--l);
+  }
+}

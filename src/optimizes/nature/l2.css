@@ -1,0 +1,33 @@
+.__loading-nature-2 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #ffd738);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+  border-radius: 50%;
+  background: radial-gradient(circle calc(var(--s) / 4), var(--c1) 90%, #0000);
+  filter: drop-shadow(0px 0px calc(var(--s) / 60) var(--c1));
+  animation: __loading-nature-2-l2 calc(var(--d) * 1) infinite alternate linear;
+}
+.__loading-nature-2::before,
+.__loading-nature-2::after {
+  content: '';
+  grid-area: 1/1;
+  border-radius: 50%;
+  --g: no-repeat linear-gradient(var(--c1) 0 0) 50%;
+  background:
+    var(--g) / 100% 5px,
+    var(--g) / 5px 100%;
+  -webkit-mask: radial-gradient(farthest-side, #0000 60%, #000 61%);
+}
+.__loading-nature-2::after {
+  transform: rotate(45deg);
+}
+@keyframes __loading-nature-2-l2 {
+  100% {
+    filter: drop-shadow(0px 0px calc(var(--s) / 3) var(--c1));
+  }
+}

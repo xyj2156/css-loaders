@@ -1,0 +1,29 @@
+.__loading-nature-1 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1000ms);
+  --c1: var(--color-1, #ffd738);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background: var(--c1);
+  border-radius: 50%;
+  display: grid;
+}
+.__loading-nature-1::before,
+.__loading-nature-1::after {
+  content: '';
+  grid-area: 1/1;
+  background: inherit;
+  clip-path: polygon(0 0, 50% 40%, 100% 0, 60% 50%, 100% 100%, 50% 60%, 0 100%, 40% 50%);
+  animation: __loading-nature-1-l1 var(--d1) infinite alternate;
+  transform: rotate(var(--__z, 0)) scale(1);
+}
+.__loading-nature-1::after {
+  --__z: 45deg;
+}
+@keyframes __loading-nature-1-l1 {
+  100% {
+    transform: rotate(var(--__z, 0)) scale(1.4);
+  }
+}

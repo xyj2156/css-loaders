@@ -1,0 +1,62 @@
+.__loading-nature-9 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --d2: var(--duration-2, calc(var(--d) * 0.2));
+  --d3: var(--duration-2, calc(var(--d) * 0.3));
+  --c1: var(--color-1, #4dbefa);
+  --c2: var(--color-2, #7accf7);
+  --c3: var(--color-3, #eee);
+
+  --__12: calc(var(--s) * 12 / 80);
+  --__16: calc(var(--s) * 16 / 80);
+  --__18: calc(var(--s) * 18 / 80);
+  --__20: calc(var(--s) / 4);
+  --__40: calc(var(--s) / 2);
+
+  --__w: var(--__20);
+  --__h: var(--__18);
+
+  width: var(--s);
+  height: var(--__40);
+  background: var(--c1);
+  position: relative;
+  overflow: hidden;
+  animation: __loading-nature-9-l9-0 var(--d1) infinite steps(10);
+}
+.__loading-nature-9:before,
+.__loading-nature-9:after {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  --rad: radial-gradient(1px 4px, var(--c3) 92%, #0000);
+  background:
+    var(--rad) 20% 0,
+    var(--rad) 70% 7%;
+  background-size: var(--__w) var(--__h);
+  animation: __loading-nature-9-l9-1 var(--d2) linear infinite;
+  transform: skew(-10deg);
+}
+.__loading-nature-9:after {
+  --__h: var(--__12);
+  --__w: var(--__16);
+  animation-duration: var(--d3);
+}
+@keyframes __loading-nature-9-l9-0 {
+  0%,
+  15%,
+  20%,
+  30%,
+  100% {
+    background: var(--c1);
+  }
+  10%,
+  22% {
+    background: var(--c2);
+  }
+}
+@keyframes __loading-nature-9-l9-1 {
+  100% {
+    transform: skew(-10deg) translateY(var(--__h));
+  }
+}

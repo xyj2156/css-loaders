@@ -1,0 +1,34 @@
+.__loading-nature-12 {
+  --s: var(--size, 180px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #8d7958);
+  --__w: calc(var(--s) / 6);
+  --__h: calc(var(--s) / 7.2);
+
+  width: var(--s);
+  height: calc(var(--s) / 3.6);
+  display: flex;
+  color: var(--c1);
+  filter: drop-shadow(calc(var(--s) / 6) calc(var(--s) / 7.2) 0 currentColor)
+          drop-shadow(calc(var(--s) / 3) 0 0 currentColor)
+          drop-shadow(calc(var(--s) / 1.5) 0 0 currentColor);
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-nature-12-l12 var(--d) infinite steps(7);
+}
+
+.__loading-nature-12:before {
+  content: '';
+  width: calc(var(--s) / 6);
+  height: calc(var(--s) / 7.2);
+  --c: no-repeat radial-gradient(farthest-side, currentColor 92%, #0000);
+  background:
+    var(--c) left / 70% 70%,
+    var(--c) right/20% 20%,
+    var(--c) top 0 right 15%/20% 20%,
+    var(--c) bottom 0 right 15%/20% 20%;
+}
+@keyframes __loading-nature-12-l12 {
+  100% {
+    clip-path: inset(0 calc(var(--s) / -6) 0 0);
+  }
+}

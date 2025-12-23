@@ -1,0 +1,24 @@
+.__loading-nature-3 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #8d847f);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: flex;
+  filter: drop-shadow(0 0 1px var(--c1));
+  animation: __loading-nature-3-l3 calc(var(--d1)) infinite alternate linear;
+}
+.__loading-nature-3:before {
+  content: '';
+  flex: 1;
+  background: var(--c1);
+  border-radius: 50%;
+  -webkit-mask: radial-gradient(circle closest-side at 66% 40%, #0000 115%, #000 118%);
+}
+@keyframes __loading-nature-3-l3 {
+  100% {
+    filter: drop-shadow(0 0 calc(var(--s) * 2 / 5) var(--c1));
+  }
+}

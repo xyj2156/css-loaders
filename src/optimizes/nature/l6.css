@@ -1,0 +1,46 @@
+.__loading-nature-6 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: #0000;
+  --c2: #fff;
+  --c3: #020308;
+
+  width: var(--s);
+  height: calc(var(--s) / 2);
+  border-radius: calc(var(--s) / 0.8) calc(var(--s) / 0.8) 0 0;
+  background:
+    linear-gradient(0deg, var(--c1), var(--c2), var(--c1)) 70% 30%,
+    linear-gradient(90deg, var(--c1), var(--c2), var(--c1)) 72% 32%,
+    linear-gradient(0deg, var(--c1), var(--c2), var(--c1)) 26% 42%,
+    linear-gradient(90deg, var(--c1), var(--c2), var(--c1)) 23% 44%,
+    linear-gradient(0deg, var(--c1), var(--c2), var(--c1)) 51% 54%,
+    linear-gradient(90deg, var(--c1), var(--c2), var(--c1)) 51% 53% var(--c3);
+  background-size:
+    calc(var(--s) / 40) calc(var(--s) / 8),
+    calc(var(--s) / 8) calc(var(--s) / 40);
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+.__loading-nature-6:before,
+.__loading-nature-6:after {
+  content: '';
+  position: absolute;
+  inset: 100% auto auto calc(var(--s) / 4);
+  height: calc(var(--s) / 26.67);
+  width: calc(var(--s) / 4);
+  background: linear-gradient(90deg, var(--c1), var(--c2));
+  transform-origin: right;
+  transform: rotate(-20deg) translate(calc(var(--s) / -4));
+  animation: __loading-nature-6-l6 var(--d1) infinite;
+}
+.__loading-nature-6:after {
+  inset: 100% auto auto calc(var(--s) / -16);
+  animation-delay: calc(var(--d) / 2.667);
+}
+@keyframes __loading-nature-6-l6 {
+  100% {
+    transform: rotate(-20deg) translate(calc(var(--s) * 1.5));
+  }
+}

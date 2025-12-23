@@ -1,0 +1,62 @@
+.__loading-nature-16 {
+  --s:var(--size, 20px);
+  --d:var(--duration, 1s);
+  --d1:var(--duration-1, calc(var(--d) * 0.25));
+  --c1:var(--color-1, #ef524a);
+  --c2:var(--color-2, #53707b);
+  --c3:var(--color-3, #fff);
+  --c4:var(--color-4, #935936);
+
+  --__3:calc(var(--s) * 3 / 20);
+  --__4:calc(var(--s) / 5);
+  --__6:calc(var(--s) * 6 / 20);
+  --__-6:calc(var(--s) * -6 / 20);
+  --__10:calc(var(--s) / 2);
+  --__12:calc(var(--s) * 12 / 20);
+  --__14:calc(var(--s) * 14 / 20);
+  --__15:calc(var(--s) * 15 / 20);
+  --__-22:calc(var(--s) * -22 / 20);
+  --__25:calc(var(--s) * 25 / 20);
+  --__60:calc(var(--s) * 3);
+  --__80:calc(var(--s) * 4);
+  --__100:calc(var(--s) * 5);
+
+  width: var(--s);
+  height: var(--__80);
+  background: var(--c4);
+  position: relative;
+}
+.__loading-nature-16:before {
+  content: '';
+  position: absolute;
+  top: var(--__10);
+  left: var(--__-22);
+  width: var(--__25);
+  height: var(--__60);
+  background:
+    radial-gradient(farthest-side, var(--c3) 92%, #0000) 60% var(--__6)/var(--__4) var(--__4),
+    radial-gradient(50% 60%, var(--c2) 92%, #0000) center/70% 55%,
+    radial-gradient(farthest-side, var(--c2) 92%, #0000) 50% var(--__3)/var(--__14) var(--__14),
+    radial-gradient(142% 100% at bottom right, #0000 64%, var(--c2) 65%) bottom/57% 40%,
+    conic-gradient(from -120deg at right, var(--c2) 36deg, #0000 0) 100% var(--__3)/51% var(--__12),
+    conic-gradient(from 120deg at top left, #0000, var(--c1) 2deg 40deg, #0000 43deg) top/100% var(--__10);
+  background-repeat: no-repeat;
+  transform: rotate(-26deg);
+  transform-origin: 100% 80%;
+  animation: __loading-nature-16-l16 var(--d1) infinite linear alternate;
+}
+.__loading-nature-16:after {
+  content: '';
+  position: absolute;
+  width: var(--__6);
+  height: var(--__12);
+  left: var(--__-6);
+  bottom: var(--__15);
+  border-radius: 100px 0 0 100px;
+  background: var(--c2);
+}
+@keyframes __loading-nature-16-l16 {
+  100% {
+    transform: rotate(0);
+  }
+}
