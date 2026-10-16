@@ -1,13 +1,14 @@
 .__loading-moving-1 {
   --s: var(--size, 40px);
   --d: var(--duration, 1s);
-  --d1:var(--duration-1, calc(var(--d) * 1.5));
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
   --c1: var(--color-1, #ccc);
-  --c: no-repeat linear-gradient(var(--c1) 0 0);
+
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
 
   height: var(--s);
   aspect-ratio: 1.5;
-  background: var(--c), var(--c);
+  background: var(--__a), var(--__a);
   background-size: 66% 50%;
   animation: __loading-moving-1-l1 var(--d1) infinite linear;
 }

@@ -1,9 +1,9 @@
 .__loading-colorful-15 {
   --s: var(--size, 50px);
-  --c1: var(--color-1, #ff003c);
-  --c2: var(--color-2, #00c176);
   --d: var(--duration, 1s);
   --d1: var(--duration-1, calc(2 * var(--d)));
+  --c1: var(--color-1, #ff003c);
+  --c2: var(--color-2, #00c176);
 
   width: var(--s);
   aspect-ratio: 1;

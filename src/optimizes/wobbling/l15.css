@@ -1,0 +1,27 @@
+.__loading-wobbling-15 {
+  --s: var(--size, 20px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #514b82);
+  --_a: calc(var(--s) * 4 / 20);
+  --_b: calc(var(--s) * 8 / 20);
+  --_c: calc(var(--s) * 80 / 20);
+
+  height: var(--_c);
+  width: var(--s);
+  color: var(--c1);
+  background:
+    radial-gradient(farthest-side, currentColor 94%, #0000) top/var(--_b) var(--_b),
+    linear-gradient(currentColor 0 0) top/var(--_a) 70%,
+    conic-gradient(from -30deg at bottom, #0000, currentColor 2deg 58deg, #0000 60deg) bottom / 100%
+      20px,
+    conic-gradient(from 150deg at top, #0000, currentColor 2deg 58deg, #0000 60deg) bottom 20px left
+      0/100% 20px;
+  background-repeat: no-repeat;
+  transform-origin: 50% var(--_a);
+  animation: __loading-wobbling-15-l15 var(--d) infinite cubic-bezier(0.5, 300, 0.5, -300);
+}
+@keyframes __loading-wobbling-15-l15 {
+  100% {
+    transform: rotate(0.5deg);
+  }
+}

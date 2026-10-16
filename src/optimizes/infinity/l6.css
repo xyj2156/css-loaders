@@ -4,14 +4,15 @@
   --d1: var(--duration-1, calc(var(--d) * 0.5));
   --c1: var(--color-1, #000);
   --c2: var(--color-2, #0000);
-  --_7: calc(var(--s) * 7 / 90);
-  --__z: 50%, var(--c1) 90deg, var(--c2) 0;
+
+  --_a: calc(var(--s) * 7 / 90);
+  --__a: 50%, var(--c1) 90deg, var(--c2) 0;
 
   width: var(--s);
   height: calc(var(--s) * 14 / 90);
   background:
-    conic-gradient(from 45deg at calc(100% - var(--_7)) var(--__z)),
-    conic-gradient(from -135deg at var(--_7) var(--__z));
+    conic-gradient(from 45deg at calc(100% - var(--_a)) var(--__a)),
+    conic-gradient(from -135deg at var(--_a) var(--__a));
   background-position: calc(100% / 3) 0;
   background-size: calc(100% / 4) 100%;
   animation: __loading-infinity-6-l6 0.5s infinite linear;

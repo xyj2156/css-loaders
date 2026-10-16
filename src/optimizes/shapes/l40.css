@@ -1,0 +1,65 @@
+.__loading-shapes-40 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 0.5s);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #398eb6);
+  --_a: calc(var(--s) * 10 / 50);
+  --_b: calc(var(--s) * 25 / 50);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  color: var(--c1);
+  position: relative;
+  animation: __loading-shapes-40-l40 var(--d) infinite alternate;
+}
+.__loading-shapes-40:before,
+.__loading-shapes-40:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: var(--_b) var(--_b);
+  background-position:
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%;
+  background-repeat: no-repeat;
+}
+.__loading-shapes-40:before {
+  background-image:
+    radial-gradient(farthest-side at top left, currentColor 96%, #0000),
+    radial-gradient(farthest-side at top right, currentColor 96%, #0000),
+    radial-gradient(farthest-side at bottom right, currentColor 96%, #0000),
+    radial-gradient(farthest-side at bottom left, currentColor 96%, #0000);
+  animation: __loading-shapes-40-l40-1 var(--d1) infinite;
+}
+.__loading-shapes-40:after {
+  background-image:
+    radial-gradient(farthest-side at top left, #0000 94%, currentColor 96%),
+    radial-gradient(farthest-side at top right, #0000 94%, currentColor 96%),
+    radial-gradient(farthest-side at bottom right, #0000 94%, currentColor 96%),
+    radial-gradient(farthest-side at bottom left, #0000 94%, currentColor 96%);
+  animation: __loading-shapes-40-l40-2 var(--d1) infinite;
+}
+@keyframes __loading-shapes-40-l40-1 {
+  0%,
+  10%,
+  90%,
+  100% {
+    inset: 0;
+  }
+  40%,
+  60% {
+    inset: -var(--_a);
+  }
+}
+@keyframes __loading-shapes-40-l40-2 {
+  0%,
+  40% {
+    transform: rotate(0);
+  }
+  60%,
+  100% {
+    transform: rotate(90deg);
+  }
+}

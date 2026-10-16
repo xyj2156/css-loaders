@@ -1,20 +1,21 @@
 .__loading-blob-17 {
   --s: var(--size, 80px);
-  --c1: var(--color-1, #fff);
-  --c2: var(--color-2, #000);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #000);
 
-  --s1: calc(var(--s) / 4);
+  --_a: calc(var(--s) / 4);
+
   width: var(--s);
   aspect-ratio: 1;
   border: calc(var(--s) / 8) solid var(--c2);
   box-sizing: border-box;
   background:
-    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50%/var(--s1) var(--s1),
-    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50%/var(--s1) var(--s1),
-    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50%/var(--s1) var(--s1),
-    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50%/var(--s1) var(--s1),
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50% / var(--_a) var(--_a),
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50% / var(--_a) var(--_a),
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50% / var(--_a) var(--_a),
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) 50% / var(--_a) var(--_a),
     radial-gradient(farthest-side, var(--c1) 98%, #0000) 50%/80% 80%,
     var(--c2);
   background-repeat: no-repeat;

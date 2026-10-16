@@ -1,9 +1,10 @@
 .__loading-moving-10 {
   --s: var(--size, 40px);
   --d: var(--duration, 1000ms);
-  --d1: var(--duration-1,  var(--d));
-  --d2: var(--duration-2,  calc(var(--d) / 5));
+  --d1: var(--duration-1, var(--d));
+  --d2: var(--duration-2, calc(var(--d) / 5));
   --c1: var(--color-1, #ccc);
+
   height: var(--s);
   aspect-ratio: 1.5;
   display: grid;

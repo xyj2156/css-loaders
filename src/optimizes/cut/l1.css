@@ -5,16 +5,17 @@
   --c1: var(--color-1, #d0af03);
   --c2: var(--color-2, #000);
 
+  --__a: 18px 18px;
+  --__b: no-repeat radial-gradient(farthest-side, var(--c2) 92%, #0000);
+
   width: var(--s);
   height: 26px;
   background: var(--c1);
   border-radius: 50px;
-  --_s: 18px 18px;
-  --c: no-repeat radial-gradient(farthest-side, var(--c2) 92%, #0000);
   -webkit-mask:
-    var(--c) left 4px top 50%,
-    var(--c) center,
-    var(--c) right 4px top 50%,
+    var(--__b) left 4px top 50%,
+    var(--__b) center,
+    var(--__b) right 4px top 50%,
     linear-gradient(var(--c2) 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -30,33 +31,33 @@
   }
   16.67% {
     -webkit-mask-size:
-      var(--_s),
+      var(--__a),
       0 0,
       0 0,
       auto;
   }
   33.33% {
     -webkit-mask-size:
-      var(--_s),
-      var(--_s),
+      var(--__a),
+      var(--__a),
       0 0,
       auto;
   }
   50% {
-    -webkit-mask-size: var(--_s), var(--_s), var(--_s), auto;
+    -webkit-mask-size: var(--__a), var(--__a), var(--__a), auto;
   }
   66.67% {
     -webkit-mask-size:
       0 0,
-      var(--_s),
-      var(--_s),
+      var(--__a),
+      var(--__a),
       auto;
   }
   83.33% {
     -webkit-mask-size:
       0 0,
       0 0,
-      var(--_s),
+      var(--__a),
       auto;
   }
   100% {

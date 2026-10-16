@@ -1,0 +1,17 @@
+.__loading-wobbling-2 {
+  --s: var(--size, 120px);
+  --d: var(--duration, 1s);
+  --_a: calc(var(--s) * 20 / 120);
+
+  width: var(--s);
+  height: var(--_a);
+  border-radius: var(--_a);
+  background: radial-gradient(farthest-side, orange 94%, #0000) left/var(--_a) var(--_a) no-repeat
+    lightblue;
+  animation: __loading-wobbling-2-l2 var(--d) infinite linear;
+}
+@keyframes __loading-wobbling-2-l2 {
+  50% {
+    background-position: right;
+  }
+}

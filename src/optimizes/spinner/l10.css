@@ -1,0 +1,41 @@
+.__loading-spinner-10 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #854f1d);
+  --_a: calc(var(--s) * 2 / 50);
+  --_b: calc(var(--s) * 4 / 50);
+  --_c: calc(var(--s) * 5 / 50);
+  --_d: calc(var(--s) * 6 / 50);
+  --_e: calc(var(--s) * 7 / 50);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  color: var(--c1);
+  border-radius: 50%;
+  display: grid;
+  background:
+    conic-gradient(from 90deg at var(--_b) var(--_b), #0000 90deg, currentColor 0) -var(--_b) -var(
+        --_b
+      ) /
+      calc(50% + var(--_a)) calc(50% + var(--_a)),
+    radial-gradient(
+        farthest-side,
+        currentColor var(--_d),
+        #0000 var(--_e) calc(100% - var(--_d)),
+        currentColor calc(100% - var(--_c))
+      )
+      no-repeat;
+  animation: __loading-spinner-10-l10 var(--d) infinite linear;
+  position: relative;
+}
+.__loading-spinner-10:before {
+  content: '';
+  border-radius: inherit;
+  background: inherit;
+  transform: rotate(45deg);
+}
+@keyframes __loading-spinner-10-l10 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}

@@ -1,8 +1,8 @@
 .__loading-dots-vs-bars-10 {
   --s: var(--size, 70px);
-  --c1: var(--color-1, #000);
   --d: var(--duration, 3000ms);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #000);
 
   width: var(--s);
   height: calc(var(--s) * 0.43);

@@ -1,0 +1,60 @@
+.__loading-shapes-19 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1.5s);
+  --_a: calc(var(--s) * 20 / 40);
+
+  width: var(--s);
+  height: var(--_a);
+  background: orange;
+  position: relative;
+  animation: __loading-shapes-19-l19-0 var(--d) infinite linear;
+}
+.__loading-shapes-19:before,
+.__loading-shapes-19:after {
+  content: '';
+  position: absolute;
+  background: inherit;
+  bottom: 100%;
+  width: 50%;
+  height: 100%;
+  animation: inherit;
+  animation-name: __loading-shapes-19-l19-1;
+}
+.__loading-shapes-19:before {
+  left: 0;
+  --s: -1, 1;
+}
+.__loading-shapes-19:after {
+  right: 0;
+}
+@keyframes __loading-shapes-19-l19-0 {
+  0%,
+  30% {
+    transform: translateY(0) scaleY(1);
+  }
+  49.99% {
+    transform: translateY(-50%) scaleY(1);
+  }
+  50% {
+    transform: translateY(-50%) scaleY(-1);
+  }
+  70%,
+  100% {
+    transform: translateY(-100%) scaleY(-1);
+  }
+}
+@keyframes __loading-shapes-19-l19-1 {
+  0%,
+  10%,
+  90%,
+  100% {
+    transform: scale(var(--s, 1)) translate(0);
+  }
+  30%,
+  70% {
+    transform: scale(var(--s, 1)) translate(var(--_a));
+  }
+  50% {
+    transform: scale(var(--s, 1)) translate(var(--_a), var(--_a));
+  }
+}

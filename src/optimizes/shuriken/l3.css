@@ -1,0 +1,37 @@
+.__loading-shuriken-3 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #8d7958);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 5 / 80);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+  color: var(--c1);
+  -webkit-mask: radial-gradient(circle var(--_a), #0000 90%, var(--c2));
+  animation: __loading-shuriken-3-l3 var(--d) infinite linear;
+}
+.__loading-shuriken-3:before,
+.__loading-shuriken-3:after {
+  content: '';
+  grid-area: 1/1;
+  background:
+    radial-gradient(farthest-side at bottom left, currentColor 94%, #0000) top left,
+    radial-gradient(farthest-side at top right, currentColor 94%, #0000) bottom right;
+  background-size: 63% 50%;
+  background-repeat: no-repeat;
+  -webkit-mask:
+    radial-gradient(65% 110% at bottom left, #0000 94%, var(--c2)) top left,
+    radial-gradient(65% 110% at top right, #0000 94%, var(--c2)) bottom right;
+  -webkit-mask-size: 62% 50%;
+  -webkit-mask-repeat: no-repeat;
+}
+.__loading-shuriken-3:after {
+  transform: rotate(90deg);
+}
+@keyframes __loading-shuriken-3-l3 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

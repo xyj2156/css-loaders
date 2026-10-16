@@ -6,7 +6,7 @@
   --d3: var(--duration-3, calc(var(--d) * 0.25));
   --c1: var(--color-1, #514b82);
 
-  --_80:calc(var(--s) * 8 / 5);
+  --_a: calc(var(--s) * 8 / 5);
 
   width: var(--s);
   height: var(--s);
@@ -50,10 +50,10 @@
 }
 @keyframes __loading-flipping-17-l17-1 {
   0% {
-    transform: perspective(var(--_80)) rotate3d(-1, 1, 0, 0);
+    transform: perspective(var(--_a)) rotate3d(-1, 1, 0, 0);
   }
   80%,
   100% {
-    transform: perspective(var(--_80)) rotate3d(-1, 1, 0, -360deg);
+    transform: perspective(var(--_a)) rotate3d(-1, 1, 0, -360deg);
   }
 }

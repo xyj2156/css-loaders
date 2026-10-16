@@ -1,15 +1,16 @@
 .__loading-dots-vs-bars-11 {
   --s: var(--size, 40px);
-  --c1: var(--color-1, #000);
   --d: var(--duration, 750ms);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #000);
+
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
 
   width: var(--s);
   aspect-ratio: 1;
-  --c: no-repeat linear-gradient(var(--c1) 0 0);
-  background: var(--c), var(--c), var(--c);
-  background-size: calc(var(--s)/5) calc(50% + calc(var(--s)/5));
-  -webkit-mask: radial-gradient(circle closest-side, #0000 92%, #000) 0/calc(var(--s)/5) 100%;
+  background: var(--__a), var(--__a), var(--__a);
+  background-size: calc(var(--s) / 5) calc(50% + calc(var(--s) / 5));
+  -webkit-mask: radial-gradient(circle closest-side, #0000 92%, #000) 0 / calc(var(--s) / 5) 100%;
   animation: __loading-dots-vs-bars-11-l11 var(--d1) infinite alternate linear;
 }
 @keyframes __loading-dots-vs-bars-11-l11 {

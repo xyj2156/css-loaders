@@ -1,12 +1,12 @@
 .__loading-dots-6 {
   --s: var(--size, 15px);
-  --c1: var(--color-1, #000);
   --d: var(--duration, 1s);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #000);
 
-  --__a: calc(var(--s) * 5 / 3);
-  --__b: calc(var(--s) * -5 / 3);
-  --__c: calc(var(--s) * -1);
+  --_a: calc(var(--s) * 5 / 3);
+  --_b: calc(var(--s) * -5 / 3);
+  --_c: calc(var(--s) * -1);
 
   width: var(--s);
   aspect-ratio: 1;
@@ -18,16 +18,16 @@
   0% {
     box-shadow:
       var(--s) 0,
-      var(--__b) 0;
+      var(--_b) 0;
   }
   50% {
     box-shadow:
       var(--s) 0,
-      var(--__c) 0;
+      var(--_c) 0;
   }
   100% {
     box-shadow:
-      var(--__a) 0,
-      var(--__c) 0;
+      var(--_a) 0,
+      var(--_c) 0;
   }
 }

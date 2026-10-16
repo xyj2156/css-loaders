@@ -1,37 +1,93 @@
 .__loading-growing-1 {
-  width: 64px;
+  --s: var(--size, 64px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #bd1550);
+
+  width: var(--s);
   aspect-ratio: 1;
   display: grid;
 }
+
 .__loading-growing-1:before {
   content: '';
-  border: 8px solid #bd1550;
+  border: calc(var(--s) / 8) solid var(--c1);
   box-sizing: content-box;
   margin: auto;
   aspect-ratio: 1;
-  animation: __loading-growing-1-l1 infinite 1s steps(4, jump-none);
+  animation: __loading-growing-1-l1 infinite var(--d1) steps(4, jump-none);
 }
 @keyframes __loading-growing-1-l1 {
   0% {
-    width: 0%;
+    width: 0;
   }
   to {
     width: 75%;
   }
 }
+
+.__loading-growing-10 {
+  --s: var(--size, 64px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.5));
+  --d2: var(--duration-2, calc(var(--d) * 2));
+  --d3: var(--duration-3, calc(var(--d) * -0.3));
+  --c1: var(--color-1, #bd1550);
+
+  height: var(--s);
+  aspect-ratio: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.__loading-growing-10:before,
+.__loading-growing-10:after {
+  content: '';
+  border: calc(var(--s) / 8) solid var(--c1);
+  box-sizing: content-box;
+  margin: auto;
+  aspect-ratio: 1;
+  animation:
+    __loading-growing-10-l10-0 infinite var(--d1) steps(4, jump-none) alternate,
+    __loading-growing-10-l10-1 infinite var(--d2) steps(2, jump-none);
+}
+.__loading-growing-10:after {
+  animation-delay: var(--d3);
+}
+@keyframes __loading-growing-10-l10-0 {
+  0% {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
+@keyframes __loading-growing-10-l10-1 {
+  0% {
+    border-radius: 0;
+  }
+  to {
+    border-radius: 100%;
+  }
+}
+
 .__loading-growing-2 {
-  width: 64px;
+  --s: var(--size, 64px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #bd1550);
+
+  width: var(--s);
   aspect-ratio: 1;
   display: grid;
 }
 .__loading-growing-2:before {
   content: '';
-  border: 8px solid #bd1550;
+  border: calc(var(--s) / 8) solid var(--c1);
   border-radius: 50%;
   box-sizing: content-box;
   margin: auto;
   aspect-ratio: 1;
-  animation: __loading-growing-2-l2 infinite 1s steps(4, jump-none);
+  animation: __loading-growing-2-l2 infinite var(--d1) steps(4, jump-none);
 }
 @keyframes __loading-growing-2-l2 {
   0% {
@@ -41,28 +97,35 @@
     width: 75%;
   }
 }
+
 .__loading-growing-3 {
-  --b: 15px;
-  width: calc(5 * var(--b));
+  --s: var(--size, 75px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #bd1550);
+
+  --_a: calc(var(--s) / 5);
+
+  width: var(--s);
   aspect-ratio: 1 / cos(30deg);
   display: grid;
 }
 .__loading-growing-3:before {
   content: '';
-  background: #bd1550;
+  background: var(--c1);
   aspect-ratio: inherit;
   clip-path: polygon(
     50% 0,
     100% 100%,
     0 100%,
     50% 0,
-    50% var(--b),
-    calc(var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
-    calc(100% - var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
-    50% var(--b)
+    50% var(--_a),
+    calc(var(--_a) * cos(30deg)) calc(100% - var(--_a) / 2),
+    calc(100% - var(--_a) * cos(30deg)) calc(100% - var(--_a) / 2),
+    50% var(--_a)
   );
   margin: auto;
-  animation: __loading-growing-3-l3 infinite 1s steps(4, jump-none);
+  animation: __loading-growing-3-l3 infinite var(--d1) steps(4, jump-none);
 }
 @keyframes __loading-growing-3-l3 {
   0% {
@@ -72,15 +135,23 @@
     width: 100%;
   }
 }
+
 .__loading-growing-4 {
-  --b: 9px;
-  width: calc(8 * var(--b));
+  --s: var(--size, 72px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #bd1550);
+
+  --_a: calc(var(--s) / 8);
+
+  width: var(--s);
   aspect-ratio: 1 / cos(30deg);
   display: grid;
 }
+
 .__loading-growing-4:before {
   content: '';
-  background: #bd1550;
+  background: var(--c1);
   aspect-ratio: inherit;
   clip-path: polygon(
     0 50%,
@@ -88,16 +159,16 @@
     100% 50%,
     50% 150%,
     0 50%,
-    var(--b) 50%,
-    calc(25% + var(--b) * cos(60deg)) calc(100% - var(--b) * sin(60deg)),
-    calc(75% - var(--b) * cos(60deg)) calc(100% - var(--b) * sin(60deg)),
-    calc(100% - var(--b)) 50%,
-    calc(75% - var(--b) * cos(60deg)) calc(var(--b) * sin(60deg)),
-    calc(25% + var(--b) * cos(60deg)) calc(var(--b) * sin(60deg)),
-    var(--b) 50%
+    var(--_a) 50%,
+    calc(25% + var(--_a) * cos(60deg)) calc(100% - var(--_a) * sin(60deg)),
+    calc(75% - var(--_a) * cos(60deg)) calc(100% - var(--_a) * sin(60deg)),
+    calc(100% - var(--_a)) 50%,
+    calc(75% - var(--_a) * cos(60deg)) calc(var(--_a) * sin(60deg)),
+    calc(25% + var(--_a) * cos(60deg)) calc(var(--_a) * sin(60deg)),
+    var(--_a) 50%
   );
   margin: auto;
-  animation: __loading-growing-4-l4 infinite 1s steps(4, jump-none);
+  animation: __loading-growing-4-l4 infinite var(--d1) steps(4, jump-none);
 }
 @keyframes __loading-growing-4-l4 {
   0% {
@@ -107,15 +178,20 @@
     width: 100%;
   }
 }
+
 .__loading-growing-5 {
-  width: 80px;
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+
+  width: var(--s);
   aspect-ratio: 1;
   display: grid;
 }
 .__loading-growing-5:before {
+  --c1: var(--color-1, #bd1550);
   content: '';
-  background: #bd1550;
-  aspect-ratio: inherit;
+  background: var(--c1);
   aspect-ratio: 1;
   clip-path: polygon(
     79.39% 90.45%,
@@ -144,7 +220,7 @@
     calc(79.39% - 10.58px) calc(90.45% - 14.56px)
   );
   margin: auto;
-  animation: __loading-growing-5-l5 infinite 1s steps(4, jump-none);
+  animation: __loading-growing-5-l5 infinite var(--d1) steps(4, jump-none);
 }
 @keyframes __loading-growing-5-l5 {
   0% {
@@ -154,15 +230,21 @@
     width: 100%;
   }
 }
+
 .__loading-growing-6 {
-  width: 80px;
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #bd1550);
+
+  width: var(--s);
   aspect-ratio: 1;
   display: grid;
 }
+
 .__loading-growing-6:before {
   content: '';
-  background: #bd1550;
-  aspect-ratio: inherit;
+  background: var(--c1);
   aspect-ratio: 1;
   clip-path: polygon(
     91.57% 77.78%,
@@ -183,27 +265,27 @@
     77.46% 55.46%,
     91.57% 77.78%,
     65.56% 73.28%,
-    calc(65.56% - 5.6px) calc(73.28% - 8.38px),
-    calc(91.57% - 14.97px) calc(77.78% - 10px),
-    calc(77.46% - 9.89px) calc(55.46% - 1.97px),
-    calc(99.04% - 17.65px) calc(40.25% - -3.51px),
-    calc(73.28% - 8.38px) calc(34.44% - -5.6px),
-    calc(77.78% - 10px) calc(8.43% - -14.97px),
-    calc(55.46% - 1.97px) calc(22.54% - -9.89px),
-    calc(40.25% - -3.51px) calc(0.96% - -17.65px),
-    calc(34.44% - -5.6px) calc(26.72% - -8.38px),
-    calc(8.43% - -14.97px) calc(22.22% - -10px),
-    calc(22.54% - -9.89px) calc(44.54% - -1.97px),
-    calc(0.96% - -17.65px) calc(59.75% - 3.51px),
-    calc(26.72% - -8.38px) calc(65.56% - 5.6px),
-    calc(22.22% - -10px) calc(91.57% - 14.97px),
-    calc(44.54% - -1.97px) calc(77.46% - 9.89px),
-    calc(59.75% - 3.51px) calc(99.04% - 17.65px),
-    calc(65.56% - 5.6px) calc(73.28% - 8.38px),
-    calc(91.57% - 14.97px) calc(77.78% - 10px)
+    calc(65.56% - calc(5.6 * var(--s) / 80)) calc(73.28% - calc(8.38 * var(--s) / 80)),
+    calc(91.57% - calc(14.97 * var(--s) / 80)) calc(77.78% - calc(10 * var(--s) / 80)),
+    calc(77.46% - calc(9.89 * var(--s) / 80)) calc(55.46% - calc(1.97 * var(--s) / 80)),
+    calc(99.04% - calc(17.65 * var(--s) / 80)) calc(40.25% - calc(-3.51 * var(--s) / 80)),
+    calc(73.28% - calc(8.38 * var(--s) / 80)) calc(34.44% - calc(-5.6 * var(--s) / 80)),
+    calc(77.78% - calc(10 * var(--s) / 80)) calc(8.43% - calc(-14.97 * var(--s) / 80)),
+    calc(55.46% - calc(1.97 * var(--s) / 80)) calc(22.54% - calc(-9.89 * var(--s) / 80)),
+    calc(40.25% - calc(-3.51 * var(--s) / 80)) calc(0.96% - calc(-17.65 * var(--s) / 80)),
+    calc(34.44% - calc(-5.6 * var(--s) / 80)) calc(26.72% - calc(-8.38 * var(--s) / 80)),
+    calc(8.43% - calc(-14.97 * var(--s) / 80)) calc(22.22% - calc(-10 * var(--s) / 80)),
+    calc(22.54% - calc(-9.89 * var(--s) / 80)) calc(44.54% - calc(-1.97 * var(--s) / 80)),
+    calc(0.96% - calc(-17.65 * var(--s) / 80)) calc(59.75% - calc(3.51 * var(--s) / 80)),
+    calc(26.72% - calc(-8.38 * var(--s) / 80)) calc(65.56% - calc(5.6 * var(--s) / 80)),
+    calc(22.22% - calc(-10 * var(--s) / 80)) calc(91.57% - calc(14.97 * var(--s) / 80)),
+    calc(44.54% - calc(-1.97 * var(--s) / 80)) calc(77.46% - calc(9.89 * var(--s) / 80)),
+    calc(59.75% - calc(3.51 * var(--s) / 80)) calc(99.04% - calc(17.65 * var(--s) / 80)),
+    calc(65.56% - calc(5.6 * var(--s) / 80)) calc(73.28% - calc(8.38 * var(--s) / 80)),
+    calc(91.57% - calc(14.97 * var(--s) / 80)) calc(77.78% - calc(10 * var(--s) / 80))
   );
   margin: auto;
-  animation: __loading-growing-6-l6 infinite 1s steps(4, jump-none);
+  animation: __loading-growing-6-l6 infinite var(--d1) steps(4, jump-none);
 }
 @keyframes __loading-growing-6-l6 {
   0% {
@@ -213,22 +295,28 @@
     width: 100%;
   }
 }
+
 .__loading-growing-7 {
-  width: 64px;
+  --s: var(--size, 64px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #bd1550);
+
+  width: var(--s);
   aspect-ratio: 1;
   display: grid;
 }
 .__loading-growing-7:before {
   content: '';
-  border: 8px solid #bd1550;
+  border: calc(var(--s) / 8) solid var(--c1);
   box-sizing: content-box;
   margin: auto;
   aspect-ratio: 1;
-  animation: __loading-growing-7-l7 infinite 1s steps(4, jump-none);
+  animation: __loading-growing-7-l7 infinite var(--d1) steps(4, jump-none);
 }
 @keyframes __loading-growing-7-l7 {
   0% {
-    width: 0%;
+    width: 0;
     rotate: 0;
   }
   to {
@@ -236,8 +324,15 @@
     rotate: 90deg;
   }
 }
+
 .__loading-growing-8 {
-  width: 64px;
+  --s: var(--size, 64px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --d2: var(--duration-2, calc(var(--d) / -2));
+  --c1: var(--color-1, #bd1550);
+
+  width: var(--s);
   aspect-ratio: 1;
   display: grid;
 }
@@ -245,84 +340,54 @@
 .__loading-growing-8:after {
   content: '';
   grid-area: 1/1;
-  border: 8px solid #bd1550;
+  border: calc(var(--s) / 8) solid var(--c1);
   box-sizing: content-box;
   margin: auto;
   aspect-ratio: 1;
-  animation: __loading-growing-8-l8 infinite 1s steps(4, jump-none);
+  animation: __loading-growing-8-l8 infinite var(--d1) steps(4, jump-none);
 }
 .__loading-growing-8:after {
-  animation-delay: -0.5s;
+  animation-delay: var(--d2);
   border-radius: 50%;
 }
 @keyframes __loading-growing-8-l8 {
   0% {
-    width: 0%;
+    width: 0;
   }
   to {
     width: 75%;
   }
 }
+
 .__loading-growing-9 {
-  height: 64px;
+  --s: var(--size, 64px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+
+  height: var(--s);
   aspect-ratio: 1.5;
   display: flex;
-  gap: 8px;
+  gap: calc(var(--s) / 8);
 }
 .__loading-growing-9:before,
 .__loading-growing-9:after {
+  --c1: var(--color-1, #bd1550);
   content: '';
-  border: 8px solid #bd1550;
+  border: calc(var(--s) / 8) solid var(--c1);
   border-radius: 50%;
   box-sizing: content-box;
   margin: auto;
   aspect-ratio: 1;
-  animation: __loading-growing-9-l9 infinite 1s steps(4, jump-none);
+  animation: __loading-growing-9-l9 infinite var(--d1) steps(4, jump-none);
 }
 .__loading-growing-9:after {
   animation-direction: reverse;
 }
 @keyframes __loading-growing-9-l9 {
   0% {
-    width: 0%;
+    width: 0;
   }
   to {
     width: 75%;
-  }
-}
-.__loading-growing-10 {
-  height: 64px;
-  aspect-ratio: 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.__loading-growing-10:before,
-.__loading-growing-10:after {
-  content: '';
-  border: 8px solid #bd1550;
-  box-sizing: content-box;
-  margin: auto;
-  aspect-ratio: 1;
-  animation:
-    __loading-growing-10-l10-0 infinite 0.5s steps(4, jump-none) alternate,
-    __loading-growing-10-l10-1 infinite 2s steps(2, jump-none);
-}
-.__loading-growing-10:after {
-  animation-delay: -0.3s;
-}
-@keyframes __loading-growing-10-l10-0 {
-  0% {
-    width: 0%;
-  }
-  to {
-    width: 75%;
-  }
-}
-@keyframes __loading-growing-10-l10-1 {
-  0% {
-    border-radius: 0%;
-  }
-  to {
-    border-radius: 100%;
   }
 }

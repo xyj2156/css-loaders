@@ -2,15 +2,15 @@
   --s: var(--size, 80px);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 2));
-
   --c1: var(--color-1, #ffd412);
   --c2: var(--color-2, #abd406);
   --c3: var(--color-3, #ff821c);
 
+  --__a: linear-gradient(var(--c1) 25%, var(--c2) 0 50%, var(--c3) 0 75%, var(--c1) 0);
+
   width: var(--s);
   aspect-ratio: 2;
-  --c: linear-gradient(var(--c1) 25%, var(--c2) 0 50%, var(--c3) 0 75%, var(--c1) 0);
-  background: var(--c), var(--c), var(--c), var(--c);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
   background-size: 26% 400%;
   background-position:
     calc(0 * 100% / 3) 100%,

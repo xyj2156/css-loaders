@@ -1,0 +1,40 @@
+.__loading-wavy-16 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 4 / 40);
+  --_b: calc(var(--s) * 5 / 40);
+
+  display: inline-grid;
+  padding: var(--_b);
+  background: var(--c1);
+  filter: blur(var(--_a)) contrast(12);
+}
+.__loading-wavy-16:before,
+.__loading-wavy-16:after {
+  content: '';
+  grid-area: 1/1;
+  height: var(--s);
+  aspect-ratio: 3;
+  --c: #0000 64%, var(--c2) 66% 98%, #0000 101%;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--c)) 100% 100%;
+  background-size: calc(200% / 3) 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-wavy-16-l16 var(--d) infinite linear;
+}
+.__loading-wavy-16:after {
+  scale: -1 1;
+  animation-delay: -0.75s;
+}
+@keyframes __loading-wavy-16-l16 {
+  50% {
+    clip-path: inset(0);
+  }
+  to {
+    clip-path: inset(0 0 0 100%);
+  }
+}

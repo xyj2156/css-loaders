@@ -1,0 +1,42 @@
+.__loading-square-vs-circle-10 {
+  --s: var(--size, 75px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #fff);
+  --_a: calc(var(--s) * 2 / 75);
+  --_b: calc(var(--s) * 15 / 75);
+  --__a: no-repeat
+    radial-gradient(farthest-side, #0000 calc(95% - 2px), var(--c1) calc(100% - 2px) 98%, #0000 101%);
+
+  width: var(--s);
+  aspect-ratio: 1;
+    radial-gradient(farthest-side, #0000 calc(95% - var(--_a)), var(--c1) calc(100% - var(--_a)) 98%, #0000 101%);
+  background: var(--__a), var(--__a), var(--__a), var(--__a), var(--__a), var(--__a), var(--__a), var(--__a);
+  background-size: var(--_b) var(--_b);
+  animation: __loading-square-vs-circle-10-l10 var(--d) infinite alternate linear;
+}
+@keyframes __loading-square-vs-circle-10-l10 {
+  0%,
+  30% {
+    background-position:
+      0 0,
+      50% 0,
+      100% 0,
+      0 50%,
+      100% 50%,
+      0 100%,
+      50% 100%,
+      100% 100%;
+  }
+  70%,
+  100% {
+    background-position:
+      15% 15%,
+      50% 0,
+      85% 15%,
+      0 50%,
+      100% 50%,
+      15% 85%,
+      50% 100%,
+      85% 85%;
+  }
+}

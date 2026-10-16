@@ -1,0 +1,48 @@
+.__loading-wobbling-12 {
+  --s: var(--size, 100px);
+  --d: var(--duration, 2s);
+  --d1: var(--duration-1, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #000a);
+  --c2: var(--color-2, #ddd);
+  --c3: var(--color-3, #000);
+  --_a: calc(var(--s) * 4 / 100);
+  --_b: calc(var(--s) * 8 / 100);
+  --_c: calc(var(--s) * 20 / 100);
+  --_d: calc(var(--s) * 60 / 100);
+
+  width: var(--s);
+  height: var(--_d);
+  display: flex;
+  animation: __loading-wobbling-12-l12-0 var(--d) infinite linear;
+}
+.__loading-wobbling-12::before,
+.__loading-wobbling-12::after {
+  content: '';
+  flex: 4;
+  background:
+    radial-gradient(at 50% 20%, #0000, var(--c1)) bottom left/var(--_c) var(--_c) repeat-x,
+    linear-gradient(red 0 0) bottom/100% var(--_c) no-repeat var(--c2);
+  -webkit-mask:
+    repeating-linear-gradient(90deg, var(--c3) 0 var(--_a), #0000 0 var(--_c)) var(--_b) 0,
+    radial-gradient(farthest-side, var(--c3) 90%, #0000) left bottom/var(--_c) var(--_c) repeat-x;
+}
+.__loading-wobbling-12::after {
+  flex: 1;
+  transform-origin: top;
+  animation: __loading-wobbling-12-l12-1 var(--d1) cubic-bezier(0, 20, 1, 20) infinite;
+}
+@keyframes __loading-wobbling-12-l12-0 {
+  0%,
+  49.9% {
+    transform: scaleX(1);
+  }
+  50%,
+  100% {
+    transform: scaleX(-1);
+  }
+}
+@keyframes __loading-wobbling-12-l12-1 {
+  100% {
+    transform: rotate(-2deg);
+  }
+}

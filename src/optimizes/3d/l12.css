@@ -1,12 +1,13 @@
 .__loading-3d-12 {
   --s: var(--size, 40px);
-  --g: calc(var(--s) / 8);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
   --c1: var(--color-1, #fe4365);
   --c2: var(--color-2, #111);
-  --d:  var(--duration, 1000ms);
-  --d1: var(--duration-1, calc(var(--d) * 1.5));
 
-  height: calc(2 * (var(--s) + var(--g)));
+  --_a: calc(var(--s) / 8);
+
+  height: calc(2 * (var(--s) + var(--_a)));
   aspect-ratio: 1;
   background:
     radial-gradient(
@@ -17,7 +18,8 @@
     ),
     linear-gradient(var(--c1) 0 0) no-repeat #fff;
   background-size: 50% 50%;
-  mask: radial-gradient(calc(var(--s) / 2), #000 calc(100% - calc(var(--s) / 40)), #0000) 0 0/50% 50%;
+  mask: radial-gradient(calc(var(--s) / 2), #000 calc(100% - calc(var(--s) / 40)), #0000) 0 0/50%
+    50%;
   animation: __loading-3d-12-l12 steps(3) var(--d1) infinite;
 }
 @keyframes __loading-3d-12-l12 {

@@ -1,27 +1,29 @@
 .__loading-dots-32 {
-  height: 15px;
-  aspect-ratio: 5;
-  display: grid;
   --s: var(--size, 15px);
   --d: var(--duration, 1000ms);
   --d32: var(--duration-32, var(--d));
   --c1: var(--color-1, #000);
-  --_g: no-repeat radial-gradient(farthest-side, var(--c1) 94%, transparent);
+
+  --__a: no-repeat radial-gradient(farthest-side, var(--c1) 94%, transparent);
+
+  height: 15px;
+  aspect-ratio: 5;
+  display: grid;
 }
 .__loading-dots-32:before,
 .__loading-dots-32:after {
   content: '';
   grid-area: 1/1;
   background:
-    var(--_g) left,
-    var(--_g) right;
+    var(--__a) left,
+    var(--__a) right;
   background-size: 20% 100%;
   animation: __loading-dots-32-l32 var(--d32) infinite;
 }
 .__loading-dots-32:after {
   background:
-    var(--_g) calc(1 * 100% / 3),
-    var(--_g) calc(2 * 100% / 3);
+    var(--__a) calc(1 * 100% / 3),
+    var(--__a) calc(2 * 100% / 3);
   background-size: 20% 100%;
   animation-direction: reverse;
 }

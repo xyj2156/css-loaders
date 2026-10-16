@@ -1,0 +1,35 @@
+.__loading-shapes-24 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 2s);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-shapes-24:before,
+.__loading-shapes-24:after {
+  content: '';
+  background: orange;
+  transform-origin: left;
+  animation: __loading-shapes-24-l24 var(--d) infinite;
+}
+.__loading-shapes-24:before {
+  transform-origin: right;
+  --s: -1;
+}
+@keyframes __loading-shapes-24-l24 {
+  0%,
+  10% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(calc(var(--s, 1) * 50%), 0) scale(1);
+  }
+  66% {
+    transform: translate(calc(var(--s, 1) * 50%), calc(var(--s, 1) * -50%)) scale(1);
+  }
+  90%,
+  100% {
+    transform: translate(calc(var(--s, 1) * 50%), calc(var(--s, 1) * -50%)) scale(0.5, 2);
+  }
+}

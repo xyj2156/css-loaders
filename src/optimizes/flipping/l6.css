@@ -1,18 +1,18 @@
 .__loading-flipping-6 {
   --s: var(--size, 60px);
-  --c1: var(--color-1, #25b09b);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1.5));
   --d2: var(--duration-2, calc(var(--d) * 3));
+  --c1: var(--color-1, #25b09b);
 
-  --__a: calc(var(--s) * 15 / 6);
+  --_a: calc(var(--s) * 15 / 6);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
 
   width: var(--s);
   aspect-ratio: 1;
   display: grid;
   grid: 50%/50%;
-  --_g: no-repeat linear-gradient(var(--c1) 0 0);
-  background: var(--_g), var(--_g), var(--_g);
+  background: var(--__a), var(--__a), var(--__a);
   background-size: 50.1% 50.1%;
   animation:
     __loading-flipping-6-l6-0 var(--d1) infinite steps(1) alternate,
@@ -21,7 +21,7 @@
 .__loading-flipping-6::before {
   content: '';
   background: var(--c1);
-  transform: perspective(var(--__a)) rotateY(0deg) rotateX(0deg);
+  transform: perspective(var(--_a)) rotateY(0deg) rotateX(0deg);
   transform-origin: bottom right;
   animation: __loading-flipping-6-l6-1 var(--d1) infinite linear alternate;
 }
@@ -55,17 +55,17 @@
 }
 @keyframes __loading-flipping-6-l6-1 {
   16.5% {
-    transform: perspective(var(--__a)) rotateX(-90deg) rotateY(0deg) rotateX(0deg);
+    transform: perspective(var(--_a)) rotateX(-90deg) rotateY(0deg) rotateX(0deg);
     filter: grayscale(0.8);
   }
   33% {
-    transform: perspective(var(--__a)) rotateX(-180deg) rotateY(0deg) rotateX(0deg);
+    transform: perspective(var(--_a)) rotateX(-180deg) rotateY(0deg) rotateX(0deg);
   }
   66% {
-    transform: perspective(var(--__a)) rotateX(-180deg) rotateY(-180deg) rotateX(0deg);
+    transform: perspective(var(--_a)) rotateX(-180deg) rotateY(-180deg) rotateX(0deg);
   }
   100% {
-    transform: perspective(var(--__a)) rotateX(-180deg) rotateY(-180deg) rotateX(-180deg);
+    transform: perspective(var(--_a)) rotateX(-180deg) rotateY(-180deg) rotateX(-180deg);
     filter: grayscale(0.8);
   }
 }

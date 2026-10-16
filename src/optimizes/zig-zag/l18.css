@@ -1,0 +1,22 @@
+.__loading-zig-zag-18 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --__a: var(--c1) 90deg, #0000 0;
+
+  height: var(--s);
+  aspect-ratio: 5;
+  background:
+    conic-gradient(from 135deg at top, var(--__a)),
+    conic-gradient(from -45deg at bottom, var(--__a)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 50%);
+  animation: __loading-zig-zag-18-l18 var(--d) infinite steps(5) alternate;
+}
+@keyframes __loading-zig-zag-18-l18 {
+  90%,
+  to {
+    clip-path: inset(0);
+  }
+}

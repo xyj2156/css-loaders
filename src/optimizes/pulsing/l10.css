@@ -1,0 +1,21 @@
+.__loading-pulsing-10 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1s);
+
+  display: inline-grid;
+  font-size: 50px;
+}
+.__loading-pulsing-10:before,
+.__loading-pulsing-10:after {
+  content: '💯';
+  grid-area: 1/1;
+}
+.__loading-pulsing-10:after {
+  animation: __loading-pulsing-10-l10 var(--d) infinite;
+}
+@keyframes __loading-pulsing-10-l10 {
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}

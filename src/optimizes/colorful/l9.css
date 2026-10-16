@@ -2,7 +2,6 @@
   --s: var(--size, 50px);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 2));
-
   --c1: var(--color-1, #ffabab);
   --c2: var(--color-2, #abe4ff);
   --c3: var(--color-3, #ff7373);

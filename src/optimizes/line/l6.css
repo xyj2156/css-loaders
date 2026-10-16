@@ -4,12 +4,12 @@
   --d1: var(--duration-1, calc(var(--d) * 2));
   --c1: var(--color-1, #046d8b);
 
-  --_4: calc(var(--s) / 10);
+  --_a: calc(var(--s) / 10);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
 
   width: var(--s);
   aspect-ratio: 1;
-  --__z: no-repeat linear-gradient(var(--c1) 0 0);
-  background: var(--__z), var(--__z), var(--__z), var(--__z), var(--__z), var(--__z);
+  background: var(--__a), var(--__a), var(--__a), var(--__a), var(--__a), var(--__a);
   animation:
     __loading-line-6-l6-1 var(--d1) infinite,
     __loading-line-6-l6-2 var(--d1) infinite;
@@ -17,121 +17,121 @@
 @keyframes __loading-line-6-l6-1 {
   0% {
     background-size:
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4),
-      var(--_4) 0;
+      0 var(--_a),
+      var(--_a) 0,
+      0 var(--_a),
+      var(--_a) 0,
+      0 var(--_a),
+      var(--_a) 0;
   }
   8.33% {
     background-size:
-      100% var(--_4),
-      var(--_4) 0,
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4),
-      var(--_4) 0;
+      100% var(--_a),
+      var(--_a) 0,
+      0 var(--_a),
+      var(--_a) 0,
+      0 var(--_a),
+      var(--_a) 0;
   }
   16.67% {
     background-size:
-      100% var(--_4),
-      var(--_4) 50%,
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4),
-      var(--_4) 0;
+      100% var(--_a),
+      var(--_a) 50%,
+      0 var(--_a),
+      var(--_a) 0,
+      0 var(--_a),
+      var(--_a) 0;
   }
   25% {
     background-size:
-      100% var(--_4),
-      var(--_4) 50%,
-      50% var(--_4),
-      var(--_4) 0,
-      0 var(--_4),
-      var(--_4) 0;
+      100% var(--_a),
+      var(--_a) 50%,
+      50% var(--_a),
+      var(--_a) 0,
+      0 var(--_a),
+      var(--_a) 0;
   }
   33.33% {
     background-size:
-      100% var(--_4),
-      var(--_4) 50%,
-      50% var(--_4),
-      var(--_4) 100%,
-      0 var(--_4),
-      var(--_4) 0;
+      100% var(--_a),
+      var(--_a) 50%,
+      50% var(--_a),
+      var(--_a) 100%,
+      0 var(--_a),
+      var(--_a) 0;
   }
   41.67% {
     background-size:
-      100% var(--_4),
-      var(--_4) 50%,
-      50% var(--_4),
-      var(--_4) 100%,
-      50% var(--_4),
-      var(--_4) 0;
+      100% var(--_a),
+      var(--_a) 50%,
+      50% var(--_a),
+      var(--_a) 100%,
+      50% var(--_a),
+      var(--_a) 0;
   }
   48%,
   52% {
     background-size:
-      100% var(--_4),
-      var(--_4) 50%,
-      50% var(--_4),
-      var(--_4) 100%,
-      50% var(--_4),
-      var(--_4) 50%;
+      100% var(--_a),
+      var(--_a) 50%,
+      50% var(--_a),
+      var(--_a) 100%,
+      50% var(--_a),
+      var(--_a) 50%;
   }
   58.33% {
     background-size:
-      0 var(--_4),
-      var(--_4) 50%,
-      50% var(--_4),
-      var(--_4) 100%,
-      50% var(--_4),
-      var(--_4) 50%;
+      0 var(--_a),
+      var(--_a) 50%,
+      50% var(--_a),
+      var(--_a) 100%,
+      50% var(--_a),
+      var(--_a) 50%;
   }
   66.67% {
     background-size:
-      0 var(--_4),
-      var(--_4) 0,
-      50% var(--_4),
-      var(--_4) 100%,
-      50% var(--_4),
-      var(--_4) 50%;
+      0 var(--_a),
+      var(--_a) 0,
+      50% var(--_a),
+      var(--_a) 100%,
+      50% var(--_a),
+      var(--_a) 50%;
   }
   75% {
     background-size:
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4),
-      var(--_4) 100%,
-      50% var(--_4),
-      var(--_4) 50%;
+      0 var(--_a),
+      var(--_a) 0,
+      0 var(--_a),
+      var(--_a) 100%,
+      50% var(--_a),
+      var(--_a) 50%;
   }
   83.33% {
     background-size:
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4),
-      var(--_4) 0,
-      50% var(--_4),
-      var(--_4) 50%;
+      0 var(--_a),
+      var(--_a) 0,
+      0 var(--_a),
+      var(--_a) 0,
+      50% var(--_a),
+      var(--_a) 50%;
   }
   91.67% {
     background-size:
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4),
-      var(--_4) 50%;
+      0 var(--_a),
+      var(--_a) 0,
+      0 var(--_a),
+      var(--_a) 0,
+      0 var(--_a),
+      var(--_a) 50%;
   }
   100% {
     background-size:
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4),
-      var(--_4) 0;
+      0 var(--_a),
+      var(--_a) 0,
+      0 var(--_a),
+      var(--_a) 0,
+      0 var(--_a),
+      var(--_a) 0;
   }
 }
 @keyframes __loading-line-6-l6-2 {

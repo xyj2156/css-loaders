@@ -1,0 +1,23 @@
+.__loading-progress-3 {
+  --s: var(--size, 120px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #f03355);
+  --c2: var(--color-2, #ffa516);
+  --c3: var(--color-3, #ddd);
+  --c4: var(--color-4, #eee);
+  --_a: calc(var(--s) * 10 / 120);
+  --_b: calc(var(--s) * 20 / 120);
+
+  width: var(--s);
+  height: var(--_b);
+  border-radius: var(--_b);
+  background:
+    repeating-linear-gradient(135deg, var(--c1) 0 var(--_a), var(--c2) 0 var(--_b)) 0/0% no-repeat,
+    repeating-linear-gradient(135deg, var(--c3) 0 var(--_a), var(--c4) 0 var(--_b)) 0/100%;
+  animation: __loading-progress-3-l3 var(--d) infinite;
+}
+@keyframes __loading-progress-3-l3 {
+  100% {
+    background-size: 100%;
+  }
+}

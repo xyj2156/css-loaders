@@ -1,0 +1,21 @@
+.__loading-zig-zag-6 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #000);
+  --__a: var(--c1) 90deg, #0000 0;
+
+  height: var(--s);
+  aspect-ratio: 5;
+  background:
+    conic-gradient(from 135deg at top, var(--__a)),
+    conic-gradient(from -45deg at bottom, var(--__a)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  -webkit-mask: repeating-linear-gradient(90deg, var(--c1) 0 15%, #0000 0 50%) 0 0/200%;
+  animation: __loading-zig-zag-6-l6 var(--d) infinite linear;
+}
+@keyframes __loading-zig-zag-6-l6 {
+  to {
+    -webkit-mask-position: -100% 0;
+  }
+}

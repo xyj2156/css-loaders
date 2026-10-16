@@ -1,13 +1,14 @@
 .__loading-moving-2 {
   --s: var(--size, 60px);
   --d: var(--duration, 1s);
-  --d1:var(--duration-1, calc(2 * var(--d)));
+  --d1: var(--duration-1, calc(2 * var(--d)));
   --c1: var(--color-1, #ccc);
-  --c: no-repeat linear-gradient(var(--c1) 0 0);
+
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
 
   height: var(--s);
   aspect-ratio: 1;
-  background: var(--c), var(--c), var(--c), var(--c);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
   background-size: 33.4% 33.4%;
   animation: __loading-moving-2-l2 var(--d1) infinite linear;
 }

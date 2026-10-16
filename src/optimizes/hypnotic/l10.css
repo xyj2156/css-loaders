@@ -2,6 +2,7 @@
   --s: var(--size, 50px);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 4));
+
   width: var(--s);
   aspect-ratio: 1;
   display: grid;

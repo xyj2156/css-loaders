@@ -1,8 +1,9 @@
 .__loading-moving-4 {
   --s: var(--size, 80px);
   --d: var(--duration, 1s);
-  --d1:var(--duration-1, calc(var(--d) * 1.5));
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
   --c1: var(--color-1, #ccc);
+
   height: var(--s);
   aspect-ratio: 1;
   display: grid;

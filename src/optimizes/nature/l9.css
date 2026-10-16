@@ -8,17 +8,16 @@
   --c2: var(--color-2, #7accf7);
   --c3: var(--color-3, #eee);
 
-  --__12: calc(var(--s) * 12 / 80);
-  --__16: calc(var(--s) * 16 / 80);
-  --__18: calc(var(--s) * 18 / 80);
-  --__20: calc(var(--s) / 4);
-  --__40: calc(var(--s) / 2);
-
-  --__w: var(--__20);
-  --__h: var(--__18);
+  --_a: calc(var(--s) * 12 / 80);
+  --_b: calc(var(--s) * 16 / 80);
+  --_c: calc(var(--s) * 18 / 80);
+  --_d: calc(var(--s) / 4);
+  --_e: calc(var(--s) / 2);
+  --__a: var(--_d);
+  --__b: var(--_c);
 
   width: var(--s);
-  height: var(--__40);
+  height: var(--_e);
   background: var(--c1);
   position: relative;
   overflow: hidden;
@@ -33,13 +32,13 @@
   background:
     var(--rad) 20% 0,
     var(--rad) 70% 7%;
-  background-size: var(--__w) var(--__h);
+  background-size: var(--__a) var(--__b);
   animation: __loading-nature-9-l9-1 var(--d2) linear infinite;
   transform: skew(-10deg);
 }
 .__loading-nature-9:after {
-  --__h: var(--__12);
-  --__w: var(--__16);
+  --__h: var(--_a);
+  --__w: var(--_b);
   animation-duration: var(--d3);
 }
 @keyframes __loading-nature-9-l9-0 {
@@ -57,6 +56,6 @@
 }
 @keyframes __loading-nature-9-l9-1 {
   100% {
-    transform: skew(-10deg) translateY(var(--__h));
+    transform: skew(-10deg) translateY(var(--__b));
   }
 }

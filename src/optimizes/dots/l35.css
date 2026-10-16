@@ -3,6 +3,7 @@
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
   --c1: var(--color-1, #000);
+
   height: var(--s);
   aspect-ratio: 5;
   display: grid;

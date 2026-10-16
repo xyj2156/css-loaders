@@ -9,7 +9,11 @@
   color: var(--c1);
   background:
     linear-gradient(90deg, currentColor 50%, #0000 0) repeat-x,
-    conic-gradient(from 45deg at right calc(var(--s) * 7 / 90) top 50%, currentColor 90deg, #0000 0);
+    conic-gradient(
+      from 45deg at right calc(var(--s) * 7 / 90) top 50%,
+      currentColor 90deg,
+      #0000 0
+    );
   background-position: calc(100% / 3) 50%;
   background-size:
     calc(100% / 4) 60%,

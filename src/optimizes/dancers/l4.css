@@ -1,16 +1,14 @@
 .__loading-dancers-4 {
   --s: var(--size, 16px);
   --d: var(--duration, 1000ms);
-
   --d1: var(--duration-1, calc(var(--d) * 1));
   --d2: var(--duration-2, calc(var(--d) * 0.5));
-
   --c1: var(--color-1, #3fb8af);
   --c2: var(--color-2, #ff3d7f);
 
   --_a: var(--s);
-  --_b: calc(var(--s) * 30/16);
-  --_c: calc(var(--s) * 16/16);
+  --_b: calc(var(--s) * 30 / 16);
+  --_c: calc(var(--s) * 16 / 16);
 
   width: var(--_a);
   aspect-ratio: 1;

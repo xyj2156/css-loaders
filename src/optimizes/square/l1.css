@@ -1,0 +1,34 @@
+.__loading-square-1 {
+  --s: var(--size, 25px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #fff);
+  --_a: calc(var(--s) * 3 / 25);
+  --_b: calc(var(--s) * 5 / 25);
+
+  display: inline-flex;
+  gap: var(--_b);
+  animation: __loading-square-1-l1-0 var(--d) infinite;
+}
+.__loading-square-1:before,
+.__loading-square-1:after {
+  content: '';
+  width: var(--s);
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 var(--_a) inset var(--c1);
+  transform-origin: top right;
+  animation: __loading-square-1-l1-1 var(--d) infinite;
+}
+.__loading-square-1:after {
+  transform-origin: top left;
+  --s: -1;
+}
+@keyframes __loading-square-1-l1-0 {
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes __loading-square-1-l1-1 {
+  to {
+    transform: rotate(calc(var(--s, 1) * 90deg));
+  }
+}

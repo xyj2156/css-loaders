@@ -1,0 +1,31 @@
+.__loading-wavy-9 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #000);
+
+  display: inline-grid;
+}
+.__loading-wavy-9:before,
+.__loading-wavy-9:after {
+  content: '';
+  grid-area: 1/1;
+  height: var(--s);
+  aspect-ratio: 6;
+  --c: #0000 64%, var(--c1) 66% 98%, #0000 101%;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--c)) 25% 100%;
+  background-size: calc(100% / 3) 50%;
+  background-repeat: repeat-x;
+  -webkit-mask: repeating-linear-gradient(90deg, var(--c1) 0 15%, #0000 0 50%) 0 0/200%;
+  animation: __loading-wavy-9-l9 var(--d) infinite linear;
+}
+.__loading-wavy-9:after {
+  scale: 1 -1;
+  animation-delay: -0.2s;
+}
+@keyframes __loading-wavy-9-l9 {
+  to {
+    -webkit-mask-position: -100% 0;
+  }
+}

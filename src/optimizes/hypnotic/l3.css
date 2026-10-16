@@ -4,13 +4,18 @@
   --d1: var(--duration-1, calc(var(--d) / 1));
   --c1: var(--color-1, #000);
 
+  --_a: calc(var(--s) * 8 / 25);
+  --_b: conic-gradient(
+    from -90deg at calc(100% - calc(var(--s) / 25)) calc(100% - calc(var(--s) / 25)),
+    #0000 0 90deg,
+    var(--c1) 0
+  );
+
   width: var(--s);
   aspect-ratio: 1;
   border: calc(var(--s) / 25) solid;
-  --__1: calc(var(--s) * 8 / 25);
-  --c: conic-gradient(from -90deg at calc(100% - calc(var(--s) / 25)) calc(100% - calc(var(--s) / 25)), #0000 0 90deg, var(--c1) 0);
-  background: var(--c), var(--c);
-  background-size: var(--__1) var(--__1);
+  background: var(--_b), var(--_b);
+  background-size: var(--_a) var(--_a);
   background-position: 0 0;
   animation: __loading-hypnotic-3-l3 var(--d1) infinite;
 }

@@ -1,0 +1,54 @@
+.__loading-wobbling-20 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #fffb);
+  --c2: var(--color-2, #0008);
+  --c3: var(--color-3, #fff);
+  --c4: var(--color-4, #000);
+  --c5: var(--color-5, #f93318);
+  --c6: var(--color-6, #ddd);
+  --_a: calc(var(--s) * 5 / 60);
+  --_b: calc(var(--s) * 8 / 60);
+  --_c: calc(var(--s) * 10 / 60);
+  --_d: calc(var(--s) * 13 / 60);
+
+  height: var(--s);
+  aspect-ratio: 1;
+  position: relative;
+}
+.__loading-wobbling-20::before,
+.__loading-wobbling-20::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  transform-origin: bottom;
+}
+.__loading-wobbling-20::after {
+  background:
+    radial-gradient(at 75% 15%, var(--c1), #0000 35%),
+    radial-gradient(at 80% 40%, #0000, var(--c2)),
+    radial-gradient(circle var(--_a), var(--c3) 94%, #0000),
+    radial-gradient(circle var(--_c), var(--c4) 94%, #0000),
+    linear-gradient(var(--c5) 0 0) top / 100% calc(50% - var(--_a)),
+    linear-gradient(var(--c3) 0 0) bottom/100% calc(50% - var(--_a)) var(--c4);
+  background-repeat: no-repeat;
+  animation: __loading-wobbling-20-l20 var(--d) infinite cubic-bezier(0.5, 120, 0.5, -120);
+}
+.__loading-wobbling-20::before {
+  background: var(--c6);
+  filter: blur(var(--_b));
+  transform: scaleY(0.4) translate(-var(--_d), 0px);
+}
+@keyframes __loading-wobbling-20-l20 {
+  30%,
+  70% {
+    transform: rotate(0deg);
+  }
+  49.99% {
+    transform: rotate(0.2deg);
+  }
+  50% {
+    transform: rotate(-0.2deg);
+  }
+}

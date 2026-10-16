@@ -1,0 +1,495 @@
+.__loading-wavy-1 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --__a: #0000 64%, var(--c1) 66% 98%, #0000 101%;
+
+  height: var(--s);
+  aspect-ratio: 6;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--__a)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--__a)) 25% 100%;
+  background-size: calc(100% / 3) 50%;
+  background-repeat: repeat-x;
+  animation: __loading-wavy-1-l1 var(--d) infinite linear;
+}
+@keyframes __loading-wavy-1-l1 {
+  to {
+    background-position:
+      50% 0,
+      75% 100%;
+  }
+}
+
+.__loading-wavy-10 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #000);
+
+  display: inline-grid;
+}
+.__loading-wavy-10:before,
+.__loading-wavy-10:after {
+  content: '';
+  grid-area: 1/1;
+  height: var(--s);
+  aspect-ratio: 6;
+  --c: #0000 64%, var(--c1) 66% 98%, #0000 101%;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--c)) 25% 100%;
+  background-size: calc(100% / 3) 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-wavy-10-l10 var(--d) infinite linear;
+}
+.__loading-wavy-10:after {
+  scale: -1;
+}
+@keyframes __loading-wavy-10-l10 {
+  50% {
+    clip-path: inset(0);
+  }
+  to {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
+.__loading-wavy-11 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 4 / 40);
+  --_b: calc(var(--s) * 5 / 40);
+
+  display: inline-grid;
+  padding: var(--_b);
+  background: var(--c1);
+  filter: blur(var(--_a)) contrast(12);
+}
+.__loading-wavy-11:before {
+  content: '';
+  height: var(--s);
+  aspect-ratio: 3;
+  --c: #0000 64%, var(--c2) 66% 98%, #0000 101%;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--c)) 100% 100%;
+  background-size: calc(200% / 3) 50%;
+  background-repeat: repeat-x;
+  animation: __loading-wavy-11-l11 var(--d) infinite linear;
+}
+@keyframes __loading-wavy-11-l11 {
+  to {
+    background-position:
+      -200% 0,
+      -100% 100%;
+  }
+}
+
+.__loading-wavy-12 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 4 / 40);
+  --_b: calc(var(--s) * 5 / 40);
+
+  display: inline-grid;
+  padding: var(--_b);
+  background: var(--c1);
+  filter: blur(var(--_a)) contrast(12);
+}
+.__loading-wavy-12:before {
+  content: '';
+  height: var(--s);
+  aspect-ratio: 3;
+  --c: #0000 64%, var(--c2) 66% 98%, #0000 101%;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--c)) 100% 100%;
+  background-size: calc(200% / 3) 50%;
+  background-repeat: repeat-x;
+  -webkit-mask: repeating-linear-gradient(90deg, var(--c2) 0 10%, #0000 0 20%);
+  animation: __loading-wavy-12-l12 var(--d) infinite linear;
+}
+@keyframes __loading-wavy-12-l12 {
+  to {
+    background-position:
+      -200% 0,
+      -100% 100%;
+  }
+}
+
+.__loading-wavy-13 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 4 / 40);
+  --_b: calc(var(--s) * 5 / 40);
+
+  display: inline-grid;
+  padding: var(--_b);
+  background: var(--c1);
+  filter: blur(var(--_a)) contrast(12);
+}
+.__loading-wavy-13:before,
+.__loading-wavy-13:after {
+  content: '';
+  grid-area: 1/1;
+  height: var(--s);
+  aspect-ratio: 3;
+  --c: #0000 64%, var(--c2) 66% 98%, #0000 101%;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--c)) 100% 100%;
+  background-size: calc(200% / 3) 50%;
+  background-repeat: repeat-x;
+}
+.__loading-wavy-13:before {
+  -webkit-mask: repeating-linear-gradient(90deg, var(--c2) 0 8%, #0000 0 15%);
+}
+.__loading-wavy-13:after {
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-wavy-13-l13 var(--d) infinite linear;
+}
+@keyframes __loading-wavy-13-l13 {
+  50% {
+    clip-path: inset(0);
+  }
+  to {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
+.__loading-wavy-14 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 4 / 40);
+  --_b: calc(var(--s) * 5 / 40);
+
+  display: inline-grid;
+  padding: var(--_b);
+  background: var(--c1);
+  filter: blur(var(--_a)) contrast(12);
+}
+.__loading-wavy-14:before,
+.__loading-wavy-14:after {
+  content: '';
+  grid-area: 1/1;
+  height: var(--s);
+  aspect-ratio: 3;
+  --c: #0000 64%, var(--c2) 66% 98%, #0000 101%;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--c)) 100% 100%;
+  background-size: calc(200% / 3) 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  -webkit-mask: repeating-linear-gradient(90deg, var(--c2) 0 10%, #0000 0 20%);
+  animation: __loading-wavy-14-l14 var(--d) infinite linear;
+}
+.__loading-wavy-14:after {
+  scale: -1;
+}
+@keyframes __loading-wavy-14-l14 {
+  40%,
+  60% {
+    clip-path: inset(0);
+  }
+  to {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
+.__loading-wavy-15 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 4 / 40);
+  --_b: calc(var(--s) * 5 / 40);
+
+  display: inline-grid;
+  padding: var(--_b);
+  background: var(--c1);
+  filter: blur(var(--_a)) contrast(12);
+}
+.__loading-wavy-15:before,
+.__loading-wavy-15:after {
+  content: '';
+  grid-area: 1/1;
+  height: var(--s);
+  aspect-ratio: 3;
+  --c: #0000 64%, var(--c2) 66% 98%, #0000 101%;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--c)) 100% 100%;
+  background-size: calc(200% / 3) 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-wavy-15-l15 var(--d) infinite linear;
+}
+.__loading-wavy-15:after {
+  scale: -1 1;
+}
+@keyframes __loading-wavy-15-l15 {
+  50% {
+    clip-path: inset(0);
+  }
+  to {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
+.__loading-wavy-16 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 4 / 40);
+  --_b: calc(var(--s) * 5 / 40);
+
+  display: inline-grid;
+  padding: var(--_b);
+  background: var(--c1);
+  filter: blur(var(--_a)) contrast(12);
+}
+.__loading-wavy-16:before,
+.__loading-wavy-16:after {
+  content: '';
+  grid-area: 1/1;
+  height: var(--s);
+  aspect-ratio: 3;
+  --c: #0000 64%, var(--c2) 66% 98%, #0000 101%;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--c)) 100% 100%;
+  background-size: calc(200% / 3) 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-wavy-16-l16 var(--d) infinite linear;
+}
+.__loading-wavy-16:after {
+  scale: -1 1;
+  animation-delay: -0.75s;
+}
+@keyframes __loading-wavy-16-l16 {
+  50% {
+    clip-path: inset(0);
+  }
+  to {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
+.__loading-wavy-2 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --__a: #0000 64%, var(--c1) 66% 98%, #0000 101%;
+
+  height: var(--s);
+  aspect-ratio: 6;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--__a)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--__a)) 25% 100%;
+  background-size: calc(100% / 3) 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-wavy-2-l2 var(--d) infinite linear;
+}
+@keyframes __loading-wavy-2-l2 {
+  90%,
+  to {
+    clip-path: inset(0);
+  }
+}
+
+.__loading-wavy-3 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --__a: #0000 64%, var(--c1) 66% 98%, #0000 101%;
+
+  height: var(--s);
+  aspect-ratio: 6;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--__a)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--__a)) 25% 100%;
+  background-size: calc(100% / 3) 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 50%);
+  animation: __loading-wavy-3-l3 var(--d) infinite linear;
+}
+@keyframes __loading-wavy-3-l3 {
+  90%,
+  to {
+    clip-path: inset(0);
+  }
+}
+
+.__loading-wavy-4 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --__a: #0000 64%, var(--c1) 66% 98%, #0000 101%;
+
+  height: var(--s);
+  aspect-ratio: 6;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--__a)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--__a)) 25% 100%;
+  background-size: calc(100% / 3) 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation:
+    __loading-wavy-4-l4-0 var(--d) infinite linear,
+    __loading-wavy-4-l4-1 2s infinite steps(1);
+}
+@keyframes __loading-wavy-4-l4-0 {
+  to {
+    clip-path: inset(0);
+  }
+}
+@keyframes __loading-wavy-4-l4-1 {
+  50% {
+    scale: -1 1;
+  }
+}
+
+.__loading-wavy-5 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #000);
+  --__a: #0000 64%, var(--c1) 66% 98%, #0000 101%;
+
+  height: var(--s);
+  aspect-ratio: 6;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--__a)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--__a)) 25% 100%;
+  background-size: calc(100% / 3) 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-wavy-5-l5 var(--d) infinite linear;
+}
+@keyframes __loading-wavy-5-l5 {
+  50% {
+    clip-path: inset(0);
+  }
+  to {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
+.__loading-wavy-6 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #000);
+  --__a: #0000 64%, var(--c1) 66% 98%, #0000 101%;
+
+  height: var(--s);
+  aspect-ratio: 6;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--__a)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--__a)) 25% 100%;
+  background-size: calc(100% / 3) 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 60% 0 0);
+  animation: __loading-wavy-6-l6 var(--d) infinite linear alternate;
+}
+@keyframes __loading-wavy-6-l6 {
+  to {
+    clip-path: inset(0 0 0 60%);
+  }
+}
+
+.__loading-wavy-7 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #000);
+  --__a: #0000 64%, var(--c1) 66% 98%, #0000 101%;
+
+  height: var(--s);
+  aspect-ratio: 6;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--__a)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--__a)) 25% 100%;
+  background-size: calc(100% / 3) 50%;
+  background-repeat: repeat-x;
+  -webkit-mask: repeating-linear-gradient(90deg, var(--c1) 0 15%, #0000 0 50%) 0 0/200%;
+  animation: __loading-wavy-7-l7 var(--d) infinite linear;
+}
+@keyframes __loading-wavy-7-l7 {
+  to {
+    -webkit-mask-position: -100% 0;
+  }
+}
+
+.__loading-wavy-8 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #000);
+
+  display: inline-grid;
+}
+.__loading-wavy-8:before,
+.__loading-wavy-8:after {
+  content: '';
+  grid-area: 1/1;
+  height: var(--s);
+  aspect-ratio: 6;
+  --c: #0000 64%, var(--c1) 66% 98%, #0000 101%;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--c)) 25% 100%;
+  background-size: calc(100% / 3) 50%;
+  background-repeat: repeat-x;
+  -webkit-mask: repeating-linear-gradient(90deg, var(--c1) 0 15%, #0000 0 50%) 0 0/200%;
+  animation: __loading-wavy-8-l8 var(--d) infinite linear;
+}
+.__loading-wavy-8:after {
+  scale: -1;
+}
+@keyframes __loading-wavy-8-l8 {
+  to {
+    -webkit-mask-position: -100% 0;
+  }
+}
+
+.__loading-wavy-9 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #000);
+
+  display: inline-grid;
+}
+.__loading-wavy-9:before,
+.__loading-wavy-9:after {
+  content: '';
+  grid-area: 1/1;
+  height: var(--s);
+  aspect-ratio: 6;
+  --c: #0000 64%, var(--c1) 66% 98%, #0000 101%;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--c)) 25% 100%;
+  background-size: calc(100% / 3) 50%;
+  background-repeat: repeat-x;
+  -webkit-mask: repeating-linear-gradient(90deg, var(--c1) 0 15%, #0000 0 50%) 0 0/200%;
+  animation: __loading-wavy-9-l9 var(--d) infinite linear;
+}
+.__loading-wavy-9:after {
+  scale: 1 -1;
+  animation-delay: -0.2s;
+}
+@keyframes __loading-wavy-9-l9 {
+  to {
+    -webkit-mask-position: -100% 0;
+  }
+}

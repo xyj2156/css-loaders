@@ -1,0 +1,53 @@
+.__loading-shapes-28 {
+  --s: var(--size, 20px);
+  --d: var(--duration, 2s);
+  --d1: var(--duration-1, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #514b82);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background: var(--c1);
+  position: relative;
+  transform-origin: top right;
+  animation: __loading-shapes-28-l28-0 var(--d) infinite linear;
+}
+.__loading-shapes-28:before,
+.__loading-shapes-28:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  transform-origin: bottom right;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  inset: auto auto 100% 0;
+  animation: __loading-shapes-28-l28-1 var(--d1) infinite linear alternate;
+}
+.__loading-shapes-28:after {
+  inset: auto auto 0 100%;
+  transform-origin: top left;
+  --s: -1;
+}
+@keyframes __loading-shapes-28-l28-0 {
+  0%,
+  49.99% {
+    transform: scale(1);
+  }
+  50%,
+  90% {
+    transform: scale(-1);
+  }
+  100% {
+    transform: scale(-1) rotate(180deg);
+  }
+}
+@keyframes __loading-shapes-28-l28-1 {
+  0%,
+  30% {
+    transform: rotate(calc(var(--s, 1) * 0));
+  }
+  70%,
+  100% {
+    transform: rotate(calc(var(--s, 1) * 90deg));
+  }
+}

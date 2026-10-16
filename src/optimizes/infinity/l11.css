@@ -4,14 +4,14 @@
   --d1: var(--duration-1, calc(var(--d) * 1));
   --c1: var(--color-1, #000);
 
-  --_1: calc(var(--s) * 7 / 90);
+  --_a: calc(var(--s) * 7 / 90);
+  --__a: var(--c1) 92%, #0000;
 
   width: var(--s);
   height: calc(var(--s) * 14 / 90);
-  --_z: var(--c1) 92%, #0000;
   background:
-    radial-gradient(circle var(--_1) at bottom, var(--_z)) 0 0,
-    radial-gradient(circle var(--_1) at top, var(--_z)) 0 100%;
+    radial-gradient(circle var(--_a) at bottom, var(--__a)) 0 0,
+    radial-gradient(circle var(--_a) at top, var(--__a)) 0 100%;
   background-size: calc(100% / 4) 50%;
   background-repeat: repeat-x;
   animation: __loading-infinity-11-l11 var(--d1) infinite;

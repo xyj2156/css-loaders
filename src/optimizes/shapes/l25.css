@@ -1,0 +1,38 @@
+.__loading-shapes-25 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #f03355);
+  --_a: calc(var(--s) * 8 / 40);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  position: relative;
+}
+.__loading-shapes-25:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  --c: #0000, var(--c1) 1deg 120deg, #0000 121deg;
+  background:
+    conic-gradient(from 0deg, var(--c)) top right,
+    conic-gradient(from 120deg, var(--c)) bottom,
+    conic-gradient(from 240deg, var(--c)) top left;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  animation: __loading-shapes-25-l25 var(--d) infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes __loading-shapes-25-l25 {
+  33% {
+    inset: -var(--_a);
+    transform: rotate(0deg);
+  }
+  66% {
+    inset: -var(--_a);
+    transform: rotate(180deg);
+  }
+  100% {
+    inset: 0;
+    transform: rotate(180deg);
+  }
+}

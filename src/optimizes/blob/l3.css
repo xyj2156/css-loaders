@@ -1,9 +1,9 @@
 .__loading-blob-3 {
-  --s:var(--size, 120px);
-  --c1:var(--color, #fff);
-  --c2:var(--color, #ff00ff);
-  --d:var(--duration, 1000ms);
-  --d1:var(--duration-1, var(--d));
+  --s: var(--size, 120px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color, #fff);
+  --c2: var(--color, #ff00ff);
 
   width: var(--s);
   height: calc(var(--s) / 2);
@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   background: var(--c1);
-  filter: blur(calc(var(--s)/24)) contrast(10) hue-rotate(60deg);
+  filter: blur(calc(var(--s) / 24)) contrast(10) hue-rotate(60deg);
   mix-blend-mode: darken;
 }
 .__loading-blob-3:before,

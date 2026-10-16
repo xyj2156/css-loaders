@@ -6,8 +6,8 @@
   --c2: var(--color-2, #ff3d7f);
 
   --_a: var(--s);
-  --_b: calc(var(--s) * 1/2);
-  --_c: calc(var(--s) * 1/4);
+  --_b: calc(var(--s) * 1 / 2);
+  --_c: calc(var(--s) * 1 / 4);
 
   width: var(--_a);
   height: var(--_b);
@@ -24,7 +24,7 @@
 .__loading-dancers-10:after {
   background: var(--c2);
   transform-origin: top left;
-  animation-delay: calc(var(--d) * 1/4);
+  animation-delay: calc(var(--d) * 1 / 4);
 }
 @keyframes __loading-dancers-10-l10-1 {
   0%,

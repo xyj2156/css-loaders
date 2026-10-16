@@ -1,7 +1,7 @@
 .__loading-moving-5 {
   --s: var(--size, 80px);
   --d: var(--duration, 1s);
-  --d1:var(--duration-1, calc(var(--d) * 3 / 2));
+  --d1: var(--duration-1, calc(var(--d) * 3 / 2));
   --c1: var(--color-1, #ccc);
 
   height: var(--s);

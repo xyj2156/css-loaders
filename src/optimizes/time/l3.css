@@ -1,0 +1,39 @@
+.__loading-time-3 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 2 / 30);
+  --_b: calc(var(--s) * 5 / 30);
+  --_c: calc(var(--s) * 10 / 30);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0) 50%;
+
+  display: inline-flex;
+  border: var(--_a) solid var(--c1);
+  background:
+    var(--__a) calc(50% - var(--_b)) / var(--_b) var(--_b),
+    var(--__a) calc(50% + var(--_b)) / var(--_b) var(--_b);
+}
+.__loading-time-3::before,
+.__loading-time-3::after {
+  content: '12 00 23 40 31 45 60 17 45 32 29 42 50 08 14 07 46 11 03 55';
+  font-size: 30px;
+  font-family: monospace;
+  font-weight: bold;
+  line-height: 1em;
+  height: 1em;
+  width: 2ch;
+  color: #0000;
+  text-shadow: 0 0 0 var(--c1);
+  overflow: hidden;
+  margin: var(--_b) var(--_c);
+  animation: __loading-time-3-l3 var(--d) steps(20) infinite;
+}
+.__loading-time-3::before {
+  animation-duration: var(--d1);
+}
+@keyframes __loading-time-3-l3 {
+  100% {
+    text-shadow: 0 -20em 0 var(--c1);
+  }
+}

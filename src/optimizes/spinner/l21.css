@@ -1,0 +1,17 @@
+.__loading-spinner-21 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #ccc);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: repeating-conic-gradient(var(--c1) 0 90deg, var(--c2) 0 180deg);
+  animation: __loading-spinner-21-l21 var(--d) infinite linear;
+}
+@keyframes __loading-spinner-21-l21 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}

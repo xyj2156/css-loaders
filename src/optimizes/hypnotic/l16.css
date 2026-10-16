@@ -15,7 +15,11 @@
   content: '';
   position: absolute;
   inset: calc(var(--s) * -0.96);
-  --c: conic-gradient(from 180deg at 50% calc(100% - calc(var(--s) / 25)), var(--c1) 90deg, #0000 0);
+  --c: conic-gradient(
+    from 180deg at 50% calc(100% - calc(var(--s) / 25)),
+    var(--c1) 90deg,
+    #0000 0
+  );
   background: var(--c), var(--c);
   background-position:
     0 0,

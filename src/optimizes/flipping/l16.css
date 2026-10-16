@@ -1,13 +1,12 @@
 .__loading-flipping-16 {
-  --s:var(--size, 50px);
-  --d:var(--duration, 1s);
+  --s: var(--size, 50px);
+  --d: var(--duration, 1s);
   --d1: var(--duration-1, calc(var(--d) * 2));
   --d2: var(--duraion-2, calc(var(--d) / 4));
   --d3: var(--duraion-3, calc(var(--d) / 2));
-  --c1:var(--color-1, orange);
+  --c1: var(--color-1, orange);
 
-  --_80:calc(var(--s) * 8 / 5);
-
+  --_a: calc(var(--s) * 8 / 5);
 
   width: var(--s);
   aspect-ratio: 1;
@@ -50,10 +49,10 @@
 }
 @keyframes __loading-flipping-16-l16-1 {
   0% {
-    transform: perspective(var(--_80)) rotate3d(-1, -1, 0, 0);
+    transform: perspective(var(--_a)) rotate3d(-1, -1, 0, 0);
   }
   80%,
   100% {
-    transform: perspective(var(--_80)) rotate3d(-1, -1, 0, -180deg);
+    transform: perspective(var(--_a)) rotate3d(-1, -1, 0, -180deg);
   }
 }

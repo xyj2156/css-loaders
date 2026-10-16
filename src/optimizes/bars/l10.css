@@ -1,15 +1,16 @@
 .__loading-bars-10 {
   --s: var(--size, 45px);
-  --c1: var(--color-1, #000);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #000);
+
+  --__a: no-repeat repeating-linear-gradient(90deg, var(--c1) 0 20%, #0000 0 40%);
 
   height: var(--s);
   aspect-ratio: 1.2;
-  --c: no-repeat repeating-linear-gradient(90deg, var(--c1) 0 20%, #0000 0 40%);
   background:
-    var(--c) 50% 0,
-    var(--c) 50% 100%;
+    var(--__a) 50% 0,
+    var(--__a) 50% 100%;
   background-size: calc(500% / 6) 50%;
   animation: __loading-bars-10-l10 var(--d1) infinite linear;
 }

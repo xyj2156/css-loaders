@@ -1,11 +1,11 @@
 .__loading-blob-8 {
   --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --d2: var(--duration-2, calc(var(--d) / 2));
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #ff00ff);
   --c3: var(--color-3, #000);
-  --d:  var(--duration, 1000ms);
-  --d1: var(--duration-1, calc(var(--d) * 2));
-  --d2: var(--duration-2, calc(var(--d) / 2));
 
   width: var(--s);
   aspect-ratio: 1;
@@ -31,7 +31,7 @@
   mask-composite: exclude;
 }
 .__loading-blob-8:before {
-  mask-image: linear-gradient(var(--c3) ,var(--c3)), linear-gradient(var(--c3), var(--c3));
+  mask-image: linear-gradient(var(--c3), var(--c3)), linear-gradient(var(--c3), var(--c3));
   animation: __loading-blob-8-l8-1 var(--d1) infinite;
 }
 .__loading-blob-8:after {

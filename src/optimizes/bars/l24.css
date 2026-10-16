@@ -1,13 +1,14 @@
 .__loading-bars-24 {
   --s: var(--size, 45px);
-  --c1: var(--color-1, #000);
-  --d:  var(--duration, 1000ms);
+  --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 0.75));
+  --c1: var(--color-1, #000);
+
+  --__a: no-repeat repeating-linear-gradient(90deg, var(--c1) 0 20%, #0000 0 40%);
 
   width: var(--s);
   aspect-ratio: 0.8;
-  --c: no-repeat repeating-linear-gradient(90deg, var(--c1) 0 20%, #0000 0 40%);
-  background: var(--c), var(--c), var(--c), var(--c);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
   background-size: 100% 21%;
   animation: __loading-bars-24-l24 var(--d1) infinite alternate;
 }

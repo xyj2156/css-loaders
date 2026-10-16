@@ -1,8 +1,10 @@
 .__loading-eyes-1 {
-  --s: 30px;
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
-  height: var(--s);
+
+  --__a: 30px;
+
+  height: var(--__a);
   aspect-ratio: 1;
   display: grid;
   background:

@@ -1,20 +1,17 @@
 .__loading-dancers-5 {
   --s: var(--size, 16px);
   --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --d2: var(--duration-2, calc(var(--d) * 1 / 2));
+  --c1: var(--color-1, #3fb8af);
+  --c2: var(--color-2, #ff3d7f);
 
   --_a: var(--s);
-  --_b: calc(var(--s) * 30/16);
-  --_c: calc(var(--s) * 1/16);
-
+  --_b: calc(var(--s) * 30 / 16);
+  --_c: calc(var(--s) * 1 / 16);
   --__a: var(--_a);
   --__b: var(--_b);
   --__c: var(--_c);
-
-  --d1: var(--duration-1, calc(var(--d) * 2));
-  --d2: var(--duration-2, calc(var(--d) * 1/2));
-
-  --c1: var(--color-1, #3fb8af);
-  --c2: var(--color-2, #ff3d7f);
 
   width: var(--__a);
   aspect-ratio: 1;

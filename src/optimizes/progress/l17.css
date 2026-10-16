@@ -1,0 +1,18 @@
+.__loading-progress-17 {
+  --s: var(--size, 120px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #ddd);
+  --_a: calc(var(--s) * 20 / 120);
+
+  width: var(--s);
+  height: var(--_a);
+  -webkit-mask: radial-gradient(circle closest-side, var(--c1) 94%, #0000) left/20% 100%;
+  background: linear-gradient(var(--c1) 0 0) left/0% 100% no-repeat var(--c2);
+  animation: __loading-progress-17-l17 var(--d) infinite steps(6);
+}
+@keyframes __loading-progress-17-l17 {
+  100% {
+    background-size: 120% 100%;
+  }
+}

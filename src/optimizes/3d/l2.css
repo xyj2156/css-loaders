@@ -1,14 +1,15 @@
 .__loading-3d-2 {
   --s: var(--size, 25px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.8));
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #666);
   --c3: var(--color-3, #aaa);
   --c4: var(--color-3, #fff);
-  --d:  var(--duration, 1000ms);
-  --d1: var(--duration-1, calc(var(--d) * 0.8));
 
-  --_d: calc(0.353 * var(--s));
-  width: calc(var(--s) + var(--_d));
+  --_a: calc(0.353 * var(--s));
+
+  width: calc(var(--s) + var(--_a));
   aspect-ratio: 1;
   display: grid;
   filter: drop-shadow(0 0 0 var(--c1));
@@ -17,14 +18,19 @@
 .__loading-3d-2:before {
   content: '';
   clip-path: polygon(
-    var(--_d) 0,
+    var(--_a) 0,
     100% 0,
-    100% calc(100% - var(--_d)),
-    calc(100% - var(--_d)) 100%,
+    100% calc(100% - var(--_a)),
+    calc(100% - var(--_a)) 100%,
     0 100%,
-    0 var(--_d)
+    0 var(--_a)
   );
-  background: conic-gradient(from -90deg at var(--s) var(--_d), var(--c1) 135deg, var(--c2) 0 270deg, var(--c3) 0);
+  background: conic-gradient(
+    from -90deg at var(--s) var(--_a),
+    var(--c1) 135deg,
+    var(--c2) 0 270deg,
+    var(--c3) 0
+  );
 }
 @keyframes __loading-3d-2-l2 {
   50% {

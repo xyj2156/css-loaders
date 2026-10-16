@@ -1,0 +1,40 @@
+.__loading-shapes-17 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #514b82);
+  --_a: calc(var(--s) * 10 / 40);
+  --_b: calc(var(--s) * 20 / 40);
+  --_c: calc(var(--s) * 60 / 40);
+
+  width: var(--s);
+  height: var(--_c);
+  position: relative;
+}
+.__loading-shapes-17::before,
+.__loading-shapes-17::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--c1);
+  clip-path: polygon(0 0, 100% 0, 100% 67%, 50% 67%, 50% 34%, 0 34%);
+  animation: sp7 var(--d) infinite;
+}
+.__loading-shapes-17::after {
+  --s: -1, -1;
+}
+@keyframes sp7 {
+  0%,
+  10% {
+    transform: scale(var(--s, 1)) translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: scale(var(--s, 1)) translate(0, -var(--_b)) rotate(0deg);
+  }
+  66% {
+    transform: scale(var(--s, 1)) translate(var(--_a), -var(--_b)) rotate(-90deg);
+  }
+  90%,
+  100% {
+    transform: scale(var(--s, 1)) translate(var(--_a), -var(--_a)) rotate(-90deg);
+  }
+}

@@ -1,0 +1,47 @@
+.__loading-shapes-5 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1.5s);
+  --_a: calc(var(--s) * 21 / 40);
+  --_b: calc(var(--s) * 60 / 40);
+  --__a: no-repeat linear-gradient(orange 0 0);
+
+  width: var(--s);
+  height: var(--s);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
+  background-size: var(--_a) var(--_a);
+  animation: __loading-shapes-5-l5 var(--d) infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes __loading-shapes-5-l5 {
+  0% {
+    background-position:
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%;
+  }
+  33% {
+    background-position:
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%;
+    width: var(--_b);
+    height: var(--_b);
+  }
+  66% {
+    background-position:
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 0;
+    width: var(--_b);
+    height: var(--_b);
+  }
+  100% {
+    background-position:
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 0;
+  }
+}

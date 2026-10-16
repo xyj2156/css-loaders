@@ -1,0 +1,55 @@
+.__loading-shapes-32 {
+  --s: var(--size, 45px);
+  --d: var(--duration, 1s);
+  --_a: calc(var(--s) * 16 / 45);
+  --_b: calc(var(--s) * 65 / 45);
+  --__a: no-repeat linear-gradient(orange 0 0);
+
+  background:
+    var(--__a), var(--__a), var(--__a), var(--__a), var(--__a), var(--__a), var(--__a), var(--__a),
+    var(--__a);
+  background-size: var(--_a) var(--_a);
+  animation:
+    __loading-shapes-32-l32-1 var(--d) infinite,
+    __loading-shapes-32-l32-2 var(--d) infinite;
+}
+@keyframes __loading-shapes-32-l32-1 {
+  0%,
+  100% {
+    width: var(--s);
+    height: var(--s);
+  }
+  35%,
+  65% {
+    width: var(--_b);
+    height: var(--_b);
+  }
+}
+@keyframes __loading-shapes-32-l32-2 {
+  0%,
+  40% {
+    background-position:
+      0 0,
+      0 50%,
+      0 100%,
+      50% 100%,
+      100% 100%,
+      100% 50%,
+      100% 0,
+      50% 0,
+      50% 50%;
+  }
+  60%,
+  100% {
+    background-position:
+      0 50%,
+      0 100%,
+      50% 100%,
+      100% 100%,
+      100% 50%,
+      100% 0,
+      50% 0,
+      0 0,
+      50% 50%;
+  }
+}

@@ -10,9 +10,18 @@
   aspect-ratio: 1;
   outline: calc(var(--s) / 20) solid var(--c2);
   background:
-    radial-gradient(farthest-side, var(--c1) 90%, var(--c3)) 0 0/calc(var(--s) / 5) calc(var(--s) / 5) no-repeat,
-    conic-gradient(from 90deg at calc(var(--s) / 4) calc(var(--s) / 4), var(--c3) 90deg, var(--c2) 0),
-    conic-gradient(from -90deg at calc(var(--s) * 3 / 4) calc(var(--s) * 3 / 4), var(--c3) 90deg, var(--c2) 0);
+    radial-gradient(farthest-side, var(--c1) 90%, var(--c3)) 0 0 / calc(var(--s) / 5)
+      calc(var(--s) / 5) no-repeat,
+    conic-gradient(
+      from 90deg at calc(var(--s) / 4) calc(var(--s) / 4),
+      var(--c3) 90deg,
+      var(--c2) 0
+    ),
+    conic-gradient(
+      from -90deg at calc(var(--s) * 3 / 4) calc(var(--s) * 3 / 4),
+      var(--c3) 90deg,
+      var(--c2) 0
+    );
   animation: __loading-maze-1-l1 var(--d1) infinite;
 }
 @keyframes __loading-maze-1-l1 {

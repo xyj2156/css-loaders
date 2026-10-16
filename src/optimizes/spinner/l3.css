@@ -1,0 +1,24 @@
+.__loading-spinner-3 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #25b09b);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 8 / 50);
+  --__a: conic-gradient(#0000 10%, var(--c2)), linear-gradient(var(--c2) 0 0) content-box;
+
+  width: var(--s);
+  padding: var(--_a);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--c1);
+  -webkit-mask: var(--__a);
+  mask: var(--__a);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: __loading-spinner-3-l3 var(--d) infinite linear;
+}
+@keyframes __loading-spinner-3-l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}

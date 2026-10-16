@@ -3,10 +3,11 @@ import fs from 'node:fs';
 
 /**
  * 依次循环数组中的元素
- * @param {array} arr 循环用的数组
- * @param {function|undefined} callback 回调函数，可以是异步的，等待执行完毕后才会执行下一个元素
+ * @param {any[]} arr 循环用的数组
+ * @param {function(any, number, any[]): Promise<void>|void} callback 回调函数，可以是异步的，等待执行完毕后才会执行下一个元素
+ * @returns {Promise<void>} 当所有元素处理完成后 resolve，若发生错误则 reject
  */
-export function asyncEach(arr, callback) {
+export async function asyncEach(arr, callback) {
   if (!Array.isArray(arr)) {
     throw new TypeError('First argument must be an array');
   }
@@ -14,19 +15,12 @@ export function asyncEach(arr, callback) {
     throw new TypeError('Second argument must be a function');
   }
 
-  return new Promise(async (resolve, reject) => {
-    try {
-      for (let i = 0; i < arr.length; i++) {
-        const result = callback(arr[i], i, arr);
-        if (result && typeof result.then === 'function') {
-          await result;
-        }
-      }
-      resolve();
-    } catch (error) {
-      reject(error);
+  for (let i = 0; i < arr.length; i++) {
+    const result = callback(arr[i], i, arr);
+    if (result && typeof result.then === 'function') {
+      await result;
     }
-  });
+  }
 }
 
 /**

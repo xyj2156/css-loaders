@@ -1,10 +1,11 @@
 .__loading-classic-14 {
-  --c: var(--content, 'Loading...');
   --s: var(--size, 30px);
-  --c1: var(--color-1, #000);
-  --c2: var(--color-2, #000);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #000);
+
+  --__a: var(--content, 'Loading...');
 
   width: fit-content;
   padding-bottom: 5px;
@@ -21,7 +22,7 @@
 }
 
 .__loading-classic-14:before {
-  content: var(--c);
+  content: var(--__a);
 }
 
 @keyframes __loading-classic-14-l14 {

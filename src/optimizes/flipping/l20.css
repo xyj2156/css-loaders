@@ -1,12 +1,12 @@
 .__loading-flipping-20 {
-  --s: 60px;
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1.5));
 
-  --_100:calc(var(--s) * 10 / 6);
+  --_a: calc(var(--__a) * 10 / 6);
+  --__a: 60px;
 
-  width: var(--s);
-  height: var(--s);
+  width: var(--__a);
+  height: var(--__a);
   display: grid;
 }
 
@@ -27,26 +27,26 @@
 
 @keyframes __loading-flipping-20-l20 {
   0% {
-    transform: perspective(var(--_100)) rotate3d(1, var(--__z, 1), 0, 0);
+    transform: perspective(var(--_a)) rotate3d(1, var(--__z, 1), 0, 0);
   }
   25% {
-    transform: perspective(var(--_100)) rotate3d(1, var(--__z, 1), 0, -90deg);
+    transform: perspective(var(--_a)) rotate3d(1, var(--__z, 1), 0, -90deg);
   }
   25.01% {
-    transform: perspective(var(--_100)) rotate3d(1, var(--__z, 1), 0, -90deg);
+    transform: perspective(var(--_a)) rotate3d(1, var(--__z, 1), 0, -90deg);
   }
   40%,
   60% {
-    transform: perspective(var(--_100)) rotate3d(1, var(--__z, 1), 0, -180deg);
+    transform: perspective(var(--_a)) rotate3d(1, var(--__z, 1), 0, -180deg);
   }
   75% {
-    transform: perspective(var(--_100)) rotate3d(1, var(--__z, 1), 0, -270deg);
+    transform: perspective(var(--_a)) rotate3d(1, var(--__z, 1), 0, -270deg);
   }
   75.01% {
-    transform: perspective(var(--_100)) rotate3d(1, var(--__z, 1), 0, -270deg);
+    transform: perspective(var(--_a)) rotate3d(1, var(--__z, 1), 0, -270deg);
   }
   90%,
   100% {
-    transform: perspective(var(--_100)) rotate3d(1, var(--__z, 1), 0, -360deg);
+    transform: perspective(var(--_a)) rotate3d(1, var(--__z, 1), 0, -360deg);
   }
 }

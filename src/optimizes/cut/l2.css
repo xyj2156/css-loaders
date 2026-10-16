@@ -1,19 +1,20 @@
 .__loading-cut-2 {
-  --s:var(--size, 70px);
-  --d:var(--duration, 1s);
-  --d1:calc(var(--d) * 1.5);
-  --c1:var(--color-1, #3fd97f);
-  --c2:var(--color-2, #000);
+  --s: var(--size, 70px);
+  --d: var(--duration, 1s);
+  --d1: calc(var(--d) * 1.5);
+  --c1: var(--color-1, #3fd97f);
+  --c2: var(--color-2, #000);
+
+  --_a: calc(var(--s) / 70 * 18) calc(var(--s) / 70 * 18);
+  --__a: no-repeat linear-gradient(var(--c2) 0 0);
 
   width: var(--s);
   height: calc(var(--s) / 70 * 24);
   background: var(--c1);
-  --_c: no-repeat linear-gradient(var(--c2) 0 0);
-  --_s: calc(var(--s) / 70 * 18) calc(var(--s) / 70 * 18);
   -webkit-mask:
-    var(--_c) left calc(var(--s) / 70 * 4) top 50%,
-    var(--_c) center,
-    var(--_c) right calc(var(--s) / 70 * 4) top 50%,
+    var(--__a) left calc(var(--s) / 70 * 4) top 50%,
+    var(--__a) center,
+    var(--__a) right calc(var(--s) / 70 * 4) top 50%,
     linear-gradient(var(--c2) 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -29,33 +30,33 @@
   }
   16.67% {
     -webkit-mask-size:
-      var(--_s),
+      var(--_a),
       0 0,
       0 0,
       auto;
   }
   33.33% {
     -webkit-mask-size:
-      var(--_s),
-      var(--_s),
+      var(--_a),
+      var(--_a),
       0 0,
       auto;
   }
   50% {
-    -webkit-mask-size: var(--_s), var(--_s), var(--_s), auto;
+    -webkit-mask-size: var(--_a), var(--_a), var(--_a), auto;
   }
   66.67% {
     -webkit-mask-size:
       0 0,
-      var(--_s),
-      var(--_s),
+      var(--_a),
+      var(--_a),
       auto;
   }
   83.33% {
     -webkit-mask-size:
       0 0,
       0 0,
-      var(--_s),
+      var(--_a),
       auto;
   }
   100% {

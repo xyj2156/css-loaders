@@ -1,0 +1,87 @@
+.__loading-shapes-3 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #514b82);
+  --_a: calc(var(--s) * 0.3 / 50);
+  --_b: calc(var(--s) * 5 / 50);
+  --_c: calc(var(--s) * 17.7 / 50);
+  --_d: calc(var(--s) * 35.35 / 50);
+  --_e: calc(var(--s) * 70.7 / 50);
+
+  width: var(--s);
+  height: var(--s);
+  display: flex;
+  transform: rotate(45deg);
+  animation: __loading-shapes-3-l3-0 var(--d) infinite linear;
+}
+.__loading-shapes-3:before,
+.__loading-shapes-3:after {
+  content: '';
+  width: 50%;
+  background: var(--c1);
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  animation: inherit;
+  animation-name: __loading-shapes-3-l3-1;
+}
+.__loading-shapes-3:after {
+  clip-path: polygon(0 0, 100% 50%, 0% 100%);
+  animation-name: __loading-shapes-3-l3-2;
+}
+@keyframes __loading-shapes-3-l3-0 {
+  25% {
+    width: var(--s);
+    height: var(--s);
+    transform: rotate(0);
+  }
+  50% {
+    width: var(--s);
+    height: var(--s);
+  }
+  75% {
+    width: var(--_e);
+    height: var(--_d);
+  }
+  100% {
+    width: var(--_e);
+    height: var(--_d);
+    transform: rotate(0);
+  }
+}
+@keyframes __loading-shapes-3-l3-1 {
+  0%,
+  25% {
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    transform: translate(var(--_a));
+  }
+  50% {
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    transform: translate(-var(--_b));
+  }
+  75% {
+    clip-path: polygon(0 100%, 0 0, 100% 100%);
+    transform: translate(-var(--_b));
+  }
+  100% {
+    clip-path: polygon(0 100%, 0 0, 100% 100%);
+    transform: translate(var(--_c));
+  }
+}
+@keyframes __loading-shapes-3-l3-2 {
+  0%,
+  25% {
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    transform: translate(-var(--_a));
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    transform: translate(var(--_b));
+  }
+  75% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    transform: translate(var(--_b));
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    transform: translate(-var(--_c));
+  }
+}

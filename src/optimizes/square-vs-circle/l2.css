@@ -1,0 +1,41 @@
+.__loading-square-vs-circle-2 {
+  --s: var(--size, 35px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #fff);
+  --_a: calc(var(--s) * 3 / 35);
+  --_b: calc(var(--s) * 5 / 35);
+
+  display: inline-flex;
+  gap: var(--_b);
+  animation: __loading-square-vs-circle-2-l2-0 var(--d) infinite linear;
+}
+.__loading-square-vs-circle-2:before,
+.__loading-square-vs-circle-2:after {
+  content: '';
+  width: var(--s);
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 var(--_a) inset var(--c1);
+  animation: __loading-square-vs-circle-2-l2-1 var(--d) infinite linear both;
+}
+.__loading-square-vs-circle-2:after {
+  animation-direction: reverse;
+}
+@keyframes __loading-square-vs-circle-2-l2-0 {
+  0% {
+    transform: rotate(0deg);
+  }
+  80%,
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes __loading-square-vs-circle-2-l2-1 {
+  0%,
+  20% {
+    border-radius: 0;
+  }
+  80%,
+  100% {
+    border-radius: 50%;
+  }
+}

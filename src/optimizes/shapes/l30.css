@@ -1,0 +1,56 @@
+.__loading-shapes-30 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #25b09b);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+  animation: __loading-shapes-30-l30-0 var(--d) infinite linear;
+}
+.__loading-shapes-30:before,
+.__loading-shapes-30:after {
+  content: '';
+  grid-area: 1/1;
+  background: var(--c1);
+  animation: inherit;
+  animation-name: __loading-shapes-30-l30-1;
+}
+.__loading-shapes-30:after {
+  transform-origin: bottom right;
+  --s: 1;
+}
+@keyframes __loading-shapes-30-l30-0 {
+  0%,
+  66% {
+    transform: scaleY(1);
+  }
+  66.01%,
+  100% {
+    transform: scaleY(-1);
+  }
+}
+@keyframes __loading-shapes-30-l30-1 {
+  0%,
+  10% {
+    transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 90deg));
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+  }
+  33% {
+    transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 0deg));
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+  }
+  66% {
+    transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 0deg));
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+  }
+  66.01% {
+    transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 0deg));
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+  }
+  90%,
+  100% {
+    transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 90deg));
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+  }
+}

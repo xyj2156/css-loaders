@@ -5,8 +5,8 @@
   --d2: var(--duration-2, calc(var(--d) * 6));
   --c1: var(--color-1, #1b325f);
   --c2: var(--color-2, #9cc4e4);
-  display: inline-grid;
 
+  display: inline-grid;
   width: var(--s);
   aspect-ratio: 1;
   animation: __loading-mechanic-10-l10-0 var(--d2) linear infinite;

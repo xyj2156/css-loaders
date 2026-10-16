@@ -1,0 +1,54 @@
+.__loading-shapes-22 {
+  --s: var(--size, 36px);
+  --d: var(--duration, 2s);
+  --d1: var(--duration-1, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #514b82);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  color: var(--c1);
+  background: conic-gradient(from 134deg at top, currentColor 92deg, #0000 0);
+  position: relative;
+  animation: __loading-shapes-22-l22-0 var(--d) infinite linear;
+}
+.__loading-shapes-22:before,
+.__loading-shapes-22:after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background: currentColor;
+  transform-origin: top right;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  inset: auto 100% 0 auto;
+  animation: __loading-shapes-22-l22-1 var(--d1) infinite linear alternate;
+}
+.__loading-shapes-22:after {
+  inset: auto auto 0 100%;
+  transform-origin: top left;
+  --s: -1;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+@keyframes __loading-shapes-22-l22-0 {
+  0%,
+  49.99% {
+    transform: scaleY(1);
+  }
+  50%,
+  90% {
+    transform: scaleY(-1);
+  }
+  100% {
+    transform: scaleY(-1) rotate(180deg);
+  }
+}
+@keyframes __loading-shapes-22-l22-1 {
+  0%,
+  30% {
+    transform: rotate(calc(var(--s, 1) * 0));
+  }
+  70%,
+  100% {
+    transform: rotate(calc(var(--s, 1) * 180deg));
+  }
+}

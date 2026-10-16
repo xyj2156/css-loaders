@@ -1,9 +1,9 @@
 .__loading-blob-5 {
   --s: var(--size, 100px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
   --c1: var(--color-1, #00ffff);
   --c2: var(--color-2, #fff);
-  --d:  var(--duration, 1000ms);
-  --d1: var(--duration-1, calc(var(--d) * 2));
 
   width: var(--s);
   height: var(--s);

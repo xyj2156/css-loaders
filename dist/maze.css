@@ -1,12 +1,28 @@
 .__loading-maze-1 {
-  width: 40px;
+  --s: var(--size, 40px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+  --c3: var(--color-3, #0000);
+
+  width: var(--s);
   aspect-ratio: 1;
-  outline: 2px solid #fff;
+  outline: calc(var(--s) / 20) solid var(--c2);
   background:
-    radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px no-repeat,
-    conic-gradient(from 90deg at 10px 10px, #0000 90deg, #fff 0),
-    conic-gradient(from -90deg at 30px 30px, #0000 90deg, #fff 0);
-  animation: __loading-maze-1-l1 1.5s infinite;
+    radial-gradient(farthest-side, var(--c1) 90%, var(--c3)) 0 0 / calc(var(--s) / 5)
+      calc(var(--s) / 5) no-repeat,
+    conic-gradient(
+      from 90deg at calc(var(--s) / 4) calc(var(--s) / 4),
+      var(--c3) 90deg,
+      var(--c2) 0
+    ),
+    conic-gradient(
+      from -90deg at calc(var(--s) * 3 / 4) calc(var(--s) * 3 / 4),
+      var(--c3) 90deg,
+      var(--c2) 0
+    );
+  animation: __loading-maze-1-l1 var(--d1) infinite;
 }
 @keyframes __loading-maze-1-l1 {
   0% {
@@ -25,16 +41,115 @@
     background-position: 0 0;
   }
 }
-.__loading-maze-2 {
-  width: 70px;
-  height: 40px;
-  outline: 2px solid #fff;
+
+.__loading-maze-10 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, red);
+  --c2: var(--color-2, #000);
+  --c3: var(--color-3, #fff);
+
+  --_a: calc(var(--s) / 3.75);
+  --_b: calc(var(--s) / 3);
+  --_c: calc(var(--s) / 30);
+  --_d: calc(var(--s) - var(--_c));
+  --_e: calc(var(--s) / -3);
+
+  height: var(--s);
+  aspect-ratio: 2;
   background:
-    radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px no-repeat,
-    linear-gradient(#fff 0 0) 50%/10px 100% no-repeat,
-    conic-gradient(from 90deg at 10px 10px, #0000 90deg, #fff 0),
-    conic-gradient(from -90deg at 60px 30px, #0000 90deg, #fff 0);
-  animation: __loading-maze-2-l2 2s infinite;
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0 / var(--_a) var(--_a),
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0 / var(--_a) var(--_a),
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0 / var(--_a) var(--_a),
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0 / var(--_a) var(--_a),
+    radial-gradient(farthest-side, var(--c2) 90%, #0000) 0 0 / var(--_a) var(--_a),
+    linear-gradient(var(--c3) 0 0) center/100% var(--_b),
+    linear-gradient(var(--c3) 0 0) right/50% 100%;
+  background-repeat: no-repeat;
+  animation: __loading-maze-10-l10 var(--d1) infinite;
+}
+
+@keyframes __loading-maze-10-l10 {
+  0% {
+    background-position:
+      top var(--_c) right var(--_c),
+      right var(--_c) bottom var(--_c),
+      top var(--_c) left var(--_d),
+      bottom var(--_c) left var(--_d),
+      var(--_e) 50%,
+      50%,
+      right;
+  }
+  50%,
+  60% {
+    background-position:
+      top var(--_c) right var(--_c),
+      right var(--_c) bottom var(--_c),
+      top var(--_c) left var(--_d),
+      bottom var(--_c) left var(--_d),
+      left 75% top 50%,
+      50%,
+      right;
+  }
+  80% {
+    background-position:
+      75% 50%,
+      75% 50%,
+      75% 50%,
+      75% 50%,
+      left 75% top 50%,
+      50%,
+      right;
+  }
+  80.01% {
+    background-position:
+      75% 50%,
+      75% 50%,
+      75% 50%,
+      75% 50%,
+      var(--_e) 50%,
+      50%,
+      right;
+  }
+  100% {
+    background-position:
+      top var(--_c) right var(--_c),
+      right var(--_c) bottom var(--_c),
+      top var(--_c) left var(--_d),
+      bottom var(--_c) left var(--_d),
+      var(--_e) 50%,
+      50%,
+      right;
+  }
+}
+
+.__loading-maze-2 {
+  --s: var(--size, 70px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+  --c3: var(--color-3, #0000);
+
+  width: var(--s);
+  height: calc(var(--s) * 40 / 70);
+  outline: calc(var(--s) * 2 / 70) solid var(--c2);
+  background:
+    radial-gradient(farthest-side, var(--c1) 90%, var(--c3)) 0 0 / calc(var(--s) * 8 / 70)
+      calc(var(--s) * 8 / 70) no-repeat,
+    linear-gradient(var(--c2) 0 0) 50% / calc(var(--s) * 10 / 70) 100% no-repeat,
+    conic-gradient(
+      from 90deg at calc(var(--s) * 10 / 70) calc(var(--s) * 10 / 70),
+      var(--c3) 90deg,
+      var(--c2) 0
+    ),
+    conic-gradient(
+      from -90deg at calc(var(--s) * 60 / 70) calc(var(--s) * 30 / 70),
+      var(--c3) 90deg,
+      var(--c2) 0
+    );
+  animation: __loading-maze-2-l2 var(--d1) infinite;
 }
 @keyframes __loading-maze-2-l2 {
   0% {
@@ -83,115 +198,163 @@
       50%;
   }
 }
+
 .__loading-maze-3 {
-  width: 40px;
+  --s: var(--size, 40px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+  --c3: var(--color-3, #0000);
+
+  --_a: calc(var(--s) / 20);
+  --_b: calc(var(--s) / 5);
+  --_c: calc(var(--s) / 4);
+  --_d: calc(var(--s) * 3 / 4);
+  --_e: calc(var(--s) * 3 / 5);
+  --_f: calc(var(--s) / 10);
+
+  width: var(--s);
   aspect-ratio: 1;
-  outline: 2px solid #fff;
+  outline: var(--_a) solid var(--c2);
   background:
-    radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px no-repeat,
-    conic-gradient(from 90deg at 10px 10px, #0000 90deg, #fff 0),
-    conic-gradient(from -90deg at 30px 30px, #0000 90deg, #fff 0);
-  animation: __loading-maze-3-l3 1.5s infinite;
+    radial-gradient(farthest-side, var(--c1) 90%, var(--c3)) 0 0 / var(--_b) var(--_b) no-repeat,
+    conic-gradient(from 90deg at var(--_c) var(--_c), var(--c3) 90deg, var(--c2) 0),
+    conic-gradient(from -90deg at var(--_d) var(--_d), var(--c3) 90deg, var(--c2) 0);
+  animation: __loading-maze-3-l3 var(--d1) infinite;
 }
 @keyframes __loading-maze-3-l3 {
   0% {
     background-position: 0 0;
-    clip-path: circle(15px at left 4px top 4px);
+    clip-path: circle(var(--_e) at left var(--_f) top var(--_f));
   }
   25% {
     background-position: 100% 0;
-    clip-path: circle(15px at right 4px top 4px);
+    clip-path: circle(var(--_e) at right var(--_f) top var(--_f));
   }
   50% {
     background-position: 100% 100%;
-    clip-path: circle(15px at right 4px bottom 4px);
+    clip-path: circle(var(--_e) at right var(--_f) bottom var(--_f));
   }
   75% {
     background-position: 0 100%;
-    clip-path: circle(15px at left 4px bottom 4px);
+    clip-path: circle(var(--_e) at left var(--_f) bottom var(--_f));
   }
   100% {
     background-position: 0 0;
-    clip-path: circle(15px at left 4px top 4px);
+    clip-path: circle(var(--_e) at left var(--_f) top var(--_f));
   }
 }
+
 .__loading-maze-4 {
-  width: 70px;
-  height: 40px;
-  outline: 2px solid #fff;
+  --s: var(--size, 70px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+  --c3: var(--color-3, #0000);
+
+  --_a: calc(var(--s) * 4 / 70);
+  --_b: calc(var(--s) * 10 / 70);
+  --_c: calc(var(--s) * 8 / 70);
+  --_d: calc(var(--s) * 60 / 70);
+  --_e: calc(var(--s) * 30 / 70);
+  --_f: calc(var(--s) * 15 / 70);
+
+  width: var(--s);
+  height: calc(var(--s) * 40 / 70);
+  outline: var(--_a) solid var(--c2);
   background:
-    radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px no-repeat,
-    linear-gradient(#fff 0 0) 50%/10px 100% no-repeat,
-    conic-gradient(from 90deg at 10px 10px, #0000 90deg, #fff 0),
-    conic-gradient(from -90deg at 60px 30px, #0000 90deg, #fff 0);
-  animation: __loading-maze-4-l4 2s infinite;
+    radial-gradient(farthest-side, var(--c1) 90%, var(--c3)) 0 0 / var(--_c) var(--_c) no-repeat,
+    linear-gradient(var(--c2) 0 0) 50% / var(--_b) 100% no-repeat,
+    conic-gradient(from 90deg at var(--_b) var(--_b), var(--c3) 90deg, var(--c2) 0),
+    conic-gradient(from -90deg at var(--_d) var(--_e), var(--c3) 90deg, var(--c2) 0);
+  animation: __loading-maze-4-l4 var(--d1) infinite;
 }
 @keyframes __loading-maze-4-l4 {
   0% {
     background-position:
       0 0,
       50%;
-    clip-path: circle(15px at left 4px top 4px);
+    clip-path: circle(var(--_f) at left var(--_a) top var(--_a));
   }
   12.5% {
     background-position:
       50% 0,
       50%;
-    clip-path: circle(15px at left 50% top 4px);
+    clip-path: circle(var(--_f) at left 50% top var(--_a));
   }
   25% {
     background-position:
       50% 100%,
       50%;
-    clip-path: circle(15px at left 50% bottom 4px);
+    clip-path: circle(var(--_f) at left 50% bottom var(--_a));
   }
   37.5% {
     background-position:
       100% 100%,
       50%;
-    clip-path: circle(15px at right 4px bottom 4px);
+    clip-path: circle(var(--_f) at right var(--_a) bottom var(--_a));
   }
   50% {
     background-position:
       100% 0,
       50%;
-    clip-path: circle(15px at right 4px top 4px);
+    clip-path: circle(var(--_f) at right var(--_a) top var(--_a));
   }
   62.5% {
     background-position:
       50% 0,
       50%;
-    clip-path: circle(15px at right 50% top 4px);
+    clip-path: circle(var(--_f) at right 50% top var(--_a));
   }
   75% {
     background-position:
       50% 100%,
       50%;
-    clip-path: circle(15px at right 50% bottom 4px);
+    clip-path: circle(var(--_f) at right 50% bottom var(--_a));
   }
   82.5% {
     background-position:
       0 100%,
       50%;
-    clip-path: circle(15px at left 4px bottom 4px);
+    clip-path: circle(var(--_f) at left var(--_a) bottom var(--_a));
   }
   100% {
     background-position:
       0 0,
       50%;
-    clip-path: circle(15px at left 4px top 4px);
+    clip-path: circle(var(--_f) at left var(--_a) top var(--_a));
   }
 }
 
 .__loading-maze-5 {
-  width: 70px;
+  --s: var(--size, 70px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+  --c3: var(--color-3, #0000);
+
+  --_a: calc(var(--s) * 4 / 7);
+  --_b: calc(var(--s) * 3 / 7);
+
+  width: var(--s);
   aspect-ratio: 1;
   background:
-    radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px no-repeat,
-    conic-gradient(from -90deg at 30px 30px, #0000 90deg, #fff 0) 0 0/40px 40px,
-    conic-gradient(from 90deg at 10px 10px, #0000 90deg, #fff 0) 0 0/40px 40px no-repeat,
-    conic-gradient(from -90deg at 30px 30px, #0000 90deg, #fff 0) 100% 100%/40px 40px no-repeat;
-  animation: __loading-maze-5-l5 2s infinite;
+    radial-gradient(farthest-side, var(--c1) 90%, var(--c3)) 0 0 / calc(var(--s) / 8.75)
+      calc(var(--s) / 8.75) no-repeat,
+    conic-gradient(from -90deg at var(--_b) var(--_b), var(--c3) 90deg, var(--c2) 0) 0 0 / var(--_a)
+      var(--_a),
+    conic-gradient(
+        from 90deg at calc(var(--s) / 7) calc(var(--s) / 7),
+        var(--c3) 90deg,
+        var(--c2) 0
+      )
+      0 0 / var(--_a) var(--_a) no-repeat,
+    conic-gradient(from -90deg at var(--_b) var(--_b), var(--c3) 90deg, var(--c2) 0) 100% 100% /
+      var(--_a) var(--_a) no-repeat;
+  animation: __loading-maze-5-l5 var(--d1) infinite;
 }
 @keyframes __loading-maze-5-l5 {
   0% {
@@ -244,16 +407,28 @@
       100% 100%;
   }
 }
+
 .__loading-maze-6 {
-  width: 70px;
+  --s: var(--size, 70px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+
+  width: var(--s);
   aspect-ratio: 2;
   background:
-    radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px,
-    linear-gradient(#fff 0 0) 100% 0/30px 10px,
-    linear-gradient(#fff 0 0) 0 100%/30px 10px,
-    repeating-linear-gradient(90deg, #fff 0 10px, #0000 0 30px);
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0 / calc(var(--s) / 70 * 8)
+      calc(var(--s) / 70 * 8),
+    linear-gradient(var(--c2) 0 0) 100% 0 / calc(var(--s) / 70 * 30) calc(var(--s) / 70 * 10),
+    linear-gradient(var(--c2) 0 0) 0 100% / calc(var(--s) / 70 * 30) calc(var(--s) / 70 * 10),
+    repeating-linear-gradient(
+      90deg,
+      var(--c2) 0 calc(var(--s) / 70 * 10),
+      #0000 0 calc(var(--s) / 70 * 30)
+    );
   background-repeat: no-repeat;
-  animation: __loading-maze-6-l6 2s infinite;
+  animation: __loading-maze-6-l6 var(--d1) infinite;
 }
 @keyframes __loading-maze-6-l6 {
   0% {
@@ -320,14 +495,28 @@
       0 0;
   }
 }
+
 .__loading-maze-7 {
-  width: 40px;
+  --s: var(--size, 40px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 0.25));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+  --c3: var(--color-3, #0000);
+
+  --_a: calc(var(--s) * 1 / 5);
+  --_b: calc(var(--s) * 5 / 8);
+  --_c: calc(var(--s) * 3 / 8);
+
+  width: var(--s);
   aspect-ratio: 1;
   background:
-    radial-gradient(farthest-side, #000 90%, #0000) 50%/8px 8px no-repeat,
-    conic-gradient(from -90deg at 15px 15px, #0000 90deg, #fff 0) 0 0/25px 25px;
-  animation: __loading-maze-7-l7 1s infinite;
+    radial-gradient(farthest-side, var(--c1) 90%, var(--c3)) 50% / var(--_a) var(--_a) no-repeat,
+    conic-gradient(from -90deg at var(--_c) var(--_c), var(--c3) 90deg, var(--c2) 0) 0 0 / var(--_b)
+      var(--_b);
+  animation: __loading-maze-7-l7 var(--d) infinite;
 }
+
 @keyframes __loading-maze-7-l7 {
   0% {
     background-position:
@@ -337,55 +526,85 @@
   50% {
     background-position:
       50%,
-      25px 0;
+      var(--_b) 0;
   }
   100% {
     background-position:
       50%,
-      25px 25px;
+      var(--_b) var(--_b);
   }
 }
+
 .__loading-maze-8 {
-  width: 40px;
+  --s: var(--size, 40px);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #fff);
+  --c3: var(--color-3, #0000);
+
+  --_a: calc(var(--s) / -4);
+  --_b: calc(var(--s) / 5);
+  --_c: calc(var(--s) * 3 / 8);
+  --_d: calc(var(--s) * 5 / 8);
+
+  width: var(--s);
   aspect-ratio: 1;
   background:
-    radial-gradient(farthest-side, #000 90%, #0000) 50%/8px 8px no-repeat,
-    conic-gradient(from -90deg at 15px 15px, #0000 90deg, #fff 0) 0 0/25px 25px;
-  animation: __loading-maze-8-l8 1.5s infinite;
+    radial-gradient(farthest-side, var(--c1) 90%, var(--c3)) 50% / var(--_b) var(--_b) no-repeat,
+    conic-gradient(from -90deg at var(--_c) var(--_c), var(--c3) 90deg, var(--c2) 0) 0 0 / var(--_d)
+      var(--_d);
+  animation: __loading-maze-8-l8 var(--d1) infinite;
 }
 @keyframes __loading-maze-8-l8 {
   0% {
     background-position:
-      left -10px top 50%,
+      left var(--_a) top 50%,
       0 0;
   }
   50% {
     background-position:
-      right -10px top 50%,
+      right var(--_a) top 50%,
       0 0;
   }
   50.01% {
     background-position:
-      right 50% top -10px,
+      right 50% top var(--_a),
       0 0;
   }
   100% {
     background-position:
-      right 50% bottom -10px,
+      right 50% bottom var(--_a),
       0 0;
   }
 }
+
 .__loading-maze-9 {
-  width: 70px;
-  height: 40px;
-  outline: 2px solid #fff;
+  --s: var(--size, 70px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, red);
+  --c3: var(--color-3, #000);
+  --c4: var(--color-4, #0000);
+
+  --_a: calc(var(--s) * 4 / 35);
+  --_b: calc(var(--s) * 5 / 35);
+  --_c: calc(var(--s) * 1 / 35);
+  --_d: calc(var(--s) * 20 / 35);
+  --_e: calc(var(--s) * 30 / 35);
+  --_f: calc(var(--s) * 15 / 35);
+
+  width: var(--s);
+  height: var(--_d);
+  outline: var(--_c) solid var(--c1);
   background:
-    radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px no-repeat,
-    radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px no-repeat,
-    linear-gradient(#fff 0 0) 50%/10px 100% no-repeat,
-    conic-gradient(from 90deg at 10px 10px, #0000 90deg, #fff 0),
-    conic-gradient(from -90deg at 60px 30px, #0000 90deg, #fff 0);
-  animation: __loading-maze-9-l9 2s infinite;
+    radial-gradient(farthest-side, var(--c2) 90%, var(--c4)) 0 0 / var(--_a) var(--_a) no-repeat,
+    radial-gradient(farthest-side, var(--c3) 90%, var(--c4)) 0 0 / var(--_a) var(--_a) no-repeat,
+    linear-gradient(var(--c1) 0 0) 50% / var(--_b) 100% no-repeat,
+    conic-gradient(from 90deg at var(--_b) var(--_b), var(--c4) 90deg, var(--c1) 0),
+    conic-gradient(from -90deg at var(--_e) var(--_f), var(--c4) 90deg, var(--c1) 0);
+  animation: __loading-maze-9-l9 var(--d1) infinite;
 }
 @keyframes __loading-maze-9-l9 {
   0% {
@@ -441,72 +660,5 @@
       50% 100%,
       0 0,
       50%;
-  }
-}
-.__loading-maze-10 {
-  height: 30px;
-  aspect-ratio: 2;
-  background:
-    radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
-    radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
-    radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
-    radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
-    radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px,
-    linear-gradient(#fff 0 0) center/100% 10px,
-    linear-gradient(#fff 0 0) right/50% 100%;
-  background-repeat: no-repeat;
-  animation: __loading-maze-10-l10 2s infinite;
-}
-@keyframes __loading-maze-10-l10 {
-  0% {
-    background-position:
-      top 1px right 1px,
-      right 1px bottom 1px,
-      top 1px left 31px,
-      bottom 1px left 31px,
-      -10px 50%,
-      50%,
-      right;
-  }
-  50%,
-  60% {
-    background-position:
-      top 1px right 1px,
-      right 1px bottom 1px,
-      top 1px left 31px,
-      bottom 1px left 31px,
-      left 75% top 50%,
-      50%,
-      right;
-  }
-  80% {
-    background-position:
-      75% 50%,
-      75% 50%,
-      75% 50%,
-      75% 50%,
-      left 75% top 50%,
-      50%,
-      right;
-  }
-  80.01% {
-    background-position:
-      75% 50%,
-      75% 50%,
-      75% 50%,
-      75% 50%,
-      -10px 50%,
-      50%,
-      right;
-  }
-  100% {
-    background-position:
-      top 1px right 1px,
-      right 1px bottom 1px,
-      top 1px left 31px,
-      bottom 1px left 31px,
-      -10px 50%,
-      50%,
-      right;
   }
 }

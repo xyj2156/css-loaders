@@ -1,0 +1,31 @@
+.__loading-spinner-27 {
+  --s: var(--size, 4px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #25b09b);
+  --_a: calc(var(--s) * 1 / 4);
+  --_b: calc(var(--s) * 2 / 4);
+  --_c: calc(var(--s) * 3 / 4);
+  --_d: calc(var(--s) * 5 / 4);
+  --_e: calc(var(--s) * 6 / 4);
+  --_f: calc(var(--s) * 22 / 4);
+  --__a: 22px;
+
+  width: var(--s);
+  height: var(--s);
+  border-radius: 50%;
+  color: var(--c1);
+  box-shadow:
+    calc(1 * var(--__a)) calc(0 * var(--__a)) 0 0,
+    calc(0.707 * var(--__a)) calc(0.707 * var(--__a)) 0 var(--_a),
+    calc(0 * var(--__a)) calc(1 * var(--__a)) 0 var(--_b),
+    calc(-0.707 * var(--__a)) calc(0.707 * var(--__a)) 0 var(--_c),
+    calc(-1 * var(--__a)) calc(0 * var(--__a)) 0 4px,
+    calc(-0.707 * var(--__a)) calc(-0.707 * var(--__a)) 0 var(--_d),
+    calc(0 * var(--__a)) calc(-1 * var(--__a)) 0 var(--_e);
+  animation: __loading-spinner-27-l27 var(--__a) infinite steps(8);
+}
+@keyframes __loading-spinner-27-l27 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

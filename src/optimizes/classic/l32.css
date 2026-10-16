@@ -1,11 +1,12 @@
 .__loading-classic-32 {
-  --c: var(--content, 'Loading...');
   --s: var(--size, 30px);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, var(--d));
   --c1: var(--color-1, 255 0 0);
   --c2: var(--color-2, 0 255 0);
   --c3: var(--color-3, 0 0 255);
-  --d:  var(--duration, 1s);
-  --d1: var(--duration-1, var(--d));
+
+  --__a: var(--content, 'Loading...');
 
   width: fit-content;
   font-weight: bold;
@@ -19,7 +20,7 @@
 }
 
 .__loading-classic-32:before {
-  content: var(--c);
+  content: var(--__a);
 }
 
 @keyframes __loading-classic-32-l32 {

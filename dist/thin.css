@@ -1,10 +1,16 @@
 .__loading-thin-1 {
-  height: 9px;
-  width: 60px;
-  --c: no-repeat linear-gradient(#000 0 0);
-  background: var(--c), var(--c), var(--c), var(--c);
-  background-size: 26% 3px;
-  animation: __loading-thin-1-l1 1s infinite;
+  --s: var(--size, 60px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 3 / 60);
+  --_b: calc(var(--s) * 9 / 60);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
+  height: var(--_b);
+  width: var(--s);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
+  background-size: 26% var(--_a);
+  animation: __loading-thin-1-l1 var(--d) infinite;
 }
 @keyframes __loading-thin-1-l1 {
   0%,
@@ -52,13 +58,66 @@
       calc(3 * 100% / 3) 100%;
   }
 }
+
+.__loading-thin-10 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 3 / 60);
+  --_b: calc(var(--s) * 15 / 60);
+
+  height: var(--_a);
+  width: var(--s);
+  background: linear-gradient(var(--c1) 0 0) right/51% 100% no-repeat;
+  display: flex;
+  animation: __loading-thin-10-l10-0 var(--d) linear infinite;
+}
+.__loading-thin-10:before,
+.__loading-thin-10:after {
+  content: '';
+  width: var(--_b);
+  background: var(--c1);
+  animation: __loading-thin-10-l10-1 var(--d) linear infinite;
+}
+.__loading-thin-10:after {
+  animation-delay: -1s;
+  --s: -1;
+}
+@keyframes __loading-thin-10-l10-1 {
+  0%,
+  100% {
+    transform: scaleX(var(--s, 1)) rotate(0);
+  }
+  25%,
+  75% {
+    transform: scaleX(var(--s, 1)) rotate(180deg);
+  }
+}
+
+@keyframes __loading-thin-10-l10-0 {
+  0%,
+  49.9% {
+    transform: scaleX(1);
+  }
+  50%,
+  100% {
+    transform: scaleX(-1);
+  }
+}
+
 .__loading-thin-2 {
-  height: 9px;
-  width: 60px;
-  --c: no-repeat linear-gradient(#000 0 0);
-  background: var(--c), var(--c), var(--c), var(--c);
-  background-size: 26% 3px;
-  animation: __loading-thin-2-l2 1s infinite;
+  --s: var(--size, 60px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 3 / 60);
+  --_b: calc(var(--s) * 9 / 60);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
+  height: var(--_b);
+  width: var(--s);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
+  background-size: 26% var(--_a);
+  animation: __loading-thin-2-l2 var(--d) infinite;
 }
 @keyframes __loading-thin-2-l2 {
   0%,
@@ -99,13 +158,20 @@
       calc(3 * 100% / 3) 0;
   }
 }
+
 .__loading-thin-3 {
-  height: 9px;
-  width: 60px;
-  --c: no-repeat linear-gradient(#000 0 0);
-  background: var(--c), var(--c), var(--c), var(--c);
-  background-size: 26% 3px;
-  animation: __loading-thin-3-l3 1s infinite;
+  --s: var(--size, 60px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 3 / 60);
+  --_b: calc(var(--s) * 9 / 60);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
+  height: var(--_b);
+  width: var(--s);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
+  background-size: 26% var(--_a);
+  animation: __loading-thin-3-l3 var(--d) infinite;
 }
 @keyframes __loading-thin-3-l3 {
   0%,
@@ -177,12 +243,19 @@
 }
 
 .__loading-thin-4 {
-  height: 15px;
-  width: 60px;
-  --c: no-repeat repeating-linear-gradient(#0000 0 6px, #000 0 9px, #0000 0 15px);
-  background: var(--c), var(--c), var(--c), var(--c);
+  --s: var(--size, 60px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 6 / 60);
+  --_b: calc(var(--s) * 9 / 60);
+  --_c: calc(var(--s) * 15 / 60);
+  --__a: no-repeat repeating-linear-gradient(#0000 0 6px, var(--c1) 0 9px, #0000 0 15px);
+
+  height: var(--_c);
+  width: var(--s);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
   background-size: 26% 200%;
-  animation: __loading-thin-4-l4 1.5s infinite linear;
+  animation: __loading-thin-4-l4 var(--d) infinite linear;
 }
 @keyframes __loading-thin-4-l4 {
   0%,
@@ -225,12 +298,18 @@
 }
 
 .__loading-thin-5 {
-  height: 9px;
-  width: 60px;
-  --c: no-repeat linear-gradient(#000 0 0);
-  background: var(--c), var(--c), var(--c), var(--c);
-  background-size: 26% 3px;
-  animation: __loading-thin-5-l5 1s infinite;
+  --s: var(--size, 60px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 3 / 60);
+  --_b: calc(var(--s) * 9 / 60);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
+  height: var(--_b);
+  width: var(--s);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
+  background-size: 26% var(--_a);
+  animation: __loading-thin-5-l5 var(--d) infinite;
 }
 @keyframes __loading-thin-5-l5 {
   0%,
@@ -272,13 +351,20 @@
       calc(3 * 100% / 3) 100%;
   }
 }
+
 .__loading-thin-6 {
-  height: 9px;
-  width: 60px;
-  --c: no-repeat linear-gradient(#000 0 0);
-  background: var(--c), var(--c), var(--c), var(--c);
-  background-size: 26% 3px;
-  animation: __loading-thin-6-l6 1s infinite;
+  --s: var(--size, 60px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 3 / 60);
+  --_b: calc(var(--s) * 9 / 60);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
+  height: var(--_b);
+  width: var(--s);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
+  background-size: 26% var(--_a);
+  animation: __loading-thin-6-l6 var(--d) infinite;
 }
 @keyframes __loading-thin-6-l6 {
   0%,
@@ -312,13 +398,19 @@
       calc(2 * 100% / 3) 50%;
   }
 }
+
 .__loading-thin-7 {
-  height: 3px;
-  width: 75px;
-  --c: no-repeat linear-gradient(#000 0 0);
-  background: var(--c), var(--c), var(--c), var(--c);
+  --s: var(--size, 75px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 3 / 75);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
+  height: var(--_a);
+  width: var(--s);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
   background-size: 21% 100%;
-  animation: __loading-thin-7-l7 1s infinite alternate;
+  animation: __loading-thin-7-l7 var(--d) infinite alternate;
 }
 @keyframes __loading-thin-7-l7 {
   0%,
@@ -359,13 +451,20 @@
       calc(4 * 100% / 4) 0;
   }
 }
+
 .__loading-thin-8 {
-  height: 12px;
-  width: 60px;
-  --c: no-repeat linear-gradient(#000 0 0);
-  background: var(--c), var(--c), var(--c), var(--c);
-  background-size: 26% 3px;
-  animation: __loading-thin-8-l8 1s infinite;
+  --s: var(--size, 60px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 3 / 60);
+  --_b: calc(var(--s) * 12 / 60);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
+  height: var(--_b);
+  width: var(--s);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
+  background-size: 26% var(--_a);
+  animation: __loading-thin-8-l8 var(--d) infinite;
 }
 @keyframes __loading-thin-8-l8 {
   0%,
@@ -399,13 +498,20 @@
       calc(0 * 100% / 3) 50%;
   }
 }
+
 .__loading-thin-9 {
-  height: 6px;
-  width: 60px;
-  --c: no-repeat repeating-linear-gradient(90deg, #000 0 3px, #0000 0 6px);
-  background: var(--c), var(--c);
-  background-size: 100% 3px;
-  animation: __loading-thin-9-l9 1s infinite;
+  --s: var(--size, 60px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 3 / 60);
+  --_b: calc(var(--s) * 6 / 60);
+  --__a: no-repeat repeating-linear-gradient(90deg, var(--c1) 0 3px, #0000 0 6px);
+
+  height: var(--_b);
+  width: var(--s);
+  background: var(--__a), var(--__a);
+  background-size: 100% var(--_a);
+  animation: __loading-thin-9-l9 var(--d) infinite;
 }
 @keyframes __loading-thin-9-l9 {
   0%,
@@ -413,60 +519,21 @@
   100% {
     background-position:
       0 50%,
-      3px 50%;
+      var(--_a) 50%;
   }
   23.33% {
     background-position:
       0 0,
-      3px 100%;
+      var(--_a) 100%;
   }
   46.67% {
     background-position:
-      3px 0,
+      var(--_a) 0,
       0 100%;
   }
   69.99% {
     background-position:
-      3px 50%,
+      var(--_a) 50%,
       0 50%;
-  }
-}
-.__loading-thin-10 {
-  height: 3px;
-  width: 60px;
-  background: linear-gradient(#000 0 0) right/51% 100% no-repeat;
-  display: flex;
-  animation: __loading-thin-10-l10-0 2s linear infinite;
-}
-.__loading-thin-10:before,
-.__loading-thin-10:after {
-  content: '';
-  width: 15px;
-  background: #000;
-  animation: __loading-thin-10-l10-1 2s linear infinite;
-}
-.__loading-thin-10:after {
-  animation-delay: -1s;
-  --s: -1;
-}
-@keyframes __loading-thin-10-l10-1 {
-  0%,
-  100% {
-    transform: scaleX(var(--s, 1)) rotate(0);
-  }
-  25%,
-  75% {
-    transform: scaleX(var(--s, 1)) rotate(180deg);
-  }
-}
-
-@keyframes __loading-thin-10-l10-0 {
-  0%,
-  49.9% {
-    transform: scaleX(1);
-  }
-  50%,
-  100% {
-    transform: scaleX(-1);
   }
 }

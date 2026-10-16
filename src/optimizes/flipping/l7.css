@@ -5,7 +5,7 @@
   --d2: var(--duration-2, calc(var(--d) / 2));
   --c1: var(--color-1, #ffa516);
 
-  --__a: calc(var(--s) * 5 / 2);
+  --_a: calc(var(--s) * 5 / 2);
 
   width: var(--s);
   aspect-ratio: 1;
@@ -23,7 +23,7 @@
   position: absolute;
   inset: 0 50% 50% 0;
   background: var(--c1);
-  transform: scale(var(--__s, 1)) perspective(var(--__a)) rotateY(0deg);
+  transform: scale(var(--__s, 1)) perspective(var(--_a)) rotateY(0deg);
   transform-origin: bottom right;
   animation: __loading-flipping-7-l7-1 var(--d2) infinite linear alternate;
 }
@@ -40,15 +40,15 @@
 }
 @keyframes __loading-flipping-7-l7-1 {
   49.99% {
-    transform: scale(var(--__s, 1)) perspective(var(--__a)) rotateX(-90deg);
+    transform: scale(var(--__s, 1)) perspective(var(--_a)) rotateX(-90deg);
     filter: grayscale(0);
   }
   50% {
-    transform: scale(var(--__s, 1)) perspective(var(--__a)) rotateX(-90deg);
+    transform: scale(var(--__s, 1)) perspective(var(--_a)) rotateX(-90deg);
     filter: grayscale(0.8);
   }
   100% {
-    transform: scale(var(--__s, 1)) perspective(var(--__a)) rotateX(-180deg);
+    transform: scale(var(--__s, 1)) perspective(var(--_a)) rotateX(-180deg);
     filter: grayscale(0.8);
   }
 }

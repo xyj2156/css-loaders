@@ -1,0 +1,36 @@
+.__loading-time-2 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 2 / 40);
+  --_b: calc(var(--s) * 3 / 40);
+  --_c: calc(var(--s) * 10 / 40);
+  --_d: calc(var(--s) * 50 / 40);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border: var(--_a) solid;
+  box-sizing: border-box;
+  color: var(--c1);
+  background:
+    radial-gradient(circle var(--_b), currentColor 95%, #0000),
+    linear-gradient(currentColor 50%, #0000 0) 50% / var(--_b) 80% no-repeat,
+    linear-gradient(90deg, currentColor 50%, #0000 0) 50%/60% var(--_b) no-repeat;
+  position: relative;
+}
+.__loading-time-2:before {
+  content: '';
+  position: absolute;
+  height: var(--_d);
+  inset: 100% 10% auto;
+  background:
+    radial-gradient(circle closest-side at 50% calc(100% - var(--_c)), currentColor 94%, #0000),
+    linear-gradient(currentColor 0 0) top/var(--_b) 80% no-repeat;
+  transform-origin: top;
+  animation: __loading-time-2-l2 var(--d) infinite cubic-bezier(0.5, 200, 0.5, -200);
+}
+@keyframes __loading-time-2-l2 {
+  100% {
+    transform: rotate(0.4deg);
+  }
+}

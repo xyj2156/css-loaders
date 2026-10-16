@@ -6,21 +6,21 @@
   --c2: var(--color-2, #000);
   --c3: var(--color-3, #fff);
 
-  --dot-size: calc(var(--s) / 3.75);
-  --bar-height: calc(var(--s) / 3);
-  --offset-small: calc(var(--s) / 30);
-  --offset-large: calc(var(--s) - var(--offset-small));
-  --neg-offset: calc(var(--s) / -3);
+  --_a: calc(var(--s) / 3.75);
+  --_b: calc(var(--s) / 3);
+  --_c: calc(var(--s) / 30);
+  --_d: calc(var(--s) - var(--_c));
+  --_e: calc(var(--s) / -3);
 
   height: var(--s);
   aspect-ratio: 2;
   background:
-    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0/var(--dot-size) var(--dot-size),
-    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0/var(--dot-size) var(--dot-size),
-    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0/var(--dot-size) var(--dot-size),
-    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0/var(--dot-size) var(--dot-size),
-    radial-gradient(farthest-side, var(--c2) 90%, #0000) 0 0/var(--dot-size) var(--dot-size),
-    linear-gradient(var(--c3) 0 0) center/100% var(--bar-height),
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0 / var(--_a) var(--_a),
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0 / var(--_a) var(--_a),
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0 / var(--_a) var(--_a),
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 0 / var(--_a) var(--_a),
+    radial-gradient(farthest-side, var(--c2) 90%, #0000) 0 0 / var(--_a) var(--_a),
+    linear-gradient(var(--c3) 0 0) center/100% var(--_b),
     linear-gradient(var(--c3) 0 0) right/50% 100%;
   background-repeat: no-repeat;
   animation: __loading-maze-10-l10 var(--d1) infinite;
@@ -29,21 +29,21 @@
 @keyframes __loading-maze-10-l10 {
   0% {
     background-position:
-      top var(--offset-small) right var(--offset-small),
-      right var(--offset-small) bottom var(--offset-small),
-      top var(--offset-small) left var(--offset-large),
-      bottom var(--offset-small) left var(--offset-large),
-      var(--neg-offset) 50%,
+      top var(--_c) right var(--_c),
+      right var(--_c) bottom var(--_c),
+      top var(--_c) left var(--_d),
+      bottom var(--_c) left var(--_d),
+      var(--_e) 50%,
       50%,
       right;
   }
   50%,
   60% {
     background-position:
-      top var(--offset-small) right var(--offset-small),
-      right var(--offset-small) bottom var(--offset-small),
-      top var(--offset-small) left var(--offset-large),
-      bottom var(--offset-small) left var(--offset-large),
+      top var(--_c) right var(--_c),
+      right var(--_c) bottom var(--_c),
+      top var(--_c) left var(--_d),
+      bottom var(--_c) left var(--_d),
       left 75% top 50%,
       50%,
       right;
@@ -64,17 +64,17 @@
       75% 50%,
       75% 50%,
       75% 50%,
-      var(--neg-offset) 50%,
+      var(--_e) 50%,
       50%,
       right;
   }
   100% {
     background-position:
-      top var(--offset-small) right var(--offset-small),
-      right var(--offset-small) bottom var(--offset-small),
-      top var(--offset-small) left var(--offset-large),
-      bottom var(--offset-small) left var(--offset-large),
-      var(--neg-offset) 50%,
+      top var(--_c) right var(--_c),
+      right var(--_c) bottom var(--_c),
+      top var(--_c) left var(--_d),
+      bottom var(--_c) left var(--_d),
+      var(--_e) 50%,
       50%,
       right;
   }

@@ -3,7 +3,8 @@
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 2));
   --c1: var(--color-1, #0b486b);
-  --b: 25%;
+
+  --__a: 25%;
 
   height: var(--s);
   aspect-ratio: 1 / cos(30deg);
@@ -13,10 +14,10 @@
     100% 100%,
     0 100%,
     50% 0,
-    50% var(--b),
-    calc(var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
-    calc(100% - var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
-    50% var(--b)
+    50% var(--__a),
+    calc(var(--__a) * cos(30deg)) calc(100% - var(--__a) / 2),
+    calc(100% - var(--__a) * cos(30deg)) calc(100% - var(--__a) / 2),
+    50% var(--__a)
   );
   filter: blur(calc(var(--s) * 3 / 20));
 }

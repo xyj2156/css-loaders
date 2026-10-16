@@ -1,16 +1,18 @@
 .__loading-bars-4 {
   --s: var(--size, 45px);
-  --c1: var(--color-1, #000);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
-  --_c: no-repeat linear-gradient(var(--c1) calc(50% - 10px), #0000 0 calc(50% + 10px), var(--c1) 0);
+  --c1: var(--color-1, #000);
+
+  --__a: no-repeat
+    linear-gradient(var(--c1) calc(50% - 10px), #0000 0 calc(50% + 10px), var(--c1) 0);
 
   width: var(--s);
   aspect-ratio: 1;
   background:
-    var(--_c) 0% 100%,
-    var(--_c) 50% 100%,
-    var(--_c) 100% 100%;
+    var(--__a) 0% 100%,
+    var(--__a) 50% 100%,
+    var(--__a) 100% 100%;
   background-size: calc(20% * var(--s) / 45) calc(200% + 20px);
   animation: __loading-bars-4-l4 var(--d1) infinite linear;
 }

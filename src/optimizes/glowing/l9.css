@@ -3,9 +3,9 @@
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 2));
   --c1: var(--color-1, #fa6900);
+
   --g: /calc(30.259% + 5.027px) calc(30.259% + 5.027px)
     radial-gradient(#0000 calc(70% - 8px), #000 calc(71% - 8px) 70%, #0000 71%) no-repeat;
-
   height: var(--s);
   aspect-ratio: 1;
   position: relative;

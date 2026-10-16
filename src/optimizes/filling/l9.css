@@ -1,10 +1,11 @@
 .__loading-filling-9 {
   --s: var(--size, 40px);
-  --c: var(--content, 'Loading');
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 2));
   --c1: var(--color-1, #000);
   --c2: var(--color-2, #0000);
+
+  --__a: var(--content, 'Loading');
 
   width: fit-content;
   font-size: var(--s);
@@ -15,12 +16,14 @@
   color: #0000;
   -webkit-text-stroke: 1px var(--c1);
   background:
-    radial-gradient(1.13em at 50% 1.6em, var(--c1) 99%, var(--c2) 101%) calc(50% - 1.6em) 0/3.2em 100% text,
-    radial-gradient(1.13em at 50% -0.8em, var(--c2) 99%, var(--c1) 101%) 50% 0.8em/3.2em 100% repeat-x text;
+    radial-gradient(1.13em at 50% 1.6em, var(--c1) 99%, var(--c2) 101%) calc(50% - 1.6em) 0/3.2em
+      100% text,
+    radial-gradient(1.13em at 50% -0.8em, var(--c2) 99%, var(--c1) 101%) 50% 0.8em/3.2em 100%
+      repeat-x text;
   animation: __loading-filling-9-l9 var(--d1) linear infinite;
 }
 .__loading-filling-9:before {
-  content: var(--c);
+  content: var(--__a);
 }
 @keyframes __loading-filling-9-l9 {
   to {

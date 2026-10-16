@@ -2,16 +2,17 @@
   --s: var(--size, 180px);
   --d: var(--duration, 2s);
   --c1: var(--color-1, #8d7958);
-  --__w: calc(var(--s) / 6);
-  --__h: calc(var(--s) / 7.2);
+
+  --_a: calc(var(--s) / 6);
+  --_b: calc(var(--s) / 7.2);
 
   width: var(--s);
   height: calc(var(--s) / 3.6);
   display: flex;
   color: var(--c1);
   filter: drop-shadow(calc(var(--s) / 6) calc(var(--s) / 7.2) 0 currentColor)
-          drop-shadow(calc(var(--s) / 3) 0 0 currentColor)
-          drop-shadow(calc(var(--s) / 1.5) 0 0 currentColor);
+    drop-shadow(calc(var(--s) / 3) 0 0 currentColor)
+    drop-shadow(calc(var(--s) / 1.5) 0 0 currentColor);
   clip-path: inset(0 100% 0 0);
   animation: __loading-nature-12-l12 var(--d) infinite steps(7);
 }

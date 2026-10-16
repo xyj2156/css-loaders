@@ -1,0 +1,547 @@
+.__loading-zig-zag-1 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #000);
+  --__a: var(--c1) 90deg, #0000 0;
+
+  height: var(--s);
+  aspect-ratio: 5;
+  background:
+    conic-gradient(from 135deg at top, var(--__a)),
+    conic-gradient(from -45deg at bottom, var(--__a)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  animation: __loading-zig-zag-1-l1 var(--d) infinite linear;
+}
+@keyframes __loading-zig-zag-1-l1 {
+  to {
+    background-position:
+      25% 0,
+      37.5% 100%;
+  }
+}
+
+.__loading-zig-zag-10 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 2s);
+  --d1: var(--duration-1, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #000);
+
+  display: inline-grid;
+  animation: __loading-zig-zag-10-l10-0 var(--d) infinite steps(1);
+}
+.__loading-zig-zag-10:before,
+.__loading-zig-zag-10:after {
+  content: '';
+  height: var(--s);
+  aspect-ratio: 5;
+  --c: var(--c1) 90deg, #0000 0;
+  background:
+    conic-gradient(from 135deg at top, var(--c)),
+    conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-zig-zag-10-l10-1 var(--d1) infinite linear alternate;
+}
+.__loading-zig-zag-10:after {
+  scale: -1 1;
+}
+@keyframes __loading-zig-zag-10-l10-0 {
+  50% {
+    scale: -1 1;
+  }
+}
+@keyframes __loading-zig-zag-10-l10-1 {
+  to {
+    clip-path: inset(0);
+  }
+}
+
+.__loading-zig-zag-11 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 2.5s);
+  --c1: var(--color-1, #000);
+  --__a: var(--c1) 90deg, #0000 0;
+
+  height: var(--s);
+  aspect-ratio: 5;
+  background:
+    conic-gradient(from 135deg at top, var(--__a)),
+    conic-gradient(from -45deg at bottom, var(--__a)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-zig-zag-11-l11 var(--d) infinite steps(11, jump-none);
+}
+@keyframes __loading-zig-zag-11-l11 {
+  to {
+    clip-path: inset(0);
+  }
+}
+
+.__loading-zig-zag-12 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 2.5s);
+  --c1: var(--color-1, #000);
+  --__a: var(--c1) 90deg, #0000 0;
+
+  height: var(--s);
+  aspect-ratio: 5;
+  background:
+    conic-gradient(from 135deg at top, var(--__a)),
+    conic-gradient(from -45deg at bottom, var(--__a)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-zig-zag-12-l12 var(--d) infinite steps(11, jump-none) alternate;
+}
+@keyframes __loading-zig-zag-12-l12 {
+  to {
+    clip-path: inset(0);
+  }
+}
+
+.__loading-zig-zag-13 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 2.5s);
+  --c1: var(--color-1, #000);
+  --__a: var(--c1) 90deg, #0000 0;
+
+  height: var(--s);
+  aspect-ratio: 5;
+  background:
+    conic-gradient(from 135deg at top, var(--__a)),
+    conic-gradient(from -45deg at bottom, var(--__a)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation:
+    __loading-zig-zag-13-l13-0 var(--d) infinite steps(11, jump-none) alternate,
+    __loading-zig-zag-13-l13-1 5s infinite steps(1);
+}
+@keyframes __loading-zig-zag-13-l13-0 {
+  to {
+    clip-path: inset(0);
+  }
+}
+@keyframes __loading-zig-zag-13-l13-1 {
+  50% {
+    scale: -1 1;
+  }
+}
+
+.__loading-zig-zag-14 {
+  --s: var(--size, 28px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #000);
+
+  display: inline-grid;
+}
+.__loading-zig-zag-14:before,
+.__loading-zig-zag-14:after {
+  content: '';
+  grid-area: 1/1;
+  height: var(--s);
+  aspect-ratio: 5;
+  --c: var(--c1) 90deg, #0000 0;
+  background:
+    conic-gradient(from 135deg at top, var(--c)),
+    conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  -webkit-mask: repeating-linear-gradient(90deg, var(--c1) 0 10%, #0000 0 20%);
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-zig-zag-14-l14 var(--d) infinite steps(6, jump-none);
+}
+.__loading-zig-zag-14:after {
+  scale: -1 1;
+}
+@keyframes __loading-zig-zag-14-l14 {
+  to {
+    clip-path: inset(0);
+  }
+}
+
+.__loading-zig-zag-15 {
+  --s: var(--size, 28px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #000);
+
+  display: inline-grid;
+}
+.__loading-zig-zag-15:before,
+.__loading-zig-zag-15:after {
+  content: '';
+  grid-area: 1/1;
+  height: var(--s);
+  aspect-ratio: 5;
+  --c: var(--c1) 90deg, #0000 0;
+  background:
+    conic-gradient(from 135deg at top, var(--c)),
+    conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  -webkit-mask: repeating-linear-gradient(90deg, var(--c1) 0 10%, #0000 0 20%);
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-zig-zag-15-l15 var(--d) infinite steps(6, jump-none) alternate;
+}
+.__loading-zig-zag-15:after {
+  scale: -1 1;
+}
+@keyframes __loading-zig-zag-15-l15 {
+  to {
+    clip-path: inset(0);
+  }
+}
+
+.__loading-zig-zag-16 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #000);
+
+  display: inline-grid;
+}
+.__loading-zig-zag-16:before,
+.__loading-zig-zag-16:after {
+  content: '';
+  grid-area: 1/1;
+  height: var(--s);
+  aspect-ratio: 5;
+  --c: var(--c1) 90deg, #0000 0;
+  background:
+    conic-gradient(from 135deg at top, var(--c)),
+    conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  -webkit-mask: repeating-linear-gradient(90deg, var(--c1) 0 10%, #0000 0 20%);
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-zig-zag-16-l16 var(--d) infinite steps(6, jump-none);
+}
+.__loading-zig-zag-16:after {
+  -webkit-mask: repeating-linear-gradient(90deg, #0000 0 10%, var(--c1) 0 20%);
+  animation-delay: -0.75s;
+}
+@keyframes __loading-zig-zag-16-l16 {
+  50%,
+  100% {
+    clip-path: inset(0);
+  }
+}
+
+.__loading-zig-zag-17 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 1.2s);
+  --c1: var(--color-1, #000);
+  --__a: var(--c1) 90deg, #0000 0;
+
+  height: var(--s);
+  aspect-ratio: 5;
+  background:
+    conic-gradient(from 135deg at top, var(--__a)),
+    conic-gradient(from -45deg at bottom, var(--__a)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 60% 0 0);
+  animation: __loading-zig-zag-17-l17 var(--d) infinite steps(7, jump-none) alternate;
+}
+@keyframes __loading-zig-zag-17-l17 {
+  to {
+    clip-path: inset(0 0 0 60%);
+  }
+}
+
+.__loading-zig-zag-18 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --__a: var(--c1) 90deg, #0000 0;
+
+  height: var(--s);
+  aspect-ratio: 5;
+  background:
+    conic-gradient(from 135deg at top, var(--__a)),
+    conic-gradient(from -45deg at bottom, var(--__a)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 50%);
+  animation: __loading-zig-zag-18-l18 var(--d) infinite steps(5) alternate;
+}
+@keyframes __loading-zig-zag-18-l18 {
+  90%,
+  to {
+    clip-path: inset(0);
+  }
+}
+
+.__loading-zig-zag-19 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #000);
+
+  display: inline-grid;
+}
+.__loading-zig-zag-19:before,
+.__loading-zig-zag-19:after {
+  content: '';
+  height: var(--s);
+  aspect-ratio: 5;
+  --c: var(--c1) 90deg, #0000 0;
+  background:
+    conic-gradient(from 135deg at top, var(--c)),
+    conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 60% 0 0);
+  animation: __loading-zig-zag-19-l19 var(--d) infinite steps(7, jump-none) alternate;
+}
+.__loading-zig-zag-19:after {
+  animation-direction: alternate-reverse;
+}
+@keyframes __loading-zig-zag-19-l19 {
+  to {
+    clip-path: inset(0 0 0 60%);
+  }
+}
+
+.__loading-zig-zag-2 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --__a: var(--c1) 90deg, #0000 0;
+
+  height: var(--s);
+  aspect-ratio: 5;
+  background:
+    conic-gradient(from 135deg at top, var(--__a)),
+    conic-gradient(from -45deg at bottom, var(--__a)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-zig-zag-2-l2 var(--d) infinite linear;
+}
+@keyframes __loading-zig-zag-2-l2 {
+  90%,
+  to {
+    clip-path: inset(0);
+  }
+}
+
+.__loading-zig-zag-20 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+
+  display: inline-grid;
+}
+.__loading-zig-zag-20:before,
+.__loading-zig-zag-20:after {
+  content: '';
+  height: var(--s);
+  aspect-ratio: 5;
+  --c: var(--c1) 90deg, #0000 0;
+  background:
+    conic-gradient(from 135deg at top, var(--c)),
+    conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 50%);
+  animation: __loading-zig-zag-20-l20 var(--d) infinite steps(5) alternate;
+}
+.__loading-zig-zag-20:after {
+  animation-delay: -var(--d);
+}
+@keyframes __loading-zig-zag-20-l20 {
+  90%,
+  to {
+    clip-path: inset(0);
+  }
+}
+
+.__loading-zig-zag-3 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --__a: var(--c1) 90deg, #0000 0;
+
+  height: var(--s);
+  aspect-ratio: 5;
+  background:
+    conic-gradient(from 135deg at top, var(--__a)),
+    conic-gradient(from -45deg at bottom, var(--__a)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 50%);
+  animation: __loading-zig-zag-3-l3 var(--d) infinite linear;
+}
+@keyframes __loading-zig-zag-3-l3 {
+  90%,
+  to {
+    clip-path: inset(0);
+  }
+}
+
+.__loading-zig-zag-4 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --__a: var(--c1) 90deg, #0000 0;
+
+  height: var(--s);
+  aspect-ratio: 5;
+  background:
+    conic-gradient(from 135deg at top, var(--__a)),
+    conic-gradient(from -45deg at bottom, var(--__a)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation:
+    __loading-zig-zag-4-l4-0 var(--d) infinite linear,
+    __loading-zig-zag-4-l4-1 2s infinite steps(1);
+}
+@keyframes __loading-zig-zag-4-l4-0 {
+  to {
+    clip-path: inset(0);
+  }
+}
+@keyframes __loading-zig-zag-4-l4-1 {
+  50% {
+    scale: -1 1;
+  }
+}
+
+.__loading-zig-zag-5 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #000);
+  --__a: var(--c1) 90deg, #0000 0;
+
+  height: var(--s);
+  aspect-ratio: 5;
+  background:
+    conic-gradient(from 135deg at top, var(--__a)),
+    conic-gradient(from -45deg at bottom, var(--__a)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 60% 0 0);
+  animation: __loading-zig-zag-5-l5 var(--d) infinite linear alternate;
+}
+@keyframes __loading-zig-zag-5-l5 {
+  to {
+    clip-path: inset(0 0 0 60%);
+  }
+}
+
+.__loading-zig-zag-6 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #000);
+  --__a: var(--c1) 90deg, #0000 0;
+
+  height: var(--s);
+  aspect-ratio: 5;
+  background:
+    conic-gradient(from 135deg at top, var(--__a)),
+    conic-gradient(from -45deg at bottom, var(--__a)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  -webkit-mask: repeating-linear-gradient(90deg, var(--c1) 0 15%, #0000 0 50%) 0 0/200%;
+  animation: __loading-zig-zag-6-l6 var(--d) infinite linear;
+}
+@keyframes __loading-zig-zag-6-l6 {
+  to {
+    -webkit-mask-position: -100% 0;
+  }
+}
+
+.__loading-zig-zag-7 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #000);
+
+  display: inline-grid;
+}
+.__loading-zig-zag-7:before,
+.__loading-zig-zag-7:after {
+  content: '';
+  height: var(--s);
+  aspect-ratio: 5;
+  --c: var(--c1) 90deg, #0000 0;
+  background:
+    conic-gradient(from 135deg at top, var(--c)),
+    conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 60% 0 0);
+  animation: __loading-zig-zag-7-l7 var(--d) infinite linear alternate;
+}
+.__loading-zig-zag-7:after {
+  animation-direction: alternate-reverse;
+}
+@keyframes __loading-zig-zag-7-l7 {
+  to {
+    clip-path: inset(0 0 0 60%);
+  }
+}
+
+.__loading-zig-zag-8 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #000);
+
+  display: inline-grid;
+}
+.__loading-zig-zag-8:before,
+.__loading-zig-zag-8:after {
+  content: '';
+  height: var(--s);
+  aspect-ratio: 5;
+  --c: var(--c1) 90deg, #0000 0;
+  background:
+    conic-gradient(from 135deg at top, var(--c)),
+    conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  -webkit-mask: repeating-linear-gradient(90deg, var(--c1) 0 15%, #0000 0 50%) 0 0/200%;
+  animation: __loading-zig-zag-8-l8 var(--d) infinite linear;
+}
+.__loading-zig-zag-8:after {
+  animation-delay: -0.2s;
+  animation-direction: reverse;
+}
+@keyframes __loading-zig-zag-8-l8 {
+  to {
+    -webkit-mask-position: -100% 0;
+  }
+}
+
+.__loading-zig-zag-9 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+
+  display: inline-grid;
+}
+.__loading-zig-zag-9:before,
+.__loading-zig-zag-9:after {
+  content: '';
+  height: var(--s);
+  aspect-ratio: 5;
+  --c: var(--c1) 90deg, #0000 0;
+  background:
+    conic-gradient(from 135deg at top, var(--c)),
+    conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation: __loading-zig-zag-9-l9 var(--d) infinite linear;
+}
+.__loading-zig-zag-9:after {
+  scale: -1 1;
+}
+@keyframes __loading-zig-zag-9-l9 {
+  90%,
+  to {
+    clip-path: inset(0);
+  }
+}

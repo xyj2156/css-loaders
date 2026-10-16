@@ -2,6 +2,7 @@
   --s: var(--size, 15px);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1));
+
   width: calc(var(--s) * 2.33);
   aspect-ratio: 1;
   display: flex;

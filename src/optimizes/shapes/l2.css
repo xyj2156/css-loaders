@@ -1,0 +1,25 @@
+.__loading-shapes-2 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #25b09b);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background: var(--c1);
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  animation: __loading-shapes-2-l2 var(--d) infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes __loading-shapes-2-l2 {
+  25% {
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+  }
+  75% {
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+}

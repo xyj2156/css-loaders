@@ -1,0 +1,39 @@
+.__loading-shuriken-10 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #8d7958);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 5 / 80);
+  --_b: calc(var(--s) * 16 / 80);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+  color: var(--c1);
+  background: radial-gradient(circle var(--_b), currentColor 94%, #0000);
+  -webkit-mask: radial-gradient(circle var(--_a), #0000 90%, var(--c2));
+  animation: __loading-shuriken-10-l10 var(--d) infinite linear;
+}
+.__loading-shuriken-10:before,
+.__loading-shuriken-10:after {
+  content: '';
+  grid-area: 1/1;
+  background:
+    radial-gradient(farthest-side at bottom right, currentColor 94%, #0000) top right,
+    radial-gradient(farthest-side at top left, currentColor 94%, #0000) bottom left;
+  background-size: 40% 45%;
+  background-repeat: no-repeat;
+  -webkit-mask:
+    radial-gradient(60% 100% at bottom right, #0000 94%, var(--c2)) top right,
+    radial-gradient(60% 100% at top left, #0000 94%, var(--c2)) bottom left;
+  -webkit-mask-size: 40% 45%;
+  -webkit-mask-repeat: no-repeat;
+}
+.__loading-shuriken-10:after {
+  transform: rotate(90deg);
+}
+@keyframes __loading-shuriken-10-l10 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

@@ -1,13 +1,14 @@
 .__loading-moving-8 {
   --s: var(--size, 60px);
   --d: var(--duration, 1s);
-  --d1:var(--duration-1, calc(var(--d) * 3 / 2));
+  --d1: var(--duration-1, calc(var(--d) * 3 / 2));
   --c1: var(--color-1, #ccc);
 
-  --c: no-repeat linear-gradient(var(--c1) 0 0);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
   height: var(--s);
   aspect-ratio: 2/3;
-  background: var(--c), var(--c), var(--c), var(--c);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
   background-size: 50% 33.4%;
   animation: __loading-moving-8-l8 var(--d1) infinite linear;
 }

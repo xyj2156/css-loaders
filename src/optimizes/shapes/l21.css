@@ -1,0 +1,37 @@
+.__loading-shapes-21 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #f03355);
+  --_a: calc(var(--s) * 100 / 40);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: flex;
+}
+.__loading-shapes-21:before,
+.__loading-shapes-21:after {
+  content: '';
+  flex: 1;
+  background: var(--c1);
+  animation: __loading-shapes-21-l21 var(--d) infinite;
+  border-radius: var(--_a) 0 0 var(--_a);
+  transform-origin: top right;
+  transform: translateY(calc(var(--s, 1) * 0%)) rotate(0);
+}
+.__loading-shapes-21:after {
+  transform-origin: bottom left;
+  border-radius: 0 var(--_a) var(--_a) 0;
+  --s: -1;
+}
+@keyframes __loading-shapes-21-l21 {
+  33% {
+    transform: translate(0, calc(var(--s, 1) * 50%)) rotate(0);
+  }
+  66% {
+    transform: translate(0, calc(var(--s, 1) * 50%)) rotate(-90deg);
+  }
+  90%,
+  100% {
+    transform: translate(calc(var(--s, 1) * -100%), calc(var(--s, 1) * 50%)) rotate(-90deg);
+  }
+}

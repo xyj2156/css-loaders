@@ -1,10 +1,11 @@
 .__loading-classic-24 {
-  --c:  var(--content, 'Loading...');
-  --s:  var(--size, 30px);
+  --s: var(--size, 30px);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, var(--d));
   --c1: var(--color-1, #000);
   --c2: var(--color-2, #fff);
-  --d:  var(--duration, 1s);
-  --d1: var(--duration-1, var(--d));
+
+  --__a: var(--content, 'Loading...');
 
   width: fit-content;
   font-weight: bold;
@@ -15,7 +16,7 @@
 }
 
 .__loading-classic-24::before {
-  content: var(--c);
+  content: var(--__a);
   line-height: 1em;
   color: #0000;
   background: inherit;

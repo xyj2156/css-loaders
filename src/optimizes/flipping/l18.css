@@ -6,14 +6,17 @@
   --d3: var(--duration-3, calc(var(--d) * 0.25));
   --c1: var(--color-1, #fc3a51);
 
+  --_a:
+    #0000 calc(100% - calc(var(--s) / 3)), currentColor calc(100% - calc(var(--s) / 3.16)) 98%,
+    #0000;
+
   width: var(--s);
   height: var(--s);
   display: flex;
   color: var(--c1);
-  --c: #0000 calc(100% - calc(var(--s) / 3)), currentColor calc(100% - calc(var(--s) / 3.16)) 98%, #0000;
   background:
-    radial-gradient(farthest-side at left, var(--c)) right / 50% 100%,
-    radial-gradient(farthest-side at top, var(--c)) bottom/100% 50%;
+    radial-gradient(farthest-side at left, var(--_a)) right / 50% 100%,
+    radial-gradient(farthest-side at top, var(--_a)) bottom/100% 50%;
   background-repeat: no-repeat;
   animation: __loading-flipping-18-l18-0 var(--d1) infinite linear var(--d3);
 }
@@ -22,7 +25,7 @@
   content: '';
   width: 50%;
   height: 50%;
-  background: radial-gradient(farthest-side at bottom right, var(--c));
+  background: radial-gradient(farthest-side at bottom right, var(--_a));
   animation: __loading-flipping-18-l18-1 var(--d2) infinite linear;
 }
 

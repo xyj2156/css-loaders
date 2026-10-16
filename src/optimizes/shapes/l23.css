@@ -1,0 +1,54 @@
+.__loading-shapes-23 {
+  --s: var(--size, 36px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #25b09b);
+  --_a: calc(var(--s) * 1 / 36);
+  --_b: calc(var(--s) * 2 / 36);
+  --_c: calc(var(--s) * 3 / 36);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  color: var(--c1);
+  background: linear-gradient(45deg, #0000 24%, currentColor 0 76%, #0000 0);
+  position: relative;
+  animation: __loading-shapes-23-l23-0 var(--d) infinite;
+}
+.__loading-shapes-23:before,
+.__loading-shapes-23:after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background: currentColor;
+  transform-origin: top left;
+  clip-path: polygon(-var(--_b) 0, 0 -var(--_a), 100% 100%, -var(--_b) 100%);
+  inset: auto auto 0 0;
+  animation: __loading-shapes-23-l23-1 var(--d) infinite;
+}
+.__loading-shapes-23:after {
+  inset: 0 0 auto auto;
+  transform-origin: bottom right;
+  clip-path: polygon(
+    0 0,
+    calc(100% + var(--_b)) 0,
+    calc(100% + var(--_b)) 100%,
+    100% calc(100% + var(--_a))
+  );
+}
+@keyframes __loading-shapes-23-l23-0 {
+  0%,
+  50% {
+    transform: skewX(0);
+  }
+  90%,
+  100% {
+    transform: skewX(-45deg);
+  }
+}
+@keyframes __loading-shapes-23-l23-1 {
+  40%,
+  100% {
+    transform: rotate(180deg);
+    box-shadow: 0 0 0 var(--_c);
+  }
+}

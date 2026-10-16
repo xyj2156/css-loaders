@@ -17,7 +17,8 @@
   border-radius: 50%;
   background:
     linear-gradient(var(--c1) 0 0) top/100% 40% no-repeat,
-    radial-gradient(farthest-side, #000 95%, #0000) 50%/calc(var(--s) * 0.4) calc(var(--s) * 0.4) no-repeat var(--c2);
+    radial-gradient(farthest-side, #000 95%, #0000) 50% / calc(var(--s) * 0.4) calc(var(--s) * 0.4)
+      no-repeat var(--c2);
   animation: __loading-eyes-7-l7 var(--d1) infinite alternate ease-in;
 }
 

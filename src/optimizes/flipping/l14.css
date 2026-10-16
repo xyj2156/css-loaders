@@ -7,9 +7,9 @@
   --c1: var(--color-1, #fa6900);
   --c2: var(--color-2, #2fb8ac);
 
-  --_150: calc(var(--s) / 2 * 5);
-  --_100: calc(var(--s) / 3 * 5);
-  --_-10: calc(var(--s) / 6 * -1);
+  --_a: calc(var(--s) / 2 * 5);
+  --_b: calc(var(--s) / 3 * 5);
+  --_c: calc(var(--s) / 6 * -1);
 
   width: 60px;
   aspect-ratio: 1;
@@ -28,38 +28,43 @@
 @keyframes __loading-flipping-14-l14 {
   0%,
   30% {
-    transform: scale(var(--_s, 1)) translate(0px) perspective(var(--_150, var(--_150))) rotateY(0deg);
+    transform: scale(var(--_s, 1)) translate(0px) perspective(var(--_150, var(--_a))) rotateY(0deg);
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 75%, 0 25%);
     background: var(--c1);
   }
   37.5% {
-    transform: scale(var(--_s, 1)) translate(var(--_-10)) perspective(var(--_150, var(--_150))) rotateX(0deg);
+    transform: scale(var(--_s, 1)) translate(var(--_c)) perspective(var(--_150, var(--_a)))
+      rotateX(0deg);
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 75%, 0 25%);
     background: var(--c1);
   }
   50% {
-    transform: scale(var(--_s, 1)) translate(var(--_-10)) perspective(var(--_150, var(--_150))) rotateX(-90deg);
+    transform: scale(var(--_s, 1)) translate(var(--_c)) perspective(var(--_150, var(--_a)))
+      rotateX(-90deg);
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 75%, 0 25%);
     background: var(--c1);
     border-radius: 0;
   }
   50.01% {
-    transform: scale(var(--_s, 1)) translate(var(--_-10)) perspective(var(--_150, var(--_150))) rotateX(-90.1deg);
+    transform: scale(var(--_s, 1)) translate(var(--_c)) perspective(var(--_150, var(--_a)))
+      rotateX(-90.1deg);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 25%);
     background: var(--c2);
-    border-radius: var(--_100) 0 0 var(--_100);
+    border-radius: var(--_b) 0 0 var(--_b);
   }
   62.5% {
-    transform: scale(var(--_s, 1)) translate(var(--_-10)) perspective(var(--_150, var(--_150))) rotateX(-180deg);
+    transform: scale(var(--_s, 1)) translate(var(--_c)) perspective(var(--_150, var(--_a)))
+      rotateX(-180deg);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 25%);
     background: var(--c2);
-    border-radius: var(--_100) 0 0 var(--_100);
+    border-radius: var(--_b) 0 0 var(--_b);
   }
   70%,
   100% {
-    transform: scale(var(--_s, 1)) translate(0px) perspective(var(--_150, var(--_150))) rotateX(-180deg);
+    transform: scale(var(--_s, 1)) translate(0px) perspective(var(--_150, var(--_a)))
+      rotateX(-180deg);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 25%);
     background: var(--c2);
-    border-radius: var(--_100) 0 0 var(--_100);
+    border-radius: var(--_b) 0 0 var(--_b);
   }
 }

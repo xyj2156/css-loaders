@@ -5,14 +5,14 @@
   --c1: var(--color-1, #000);
 
   --__a: calc(100% / 3);
-  --_g: no-repeat radial-gradient(circle closest-side, var(--c1) 90%, #0000);
+  --__b: no-repeat radial-gradient(circle closest-side, var(--c1) 90%, #0000);
 
   width: var(--s);
   aspect-ratio: 4;
   background:
-    var(--_g) 0% 50%,
-    var(--_g) 50% 50%,
-    var(--_g) 100% 50%;
+    var(--__b) 0% 50%,
+    var(--__b) 50% 50%,
+    var(--__b) 100% 50%;
   background-size: var(--__a) 100%;
   animation: __loading-dots-7-l7 var(--d1) infinite linear;
 }

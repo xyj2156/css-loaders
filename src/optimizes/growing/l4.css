@@ -3,7 +3,8 @@
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1));
   --c1: var(--color-1, #bd1550);
-  --b: calc(var(--s) / 8);
+
+  --_a: calc(var(--s) / 8);
 
   width: var(--s);
   aspect-ratio: 1 / cos(30deg);
@@ -20,13 +21,13 @@
     100% 50%,
     50% 150%,
     0 50%,
-    var(--b) 50%,
-    calc(25% + var(--b) * cos(60deg)) calc(100% - var(--b) * sin(60deg)),
-    calc(75% - var(--b) * cos(60deg)) calc(100% - var(--b) * sin(60deg)),
-    calc(100% - var(--b)) 50%,
-    calc(75% - var(--b) * cos(60deg)) calc(var(--b) * sin(60deg)),
-    calc(25% + var(--b) * cos(60deg)) calc(var(--b) * sin(60deg)),
-    var(--b) 50%
+    var(--_a) 50%,
+    calc(25% + var(--_a) * cos(60deg)) calc(100% - var(--_a) * sin(60deg)),
+    calc(75% - var(--_a) * cos(60deg)) calc(100% - var(--_a) * sin(60deg)),
+    calc(100% - var(--_a)) 50%,
+    calc(75% - var(--_a) * cos(60deg)) calc(var(--_a) * sin(60deg)),
+    calc(25% + var(--_a) * cos(60deg)) calc(var(--_a) * sin(60deg)),
+    var(--_a) 50%
   );
   margin: auto;
   animation: __loading-growing-4-l4 infinite var(--d1) steps(4, jump-none);

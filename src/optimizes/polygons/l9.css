@@ -1,0 +1,48 @@
+.__loading-polygons-9 {
+  --s: var(--size, 90px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #83988e);
+
+  display: inline-flex;
+  width: var(--s);
+  aspect-ratio: 2;
+  animation: __loading-polygons-9-l9-0 var(--d) linear infinite;
+}
+.__loading-polygons-9:before,
+.__loading-polygons-9:after {
+  content: '';
+  flex: 1;
+  background: var(--c1);
+  clip-path: polygon(
+    100% 50%,
+    81.17% 89.09%,
+    38.87% 98.75%,
+    4.95% 71.69%,
+    4.95% 28.31%,
+    38.87% 1.25%,
+    81.17% 10.91%
+  );
+  animation: __loading-polygons-9-l9-1 var(--d) linear infinite;
+  transform-origin: right;
+}
+.__loading-polygons-9:after {
+  scale: -1 1;
+  translate: -100% 0;
+  animation-direction: reverse;
+}
+@keyframes __loading-polygons-9-l9-0 {
+  0% {
+    translate: 0 -21.5%;
+  }
+  to {
+    translate: 0 21.5%;
+  }
+}
+@keyframes __loading-polygons-9-l9-1 {
+  0% {
+    rotate: -25.7deg;
+  }
+  to {
+    rotate: 25.7deg;
+  }
+}

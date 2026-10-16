@@ -1,0 +1,19 @@
+.__loading-spinner-25 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #514b82);
+  --c2: var(--color-2, #000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--c1);
+  -webkit-mask: radial-gradient(circle closest-side at 50% 40%, #0000 94%, var(--c2));
+  transform-origin: 50% 40%;
+  animation: __loading-spinner-25-l25 var(--d) infinite linear;
+}
+@keyframes __loading-spinner-25-l25 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

@@ -1,66 +1,64 @@
 .__loading-hungry-8 {
-  --s:var(--size, 80px);
-
+  --s: var(--size, 80px);
   --d: var(--duration, 1s);
   --d1: calc(var(--d) * 3);
-
   --c1: var(--color-1, #538a2d);
   --c2: var(--color-2, #e7ef9d);
   --c3: var(--color-3, #5c4037);
   --c4: var(--color-4, #ff1643);
   --c5: var(--color-5, #000);
 
-  --_80: var(--s);
-  --_40: calc(var(--s) / 2);
-  --_100: calc(var(--s) * 5 / 4);
-  --_5: calc(var(--s) / 16);
-  --_17: calc(var(--s) * 17 / 80);
-  --_12: calc(var(--s) * 3 / 20);
-  --_2: calc(var(--s) / 40);
-  --_3: calc(var(--s) / 80 * 3);
-  --_20: calc(var(--s) / 4);
-  --_-8: calc(var(--s) / -10);
-  --_29: calc(var(--s) * 29 / 80);
-  --_45: calc(var(--s) * 9 / 16);
-  --_-6: calc(var(--s) / -40 * 3);
-  --_22: calc(var(--s) * 11 / 40);
-  --_-2: calc(var(--s) / -40);
-  --_34: calc(var(--s) * 17 / 40);
-  --_6: calc(var(--s) / 40 * 3);
-  --_21: calc(var(--s) * 21 / 80);
+  --_a: var(--s);
+  --_b: calc(var(--s) / 2);
+  --_c: calc(var(--s) * 5 / 4);
+  --_d: calc(var(--s) / 16);
+  --_e: calc(var(--s) * 17 / 80);
+  --_f: calc(var(--s) * 3 / 20);
+  --_g: calc(var(--s) / 40);
+  --_h: calc(var(--s) / 80 * 3);
+  --_i: calc(var(--s) / 4);
+  --_j: calc(var(--s) / -10);
+  --_k: calc(var(--s) * 29 / 80);
+  --_l: calc(var(--s) * 9 / 16);
+  --_m: calc(var(--s) / -40 * 3);
+  --_n: calc(var(--s) * 11 / 40);
+  --_o: calc(var(--s) / -40);
+  --_p: calc(var(--s) * 17 / 40);
+  --_q: calc(var(--s) / 40 * 3);
+  --_r: calc(var(--s) * 21 / 80);
+  --__a: radial-gradient(farthest-side, var(--c5) 94%, #0000);
 
-  width: var(--_80);
-  height: var(--_40);
-  border-radius: 0 0 var(--_100) var(--_100);
-  border: var(--_5) solid var(--c1);
+  width: var(--_a);
+  height: var(--_b);
+  border-radius: 0 0 var(--_c) var(--_c);
+  border: var(--_d) solid var(--c1);
   border-top: 0;
   box-sizing: border-box;
   background:
     radial-gradient(
       farthest-side at top,
-      #0000 calc(100% - var(--_5)),
-      var(--c2) calc(100% - var(--_5))
+      #0000 calc(100% - var(--_d)),
+      var(--c2) calc(100% - var(--_d))
     ),
-    radial-gradient(var(--_2) var(--_3), var(--c3) 89%, #0000) 0 0 / var(--_17) var(--_12),
+    radial-gradient(var(--_g) var(--_h), var(--c3) 89%, #0000) 0 0 / var(--_e) var(--_f),
     var(--c4);
-  --_z: radial-gradient(farthest-side, var(--c5) 94%, #0000);
   -webkit-mask:
     linear-gradient(#0000 0 0),
-    var(--_z) var(--_12) var(--_-8),
-    var(--_z) var(--_29) var(--_-8),
-    var(--_z) var(--_45) var(--_-6),
-    var(--_z) var(--_22) var(--_-2),
-    var(--_z) var(--_34) var(--_6),
-    var(--_z) var(--_21) var(--_6),
+    var(--__a) var(--_f) var(--_j),
+    var(--__a) var(--_k) var(--_j),
+    var(--__a) var(--_l) var(--_m),
+    var(--__a) var(--_n) var(--_o),
+    var(--__a) var(--_p) var(--_q),
+    var(--__a) var(--_r) var(--_q),
     linear-gradient(var(--c5) 0 0);
   mask:
     linear-gradient(var(--c5) 0 0),
-    var(--_z) var(--_12) var(--_-8),
-    var(--_z) var(--_29) var(--_-8),
-    var(--_z) var(--_45) var(--_-6),
-    var(--_z) var(--_22) var(--_-2),
-    var(--_z) var(--_34) var(--_6),
-    var(--_z) var(--_21) var(--_6),
+    var(--__a) var(--_f) var(--_j),
+    var(--__a) var(--_k) var(--_j),
+    var(--__a) var(--_l) var(--_m),
+    var(--__a) var(--_n) var(--_o),
+    var(--__a) var(--_p) var(--_q),
+    var(--__a) var(--_r) var(--_q),
     linear-gradient(#0000 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude, add, add, add, add, add, add;
@@ -81,7 +79,7 @@
   15% {
     -webkit-mask-size:
       auto,
-      var(--_20) var(--_20),
+      var(--_i) var(--_i),
       0 0,
       0 0,
       0 0,
@@ -91,8 +89,8 @@
   30% {
     -webkit-mask-size:
       auto,
-      var(--_20) var(--_20),
-      var(--_20) var(--_20),
+      var(--_i) var(--_i),
+      var(--_i) var(--_i),
       0 0,
       0 0,
       0 0,
@@ -101,9 +99,9 @@
   45% {
     -webkit-mask-size:
       auto,
-      var(--_20) var(--_20),
-      var(--_20) var(--_20),
-      var(--_20) var(--_20),
+      var(--_i) var(--_i),
+      var(--_i) var(--_i),
+      var(--_i) var(--_i),
       0 0,
       0 0,
       0 0;
@@ -111,32 +109,32 @@
   60% {
     -webkit-mask-size:
       auto,
-      var(--_20) var(--_20),
-      var(--_20) var(--_20),
-      var(--_20) var(--_20),
-      var(--_20) var(--_20),
+      var(--_i) var(--_i),
+      var(--_i) var(--_i),
+      var(--_i) var(--_i),
+      var(--_i) var(--_i),
       0 0,
       0 0;
   }
   75% {
     -webkit-mask-size:
       auto,
-      var(--_20) var(--_20),
-      var(--_20) var(--_20),
-      var(--_20) var(--_20),
-      var(--_20) var(--_20),
-      var(--_20) var(--_20),
+      var(--_i) var(--_i),
+      var(--_i) var(--_i),
+      var(--_i) var(--_i),
+      var(--_i) var(--_i),
+      var(--_i) var(--_i),
       0 0;
   }
   90%,
   100% {
     -webkit-mask-size:
       auto,
-      var(--_20) var(--_20),
-      var(--_20) var(--_20),
-      var(--_20) var(--_20),
-      var(--_20) var(--_20),
-      var(--_20) var(--_20),
-      var(--_20) var(--_20);
+      var(--_i) var(--_i),
+      var(--_i) var(--_i),
+      var(--_i) var(--_i),
+      var(--_i) var(--_i),
+      var(--_i) var(--_i),
+      var(--_i) var(--_i);
   }
 }

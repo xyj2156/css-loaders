@@ -1,0 +1,44 @@
+.__loading-square-vs-circle-9 {
+  --s: var(--size, 75px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #fff);
+  --_a: calc(var(--s) * 2 / 75);
+  --_b: calc(var(--s) * 13 / 75);
+  --_c: calc(var(--s) * 15 / 75);
+  --__a: conic-gradient(from 90deg at 2px 2px, #0000 90deg, var(--c1) 0);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    var(--__a), var(--__a), var(--__a), var(--__a), var(--__a), var(--__a), var(--__a), var(--__a),
+    var(--g2), var(--g2), var(--g2), var(--g2), var(--g2), var(--g2), var(--g2), var(--g2);
+  background-size: var(--_c) var(--_c);
+  background-repeat: no-repeat;
+  animation: __loading-square-vs-circle-9-l9 var(--d) infinite alternate linear;
+}
+@keyframes __loading-square-vs-circle-9-l9 {
+  0%,
+  30% {
+    background-position:
+      0 0,
+      50% 0,
+      100% 0,
+      0 50%,
+      100% 50%,
+      0 100%,
+      50% 100%,
+      100% 100%;
+  }
+  70%,
+  100% {
+    background-position:
+      15% 15%,
+      50% 0,
+      85% 15%,
+      0 50%,
+      100% 50%,
+      15% 85%,
+      50% 100%,
+      85% 85%;
+  }
+}

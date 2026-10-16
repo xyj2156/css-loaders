@@ -1,15 +1,16 @@
 .__loading-bars-1 {
   --s: var(--size, 45px);
-  --c: no-repeat linear-gradient(var(--color, #000) 0 0);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
+
+  --__a: no-repeat linear-gradient(var(--color, #000) 0 0);
 
   width: var(--s);
   aspect-ratio: 1;
   background:
-    var(--c) 0% 50%,
-    var(--c) 50% 50%,
-    var(--c) 100% 50%;
+    var(--__a) 0% 50%,
+    var(--__a) 50% 50%,
+    var(--__a) 100% 50%;
   background-size: 20% 100%;
   animation: __loading-bars-1-l1 var(--d1) infinite linear;
 }

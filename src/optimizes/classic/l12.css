@@ -1,9 +1,10 @@
 .__loading-classic-12 {
-  --c: var(--content, 'Loading...');
   --s: var(--size, 30px);
-  --c1: var(--color-1, black);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, black);
+
+  --__a: var(--content, 'Loading...');
 
   font-weight: bold;
   font-family: monospace;
@@ -14,7 +15,7 @@
 
 .__loading-classic-12:before,
 .__loading-classic-12:after {
-  content: var(--c);
+  content: var(--__a);
   grid-area: 1/1;
   clip-path: inset(0 -200% 50%);
   text-shadow: -10ch 0 0;

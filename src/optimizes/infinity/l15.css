@@ -1,22 +1,22 @@
 .__loading-infinity-15 {
   --s: var(--size, 60px);
-  --c1: var(--color-1, #000);
   --d: var(--duration, 1s);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #000);
 
-  --10: calc(var(--s) / 6);
-  --20: calc(var(--s) / 3);
-  --30: calc(var(--s) / 2);
-  --40: calc(var(--s) * 2 / 3);
-  --50: calc(var(--s) * 5 / 6);
+  --_a: calc(var(--s) / 6);
+  --_b: calc(var(--s) / 3);
+  --_c: calc(var(--s) / 2);
+  --_d: calc(var(--s) * 2 / 3);
+  --_e: calc(var(--s) * 5 / 6);
+  --__a: conic-gradient(from -90deg at var(--_a) var(--_a), var(--c1) 90deg, #0000 0);
 
   width: var(--s);
   aspect-ratio: 1;
-  --_z: conic-gradient(from -90deg at var(--10) var(--10), var(--c1) 90deg, #0000 0);
   background:
-    var(--_z),
-    var(--_z) var(--10) var(--10),
-    var(--_z) var(--20) var(--20);
+    var(--__a),
+    var(--__a) var(--_a) var(--_a),
+    var(--__a) var(--_b) var(--_b);
   background-size: 50% 50%;
   animation: __loading-infinity-15-l15 var(--d1) infinite;
 }
@@ -24,8 +24,8 @@
   90%,
   100% {
     background-position:
-      calc(-1 * var(--30)) var(--30),
-      calc(-1 * var(--20)) var(--40),
-      calc(-1 * var(--10)) var(--50);
+      calc(-1 * var(--_c)) var(--_c),
+      calc(-1 * var(--_b)) var(--_d),
+      calc(-1 * var(--_a)) var(--_e);
   }
 }

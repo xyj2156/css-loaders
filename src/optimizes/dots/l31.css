@@ -2,6 +2,7 @@
   --s: var(--size, 15px);
   --d: var(--duration, 1000ms);
   --c1: var(--color-1, #000);
+
   height: var(--s);
   aspect-ratio: 4;
   display: grid;

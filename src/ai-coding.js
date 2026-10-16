@@ -8,7 +8,8 @@ const __dirname = process.cwd();
 const openai = new OpenAI({
   // 若没有配置环境变量，请用百炼API Key将下行替换为：apiKey: "sk-xxx",
   apiKey: process.env.API_KEY,
-  baseURL: 'https://dashscope.aliyuncs.com/compatible-mode/v1',
+  // baseURL: 'https://dashscope.aliyuncs.com/compatible-mode/v1',
+  baseURL: 'http://192.168.6.188:8000/v1',
 });
 
 const styles = src('styles');
@@ -48,6 +49,7 @@ fs.readdirSync(styles)
   });
 
 asyncEach(allFiles, function ([file, target]) {
+  console.log('开始处理', file);
   const content = fs.readFileSync(file, 'utf-8');
   const answer = (function () {
     const a = `
@@ -97,6 +99,9 @@ ${a}`.trim();
     })
     .catch(function () {
       console.log('error:', ...arguments);
+    })
+    .finally(function () {
+      console.log('处理完成：', file, target, arguments);
     });
 })
   .then(function () {
@@ -112,7 +117,8 @@ function src(...args) {
 
 function trans(code, answer) {
   return openai.chat.completions.create({
-    model: 'qwen3-coder-plus', //此处以qwen-plus为例，可按需更换模型名称。模型列表：https://help.aliyun.com/zh/model-studio/getting-started/models
+    // model: 'qwen3-coder-plus', //此处以qwen-plus为例，可按需更换模型名称。模型列表：https://help.aliyun.com/zh/model-studio/getting-started/models
+    model: 'qwen3.5-9b-q4_k_m',
     messages: [
       { role: 'system', content: '你是一个高级前端开发工程师' },
       {

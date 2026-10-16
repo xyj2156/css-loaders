@@ -4,6 +4,7 @@
   --d1: var(--duration-1, var(--d));
   --d2: var(--duration-2, calc(var(--d) * 0.7));
   --c1: var(--color-1, #fff);
+
   height: var(--s);
   aspect-ratio: 1;
   display: grid;

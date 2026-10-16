@@ -1,10 +1,11 @@
 .__loading-classic-36 {
-  --c: var(--content, 'Loading...');
   --s: var(--size, 30px);
-  --c1: var(--color-1, #000);
-  --d:  var(--duration, 1000ms);
+  --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
   --d2: var(--duration-2, calc(var(--d) * 0.2));
+  --c1: var(--color-1, #000);
+
+  --__a: var(--content, 'Loading...');
 
   font-weight: bold;
   font-family: monospace;
@@ -13,7 +14,7 @@
 }
 .__loading-classic-36:before,
 .__loading-classic-36:after {
-  content: var(--c);
+  content: var(--__a);
   grid-area: 1/1;
   -webkit-mask-size:
     1.5ch 100%,

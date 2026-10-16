@@ -1,0 +1,38 @@
+.__loading-spinner-17 {
+  --s: var(--size, 70px);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #ffa516);
+  --c2: var(--color-2, #ccc);
+  --_a: calc(var(--s) * 8 / 70);
+  --_b: calc(var(--s) * 10 / 70);
+  --_c: calc(var(--s) * 12 / 70);
+  --_d: calc(var(--s) * 16 / 70);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) center/var(--_d) var(--_d),
+    radial-gradient(farthest-side, green 90%, #0000) bottom/var(--_c) var(--_c);
+  background-repeat: no-repeat;
+  animation: __loading-spinner-17-l17 var(--d) infinite linear;
+  position: relative;
+}
+.__loading-spinner-17::before {
+  content: '';
+  position: absolute;
+  width: var(--_a);
+  aspect-ratio: 1;
+  inset: auto 0 var(--_d);
+  margin: auto;
+  background: var(--c2);
+  border-radius: 50%;
+  transform-origin: 50% calc(100% + var(--_b));
+  animation: inherit;
+  animation-duration: var(--d1);
+}
+@keyframes __loading-spinner-17-l17 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

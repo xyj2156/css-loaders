@@ -1,19 +1,20 @@
 .__loading-dots-vs-bars-7 {
   --s: var(--size, 40px);
-  --c1: var(--color-1, #000);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #000);
+
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
 
   width: var(--s);
   aspect-ratio: 1;
-  --c: no-repeat linear-gradient(var(--c1) 0 0);
   background:
-    var(--c) 0 0,
-    var(--c) 0 100%,
-    var(--c) 50% 0,
-    var(--c) 50% 100%,
-    var(--c) 100% 0,
-    var(--c) 100% 100%;
+    var(--__a) 0 0,
+    var(--__a) 0 100%,
+    var(--__a) 50% 0,
+    var(--__a) 50% 100%,
+    var(--__a) 100% 0,
+    var(--__a) 100% 100%;
   background-size: calc(var(--s) * 0.2) 50%;
   animation: __loading-dots-vs-bars-7-l7-0 var(--d1) infinite;
   position: relative;

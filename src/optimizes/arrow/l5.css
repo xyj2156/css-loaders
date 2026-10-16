@@ -1,8 +1,8 @@
 .__loading-arrow-5 {
-  --s:var(--size, 50px);
-  --c1:var(--color-1, #000);
-  --d:var(--duration, 1000ms);
-  --d1:var(--duration-1, var(--d));
+  --s: var(--size, 50px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #000);
 
   width: var(--s);
   height: calc(var(--s) * 0.6);

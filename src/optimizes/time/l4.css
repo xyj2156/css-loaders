@@ -1,0 +1,37 @@
+.__loading-time-4 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 2s);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 1 / 30);
+  --_b: calc(var(--s) * 5 / 30);
+  --_c: calc(var(--s) * 10 / 30);
+
+  display: inline-flex;
+  border: var(--_c) solid var(--c1);
+  border-radius: var(--_b);
+}
+.__loading-time-4::before,
+.__loading-time-4::after {
+  content: '0 1 2 3 4 5 6 7 8 9 0';
+  font-size: 30px;
+  font-family: monospace;
+  font-weight: bold;
+  line-height: 1em;
+  height: 1em;
+  width: 1.2ch;
+  text-align: center;
+  outline: var(--_a) solid var(--c1);
+  color: #0000;
+  text-shadow: 0 0 0 var(--c1);
+  overflow: hidden;
+  animation: __loading-time-4-l4 var(--d) infinite linear;
+}
+.__loading-time-4::before {
+  animation-duration: var(--d1);
+}
+@keyframes __loading-time-4-l4 {
+  100% {
+    text-shadow: 0 var(--t, -10em) 0 var(--c1);
+  }
+}

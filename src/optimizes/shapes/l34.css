@@ -1,0 +1,50 @@
+.__loading-shapes-34 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #514b82);
+  --_a: calc(var(--s) * 20 / 60);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
+  height: var(--s);
+  aspect-ratio: 1;
+  background: var(--__a), var(--__a), var(--__a), var(--__a), var(--__a), var(--__a);
+  animation:
+    __loading-shapes-34-l34-1 var(--d) infinite alternate,
+    __loading-shapes-34-l34-2 var(--d) infinite alternate;
+}
+@keyframes __loading-shapes-34-l34-1 {
+  0%,
+  20% {
+    background-size: var(--_a) var(--_a);
+  }
+  40%,
+  60% {
+    background-size: 100% var(--_a);
+  }
+  80%,
+  100% {
+    background-size: var(--_a) var(--_a);
+  }
+}
+@keyframes __loading-shapes-34-l34-2 {
+  0%,
+  40% {
+    background-position:
+      0 0,
+      100% 0,
+      50% 50%,
+      50% 50%,
+      0 100%,
+      100% 100%;
+  }
+  60%,
+  100% {
+    background-position:
+      50% 0,
+      50% 0,
+      0 50%,
+      100% 50%,
+      50% 100%,
+      50% 100%;
+  }
+}

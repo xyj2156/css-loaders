@@ -3,9 +3,11 @@
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
   --c1: var(--color-1, #000);
-  --_a: calc(var(--s) * 1/16);
-  --_b: calc(var(--s) * 1/8);
+
+  --_a: calc(var(--s) * 1 / 16);
+  --_b: calc(var(--s) * 1 / 8);
   --__a: var(--c1) 90%, #0000;
+
   width: var(--s);
   aspect-ratio: 2;
   background:

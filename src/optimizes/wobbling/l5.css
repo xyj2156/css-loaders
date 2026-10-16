@@ -1,0 +1,33 @@
+.__loading-wobbling-5 {
+  --s: var(--size, 120px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #f03355);
+  --c2: var(--color-2, #ccc);
+  --_a: calc(var(--s) * 10 / 120);
+  --_b: calc(var(--s) * 20 / 120);
+
+  width: var(--s);
+  height: var(--_b);
+  clip-path: polygon(
+    var(--_a) 0,
+    calc(100% - var(--_a)) 0,
+    100% 50%,
+    calc(100% - var(--_a)) 100%,
+    var(--_a) 100%,
+    0 50%
+  );
+  background:
+    conic-gradient(from 135deg at top, var(--c1) 90deg, #0000 0) top left,
+    conic-gradient(from -45deg at bottom, var(--c1) 90deg, #0000 0) bottom left,
+    var(--c2);
+  background-size: var(--_b) 50%;
+  background-repeat: no-repeat;
+  animation: __loading-wobbling-5-l5 var(--d) infinite linear;
+}
+@keyframes __loading-wobbling-5-l5 {
+  50% {
+    background-position:
+      top right,
+      bottom right;
+  }
+}

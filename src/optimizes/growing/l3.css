@@ -3,7 +3,8 @@
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1));
   --c1: var(--color-1, #bd1550);
-  --b: calc(var(--s) / 5);
+
+  --_a: calc(var(--s) / 5);
 
   width: var(--s);
   aspect-ratio: 1 / cos(30deg);
@@ -18,10 +19,10 @@
     100% 100%,
     0 100%,
     50% 0,
-    50% var(--b),
-    calc(var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
-    calc(100% - var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
-    50% var(--b)
+    50% var(--_a),
+    calc(var(--_a) * cos(30deg)) calc(100% - var(--_a) / 2),
+    calc(100% - var(--_a) * cos(30deg)) calc(100% - var(--_a) / 2),
+    50% var(--_a)
   );
   margin: auto;
   animation: __loading-growing-3-l3 infinite var(--d1) steps(4, jump-none);

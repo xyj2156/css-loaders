@@ -1,16 +1,17 @@
 .__loading-dots-vs-bars-6 {
   --s: var(--size, 40px);
-  --c1: var(--color-1, #000);
   --d: var(--duration, 1500ms);
   --d1: var(--duration-1, var(--d));
   --d2: var(--duration-2, calc(var(--d) / 3));
+  --c1: var(--color-1, #000);
+
+  --__a: no-repeat radial-gradient(farthest-side, var(--c1) 93%, #0000);
 
   width: var(--s);
   height: calc(var(--s) * 0.5);
-  --c: no-repeat radial-gradient(farthest-side, var(--c1) 93%, #0000);
   background:
-    var(--c) 0 0,
-    var(--c) 50% 0;
+    var(--__a) 0 0,
+    var(--__a) 50% 0;
   background-size: calc(var(--s) * 0.2) calc(var(--s) * 0.2);
   position: relative;
   clip-path: inset(-200% -100% 0 0);

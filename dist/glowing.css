@@ -1,94 +1,244 @@
 .__loading-glowing-1 {
-  height: 80px;
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #c02942);
+
+  height: var(--s);
   aspect-ratio: 1;
-  padding: 10px;
+  padding: calc(var(--s) * 0.125);
   border-radius: 50%;
   box-sizing: border-box;
   position: relative;
   mask:
     conic-gradient(#000 0 0) content-box exclude,
     conic-gradient(#000 0 0);
-  filter: blur(12px);
+  filter: blur(calc(var(--s) * 0.15));
 }
 .__loading-glowing-1:before {
   content: '';
   position: absolute;
   inset: 0;
-  background: conic-gradient(#0000 35%, #c02942, #0000 65%);
-  animation: __loading-glowing-1-l1 1.5s linear infinite;
+  background: conic-gradient(#0000 35%, var(--c1), #0000 65%);
+  animation: __loading-glowing-1-l1 var(--d1) linear infinite;
 }
 @keyframes __loading-glowing-1-l1 {
   to {
     rotate: 1turn;
   }
 }
-.__loading-glowing-2 {
-  height: 80px;
+
+.__loading-glowing-10 {
+  --s: var(--size, 140px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #fa6900);
+
+  height: var(--s);
   aspect-ratio: 1;
-  padding: 10px;
+  position: relative;
+  --g: /calc(30.259% + 5.027px) calc(30.259% + 5.027px)
+    radial-gradient(#0000 calc(70% - 8px), #000 calc(71% - 8px) 70%, #0000 71%) no-repeat;
+  mask:
+    radial-gradient(
+        100% 100%,
+        #000 calc((30.259% + 5.027px) / 0.964 - 8.306px),
+        #0000 calc((30.259% + 5.027px) / 0.964 - 8.306px + 1px)
+      )
+      intersect,
+    100% 50% var(--g),
+    81.174% 89.092% var(--g),
+    38.874% 98.746% var(--g),
+    4.952% 71.694% var(--g),
+    4.952% 28.306% var(--g),
+    38.874% 1.254% var(--g),
+    81.174% 10.908% var(--g);
+  filter: blur(calc(var(--s) * 3 / 35));
+}
+
+.__loading-glowing-10:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(#0000 35%, var(--c1), #0000 65%);
+  animation: __loading-glowing-10-l10 var(--d1) linear infinite;
+}
+@keyframes __loading-glowing-10-l10 {
+  to {
+    rotate: 1turn;
+  }
+}
+
+.__loading-glowing-11 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0000);
+
+  height: var(--s);
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  position: relative;
+  mask:
+    radial-gradient(var(--c2) 47%, var(--c1) 48% 71%, var(--c2) 72%) exclude,
+    conic-gradient(var(--c1) 0 0) no-clip;
+  animation: __loading-glowing-11-l11 var(--d1) linear infinite;
+}
+.__loading-glowing-11:before {
+  content: '';
+  position: absolute;
+  inset: 0 35% 70%;
+  border-radius: 50%;
+  background: var(--c1);
+  filter: blur(calc(var(--s) * 3 / 16));
+}
+@keyframes __loading-glowing-11-l11 {
+  to {
+    rotate: 1turn;
+  }
+}
+
+.__loading-glowing-12 {
+  --s: var(--size, 100px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #000);
+
+  --_a: calc(var(--s) * -1);
+
+  height: calc(var(--s) * 0.8);
+  aspect-ratio: 1;
+  position: relative;
+  clip-path: polygon(
+    evenodd,
+    var(--_a) var(--_a),
+    calc(100% - var(--_a)) var(--_a),
+    calc(100% - var(--_a)) calc(100% - var(--_a)),
+    var(--_a) calc(100% - var(--_a)),
+    var(--_a) var(--_a),
+    100% 50%,
+    85.36% 85.36%,
+    50% 100%,
+    14.64% 85.36%,
+    0% 50%,
+    14.64% 14.64%,
+    50% 0%,
+    85.36% 14.64%,
+    100% 50%,
+    74.75% 25.25%,
+    50% 15%,
+    25.25% 25.25%,
+    15% 50%,
+    25.25% 74.75%,
+    50% 85%,
+    74.75% 74.75%,
+    85% 50%,
+    74.75% 25.25%,
+    100% 50%
+  );
+}
+.__loading-glowing-12:before {
+  content: '';
+  position: absolute;
+  inset: 0 35% 70%;
+  border-radius: 50%;
+  background: var(--c1);
+  filter: blur(calc(var(--s) * 0.15));
+  transform-origin: 50% 165%;
+  animation: __loading-glowing-12-l12 var(--d1) linear infinite;
+}
+@keyframes __loading-glowing-12-l12 {
+  to {
+    rotate: 1turn;
+  }
+}
+
+.__loading-glowing-2 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #c02942);
+
+  height: var(--s);
+  aspect-ratio: 1;
+  padding: calc(var(--s) * 0.125);
   border-radius: 50%;
   box-sizing: border-box;
   position: relative;
   mask:
     conic-gradient(#000 0 0) content-box exclude,
     conic-gradient(#000 0 0);
-  filter: blur(12px);
+  filter: blur(calc(var(--s) * 0.15));
 }
 .__loading-glowing-2:before {
   content: '';
   position: absolute;
   inset: 0;
-  background: repeating-conic-gradient(#0000 0 5%, #c02942, #0000 20% 50%);
-  animation: __loading-glowing-2-l2 1.5s linear infinite;
+  background: repeating-conic-gradient(#0000 0 5%, var(--c1), #0000 20% 50%);
+  animation: __loading-glowing-2-l2 var(--d1) linear infinite;
 }
 @keyframes __loading-glowing-2-l2 {
   to {
     rotate: 1turn;
   }
 }
+
 .__loading-glowing-3 {
-  height: 80px;
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --c1: var(--color-1, #c02942);
+
+  height: var(--s);
   aspect-ratio: 1;
-  padding: 10px;
-  border-radius: 20px;
+  padding: calc(var(--s) / 8);
+  border-radius: calc(var(--s) / 4);
   box-sizing: border-box;
   position: relative;
   mask:
     conic-gradient(#000 0 0) content-box exclude,
     conic-gradient(#000 0 0);
-  filter: blur(12px);
+  filter: blur(calc(var(--s) * 3 / 20));
 }
 .__loading-glowing-3:before {
   content: '';
   position: absolute;
   inset: 0;
-  background: repeating-conic-gradient(#0000 0 5%, #c02942, #0000 20% 50%);
-  animation: __loading-glowing-3-l3 1.5s linear infinite;
+  background: repeating-conic-gradient(#0000 0 5%, var(--c1), #0000 20% 50%);
+  animation: __loading-glowing-3-l3 var(--d1) linear infinite;
 }
 @keyframes __loading-glowing-3-l3 {
   to {
     rotate: 1turn;
   }
 }
+
 .__loading-glowing-4 {
-  height: 80px;
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.2));
+  --d2: var(--duration-2, var(--d));
+  --c1: var(--color-1, #c02942);
+
+  height: var(--s);
   aspect-ratio: 1;
-  padding: 10px;
-  border-radius: 20px;
+  padding: calc(var(--s) * 0.125);
+  border-radius: calc(var(--s) * 0.25);
   box-sizing: border-box;
   position: relative;
   mask:
     conic-gradient(#000 0 0) content-box exclude,
     conic-gradient(#000 0 0);
-  filter: blur(12px);
-  animation: __loading-glowing-4-l4-0 1.2s linear infinite alternate;
+  filter: blur(calc(var(--s) * 0.15));
+  animation: __loading-glowing-4-l4-0 var(--d1) linear infinite alternate;
 }
 .__loading-glowing-4:before {
   content: '';
   position: absolute;
   inset: 0;
-  background: repeating-conic-gradient(#0000 0 5%, #c02942, #0000 20% 50%);
-  animation: __loading-glowing-4-l4-1 1s linear infinite;
+  background: repeating-conic-gradient(#0000 0 5%, var(--c1), #0000 20% 50%);
+  animation: __loading-glowing-4-l4-1 var(--d2) linear infinite;
 }
 @keyframes __loading-glowing-4-l4-0 {
   to {
@@ -100,9 +250,16 @@
     rotate: 0.5turn;
   }
 }
+
 .__loading-glowing-5 {
-  --b: 25%;
-  height: 80px;
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #0b486b);
+
+  --__a: 25%;
+
+  height: var(--s);
   aspect-ratio: 1 / cos(30deg);
   position: relative;
   clip-path: polygon(
@@ -110,27 +267,33 @@
     100% 100%,
     0 100%,
     50% 0,
-    50% var(--b),
-    calc(var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
-    calc(100% - var(--b) * cos(30deg)) calc(100% - var(--b) / 2),
-    50% var(--b)
+    50% var(--__a),
+    calc(var(--__a) * cos(30deg)) calc(100% - var(--__a) / 2),
+    calc(100% - var(--__a) * cos(30deg)) calc(100% - var(--__a) / 2),
+    50% var(--__a)
   );
-  filter: blur(12px);
+  filter: blur(calc(var(--s) * 3 / 20));
 }
 .__loading-glowing-5:before {
   content: '';
   position: absolute;
   inset: -8% 0;
-  background: conic-gradient(#0000 35%, #0b486b, #0000 65%);
-  animation: __loading-glowing-5-l5 2s linear infinite;
+  background: conic-gradient(#0000 35%, var(--c1), #0000 65%);
+  animation: __loading-glowing-5-l5 var(--d1) linear infinite;
 }
 @keyframes __loading-glowing-5-l5 {
   to {
     rotate: 1turn;
   }
 }
+
 .__loading-glowing-6 {
-  height: 80px;
+  --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #0b486b);
+
+  height: var(--s);
   aspect-ratio: 1;
   position: relative;
   clip-path: polygon(
@@ -153,22 +316,28 @@
     85% 50%,
     74.75% 25.25%
   );
-  filter: blur(12px);
+  filter: blur(calc(var(--s) * 0.15));
 }
 .__loading-glowing-6:before {
   content: '';
   position: absolute;
   inset: 0;
-  background: conic-gradient(#0000 35%, #0b486b, #0000 65%);
-  animation: __loading-glowing-6-l6 2s linear infinite;
+  background: conic-gradient(#0000 35%, var(--c1), #0000 65%);
+  animation: __loading-glowing-6-l6 var(--d1) linear infinite;
 }
 @keyframes __loading-glowing-6-l6 {
   to {
     rotate: 1turn;
   }
 }
+
 .__loading-glowing-7 {
-  height: 100px;
+  --s: var(--size, 100px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #0b486b);
+
+  height: var(--s);
   aspect-ratio: 1;
   position: relative;
   clip-path: polygon(
@@ -213,22 +382,30 @@
     73.02% 58.38%,
     85% 50%
   );
-  filter: blur(12px);
+  filter: blur(calc(var(--s) * 0.12));
 }
+
 .__loading-glowing-7:before {
   content: '';
   position: absolute;
   inset: 0;
-  background: conic-gradient(#0000 35%, #0b486b, #0000 65%);
-  animation: __loading-glowing-7-l7 2s linear infinite;
+  background: conic-gradient(#0000 35%, var(--c1), #0000 65%);
+  animation: __loading-glowing-7-l7 var(--d1) linear infinite;
 }
 @keyframes __loading-glowing-7-l7 {
   to {
     rotate: 1turn;
   }
 }
+
 .__loading-glowing-8 {
-  height: 100px;
+  --s: var(--size, 100px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.5));
+  --d2: var(--duration-2, calc(var(--d) * 2));
+  --c1: var(--color-1, #0b486b);
+
+  height: var(--s);
   aspect-ratio: 1;
   position: relative;
   clip-path: polygon(
@@ -273,15 +450,15 @@
     73.02% 58.38%,
     85% 50%
   );
-  animation: __loading-glowing-8-l8-0 1.5s linear infinite alternate;
-  filter: blur(12px);
+  animation: __loading-glowing-8-l8-0 var(--d1) linear infinite alternate;
+  filter: blur(calc(var(--s) * 0.12));
 }
 .__loading-glowing-8:before {
   content: '';
   position: absolute;
   inset: 0;
-  background: conic-gradient(#0000 35%, #0b486b, #0000 65%);
-  animation: __loading-glowing-8-l8-1 2s linear infinite;
+  background: conic-gradient(#0000 35%, var(--c1), #0000 65%);
+  animation: __loading-glowing-8-l8-1 var(--d2) linear infinite;
 }
 @keyframes __loading-glowing-8-l8-0 {
   to {
@@ -334,12 +511,18 @@
     rotate: 1turn;
   }
 }
+
 .__loading-glowing-9 {
-  height: 100px;
-  aspect-ratio: 1;
-  position: relative;
+  --s: var(--size, 100px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #fa6900);
+
   --g: /calc(30.259% + 5.027px) calc(30.259% + 5.027px)
     radial-gradient(#0000 calc(70% - 8px), #000 calc(71% - 8px) 70%, #0000 71%) no-repeat;
+  height: var(--s);
+  aspect-ratio: 1;
+  position: relative;
   mask:
     radial-gradient(
         100% 100%,
@@ -354,121 +537,17 @@
     4.952% 28.306% var(--g),
     38.874% 1.254% var(--g),
     81.174% 10.908% var(--g);
-  filter: blur(12px);
+  filter: blur(calc(var(--s) * 3 / 35));
 }
+
 .__loading-glowing-9:before {
   content: '';
   position: absolute;
   inset: 0;
-  background: conic-gradient(#0000 35%, #fa6900, #0000 65%);
-  animation: __loading-glowing-9-l9 2s linear infinite;
+  background: conic-gradient(#0000 35%, var(--c1), #0000 65%);
+  animation: __loading-glowing-9-l9 var(--d1) linear infinite;
 }
 @keyframes __loading-glowing-9-l9 {
-  to {
-    rotate: 1turn;
-  }
-}
-.__loading-glowing-10 {
-  height: 140px;
-  aspect-ratio: 1;
-  position: relative;
-  --g: /calc(30.259% + 5.027px) calc(30.259% + 5.027px)
-    radial-gradient(#0000 calc(70% - 8px), #000 calc(71% - 8px) 70%, #0000 71%) no-repeat;
-  mask:
-    radial-gradient(
-        100% 100%,
-        #000 calc((30.259% + 5.027px) / 0.964 - 8.306px),
-        #0000 calc((30.259% + 5.027px) / 0.964 - 8.306px + 1px)
-      )
-      intersect,
-    100% 50% var(--g),
-    81.174% 89.092% var(--g),
-    38.874% 98.746% var(--g),
-    4.952% 71.694% var(--g),
-    4.952% 28.306% var(--g),
-    38.874% 1.254% var(--g),
-    81.174% 10.908% var(--g);
-  filter: blur(12px);
-}
-.__loading-glowing-10:before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: conic-gradient(#0000 35%, #fa6900, #0000 65%);
-  animation: __loading-glowing-10-l10 2s linear infinite;
-}
-@keyframes __loading-glowing-10-l10 {
-  to {
-    rotate: 1turn;
-  }
-}
-.__loading-glowing-11 {
-  height: 80px;
-  aspect-ratio: 1;
-  box-sizing: border-box;
-  position: relative;
-  mask:
-    radial-gradient(#0000 47%, #000 48% 71%, #0000 72%) exclude,
-    conic-gradient(#000 0 0) no-clip;
-  animation: __loading-glowing-11-l11 1.5s linear infinite;
-}
-.__loading-glowing-11:before {
-  content: '';
-  position: absolute;
-  inset: 0 35% 70%;
-  border-radius: 50%;
-  background: #000;
-  filter: blur(15px);
-}
-@keyframes __loading-glowing-11-l11 {
-  to {
-    rotate: 1turn;
-  }
-}
-.__loading-glowing-12 {
-  --s: -100px;
-  height: 80px;
-  aspect-ratio: 1;
-  position: relative;
-  clip-path: polygon(
-    evenodd,
-    var(--s) var(--s),
-    calc(100% - var(--s)) var(--s),
-    calc(100% - var(--s)) calc(100% - var(--s)),
-    var(--s) calc(100% - var(--s)),
-    var(--s) var(--s),
-    100% 50%,
-    85.36% 85.36%,
-    50% 100%,
-    14.64% 85.36%,
-    0% 50%,
-    14.64% 14.64%,
-    50% 0%,
-    85.36% 14.64%,
-    100% 50%,
-    74.75% 25.25%,
-    50% 15%,
-    25.25% 25.25%,
-    15% 50%,
-    25.25% 74.75%,
-    50% 85%,
-    74.75% 74.75%,
-    85% 50%,
-    74.75% 25.25%,
-    100% 50%
-  );
-}
-.__loading-glowing-12:before {
-  content: '';
-  position: absolute;
-  inset: 0 35% 70%;
-  border-radius: 50%;
-  background: #000;
-  filter: blur(15px);
-  transform-origin: 50% 165%;
-  animation: __loading-glowing-12-l12 1.5s linear infinite;
-}
-@keyframes __loading-glowing-12-l12 {
   to {
     rotate: 1turn;
   }

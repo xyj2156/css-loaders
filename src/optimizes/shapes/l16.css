@@ -1,0 +1,41 @@
+.__loading-shapes-16 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #25b09b);
+  --_a: calc(var(--s) * 10 / 40);
+  --_b: calc(var(--s) * 15.5 / 40);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
+  width: var(--s);
+  height: var(--s);
+  position: relative;
+  background:
+    var(--__a) center/100% var(--_a),
+    var(--__a) center/var(--_a) 100%;
+}
+.__loading-shapes-16:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    var(--__a) 0 0,
+    var(--__a) 100% 0,
+    var(--__a) 0 100%,
+    var(--__a) 100% 100%;
+  background-size: var(--_b) var(--_b);
+  animation: __loading-shapes-16-l16 var(--d) infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes __loading-shapes-16-l16 {
+  33% {
+    inset: -var(--_a);
+    transform: rotate(0deg);
+  }
+  66% {
+    inset: -var(--_a);
+    transform: rotate(90deg);
+  }
+  100% {
+    inset: 0;
+    transform: rotate(90deg);
+  }
+}

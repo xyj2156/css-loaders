@@ -1,0 +1,19 @@
+.__loading-progress-8 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #f03355);
+  --c3: var(--color-3, #ddd);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  -webkit-mask: linear-gradient(0deg, var(--c1) 55%, #0000 0) bottom/100% 18.18%;
+  background: linear-gradient(var(--c2) 0 0) bottom/100% 0% no-repeat var(--c3);
+  animation: __loading-progress-8-l8 var(--d) infinite steps(7);
+}
+@keyframes __loading-progress-8-l8 {
+  100% {
+    background-size: 100% 115%;
+  }
+}

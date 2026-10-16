@@ -3,8 +3,9 @@
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1));
   --c1: var(--color-1, #000);
-  --__a: calc(var(--__b) * -1);
-  --__b: calc(var(--s) * 5 / 3);
+
+  --_a: calc(var(--s) * 5 / 3);
+  --__a: calc(var(--_a) * -1);
 
   width: var(--s);
   aspect-ratio: 1;
@@ -12,28 +13,28 @@
   background: var(--c1);
   box-shadow:
     var(--__a) 0,
-    var(--__b) 0;
+    var(--_a) 0;
   animation: __loading-dots-18-l18 var(--d1) infinite;
 }
 @keyframes __loading-dots-18-l18 {
   25% {
     box-shadow:
       var(--__a) var(--__a),
-      var(--__b) var(--__b);
+      var(--_a) var(--_a);
   }
   50% {
     box-shadow:
       0 var(--__a),
-      0 var(--__b);
+      0 var(--_a);
   }
   75% {
     box-shadow:
-      var(--__b) var(--__a),
-      var(--__a) var(--__b);
+      var(--_a) var(--__a),
+      var(--__a) var(--_a);
   }
   100% {
     box-shadow:
-      var(--__b) 0,
+      var(--_a) 0,
       var(--__a) 0;
   }
 }

@@ -1,0 +1,37 @@
+.__loading-square-4 {
+  --s: var(--size, 25px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #fff);
+  --_a: calc(var(--s) * 3 / 25);
+  --_b: calc(var(--s) * 5 / 25);
+
+  display: inline-flex;
+  gap: var(--_b);
+}
+.__loading-square-4:before,
+.__loading-square-4:after {
+  content: '';
+  width: var(--s);
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 var(--_a) inset var(--c1);
+  animation: __loading-square-4-l4 var(--d) infinite;
+}
+.__loading-square-4:after {
+  --s: -1;
+  animation-delay: 0.75s;
+}
+@keyframes __loading-square-4-l4 {
+  0% {
+    transform: scaleX(var(--s, 1)) translate(0) rotate(0);
+  }
+  16.67% {
+    transform: scaleX(var(--s, 1)) translate(-50%) rotate(0);
+  }
+  33.33% {
+    transform: scaleX(var(--s, 1)) translate(-50%) rotate(90deg);
+  }
+  50%,
+  100% {
+    transform: scaleX(var(--s, 1)) translate(0) rotate(90deg);
+  }
+}

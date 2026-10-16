@@ -1,0 +1,35 @@
+.__loading-shapes-11 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #25b09b);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-shapes-11::before,
+.__loading-shapes-11::after {
+  content: '';
+  grid-area: 1/1;
+  background: var(--c1);
+  clip-path: polygon(0 0, 50% 50%, 0 100%);
+  animation: __loading-shapes-11-l11 var(--d) infinite;
+}
+.__loading-shapes-11::after {
+  animation-delay: -1.5s;
+  --s: 90deg;
+}
+@keyframes __loading-shapes-11-l11 {
+  0%,
+  12.5% {
+    transform: rotate(var(--s, 0deg)) rotate(0deg);
+  }
+  37.5%,
+  62.5% {
+    transform: rotate(var(--s, 0deg)) rotate(-180deg);
+  }
+  87.5%,
+  100% {
+    transform: rotate(var(--s, 0deg)) rotate(-360deg);
+  }
+}

@@ -1,0 +1,39 @@
+.__loading-progress-18 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #ddd);
+  --c2: var(--color-2, #514b82);
+  --_a: calc(var(--s) * 15 / 60);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border: var(--_a) solid var(--c1);
+  border-radius: 50%;
+  position: relative;
+  transform: rotate(45deg);
+}
+.__loading-progress-18::before {
+  content: '';
+  position: absolute;
+  inset: -var(--_a);
+  border-radius: 50%;
+  border: var(--_a) solid var(--c2);
+  animation: __loading-progress-18-l18 var(--d) infinite linear;
+}
+@keyframes __loading-progress-18-l18 {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}

@@ -25,9 +25,11 @@
   inset: auto 0 0;
   aspect-ratio: 1;
   background:
-    radial-gradient(farthest-side, var(--c1) 98%, #0000) bottom/calc(var(--s) * 14 / 80) calc(var(--s) * 14 / 80),
-    radial-gradient(farthest-side, var(--c2) 98%, #0000) top / calc(var(--s) * 14 / 80) calc(var(--s) * 14 / 80),
-    linear-gradient(var(--c3) 0 0) 50%/calc(var(--s) * 4 / 80) calc(var(--s) * 76 / 80);
+    radial-gradient(farthest-side, var(--c1) 98%, #0000) bottom/calc(var(--s) * 14 / 80)
+      calc(var(--s) * 14 / 80),
+    radial-gradient(farthest-side, var(--c2) 98%, #0000) top / calc(var(--s) * 14 / 80)
+      calc(var(--s) * 14 / 80),
+    linear-gradient(var(--c3) 0 0) 50% / calc(var(--s) * 4 / 80) calc(var(--s) * 76 / 80);
   background-repeat: no-repeat;
   animation: __loading-factory-5-l5 var(--d1) infinite linear;
   mix-blend-mode: lighten;

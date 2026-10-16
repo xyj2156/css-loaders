@@ -1,0 +1,35 @@
+.__loading-rolling-7 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #c02942);
+  --c2: var(--color-2, #0b486b);
+  --c3: var(--color-3, #000);
+
+  display: inline-grid;
+  width: var(--s);
+  aspect-ratio: 1;
+}
+.__loading-rolling-7:before,
+.__loading-rolling-7:after {
+  content: '';
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: repeating-conic-gradient(var(--c1) 0 60deg, var(--c2) 0 120deg);
+  animation: __loading-rolling-7-l7 var(--d) infinite alternate ease-in-out;
+  rotate: 90deg;
+}
+.__loading-rolling-7:before {
+  translate: 0 -100%;
+}
+.__loading-rolling-7:after {
+  padding: 20%;
+  mask:
+    conic-gradient(from 120deg, #0000 120deg, var(--c3) 0) content-box exclude,
+    conic-gradient(from 120deg, #0000 120deg, var(--c3) 0);
+  animation-direction: alternate-reverse;
+}
+@keyframes __loading-rolling-7-l7 {
+  to {
+    rotate: -90deg;
+  }
+}

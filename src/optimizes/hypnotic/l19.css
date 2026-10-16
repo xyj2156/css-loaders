@@ -14,7 +14,12 @@
   content: '';
   grid-area: 1/1;
   border-radius: 50%;
-  background: repeating-radial-gradient(farthest-side, var(--c2) 0%, var(--c1) 1% 10%, var(--c2) 11% 30%);
+  background: repeating-radial-gradient(
+    farthest-side,
+    var(--c2) 0%,
+    var(--c1) 1% 10%,
+    var(--c2) 11% 30%
+  );
   -webkit-mask: repeating-conic-gradient(var(--c1) 0 36deg, var(--c2) 0 72deg);
   animation: __loading-hypnotic-19-l19 var(--d1) infinite linear;
 }

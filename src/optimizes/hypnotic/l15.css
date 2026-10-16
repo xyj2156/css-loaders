@@ -4,12 +4,17 @@
   --d1: var(--duration-1, calc(var(--d) / 1));
   --c1: var(--color-1, #000);
 
+  --_a: conic-gradient(
+    from 180deg at 50% calc(100% - calc(var(--s) / 25)),
+    var(--c1) 90deg,
+    #0000 0
+  );
+
   width: var(--s);
   aspect-ratio: 1;
   border: calc(var(--s) / 25) solid;
   box-sizing: border-box;
-  --__c: conic-gradient(from 180deg at 50% calc(100% - calc(var(--s) / 25)), var(--c1) 90deg, #0000 0);
-  background: var(--__c), var(--__c);
+  background: var(--_a), var(--_a);
   background-position:
     0 0,
     calc(var(--s) / 6.25) 0;

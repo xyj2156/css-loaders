@@ -1,16 +1,17 @@
 .__loading-bars-17 {
   --s: var(--size, 45px);
-  --c1: var(--color-1, #000);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #000);
+
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
 
   width: var(--s);
   aspect-ratio: 1;
-  --c: no-repeat linear-gradient(var(--c1) 0 0);
   background:
-    var(--c) 0 0,
-    var(--c) 50% 50%,
-    var(--c) 100% 100%;
+    var(--__a) 0 0,
+    var(--__a) 50% 50%,
+    var(--__a) 100% 100%;
   animation: __loading-bars-17-l17 var(--d1) infinite alternate;
 }
 @keyframes __loading-bars-17-l17 {

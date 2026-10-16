@@ -1,16 +1,14 @@
 .__loading-dancers-2 {
-  --s:var(--size,40px);
-  --d:var(--duration,1000ms);
+  --s: var(--size, 40px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --d2: var(--duration-2, var(--d));
+  --c1: var(--color-1, #3fb8af);
+  --c2: var(--color-2, #ff3d7f);
 
-  --_a:calc(var(--s) * 2/5);
-  --_b:calc(var(--s) * 1/5);
-  --_c:calc(var(--s) * 1/2);
-
-  --d1:var(--duration-1,calc(var(--d) * 2));
-  --d2:var(--duration-2,var(--d));
-
-  --c1:var(--color-1,#3fb8af);
-  --c2:var(--color-2,#ff3d7f);
+  --_a: calc(var(--s) * 2 / 5);
+  --_b: calc(var(--s) * 1 / 5);
+  --_c: calc(var(--s) * 1 / 2);
 
   width: var(--s);
   aspect-ratio: 1;
@@ -32,7 +30,7 @@
 }
 .__loading-dancers-2:after {
   background: var(--c2);
-  animation-delay: calc(var(--d1) * -1/2), 0s;
+  animation-delay: calc(var(--d1) * -1 / 2), 0s;
 }
 @keyframes __loading-dancers-2-l2-1 {
   0% {

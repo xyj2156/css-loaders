@@ -1,9 +1,10 @@
 .__loading-classic-28 {
-  --c: var(--content, 'Loading...');
   --s: var(--size, fit-content);
-  --c1: var(--color-1, black);
-  --d:  var(--duration, 1s);
+  --d: var(--duration, 1s);
   --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, black);
+
+  --__a: var(--content, 'Loading...');
 
   width: var(--s);
   font-weight: bold;
@@ -14,7 +15,7 @@
 }
 
 .__loading-classic-28::before {
-  content: var(--c);
+  content: var(--__a);
 }
 
 @keyframes __loading-classic-28-l28 {

@@ -1,14 +1,15 @@
 .__loading-3d-4 {
   --s: var(--size, 25px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1.2));
+  --d2: var(--duration-2, calc(var(--d) * 0.6));
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #666);
   --c3: var(--color-3, #aaa);
-  --d:  var(--duration, 1000ms);
-  --d1: var(--duration-1, calc(var(--d) * 1.2));
-  --d2: var(--duration-2, calc(var(--d) * 0.6));
 
-  --_d: calc(0.353 * var(--s));
-  width: calc(var(--s) + var(--_d));
+  --_a: calc(0.353 * var(--s));
+
+  width: calc(var(--s) + var(--_a));
   aspect-ratio: 1;
   display: grid;
 }
@@ -16,22 +17,27 @@
 .__loading-3d-4:after {
   content: '';
   clip-path: polygon(
-    var(--_d) 0,
+    var(--_a) 0,
     100% 0,
-    100% calc(100% - var(--_d)),
-    calc(100% - var(--_d)) 100%,
+    100% calc(100% - var(--_a)),
+    calc(100% - var(--_a)) 100%,
     0 100%,
-    0 var(--_d)
+    0 var(--_a)
   );
-  background: conic-gradient(from -90deg at var(--s) var(--_d), var(--c1) 135deg, var(--c2) 0 270deg, var(--c3) 0);
+  background: conic-gradient(
+    from -90deg at var(--s) var(--_a),
+    var(--c1) 135deg,
+    var(--c2) 0 270deg,
+    var(--c3) 0
+  );
   animation: __loading-3d-4-l4 var(--d1) infinite;
 }
 .__loading-3d-4:before {
   z-index: 1;
-  margin-bottom: calc(var(--_d) / -2 - 1px);
+  margin-bottom: calc(var(--_a) / -2 - 1px);
 }
 .__loading-3d-4:after {
-  margin-top: calc(var(--_d) / -2 - 1px);
+  margin-top: calc(var(--_a) / -2 - 1px);
   animation-delay: var(--d2);
 }
 @keyframes __loading-3d-4-l4 {

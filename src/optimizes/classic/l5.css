@@ -1,9 +1,10 @@
 .__loading-classic-5 {
-  --c: var(--content, 'Loading...');
   --s: var(--size, 30px);
-  --c1: var(--color-1, inherit);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, inherit);
+
+  --__a: var(--content, 'Loading...');
 
   width: fit-content;
   font-weight: bold;
@@ -15,7 +16,7 @@
 }
 
 .__loading-classic-5:before {
-  content: var(--c);
+  content: var(--__a);
 }
 
 @keyframes __loading-classic-5-l5 {

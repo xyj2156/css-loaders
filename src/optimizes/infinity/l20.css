@@ -5,8 +5,8 @@
   --c1: var(--color-1, #000);
   --c2: var(--color-2, #0000);
 
-  --_10: calc(var(--s) / 6);
-  --_20: calc(var(--s) / 3);
+  --_a: calc(var(--s) / 6);
+  --_b: calc(var(--s) / 3);
 
   width: var(--s);
   display: flex;
@@ -19,7 +19,7 @@
   content: '';
   flex: 1;
   aspect-ratio: 1;
-  --g: conic-gradient(from -90deg at var(--_10) var(--_10), var(--c1) 90deg, var(--c2) 0);
+  --g: conic-gradient(from -90deg at var(--_a) var(--_a), var(--c1) 90deg, var(--c2) 0);
   background: var(--g), var(--g), var(--g);
   filter: drop-shadow(calc(var(--s) / 2) calc(var(--s) / 2) 0 var(--c1));
   animation: __loading-infinity-20-l20 var(--d1) infinite;
@@ -33,22 +33,22 @@
   0% {
     background-position:
       0 0,
-      var(--_10) var(--_10),
-      var(--_20) var(--_20);
+      var(--_a) var(--_a),
+      var(--_b) var(--_b);
   }
   33% {
-    background-position: var(--_10) var(--_10);
+    background-position: var(--_a) var(--_a);
   }
   66% {
     background-position:
-      0 var(--_20),
-      var(--_10) var(--_10),
-      var(--_20) 0;
+      0 var(--_b),
+      var(--_a) var(--_a),
+      var(--_b) 0;
   }
   100% {
     background-position:
       0 0,
-      var(--_10) var(--_10),
-      var(--_20) var(--_20);
+      var(--_a) var(--_a),
+      var(--_b) var(--_b);
   }
 }

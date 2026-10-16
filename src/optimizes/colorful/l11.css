@@ -6,16 +6,17 @@
   --c2: var(--color-2, #abd406);
   --c3: var(--color-3, #ff821c);
 
+  --__a: linear-gradient(90deg, var(--c1) 25%, var(--c2) 0 50%, var(--c3) 0 75%, var(--c1) 0);
+
   width: var(--s);
   aspect-ratio: 1;
   display: flex;
-  --c: linear-gradient(90deg, var(--c1) 25%, var(--c2) 0 50%, var(--c3) 0 75%, var(--c1) 0);
 }
 .__loading-colorful-11:before,
 .__loading-colorful-11:after {
   content: '';
   flex: 1;
-  background: var(--c), var(--c), var(--c), var(--c);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
   background-size: 400% 26%;
   background-repeat: no-repeat;
   animation: __loading-colorful-11-l11 var(--d1) infinite;

@@ -4,7 +4,8 @@
   --d1: var(--duration-1, var(--d));
   --d2: var(--duration-2, calc(var(--d) * 0.5));
   --c1: var(--color-1, #000);
-  --_g: no-repeat radial-gradient(farthest-side, var(--c1) 94%, #0000);
+
+  --__a: no-repeat radial-gradient(farthest-side, var(--c1) 94%, #0000);
 
   height: var(--s);
   aspect-ratio: 4;
@@ -16,8 +17,8 @@
   content: '';
   grid-area: 1/1;
   background:
-    var(--_g) left,
-    var(--_g) right;
+    var(--__a) left,
+    var(--__a) right;
   background-size: 25% 100%;
   animation: __loading-dots-34-l34 var(--d1) infinite;
   transform: translate(var(--__d, 0)) rotate(0);

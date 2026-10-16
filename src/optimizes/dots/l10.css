@@ -3,6 +3,7 @@
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1.5));
   --c1: var(--color-1, #000);
+
   --_a: calc(var(--s) * 26 / 15);
   --__a: calc(var(--_a) * -1) 0;
   --__b: rotate(0deg) translateX(var(--_a));

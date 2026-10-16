@@ -5,17 +5,17 @@
   --c1: var(--color-1, #000);
   --c2: var(--color-2, #0000);
 
-  --_8: calc(var(--s) * 4 / 45);
-  --_-8: calc(var(--_8) * -1);
+  --_a: calc(var(--s) * 4 / 45);
+  --__a: calc(var(--_a) * -1);
+  --__b: var(--c1) 50%, var(--c2) 0;
 
   width: var(--s);
   height: calc(var(--s) * 12 / 90);
-  --__z: var(--c1) 50%, var(--c2) 0;
   background:
-    linear-gradient(90deg, var(--__z)) 0 0,
-    linear-gradient(-90deg, var(--__z)) 0 50%,
-    linear-gradient(90deg, var(--__z)) 0 100%;
-  background-size: var(--_8) calc(100% / 3);
+    linear-gradient(90deg, var(--__b)) 0 0,
+    linear-gradient(-90deg, var(--__b)) 0 50%,
+    linear-gradient(90deg, var(--__b)) 0 100%;
+  background-size: var(--_a) calc(100% / 3);
   background-repeat: repeat-x;
   animation: __loading-infinity-8-l8 var(--d1) infinite linear;
 }
@@ -23,8 +23,8 @@
 @keyframes __loading-infinity-8-l8 {
   100% {
     background-position:
-      var(--_-8) 0,
-      var(--_-8) 50%,
-      var(--_-8) 100%;
+      var(--__a) 0,
+      var(--__a) 50%,
+      var(--__a) 100%;
   }
 }

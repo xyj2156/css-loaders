@@ -1,0 +1,48 @@
+.__loading-square-vs-circle-3 {
+  --s: var(--size, 35px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #fff);
+  --_a: calc(var(--s) * 3 / 35);
+  --_b: calc(var(--s) * 5 / 35);
+
+  display: inline-flex;
+  gap: var(--_b);
+}
+.__loading-square-vs-circle-3:before,
+.__loading-square-vs-circle-3:after {
+  content: '';
+  width: var(--s);
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 var(--_a) inset var(--c1);
+  animation: var(--d) infinite linear;
+  animation-name: __loading-square-vs-circle-3-l3-1, __loading-square-vs-circle-3-l3-2;
+  animation-delay: -1s, 0s;
+}
+.__loading-square-vs-circle-3:after {
+  --s: -1;
+}
+@keyframes __loading-square-vs-circle-3-l3-1 {
+  0% {
+    border-radius: 50% 0 0 50%;
+  }
+  25% {
+    border-radius: 50% 50% 0 0;
+  }
+  50% {
+    border-radius: 0 50% 50% 0;
+  }
+  75% {
+    border-radius: 0 0 50% 50%;
+  }
+  100% {
+    border-radius: 50% 0 0 50%;
+  }
+}
+@keyframes __loading-square-vs-circle-3-l3-2 {
+  0% {
+    transform: scaleX(var(--s, 1)) rotate(0deg);
+  }
+  100% {
+    transform: scaleX(var(--s, 1)) rotate(-360deg);
+  }
+}

@@ -1,0 +1,75 @@
+.__loading-wobbling-19 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #514b82);
+  --_a: calc(var(--s) * 1 / 30);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
+  height: var(--s);
+  aspect-ratio: 3;
+  background:
+    var(--__a) calc(0 * 100% / 5) 50%,
+    var(--__a) calc(1 * 100% / 5) 50%,
+    var(--__a) calc(2 * 100% / 5) 50%,
+    var(--__a) calc(3 * 100% / 5) 50%,
+    var(--__a) calc(4 * 100% / 5) 50%,
+    var(--__a) calc(5 * 100% / 5) 50%;
+  background-size: calc(100% / 6 + var(--_a)) 50%;
+  animation: __loading-wobbling-19-l19 var(--d) infinite cubic-bezier(0.5, 170, 0.5, -170);
+}
+@keyframes __loading-wobbling-19-l19 {
+  14.28% {
+    background-position:
+      calc(0 * 100% / 5) 51%,
+      calc(1 * 100% / 5) 50%,
+      calc(2 * 100% / 5) 50%,
+      calc(3 * 100% / 5) 50%,
+      calc(4 * 100% / 5) 50%,
+      calc(5 * 100% / 5) 50%;
+  }
+  28.57% {
+    background-position:
+      calc(0 * 100% / 5) 50%,
+      calc(1 * 100% / 5) 51%,
+      calc(2 * 100% / 5) 50%,
+      calc(3 * 100% / 5) 50%,
+      calc(4 * 100% / 5) 50%,
+      calc(5 * 100% / 5) 50%;
+  }
+  42.85% {
+    background-position:
+      calc(0 * 100% / 5) 50%,
+      calc(1 * 100% / 5) 50%,
+      calc(2 * 100% / 5) 51%,
+      calc(3 * 100% / 5) 50%,
+      calc(4 * 100% / 5) 50%,
+      calc(5 * 100% / 5) 50%;
+  }
+  57.14% {
+    background-position:
+      calc(0 * 100% / 5) 50%,
+      calc(1 * 100% / 5) 50%,
+      calc(2 * 100% / 5) 50%,
+      calc(3 * 100% / 5) 51%,
+      calc(4 * 100% / 5) 50%,
+      calc(5 * 100% / 5) 50%;
+  }
+  71.42% {
+    background-position:
+      calc(0 * 100% / 5) 50%,
+      calc(1 * 100% / 5) 50%,
+      calc(2 * 100% / 5) 50%,
+      calc(3 * 100% / 5) 50%,
+      calc(4 * 100% / 5) 51%,
+      calc(5 * 100% / 5) 50%;
+  }
+  85.71% {
+    background-position:
+      calc(0 * 100% / 5) 50%,
+      calc(1 * 100% / 5) 50%,
+      calc(2 * 100% / 5) 50%,
+      calc(3 * 100% / 5) 50%,
+      calc(4 * 100% / 5) 50%,
+      calc(5 * 100% / 5) 51%;
+  }
+}

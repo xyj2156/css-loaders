@@ -1,0 +1,40 @@
+.__loading-spinner-16 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #ccc);
+  --c2: var(--color-2, #f03355);
+  --_a: calc(var(--s) * 2 / 50);
+  --_b: calc(var(--s) * 4 / 50);
+  --_c: calc(var(--s) * 8 / 50);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+  border: var(--_b) solid #0000;
+  border-radius: 50%;
+  border-color: var(--c1) #0000;
+  animation: __loading-spinner-16-l16 var(--d) infinite linear;
+}
+.__loading-spinner-16::before,
+.__loading-spinner-16::after {
+  content: '';
+  grid-area: 1/1;
+  margin: var(--_a);
+  border: inherit;
+  border-radius: 50%;
+}
+.__loading-spinner-16::before {
+  border-color: var(--c2) #0000;
+  animation: inherit;
+  animation-duration: var(--d1);
+  animation-direction: reverse;
+}
+.__loading-spinner-16::after {
+  margin: var(--_c);
+}
+@keyframes __loading-spinner-16-l16 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

@@ -1,0 +1,55 @@
+.__loading-progress-5 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 2 / 80);
+  --_b: calc(var(--s) * 3 / 80);
+  --_c: calc(var(--s) * 5 / 80);
+  --_d: calc(var(--s) * 7 / 80);
+  --_e: calc(var(--s) * 10 / 80);
+  --_f: calc(var(--s) * 15 / 80);
+  --_g: calc(var(--s) * 40 / 80);
+
+  width: var(--s);
+  height: var(--_g);
+  color: var(--c1);
+  border: var(--_a) solid currentColor;
+  border-right-color: transparent;
+  padding: var(--_b);
+  background: repeating-linear-gradient(90deg, currentColor 0 var(--_e), #0000 0 var(--_f)) 0/0%
+    no-repeat content-box content-box;
+  position: relative;
+  box-sizing: border-box;
+  animation: __loading-progress-5-l5 var(--d) infinite steps(6);
+}
+.__loading-progress-5::before {
+  content: '';
+  position: absolute;
+  top: -var(--_a);
+  bottom: -var(--_a);
+  left: 100%;
+  width: var(--_e);
+  background:
+    linear-gradient(
+        #0000 calc(50% - var(--_d)),
+        currentColor 0 calc(50% - var(--_c)),
+        #0000 0 calc(50% + var(--_c)),
+        currentColor 0 calc(50% + var(--_d)),
+        #0000 0
+      )
+      left / 100% 100%,
+    linear-gradient(
+        currentColor calc(50% - var(--_c)),
+        #0000 0 calc(50% + var(--_c)),
+        currentColor 0
+      )
+      left / var(--_a) 100%,
+    linear-gradient(#0000 calc(50% - var(--_c)), currentColor 0 calc(50% + var(--_c)), #0000 0)
+      right/var(--_a) 100%;
+  background-repeat: no-repeat;
+}
+@keyframes __loading-progress-5-l5 {
+  100% {
+    background-size: 120%;
+  }
+}

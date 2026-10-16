@@ -1,0 +1,57 @@
+.__loading-shapes-6 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #514b82);
+
+  width: var(--s);
+  height: var(--s);
+  display: grid;
+  animation: __loading-shapes-6-l6-0 var(--d) infinite linear;
+}
+.__loading-shapes-6:before,
+.__loading-shapes-6:after {
+  content: '';
+  grid-area: 1/1;
+  background: var(--c1);
+  animation:
+    __loading-shapes-6-l6-1 var(--d) infinite linear,
+    __loading-shapes-6-l6-2 var(--d) infinite linear;
+}
+.__loading-shapes-6:after {
+  --s: -1;
+  animation-direction: reverse;
+}
+@keyframes __loading-shapes-6-l6-0 {
+  0%,
+  9%,
+  91%,
+  100% {
+    background: var(--c1);
+  }
+  10%,
+  90% {
+    background: #0000;
+  }
+}
+@keyframes __loading-shapes-6-l6-1 {
+  0%,
+  33% {
+    clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
+  }
+  66%,
+  100% {
+    clip-path: polygon(50% 0, 50% 100%, 50% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes __loading-shapes-6-l6-2 {
+  0%,
+  10%,
+  90%,
+  100% {
+    transform: scale(var(--s, 1)) translateY(0);
+  }
+  33%,
+  66% {
+    transform: scale(var(--s, 1)) translateY(50%);
+  }
+}

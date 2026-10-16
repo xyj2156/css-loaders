@@ -1,0 +1,18 @@
+.__loading-spinner-1 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 8 / 50);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: var(--_a) solid;
+  border-color: var(--c1) #0000;
+  animation: __loading-spinner-1-l1 var(--d) infinite;
+}
+@keyframes __loading-spinner-1-l1 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}

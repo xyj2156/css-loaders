@@ -1,0 +1,30 @@
+.__loading-time-1 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 4 / 60);
+  --_b: calc(var(--s) * 5 / 60);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: flex;
+  color: var(--c1);
+  border: var(--_a) solid;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle var(--_b), currentColor 95%, #0000),
+    linear-gradient(currentColor 50%, #0000 0) 50% / var(--_a) 60% no-repeat;
+  animation: __loading-time-1-l1 var(--d) infinite linear;
+}
+.__loading-time-1:before {
+  content: '';
+  flex: 1;
+  background: linear-gradient(currentColor 50%, #0000 0) 50% / var(--_a) 80% no-repeat;
+  animation: inherit;
+}
+@keyframes __loading-time-1-l1 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

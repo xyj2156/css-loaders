@@ -3,11 +3,12 @@
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1));
   --c1: var(--color-1, #000);
-  --_g: no-repeat radial-gradient(farthest-side, var(--c1) 90%, #0000);
+
+  --__a: no-repeat radial-gradient(farthest-side, var(--c1) 90%, #0000);
 
   width: var(--s);
   aspect-ratio: 1;
-  background: var(--_g), var(--_g), var(--_g);
+  background: var(--__a), var(--__a), var(--__a);
   background-size: 25% 25%;
   animation: __loading-dots-17-l17 var(--d1) infinite;
 }

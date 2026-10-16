@@ -1,22 +1,23 @@
 .__loading-colorful-13 {
   --s: var(--size, 50px);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, calc(var(--d) * 2));
   --c1: var(--color-1, #cff09e);
   --c2: var(--color-2, #79bd9a);
   --c3: var(--color-3, #0b486b);
-  --d: var(--duration, 1s);
-  --d1: var(--duration-1, calc(var(--d) * 2));
+
+  --__a: var(--c1) 25%, var(--c2) 0 50%, var(--c3) 0 75%, var(--c1) 0;
 
   width: var(--s);
   aspect-ratio: 1;
   display: grid;
-  --c: var(--c1) 25%, var(--c2) 0 50%, var(--c3) 0 75%, var(--c1) 0;
 }
 .__loading-colorful-13:before,
 .__loading-colorful-13:after {
   content: '';
   background:
-    linear-gradient(90deg, var(--c)) no-repeat,
-    linear-gradient(-90deg, var(--c)) no-repeat;
+    linear-gradient(90deg, var(--__a)) no-repeat,
+    linear-gradient(-90deg, var(--__a)) no-repeat;
   background-size: 400% 52%;
   animation: __loading-colorful-13-l13 var(--d1) infinite;
 }

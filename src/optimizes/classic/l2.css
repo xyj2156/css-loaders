@@ -1,9 +1,10 @@
 .__loading-classic-2 {
-  --c: var(--content, 'Loading...');
   --s: var(--size, 30px);
-  --c1: var(--color-1, currentColor);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, currentColor);
+
+  --__a: var(--content, 'Loading...');
 
   color: var(--c1);
   width: fit-content;
@@ -16,7 +17,7 @@
 }
 
 .__loading-classic-2:before {
-  content: var(--c);
+  content: var(--__a);
 }
 
 @keyframes __loading-classic-2-l2 {

@@ -1,0 +1,54 @@
+.__loading-thin-5 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 3 / 60);
+  --_b: calc(var(--s) * 9 / 60);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
+  height: var(--_b);
+  width: var(--s);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
+  background-size: 26% var(--_a);
+  animation: __loading-thin-5-l5 var(--d) infinite;
+}
+@keyframes __loading-thin-5-l5 {
+  0%,
+  70%,
+  100% {
+    background-position:
+      calc(0 * 100% / 3) 50%,
+      calc(1 * 100% / 3) 50%,
+      calc(2 * 100% / 3) 50%,
+      calc(3 * 100% / 3) 50%;
+  }
+  12.5% {
+    background-position:
+      calc(0 * 100% / 3) 0,
+      calc(1 * 100% / 3) 50%,
+      calc(2 * 100% / 3) 50%,
+      calc(3 * 100% / 3) 50%;
+  }
+  25% {
+    background-position:
+      calc(0 * 100% / 3) 0,
+      calc(1 * 100% / 3) 100%,
+      calc(2 * 100% / 3) 50%,
+      calc(3 * 100% / 3) 50%;
+  }
+  37.5% {
+    background-position:
+      calc(0 * 100% / 3) 0,
+      calc(1 * 100% / 3) 100%,
+      calc(2 * 100% / 3) 0,
+      calc(3 * 100% / 3) 50%;
+  }
+  50%,
+  60% {
+    background-position:
+      calc(0 * 100% / 3) 0,
+      calc(1 * 100% / 3) 100%,
+      calc(2 * 100% / 3) 0,
+      calc(3 * 100% / 3) 100%;
+  }
+}

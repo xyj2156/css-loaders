@@ -1,0 +1,30 @@
+.__loading-zig-zag-8 {
+  --s: var(--size, 27px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #000);
+
+  display: inline-grid;
+}
+.__loading-zig-zag-8:before,
+.__loading-zig-zag-8:after {
+  content: '';
+  height: var(--s);
+  aspect-ratio: 5;
+  --c: var(--c1) 90deg, #0000 0;
+  background:
+    conic-gradient(from 135deg at top, var(--c)),
+    conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  -webkit-mask: repeating-linear-gradient(90deg, var(--c1) 0 15%, #0000 0 50%) 0 0/200%;
+  animation: __loading-zig-zag-8-l8 var(--d) infinite linear;
+}
+.__loading-zig-zag-8:after {
+  animation-delay: -0.2s;
+  animation-direction: reverse;
+}
+@keyframes __loading-zig-zag-8-l8 {
+  to {
+    -webkit-mask-position: -100% 0;
+  }
+}

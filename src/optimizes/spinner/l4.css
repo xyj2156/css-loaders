@@ -1,0 +1,30 @@
+.__loading-spinner-4 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #f03355);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 1 / 50);
+  --_b: calc(var(--s) * 8 / 50);
+  --__a: 8px;
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: var(--_a);
+  background: conic-gradient(#0000 10%, var(--c1)) content-box;
+  -webkit-mask:
+    repeating-conic-gradient(#0000 0deg, var(--c2) 1deg 20deg, #0000 21deg 36deg),
+    radial-gradient(
+      farthest-side,
+      #0000 calc(100% - var(--__a) - var(--_a)),
+      var(--c2) calc(100% - var(--__a))
+    );
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: __loading-spinner-4-l4 var(--d) infinite steps(10);
+}
+@keyframes __loading-spinner-4-l4 {
+  to {
+    transform: rotate(1turn);
+  }
+}

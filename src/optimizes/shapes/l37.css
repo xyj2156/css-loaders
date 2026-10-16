@@ -1,0 +1,28 @@
+.__loading-shapes-37 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #25b09b);
+  --__a: #0000, var(--c1) 2deg 59deg, #0000 61deg;
+  --__b: conic-gradient(from -31deg at bottom, var(--c));
+
+  width: var(--s);
+  aspect-ratio: 1.154;
+  background:
+    var(--c1) top,
+    var(--c1) bottom right,
+    var(--__b) bottom,
+    var(--c1) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  animation: __loading-shapes-37-l37 var(--d) infinite;
+}
+@keyframes __loading-shapes-37-l37 {
+  80%,
+  100% {
+    background-position:
+      bottom right,
+      bottom left,
+      bottom,
+      top;
+  }
+}

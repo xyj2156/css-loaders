@@ -1,8 +1,8 @@
 .__loading-classic-39 {
   --s: var(--size, 30px);
-  --c1: var(--color-1, currentColor);
-  --d:  var(--duration, 1s);
+  --d: var(--duration, 1s);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, currentColor);
 
   width: fit-content;
   font-weight: bold;

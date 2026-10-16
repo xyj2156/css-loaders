@@ -1,9 +1,10 @@
 .__loading-classic-31 {
-  --c: var(--content, 'Loading...');
   --s: var(--size, 10ch);
-  --c1: var(--color-1, #000);
-  --d:  var(--duration, 1s);
+  --d: var(--duration, 1s);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #000);
+
+  --__a: var(--content, 'Loading...');
 
   font-weight: bold;
   font-family: monospace;
@@ -28,7 +29,7 @@
   animation: __loading-classic-31-l31 var(--d1) infinite cubic-bezier(0.5, -150, 0.5, 150);
 }
 .__loading-classic-31:before {
-  content: var(--c);
+  content: var(--__a);
 }
 
 @keyframes __loading-classic-31-l31 {

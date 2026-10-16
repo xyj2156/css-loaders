@@ -1,0 +1,54 @@
+.__loading-thin-4 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 6 / 60);
+  --_b: calc(var(--s) * 9 / 60);
+  --_c: calc(var(--s) * 15 / 60);
+  --__a: no-repeat repeating-linear-gradient(#0000 0 6px, var(--c1) 0 9px, #0000 0 15px);
+
+  height: var(--_c);
+  width: var(--s);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
+  background-size: 26% 200%;
+  animation: __loading-thin-4-l4 var(--d) infinite linear;
+}
+@keyframes __loading-thin-4-l4 {
+  0%,
+  70%,
+  100% {
+    background-position:
+      calc(0 * 100% / 3) 100%,
+      calc(1 * 100% / 3) 100%,
+      calc(2 * 100% / 3) 100%,
+      calc(3 * 100% / 3) 100%;
+  }
+  17.5% {
+    background-position:
+      calc(0 * 100% / 3) 0,
+      calc(1 * 100% / 3) 100%,
+      calc(2 * 100% / 3) 100%,
+      calc(3 * 100% / 3) 100%;
+  }
+  35% {
+    background-position:
+      calc(0 * 100% / 3) 0,
+      calc(1 * 100% / 3) 0,
+      calc(2 * 100% / 3) 100%,
+      calc(3 * 100% / 3) 100%;
+  }
+  52.5% {
+    background-position:
+      calc(0 * 100% / 3) 0,
+      calc(1 * 100% / 3) 0,
+      calc(2 * 100% / 3) 0,
+      calc(3 * 100% / 3) 100%;
+  }
+  69.99% {
+    background-position:
+      calc(0 * 100% / 3) 0,
+      calc(1 * 100% / 3) 0,
+      calc(2 * 100% / 3) 0,
+      calc(3 * 100% / 3) 0;
+  }
+}

@@ -7,20 +7,21 @@
   --_a: calc(var(--s) * 1);
   --_b: calc(var(--s) * 1);
   --_c: calc(var(--s) * 1);
-
-  --__a: calc(var(--s) * 31/70);
-  --__b: calc(var(--s) * 13/70);
-  --__c: calc(var(--s) * 4/70);
-  --__d: calc(var(--s) * 18/70);
+  --_d: calc(var(--s) * 31 / 70);
+  --_e: calc(var(--s) * 13 / 70);
+  --_f: calc(var(--s) * 4 / 70);
+  --_g: calc(var(--s) * 18 / 70);
 
   width: var(--s);
   height: var(--s);
   background: var(--c1);
-  border-radius: calc(var(--s) * 50/70);
+  border-radius: calc(var(--s) * 50 / 70);
   mask:
-    radial-gradient(circle var(--__a) at 50% calc(100% + var(--__b)), #000 95%, #0000) top var(--__c) left 50%,
-    radial-gradient(circle var(--__a), #000 95%, #0000) center,
-    radial-gradient(circle var(--__a) at 50% calc(0% - var(--__b)), #000 95%, #0000) bottom var(--__c) left 50%,
+    radial-gradient(circle var(--_d) at 50% calc(100% + var(--_e)), #000 95%, #0000) top var(--_f)
+      left 50%,
+    radial-gradient(circle var(--_d), #000 95%, #0000) center,
+    radial-gradient(circle var(--_d) at 50% calc(0% - var(--_e)), #000 95%, #0000) bottom var(--_f)
+      left 50%,
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -30,51 +31,51 @@
 @keyframes __loading-cut-10-l10 {
   0% {
     -webkit-mask-size:
-      0 var(--__d),
-      0 var(--__d),
-      0 var(--__d),
+      0 var(--_g),
+      0 var(--_g),
+      0 var(--_g),
       auto;
   }
   16.67% {
     -webkit-mask-size:
-      100% var(--__d),
-      0 var(--__d),
-      0 var(--__d),
+      100% var(--_g),
+      0 var(--_g),
+      0 var(--_g),
       auto;
   }
   33.33% {
     -webkit-mask-size:
-      100% var(--__d),
-      100% var(--__d),
-      0 var(--__d),
+      100% var(--_g),
+      100% var(--_g),
+      0 var(--_g),
       auto;
   }
   50% {
     -webkit-mask-size:
-      100% var(--__d),
-      100% var(--__d),
-      100% var(--__d),
+      100% var(--_g),
+      100% var(--_g),
+      100% var(--_g),
       auto;
   }
   66.67% {
     -webkit-mask-size:
-      0 var(--__d),
-      100% var(--__d),
-      100% var(--__d),
+      0 var(--_g),
+      100% var(--_g),
+      100% var(--_g),
       auto;
   }
   83.33% {
     -webkit-mask-size:
-      0 var(--__d),
-      0 var(--__d),
-      100% var(--__d),
+      0 var(--_g),
+      0 var(--_g),
+      100% var(--_g),
       auto;
   }
   100% {
     -webkit-mask-size:
-      0 var(--__d),
-      0 var(--__d),
-      0 var(--__d),
+      0 var(--_g),
+      0 var(--_g),
+      0 var(--_g),
       auto;
   }
 }

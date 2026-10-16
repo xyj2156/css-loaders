@@ -1,39 +1,38 @@
 .__loading-nature-13 {
   --s: var(--size, 180px);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, calc(var(--d) * 2));
   --c1: var(--color-1, #8d7958);
-  --d:var(--duration, 1s);
-  --d1:var(--duration-1, calc(var(--d) * 2));
 
-  --__9:calc(var(--s) * 9 / 180);
-  --__17:calc(var(--s) * 17 / 180);
-  --__20:calc(var(--s) * 20 / 180);
-  --__25:calc(var(--s) * 25 / 180);
-  --__30:calc(var(--s) * 30 / 180);
-  --__-30:calc(var(--s) * -30 / 180);
-  --__50:calc(var(--s) * 50 / 180);
-  --__60:calc(var(--s) * 60 / 180);
-  --__120:calc(var(--s) * 120 / 180);
-
+  --_a: calc(var(--s) * 9 / 180);
+  --_b: calc(var(--s) * 17 / 180);
+  --_c: calc(var(--s) * 20 / 180);
+  --_d: calc(var(--s) * 25 / 180);
+  --_e: calc(var(--s) * 30 / 180);
+  --_f: calc(var(--s) * -30 / 180);
+  --_g: calc(var(--s) * 50 / 180);
+  --_h: calc(var(--s) * 60 / 180);
+  --_i: calc(var(--s) * 120 / 180);
 
   width: var(--s);
-  height: var(--__50);
+  height: var(--_g);
   display: flex;
   color: var(--c1);
-  filter: drop-shadow(var(--__30) var(--__25) 0 currentColor) drop-shadow(var(--__60) 0 0 currentColor)
-    drop-shadow(var(--__120) 0 0 currentColor);
+  filter: drop-shadow(var(--_e) var(--_d) 0 currentColor) drop-shadow(var(--_h) 0 0 currentColor)
+    drop-shadow(var(--_i) 0 0 currentColor);
   clip-path: inset(0 100% 0 0);
   animation: __loading-nature-13-l13 var(--d1) infinite steps(7);
 }
 .__loading-nature-13:before {
   content: '';
-  width: var(--__30);
-  height: var(--__25);
+  width: var(--_e);
+  height: var(--_d);
   background:
-    radial-gradient(farthest-side at right, currentColor 92%, #0000) left/var(--__20) 100% no-repeat,
-    radial-gradient(farthest-side, currentColor 92%, #0000) right/var(--__17) var(--__9) repeat-y;
+    radial-gradient(farthest-side at right, currentColor 92%, #0000) left/var(--_c) 100% no-repeat,
+    radial-gradient(farthest-side, currentColor 92%, #0000) right/var(--_b) var(--_a) repeat-y;
 }
 @keyframes __loading-nature-13-l13 {
   100% {
-    clip-path: inset(0 var(--__-30) 0 0);
+    clip-path: inset(0 var(--_f) 0 0);
   }
 }

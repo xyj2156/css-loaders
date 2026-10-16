@@ -1,0 +1,32 @@
+.__loading-shapes-31 {
+  --s: var(--size, 45px);
+  --d: var(--duration, 0.5s);
+  --_a: calc(var(--s) * 16 / 45);
+  --_b: calc(var(--s) * 65 / 45);
+  --__a: no-repeat linear-gradient(orange 0 0);
+
+  background:
+    var(--__a) 0 0,
+    var(--__a) 0 50%,
+    var(--__a) 0 100%,
+    var(--__a) 50% 0,
+    var(--__a) 50% 50%,
+    var(--__a) 50% 100%,
+    var(--__a) 100% 0,
+    var(--__a) 100% 50%,
+    var(--__a) 100% 100%;
+  background-size: var(--_a) var(--_a);
+  animation: __loading-shapes-31-l31 var(--d) infinite alternate;
+}
+@keyframes __loading-shapes-31-l31 {
+  0%,
+  20% {
+    width: var(--s);
+    height: var(--s);
+  }
+  90%,
+  100% {
+    width: var(--_b);
+    height: var(--_b);
+  }
+}

@@ -1,9 +1,10 @@
 .__loading-classic-1 {
-  --c: var(--content, 'Loading...');
   --s: var(--size, 30px);
-  --c1: var(--color-1, black);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, black);
+
+  --__a: var(--content, 'Loading...');
 
   color: var(--c1, currentColor);
   font-weight: bold;
@@ -13,7 +14,7 @@
 }
 
 .__loading-classic-1:before {
-  content: var(--c);
+  content: var(--__a);
   display: inline-block;
 }
 

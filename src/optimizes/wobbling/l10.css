@@ -1,0 +1,62 @@
+.__loading-wobbling-10 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, calc(var(--d) * 0.5));
+  --c1: var(--color-1, #ccc);
+  --c2: var(--color-2, #f03355);
+  --_a: calc(var(--s) * 7 / 50);
+  --_b: calc(var(--s) * 10 / 50);
+  --_c: calc(var(--s) * 14 / 50);
+  --_d: calc(var(--s) * 15 / 50);
+  --_e: calc(var(--s) * 100 / 50);
+
+  width: calc(var(--_e) - var(--_c));
+  height: var(--s);
+  border-radius: 50px;
+  background:
+    radial-gradient(
+        farthest-side,
+        #0000 calc(100% - var(--_d)),
+        var(--c1) calc(100% - var(--_c)) 99%,
+        #0000
+      )
+      left,
+    radial-gradient(
+        farthest-side,
+        #0000 calc(100% - var(--_d)),
+        var(--c1) calc(100% - var(--_c)) 99%,
+        #0000
+      )
+      right;
+  background-size: calc(50% + var(--_a)) 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: __loading-wobbling-10-l10-0 var(--d) infinite linear;
+}
+.__loading-wobbling-10:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: var(--_b);
+  height: var(--_b);
+  border-radius: 50%;
+  background: var(--c2);
+  transform-origin: -var(--_c) 50%;
+  animation: __loading-wobbling-10-l10-1 var(--d1) infinite linear;
+}
+@keyframes __loading-wobbling-10-l10-0 {
+  0%,
+  49.99% {
+    transform: scaleX(1);
+  }
+  50%,
+  100% {
+    transform: scaleX(-1);
+  }
+}
+@keyframes __loading-wobbling-10-l10-1 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

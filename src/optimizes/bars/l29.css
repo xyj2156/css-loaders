@@ -1,157 +1,157 @@
 .__loading-bars-29 {
   --s: var(--size, 9px);
-  --c1: var(--color-1, #000);
-  --d:  var(--duration, 1000ms);
+  --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
 
-  --2s: calc(2 * var(--s));
-  --_2s: calc(var(--s) * -2);
-  --_s: calc(var(--s) * -1);
-  
+  --_a: calc(2 * var(--s));
+  --_b: calc(var(--s) * -2);
+  --_c: calc(var(--s) * -1);
+
   width: var(--s);
   height: var(--s);
   background: var(--c1);
   color: var(--c1);
   box-shadow:
-    var(--_2s) var(--_s),
-    0 var(--_s),
-    var(--2s) var(--_s),
-    var(--_2s) 0,
-    var(--2s) 0,
-    var(--_2s) var(--s),
+    var(--_b) var(--_c),
+    0 var(--_c),
+    var(--_a) var(--_c),
+    var(--_b) 0,
+    var(--_a) 0,
+    var(--_b) var(--s),
     0 var(--s),
-    var(--2s) var(--s),
-    var(--_2s) var(--2s),
-    0 var(--2s),
-    var(--2s) var(--2s);
+    var(--_a) var(--s),
+    var(--_b) var(--_a),
+    0 var(--_a),
+    var(--_a) var(--_a);
   animation: __loading-bars-29-l29 var(--d) infinite;
 }
 
 @keyframes __loading-bars-29-l29 {
   10% {
     box-shadow:
-      var(--_2s) var(--_s),
-      0 var(--_s),
-      var(--2s) var(--_s),
-      var(--_2s) 0,
-      var(--2s) 0,
-      var(--_2s) var(--s) #0000,
+      var(--_b) var(--_c),
+      0 var(--_c),
+      var(--_a) var(--_c),
+      var(--_b) 0,
+      var(--_a) 0,
+      var(--_b) var(--s) #0000,
       0 var(--s),
-      var(--2s) var(--s) #0000,
-      var(--_2s) var(--2s),
-      0 var(--2s),
-      var(--2s) var(--2s);
+      var(--_a) var(--s) #0000,
+      var(--_b) var(--_a),
+      0 var(--_a),
+      var(--_a) var(--_a);
   }
   20% {
     box-shadow:
-      var(--_2s) var(--_s),
-      0 var(--_s),
-      var(--2s) var(--_s),
-      var(--_2s) 0,
-      var(--2s) 0,
-      var(--_2s) var(--s),
+      var(--_b) var(--_c),
+      0 var(--_c),
+      var(--_a) var(--_c),
+      var(--_b) 0,
+      var(--_a) 0,
+      var(--_b) var(--s),
       0 var(--s),
-      var(--2s) var(--s) #0000,
-      var(--_2s) var(--2s) #0000,
-      0 var(--2s),
-      var(--2s) var(--2s);
+      var(--_a) var(--s) #0000,
+      var(--_b) var(--_a) #0000,
+      0 var(--_a),
+      var(--_a) var(--_a);
   }
   30% {
     box-shadow:
-      var(--_2s) var(--_s),
-      0 var(--_s) #0000,
-      var(--2s) var(--_s),
-      var(--_2s) 0 #0000,
-      var(--2s) 0,
-      var(--_2s) var(--s),
+      var(--_b) var(--_c),
+      0 var(--_c) #0000,
+      var(--_a) var(--_c),
+      var(--_b) 0 #0000,
+      var(--_a) 0,
+      var(--_b) var(--s),
       0 var(--s) #0000,
-      var(--2s) var(--s),
-      var(--_2s) var(--2s) #0000,
-      0 var(--2s),
-      var(--2s) var(--2s) #0000;
+      var(--_a) var(--s),
+      var(--_b) var(--_a) #0000,
+      0 var(--_a),
+      var(--_a) var(--_a) #0000;
   }
   40% {
     box-shadow:
-      var(--_2s) var(--_s),
-      0 var(--_s),
-      var(--2s) var(--_s),
-      var(--_2s) 0 #0000,
-      var(--2s) 0 #0000,
-      var(--_2s) var(--s),
+      var(--_b) var(--_c),
+      0 var(--_c),
+      var(--_a) var(--_c),
+      var(--_b) 0 #0000,
+      var(--_a) 0 #0000,
+      var(--_b) var(--s),
       0 var(--s),
-      var(--2s) var(--s),
-      var(--_2s) var(--2s),
-      0 var(--2s),
-      var(--2s) var(--2s);
+      var(--_a) var(--s),
+      var(--_b) var(--_a),
+      0 var(--_a),
+      var(--_a) var(--_a);
   }
   50% {
     box-shadow:
-      var(--_2s) var(--_s),
-      0 var(--_s),
-      var(--2s) var(--_s),
-      var(--_2s) 0,
-      var(--2s) 0 #0000,
-      var(--_2s) var(--s) #0000,
+      var(--_b) var(--_c),
+      0 var(--_c),
+      var(--_a) var(--_c),
+      var(--_b) 0,
+      var(--_a) 0 #0000,
+      var(--_b) var(--s) #0000,
       0 var(--s),
-      var(--2s) var(--s),
-      var(--_2s) var(--2s),
-      0 var(--2s),
-      var(--2s) var(--2s);
+      var(--_a) var(--s),
+      var(--_b) var(--_a),
+      0 var(--_a),
+      var(--_a) var(--_a);
   }
   60% {
     box-shadow:
-      var(--_2s) var(--_s),
-      0 var(--_s) #0000,
-      var(--2s) var(--_s),
-      var(--_2s) 0,
-      var(--2s) 0,
-      var(--_2s) var(--s) #0000,
+      var(--_b) var(--_c),
+      0 var(--_c) #0000,
+      var(--_a) var(--_c),
+      var(--_b) 0,
+      var(--_a) 0,
+      var(--_b) var(--s) #0000,
       0 var(--s),
-      var(--2s) var(--s),
-      var(--_2s) var(--2s) #0000,
-      0 var(--2s),
-      var(--2s) var(--2s);
+      var(--_a) var(--s),
+      var(--_b) var(--_a) #0000,
+      0 var(--_a),
+      var(--_a) var(--_a);
   }
   70% {
     box-shadow:
-      var(--_2s) var(--_s),
-      0 var(--_s) #0000,
-      var(--2s) var(--_s) #0000,
-      var(--_2s) 0,
-      var(--2s) 0,
-      var(--_2s) var(--s),
+      var(--_b) var(--_c),
+      0 var(--_c) #0000,
+      var(--_a) var(--_c) #0000,
+      var(--_b) 0,
+      var(--_a) 0,
+      var(--_b) var(--s),
       0 var(--s),
-      var(--2s) var(--s),
-      var(--_2s) var(--2s) #0000,
-      0 var(--2s),
-      var(--2s) var(--2s);
+      var(--_a) var(--s),
+      var(--_b) var(--_a) #0000,
+      0 var(--_a),
+      var(--_a) var(--_a);
   }
   80% {
     box-shadow:
-      var(--_2s) var(--_s) #0000,
-      0 var(--_s),
-      var(--2s) var(--_s),
-      var(--_2s) 0,
-      var(--2s) 0,
-      var(--_2s) var(--s),
+      var(--_b) var(--_c) #0000,
+      0 var(--_c),
+      var(--_a) var(--_c),
+      var(--_b) 0,
+      var(--_a) 0,
+      var(--_b) var(--s),
       0 var(--s),
-      var(--2s) var(--s),
-      var(--_2s) var(--2s),
-      0 var(--2s),
-      var(--2s) var(--2s) #0000;
+      var(--_a) var(--s),
+      var(--_b) var(--_a),
+      0 var(--_a),
+      var(--_a) var(--_a) #0000;
   }
   90% {
     box-shadow:
-      var(--_2s) var(--_s) #0000,
-      0 var(--_s),
-      var(--2s) var(--_s),
-      var(--_2s) 0,
-      var(--2s) 0,
-      var(--_2s) var(--s),
+      var(--_b) var(--_c) #0000,
+      0 var(--_c),
+      var(--_a) var(--_c),
+      var(--_b) 0,
+      var(--_a) 0,
+      var(--_b) var(--s),
       0 var(--s) #0000,
-      var(--2s) var(--s),
-      var(--_2s) var(--2s),
-      0 var(--2s),
-      var(--2s) var(--2s) #0000;
+      var(--_a) var(--s),
+      var(--_b) var(--_a),
+      0 var(--_a),
+      var(--_a) var(--_a) #0000;
   }
 }

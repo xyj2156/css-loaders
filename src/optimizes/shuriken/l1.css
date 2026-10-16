@@ -1,0 +1,28 @@
+.__loading-shuriken-1 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #8d7958);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 5 / 80);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background: var(--c1);
+  clip-path: polygon(
+    100% 50%,
+    64.14% 64.14%,
+    50% 100%,
+    35.86% 64.14%,
+    0% 50%,
+    35.86% 35.86%,
+    50% 0%,
+    64.14% 35.86%
+  );
+  -webkit-mask: radial-gradient(circle var(--_a), #0000 90%, var(--c2));
+  animation: __loading-shuriken-1-l1 var(--d) infinite linear;
+}
+@keyframes __loading-shuriken-1-l1 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

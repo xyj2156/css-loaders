@@ -1,17 +1,18 @@
 .__loading-arcade-7 {
   --s: var(--size, 70px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
   --c1: var(--color-1, #000);
   --c2: var(--color-2, #fff);
   --c3: var(--color-3, lightblue);
-  --d:  var(--duration, 1000ms);
-  --d1: var(--duration-1, calc(var(--d) * 2));
 
   width: var(--s);
   height: calc(var(--s) * 5 / 7);
   box-sizing: border-box;
   background:
-    conic-gradient(from 135deg at top, #0000, var(--c2) 1deg 90deg, #0000 91deg) right calc(var(--s) * -20 / 70) bottom
-      calc(var(--s) * 8 / 70)/calc(var(--s) * 18 / 70) calc(var(--s) * 9 / 70),
+    conic-gradient(from 135deg at top, #0000, var(--c2) 1deg 90deg, #0000 91deg) right
+      calc(var(--s) * -20 / 70) bottom calc(var(--s) * 8 / 70) / calc(var(--s) * 18 / 70)
+      calc(var(--s) * 9 / 70),
     linear-gradient(var(--c2) 0 0) bottom/100% calc(var(--s) * 8 / 70),
     var(--c1);
   background-repeat: no-repeat;

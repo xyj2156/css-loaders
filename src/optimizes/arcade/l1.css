@@ -1,11 +1,11 @@
 .__loading-arcade-1 {
   --s: var(--size, 45px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
   --c1: var(--color-1, #e50021);
   --c2: var(--color-2, #004ce4);
   --c3: var(--color-3, #00e622);
   --c4: var(--color-4, #9d0be6);
-  --d:  var(--duration, 1000ms);
-  --d1: var(--duration-1, calc(var(--d) * 2));
 
   width: var(--s);
   height: calc(var(--s) * 2 / 3);

@@ -1,0 +1,27 @@
+.__loading-wobbling-17 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #f03355);
+  --c2: var(--color-2, #ddd);
+  --_a: calc(var(--s) * 15 / 80);
+  --_b: calc(var(--s) * 20 / 80);
+
+  height: var(--_b);
+  width: var(--s);
+  transform: rotate(-30deg);
+  background: radial-gradient(farthest-side, var(--c1) 90%, #0000) left bottom/var(--_a) var(--_a)
+    no-repeat var(--c2);
+  animation:
+    __loading-wobbling-17-l17-0 var(--d) infinite alternate linear,
+    __loading-wobbling-17-l17-1 var(--d) infinite cubic-bezier(0.75, 0, 1, 0.6);
+}
+@keyframes __loading-wobbling-17-l17-0 {
+  50% {
+    transform: rotate(30deg);
+  }
+}
+@keyframes __loading-wobbling-17-l17-1 {
+  50% {
+    background-position: right bottom;
+  }
+}

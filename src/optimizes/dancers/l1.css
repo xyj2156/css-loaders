@@ -1,17 +1,15 @@
 .__loading-dancers-1 {
   --s: var(--size, 40px);
   --d: var(--duration, 1000ms);
-
   --d1: var(--duration-1, calc(var(--d) * 2));
   --d2: var(--duration-2, calc(var(--d) * 0.5));
-
   --c1: var(--color-1, #3fb8af);
   --c2: var(--color-2, #ff3d7f);
 
   --_a: var(--s);
   --_b: calc(var(--s) * 1);
-  --_c: calc(var(--s) * 2/5);
-  --__a: calc(var(--s) * 2/5);
+  --_c: calc(var(--s) * 2 / 5);
+  --_d: calc(var(--s) * 2 / 5);
 
   width: var(--_a);
   aspect-ratio: 1;
@@ -23,7 +21,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  margin: calc(var(--__a) * -1) 0 0 calc(var(--__a) * -1);
+  margin: calc(var(--_d) * -1) 0 0 calc(var(--_d) * -1);
   width: var(--_c);
   aspect-ratio: 1;
   background: var(--c1);

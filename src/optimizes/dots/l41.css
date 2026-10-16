@@ -3,15 +3,16 @@
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1));
   --c1: var(--color-1, #000);
-  --_g: no-repeat radial-gradient(farthest-side, var(--c1) 95%, #0000);
+
+  --__a: no-repeat radial-gradient(farthest-side, var(--c1) 95%, #0000);
 
   height: var(--s);
   aspect-ratio: 5;
   display: flex;
   justify-content: space-between;
   background:
-    var(--_g) calc(1 * 100% / 3) 0,
-    var(--_g) calc(2 * 100% / 3) 0;
+    var(--__a) calc(1 * 100% / 3) 0,
+    var(--__a) calc(2 * 100% / 3) 0;
   background-size: 20% 100%;
 }
 .__loading-dots-41:before,

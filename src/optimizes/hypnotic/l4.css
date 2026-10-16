@@ -3,9 +3,10 @@
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) / 1));
   --c1: var(--color-1, #000);
-  --__1: calc(var(--s) * 0.46);
-  --__2: calc(var(--s) * 0.24);
-  --__3: calc(var(--s) * 0.7);
+
+  --_a: calc(var(--s) * 0.46);
+  --_b: calc(var(--s) * 0.24);
+  --_c: calc(var(--s) * 0.7);
 
   width: var(--s);
   aspect-ratio: 1;
@@ -19,16 +20,16 @@
     #0000
   );
   background: var(--c), var(--c);
-  background-size: var(--__1) var(--__1);
+  background-size: var(--_a) var(--_a);
   background-position:
     0 0,
-    var(--__2) var(--__2);
+    var(--_b) var(--_b);
   animation: __loading-hypnotic-4-l4 var(--d1) infinite;
 }
 @keyframes __loading-hypnotic-4-l4 {
   100% {
     background-position:
-      calc(var(--__1) * -1) 0,
-      var(--__2) var(--__3);
+      calc(var(--_a) * -1) 0,
+      var(--_b) var(--_c);
   }
 }

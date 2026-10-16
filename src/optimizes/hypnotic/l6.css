@@ -10,10 +10,20 @@
   display: grid;
   color: var(--c1);
   background:
-    linear-gradient(90deg, currentColor calc(var(--s) * 0.04), #0000 0 calc(100% - calc(var(--s) * 0.04)), currentColor 0) center/100%
-      calc(var(--s) * 0.28),
-    linear-gradient(0deg, currentColor calc(var(--s) * 0.04), #0000 0 calc(100% - calc(var(--s) * 0.04)), currentColor 0) center/calc(var(--s) * 0.28)
-      100%,
+    linear-gradient(
+        90deg,
+        currentColor calc(var(--s) * 0.04),
+        #0000 0 calc(100% - calc(var(--s) * 0.04)),
+        currentColor 0
+      )
+      center/100% calc(var(--s) * 0.28),
+    linear-gradient(
+        0deg,
+        currentColor calc(var(--s) * 0.04),
+        #0000 0 calc(100% - calc(var(--s) * 0.04)),
+        currentColor 0
+      )
+      center/calc(var(--s) * 0.28) 100%,
     linear-gradient(currentColor 0 0) center/100% calc(var(--s) * 0.04),
     linear-gradient(currentColor 0 0) center/calc(var(--s) * 0.04) 100%;
   background-repeat: no-repeat;

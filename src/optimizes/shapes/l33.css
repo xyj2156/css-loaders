@@ -1,0 +1,38 @@
+.__loading-shapes-33 {
+  --s: var(--size, 45px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #514b82);
+  --_a: calc(var(--s) * 16 / 45);
+  --_b: calc(var(--s) * 65 / 45);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
+  height: var(--s);
+  background:
+    var(--__a) left,
+    var(--__a) center,
+    var(--__a) right;
+  background-size: var(--_a) 100%;
+  animation:
+    __loading-shapes-33-l33-1 var(--d) infinite,
+    __loading-shapes-33-l33-2 var(--d) infinite;
+}
+@keyframes __loading-shapes-33-l33-1 {
+  0%,
+  100% {
+    width: var(--s);
+  }
+  35%,
+  65% {
+    width: var(--_b);
+  }
+}
+@keyframes __loading-shapes-33-l33-2 {
+  0%,
+  40% {
+    transform: rotate(0);
+  }
+  60%,
+  100% {
+    transform: rotate(90deg);
+  }
+}

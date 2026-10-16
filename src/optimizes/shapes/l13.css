@@ -1,0 +1,36 @@
+.__loading-shapes-13 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 2s);
+  --_a: calc(var(--s) * 20 / 40);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-shapes-13::before,
+.__loading-shapes-13::after {
+  content: '';
+  grid-area: 1/1;
+  background: orange;
+  clip-path: polygon(0 0, 101% 0, 0 100%);
+  animation: __loading-shapes-13-l13 var(--d) infinite;
+}
+.__loading-shapes-13::after {
+  --s: -1, -1;
+}
+@keyframes __loading-shapes-13-l13 {
+  0%,
+  10% {
+    transform: scale(var(--s, 1)) translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: scale(var(--s, 1)) translate(var(--_a), -var(--_a)) rotate(0deg);
+  }
+  66% {
+    transform: scale(var(--s, 1)) translate(var(--_a), -var(--_a)) rotate(180deg);
+  }
+  90%,
+  100% {
+    transform: scale(var(--s, 1)) translate(0px, 0px) rotate(180deg);
+  }
+}

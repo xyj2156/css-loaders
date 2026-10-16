@@ -1,11 +1,13 @@
 .__loading-dots-29 {
-  --size: 15px;
   --s: var(--size, 15px);
-  --duration: 1000ms;
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
-  --color-1: #000;
   --c1: var(--color-1, #000);
+
+  --__a: 15px;
+  --__b: 1000ms;
+  --__c: #000;
+
   width: calc(var(--s) * 2.33);
   aspect-ratio: 1;
   display: flex;

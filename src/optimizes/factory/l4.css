@@ -15,8 +15,7 @@
 .__loading-factory-4:after {
   content: '';
   grid-area: 1/1;
-  background:
-    radial-gradient(circle closest-side, var(--__c, var(--c1)) 92%, #0000) 0 0 /
+  background: radial-gradient(circle closest-side, var(--__c, var(--c1)) 92%, #0000) 0 0 /
     calc(100% / 4) 100%;
   animation: __loading-factory-4-l4 var(--d1) infinite linear;
 }

@@ -1,0 +1,21 @@
+.__loading-spinner-13 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #ffa516);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 8 / 50);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side, var(--c1) 94%, #0000) top/var(--_a) var(--_a) no-repeat,
+    conic-gradient(#0000 30%, var(--c1));
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - var(--_a)), var(--c2) 0);
+  animation: __loading-spinner-13-l13 var(--d) infinite linear;
+}
+@keyframes __loading-spinner-13-l13 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

@@ -9,7 +9,6 @@
   --_a: var(--s);
   --_b: calc(var(--s) * 1);
   --_c: calc(var(--s) * 1);
-
   --__a: calc(var(--_a) * 1);
   --__b: calc(var(--_b) * 1);
   --__c: calc(var(--_c) * 1);

@@ -1,0 +1,51 @@
+.__loading-shapes-39 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #398eb6);
+  --_a: calc(var(--s) * 10 / 50);
+  --_b: calc(var(--s) * 25 / 50);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  color: var(--c1);
+  background: currentColor;
+  border-radius: 50%;
+  position: relative;
+}
+.__loading-shapes-39:before {
+  content: '';
+  position: absolute;
+  background:
+    radial-gradient(farthest-side at bottom right, #0000 94%, currentColor 96%) 0 0,
+    radial-gradient(farthest-side at bottom left, #0000 94%, currentColor 96%) 100% 0,
+    radial-gradient(farthest-side at top left, #0000 94%, currentColor 96%) 100% 100%,
+    radial-gradient(farthest-side at top right, #0000 94%, currentColor 96%) 0 100%;
+  background-size: var(--_b) var(--_b);
+  background-repeat: no-repeat;
+  animation:
+    __loading-shapes-39-l39-1 var(--d) infinite,
+    __loading-shapes-39-l39-2 var(--d) infinite;
+}
+@keyframes __loading-shapes-39-l39-1 {
+  0%,
+  10%,
+  90%,
+  100% {
+    inset: 0;
+  }
+  40%,
+  60% {
+    inset: -var(--_a);
+  }
+}
+
+@keyframes __loading-shapes-39-l39-2 {
+  0%,
+  40% {
+    transform: rotate(0);
+  }
+  60%,
+  100% {
+    transform: rotate(90deg);
+  }
+}

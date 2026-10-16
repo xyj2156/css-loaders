@@ -1,9 +1,9 @@
 .__loading-arcade-3 {
   --s: var(--size, 80px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #000);
-  --d:  var(--duration, 1000ms);
-  --d1: var(--duration-1, calc(var(--d) * 2));
 
   width: var(--s);
   height: calc(var(--s) * 0.875);
@@ -11,9 +11,10 @@
   padding: 0 calc(var(--s) * 0.1);
   box-sizing: border-box;
   background:
-    linear-gradient(var(--c1) 0 0) 0 0/calc(var(--s) * 0.1) calc(var(--s) * 0.25),
-    linear-gradient(var(--c1) 0 0) 100% 0/calc(var(--s) * 0.1) calc(var(--s) * 0.25),
-    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 calc(var(--s) * 0.0625)/calc(var(--s) * 0.1) calc(var(--s) * 0.1) content-box,
+    linear-gradient(var(--c1) 0 0) 0 0 / calc(var(--s) * 0.1) calc(var(--s) * 0.25),
+    linear-gradient(var(--c1) 0 0) 100% 0 / calc(var(--s) * 0.1) calc(var(--s) * 0.25),
+    radial-gradient(farthest-side, var(--c1) 90%, #0000) 0 calc(var(--s) * 0.0625) /
+      calc(var(--s) * 0.1) calc(var(--s) * 0.1) content-box,
     var(--c2);
   background-repeat: no-repeat;
   animation: __loading-arcade-3-l3 var(--d1) infinite linear;

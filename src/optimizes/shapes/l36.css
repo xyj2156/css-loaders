@@ -1,0 +1,40 @@
+.__loading-shapes-36 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #f03355);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 10 / 50);
+  --_b: calc(var(--s) * 20 / 50);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-shapes-36:before,
+.__loading-shapes-36:after {
+  content: '';
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: var(--c1);
+  -webkit-mask: repeating-linear-gradient(var(--c2) 0 var(--_a), #0000 0 var(--_b));
+}
+.__loading-shapes-36:after {
+  -webkit-mask: repeating-linear-gradient(#0000 0 var(--_a), var(--c2) 0 var(--_b));
+  animation: __loading-shapes-36-l36 var(--d) infinite;
+}
+@keyframes __loading-shapes-36-l36 {
+  0%,
+  10% {
+    transform: rotate(0) translate(0);
+  }
+  35% {
+    transform: rotate(0) translate(100%);
+  }
+  66% {
+    transform: rotate(180deg) translate(100%);
+  }
+  90%,
+  100% {
+    transform: rotate(180deg) translate(0);
+  }
+}

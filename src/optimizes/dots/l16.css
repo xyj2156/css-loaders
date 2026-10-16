@@ -3,17 +3,18 @@
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1));
   --c1: var(--color-1, #000);
-  --_g: no-repeat radial-gradient(farthest-side, var(--c1) 90%, #0000);
-  --__a: 50% 0;
-  --__b: 0 100%;
-  --__c: 100% 100%;
+
+  --__a: no-repeat radial-gradient(farthest-side, var(--c1) 90%, #0000);
+  --__b: 50% 0;
+  --__c: 0 100%;
+  --__d: 100% 100%;
 
   width: var(--s);
   aspect-ratio: 1.154;
   background:
-    var(--_g) var(--__a),
-    var(--_g) var(--__b),
-    var(--_g) var(--__c);
+    var(--__a) var(--__d),
+    var(--__a) var(--__d),
+    var(--__a) var(--__d);
   background-size: 35% calc(35% * 1.154);
   animation: __loading-dots-16-l16 var(--d1) infinite;
 }

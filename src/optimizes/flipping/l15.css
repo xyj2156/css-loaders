@@ -7,8 +7,8 @@
   --c1: var(--color-1, #fc3a51);
   --c2: var(--color-2, #eb9f9f);
 
-  --_-10: calc(var(--s) / -8);
-  --_150: calc(var(--s) * 15 / 8);
+  --_a: calc(var(--s) / -8);
+  --_b: calc(var(--s) * 15 / 8);
 
   width: var(--s);
   height: calc(var(--s) / 2);
@@ -30,19 +30,17 @@
 @keyframes __loading-flipping-15-l15-1 {
   0%,
   10% {
-    transform: scale(var(--__z, 1)) translate(0px) perspective(var(--_150)) rotateY(0deg);
+    transform: scale(var(--__z, 1)) translate(0px) perspective(var(--_b)) rotateY(0deg);
   }
   33% {
-    transform: scale(var(--__z, 1)) translate(var(--_-10)) perspective(var(--_150))
-      rotateX(0deg);
+    transform: scale(var(--__z, 1)) translate(var(--_a)) perspective(var(--_b)) rotateX(0deg);
   }
   66% {
-    transform: scale(var(--__z, 1)) translate(var(--_-10)) perspective(var(--_150))
-      rotateX(-180deg);
+    transform: scale(var(--__z, 1)) translate(var(--_a)) perspective(var(--_b)) rotateX(-180deg);
   }
   90%,
   100% {
-    transform: scale(var(--__z, 1)) translate(0px) perspective(var(--_150)) rotateX(-180deg);
+    transform: scale(var(--__z, 1)) translate(0px) perspective(var(--_b)) rotateX(-180deg);
   }
 }
 @keyframes __loading-flipping-15-l15-2 {

@@ -1,20 +1,17 @@
 .__loading-line-3 {
   --s: var(--size, 35px);
-  --c1:var(--color-1, #046d8b);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #046d8b);
+
+  --__a: calc(100% / 3);
+  --__b: calc(var(--__a) * 2);
+  --__c: linear-gradient(90deg, #0000 var(--__a), var(--c1) 0 var(--__b), #0000 0);
+  --__d: linear-gradient(0deg, #0000 var(--__a), var(--c1) 0 var(--__b), #0000 0);
 
   width: var(--s);
   aspect-ratio: 1;
-  --__w:calc(100% / 3);
-  --__x:calc(var(--__w) * 2);
-  --__y: linear-gradient(90deg, #0000 var(--__w), var(--c1) 0 var(--__x), #0000 0);
-  --__z: linear-gradient(0deg, #0000 var(--__w), var(--c1) 0 var(--__x), #0000 0);
-  background:
-    var(--__y),
-    var(--__z),
-    var(--__y),
-    var(--__z);
+  background: var(--__c), var(--__d), var(--__c), var(--__d);
   background-size:
     300% 4px,
     4px 300%;

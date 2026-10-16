@@ -1,9 +1,9 @@
 .__loading-circle-5 {
   --s: var(--size, 65px);
-  --c1: var(--color-1, #fff);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
   --d2: var(--duration-2, calc(var(--d) * -1));
+  --c1: var(--color-1, #fff);
 
   width: var(--s);
   aspect-ratio: 1;

@@ -1,0 +1,47 @@
+.__loading-shapes-4 {
+  --s: var(--size, 40px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #f03355);
+  --_a: calc(var(--s) * 20 / 40);
+  --_b: calc(var(--s) * 60 / 40);
+
+  width: var(--s);
+  height: var(--s);
+  color: var(--c1);
+  background:
+    conic-gradient(
+      from -45deg at top var(--_a) left 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    ),
+    conic-gradient(
+      from 45deg at right var(--_a) top 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    ),
+    conic-gradient(
+      from 135deg at bottom var(--_a) left 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    ),
+    conic-gradient(
+      from -135deg at left var(--_a) top 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    );
+  animation: __loading-shapes-4-l4 var(--d) infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes __loading-shapes-4-l4 {
+  50% {
+    width: var(--_b);
+    height: var(--_b);
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

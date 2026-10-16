@@ -1,14 +1,15 @@
 .__loading-3d-6 {
   --s: var(--size, 20px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
+  --d2: var(--duration-2, calc(var(--d) * -1));
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #666);
   --c3: var(--color-3, #aaa);
-  --d:  var(--duration, 1000ms);
-  --d1: var(--duration-1, calc(var(--d) * 2));
-  --d2: var(--duration-2, calc(var(--d) * -1));
 
-  --_d: calc(0.353 * var(--s));
-  width: calc(var(--s) + var(--_d));
+  --_a: calc(0.353 * var(--s));
+
+  width: calc(var(--s) + var(--_a));
   aspect-ratio: 1;
   display: grid;
 }
@@ -17,15 +18,15 @@
   content: '';
   grid-area: 1/1;
   clip-path: polygon(
-    var(--_d) 0,
+    var(--_a) 0,
     100% 0,
-    100% calc(100% - var(--_d)),
-    calc(100% - var(--_d)) 100%,
+    100% calc(100% - var(--_a)),
+    calc(100% - var(--_a)) 100%,
     0 100%,
-    0 var(--_d)
+    0 var(--_a)
   );
   background: conic-gradient(
-    from -90deg at calc(100% - var(--_d)) var(--_d),
+    from -90deg at calc(100% - var(--_a)) var(--_a),
     var(--c1) 135deg,
     var(--c2) 0 270deg,
     var(--c3) 0

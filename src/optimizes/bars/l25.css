@@ -1,13 +1,15 @@
 .__loading-bars-25 {
   --s: var(--size, 45px);
-  --c1: var(--color-1, #000);
-  --d:  var(--duration, 1000ms);
+  --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 0.75));
+  --c1: var(--color-1, #000);
+
+  --__a: no-repeat
+    repeating-linear-gradient(90deg, var(--c1) 0 calc(100% / 7), #0000 0 calc(200% / 7));
 
   width: var(--s);
   aspect-ratio: 1;
-  --c: no-repeat repeating-linear-gradient(90deg, var(--c1) 0 calc(100% / 7), #0000 0 calc(200% / 7));
-  background: var(--c), var(--c), var(--c), var(--c);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
   background-size: 140% 26%;
   animation: __loading-bars-25-l25 var(--d1) infinite;
 }

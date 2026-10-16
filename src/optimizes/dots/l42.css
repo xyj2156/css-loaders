@@ -3,13 +3,14 @@
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1));
   --c1: var(--color-1, #000);
-  --_g: no-repeat radial-gradient(farthest-side, var(--c1) 95%, #0000);
+
+  --__a: no-repeat radial-gradient(farthest-side, var(--c1) 95%, #0000);
 
   height: var(--s);
   aspect-ratio: 5;
   display: flex;
   justify-content: space-between;
-  background: var(--_g), var(--_g);
+  background: var(--__a), var(--__a);
   background-size: 20% 100%;
   animation: __loading-dots-42-l42-0 var(--d1) infinite;
 }

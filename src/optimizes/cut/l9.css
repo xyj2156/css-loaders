@@ -4,18 +4,18 @@
   --d1: var(--duration-1, calc(var(--d) * 1.5));
   --c1: var(--color-1, #fd135a);
 
-  --_c: at 50% 66%, #000 60deg, #0000 0;
-  --__a: calc(var(--s) * 1);
-  --__b: calc(var(--s) * 866 / 1000);
+  --_a: calc(var(--s) * 1);
+  --_b: calc(var(--s) * 866 / 1000);
+  --__a: at 50% 66%, #000 60deg, #0000 0;
 
-  width: var(--__a);
-  height: var(--__b);
+  width: var(--_a);
+  height: var(--_b);
   background: var(--c1);
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
   mask:
-    conic-gradient(from 30deg var(--_c)) right,
-    conic-gradient(from 150deg var(--_c)) bottom,
-    conic-gradient(from -90deg var(--_c)) left,
+    conic-gradient(from 30deg var(--__a)) right,
+    conic-gradient(from 150deg var(--__a)) bottom,
+    conic-gradient(from -90deg var(--__a)) left,
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;

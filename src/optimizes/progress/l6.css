@@ -1,0 +1,29 @@
+.__loading-progress-6 {
+  --s: var(--size, 120px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #514b82);
+  --_a: calc(var(--s) * 2 / 120);
+  --_b: calc(var(--s) * 20 / 120);
+  --_c: calc(var(--s) * 22 / 120);
+
+  width: var(--s);
+  height: var(--_c);
+  border-radius: var(--_b);
+  color: var(--c1);
+  border: var(--_a) solid;
+  position: relative;
+}
+.__loading-progress-6::before {
+  content: '';
+  position: absolute;
+  margin: var(--_a);
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: __loading-progress-6-l6 var(--d) infinite;
+}
+@keyframes __loading-progress-6-l6 {
+  100% {
+    inset: 0;
+  }
+}

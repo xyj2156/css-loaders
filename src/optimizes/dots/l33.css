@@ -1,8 +1,10 @@
 .__loading-dots-33 {
-  --s: 15px;
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1));
-  height: var(--s);
+
+  --__a: 15px;
+
+  height: var(--__a);
   aspect-ratio: 5;
   display: flex;
   justify-content: space-between;

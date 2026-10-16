@@ -4,17 +4,18 @@
   --d1: var(--duration-1, calc(var(--d) * 1.5));
   --c1: var(--color-1, #000);
 
-  --__z: calc(var(--s) * -1);
+  --_a: calc(var(--s) * -1);
+
   height: calc(var(--s) * 0.8);
   aspect-ratio: 1;
   position: relative;
   clip-path: polygon(
     evenodd,
-    var(--__z) var(--__z),
-    calc(100% - var(--__z)) var(--__z),
-    calc(100% - var(--__z)) calc(100% - var(--__z)),
-    var(--__z) calc(100% - var(--__z)),
-    var(--__z) var(--__z),
+    var(--_a) var(--_a),
+    calc(100% - var(--_a)) var(--_a),
+    calc(100% - var(--_a)) calc(100% - var(--_a)),
+    var(--_a) calc(100% - var(--_a)),
+    var(--_a) var(--_a),
     100% 50%,
     85.36% 85.36%,
     50% 100%,

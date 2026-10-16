@@ -1,8 +1,8 @@
 .__loading-circle-3 {
   --s: var(--size, 65px);
-  --c1: var(--color-1, #fff);
   --d: var(--duration, 750ms);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #fff);
 
   width: var(--s);
   height: calc(var(--s) * 30 / 65);

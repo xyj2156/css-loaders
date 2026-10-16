@@ -1,0 +1,37 @@
+.__loading-spinner-12 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #25b09b);
+  --_a: calc(var(--s) * 4 / 50);
+  --_b: calc(var(--s) * 8 / 50);
+  --_c: calc(var(--s) * 12 / 50);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+}
+.__loading-spinner-12::before,
+.__loading-spinner-12::after {
+  content: '';
+  grid-area: 1/1;
+  --c: no-repeat radial-gradient(farthest-side, var(--c1) 92%, #0000);
+  background:
+    var(--c) 50% 0,
+    var(--c) 50% 100%,
+    var(--c) 100% 50%,
+    var(--c) 0 50%;
+  background-size: var(--_c) var(--_c);
+  animation: __loading-spinner-12-l12 var(--d) infinite;
+}
+.__loading-spinner-12::before {
+  margin: var(--_a);
+  filter: hue-rotate(45deg);
+  background-size: var(--_b) var(--_b);
+  animation-timing-function: linear;
+}
+
+@keyframes __loading-spinner-12-l12 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}

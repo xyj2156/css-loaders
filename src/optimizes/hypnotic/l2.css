@@ -5,14 +5,14 @@
   --d2: var(--duration-2, calc(var(--d) * 0.5));
   --c1: var(--color-1, #000);
 
-  --_2: calc(var(--s) / 20);
-  --_border:min(var(--_2), 5px);
+  --_a: calc(var(--s) / 20);
+  --__a: min(var(--_a), 5px);
 
   width: var(--s);
   aspect-ratio: 1;
   border-radius: 50%;
   color: var(--c1);
-  border: var(--_border) solid;
+  border: var(--__a) solid;
   box-sizing: border-box;
   position: relative;
   transform-origin: left;
@@ -27,7 +27,7 @@
   width: 50%;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: var(--_border) solid;
+  border: var(--__a) solid;
   box-sizing: content-box;
   transform-origin: 50% calc(100% - calc(var(--s) / 10));
   animation: inherit;

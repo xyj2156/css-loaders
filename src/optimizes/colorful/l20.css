@@ -1,11 +1,11 @@
 .__loading-colorful-20 {
   --s: var(--size, 70px);
+  --d: var(--duration, 1s);
+  --d1: var(--duration-1, calc(var(--d) * 2));
   --c1: var(--color-1, #8a8780);
   --c2: var(--color-2, #94ba65);
   --c3: var(--color-3, #2790b0);
   --c4: var(--color-4, #2b4e72);
-  --d: var(--duration, 1s);
-  --d1: var(--duration-1, calc(var(--d) * 2));
 
   width: var(--s);
   aspect-ratio: 1;

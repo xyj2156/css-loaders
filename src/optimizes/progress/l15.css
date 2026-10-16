@@ -1,0 +1,64 @@
+.__loading-progress-15 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #f03355);
+  --_a: calc(var(--s) * 1 / 80);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
+  width: var(--s);
+  aspect-ratio: 1.154;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background: var(--__a), var(--__a), var(--__a), var(--__a), var(--__a);
+  background-size: 100% calc(100% / 5 + var(--_a));
+  animation: __loading-progress-15-l15 var(--d) infinite;
+}
+@keyframes __loading-progress-15-l15 {
+  0% {
+    background-position:
+      0 calc(-2 * 100% / 4),
+      0 calc(-2 * 100% / 4),
+      0 calc(-2 * 100% / 4),
+      0 calc(-2 * 100% / 4),
+      0 calc(-2 * 100% / 4);
+  }
+  20% {
+    background-position:
+      0 calc(4 * 100% / 4),
+      0 calc(-2 * 100% / 4),
+      0 calc(-2 * 100% / 4),
+      0 calc(-2 * 100% / 4),
+      0 calc(-2 * 100% / 4);
+  }
+  40% {
+    background-position:
+      0 calc(4 * 100% / 4),
+      0 calc(3 * 100% / 4),
+      0 calc(-2 * 100% / 4),
+      0 calc(-2 * 100% / 4),
+      0 calc(-2 * 100% / 4);
+  }
+  60% {
+    background-position:
+      0 calc(4 * 100% / 4),
+      0 calc(3 * 100% / 4),
+      0 calc(2 * 100% / 4),
+      0 calc(-2 * 100% / 4),
+      0 calc(-2 * 100% / 4);
+  }
+  80% {
+    background-position:
+      0 calc(4 * 100% / 4),
+      0 calc(3 * 100% / 4),
+      0 calc(2 * 100% / 4),
+      0 calc(1 * 100% / 4),
+      0 calc(-2 * 100% / 4);
+  }
+  100% {
+    background-position:
+      0 calc(4 * 100% / 4),
+      0 calc(3 * 100% / 4),
+      0 calc(2 * 100% / 4),
+      0 calc(1 * 100% / 4),
+      0 calc(0 * 100% / 4);
+  }
+}

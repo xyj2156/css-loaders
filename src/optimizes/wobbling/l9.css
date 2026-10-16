@@ -1,0 +1,25 @@
+.__loading-wobbling-9 {
+  --s: var(--size, 80px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #514b82);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 2 / 80);
+  --_b: calc(var(--s) * 5 / 80);
+  --_c: calc(var(--s) * 20 / 80);
+
+  width: var(--s);
+  height: var(--_c);
+  color: var(--c1);
+  background:
+    radial-gradient(farthest-side, currentColor 98%, #0000) left / var(--_c) var(--_c),
+    radial-gradient(farthest-side, currentColor 98%, #0000) right / var(--_c) var(--_c),
+    radial-gradient(farthest-side, var(--c2) 98%, #0000) center/var(--_b) var(--_b),
+    linear-gradient(currentColor 0 0) center/100% var(--_a);
+  background-repeat: no-repeat;
+  animation: __loading-wobbling-9-l9 var(--d) cubic-bezier(0.5, -150, 0.5, 150) infinite;
+}
+@keyframes __loading-wobbling-9-l9 {
+  100% {
+    transform: rotate(1deg);
+  }
+}

@@ -1,0 +1,21 @@
+.__loading-wavy-6 {
+  --s: var(--size, 30px);
+  --d: var(--duration, 0.8s);
+  --c1: var(--color-1, #000);
+  --__a: #0000 64%, var(--c1) 66% 98%, #0000 101%;
+
+  height: var(--s);
+  aspect-ratio: 6;
+  background:
+    radial-gradient(35% 146% at 50% 159%, var(--__a)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--__a)) 25% 100%;
+  background-size: calc(100% / 3) 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 60% 0 0);
+  animation: __loading-wavy-6-l6 var(--d) infinite linear alternate;
+}
+@keyframes __loading-wavy-6-l6 {
+  to {
+    clip-path: inset(0 0 0 60%);
+  }
+}

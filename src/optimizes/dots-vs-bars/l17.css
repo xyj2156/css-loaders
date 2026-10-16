@@ -1,14 +1,15 @@
 .__loading-dots-vs-bars-17 {
-  --s:var(--size, 40px);
-  --c1:var(--color-1, #000);
-  --d:var(--duration, 1000ms);
-  --d1:var(--duration-1, var(--d));
+  --s: var(--size, 40px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #000);
+
+  --__a: linear-gradient(var(--c1) 0 0);
+  --__b: radial-gradient(farthest-side, var(--c1) 92%, #0000);
 
   width: var(--s);
   aspect-ratio: 1;
-  --c: linear-gradient(var(--c1) 0 0);
-  --m: radial-gradient(farthest-side, var(--c1) 92%, #0000);
-  background: var(--c), var(--m), var(--c), var(--m), var(--c), var(--m);
+  background: var(--__a), var(--__b), var(--__a), var(--__b), var(--__a), var(--__b);
   background-size:
     calc(var(--s) * 0.2) calc(var(--s) * 0.3),
     calc(var(--s) * 0.2) calc(var(--s) * 0.2);

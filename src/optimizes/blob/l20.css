@@ -1,10 +1,10 @@
 .__loading-blob-20 {
   --s: var(--size, 50px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, var(--d));
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #000);
   --c3: var(--color-3, #0000);
-  --d: var(--duration, 1000ms);
-  --d1: var(--duration-1, var(--d));
 
   height: calc(var(--s) * 1.6);
   width: var(--s);

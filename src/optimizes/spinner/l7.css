@@ -1,0 +1,22 @@
+.__loading-spinner-7 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #25b09b);
+  --_a: calc(var(--s) * 12 / 50);
+  --__a: no-repeat radial-gradient(farthest-side, var(--c1) 92%, #0000);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    var(--__a) top,
+    var(--__a) left,
+    var(--__a) right,
+    var(--__a) bottom;
+  background-size: var(--_a) var(--_a);
+  animation: __loading-spinner-7-l7 var(--d) infinite;
+}
+@keyframes __loading-spinner-7-l7 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}

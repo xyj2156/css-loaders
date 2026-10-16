@@ -1,0 +1,33 @@
+.__loading-pulsing-2 {
+  --s: var(--size, 20px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0004);
+  --_a: calc(var(--s) * 40 / 20);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--c1);
+  box-shadow: 0 0 0 0 var(--c2);
+  animation: __loading-pulsing-2-l2 var(--d) infinite linear;
+  position: relative;
+}
+.__loading-pulsing-2:before,
+.__loading-pulsing-2:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 var(--c2);
+  animation: inherit;
+  animation-delay: -0.5s;
+}
+.__loading-pulsing-2:after {
+  animation-delay: -1s;
+}
+@keyframes __loading-pulsing-2-l2 {
+  100% {
+    box-shadow: 0 0 0 var(--_a) #0000;
+  }
+}

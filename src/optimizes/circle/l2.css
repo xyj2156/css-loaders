@@ -1,9 +1,9 @@
 .__loading-circle-2 {
   --s: var(--size, 100px);
-  --c1: var(--color-1, #fff);
-  --c2: var(--color-2, #0000);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #fff);
+  --c2: var(--color-2, #0000);
 
   width: var(--s);
   display: grid;

@@ -1,0 +1,24 @@
+.__loading-spinner-6 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #ffa516);
+  --_a: calc(var(--s) * 3 / 50);
+  --_b: calc(var(--s) * 4 / 50);
+  --_c: calc(var(--s) * 5 / 50);
+  --_d: calc(var(--s) * 12 / 50);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: var(--_a);
+  background:
+    radial-gradient(farthest-side, var(--c1) 95%, #0000) 50% 0 / var(--_d) var(--_d) no-repeat,
+    radial-gradient(farthest-side, #0000 calc(100% - var(--_c)), var(--c1) calc(100% - var(--_b)))
+      content-box;
+  animation: __loading-spinner-6-l6 var(--d) infinite;
+}
+@keyframes __loading-spinner-6-l6 {
+  to {
+    transform: rotate(1turn);
+  }
+}

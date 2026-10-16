@@ -3,14 +3,15 @@
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1));
   --c1: var(--color-1, #000);
-  --_g: var(--c1) 90%, #0000;
-  --_g0: no-repeat radial-gradient(farthest-side, var(--_g));
-  --_g1: no-repeat radial-gradient(farthest-side at top, var(--_g));
-  --_g2: no-repeat radial-gradient(farthest-side at bottom, var(--_g));
+
+  --__a: var(--c1) 90%, #0000;
+  --__b: no-repeat radial-gradient(farthest-side, var(--__a));
+  --__c: no-repeat radial-gradient(farthest-side at top, var(--__a));
+  --__d: no-repeat radial-gradient(farthest-side at bottom, var(--__a));
 
   height: var(--s);
   aspect-ratio: 2.5;
-  background: var(--_g0), var(--_g1), var(--_g2), var(--_g0), var(--_g1), var(--_g2);
+  background: var(--__b), var(--__c), var(--__d), var(--__b), var(--__c), var(--__d);
   background-size:
     20% 50%,
     20% 25%,

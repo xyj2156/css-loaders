@@ -11,10 +11,10 @@
   aspect-ratio: 1;
   overflow: hidden;
   background:
-    conic-gradient(from -34deg at 50% 99%, #0000, var(--c1) 2deg 65deg, #0000 68deg) -5% 0%/20% calc(27% * var(--s) / 80px)
-      repeat-x,
-    conic-gradient(from 146deg at 50% 1%, #0000, var(--c1) 2deg 65deg, #0000 68deg) -5% 100%/20% calc(27% * var(--s) / 80px)
-      repeat-x;
+    conic-gradient(from -34deg at 50% 99%, #0000, var(--c1) 2deg 65deg, #0000 68deg) -5% 0%/20%
+      calc(27% * var(--s) / 80px) repeat-x,
+    conic-gradient(from 146deg at 50% 1%, #0000, var(--c1) 2deg 65deg, #0000 68deg) -5% 100%/20%
+      calc(27% * var(--s) / 80px) repeat-x;
   animation: __loading-mechanic-8-l8-0 var(--d1) linear infinite;
 }
 .__loading-mechanic-8:before {

@@ -1,0 +1,17 @@
+.__loading-spinner-2 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 1s);
+  --_a: calc(var(--s) * 8 / 50);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: var(--_a) solid lightblue;
+  border-right-color: orange;
+  animation: __loading-spinner-2-l2 var(--d) infinite linear;
+}
+@keyframes __loading-spinner-2-l2 {
+  to {
+    transform: rotate(1turn);
+  }
+}

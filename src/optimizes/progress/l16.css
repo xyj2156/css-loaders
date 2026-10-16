@@ -1,0 +1,31 @@
+.__loading-progress-16 {
+  --s: var(--size, 130px);
+  --d: var(--duration, 3s);
+  --c1: var(--color-1, #6100ee);
+  --c2: var(--color-2, #d7b8fc);
+  --_a: calc(var(--s) * 4 / 130);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
+  height: var(--_a);
+  width: var(--s);
+  background: var(--__a), var(--__a), var(--c2);
+  background-size: 60% 100%;
+  animation: __loading-progress-16-l16 var(--d) infinite;
+}
+@keyframes __loading-progress-16-l16 {
+  0% {
+    background-position:
+      -150% 0,
+      -150% 0;
+  }
+  66% {
+    background-position:
+      250% 0,
+      -150% 0;
+  }
+  100% {
+    background-position:
+      250% 0,
+      250% 0;
+  }
+}

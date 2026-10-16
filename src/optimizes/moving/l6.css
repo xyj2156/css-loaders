@@ -4,10 +4,11 @@
   --d1: var(--duration-1, calc(var(--d) * 2));
   --c1: var(--color-1, #ccc);
 
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
+
   height: var(--s);
   aspect-ratio: 1.5;
-  --c: no-repeat linear-gradient(var(--c1) 0 0);
-  background: var(--c), var(--c), var(--c), var(--c);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
   background-size: 33.4% 50%;
   animation: __loading-moving-6-l6 var(--d1) infinite linear;
 }

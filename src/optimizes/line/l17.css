@@ -4,9 +4,9 @@
   --d1: var(--duration-1, calc(var(--d) * 1));
   --c1: var(--color-1, #046d8b);
 
-  --_-2: calc(var(--s) / -25);
-  --_4: calc(var(--s) * 2 / 25);
-  --__z: no-repeat linear-gradient(var(--c1) 0 0);
+  --_a: calc(var(--s) / -25);
+  --_b: calc(var(--s) * 2 / 25);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
 
   width: var(--s);
   aspect-ratio: 1;
@@ -16,68 +16,68 @@
 .__loading-line-17:after {
   content: '';
   flex: 1;
-  margin: 0 0 0 var(--_-2);
+  margin: 0 0 0 var(--_a);
   background:
-    var(--__z) 0 0,
-    var(--__z) 100% 0,
-    var(--__z) 100% 100%,
-    var(--__z) 0 100%,
-    var(--__z) 0 50%;
+    var(--__a) 0 0,
+    var(--__a) 100% 0,
+    var(--__a) 100% 100%,
+    var(--__a) 0 100%,
+    var(--__a) 0 50%;
   animation: __loading-line-17-l17 var(--d1) infinite alternate;
 }
 .__loading-line-17:before {
   transform: scale(-1);
-  margin: 0 var(--_-2) 0 0;
+  margin: 0 var(--_a) 0 0;
 }
 @keyframes __loading-line-17-l17 {
   0%,
   5% {
     background-size:
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4);
+      0 var(--_b),
+      var(--_b) 0,
+      0 var(--_b),
+      var(--_b) 0,
+      0 var(--_b);
   }
   20% {
     background-size:
-      100% var(--_4),
-      var(--_4) 0,
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4);
+      100% var(--_b),
+      var(--_b) 0,
+      0 var(--_b),
+      var(--_b) 0,
+      0 var(--_b);
   }
   40% {
     background-size:
-      100% var(--_4),
-      var(--_4) 100%,
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4);
+      100% var(--_b),
+      var(--_b) 100%,
+      0 var(--_b),
+      var(--_b) 0,
+      0 var(--_b);
   }
   60% {
     background-size:
-      100% var(--_4),
-      var(--_4) 100%,
-      100% var(--_4),
-      var(--_4) 0,
-      0 var(--_4);
+      100% var(--_b),
+      var(--_b) 100%,
+      100% var(--_b),
+      var(--_b) 0,
+      0 var(--_b);
   }
   80% {
     background-size:
-      100% var(--_4),
-      var(--_4) 100%,
-      100% var(--_4),
-      var(--_4) 50%,
-      0 var(--_4);
+      100% var(--_b),
+      var(--_b) 100%,
+      100% var(--_b),
+      var(--_b) 50%,
+      0 var(--_b);
   }
   95%,
   100% {
     background-size:
-      100% var(--_4),
-      var(--_4) 100%,
-      100% var(--_4),
-      var(--_4) 50%,
-      100% var(--_4);
+      100% var(--_b),
+      var(--_b) 100%,
+      100% var(--_b),
+      var(--_b) 50%,
+      100% var(--_b);
   }
 }

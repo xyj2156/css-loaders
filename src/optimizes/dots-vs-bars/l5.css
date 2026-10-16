@@ -1,17 +1,18 @@
 .__loading-dots-vs-bars-5 {
-  --s:var(--size, 40px);
-  --c1:var(--color-1, #000);
-  --d:var(--duration, 2000ms);
-  --d1:var(--duration-1, var(--d));
-  --d2:var(--duration-2, calc(var(--d) / 4));
+  --s: var(--size, 40px);
+  --d: var(--duration, 2000ms);
+  --d1: var(--duration-1, var(--d));
+  --d2: var(--duration-2, calc(var(--d) / 4));
+  --c1: var(--color-1, #000);
+
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
 
   width: var(--s);
   height: calc(var(--s) * 0.75);
-  --c: no-repeat linear-gradient(var(--c1) 0 0);
   background:
-    var(--c) 0 100%/calc(var(--s) * 0.2) 100%,
-    var(--c) 50% 100%/calc(var(--s) * 0.2) calc(var(--s) * 0.5),
-    var(--c) 100% 100%/calc(var(--s) * 0.2) calc(var(--s) * 0.25);
+    var(--__a) 0 100% / calc(var(--s) * 0.2) 100%,
+    var(--__a) 50% 100% / calc(var(--s) * 0.2) calc(var(--s) * 0.5),
+    var(--__a) 100% 100% / calc(var(--s) * 0.2) calc(var(--s) * 0.25);
   position: relative;
   clip-path: inset(-100% 0);
 }

@@ -4,6 +4,7 @@
   --d1: var(--duration-1, calc(var(--d) * 1.5));
   --d2: var(--duration-2, calc(var(--d) * 0.75));
   --c1: var(--color-1, #000);
+
   --_a: calc(var(--s) * 26 / 15);
   --_b: calc(var(--s) * 13 / 15);
   --_c: calc(var(--s) * 52 / 15);

@@ -10,10 +10,8 @@
   width: var(--s);
   aspect-ratio: 1;
   background:
-    linear-gradient(45deg, var(--c1) 50%, #0000 0),
-    linear-gradient(-45deg, var(--c2) 50%, #0000 0),
-    linear-gradient(45deg, #0000 50%, var(--c3) 0),
-    linear-gradient(-45deg, #0000 50%, var(--c4) 0),
+    linear-gradient(45deg, var(--c1) 50%, #0000 0), linear-gradient(-45deg, var(--c2) 50%, #0000 0),
+    linear-gradient(45deg, #0000 50%, var(--c3) 0), linear-gradient(-45deg, #0000 50%, var(--c4) 0),
     var(--c1);
   background-size: 200% 200%;
   background-repeat: no-repeat;

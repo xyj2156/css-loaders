@@ -1,12 +1,13 @@
 .__loading-classic-21 {
-  --c:  var(--content, 'Loading...');
-  --s:  var(--size, 30px);
+  --s: var(--size, 30px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
   --c1: var(--color-1, #000);
   --c2: var(--color-2, #fff);
-  --d:  var(--duration, 1000ms);
-  --d1: var(--duration-1, calc(var(--d) * 2));
 
-  width:  fit-content;
+  --__a: var(--content, 'Loading...');
+
+  width: fit-content;
   font-weight: bold;
   font-family: monospace;
   font-size: var(--s);
@@ -15,7 +16,7 @@
 }
 
 .__loading-classic-21::before {
-  content: var(--c);
+  content: var(--__a);
   color: transparent;
   padding: 0 5px;
   background: inherit;

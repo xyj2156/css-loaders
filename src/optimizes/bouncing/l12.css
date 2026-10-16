@@ -1,17 +1,21 @@
 .__loading-bouncing-12 {
   --s: var(--size, 60px);
-  --c1: var(--color-1, #524656);
-  --c2: var(--color-2, #cf4647);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 0.5));
   --d2: var(--duration-2, calc(var(--d) * 2));
+  --c1: var(--color-1, #524656);
+  --c2: var(--color-2, #cf4647);
 
   height: var(--s);
   aspect-ratio: 1;
   position: relative;
   background:
     conic-gradient(at calc(var(--s) * 20 / 60) calc(var(--s) * 40 / 60), #0000 25%, var(--c1) 0),
-    conic-gradient(from -90deg at calc(var(--s) * 40 / 60) calc(var(--s) * 20 / 60), #0000 75%, var(--c1) 0);
+    conic-gradient(
+      from -90deg at calc(var(--s) * 40 / 60) calc(var(--s) * 20 / 60),
+      #0000 75%,
+      var(--c1) 0
+    );
   clip-path: inset(-100% 0);
 }
 .__loading-bouncing-12:before {

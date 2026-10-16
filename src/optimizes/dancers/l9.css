@@ -6,12 +6,12 @@
   --c1: var(--color-1, #3fb8af);
   --c2: var(--color-2, #ff3d7f);
 
-  --_a: 1;
-  --__a: calc(var(--s) * 1);
-  --__b: calc(var(--s) * 1/2);
+  --_a: calc(var(--s) * 1);
+  --_b: calc(var(--s) * 1 / 2);
+  --__a: 1;
 
   width: var(--__a);
-  height: var(--__b);
+  height: var(--_b);
   display: flex;
   animation: __loading-dancers-9-l9-0 var(--d1) infinite;
 }
@@ -36,6 +36,6 @@
 }
 @keyframes __loading-dancers-9-l9-1 {
   100% {
-    transform: rotate(calc(var(--_a) * 90deg));
+    transform: rotate(calc(var(--__a) * 90deg));
   }
 }

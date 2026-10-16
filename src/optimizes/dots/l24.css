@@ -5,12 +5,13 @@
   --c1: var(--color-1, #000);
   --c2: var(--color-2, #0000);
 
+  --__a: no-repeat radial-gradient(farthest-side, var(--c1) 94%, var(--c2));
+
   width: calc(var(--s) * 7.333);
   height: var(--s);
-  --_g: no-repeat radial-gradient(farthest-side, var(--c1) 94%, var(--c2));
   background:
-    var(--_g) 25% 0,
-    var(--_g) 75% 0;
+    var(--__a) 25% 0,
+    var(--__a) 75% 0;
   background-size: var(--s) var(--s);
   position: relative;
   animation: __loading-dots-24-l24-0 var(--d1) linear infinite;

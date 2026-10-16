@@ -5,8 +5,8 @@
   "main": "dist/all.min.css",
   "exports": {
     ".": "./dist/all.min.css",
-    "./style/*": "./src/styles/*",
-    "./optimize/*": "./src/optimizes/*",
+    "./style/*": "./src/optimizes/*",
+    "./raw/*": "./src/styles/*",
     "./*": "./dist/*"
   },
   "type": "module",
@@ -21,7 +21,6 @@
   "keywords": [],
   "author": "xyj2156",
   "license": "Apache-2.0",
-  "packageManager": "pnpm@10.22.0",
   "devDependencies": {
     "@types/node": "^24.10.1"
   },

@@ -3,15 +3,16 @@
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 1));
   --c1: var(--color-1, #000);
-  --__1: calc(var(--s) / 4);
+
+  --_a: calc(var(--s) / 4);
+  --__a: var(--c1) 90deg, #0000 0;
 
   width: var(--s);
   height: calc(var(--s) * 5 / 32);
-  --__z: var(--c1) 90deg, #0000 0;
   background:
-    conic-gradient(from 135deg at top, var(--__z)) 0 0,
-    conic-gradient(from -45deg at bottom, var(--__z)) 0 100%;
-  background-size: var(--__1) 50%;
+    conic-gradient(from 135deg at top, var(--__a)) 0 0,
+    conic-gradient(from -45deg at bottom, var(--__a)) 0 100%;
+  background-size: var(--_a) 50%;
   background-repeat: repeat-x;
   animation: __loading-infinity-12-l12 var(--d1) infinite;
 }

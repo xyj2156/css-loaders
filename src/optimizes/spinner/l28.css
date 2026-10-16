@@ -1,0 +1,34 @@
+.__loading-spinner-28 {
+  --s: var(--size, 50px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #514b82);
+  --c2: var(--color-2, #000);
+  --_a: calc(var(--s) * 1.5 / 50);
+  --_b: calc(var(--s) * 3 / 50);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  display: grid;
+  color: var(--c1);
+  background: conic-gradient(from 90deg at var(--_b) var(--_b), #0000 90deg, currentColor 0) -var(
+      --_b
+    ) -var(--_b) /
+    calc(50% + var(--_a)) calc(50% + var(--_a));
+  animation: __loading-spinner-28-l28 var(--d) infinite;
+}
+.__loading-spinner-28::before,
+.__loading-spinner-28::after {
+  content: '';
+  grid-area: 1/1;
+  background: repeating-conic-gradient(#0000 0 35deg, currentColor 0 90deg);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - var(--_b)), var(--c2) 0);
+  border-radius: 50%;
+}
+.__loading-spinner-28::after {
+  margin: 20%;
+}
+@keyframes __loading-spinner-28-l28 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

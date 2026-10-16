@@ -5,26 +5,32 @@
   --c1: var(--color-1, #91d2e2);
   --c2: var(--color-2, #1296a7);
   --c3: var(--color-3, #e0a267);
-  --__1: calc(var(--s) * 80 / 35);
-  --__2: calc(var(--s) * 20 / 35);
-  --__3: calc(var(--s) * 15 / 35);
-  --__4: calc(var(--s) * 10 / 35);
-  --__5: calc(var(--s) * 4 / 35);
-  --__6: calc(var(--s) * 25 / 35);
-  --__7: calc(var(--s) * 30 / 35);
+
+  --_a: calc(var(--s) * 80 / 35);
+  --_b: calc(var(--s) * 20 / 35);
+  --_c: calc(var(--s) * 15 / 35);
+  --_d: calc(var(--s) * 10 / 35);
+  --_e: calc(var(--s) * 4 / 35);
+  --_f: calc(var(--s) * 25 / 35);
+  --_g: calc(var(--s) * 30 / 35);
 
   width: var(--s);
-  height: var(--__1);
+  height: var(--_a);
   position: relative;
 }
 
 .__loading-hungry-2:after {
   content: '';
   position: absolute;
-  inset: 0 0 var(--__2);
-  border-radius: var(--__3) var(--__3) var(--__4) var(--__4);
+  inset: 0 0 var(--_b);
+  border-radius: var(--_c) var(--_c) var(--_d) var(--_d);
   padding: calc(var(--s) * 1 / 35);
-  background: repeating-linear-gradient(-45deg, var(--c1) 0 calc(var(--s) * 8 / 35), var(--c2) 0 calc(var(--s) * 12 / 35)) content-box;
+  background: repeating-linear-gradient(
+      -45deg,
+      var(--c1) 0 calc(var(--s) * 8 / 35),
+      var(--c2) 0 calc(var(--s) * 12 / 35)
+    )
+    content-box;
   --c: radial-gradient(farthest-side, #000 94%, #0000);
   -webkit-mask:
     linear-gradient(#0000 0 0),
@@ -57,7 +63,7 @@
 .__loading-hungry-2:before {
   content: '';
   position: absolute;
-  inset: 50% calc(50% - var(--__5)) 0;
+  inset: 50% calc(50% - var(--_e)) 0;
   background: var(--c3);
   border-radius: calc(var(--s) * 50 / 35);
 }
@@ -78,7 +84,7 @@
   10% {
     -webkit-mask-size:
       auto,
-      var(--__6) var(--__6),
+      var(--_f) var(--_f),
       0 0,
       0 0,
       0 0,
@@ -90,8 +96,8 @@
   20% {
     -webkit-mask-size:
       auto,
-      var(--__6) var(--__6),
-      var(--__6) var(--__6),
+      var(--_f) var(--_f),
+      var(--_f) var(--_f),
       0 0,
       0 0,
       0 0,
@@ -102,9 +108,9 @@
   30% {
     -webkit-mask-size:
       auto,
-      var(--__6) var(--__6),
-      var(--__6) var(--__6),
-      var(--__7) var(--__7),
+      var(--_f) var(--_f),
+      var(--_f) var(--_f),
+      var(--_g) var(--_g),
       0 0,
       0 0,
       0 0,
@@ -114,10 +120,10 @@
   40% {
     -webkit-mask-size:
       auto,
-      var(--__6) var(--__6),
-      var(--__6) var(--__6),
-      var(--__7) var(--__7),
-      var(--__7) var(--__7),
+      var(--_f) var(--_f),
+      var(--_f) var(--_f),
+      var(--_g) var(--_g),
+      var(--_g) var(--_g),
       0 0,
       0 0,
       0 0,
@@ -126,11 +132,11 @@
   50% {
     -webkit-mask-size:
       auto,
-      var(--__6) var(--__6),
-      var(--__6) var(--__6),
-      var(--__7) var(--__7),
-      var(--__7) var(--__7),
-      var(--__6) var(--__6),
+      var(--_f) var(--_f),
+      var(--_f) var(--_f),
+      var(--_g) var(--_g),
+      var(--_g) var(--_g),
+      var(--_f) var(--_f),
       0 0,
       0 0,
       0 0;
@@ -138,38 +144,38 @@
   60% {
     -webkit-mask-size:
       auto,
-      var(--__6) var(--__6),
-      var(--__6) var(--__6),
-      var(--__7) var(--__7),
-      var(--__7) var(--__7),
-      var(--__6) var(--__6),
-      var(--__6) var(--__6),
+      var(--_f) var(--_f),
+      var(--_f) var(--_f),
+      var(--_g) var(--_g),
+      var(--_g) var(--_g),
+      var(--_f) var(--_f),
+      var(--_f) var(--_f),
       0 0,
       0 0;
   }
   70% {
     -webkit-mask-size:
       auto,
-      var(--__6) var(--__6),
-      var(--__6) var(--__6),
-      var(--__7) var(--__7),
-      var(--__7) var(--__7),
-      var(--__6) var(--__6),
-      var(--__6) var(--__6),
-      var(--__6) var(--__6),
+      var(--_f) var(--_f),
+      var(--_f) var(--_f),
+      var(--_g) var(--_g),
+      var(--_g) var(--_g),
+      var(--_f) var(--_f),
+      var(--_f) var(--_f),
+      var(--_f) var(--_f),
       0 0;
   }
   80%,
   100% {
     -webkit-mask-size:
       auto,
-      var(--__6) var(--__6),
-      var(--__6) var(--__6),
-      var(--__7) var(--__7),
-      var(--__7) var(--__7),
-      var(--__6) var(--__6),
-      var(--__6) var(--__6),
-      var(--__6) var(--__6),
+      var(--_f) var(--_f),
+      var(--_f) var(--_f),
+      var(--_g) var(--_g),
+      var(--_g) var(--_g),
+      var(--_f) var(--_f),
+      var(--_f) var(--_f),
+      var(--_f) var(--_f),
       200% 200%;
   }
 }

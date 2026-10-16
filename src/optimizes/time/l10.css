@@ -1,0 +1,61 @@
+.__loading-time-10 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 0.5s);
+  --c1: var(--color-1, #ffc10a);
+  --c2: var(--color-2, #ff9f04);
+  --_a: calc(var(--s) * 3 / 60);
+  --_b: calc(var(--s) * 6 / 60);
+  --_c: calc(var(--s) * 10 / 60);
+  --_d: calc(var(--s) * 15 / 60);
+  --_e: calc(var(--s) * 20 / 60);
+  --_f: calc(var(--s) * 26 / 60);
+  --_g: calc(var(--s) * 30 / 60);
+  --_h: calc(var(--s) * 40 / 60);
+
+  width: var(--s);
+  height: var(--_h);
+  position: relative;
+}
+.__loading-time-10::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(farthest-side at bottom, var(--c1) 92%, #0000) top / var(--_g) var(--_d),
+    radial-gradient(farthest-side at top left, #0000 92%, var(--c1)) bottom left / var(--_d)
+      var(--_e),
+    radial-gradient(farthest-side at top right, #0000 92%, var(--c1)) bottom right/ var(--_d)
+      var(--_e),
+    linear-gradient(var(--c1) 0 0) bottom/var(--_g) var(--_f);
+  background-repeat: no-repeat;
+  transform-origin: 50% -var(--_a);
+  animation: __loading-time-10-l10-1 var(--d) infinite alternate linear;
+}
+.__loading-time-10::before {
+  content: '';
+  position: absolute;
+  inset: -var(--_b) calc(50% - var(--_c)) -var(--_c);
+  background:
+    radial-gradient(farthest-side, var(--c2) 90%, #0000) top / var(--_c) var(--_c),
+    radial-gradient(farthest-side, var(--c2) 90%, #0000) bottom/var(--_e) var(--_e);
+  background-repeat: no-repeat;
+  transform-origin: 50% var(--_a);
+  animation: __loading-time-10-l10-2 var(--d) infinite alternate linear;
+}
+@keyframes __loading-time-10-l10-1 {
+  0% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes __loading-time-10-l10-2 {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}

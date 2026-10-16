@@ -1,0 +1,16 @@
+.__loading-progress-2 {
+  --s: var(--size, 120px);
+  --d: var(--duration, 2s);
+  --_a: calc(var(--s) * 20 / 120);
+
+  width: var(--s);
+  height: var(--_a);
+  border-radius: var(--_a);
+  background: linear-gradient(orange 0 0) 0/0% no-repeat lightblue;
+  animation: __loading-progress-2-l2 var(--d) infinite steps(10);
+}
+@keyframes __loading-progress-2-l2 {
+  100% {
+    background-size: 110%;
+  }
+}

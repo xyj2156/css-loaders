@@ -1,29 +1,28 @@
 .__loading-line-14 {
   --s: var(--size, 60px);
-  --c1: var(--color-1, #046d8b);
   --d: var(--duration, 1s);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #046d8b);
 
-  --_3: calc(var(--s) / 20);
-  --_4: calc(var(--s) / 15);
-  --_6: calc(var(--s) / 10);
-  --_13: calc(var(--s) * 13 / 60);
-  --_14: calc(var(--s) * 14 / 60);
-  --_24: calc(var(--s) * 24 / 60);
-  --_30: calc(var(--s) / 2);
-  --_36: calc(var(--s) * 36 / 60);
-
-  --__z: no-repeat linear-gradient(var(--c1) 0 0);
+  --_a: calc(var(--s) / 20);
+  --_b: calc(var(--s) / 15);
+  --_c: calc(var(--s) / 10);
+  --_d: calc(var(--s) * 13 / 60);
+  --_e: calc(var(--s) * 14 / 60);
+  --_f: calc(var(--s) * 24 / 60);
+  --_g: calc(var(--s) / 2);
+  --_h: calc(var(--s) * 36 / 60);
+  --__a: no-repeat linear-gradient(var(--c1) 0 0);
 
   width: var(--s);
-  height: var(--_30);
+  height: var(--_g);
   display: grid;
 }
 .__loading-line-14:before,
 .__loading-line-14:after {
   content: '';
   grid-area: 1/1;
-  background: var(--__z), var(--__z), var(--__z);
+  background: var(--__a), var(--__a), var(--__a);
   animation:
     __loading-line-14-l14-1 var(--d1) infinite linear,
     __loading-line-14-l14-2 var(--d1) infinite linear;
@@ -35,47 +34,47 @@
   0%,
   3% {
     background-size:
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4);
+      0 var(--_b),
+      var(--_b) 0,
+      0 var(--_b);
   }
   16.67% {
     background-size:
-      calc(50% - var(--_6)) var(--_4),
-      var(--_4) 0,
-      0 var(--_4);
+      calc(50% - var(--_c)) var(--_b),
+      var(--_b) 0,
+      0 var(--_b);
   }
   33.33% {
     background-size:
-      calc(50% - var(--_6)) var(--_4),
-      var(--_4) var(--_14),
-      0 var(--_4);
+      calc(50% - var(--_c)) var(--_b),
+      var(--_b) var(--_e),
+      0 var(--_b);
   }
   46%,
   54% {
     background-size:
-      calc(50% - var(--_6)) var(--_4),
-      var(--_4) var(--_14),
-      calc(50% + var(--_6)) var(--_4);
+      calc(50% - var(--_c)) var(--_b),
+      var(--_b) var(--_e),
+      calc(50% + var(--_c)) var(--_b);
   }
   66.67% {
     background-size:
-      0 var(--_4),
-      var(--_4) var(--_14),
-      calc(50% + var(--_6)) var(--_4);
+      0 var(--_b),
+      var(--_b) var(--_e),
+      calc(50% + var(--_c)) var(--_b);
   }
   83.33% {
     background-size:
-      0 var(--_4),
-      var(--_4) 0,
-      calc(50% + var(--_6)) var(--_4);
+      0 var(--_b),
+      var(--_b) 0,
+      calc(50% + var(--_c)) var(--_b);
   }
   96%,
   100% {
     background-size:
-      0 var(--_4),
-      var(--_4) 0,
-      0 var(--_4);
+      0 var(--_b),
+      var(--_b) 0,
+      0 var(--_b);
   }
 }
 @keyframes __loading-line-14-l14-2 {
@@ -83,14 +82,14 @@
   49.9% {
     background-position:
       0 50%,
-      left calc(50% - var(--_6)) bottom var(--_13),
-      left var(--_24) top var(--_3);
+      left calc(50% - var(--_c)) bottom var(--_d),
+      left var(--_f) top var(--_a);
   }
   50%,
   100% {
     background-position:
-      right var(--_36) top 50%,
-      left calc(50% - var(--_6)) top var(--_3),
-      right 0 top var(--_3);
+      right var(--_h) top 50%,
+      left calc(50% - var(--_c)) top var(--_a),
+      right 0 top var(--_a);
   }
 }

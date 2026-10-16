@@ -18,16 +18,16 @@
   20% {
     box-shadow:
       calc(5 * var(--s)) 0 0 calc(var(--s) / 2),
-      calc(var(--s) * 5/3) 0 0 calc(var(--s) / 2),
-      calc(var(--s) * -5/3) 0 0 calc(var(--s) / 2),
+      calc(var(--s) * 5 / 3) 0 0 calc(var(--s) / 2),
+      calc(var(--s) * -5 / 3) 0 0 calc(var(--s) / 2),
       calc(-5 * var(--s)) 0 0 calc(var(--s) / 2);
   }
   60%,
   100% {
     box-shadow:
       calc(2 * var(--s)) 0 0 calc(var(--s) / 2),
-      calc(var(--s) * 7/3) 0 0 var(--s),
-      calc(var(--s) * -7/3) 0 0 var(--s),
+      calc(var(--s) * 7 / 3) 0 0 var(--s),
+      calc(var(--s) * -7 / 3) 0 0 var(--s),
       calc(-2 * var(--s)) 0 0 calc(var(--s) / 2);
   }
 }

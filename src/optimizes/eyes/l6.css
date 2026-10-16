@@ -14,7 +14,8 @@
   height: var(--s);
   width: var(--s);
   border-radius: 50%;
-  background: radial-gradient(farthest-side, var(--c1) 95%, #0000) 35% 35%/calc(var(--s) * 0.3) calc(var(--s) * 0.3) no-repeat var(--c2);
+  background: radial-gradient(farthest-side, var(--c1) 95%, #0000) 35% 35% / calc(var(--s) * 0.3)
+    calc(var(--s) * 0.3) no-repeat var(--c2);
   transform: scaleX(var(--_s, 1)) rotate(0deg);
   animation: __loading-eyes-6-l6 var(--d1) infinite linear;
 }

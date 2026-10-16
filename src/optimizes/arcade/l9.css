@@ -1,10 +1,11 @@
 .__loading-arcade-9 {
   --s: var(--size, 17px);
-  --c: var(--content, 'Loading');
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 2));
   --c1: var(--color-1, #000);
   --c2: var(--color-2, red);
-  --d:  var(--duration, 1000ms);
-  --d1: var(--duration-1, calc(var(--d) * 2));
+
+  --__a: var(--content, 'Loading');
 
   width: fit-content;
   font-size: var(--s);
@@ -22,7 +23,7 @@
   animation: __loading-arcade-9-l9-0 var(--d1) infinite;
 }
 .__loading-arcade-9::before {
-  content: var(--c);
+  content: var(--__a);
 }
 .__loading-arcade-9::after {
   content: '';
@@ -32,10 +33,23 @@
   width: calc(var(--s) * 1.294);
   height: calc(var(--s) * 3.529);
   background:
-    linear-gradient(90deg, var(--c1) calc(var(--s) * 0.235), #0000 0 calc(100% - calc(var(--s) * 0.235)), var(--c1) 0) bottom / calc(var(--s) * 1.294) calc(var(--s) * 1.176),
-    linear-gradient(90deg, var(--c2) calc(var(--s) * 0.235), #0000 0 calc(100% - calc(var(--s) * 0.235)), var(--c2) 0) bottom calc(var(--s) * 0.588) left 0/calc(var(--s) * 1.294) calc(var(--s) * 0.353),
-    linear-gradient(var(--c1) 0 0) bottom calc(var(--s) * 0.176) left 0 /calc(var(--s) * 1.294) calc(var(--s) * 0.471),
-    linear-gradient(var(--c1) 0 0) bottom 0 left 50%/calc(var(--s) * 0.471) calc(var(--s) * 0.941);
+    linear-gradient(
+        90deg,
+        var(--c1) calc(var(--s) * 0.235),
+        #0000 0 calc(100% - calc(var(--s) * 0.235)),
+        var(--c1) 0
+      )
+      bottom / calc(var(--s) * 1.294) calc(var(--s) * 1.176),
+    linear-gradient(
+        90deg,
+        var(--c2) calc(var(--s) * 0.235),
+        #0000 0 calc(100% - calc(var(--s) * 0.235)),
+        var(--c2) 0
+      )
+      bottom calc(var(--s) * 0.588) left 0 / calc(var(--s) * 1.294) calc(var(--s) * 0.353),
+    linear-gradient(var(--c1) 0 0) bottom calc(var(--s) * 0.176) left 0 / calc(var(--s) * 1.294)
+      calc(var(--s) * 0.471),
+    linear-gradient(var(--c1) 0 0) bottom 0 left 50% / calc(var(--s) * 0.471) calc(var(--s) * 0.941);
   background-repeat: no-repeat;
   animation: __loading-arcade-9-l9-1 var(--d1) infinite;
 }

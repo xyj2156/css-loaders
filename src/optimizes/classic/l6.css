@@ -1,9 +1,10 @@
 .__loading-classic-6 {
-  --c: var(--content, 'Loading...');
   --s: var(--size, 11ch);
-  --c1: var(--color-1, #000);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 2));
+  --c1: var(--color-1, #000);
+
+  --__a: var(--content, 'Loading...');
 
   width: fit-content;
   font-weight: bold;
@@ -17,7 +18,7 @@
   animation: __loading-classic-6-l6 var(--d1) infinite linear;
 }
 .__loading-classic-6:before {
-  content: var(--c);
+  content: var(--__a);
 }
 @keyframes __loading-classic-6-l6 {
   to {

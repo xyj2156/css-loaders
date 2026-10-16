@@ -5,10 +5,11 @@
   --d2: var(--duration-2, calc(var(--d) * 1.5));
   --c1: var(--color-1, #000);
 
+  --__a: no-repeat radial-gradient(farthest-side, var(--c1) 94%, #0000);
+
   height: var(--s);
   aspect-ratio: 5;
-  --_g: no-repeat radial-gradient(farthest-side, var(--c1) 94%, #0000);
-  background: var(--_g), var(--_g), var(--_g), var(--_g);
+  background: var(--__a), var(--__a), var(--__a), var(--__a);
   background-size: 20% 100%;
   animation:
     __loading-dots-40-l40-1 var(--d1) infinite alternate,

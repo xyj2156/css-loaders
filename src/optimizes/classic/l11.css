@@ -1,10 +1,11 @@
 .__loading-classic-11 {
-  --c: var(--content, 'Loading...');
   --s: var(--size, 30px);
-  --c1: var(--color-1, #000);
-  --c2: var(--color-2, #0000);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #0000);
+
+  --__a: var(--content, 'Loading...');
 
   font-weight: bold;
   font-family: monospace;
@@ -14,7 +15,7 @@
 
 .__loading-classic-11:before,
 .__loading-classic-11:after {
-  content: var(--c);
+  content: var(--__a);
   grid-area: 1/1;
   -webkit-mask: linear-gradient(90deg, var(--c1) 50%, var(--c2) 0) 0 50%/2ch 100%;
   animation: __loading-classic-11-l11 var(--d1) infinite cubic-bezier(0.5, 220, 0.5, -220);

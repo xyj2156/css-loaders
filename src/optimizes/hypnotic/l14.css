@@ -5,13 +5,14 @@
   --d2: var(--duration-2, calc(var(--d) * 2));
   --c1: var(--color-1, #000);
 
+  --__a: #0000 calc(100% - 5px), var(--c1) calc(100% - 4px) 96%, #0000;
+
   width: var(--s);
   height: calc(var(--s) / 2);
   display: grid;
-  --__c: #0000 calc(100% - 5px), var(--c1) calc(100% - 4px) 96%, #0000;
   background:
-    radial-gradient(farthest-side at bottom, var(--__c)) 0 0,
-    radial-gradient(farthest-side at top, var(--__c)) 100% 100%;
+    radial-gradient(farthest-side at bottom, var(--__a)) 0 0,
+    radial-gradient(farthest-side at top, var(--__a)) 100% 100%;
   background-size: calc(50% + calc(var(--s) / 30)) 50%;
   background-repeat: no-repeat;
   animation: __loading-hypnotic-14-l14 var(--d1) infinite linear;

@@ -1,0 +1,30 @@
+.__loading-wobbling-7 {
+  --s: var(--size, 20px);
+  --d: var(--duration, 0.6s);
+  --c1: var(--color-1, #000a);
+  --_a: calc(var(--s) * 0.3 / 20);
+  --_b: calc(var(--s) * 1 / 20);
+
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(at 30% 30%, #0000, var(--c1)) red;
+  position: relative;
+  left: 0;
+  top: 0;
+  animation:
+    __loading-wobbling-7-l7-1 var(--d),
+    __loading-wobbling-7-l7-2 0.3s;
+  animation-timing-function: cubic-bezier(0.5, -200, 0.5, 200);
+  animation-iteration-count: infinite;
+}
+@keyframes __loading-wobbling-7-l7-1 {
+  100% {
+    left: var(--_b);
+  }
+}
+@keyframes __loading-wobbling-7-l7-2 {
+  100% {
+    top: var(--_a);
+  }
+}

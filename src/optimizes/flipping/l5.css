@@ -1,11 +1,12 @@
 .__loading-flipping-5 {
-  --c: #25b09b;
   --s: var(--size, 60px);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, var(--d));
   --d2: var(--duration-2, calc(var(--d) / 2));
   --c1: var(--color-1, #25b09b);
   --c2: var(--color-2, #514b82);
+
+  --__a: #25b09b;
 
   width: var(--s);
   aspect-ratio: 1;

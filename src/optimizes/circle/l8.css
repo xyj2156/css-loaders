@@ -1,8 +1,8 @@
 .__loading-circle-8 {
   --s: var(--size, 50px);
-  --c1: var(--color-1, #fff);
   --d: var(--duration, 1500ms);
   --d1: var(--duration-1, var(--d));
+  --c1: var(--color-1, #fff);
 
   width: var(--s);
   aspect-ratio: 1;

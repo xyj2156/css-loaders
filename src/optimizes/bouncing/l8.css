@@ -1,8 +1,5 @@
 .__loading-bouncing-8 {
   --s: var(--size, 60px);
-  --c1: var(--color-1, #524656);
-  --c2: var(--color-2, #cf4647);
-  --c3: var(--color-3, #45ada8);
   --d: var(--duration, 1000ms);
   --d1: var(--duration-1, calc(var(--d) * 0.57));
   --d2: var(--duration-2, calc(var(--d) * 0.35));
@@ -12,6 +9,9 @@
   --d6: var(--duration-6, calc(var(--d) * -0.23));
   --d7: var(--duration-7, calc(var(--d) * -0.11));
   --d8: var(--duration-8, calc(var(--d) * -0.34));
+  --c1: var(--color-1, #524656);
+  --c2: var(--color-2, #cf4647);
+  --c3: var(--color-3, #45ada8);
 
   height: var(--s);
   aspect-ratio: 1;

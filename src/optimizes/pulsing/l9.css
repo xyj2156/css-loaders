@@ -1,0 +1,56 @@
+.__loading-pulsing-9 {
+  --s: var(--size, 100px);
+  --d: var(--duration, 1s);
+  --c1: var(--color-1, #000);
+  --_a: calc(var(--s) * 8 / 100);
+  --_b: calc(var(--s) * 10 / 100);
+  --_c: calc(var(--s) * 12 / 100);
+  --_d: calc(var(--s) * 15 / 100);
+  --_e: calc(var(--s) * 20 / 100);
+  --_f: calc(var(--s) * 45 / 100);
+  --_g: calc(var(--s) * 50 / 100);
+  --_h: calc(var(--s) * 300 / 100);
+
+  width: var(--s);
+  height: var(--_f);
+  position: relative;
+}
+.__loading-pulsing-9:before,
+.__loading-pulsing-9:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--c1);
+  box-shadow: 0 0 0 var(--_g);
+  clip-path: polygon(
+    -var(--_g) -var(--_e),
+    10% -var(--_c),
+    20% 0,
+    calc(50% - var(--_d)) 0,
+    calc(50% - var(--_b)) -var(--_e),
+    calc(50% - var(--_a)) -var(--_d),
+    calc(50% + var(--_a)) -var(--_d),
+    calc(50% + var(--_b)) -var(--_e),
+    calc(50% + var(--_d)) 0,
+    80% 0,
+    90% -var(--_c),
+    calc(100% + var(--_g)) -var(--_e),
+    100% 80%,
+    calc(100% + var(--_b)) calc(100% + var(--_b)),
+    60% 100%,
+    50% calc(100% + var(--_d)),
+    40% 100%,
+    -var(--_b) calc(100% + var(--_b)),
+    0 80%
+  );
+}
+.__loading-pulsing-9:after {
+  animation: __loading-pulsing-9-l9 var(--d) infinite;
+  transform: perspective(var(--_h)) translateZ(0px);
+}
+@keyframes __loading-pulsing-9-l9 {
+  to {
+    transform: perspective(var(--_h)) translateZ(100px);
+    opacity: 0;
+  }
+}

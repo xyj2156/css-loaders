@@ -7,8 +7,10 @@
   width: var(--s);
   height: calc(var(--s) * 14 / 90);
   background:
-    radial-gradient(circle calc(var(--s) * 7 / 90) at bottom, var(--c1) 92%, #0000) calc(var(--s) / 2) 0,
-    radial-gradient(circle calc(var(--s) * 7 / 90) at top, var(--c1) 92%, #0000) calc(var(--s) / 2) 100%,
+    radial-gradient(circle calc(var(--s) * 7 / 90) at bottom, var(--c1) 92%, #0000)
+      calc(var(--s) / 2) 0,
+    radial-gradient(circle calc(var(--s) * 7 / 90) at top, var(--c1) 92%, #0000) calc(var(--s) / 2)
+      100%,
     conic-gradient(from 135deg at top, var(--c1) 90deg, #0000 0) 0 0,
     conic-gradient(from -45deg at bottom, var(--c1) 90deg, #0000 0) 0 100%;
   background-size: calc(var(--s) / 2) 50%;

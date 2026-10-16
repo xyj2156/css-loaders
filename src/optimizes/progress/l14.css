@@ -1,0 +1,25 @@
+.__loading-progress-14 {
+  --s: var(--size, 60px);
+  --d: var(--duration, 2s);
+  --c1: var(--color-1, #000);
+  --c2: var(--color-2, #514b82);
+  --c3: var(--color-3, #ddd);
+  --_a: calc(var(--s) * 50 / 60);
+  --__a: no-repeat linear-gradient(90deg, var(--c1) 70%, #0000 0);
+
+  width: var(--s);
+  height: var(--_a);
+  -webkit-mask:
+    var(--__a) calc(0 * 100% / 4) 100% / calc(100% / 5) calc(1 * 100% / 5),
+    var(--__a) calc(1 * 100% / 4) 100% / calc(100% / 5) calc(2 * 100% / 5),
+    var(--__a) calc(2 * 100% / 4) 100% / calc(100% / 5) calc(3 * 100% / 5),
+    var(--__a) calc(3 * 100% / 4) 100% / calc(100% / 5) calc(4 * 100% / 5),
+    var(--__a) calc(4 * 100% / 4) 100% / calc(100% / 5) calc(5 * 100% / 5);
+  background: linear-gradient(var(--c2) 0 0) left/0% 100% no-repeat var(--c3);
+  animation: __loading-progress-14-l14 var(--d) infinite steps(6);
+}
+@keyframes __loading-progress-14-l14 {
+  100% {
+    background-size: 120% 100%;
+  }
+}

@@ -1,16 +1,16 @@
 .__loading-dots-2 {
-  --s:var(--size,60px);
-  --d:var(--duration,1000ms);
-  --d1:var(--duration-1,calc(var(--d)*1));
-  --c1:var(--color-1,#000);
+  --s: var(--size, 60px);
+  --d: var(--duration, 1000ms);
+  --d1: var(--duration-1, calc(var(--d) * 1));
+  --c1: var(--color-1, #000);
 
-  --_a:var(--s);
-  --_b:calc(var(--_a)/4);
-  --_c:calc(var(--_a)/3);
+  --_a: var(--s);
+  --__a: calc(var(--_a) / 4);
+  --__b: calc(var(--_a) / 3);
 
   width: var(--_a);
   aspect-ratio: 4;
-  background: radial-gradient(circle closest-side, var(--c1) 90%, #0000) 0 / var(--_c) 100%
+  background: radial-gradient(circle closest-side, var(--c1) 90%, #0000) 0 / var(--__b) 100%
     no-repeat;
   animation: __loading-dots-2-l2 var(--d1) steps(3) infinite;
 }
