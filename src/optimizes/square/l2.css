@@ -19,7 +19,7 @@
   animation: __loading-square-2-l2-1 var(--d) infinite;
 }
 .__loading-square-2:after {
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-square-2-l2-0 {
   0%,

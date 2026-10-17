@@ -35,7 +35,7 @@
   }
   40%,
   60% {
-    inset: -var(--_a);
+    inset: calc(var(--_a) * -1);
   }
 }
 

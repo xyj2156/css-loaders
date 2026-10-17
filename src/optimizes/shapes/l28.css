@@ -26,7 +26,7 @@
 .__loading-shapes-28:after {
   inset: auto auto 0 100%;
   transform-origin: top left;
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-28-l28-0 {
   0%,
@@ -44,7 +44,7 @@
 @keyframes __loading-shapes-28-l28-1 {
   0%,
   30% {
-    transform: rotate(calc(var(--s, 1) * 0));
+    transform: rotate(calc(var(--__s, 1) * 0));
   }
   70%,
   100% {

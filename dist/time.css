@@ -59,13 +59,13 @@
       var(--_e),
     linear-gradient(var(--c1) 0 0) bottom/var(--_g) var(--_f);
   background-repeat: no-repeat;
-  transform-origin: 50% -var(--_a);
+  transform-origin: 50% calc(var(--_a) * -1);
   animation: __loading-time-10-l10-1 var(--d) infinite alternate linear;
 }
 .__loading-time-10::before {
   content: '';
   position: absolute;
-  inset: -var(--_b) calc(50% - var(--_c)) -var(--_c);
+  inset: calc(var(--_b) * -1) calc(50% - var(--_c)) calc(var(--_c) * -1);
   background:
     radial-gradient(farthest-side, var(--c2) 90%, #0000) top / var(--_c) var(--_c),
     radial-gradient(farthest-side, var(--c2) 90%, #0000) bottom/var(--_e) var(--_e);
@@ -257,7 +257,7 @@
 .__loading-time-5::after {
   transform-origin: 50% calc(100% + var(--_a));
   transform: scaleY(-1);
-  --s: var(--_b);
+  --__s: var(--_b);
   --d: 180deg;
 }
 @keyframes __loading-time-5-l5-0 {
@@ -273,7 +273,7 @@
   70% {
     background-size:
       100% 205%,
-      var(--s, 0) 100%;
+      var(--__s, 0) 100%;
   }
   70%,
   100% {
@@ -315,7 +315,7 @@
 .__loading-time-6:after {
   content: '';
   position: absolute;
-  inset: -var(--_b) -var(--_c) auto;
+  inset: calc(var(--_b) * -1) calc(var(--_c) * -1) auto;
   height: var(--_d);
   background:
     radial-gradient(farthest-side, currentColor 94%, #0000) left,
@@ -464,7 +464,7 @@
   content: '';
   position: absolute;
   border-radius: var(--_d) var(--_d) 0 0;
-  inset: -var(--_d) calc(50% - var(--_c));
+  inset: calc(var(--_d) * -1) calc(50% - var(--_c));
   transform: rotate(40deg);
   background:
     linear-gradient(currentColor 0 0) top / 100% var(--_c),
@@ -483,10 +483,10 @@
   75%,
   85%,
   95% {
-    transform: translateY(-var(--_a)) rotate(10deg);
+    transform: translateY(calc(var(--_a) * -1)) rotate(10deg);
   }
   80%,
   90% {
-    transform: translateY(-var(--_a)) rotate(-10deg);
+    transform: translateY(calc(var(--_a) * -1)) rotate(-10deg);
   }
 }

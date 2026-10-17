@@ -175,8 +175,18 @@ function transformCss(css) {
     varLines.push(`  --__${letters[i]}: ${v};`);
   });
 
-  // 9. 在整个文件范围做替换（顺序：长到短，避免部分匹配）
+  // 9. 在整个文件范围做替换（顺序很重要！）
   let result = css;
+
+  // 9.0 先替换原文件变量名引用和声明（必须最先做，避免 pxMap 生成的 var(--_x) 与原文件变量冲突）
+  for (const [oldName, newName] of Object.entries(origMap)) {
+    // var(--oldName) → var(--newName)
+    const refRegex = new RegExp(`var\\(\\s*${oldName.replace(/[-]/g, '\\-')}\\s*\\)`, 'g');
+    result = result.replace(refRegex, `var(${newName})`);
+    // 声明 --oldName: → --newName:
+    const declRegex = new RegExp(`(;\\s*)${oldName.replace(/[-]/g, '\\-')}\\s*:`, 'g');
+    result = result.replace(declRegex, `$1${newName}:`);
+  }
 
   // 9.1 替换主尺寸：width/height: Npx → var(--s)（仅当 N === sDefault）
   result = result.replace(
@@ -185,11 +195,14 @@ function transformCss(css) {
   );
 
   // 9.2 替换 px 值（从大到小）
+  // 注意：负号不能直接跟 var()，必须用 calc(-1 * var(--_x)) 包裹
   const sortedPxDesc = [...pxValues].sort((a, b) => b - a);
   for (const v of sortedPxDesc) {
     const numStr = Number.isInteger(v) ? `${v}` : v.toString();
-    const regex = new RegExp(`(?<![\\d.])${numStr.replace('.', '\\.')}px`, 'g');
-    result = result.replace(regex, pxMap[v]);
+    const regex = new RegExp(`(-?)(?<![\\d.])${numStr.replace('.', '\\.')}px`, 'g');
+    result = result.replace(regex, (match, neg) =>
+      neg ? `calc(-1 * ${pxMap[v]})` : pxMap[v],
+    );
   }
 
   // 9.3 替换颜色（负向前瞻避免 #000 误伤 #0000）
@@ -204,16 +217,6 @@ function transformCss(css) {
     const newName = dMap[d];
     const regex = new RegExp(d.replace('.', '\\.'), 'g');
     result = result.replace(regex, newName);
-  }
-
-  // 9.5 替换原文件变量名引用和声明
-  for (const [oldName, newName] of Object.entries(origMap)) {
-    // var(--oldName) → var(--newName)
-    const refRegex = new RegExp(`var\\(\\s*${oldName.replace(/[-]/g, '\\-')}\\s*\\)`, 'g');
-    result = result.replace(refRegex, `var(${newName})`);
-    // 声明 --oldName: → --newName:
-    const declRegex = new RegExp(`(;\\s*)${oldName.replace(/[-]/g, '\\-')}\\s*:`, 'g');
-    result = result.replace(declRegex, `$1${newName}:`);
   }
 
   // 10. 把主类块里原有的变量声明行删掉（因为我们重建了）

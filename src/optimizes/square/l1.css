@@ -20,7 +20,7 @@
 }
 .__loading-square-1:after {
   transform-origin: top left;
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-square-1-l1-0 {
   to {
@@ -29,6 +29,6 @@
 }
 @keyframes __loading-square-1-l1-1 {
   to {
-    transform: rotate(calc(var(--s, 1) * 90deg));
+    transform: rotate(calc(var(--__s, 1) * 90deg));
   }
 }

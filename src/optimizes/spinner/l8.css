@@ -11,15 +11,13 @@
   aspect-ratio: 1;
   color: var(--c1);
   background:
-    var(--__a) 50% 0 / var(--__a) var(--__a),
-    var(--__a) 50% 100% / var(--__a) var(--__a),
-    var(--__a) 100% 50% / var(--__a) var(--__a),
-    var(--__a) 0 50% / var(--__a) var(--__a),
-    var(--__a) 50% 50% / var(--__a) var(--__a),
-    conic-gradient(from 90deg at var(--_b) var(--_b), #0000 90deg, currentColor 0) -var(--_b) -var(
-        --_b
-      ) /
-      calc(50% + var(--_a)) calc(50% + var(--_a));
+    var(--__a) 50% 0 / var(--_c) var(--_c),
+    var(--__a) 50% 100% / var(--_c) var(--_c),
+    var(--__a) 100% 50% / var(--_c) var(--_c),
+    var(--__a) 0 50% / var(--_c) var(--_c),
+    var(--__a) 50% 50% / var(--_c) var(--_c),
+    conic-gradient(from 90deg at var(--_b) var(--_b), #0000 90deg, currentColor 0)
+      calc(-1 * var(--_b)) calc(-1 * var(--_b)) / calc(50% + var(--_a)) calc(50% + var(--_a));
   animation: __loading-spinner-8-l8 var(--d) infinite linear;
 }
 @keyframes __loading-spinner-8-l8 {

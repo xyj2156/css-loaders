@@ -18,11 +18,11 @@
   animation: __loading-square-5-l5 var(--d) infinite;
 }
 .__loading-square-5:after {
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-square-5-l5 {
   0% {
-    transform: scaleX(var(--s, 1)) translate(0) scale(1);
+    transform: scaleX(var(--__s, 1)) translate(0) scale(1);
   }
   33% {
     transform: scaleX(var(--s, 1)) translate(calc(50% + var(--_a))) scale(1);

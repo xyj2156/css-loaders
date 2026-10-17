@@ -33,10 +33,8 @@
   border-radius: 50%;
   display: grid;
   background:
-    conic-gradient(from 90deg at var(--_b) var(--_b), #0000 90deg, currentColor 0) -var(--_b) -var(
-        --_b
-      ) /
-      calc(50% + var(--_a)) calc(50% + var(--_a)),
+    conic-gradient(from 90deg at var(--_b) var(--_b), #0000 90deg, currentColor 0)
+      calc(var(--_b) * -1) -var(--_b) / calc(50% + var(--_a)) calc(50% + var(--_a)),
     radial-gradient(
         farthest-side,
         currentColor var(--_d),
@@ -567,7 +565,7 @@
 .__loading-spinner-24:after {
   content: '';
   position: absolute;
-  inset: -var(--_a);
+  inset: calc(var(--_a) * -1);
   border-radius: 50%;
   border: inherit;
   animation: inherit;
@@ -661,7 +659,7 @@
     calc(-1 * var(--__a)) calc(0 * var(--__a)) 0 4px,
     calc(-0.707 * var(--__a)) calc(-0.707 * var(--__a)) 0 var(--_d),
     calc(0 * var(--__a)) calc(-1 * var(--__a)) 0 var(--_e);
-  animation: __loading-spinner-27-l27 var(--__a) infinite steps(8);
+  animation: __loading-spinner-27-l27 var(--d) infinite steps(8);
 }
 @keyframes __loading-spinner-27-l27 {
   100% {
@@ -683,8 +681,8 @@
   color: var(--c1);
   background: conic-gradient(from 90deg at var(--_b) var(--_b), #0000 90deg, currentColor 0) -var(
       --_b
-    ) -var(--_b) /
-    calc(50% + var(--_a)) calc(50% + var(--_a));
+    )
+    calc(var(--_b) * -1) / calc(50% + var(--_a)) calc(50% + var(--_a));
   animation: __loading-spinner-28-l28 var(--d) infinite;
 }
 .__loading-spinner-28::before,
@@ -870,15 +868,13 @@
   aspect-ratio: 1;
   color: var(--c1);
   background:
-    var(--__a) 50% 0 / var(--__a) var(--__a),
-    var(--__a) 50% 100% / var(--__a) var(--__a),
-    var(--__a) 100% 50% / var(--__a) var(--__a),
-    var(--__a) 0 50% / var(--__a) var(--__a),
-    var(--__a) 50% 50% / var(--__a) var(--__a),
-    conic-gradient(from 90deg at var(--_b) var(--_b), #0000 90deg, currentColor 0) -var(--_b) -var(
-        --_b
-      ) /
-      calc(50% + var(--_a)) calc(50% + var(--_a));
+    var(--__a) 50% 0 / var(--_c) var(--_c),
+    var(--__a) 50% 100% / var(--_c) var(--_c),
+    var(--__a) 100% 50% / var(--_c) var(--_c),
+    var(--__a) 0 50% / var(--_c) var(--_c),
+    var(--__a) 50% 50% / var(--_c) var(--_c),
+    conic-gradient(from 90deg at var(--_b) var(--_b), #0000 90deg, currentColor 0)
+      calc(-1 * var(--_b)) calc(-1 * var(--_b)) / calc(50% + var(--_a)) calc(50% + var(--_a));
   animation: __loading-spinner-8-l8 var(--d) infinite linear;
 }
 @keyframes __loading-spinner-8-l8 {

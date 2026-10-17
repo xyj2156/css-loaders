@@ -60,7 +60,7 @@
   height: var(--_b);
   border-radius: 50%;
   background: var(--c2);
-  transform-origin: -var(--_c) 50%;
+  transform-origin: calc(var(--_c) * -1) 50%;
   animation: __loading-wobbling-10-l10-1 var(--d1) infinite linear;
 }
 @keyframes __loading-wobbling-10-l10-0 {
@@ -119,7 +119,7 @@
 }
 @keyframes __loading-wobbling-11-l11-1 {
   100% {
-    top: -var(--_b);
+    top: calc(var(--_b) * -1);
   }
 }
 @keyframes __loading-wobbling-11-l11-2 {
@@ -130,7 +130,7 @@
 }
 @keyframes __loading-wobbling-11-l11-3 {
   100% {
-    transform: scaleY(0.3) translate(var(--_a), -var(--_a));
+    transform: scaleY(0.3) translate(var(--_a), calc(var(--_a) * -1));
   }
 }
 
@@ -247,7 +247,7 @@
   margin: auto;
   border-radius: 50%;
   background: orange;
-  transform-origin: 50% -var(--_a);
+  transform-origin: 50% calc(var(--_a) * -1);
   animation: __loading-wobbling-14-l14 var(--d) infinite cubic-bezier(0.5, 623, 0.5, -623);
 }
 @keyframes __loading-wobbling-14-l14 {
@@ -320,7 +320,7 @@
   height: var(--_b);
   border-radius: 50%;
   background: var(--c2);
-  transform-origin: 50% -var(--_c);
+  transform-origin: 50% calc(var(--_c) * -1);
   animation: __loading-wobbling-16-l16-1 var(--d1) infinite linear alternate;
 }
 @keyframes __loading-wobbling-16-l16-0 {
@@ -536,7 +536,7 @@
 .__loading-wobbling-20::before {
   background: var(--c6);
   filter: blur(var(--_b));
-  transform: scaleY(0.4) translate(-var(--_d), 0px);
+  transform: scaleY(0.4) translate(calc(var(--_d) * -1), 0px);
 }
 @keyframes __loading-wobbling-20-l20 {
   30%,
@@ -599,7 +599,7 @@
   aspect-ratio: 1;
   background: var(--c1);
   box-shadow: 0 0 var(--_b) var(--_a) var(--c1);
-  transform: translate(-var(--_c));
+  transform: translate(calc(var(--_c) * -1));
   clip-path: inset(0);
   animation:
     __loading-wobbling-4-l4-1 var(--d) ease-in-out infinite alternate,
@@ -612,13 +612,13 @@
 }
 @keyframes __loading-wobbling-4-l4-2 {
   33% {
-    clip-path: inset(0 0 0 -var(--_d));
+    clip-path: inset(0 0 0 calc(var(--_d) * -1));
   }
   50% {
     clip-path: inset(0 0 0 0);
   }
   83% {
-    clip-path: inset(0 -var(--_d) 0 0);
+    clip-path: inset(0 calc(var(--_d) * -1) 0 0);
   }
 }
 

@@ -24,7 +24,7 @@
 .__loading-shapes-20:after {
   border-radius: 0 var(--_b) var(--_b) 0;
   transform-origin: 0% 100%;
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-20-l20-0 {
   0%,
@@ -51,7 +51,7 @@
     transform: rotate(calc(var(--s, 1) * -90deg)) translate(0, 0) rotate(0deg);
   }
   100% {
-    transform: rotate(calc(var(--s, 1) * -90deg)) translate(0, -var(--_a))
+    transform: rotate(calc(var(--s, 1) * -90deg)) translate(0, calc(var(--_a) * -1))
       rotate(calc(var(--s, 1) * -90deg));
   }
 }

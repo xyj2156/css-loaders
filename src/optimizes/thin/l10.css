@@ -20,12 +20,12 @@
 }
 .__loading-thin-10:after {
   animation-delay: -1s;
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-thin-10-l10-1 {
   0%,
   100% {
-    transform: scaleX(var(--s, 1)) rotate(0);
+    transform: scaleX(var(--__s, 1)) rotate(0);
   }
   25%,
   75% {

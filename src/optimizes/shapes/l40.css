@@ -50,7 +50,7 @@
   }
   40%,
   60% {
-    inset: -var(--_a);
+    inset: calc(var(--_a) * -1);
   }
 }
 @keyframes __loading-shapes-40-l40-2 {

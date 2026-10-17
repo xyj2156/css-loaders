@@ -15,7 +15,7 @@
 }
 .__loading-shapes-24:before {
   transform-origin: right;
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-24-l24 {
   0%,

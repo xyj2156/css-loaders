@@ -25,11 +25,11 @@
 }
 @keyframes __loading-shapes-7-l7 {
   33% {
-    inset: -var(--_a);
+    inset: calc(var(--_a) * -1);
     transform: rotate(0deg);
   }
   66% {
-    inset: -var(--_a);
+    inset: calc(var(--_a) * -1);
     transform: rotate(90deg);
   }
   100% {

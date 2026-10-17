@@ -329,24 +329,24 @@
   background: var(--c1);
   box-shadow: 0 0 0 var(--_g);
   clip-path: polygon(
-    -var(--_g) -var(--_e),
-    10% -var(--_c),
+    calc(var(--_g) * -1) calc(var(--_e) * -1),
+    10% calc(var(--_c) * -1),
     20% 0,
     calc(50% - var(--_d)) 0,
-    calc(50% - var(--_b)) -var(--_e),
-    calc(50% - var(--_a)) -var(--_d),
-    calc(50% + var(--_a)) -var(--_d),
-    calc(50% + var(--_b)) -var(--_e),
+    calc(50% - var(--_b)) calc(var(--_e) * -1),
+    calc(50% - var(--_a)) calc(var(--_d) * -1),
+    calc(50% + var(--_a)) calc(var(--_d) * -1),
+    calc(50% + var(--_b)) calc(var(--_e) * -1),
     calc(50% + var(--_d)) 0,
     80% 0,
-    90% -var(--_c),
-    calc(100% + var(--_g)) -var(--_e),
+    90% calc(var(--_c) * -1),
+    calc(100% + var(--_g)) calc(var(--_e) * -1),
     100% 80%,
     calc(100% + var(--_b)) calc(100% + var(--_b)),
     60% 100%,
     50% calc(100% + var(--_d)),
     40% 100%,
-    -var(--_b) calc(100% + var(--_b)),
+    calc(var(--_b) * -1) calc(100% + var(--_b)),
     0 80%
   );
 }

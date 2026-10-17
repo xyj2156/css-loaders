@@ -49,7 +49,7 @@
 .__loading-time-5::after {
   transform-origin: 50% calc(100% + var(--_a));
   transform: scaleY(-1);
-  --s: var(--_b);
+  --__s: var(--_b);
   --d: 180deg;
 }
 @keyframes __loading-time-5-l5-0 {
@@ -65,7 +65,7 @@
   70% {
     background-size:
       100% 205%,
-      var(--s, 0) 100%;
+      var(--__s, 0) 100%;
   }
   70%,
   100% {

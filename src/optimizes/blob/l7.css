@@ -1,8 +1,8 @@
 .__loading-blob-7 {
   --s: var(--size, 100px);
-  --d: var(--duration, 1000ms);
+  --d: var(--duration, 2000ms);
   --d1: var(--duration-1, calc(var(--d) * 1));
-  --d2: var(--duration-2, calc(var(--d) * -1));
+  --d2: var(--duration-2, calc(var(--d) * -0.5));
   --c1: var(--color-1, #fff);
   --c2: var(--color-2, #ffff00);
 

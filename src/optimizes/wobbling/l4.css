@@ -11,7 +11,7 @@
   aspect-ratio: 1;
   background: var(--c1);
   box-shadow: 0 0 var(--_b) var(--_a) var(--c1);
-  transform: translate(-var(--_c));
+  transform: translate(calc(var(--_c) * -1));
   clip-path: inset(0);
   animation:
     __loading-wobbling-4-l4-1 var(--d) ease-in-out infinite alternate,
@@ -24,12 +24,12 @@
 }
 @keyframes __loading-wobbling-4-l4-2 {
   33% {
-    clip-path: inset(0 0 0 -var(--_d));
+    clip-path: inset(0 0 0 calc(var(--_d) * -1));
   }
   50% {
     clip-path: inset(0 0 0 0);
   }
   83% {
-    clip-path: inset(0 -var(--_d) 0 0);
+    clip-path: inset(0 calc(var(--_d) * -1) 0 0);
   }
 }

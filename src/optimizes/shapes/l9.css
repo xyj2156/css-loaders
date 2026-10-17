@@ -23,7 +23,7 @@
 .__loading-shapes-9:before {
   left: 0;
   transform-origin: bottom left;
-  --s: -1;
+  --__s: -1;
 }
 .__loading-shapes-9:after {
   right: 0;

@@ -91,12 +91,12 @@
 
 .__loading-classic-11:after {
   -webkit-mask-position: 1ch 50%;
-  --s: -1;
+  --__s: -1;
 }
 
 @keyframes __loading-classic-11-l11 {
   100% {
-    transform: translateY(calc(var(--s, 1) * 0.1%));
+    transform: translateY(calc(var(--__s, 1) * 0.1%));
   }
 }
 
@@ -1788,13 +1788,13 @@
 
 .__loading-classic-29:after {
   -webkit-mask-position: 1ch 50%;
-  --s: -1;
+  --__s: -1;
 }
 
 @keyframes __loading-classic-29-l29 {
   80%,
   100% {
-    transform: rotate(calc(var(--s, 1) * 1turn));
+    transform: rotate(calc(var(--__s, 1) * 1turn));
   }
 }
 

@@ -12,8 +12,8 @@
   color: var(--c1);
   background: conic-gradient(from 90deg at var(--_b) var(--_b), #0000 90deg, currentColor 0) -var(
       --_b
-    ) -var(--_b) /
-    calc(50% + var(--_a)) calc(50% + var(--_a));
+    )
+    calc(var(--_b) * -1) / calc(50% + var(--_a)) calc(50% + var(--_a));
   animation: __loading-spinner-28-l28 var(--d) infinite;
 }
 .__loading-spinner-28::before,

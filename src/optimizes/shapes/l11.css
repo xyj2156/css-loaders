@@ -17,12 +17,12 @@
 }
 .__loading-shapes-11::after {
   animation-delay: -1.5s;
-  --s: 90deg;
+  --__s: 90deg;
 }
 @keyframes __loading-shapes-11-l11 {
   0%,
   12.5% {
-    transform: rotate(var(--s, 0deg)) rotate(0deg);
+    transform: rotate(var(--__s, 0deg)) rotate(0deg);
   }
   37.5%,
   62.5% {

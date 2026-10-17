@@ -19,7 +19,7 @@
 }
 .__loading-shapes-15:before {
   transform-origin: bottom right;
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-15-l15-0 {
   0%,

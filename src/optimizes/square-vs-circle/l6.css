@@ -1,3 +1,11 @@
+.__loading-square-vs-circle-6 {
+  --s: var(--size, 35px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #fff);
+  --_a: calc(var(--s) * 3 / 35);
+  --_b: calc(var(--s) * 5 / 35);
+  --_c: calc(var(--s) * 40 / 35);
+}
 .__loading-square-vs-circle-6,
 .__loading-square-vs-circle-6:before,
 .__loading-square-vs-circle-6:after {
@@ -15,7 +23,7 @@
   animation-delay: 1s;
 }
 .__loading-square-vs-circle-6:after {
-  left: -var(--_c);
+  left: calc(var(--_c) * -1);
   animation-delay: 0s;
 }
 @keyframes __loading-square-vs-circle-6-l6 {

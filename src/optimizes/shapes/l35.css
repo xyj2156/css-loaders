@@ -21,7 +21,7 @@
 }
 .__loading-shapes-35:after {
   -webkit-mask: repeating-linear-gradient(#0000 0 var(--_a), var(--c2) 0 var(--_b));
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-35-l35 {
   0%,

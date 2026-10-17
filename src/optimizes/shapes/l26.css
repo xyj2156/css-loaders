@@ -21,15 +21,15 @@
   animation: __loading-shapes-26-l26 var(--d) infinite;
 }
 .__loading-shapes-26::after {
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-26-l26 {
   0%,
   10% {
-    transform: translateY(calc(var(--s, 1) * 0));
+    transform: translateY(calc(var(--__s, 1) * 0));
     background-position:
-      0 calc(var(--s, 0) * -100%),
-      calc(var(--s, 0) * 100%) 50%;
+      0 calc(var(--__s, 0) * -100%),
+      calc(var(--__s, 0) * 100%) 50%;
   }
   33% {
     transform: translateY(calc(var(--s, 1) * -20%));

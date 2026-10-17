@@ -42,7 +42,7 @@
   height: var(--_b);
   border-radius: 50%;
   background: var(--c2);
-  transform-origin: -var(--_c) 50%;
+  transform-origin: calc(var(--_c) * -1) 50%;
   animation: __loading-wobbling-10-l10-1 var(--d1) infinite linear;
 }
 @keyframes __loading-wobbling-10-l10-0 {

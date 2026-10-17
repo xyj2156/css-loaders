@@ -18,7 +18,7 @@
     __loading-shapes-6-l6-2 var(--d) infinite linear;
 }
 .__loading-shapes-6:after {
-  --s: -1;
+  --__s: -1;
   animation-direction: reverse;
 }
 @keyframes __loading-shapes-6-l6-0 {
@@ -48,7 +48,7 @@
   10%,
   90%,
   100% {
-    transform: scale(var(--s, 1)) translateY(0);
+    transform: scale(var(--__s, 1)) translateY(0);
   }
   33%,
   66% {

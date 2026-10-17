@@ -14,9 +14,9 @@
   width: var(--s);
   aspect-ratio: 4;
   background:
-    radial-gradient(circle closest-side at left var(--__a) top 50%, var(--__a)),
+    radial-gradient(circle closest-side at left var(--_a) top 50%, var(--__a)),
     radial-gradient(circle closest-side, var(--__a)),
-    radial-gradient(circle closest-side at right var(--__a) top 50%, var(--__a));
+    radial-gradient(circle closest-side at right var(--_a) top 50%, var(--__a));
   background-size: 100% 100%;
   background-repeat: no-repeat;
   animation: __loading-dots-4-l4 var(--d1) infinite alternate;

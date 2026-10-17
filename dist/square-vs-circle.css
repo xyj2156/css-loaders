@@ -133,7 +133,7 @@
   animation-delay: -1s, 0s;
 }
 .__loading-square-vs-circle-3:after {
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-square-vs-circle-3-l3-1 {
   0% {
@@ -154,7 +154,7 @@
 }
 @keyframes __loading-square-vs-circle-3-l3-2 {
   0% {
-    transform: scaleX(var(--s, 1)) rotate(0deg);
+    transform: scaleX(var(--__s, 1)) rotate(0deg);
   }
   100% {
     transform: scaleX(var(--s, 1)) rotate(-360deg);
@@ -250,6 +250,14 @@
   }
 }
 
+.__loading-square-vs-circle-6 {
+  --s: var(--size, 35px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #fff);
+  --_a: calc(var(--s) * 3 / 35);
+  --_b: calc(var(--s) * 5 / 35);
+  --_c: calc(var(--s) * 40 / 35);
+}
 .__loading-square-vs-circle-6,
 .__loading-square-vs-circle-6:before,
 .__loading-square-vs-circle-6:after {
@@ -267,7 +275,7 @@
   animation-delay: 1s;
 }
 .__loading-square-vs-circle-6:after {
-  left: -var(--_c);
+  left: calc(var(--_c) * -1);
   animation-delay: 0s;
 }
 @keyframes __loading-square-vs-circle-6-l6 {
@@ -282,6 +290,14 @@
   }
 }
 
+.__loading-square-vs-circle-7 {
+  --s: var(--size, 35px);
+  --d: var(--duration, 1.5s);
+  --c1: var(--color-1, #fff);
+  --_a: calc(var(--s) * 3 / 35);
+  --_b: calc(var(--s) * 5 / 35);
+  --_c: calc(var(--s) * 40 / 35);
+}
 .__loading-square-vs-circle-7,
 .__loading-square-vs-circle-7:before,
 .__loading-square-vs-circle-7:after {
@@ -300,7 +316,7 @@
   animation-delay: 1s, 0s;
 }
 .__loading-square-vs-circle-7:after {
-  left: -var(--_c);
+  left: calc(var(--_c) * -1);
   animation-delay: 0s, 1s;
 }
 @keyframes __loading-square-vs-circle-7-l7-1 {
@@ -354,7 +370,7 @@
 }
 .__loading-square-vs-circle-8:after {
   margin: 0 0 0 auto;
-  filter: drop-shadow(-var(--_c) var(--_c) 0 var(--c1));
+  filter: drop-shadow(calc(var(--_c) * -1) var(--_c) 0 var(--c1));
   animation-delay: -1s;
 }
 @keyframes __loading-square-vs-circle-8-l8 {
@@ -376,7 +392,7 @@
   }
 }
 
-.__loading-square-vs-circle-9 {
+﻿.__loading-square-vs-circle-9 {
   --s: var(--size, 75px);
   --d: var(--duration, 1s);
   --c1: var(--color-1, #fff);
@@ -384,12 +400,13 @@
   --_b: calc(var(--s) * 13 / 75);
   --_c: calc(var(--s) * 15 / 75);
   --__a: conic-gradient(from 90deg at 2px 2px, #0000 90deg, var(--c1) 0);
+  --__b: conic-gradient(from -90deg at var(--_b) var(--_b), #0000 90deg, var(--c1) 0);
 
   width: var(--s);
   aspect-ratio: 1;
   background:
     var(--__a), var(--__a), var(--__a), var(--__a), var(--__a), var(--__a), var(--__a), var(--__a),
-    var(--g2), var(--g2), var(--g2), var(--g2), var(--g2), var(--g2), var(--g2), var(--g2);
+    var(--__b), var(--__b), var(--__b), var(--__b), var(--__b), var(--__b), var(--__b), var(--__b);
   background-size: var(--_c) var(--_c);
   background-repeat: no-repeat;
   animation: __loading-square-vs-circle-9-l9 var(--d) infinite alternate linear;

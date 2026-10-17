@@ -16,18 +16,18 @@
   animation: __loading-shapes-13-l13 var(--d) infinite;
 }
 .__loading-shapes-13::after {
-  --s: -1, -1;
+  --__s: -1, -1;
 }
 @keyframes __loading-shapes-13-l13 {
   0%,
   10% {
-    transform: scale(var(--s, 1)) translate(0, 0) rotate(0deg);
+    transform: scale(var(--__s, 1)) translate(0, 0) rotate(0deg);
   }
   33% {
-    transform: scale(var(--s, 1)) translate(var(--_a), -var(--_a)) rotate(0deg);
+    transform: scale(var(--s, 1)) translate(var(--_a), calc(var(--_a) * -1)) rotate(0deg);
   }
   66% {
-    transform: scale(var(--s, 1)) translate(var(--_a), -var(--_a)) rotate(180deg);
+    transform: scale(var(--s, 1)) translate(var(--_a), calc(var(--_a) * -1)) rotate(180deg);
   }
   90%,
   100% {

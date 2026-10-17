@@ -20,7 +20,7 @@
 }
 .__loading-square-1:after {
   transform-origin: top left;
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-square-1-l1-0 {
   to {
@@ -29,11 +29,11 @@
 }
 @keyframes __loading-square-1-l1-1 {
   to {
-    transform: rotate(calc(var(--s, 1) * 90deg));
+    transform: rotate(calc(var(--__s, 1) * 90deg));
   }
 }
 
-.__loading-square-10 {
+﻿.__loading-square-10 {
   --s: var(--size, 85px);
   --d: var(--duration, 1s);
   --c1: var(--color-1, #fff);
@@ -41,10 +41,11 @@
   --_b: calc(var(--s) * 25 / 85);
   --_c: calc(var(--s) * 50 / 85);
   --__a: conic-gradient(from 90deg at left 3px top 3px, #0000 90deg, var(--c1) 0);
+  --__b: conic-gradient(from -90deg at bottom var(--_a) right var(--_a), #0000 90deg, var(--c1) 0);
 
   width: var(--s);
   height: var(--_c);
-  background: var(--__a), var(--__a), var(--__a), var(--g2), var(--g2), var(--g2);
+  background: var(--__a), var(--__a), var(--__a), var(--__b), var(--__b), var(--__b);
   background-position: left, center, right;
   background-repeat: no-repeat;
   animation: __loading-square-10-l10 var(--d) infinite alternate;
@@ -90,7 +91,7 @@
   }
 }
 
-.__loading-square-11 {
+﻿.__loading-square-11 {
   --s: var(--size, 55px);
   --d: var(--duration, 1.5s);
   --c1: var(--color-1, #fff);
@@ -99,11 +100,12 @@
   --_c: calc(var(--s) * 25 / 55);
   --_d: calc(var(--s) * 35 / 55);
   --__a: conic-gradient(from 90deg at top 3px left 3px, #0000 90deg, var(--c1) 0);
+  --__b: conic-gradient(from -90deg at bottom var(--_a) right var(--_a), #0000 90deg, var(--c1) 0);
 
   width: var(--s);
   aspect-ratio: 1;
   background:
-    var(--__a), var(--__a), var(--__a), var(--__a), var(--g2), var(--g2), var(--g2), var(--g2);
+    var(--__a), var(--__a), var(--__a), var(--__a), var(--__b), var(--__b), var(--__b), var(--__b);
   background-position:
     0 0,
     100% 0,
@@ -172,7 +174,7 @@
   animation: __loading-square-2-l2-1 var(--d) infinite;
 }
 .__loading-square-2:after {
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-square-2-l2-0 {
   0%,
@@ -218,7 +220,7 @@
   box-shadow: 0 0 0 var(--_b) inset var(--c1);
 }
 .__loading-square-3:after {
-  transform-origin: -var(--_a) calc(100% + var(--_a));
+  transform-origin: calc(var(--_a) * -1) calc(100% + var(--_a));
   animation: __loading-square-3-l3-1 var(--d) infinite;
 }
 @keyframes __loading-square-3-l3-1 {
@@ -256,22 +258,22 @@
   animation: __loading-square-4-l4 var(--d) infinite;
 }
 .__loading-square-4:after {
-  --s: -1;
+  --__dir: -1;
   animation-delay: 0.75s;
 }
 @keyframes __loading-square-4-l4 {
   0% {
-    transform: scaleX(var(--s, 1)) translate(0) rotate(0);
+    transform: scaleX(var(--__dir, 1)) translate(0) rotate(0);
   }
   16.67% {
-    transform: scaleX(var(--s, 1)) translate(-50%) rotate(0);
+    transform: scaleX(var(--__dir, 1)) translate(-50%) rotate(0);
   }
   33.33% {
-    transform: scaleX(var(--s, 1)) translate(-50%) rotate(90deg);
+    transform: scaleX(var(--__dir, 1)) translate(-50%) rotate(90deg);
   }
   50%,
   100% {
-    transform: scaleX(var(--s, 1)) translate(0) rotate(90deg);
+    transform: scaleX(var(--__dir, 1)) translate(0) rotate(90deg);
   }
 }
 
@@ -295,11 +297,11 @@
   animation: __loading-square-5-l5 var(--d) infinite;
 }
 .__loading-square-5:after {
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-square-5-l5 {
   0% {
-    transform: scaleX(var(--s, 1)) translate(0) scale(1);
+    transform: scaleX(var(--__s, 1)) translate(0) scale(1);
   }
   33% {
     transform: scaleX(var(--s, 1)) translate(calc(50% + var(--_a))) scale(1);
@@ -312,7 +314,7 @@
   }
 }
 
-.__loading-square-6 {
+﻿.__loading-square-6 {
   --s: var(--size, 85px);
   --d: var(--duration, 1s);
   --c1: var(--color-1, #fff);
@@ -321,10 +323,11 @@
   --_c: calc(var(--s) * 25 / 85);
   --_d: calc(var(--s) * 35 / 85);
   --__a: conic-gradient(from 90deg at 3px 3px, #0000 90deg, var(--c1) 0);
+  --__b: conic-gradient(from -90deg at var(--_b) var(--_b), #0000 90deg, var(--c1) 0);
 
   width: var(--s);
   height: var(--_d);
-  background: var(--__a), var(--__a), var(--__a), var(--g2), var(--g2), var(--g2);
+  background: var(--__a), var(--__a), var(--__a), var(--__b), var(--__b), var(--__b);
   background-size: var(--_c) var(--_c);
   background-repeat: no-repeat;
   animation: __loading-square-6-l6 var(--d) infinite alternate;
@@ -368,7 +371,7 @@
   }
 }
 
-.__loading-square-7 {
+﻿.__loading-square-7 {
   --s: var(--size, 55px);
   --d: var(--duration, 1.5s);
   --c1: var(--color-1, #fff);
@@ -376,10 +379,11 @@
   --_b: calc(var(--s) * 22 / 55);
   --_c: calc(var(--s) * 25 / 55);
   --__a: conic-gradient(from 90deg at 3px 3px, #0000 90deg, var(--c1) 0);
+  --__b: conic-gradient(from -90deg at var(--_b) var(--_b), #0000 90deg, var(--c1) 0);
 
   width: var(--s);
   aspect-ratio: 1;
-  background: var(--__a), var(--__a), var(--__a), var(--g2), var(--g2), var(--g2);
+  background: var(--__a), var(--__a), var(--__a), var(--__b), var(--__b), var(--__b);
   background-size: var(--_c) var(--_c);
   background-repeat: no-repeat;
   animation: __loading-square-7-l7 var(--d) infinite;
@@ -417,17 +421,18 @@
   }
 }
 
-.__loading-square-8 {
+﻿.__loading-square-8 {
   --s: var(--size, 85px);
   --d: var(--duration, 1s);
   --c1: var(--color-1, #fff);
   --_a: calc(var(--s) * 3 / 85);
   --_b: calc(var(--s) * 25 / 85);
   --__a: conic-gradient(from 90deg at left 3px top 3px, #0000 90deg, var(--c1) 0);
+  --__b: conic-gradient(from -90deg at bottom var(--_a) right var(--_a), #0000 90deg, var(--c1) 0);
 
   width: var(--s);
   height: var(--_b);
-  background: var(--__a), var(--__a), var(--__a), var(--g2), var(--g2), var(--g2);
+  background: var(--__a), var(--__a), var(--__a), var(--__b), var(--__b), var(--__b);
   background-position: left, center, right;
   background-repeat: no-repeat;
   animation: __loading-square-8-l8 var(--d) infinite;
@@ -471,7 +476,7 @@
   }
 }
 
-.__loading-square-9 {
+﻿.__loading-square-9 {
   --s: var(--size, 85px);
   --d: var(--duration, 1s);
   --c1: var(--color-1, #fff);
@@ -479,10 +484,11 @@
   --_b: calc(var(--s) * 25 / 85);
   --_c: calc(var(--s) * 50 / 85);
   --__a: conic-gradient(from 90deg at left 3px top 3px, #0000 90deg, var(--c1) 0);
+  --__b: conic-gradient(from -90deg at bottom var(--_a) right var(--_a), #0000 90deg, var(--c1) 0);
 
   width: var(--s);
   height: var(--_c);
-  background: var(--__a), var(--__a), var(--__a), var(--g2), var(--g2), var(--g2);
+  background: var(--__a), var(--__a), var(--__a), var(--__b), var(--__b), var(--__b);
   background-position: left, center, right;
   background-repeat: no-repeat;
   animation: __loading-square-9-l9 var(--d) infinite;

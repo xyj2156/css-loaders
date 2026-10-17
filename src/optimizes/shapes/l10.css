@@ -21,7 +21,7 @@
 .__loading-shapes-10:before {
   clip-path: polygon(0 50%, 100% 0, 100% 100%);
   transform-origin: bottom right;
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-10-l10-0 {
   0%,
@@ -43,7 +43,7 @@
   10%,
   70%,
   100% {
-    transform: translateY(-100%) rotate(calc(var(--s, 1) * 135deg));
+    transform: translateY(-100%) rotate(calc(var(--__s, 1) * 135deg));
   }
   35% {
     transform: translateY(0%) rotate(0deg);

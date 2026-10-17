@@ -18,7 +18,7 @@
 .__loading-spinner-24:after {
   content: '';
   position: absolute;
-  inset: -var(--_a);
+  inset: calc(var(--_a) * -1);
   border-radius: 50%;
   border: inherit;
   animation: inherit;

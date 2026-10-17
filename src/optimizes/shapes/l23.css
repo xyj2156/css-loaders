@@ -21,7 +21,12 @@
   height: 50%;
   background: currentColor;
   transform-origin: top left;
-  clip-path: polygon(-var(--_b) 0, 0 -var(--_a), 100% 100%, -var(--_b) 100%);
+  clip-path: polygon(
+    calc(var(--_b) * -1) 0,
+    0 calc(var(--_a) * -1),
+    100% 100%,
+    calc(var(--_b) * -1) 100%
+  );
   inset: auto auto 0 0;
   animation: __loading-shapes-23-l23-1 var(--d) infinite;
 }

@@ -48,7 +48,7 @@
 .__loading-shapes-10:before {
   clip-path: polygon(0 50%, 100% 0, 100% 100%);
   transform-origin: bottom right;
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-10-l10-0 {
   0%,
@@ -70,7 +70,7 @@
   10%,
   70%,
   100% {
-    transform: translateY(-100%) rotate(calc(var(--s, 1) * 135deg));
+    transform: translateY(-100%) rotate(calc(var(--__s, 1) * 135deg));
   }
   35% {
     transform: translateY(0%) rotate(0deg);
@@ -96,12 +96,12 @@
 }
 .__loading-shapes-11::after {
   animation-delay: -1.5s;
-  --s: 90deg;
+  --__s: 90deg;
 }
 @keyframes __loading-shapes-11-l11 {
   0%,
   12.5% {
-    transform: rotate(var(--s, 0deg)) rotate(0deg);
+    transform: rotate(var(--__s, 0deg)) rotate(0deg);
   }
   37.5%,
   62.5% {
@@ -183,18 +183,18 @@
   animation: __loading-shapes-13-l13 var(--d) infinite;
 }
 .__loading-shapes-13::after {
-  --s: -1, -1;
+  --__s: -1, -1;
 }
 @keyframes __loading-shapes-13-l13 {
   0%,
   10% {
-    transform: scale(var(--s, 1)) translate(0, 0) rotate(0deg);
+    transform: scale(var(--__s, 1)) translate(0, 0) rotate(0deg);
   }
   33% {
-    transform: scale(var(--s, 1)) translate(var(--_a), -var(--_a)) rotate(0deg);
+    transform: scale(var(--s, 1)) translate(var(--_a), calc(var(--_a) * -1)) rotate(0deg);
   }
   66% {
-    transform: scale(var(--s, 1)) translate(var(--_a), -var(--_a)) rotate(180deg);
+    transform: scale(var(--s, 1)) translate(var(--_a), calc(var(--_a) * -1)) rotate(180deg);
   }
   90%,
   100% {
@@ -246,7 +246,7 @@
 }
 @keyframes __loading-shapes-14-l14 {
   100% {
-    transform: translate(-var(--_a), -var(--_a));
+    transform: translate(calc(var(--_a) * -1), calc(var(--_a) * -1));
   }
 }
 
@@ -271,7 +271,7 @@
 }
 .__loading-shapes-15:before {
   transform-origin: bottom right;
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-15-l15-0 {
   0%,
@@ -328,11 +328,11 @@
 }
 @keyframes __loading-shapes-16-l16 {
   33% {
-    inset: -var(--_a);
+    inset: calc(var(--_a) * -1);
     transform: rotate(0deg);
   }
   66% {
-    inset: -var(--_a);
+    inset: calc(var(--_a) * -1);
     transform: rotate(90deg);
   }
   100% {
@@ -363,22 +363,22 @@
   animation: sp7 var(--d) infinite;
 }
 .__loading-shapes-17::after {
-  --s: -1, -1;
+  --__s: -1, -1;
 }
 @keyframes sp7 {
   0%,
   10% {
-    transform: scale(var(--s, 1)) translate(0, 0) rotate(0deg);
+    transform: scale(var(--__s, 1)) translate(0, 0) rotate(0deg);
   }
   33% {
-    transform: scale(var(--s, 1)) translate(0, -var(--_b)) rotate(0deg);
+    transform: scale(var(--s, 1)) translate(0, calc(var(--_b) * -1)) rotate(0deg);
   }
   66% {
-    transform: scale(var(--s, 1)) translate(var(--_a), -var(--_b)) rotate(-90deg);
+    transform: scale(var(--s, 1)) translate(var(--_a), calc(var(--_b) * -1)) rotate(-90deg);
   }
   90%,
   100% {
-    transform: scale(var(--s, 1)) translate(var(--_a), -var(--_a)) rotate(-90deg);
+    transform: scale(var(--s, 1)) translate(var(--_a), calc(var(--_a) * -1)) rotate(-90deg);
   }
 }
 
@@ -412,11 +412,11 @@
 }
 @keyframes __loading-shapes-18-l18 {
   33% {
-    inset: -var(--_b);
+    inset: calc(var(--_b) * -1);
     transform: rotate(0deg);
   }
   66% {
-    inset: -var(--_b);
+    inset: calc(var(--_b) * -1);
     transform: rotate(90deg);
   }
   100% {
@@ -449,7 +449,7 @@
 }
 .__loading-shapes-19:before {
   left: 0;
-  --s: -1, 1;
+  --__s: -1, 1;
 }
 .__loading-shapes-19:after {
   right: 0;
@@ -475,7 +475,7 @@
   10%,
   90%,
   100% {
-    transform: scale(var(--s, 1)) translate(0);
+    transform: scale(var(--__s, 1)) translate(0);
   }
   30%,
   70% {
@@ -538,7 +538,7 @@
 .__loading-shapes-20:after {
   border-radius: 0 var(--_b) var(--_b) 0;
   transform-origin: 0% 100%;
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-20-l20-0 {
   0%,
@@ -565,7 +565,7 @@
     transform: rotate(calc(var(--s, 1) * -90deg)) translate(0, 0) rotate(0deg);
   }
   100% {
-    transform: rotate(calc(var(--s, 1) * -90deg)) translate(0, -var(--_a))
+    transform: rotate(calc(var(--s, 1) * -90deg)) translate(0, calc(var(--_a) * -1))
       rotate(calc(var(--s, 1) * -90deg));
   }
 }
@@ -593,11 +593,11 @@
 .__loading-shapes-21:after {
   transform-origin: bottom left;
   border-radius: 0 var(--_a) var(--_a) 0;
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-21-l21 {
   33% {
-    transform: translate(0, calc(var(--s, 1) * 50%)) rotate(0);
+    transform: translate(0, calc(var(--__s, 1) * 50%)) rotate(0);
   }
   66% {
     transform: translate(0, calc(var(--s, 1) * 50%)) rotate(-90deg);
@@ -636,7 +636,7 @@
 .__loading-shapes-22:after {
   inset: auto auto 0 100%;
   transform-origin: top left;
-  --s: -1;
+  --__s: -1;
   clip-path: polygon(0 0, 100% 100%, 0 100%);
 }
 @keyframes __loading-shapes-22-l22-0 {
@@ -655,7 +655,7 @@
 @keyframes __loading-shapes-22-l22-1 {
   0%,
   30% {
-    transform: rotate(calc(var(--s, 1) * 0));
+    transform: rotate(calc(var(--__s, 1) * 0));
   }
   70%,
   100% {
@@ -686,7 +686,12 @@
   height: 50%;
   background: currentColor;
   transform-origin: top left;
-  clip-path: polygon(-var(--_b) 0, 0 -var(--_a), 100% 100%, -var(--_b) 100%);
+  clip-path: polygon(
+    calc(var(--_b) * -1) 0,
+    0 calc(var(--_a) * -1),
+    100% 100%,
+    calc(var(--_b) * -1) 100%
+  );
   inset: auto auto 0 0;
   animation: __loading-shapes-23-l23-1 var(--d) infinite;
 }
@@ -735,7 +740,7 @@
 }
 .__loading-shapes-24:before {
   transform-origin: right;
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-24-l24 {
   0%,
@@ -780,11 +785,11 @@
 }
 @keyframes __loading-shapes-25-l25 {
   33% {
-    inset: -var(--_a);
+    inset: calc(var(--_a) * -1);
     transform: rotate(0deg);
   }
   66% {
-    inset: -var(--_a);
+    inset: calc(var(--_a) * -1);
     transform: rotate(180deg);
   }
   100% {
@@ -816,15 +821,15 @@
   animation: __loading-shapes-26-l26 var(--d) infinite;
 }
 .__loading-shapes-26::after {
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-26-l26 {
   0%,
   10% {
-    transform: translateY(calc(var(--s, 1) * 0));
+    transform: translateY(calc(var(--__s, 1) * 0));
     background-position:
-      0 calc(var(--s, 0) * -100%),
-      calc(var(--s, 0) * 100%) 50%;
+      0 calc(var(--__s, 0) * -100%),
+      calc(var(--__s, 0) * 100%) 50%;
   }
   33% {
     transform: translateY(calc(var(--s, 1) * -20%));
@@ -870,7 +875,7 @@
   animation: __loading-shapes-27-l27-1 var(--d) infinite;
 }
 .__loading-shapes-27:after {
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-27-l27-0 {
   0%,
@@ -887,12 +892,12 @@
 }
 @keyframes __loading-shapes-27-l27-1 {
   0% {
-    transform: rotate(calc(var(--s, 1) * 120deg)) translate(0);
+    transform: rotate(calc(var(--__s, 1) * 120deg)) translate(0);
   }
   30%,
   70% {
     transform: rotate(calc(var(--s, 1) * 120deg))
-      translate(calc(var(--s, 1) * -var(--_a)), var(--_b));
+      translate(calc(var(--s, 1) * calc(var(--_a) * -1)), var(--_b));
   }
   100% {
     transform: rotate(calc(var(--s, 1) * 120deg)) translate(0);
@@ -927,7 +932,7 @@
 .__loading-shapes-28:after {
   inset: auto auto 0 100%;
   transform-origin: top left;
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-28-l28-0 {
   0%,
@@ -945,7 +950,7 @@
 @keyframes __loading-shapes-28-l28-1 {
   0%,
   30% {
-    transform: rotate(calc(var(--s, 1) * 0));
+    transform: rotate(calc(var(--__s, 1) * 0));
   }
   70%,
   100% {
@@ -1047,11 +1052,11 @@
   }
   50% {
     clip-path: polygon(0 50%, 100% 0, 100% 100%);
-    transform: translate(-var(--_b));
+    transform: translate(calc(var(--_b) * -1));
   }
   75% {
     clip-path: polygon(0 100%, 0 0, 100% 100%);
-    transform: translate(-var(--_b));
+    transform: translate(calc(var(--_b) * -1));
   }
   100% {
     clip-path: polygon(0 100%, 0 0, 100% 100%);
@@ -1062,7 +1067,7 @@
   0%,
   25% {
     clip-path: polygon(0 0, 100% 50%, 0 100%);
-    transform: translate(-var(--_a));
+    transform: translate(calc(var(--_a) * -1));
   }
   50% {
     clip-path: polygon(0 0, 100% 50%, 0 100%);
@@ -1074,7 +1079,7 @@
   }
   100% {
     clip-path: polygon(0 0, 100% 0, 100% 100%);
-    transform: translate(-var(--_c));
+    transform: translate(calc(var(--_c) * -1));
   }
 }
 
@@ -1098,7 +1103,7 @@
 }
 .__loading-shapes-30:after {
   transform-origin: bottom right;
-  --s: 1;
+  --__s: 1;
 }
 @keyframes __loading-shapes-30-l30-0 {
   0%,
@@ -1113,7 +1118,7 @@
 @keyframes __loading-shapes-30-l30-1 {
   0%,
   10% {
-    transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 90deg));
+    transform: scaleX(calc(var(--__s, -1) * -1)) rotate(calc(var(--__s, 0) * 90deg));
     clip-path: polygon(0 0, 0 100%, 100% 100%);
   }
   33% {
@@ -1337,7 +1342,7 @@
 }
 .__loading-shapes-35:after {
   -webkit-mask: repeating-linear-gradient(#0000 0 var(--_a), var(--c2) 0 var(--_b));
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-35-l35 {
   0%,
@@ -1480,7 +1485,7 @@
 }
 @keyframes __loading-shapes-38-l38 {
   100% {
-    transform: translateY(-var(--_a));
+    transform: translateY(calc(var(--_a) * -1));
   }
 }
 
@@ -1521,7 +1526,7 @@
   }
   40%,
   60% {
-    inset: -var(--_a);
+    inset: calc(var(--_a) * -1);
   }
 }
 
@@ -1636,7 +1641,7 @@
   }
   40%,
   60% {
-    inset: -var(--_a);
+    inset: calc(var(--_a) * -1);
   }
 }
 @keyframes __loading-shapes-40-l40-2 {
@@ -1718,7 +1723,7 @@
     __loading-shapes-6-l6-2 var(--d) infinite linear;
 }
 .__loading-shapes-6:after {
-  --s: -1;
+  --__s: -1;
   animation-direction: reverse;
 }
 @keyframes __loading-shapes-6-l6-0 {
@@ -1748,7 +1753,7 @@
   10%,
   90%,
   100% {
-    transform: scale(var(--s, 1)) translateY(0);
+    transform: scale(var(--__s, 1)) translateY(0);
   }
   33%,
   66% {
@@ -1783,11 +1788,11 @@
 }
 @keyframes __loading-shapes-7-l7 {
   33% {
-    inset: -var(--_a);
+    inset: calc(var(--_a) * -1);
     transform: rotate(0deg);
   }
   66% {
-    inset: -var(--_a);
+    inset: calc(var(--_a) * -1);
     transform: rotate(90deg);
   }
   100% {
@@ -1818,7 +1823,7 @@
   animation-name: __loading-shapes-8-l8-1;
 }
 .__loading-shapes-8:after {
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-8-l8-0 {
   66% {
@@ -1831,7 +1836,7 @@
 }
 @keyframes __loading-shapes-8-l8-1 {
   0% {
-    transform: scale(var(--s, 1)) translate(-var(--_a), 0);
+    transform: scale(var(--__s, 1)) translate(calc(var(--_a) * -1), 0);
   }
   33% {
     transform: scale(var(--s, 1)) translate(calc(var(--_b) - 50%), calc(var(--_b) - 50%));
@@ -1869,7 +1874,7 @@
 .__loading-shapes-9:before {
   left: 0;
   transform-origin: bottom left;
-  --s: -1;
+  --__s: -1;
 }
 .__loading-shapes-9:after {
   right: 0;

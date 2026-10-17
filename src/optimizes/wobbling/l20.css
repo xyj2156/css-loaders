@@ -38,7 +38,7 @@
 .__loading-wobbling-20::before {
   background: var(--c6);
   filter: blur(var(--_b));
-  transform: scaleY(0.4) translate(-var(--_d), 0px);
+  transform: scaleY(0.4) translate(calc(var(--_d) * -1), 0px);
 }
 @keyframes __loading-wobbling-20-l20 {
   30%,

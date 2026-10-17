@@ -26,7 +26,7 @@
 .__loading-shapes-22:after {
   inset: auto auto 0 100%;
   transform-origin: top left;
-  --s: -1;
+  --__s: -1;
   clip-path: polygon(0 0, 100% 100%, 0 100%);
 }
 @keyframes __loading-shapes-22-l22-0 {
@@ -45,7 +45,7 @@
 @keyframes __loading-shapes-22-l22-1 {
   0%,
   30% {
-    transform: rotate(calc(var(--s, 1) * 0));
+    transform: rotate(calc(var(--__s, 1) * 0));
   }
   70%,
   100% {

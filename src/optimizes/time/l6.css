@@ -32,7 +32,7 @@
 .__loading-time-6:after {
   content: '';
   position: absolute;
-  inset: -var(--_b) -var(--_c) auto;
+  inset: calc(var(--_b) * -1) calc(var(--_c) * -1) auto;
   height: var(--_d);
   background:
     radial-gradient(farthest-side, currentColor 94%, #0000) left,

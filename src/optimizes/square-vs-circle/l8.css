@@ -22,7 +22,7 @@
 }
 .__loading-square-vs-circle-8:after {
   margin: 0 0 0 auto;
-  filter: drop-shadow(-var(--_c) var(--_c) 0 var(--c1));
+  filter: drop-shadow(calc(var(--_c) * -1) var(--_c) 0 var(--c1));
   animation-delay: -1s;
 }
 @keyframes __loading-square-vs-circle-8-l8 {

@@ -27,7 +27,7 @@
   content: '';
   position: absolute;
   border-radius: var(--_d) var(--_d) 0 0;
-  inset: -var(--_d) calc(50% - var(--_c));
+  inset: calc(var(--_d) * -1) calc(50% - var(--_c));
   transform: rotate(40deg);
   background:
     linear-gradient(currentColor 0 0) top / 100% var(--_c),
@@ -46,10 +46,10 @@
   75%,
   85%,
   95% {
-    transform: translateY(-var(--_a)) rotate(10deg);
+    transform: translateY(calc(var(--_a) * -1)) rotate(10deg);
   }
   80%,
   90% {
-    transform: translateY(-var(--_a)) rotate(-10deg);
+    transform: translateY(calc(var(--_a) * -1)) rotate(-10deg);
   }
 }

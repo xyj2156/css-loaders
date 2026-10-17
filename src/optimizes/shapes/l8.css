@@ -20,7 +20,7 @@
   animation-name: __loading-shapes-8-l8-1;
 }
 .__loading-shapes-8:after {
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-8-l8-0 {
   66% {
@@ -33,7 +33,7 @@
 }
 @keyframes __loading-shapes-8-l8-1 {
   0% {
-    transform: scale(var(--s, 1)) translate(-var(--_a), 0);
+    transform: scale(var(--__s, 1)) translate(calc(var(--_a) * -1), 0);
   }
   33% {
     transform: scale(var(--s, 1)) translate(calc(var(--_b) - 50%), calc(var(--_b) - 50%));

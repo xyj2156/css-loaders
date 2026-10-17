@@ -42,6 +42,6 @@
 }
 @keyframes __loading-shapes-14-l14 {
   100% {
-    transform: translate(-var(--_a), -var(--_a));
+    transform: translate(calc(var(--_a) * -1), calc(var(--_a) * -1));
   }
 }

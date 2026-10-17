@@ -4,14 +4,15 @@
   --c1: var(--color-1, #269af2);
   --c2: var(--color-2, #ccc);
   --__a: 154%;
+  --__b: 68.5%;
 
   width: var(--s);
   aspect-ratio: 1;
   border-radius: 50%;
   background:
-    radial-gradient(var(--__a) var(--r2) at top, #0000 79.5%, var(--c1) 80%),
-    radial-gradient(var(--__a) var(--r2) at bottom, var(--c1) 79.5%, #0000 80%),
-    radial-gradient(var(--__a) var(--r2) at top, #0000 79.5%, var(--c1) 80%), var(--c2);
+    radial-gradient(var(--__a) var(--__b) at top, #0000 79.5%, var(--c1) 80%),
+    radial-gradient(var(--__a) var(--__b) at bottom, var(--c1) 79.5%, #0000 80%),
+    radial-gradient(var(--__a) var(--__b) at top, #0000 79.5%, var(--c1) 80%), var(--c2);
   background-size: 50.5% 220%;
   background-position:
     -100% 0%,

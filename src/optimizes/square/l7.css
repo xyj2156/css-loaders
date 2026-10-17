@@ -1,4 +1,4 @@
-.__loading-square-7 {
+﻿.__loading-square-7 {
   --s: var(--size, 55px);
   --d: var(--duration, 1.5s);
   --c1: var(--color-1, #fff);
@@ -6,10 +6,11 @@
   --_b: calc(var(--s) * 22 / 55);
   --_c: calc(var(--s) * 25 / 55);
   --__a: conic-gradient(from 90deg at 3px 3px, #0000 90deg, var(--c1) 0);
+  --__b: conic-gradient(from -90deg at var(--_b) var(--_b), #0000 90deg, var(--c1) 0);
 
   width: var(--s);
   aspect-ratio: 1;
-  background: var(--__a), var(--__a), var(--__a), var(--g2), var(--g2), var(--g2);
+  background: var(--__a), var(--__a), var(--__a), var(--__b), var(--__b), var(--__b);
   background-size: var(--_c) var(--_c);
   background-repeat: no-repeat;
   animation: __loading-square-7-l7 var(--d) infinite;

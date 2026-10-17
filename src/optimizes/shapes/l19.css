@@ -22,7 +22,7 @@
 }
 .__loading-shapes-19:before {
   left: 0;
-  --s: -1, 1;
+  --__s: -1, 1;
 }
 .__loading-shapes-19:after {
   right: 0;
@@ -48,7 +48,7 @@
   10%,
   90%,
   100% {
-    transform: scale(var(--s, 1)) translate(0);
+    transform: scale(var(--__s, 1)) translate(0);
   }
   30%,
   70% {

@@ -28,13 +28,13 @@
       var(--_e),
     linear-gradient(var(--c1) 0 0) bottom/var(--_g) var(--_f);
   background-repeat: no-repeat;
-  transform-origin: 50% -var(--_a);
+  transform-origin: 50% calc(var(--_a) * -1);
   animation: __loading-time-10-l10-1 var(--d) infinite alternate linear;
 }
 .__loading-time-10::before {
   content: '';
   position: absolute;
-  inset: -var(--_b) calc(50% - var(--_c)) -var(--_c);
+  inset: calc(var(--_b) * -1) calc(50% - var(--_c)) calc(var(--_c) * -1);
   background:
     radial-gradient(farthest-side, var(--c2) 90%, #0000) top / var(--_c) var(--_c),
     radial-gradient(farthest-side, var(--c2) 90%, #0000) bottom/var(--_e) var(--_e);

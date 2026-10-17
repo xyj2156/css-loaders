@@ -1,4 +1,4 @@
-.__loading-square-9 {
+﻿.__loading-square-9 {
   --s: var(--size, 85px);
   --d: var(--duration, 1s);
   --c1: var(--color-1, #fff);
@@ -6,10 +6,11 @@
   --_b: calc(var(--s) * 25 / 85);
   --_c: calc(var(--s) * 50 / 85);
   --__a: conic-gradient(from 90deg at left 3px top 3px, #0000 90deg, var(--c1) 0);
+  --__b: conic-gradient(from -90deg at bottom var(--_a) right var(--_a), #0000 90deg, var(--c1) 0);
 
   width: var(--s);
   height: var(--_c);
-  background: var(--__a), var(--__a), var(--__a), var(--g2), var(--g2), var(--g2);
+  background: var(--__a), var(--__a), var(--__a), var(--__b), var(--__b), var(--__b);
   background-position: left, center, right;
   background-repeat: no-repeat;
   animation: __loading-square-9-l9 var(--d) infinite;

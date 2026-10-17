@@ -19,7 +19,7 @@
   animation-delay: -1s, 0s;
 }
 .__loading-square-vs-circle-3:after {
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-square-vs-circle-3-l3-1 {
   0% {
@@ -40,7 +40,7 @@
 }
 @keyframes __loading-square-vs-circle-3-l3-2 {
   0% {
-    transform: scaleX(var(--s, 1)) rotate(0deg);
+    transform: scaleX(var(--__s, 1)) rotate(0deg);
   }
   100% {
     transform: scaleX(var(--s, 1)) rotate(-360deg);

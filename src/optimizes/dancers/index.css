@@ -447,9 +447,9 @@
 
   --_a: calc(var(--s) * 1);
   --_b: calc(var(--s) * 1 / 2);
-  --__a: 1;
+  --__a: -1;
 
-  width: var(--__a);
+  width: var(--s);
   height: var(--_b);
   display: flex;
   animation: __loading-dancers-9-l9-0 var(--d1) infinite;

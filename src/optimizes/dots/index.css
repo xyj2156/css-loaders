@@ -1124,8 +1124,6 @@
   --c1: var(--color-1, #000);
   --c2: var(--color-2, #0000);
 
-  --_a: calc(var(--s) / 3);
-  --_b: calc(var(--s) / 2);
   --__a: no-repeat radial-gradient(circle closest-side, var(--c1) 90%, var(--c2));
 
   width: var(--s);
@@ -1134,7 +1132,7 @@
     var(--__a) 0% 50%,
     var(--__a) 50% 50%,
     var(--__a) 100% 50%;
-  background-size: var(--__a) 50%;
+  background-size: calc(100% / 3) 50%;
   animation: __loading-dots-3-l3 var(--d1) infinite linear;
 }
 @keyframes __loading-dots-3-l3 {
@@ -1586,9 +1584,9 @@
   width: var(--s);
   aspect-ratio: 4;
   background:
-    radial-gradient(circle closest-side at left var(--__a) top 50%, var(--__a)),
+    radial-gradient(circle closest-side at left var(--_a) top 50%, var(--__a)),
     radial-gradient(circle closest-side, var(--__a)),
-    radial-gradient(circle closest-side at right var(--__a) top 50%, var(--__a));
+    radial-gradient(circle closest-side at right var(--_a) top 50%, var(--__a));
   background-size: 100% 100%;
   background-repeat: no-repeat;
   animation: __loading-dots-4-l4 var(--d1) infinite alternate;

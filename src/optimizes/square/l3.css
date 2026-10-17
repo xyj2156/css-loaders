@@ -19,7 +19,7 @@
   box-shadow: 0 0 0 var(--_b) inset var(--c1);
 }
 .__loading-square-3:after {
-  transform-origin: -var(--_a) calc(100% + var(--_a));
+  transform-origin: calc(var(--_a) * -1) calc(100% + var(--_a));
   animation: __loading-square-3-l3-1 var(--d) infinite;
 }
 @keyframes __loading-square-3-l3-1 {

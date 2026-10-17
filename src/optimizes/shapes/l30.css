@@ -18,7 +18,7 @@
 }
 .__loading-shapes-30:after {
   transform-origin: bottom right;
-  --s: 1;
+  --__s: 1;
 }
 @keyframes __loading-shapes-30-l30-0 {
   0%,
@@ -33,7 +33,7 @@
 @keyframes __loading-shapes-30-l30-1 {
   0%,
   10% {
-    transform: scaleX(calc(var(--s, -1) * -1)) rotate(calc(var(--s, 0) * 90deg));
+    transform: scaleX(calc(var(--__s, -1) * -1)) rotate(calc(var(--__s, 0) * 90deg));
     clip-path: polygon(0 0, 0 100%, 100% 100%);
   }
   33% {

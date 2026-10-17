@@ -34,7 +34,7 @@
   height: var(--_b);
   border-radius: 50%;
   background: var(--c2);
-  transform-origin: 50% -var(--_c);
+  transform-origin: 50% calc(var(--_c) * -1);
   animation: __loading-wobbling-16-l16-1 var(--d1) infinite linear alternate;
 }
 @keyframes __loading-wobbling-16-l16-0 {

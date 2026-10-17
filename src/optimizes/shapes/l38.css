@@ -52,6 +52,6 @@
 }
 @keyframes __loading-shapes-38-l38 {
   100% {
-    transform: translateY(-var(--_a));
+    transform: translateY(calc(var(--_a) * -1));
   }
 }

@@ -17,21 +17,21 @@
   animation: __loading-square-4-l4 var(--d) infinite;
 }
 .__loading-square-4:after {
-  --s: -1;
+  --__dir: -1;
   animation-delay: 0.75s;
 }
 @keyframes __loading-square-4-l4 {
   0% {
-    transform: scaleX(var(--s, 1)) translate(0) rotate(0);
+    transform: scaleX(var(--__dir, 1)) translate(0) rotate(0);
   }
   16.67% {
-    transform: scaleX(var(--s, 1)) translate(-50%) rotate(0);
+    transform: scaleX(var(--__dir, 1)) translate(-50%) rotate(0);
   }
   33.33% {
-    transform: scaleX(var(--s, 1)) translate(-50%) rotate(90deg);
+    transform: scaleX(var(--__dir, 1)) translate(-50%) rotate(90deg);
   }
   50%,
   100% {
-    transform: scaleX(var(--s, 1)) translate(0) rotate(90deg);
+    transform: scaleX(var(--__dir, 1)) translate(0) rotate(90deg);
   }
 }

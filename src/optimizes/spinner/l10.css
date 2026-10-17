@@ -14,10 +14,8 @@
   border-radius: 50%;
   display: grid;
   background:
-    conic-gradient(from 90deg at var(--_b) var(--_b), #0000 90deg, currentColor 0) -var(--_b) -var(
-        --_b
-      ) /
-      calc(50% + var(--_a)) calc(50% + var(--_a)),
+    conic-gradient(from 90deg at var(--_b) var(--_b), #0000 90deg, currentColor 0)
+      calc(var(--_b) * -1) -var(--_b) / calc(50% + var(--_a)) calc(50% + var(--_a)),
     radial-gradient(
         farthest-side,
         currentColor var(--_d),

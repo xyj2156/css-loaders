@@ -21,11 +21,11 @@
 .__loading-shapes-21:after {
   transform-origin: bottom left;
   border-radius: 0 var(--_a) var(--_a) 0;
-  --s: -1;
+  --__s: -1;
 }
 @keyframes __loading-shapes-21-l21 {
   33% {
-    transform: translate(0, calc(var(--s, 1) * 50%)) rotate(0);
+    transform: translate(0, calc(var(--__s, 1) * 50%)) rotate(0);
   }
   66% {
     transform: translate(0, calc(var(--s, 1) * 50%)) rotate(-90deg);

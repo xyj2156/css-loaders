@@ -20,21 +20,21 @@
   animation: sp7 var(--d) infinite;
 }
 .__loading-shapes-17::after {
-  --s: -1, -1;
+  --__s: -1, -1;
 }
 @keyframes sp7 {
   0%,
   10% {
-    transform: scale(var(--s, 1)) translate(0, 0) rotate(0deg);
+    transform: scale(var(--__s, 1)) translate(0, 0) rotate(0deg);
   }
   33% {
-    transform: scale(var(--s, 1)) translate(0, -var(--_b)) rotate(0deg);
+    transform: scale(var(--s, 1)) translate(0, calc(var(--_b) * -1)) rotate(0deg);
   }
   66% {
-    transform: scale(var(--s, 1)) translate(var(--_a), -var(--_b)) rotate(-90deg);
+    transform: scale(var(--s, 1)) translate(var(--_a), calc(var(--_b) * -1)) rotate(-90deg);
   }
   90%,
   100% {
-    transform: scale(var(--s, 1)) translate(var(--_a), -var(--_a)) rotate(-90deg);
+    transform: scale(var(--s, 1)) translate(var(--_a), calc(var(--_a) * -1)) rotate(-90deg);
   }
 }

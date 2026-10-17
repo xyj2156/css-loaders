@@ -19,7 +19,7 @@
 }
 .__loading-clones-4::after {
   background: #60b99a;
-  --s: 60deg;
+  --__s: 60deg;
 }
 @keyframes __loading-clones-4-l4-0 {
   0%,
@@ -32,7 +32,7 @@
 }
 @keyframes __loading-clones-4-l4-1 {
   50% {
-    transform: rotate(var(--s, 30deg));
+    transform: rotate(var(--__s, 30deg));
   }
   100% {
     transform: rotate(0);

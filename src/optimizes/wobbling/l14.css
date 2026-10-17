@@ -28,7 +28,7 @@
   margin: auto;
   border-radius: 50%;
   background: orange;
-  transform-origin: 50% -var(--_a);
+  transform-origin: 50% calc(var(--_a) * -1);
   animation: __loading-wobbling-14-l14 var(--d) infinite cubic-bezier(0.5, 623, 0.5, -623);
 }
 @keyframes __loading-wobbling-14-l14 {

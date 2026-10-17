@@ -38,7 +38,7 @@
 }
 @keyframes __loading-wobbling-11-l11-1 {
   100% {
-    top: -var(--_b);
+    top: calc(var(--_b) * -1);
   }
 }
 @keyframes __loading-wobbling-11-l11-2 {
@@ -49,6 +49,6 @@
 }
 @keyframes __loading-wobbling-11-l11-3 {
   100% {
-    transform: scaleY(0.3) translate(var(--_a), -var(--_a));
+    transform: scaleY(0.3) translate(var(--_a), calc(var(--_a) * -1));
   }
 }
