@@ -22,13 +22,13 @@
   "author": "xyj2156",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@types/node": "^24.10.1"
+    "@types/node": "^24.19.2"
   },
   "dependencies": {
-    "axios": "^1.13.2",
+    "axios": "^1.20.0",
     "clean-css": "^5.3.3",
-    "node-html-parser": "^7.0.1",
-    "openai": "^6.9.1",
-    "prettier": "^3.6.2"
+    "node-html-parser": "^7.1.0",
+    "openai": "^6.49.0",
+    "prettier": "^3.9.10"
   }
 }
