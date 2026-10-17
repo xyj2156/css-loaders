@@ -1,34 +1,16 @@
 {
-  "name": "@xyj2156/css-loading",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/all.min.css",
-  "exports": {
-    ".": "./dist/all.min.css",
-    "./style/*": "./src/optimizes/*",
-    "./raw/*": "./src/styles/*",
-    "./*": "./dist/*"
-  },
+  "name": "css-loaders-monorepo",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
+  "description": "CSS loaders monorepo: core css + vue/react adapters + playground",
   "scripts": {
-    "build": "node src/main.js && prettier --write ./src/optimizes",
-    "collect": "node src/collector.js -f && prettier --write ./src/styles",
-    "dev": "node src/collector.js && prettier --write ./src/styles",
-    "format": "prettier --write",
-    "ai-code": "node src/ai-coding.js",
-    "preview": "node src/preview.js"
+    "build:css": "pnpm -F @xyj2156/css-loading build",
+    "dev:css": "pnpm -F @xyj2156/css-loading dev",
+    "preview:css": "pnpm -F @xyj2156/css-loading preview",
+    "build": "pnpm -r --filter \"./packages/*\" run build"
   },
-  "keywords": [],
-  "author": "xyj2156",
-  "license": "Apache-2.0",
   "devDependencies": {
     "@types/node": "^24.19.2"
-  },
-  "dependencies": {
-    "axios": "^1.20.0",
-    "clean-css": "^5.3.3",
-    "node-html-parser": "^7.1.0",
-    "openai": "^6.49.0",
-    "prettier": "^3.9.10"
   }
 }

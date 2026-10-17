@@ -1,0 +1,39 @@
+{
+  "name": "@xyj2156/css-loading",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/all.min.css",
+  "exports": {
+    ".": "./dist/all.min.css",
+    "./style/*": "./src/optimizes/*",
+    "./raw/*": "./src/styles/*",
+    "./*": "./dist/*"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "src/styles",
+    "src/optimizes"
+  ],
+  "scripts": {
+    "build": "node src/main.js",
+    "collect": "node src/collector.js -f",
+    "dev": "node src/collector.js",
+    "format": "prettier --write",
+    "ai-code": "node src/ai-coding.js",
+    "preview": "node src/preview.js"
+  },
+  "keywords": [],
+  "author": "xyj2156",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "prettier": "^3.9.10"
+  },
+  "dependencies": {
+    "axios": "^1.20.0",
+    "clean-css": "^5.3.3",
+    "node-html-parser": "^7.1.0",
+    "openai": "^6.49.0"
+  }
+}
