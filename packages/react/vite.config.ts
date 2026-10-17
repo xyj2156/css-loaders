@@ -5,18 +5,18 @@ import { resolve } from 'node:path';
 export default defineConfig({
   plugins: [react()],
   build: {
+    target: 'es2020',
     lib: {
       entry: resolve(import.meta.dirname, 'src/index.ts'),
-      name: 'ReactLoading',
-      fileName: 'react-loading',
+      formats: ['es'],
     },
     rollupOptions: {
-      external: ['react', 'react-dom', '@xyj2156/css-loading'],
+      external: ['react', 'react-dom', /\.css$/],
       output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
+        preserveModules: true,
+        preserveModulesRoot: 'src',
+        entryFileNames: '[name].js',
+        assetFileNames: '[name][extname]',
       },
     },
   },
