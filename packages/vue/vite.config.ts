@@ -5,17 +5,18 @@ import { resolve } from 'node:path';
 export default defineConfig({
   plugins: [vue()],
   build: {
+    target: 'es2020',
     lib: {
       entry: resolve(import.meta.dirname, 'src/index.ts'),
-      name: 'VueLoading',
-      fileName: 'vue-loading',
+      formats: ['es'],
     },
     rollupOptions: {
-      external: ['vue', '@xyj2156/css-loading'],
+      external: ['vue', /\.css$/],
       output: {
-        globals: {
-          vue: 'Vue',
-        },
+        preserveModules: true,
+        preserveModulesRoot: 'src',
+        entryFileNames: '[name].js',
+        assetFileNames: '[name][extname]',
       },
     },
   },

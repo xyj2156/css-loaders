@@ -3,20 +3,18 @@
   "version": "0.1.0",
   "description": "Vue components for @xyj2156/css-loading",
   "type": "module",
-  "main": "./dist/vue-loading.umd.cjs",
-  "module": "./dist/vue-loading.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/vue-loading.js",
-      "require": "./dist/vue-loading.umd.cjs"
-    }
+    ".": "./dist/index.js"
   },
   "files": [
     "dist"
   ],
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css"
+  ],
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
     "dev": "vite build --watch"
