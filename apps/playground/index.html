@@ -77,25 +77,25 @@
     h2 .count { color: var(--text-dim); font-weight: 400; font-size: 12px; margin-left: 6px; }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 12px;
     }
     .cell {
       background: var(--bg-elev);
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 12px;
+      padding: 16px;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       gap: 10px;
-      min-height: 90px;
+      min-height: 120px;
       transition: border-color .15s;
     }
     .stage {
-      width: 120px; height: 60px;
+      width: 190px; height: 80px;
       display: flex; align-items: center; justify-content: center;
       overflow: hidden;
-      --size: 20px;
+      --size: 24px;
     }
     .cell:hover { border-color: var(--accent); }
     .name { font-size: 10px; color: var(--text-dim); font-family: ui-monospace, monospace; }
