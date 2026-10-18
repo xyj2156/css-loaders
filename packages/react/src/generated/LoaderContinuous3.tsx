@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/continuous/l3.css';
+import '@x-ac/css-loading/style/continuous/l3.css';
 
 /** 自动生成：__loading-continuous-3 */
 export function LoaderContinuous3(props: { className?: string; style?: React.CSSProperties }) {

@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/time/l1.css';
+import '@x-ac/css-loading/style/time/l1.css';
 
 /** 自动生成：__loading-time-1 */
 export function LoaderTime1(props: { className?: string; style?: React.CSSProperties }) {

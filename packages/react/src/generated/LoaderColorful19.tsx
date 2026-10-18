@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/colorful/l19.css';
+import '@x-ac/css-loading/style/colorful/l19.css';
 
 /** 自动生成：__loading-colorful-19 */
 export function LoaderColorful19(props: { className?: string; style?: React.CSSProperties }) {

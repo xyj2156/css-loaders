@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/bouncing/l9.css';
+import '@x-ac/css-loading/style/bouncing/l9.css';
 
 /** 自动生成：__loading-bouncing-9 */
 export function LoaderBouncing9(props: { className?: string; style?: React.CSSProperties }) {

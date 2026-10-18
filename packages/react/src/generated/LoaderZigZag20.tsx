@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/zig-zag/l20.css';
+import '@x-ac/css-loading/style/zig-zag/l20.css';
 
 /** 自动生成：__loading-zig-zag-20 */
 export function LoaderZigZag20(props: { className?: string; style?: React.CSSProperties }) {

@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/dots-vs-bars/l6.css';
+import '@x-ac/css-loading/style/dots-vs-bars/l6.css';
 
 /** 自动生成：__loading-dots-vs-bars-6 */
 export function LoaderDotsVsBars6(props: { className?: string; style?: React.CSSProperties }) {

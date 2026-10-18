@@ -1,5 +1,5 @@
 import { require_jsx_runtime as e } from "../node_modules/.pnpm/react@19.3.1/node_modules/react/jsx-runtime.js";
-import "@xyj2156/css-loading/style/moving/l5.css";
+import "@x-ac/css-loading/style/moving/l5.css";
 //#region src/generated/LoaderMoving5.tsx
 var t = e();
 function n(e) {

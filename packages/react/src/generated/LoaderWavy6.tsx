@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/wavy/l6.css';
+import '@x-ac/css-loading/style/wavy/l6.css';
 
 /** 自动生成：__loading-wavy-6 */
 export function LoaderWavy6(props: { className?: string; style?: React.CSSProperties }) {

@@ -1,5 +1,5 @@
 import { createElementBlock as e, defineComponent as t, normalizeClass as n, openBlock as r } from "vue";
-import "@xyj2156/css-loading/style/wobbling/l6.css";
+import "@x-ac/css-loading/style/wobbling/l6.css";
 //#region src/generated/LoaderWobbling6.vue?vue&type=script&setup=true&lang.ts
 var i = { class: /*@__PURE__*/ n("__loading-wobbling-6") }, a = /*@__PURE__*/ t({
 	__name: "LoaderWobbling6",

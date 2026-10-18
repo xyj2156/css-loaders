@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/moving/l5.css';
+import '@x-ac/css-loading/style/moving/l5.css';
 
 /** 自动生成：__loading-moving-5 */
 export function LoaderMoving5(props: { className?: string; style?: React.CSSProperties }) {

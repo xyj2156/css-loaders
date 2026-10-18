@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/dots/l50.css';
+import '@x-ac/css-loading/style/dots/l50.css';
 
 /** 自动生成：__loading-dots-50 */
 export function LoaderDots50(props: { className?: string; style?: React.CSSProperties }) {

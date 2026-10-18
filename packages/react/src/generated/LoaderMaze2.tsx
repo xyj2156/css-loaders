@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/maze/l2.css';
+import '@x-ac/css-loading/style/maze/l2.css';
 
 /** 自动生成：__loading-maze-2 */
 export function LoaderMaze2(props: { className?: string; style?: React.CSSProperties }) {

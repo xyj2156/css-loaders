@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/circle/l2.css';
+import '@x-ac/css-loading/style/circle/l2.css';
 
 /** 自动生成：__loading-circle-2 */
 export function LoaderCircle2(props: { className?: string; style?: React.CSSProperties }) {

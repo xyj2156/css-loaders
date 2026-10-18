@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/wobbling/l16.css';
+import '@x-ac/css-loading/style/wobbling/l16.css';
 
 /** 自动生成：__loading-wobbling-16 */
 export function LoaderWobbling16(props: { className?: string; style?: React.CSSProperties }) {

@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import '@xyj2156/css-loading/style/spinner/l27.css';
+import '@x-ac/css-loading/style/spinner/l27.css';
 </script>

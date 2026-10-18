@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/thin/l1.css';
+import '@x-ac/css-loading/style/thin/l1.css';
 
 /** 自动生成：__loading-thin-1 */
 export function LoaderThin1(props: { className?: string; style?: React.CSSProperties }) {

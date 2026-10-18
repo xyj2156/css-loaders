@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/nature/l15.css';
+import '@x-ac/css-loading/style/nature/l15.css';
 
 /** 自动生成：__loading-nature-15 */
 export function LoaderNature15(props: { className?: string; style?: React.CSSProperties }) {

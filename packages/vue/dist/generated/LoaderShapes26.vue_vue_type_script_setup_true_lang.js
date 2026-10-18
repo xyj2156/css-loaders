@@ -1,5 +1,5 @@
 import { createElementBlock as e, defineComponent as t, normalizeClass as n, openBlock as r } from "vue";
-import "@xyj2156/css-loading/style/shapes/l26.css";
+import "@x-ac/css-loading/style/shapes/l26.css";
 //#region src/generated/LoaderShapes26.vue?vue&type=script&setup=true&lang.ts
 var i = { class: /*@__PURE__*/ n("__loading-shapes-26") }, a = /*@__PURE__*/ t({
 	__name: "LoaderShapes26",

@@ -42,8 +42,13 @@ const lines = [];
 for (const kind of kinds) {
   for (const cls of index[kind]) {
     const variant = Number(cls.match(/(\d+)$/)[1]);
+    const cssFile = path.resolve(pkgRoot, `../css/src/optimizes/${kind}/l${variant}.css`);
+    if (!fs.existsSync(cssFile)) {
+      console.warn(`跳过 ${cls}: ${kind}/l${variant}.css 不存在`);
+      continue;
+    }
     const compName = `Loader${pascal(kind)}${variant}`;
-    const tsx = `import '@xyj2156/css-loading/style/${kind}/l${variant}.css';
+    const tsx = `import '@x-ac/css-loading/style/${kind}/l${variant}.css';
 
 /** 自动生成：${cls} */
 export function ${compName}(props: { className?: string; style?: React.CSSProperties }) {

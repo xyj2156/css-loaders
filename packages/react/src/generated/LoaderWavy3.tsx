@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/wavy/l3.css';
+import '@x-ac/css-loading/style/wavy/l3.css';
 
 /** 自动生成：__loading-wavy-3 */
 export function LoaderWavy3(props: { className?: string; style?: React.CSSProperties }) {

@@ -46,13 +46,19 @@ for (const kind of kinds) {
   for (const cls of index[kind]) {
     // cls 形如 __loading-line-1
     const variant = Number(cls.match(/(\d+)$/)[1]);
+    // 检查对应 css 文件是否存在，index.json 可能和实际文件不同步
+    const cssFile = path.resolve(pkgRoot, `../css/src/optimizes/${kind}/l${variant}.css`);
+    if (!fs.existsSync(cssFile)) {
+      console.warn(`跳过 ${cls}: ${kind}/l${variant}.css 不存在`);
+      continue;
+    }
     const compName = `Loader${pascal(kind)}${variant}`;
     const vueSrc = `<template>
   <div :class="'${cls}'" />
 </template>
 
 <script setup lang="ts">
-import '@xyj2156/css-loading/style/${kind}/l${variant}.css';
+import '@x-ac/css-loading/style/${kind}/l${variant}.css';
 </script>
 `;
     fs.writeFileSync(path.join(outDir, `${compName}.vue`), vueSrc);

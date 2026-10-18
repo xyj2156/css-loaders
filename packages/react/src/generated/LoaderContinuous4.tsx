@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/continuous/l4.css';
+import '@x-ac/css-loading/style/continuous/l4.css';
 
 /** 自动生成：__loading-continuous-4 */
 export function LoaderContinuous4(props: { className?: string; style?: React.CSSProperties }) {

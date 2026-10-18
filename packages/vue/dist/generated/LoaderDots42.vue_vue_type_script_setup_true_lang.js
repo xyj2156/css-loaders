@@ -1,5 +1,5 @@
 import { createElementBlock as e, defineComponent as t, normalizeClass as n, openBlock as r } from "vue";
-import "@xyj2156/css-loading/style/dots/l42.css";
+import "@x-ac/css-loading/style/dots/l42.css";
 //#region src/generated/LoaderDots42.vue?vue&type=script&setup=true&lang.ts
 var i = { class: /*@__PURE__*/ n("__loading-dots-42") }, a = /*@__PURE__*/ t({
 	__name: "LoaderDots42",

@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import '@xyj2156/css-loading/style/glowing/l2.css';
+import '@x-ac/css-loading/style/glowing/l2.css';
 </script>

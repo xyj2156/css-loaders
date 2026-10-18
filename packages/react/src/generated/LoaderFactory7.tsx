@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/factory/l7.css';
+import '@x-ac/css-loading/style/factory/l7.css';
 
 /** 自动生成：__loading-factory-7 */
 export function LoaderFactory7(props: { className?: string; style?: React.CSSProperties }) {

@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/maze/l8.css';
+import '@x-ac/css-loading/style/maze/l8.css';
 
 /** 自动生成：__loading-maze-8 */
 export function LoaderMaze8(props: { className?: string; style?: React.CSSProperties }) {

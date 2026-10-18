@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/classic/l37.css';
+import '@x-ac/css-loading/style/classic/l37.css';
 
 /** 自动生成：__loading-classic-37 */
 export function LoaderClassic37(props: { className?: string; style?: React.CSSProperties }) {

@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/filling/l4.css';
+import '@x-ac/css-loading/style/filling/l4.css';
 
 /** 自动生成：__loading-filling-4 */
 export function LoaderFilling4(props: { className?: string; style?: React.CSSProperties }) {

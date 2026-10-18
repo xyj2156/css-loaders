@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/glowing/l1.css';
+import '@x-ac/css-loading/style/glowing/l1.css';
 
 /** 自动生成：__loading-glowing-1 */
 export function LoaderGlowing1(props: { className?: string; style?: React.CSSProperties }) {

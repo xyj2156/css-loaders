@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/polygons/l1.css';
+import '@x-ac/css-loading/style/polygons/l1.css';
 
 /** 自动生成：__loading-polygons-1 */
 export function LoaderPolygons1(props: { className?: string; style?: React.CSSProperties }) {

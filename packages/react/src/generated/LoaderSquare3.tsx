@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/square/l3.css';
+import '@x-ac/css-loading/style/square/l3.css';
 
 /** 自动生成：__loading-square-3 */
 export function LoaderSquare3(props: { className?: string; style?: React.CSSProperties }) {

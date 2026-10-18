@@ -1,5 +1,5 @@
 import { require_jsx_runtime as e } from "../node_modules/.pnpm/react@19.3.1/node_modules/react/jsx-runtime.js";
-import "@xyj2156/css-loading/style/factory/l4.css";
+import "@x-ac/css-loading/style/factory/l4.css";
 //#region src/generated/LoaderFactory4.tsx
 var t = e();
 function n(e) {

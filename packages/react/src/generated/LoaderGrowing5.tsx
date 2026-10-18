@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/growing/l5.css';
+import '@x-ac/css-loading/style/growing/l5.css';
 
 /** 自动生成：__loading-growing-5 */
 export function LoaderGrowing5(props: { className?: string; style?: React.CSSProperties }) {

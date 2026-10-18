@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/bouncing/l5.css';
+import '@x-ac/css-loading/style/bouncing/l5.css';
 
 /** 自动生成：__loading-bouncing-5 */
 export function LoaderBouncing5(props: { className?: string; style?: React.CSSProperties }) {

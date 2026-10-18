@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/spinner/l5.css';
+import '@x-ac/css-loading/style/spinner/l5.css';
 
 /** 自动生成：__loading-spinner-5 */
 export function LoaderSpinner5(props: { className?: string; style?: React.CSSProperties }) {

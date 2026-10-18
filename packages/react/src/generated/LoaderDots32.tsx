@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/dots/l32.css';
+import '@x-ac/css-loading/style/dots/l32.css';
 
 /** 自动生成：__loading-dots-32 */
 export function LoaderDots32(props: { className?: string; style?: React.CSSProperties }) {

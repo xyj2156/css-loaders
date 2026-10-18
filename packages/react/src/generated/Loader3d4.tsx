@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/3d/l4.css';
+import '@x-ac/css-loading/style/3d/l4.css';
 
 /** 自动生成：__loading-3d-4 */
 export function Loader3d4(props: { className?: string; style?: React.CSSProperties }) {

@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/thin/l8.css';
+import '@x-ac/css-loading/style/thin/l8.css';
 
 /** 自动生成：__loading-thin-8 */
 export function LoaderThin8(props: { className?: string; style?: React.CSSProperties }) {

@@ -1,5 +1,5 @@
 {
-  "name": "@xyj2156/vue-loading",
+  "name": "@x-ac/vue-loading",
   "version": "0.1.0",
   "description": "Vue components for @xyj2156/css-loading",
   "type": "module",
@@ -17,11 +17,12 @@
   ],
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
-    "dev": "vite build --watch"
+    "dev": "vite build --watch",
+    "gen": "node scripts/gen.mjs"
   },
   "peerDependencies": {
     "vue": "^3.0.0",
-    "@xyj2156/css-loading": "workspace:^"
+    "@x-ac/css-loading": "workspace:^"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.10",

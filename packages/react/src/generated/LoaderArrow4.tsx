@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/arrow/l4.css';
+import '@x-ac/css-loading/style/arrow/l4.css';
 
 /** 自动生成：__loading-arrow-4 */
 export function LoaderArrow4(props: { className?: string; style?: React.CSSProperties }) {

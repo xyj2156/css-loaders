@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/infinity/l8.css';
+import '@x-ac/css-loading/style/infinity/l8.css';
 
 /** 自动生成：__loading-infinity-8 */
 export function LoaderInfinity8(props: { className?: string; style?: React.CSSProperties }) {

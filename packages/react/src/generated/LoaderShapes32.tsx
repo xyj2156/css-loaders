@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/shapes/l32.css';
+import '@x-ac/css-loading/style/shapes/l32.css';
 
 /** 自动生成：__loading-shapes-32 */
 export function LoaderShapes32(props: { className?: string; style?: React.CSSProperties }) {

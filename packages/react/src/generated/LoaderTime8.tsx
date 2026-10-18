@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/time/l8.css';
+import '@x-ac/css-loading/style/time/l8.css';
 
 /** 自动生成：__loading-time-8 */
 export function LoaderTime8(props: { className?: string; style?: React.CSSProperties }) {

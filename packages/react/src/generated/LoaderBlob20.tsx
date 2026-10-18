@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/blob/l20.css';
+import '@x-ac/css-loading/style/blob/l20.css';
 
 /** 自动生成：__loading-blob-20 */
 export function LoaderBlob20(props: { className?: string; style?: React.CSSProperties }) {

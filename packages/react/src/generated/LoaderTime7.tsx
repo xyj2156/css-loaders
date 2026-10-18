@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/time/l7.css';
+import '@x-ac/css-loading/style/time/l7.css';
 
 /** 自动生成：__loading-time-7 */
 export function LoaderTime7(props: { className?: string; style?: React.CSSProperties }) {

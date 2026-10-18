@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/colorful/l1.css';
+import '@x-ac/css-loading/style/colorful/l1.css';
 
 /** 自动生成：__loading-colorful-1 */
 export function LoaderColorful1(props: { className?: string; style?: React.CSSProperties }) {

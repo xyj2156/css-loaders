@@ -1,5 +1,5 @@
 import { createElementBlock as e, defineComponent as t, normalizeClass as n, openBlock as r } from "vue";
-import "@xyj2156/css-loading/style/glowing/l9.css";
+import "@x-ac/css-loading/style/glowing/l9.css";
 //#region src/generated/LoaderGlowing9.vue?vue&type=script&setup=true&lang.ts
 var i = { class: /*@__PURE__*/ n("__loading-glowing-9") }, a = /*@__PURE__*/ t({
 	__name: "LoaderGlowing9",

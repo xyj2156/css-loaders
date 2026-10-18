@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/mechanic/l9.css';
+import '@x-ac/css-loading/style/mechanic/l9.css';
 
 /** 自动生成：__loading-mechanic-9 */
 export function LoaderMechanic9(props: { className?: string; style?: React.CSSProperties }) {

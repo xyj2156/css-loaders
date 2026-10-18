@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/arcade/l5.css';
+import '@x-ac/css-loading/style/arcade/l5.css';
 
 /** 自动生成：__loading-arcade-5 */
 export function LoaderArcade5(props: { className?: string; style?: React.CSSProperties }) {

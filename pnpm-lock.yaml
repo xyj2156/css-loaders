@@ -12,6 +12,43 @@ importers:
         specifier: ^24.19.2
         version: 24.19.2
 
+  apps/playground:
+    dependencies:
+      '@x-ac/css-loading':
+        specifier: workspace:^
+        version: link:../../packages/css
+      '@x-ac/react-loading':
+        specifier: workspace:^
+        version: link:../../packages/react
+      '@x-ac/vue-loading':
+        specifier: workspace:^
+        version: link:../../packages/vue
+      react:
+        specifier: ^19.0.0
+        version: 19.3.1
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.3.1(react@19.3.1)
+      vue:
+        specifier: ^3.5.44
+        version: 3.5.44(typescript@5.9.3)
+    devDependencies:
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.3.0
+      '@types/react-dom':
+        specifier: ^19.0.0
+        version: 19.3.0(@types/react@19.3.0)
+      '@vitejs/plugin-react':
+        specifier: ^5.0.0
+        version: 5.2.0(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2))
+      '@vitejs/plugin-vue':
+        specifier: ^6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2))(vue@3.5.44(typescript@5.9.3))
+      vite:
+        specifier: ^8.0.0
+        version: 8.3.4(@types/node@24.19.2)(esbuild@0.28.2)
+
   packages/css:
     dependencies:
       axios:
@@ -36,7 +73,7 @@ importers:
 
   packages/react:
     dependencies:
-      '@xyj2156/css-loading':
+      '@x-ac/css-loading':
         specifier: workspace:^
         version: link:../css
     devDependencies:
@@ -64,7 +101,7 @@ importers:
 
   packages/vue:
     dependencies:
-      '@xyj2156/css-loading':
+      '@x-ac/css-loading':
         specifier: workspace:^
         version: link:../css
     devDependencies:

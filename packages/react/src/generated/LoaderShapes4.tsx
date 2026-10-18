@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/shapes/l4.css';
+import '@x-ac/css-loading/style/shapes/l4.css';
 
 /** 自动生成：__loading-shapes-4 */
 export function LoaderShapes4(props: { className?: string; style?: React.CSSProperties }) {

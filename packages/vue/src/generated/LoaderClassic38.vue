@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import '@xyj2156/css-loading/style/classic/l38.css';
+import '@x-ac/css-loading/style/classic/l38.css';
 </script>

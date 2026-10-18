@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/rolling/l5.css';
+import '@x-ac/css-loading/style/rolling/l5.css';
 
 /** 自动生成：__loading-rolling-5 */
 export function LoaderRolling5(props: { className?: string; style?: React.CSSProperties }) {

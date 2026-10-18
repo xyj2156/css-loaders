@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/line/l16.css';
+import '@x-ac/css-loading/style/line/l16.css';
 
 /** 自动生成：__loading-line-16 */
 export function LoaderLine16(props: { className?: string; style?: React.CSSProperties }) {

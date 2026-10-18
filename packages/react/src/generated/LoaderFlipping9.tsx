@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/flipping/l9.css';
+import '@x-ac/css-loading/style/flipping/l9.css';
 
 /** 自动生成：__loading-flipping-9 */
 export function LoaderFlipping9(props: { className?: string; style?: React.CSSProperties }) {

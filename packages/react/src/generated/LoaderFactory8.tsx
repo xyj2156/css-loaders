@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/factory/l8.css';
+import '@x-ac/css-loading/style/factory/l8.css';
 
 /** 自动生成：__loading-factory-8 */
 export function LoaderFactory8(props: { className?: string; style?: React.CSSProperties }) {

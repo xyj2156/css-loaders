@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/progress/l13.css';
+import '@x-ac/css-loading/style/progress/l13.css';
 
 /** 自动生成：__loading-progress-13 */
 export function LoaderProgress13(props: { className?: string; style?: React.CSSProperties }) {

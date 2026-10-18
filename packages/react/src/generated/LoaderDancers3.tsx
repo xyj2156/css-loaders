@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/dancers/l3.css';
+import '@x-ac/css-loading/style/dancers/l3.css';
 
 /** 自动生成：__loading-dancers-3 */
 export function LoaderDancers3(props: { className?: string; style?: React.CSSProperties }) {

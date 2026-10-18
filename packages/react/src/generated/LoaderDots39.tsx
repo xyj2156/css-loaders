@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/dots/l39.css';
+import '@x-ac/css-loading/style/dots/l39.css';
 
 /** 自动生成：__loading-dots-39 */
 export function LoaderDots39(props: { className?: string; style?: React.CSSProperties }) {

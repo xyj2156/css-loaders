@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/blob/l14.css';
+import '@x-ac/css-loading/style/blob/l14.css';
 
 /** 自动生成：__loading-blob-14 */
 export function LoaderBlob14(props: { className?: string; style?: React.CSSProperties }) {

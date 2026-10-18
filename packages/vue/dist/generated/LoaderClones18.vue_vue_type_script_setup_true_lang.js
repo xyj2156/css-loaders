@@ -1,5 +1,5 @@
 import { createElementBlock as e, defineComponent as t, normalizeClass as n, openBlock as r } from "vue";
-import "@xyj2156/css-loading/style/clones/l18.css";
+import "@x-ac/css-loading/style/clones/l18.css";
 //#region src/generated/LoaderClones18.vue?vue&type=script&setup=true&lang.ts
 var i = { class: /*@__PURE__*/ n("__loading-clones-18") }, a = /*@__PURE__*/ t({
 	__name: "LoaderClones18",

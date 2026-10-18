@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/pulsing/l4.css';
+import '@x-ac/css-loading/style/pulsing/l4.css';
 
 /** 自动生成：__loading-pulsing-4 */
 export function LoaderPulsing4(props: { className?: string; style?: React.CSSProperties }) {

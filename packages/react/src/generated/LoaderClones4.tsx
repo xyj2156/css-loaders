@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/clones/l4.css';
+import '@x-ac/css-loading/style/clones/l4.css';
 
 /** 自动生成：__loading-clones-4 */
 export function LoaderClones4(props: { className?: string; style?: React.CSSProperties }) {

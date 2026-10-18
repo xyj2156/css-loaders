@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/infinity/l15.css';
+import '@x-ac/css-loading/style/infinity/l15.css';
 
 /** 自动生成：__loading-infinity-15 */
 export function LoaderInfinity15(props: { className?: string; style?: React.CSSProperties }) {

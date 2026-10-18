@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/rolling/l3.css';
+import '@x-ac/css-loading/style/rolling/l3.css';
 
 /** 自动生成：__loading-rolling-3 */
 export function LoaderRolling3(props: { className?: string; style?: React.CSSProperties }) {

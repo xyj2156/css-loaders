@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/eyes/l6.css';
+import '@x-ac/css-loading/style/eyes/l6.css';
 
 /** 自动生成：__loading-eyes-6 */
 export function LoaderEyes6(props: { className?: string; style?: React.CSSProperties }) {

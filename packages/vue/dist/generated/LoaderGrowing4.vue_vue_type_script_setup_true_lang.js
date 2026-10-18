@@ -1,5 +1,5 @@
 import { createElementBlock as e, defineComponent as t, normalizeClass as n, openBlock as r } from "vue";
-import "@xyj2156/css-loading/style/growing/l4.css";
+import "@x-ac/css-loading/style/growing/l4.css";
 //#region src/generated/LoaderGrowing4.vue?vue&type=script&setup=true&lang.ts
 var i = { class: /*@__PURE__*/ n("__loading-growing-4") }, a = /*@__PURE__*/ t({
 	__name: "LoaderGrowing4",

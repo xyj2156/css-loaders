@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/hypnotic/l9.css';
+import '@x-ac/css-loading/style/hypnotic/l9.css';
 
 /** 自动生成：__loading-hypnotic-9 */
 export function LoaderHypnotic9(props: { className?: string; style?: React.CSSProperties }) {

@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/wavy/l14.css';
+import '@x-ac/css-loading/style/wavy/l14.css';
 
 /** 自动生成：__loading-wavy-14 */
 export function LoaderWavy14(props: { className?: string; style?: React.CSSProperties }) {

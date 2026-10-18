@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/growing/l4.css';
+import '@x-ac/css-loading/style/growing/l4.css';
 
 /** 自动生成：__loading-growing-4 */
 export function LoaderGrowing4(props: { className?: string; style?: React.CSSProperties }) {

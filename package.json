@@ -5,9 +5,11 @@
   "type": "module",
   "description": "CSS loaders monorepo: core css + vue/react adapters + playground",
   "scripts": {
-    "build:css": "pnpm -F @xyj2156/css-loading build",
-    "dev:css": "pnpm -F @xyj2156/css-loading dev",
-    "preview:css": "pnpm -F @xyj2156/css-loading preview",
+    "build:css": "pnpm -F @x-ac/css-loading build",
+    "dev:css": "pnpm -F @x-ac/css-loading dev",
+    "preview:css": "pnpm -F @x-ac/css-loading preview",
+    "gen": "pnpm -F @x-ac/vue-loading gen && pnpm -F @x-ac/react-loading gen",
+    "dev:playground": "pnpm -F @x-ac/playground dev",
     "build": "pnpm -r --filter \"./packages/*\" run build"
   },
   "devDependencies": {

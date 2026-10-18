@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/hungry/l7.css';
+import '@x-ac/css-loading/style/hungry/l7.css';
 
 /** 自动生成：__loading-hungry-7 */
 export function LoaderHungry7(props: { className?: string; style?: React.CSSProperties }) {

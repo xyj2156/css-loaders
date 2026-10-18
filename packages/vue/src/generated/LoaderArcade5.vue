@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import '@xyj2156/css-loading/style/arcade/l5.css';
+import '@x-ac/css-loading/style/arcade/l5.css';
 </script>

@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/time/l6.css';
+import '@x-ac/css-loading/style/time/l6.css';
 
 /** 自动生成：__loading-time-6 */
 export function LoaderTime6(props: { className?: string; style?: React.CSSProperties }) {

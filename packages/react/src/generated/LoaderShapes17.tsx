@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/shapes/l17.css';
+import '@x-ac/css-loading/style/shapes/l17.css';
 
 /** 自动生成：__loading-shapes-17 */
 export function LoaderShapes17(props: { className?: string; style?: React.CSSProperties }) {

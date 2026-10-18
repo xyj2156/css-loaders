@@ -1,5 +1,5 @@
 {
-  "name": "@xyj2156/react-loading",
+  "name": "@x-ac/react-loading",
   "version": "0.1.0",
   "description": "React components for @xyj2156/css-loading",
   "type": "module",
@@ -17,12 +17,13 @@
   ],
   "scripts": {
     "build": "tsc --noEmit && vite build",
-    "dev": "vite build --watch"
+    "dev": "vite build --watch",
+    "gen": "node scripts/gen.mjs"
   },
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",
-    "@xyj2156/css-loading": "workspace:^"
+    "@x-ac/css-loading": "workspace:^"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",

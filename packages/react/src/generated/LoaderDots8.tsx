@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/dots/l8.css';
+import '@x-ac/css-loading/style/dots/l8.css';
 
 /** 自动生成：__loading-dots-8 */
 export function LoaderDots8(props: { className?: string; style?: React.CSSProperties }) {

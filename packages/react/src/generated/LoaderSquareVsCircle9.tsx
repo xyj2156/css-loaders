@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/square-vs-circle/l9.css';
+import '@x-ac/css-loading/style/square-vs-circle/l9.css';
 
 /** 自动生成：__loading-square-vs-circle-9 */
 export function LoaderSquareVsCircle9(props: { className?: string; style?: React.CSSProperties }) {

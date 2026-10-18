@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/maze/l5.css';
+import '@x-ac/css-loading/style/maze/l5.css';
 
 /** 自动生成：__loading-maze-5 */
 export function LoaderMaze5(props: { className?: string; style?: React.CSSProperties }) {

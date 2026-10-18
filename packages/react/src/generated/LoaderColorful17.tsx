@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/colorful/l17.css';
+import '@x-ac/css-loading/style/colorful/l17.css';
 
 /** 自动生成：__loading-colorful-17 */
 export function LoaderColorful17(props: { className?: string; style?: React.CSSProperties }) {

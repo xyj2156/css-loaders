@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/filling/l19.css';
+import '@x-ac/css-loading/style/filling/l19.css';
 
 /** 自动生成：__loading-filling-19 */
 export function LoaderFilling19(props: { className?: string; style?: React.CSSProperties }) {

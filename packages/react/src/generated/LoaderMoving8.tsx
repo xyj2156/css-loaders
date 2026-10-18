@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/moving/l8.css';
+import '@x-ac/css-loading/style/moving/l8.css';
 
 /** 自动生成：__loading-moving-8 */
 export function LoaderMoving8(props: { className?: string; style?: React.CSSProperties }) {

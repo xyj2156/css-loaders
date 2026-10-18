@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/progress/l5.css';
+import '@x-ac/css-loading/style/progress/l5.css';
 
 /** 自动生成：__loading-progress-5 */
 export function LoaderProgress5(props: { className?: string; style?: React.CSSProperties }) {

@@ -1,5 +1,5 @@
 import { createElementBlock as e, defineComponent as t, normalizeClass as n, openBlock as r } from "vue";
-import "@xyj2156/css-loading/style/bars/l16.css";
+import "@x-ac/css-loading/style/bars/l16.css";
 //#region src/generated/LoaderBars16.vue?vue&type=script&setup=true&lang.ts
 var i = { class: /*@__PURE__*/ n("__loading-bars-16") }, a = /*@__PURE__*/ t({
 	__name: "LoaderBars16",

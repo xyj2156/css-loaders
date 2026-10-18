@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/infinity/l3.css';
+import '@x-ac/css-loading/style/infinity/l3.css';
 
 /** 自动生成：__loading-infinity-3 */
 export function LoaderInfinity3(props: { className?: string; style?: React.CSSProperties }) {

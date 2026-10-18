@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/bars/l22.css';
+import '@x-ac/css-loading/style/bars/l22.css';
 
 /** 自动生成：__loading-bars-22 */
 export function LoaderBars22(props: { className?: string; style?: React.CSSProperties }) {

@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/dancers/l5.css';
+import '@x-ac/css-loading/style/dancers/l5.css';
 
 /** 自动生成：__loading-dancers-5 */
 export function LoaderDancers5(props: { className?: string; style?: React.CSSProperties }) {

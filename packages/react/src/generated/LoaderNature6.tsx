@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/nature/l6.css';
+import '@x-ac/css-loading/style/nature/l6.css';
 
 /** 自动生成：__loading-nature-6 */
 export function LoaderNature6(props: { className?: string; style?: React.CSSProperties }) {

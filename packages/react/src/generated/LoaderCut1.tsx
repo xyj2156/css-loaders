@@ -1,4 +1,4 @@
-import '@xyj2156/css-loading/style/cut/l1.css';
+import '@x-ac/css-loading/style/cut/l1.css';
 
 /** 自动生成：__loading-cut-1 */
 export function LoaderCut1(props: { className?: string; style?: React.CSSProperties }) {
