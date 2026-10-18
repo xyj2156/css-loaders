@@ -5,56 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CSS Loaders</title>
   <style>
+    :root {
+      --bg: #ffffff;
+      --bg-elev: #f6f8fa;
+      --border: #d0d7de;
+      --text: #1f2328;
+      --text-dim: #656d76;
+      --accent: #0969da;
+    }
+    [data-theme="dark"] {
+      --bg: #0d1117;
+      --bg-elev: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --text-dim: #8b949e;
+      --accent: #58a6ff;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
-      padding: 24px;
-      max-width: 1400px;
-      margin: 0 auto;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      transition: background .2s, color .2s;
     }
-    h1 { font-size: 28px; font-weight: 700; color: #f0f6fc; }
-    .subtitle { color: #8b949e; font-size: 14px; margin: 4px 0 24px; }
-    .subtitle a { color: #58a6ff; }
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex; align-items: center; gap: 16px;
+    }
+    .topbar h1 { font-size: 18px; font-weight: 700; }
+    .topbar a { color: var(--accent); text-decoration: none; font-size: 13px; }
+    .search {
+      flex: 1; max-width: 360px;
+      padding: 6px 12px; border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-elev); color: var(--text);
+      font-size: 14px; outline: none;
+    }
+    .search:focus { border-color: var(--accent); }
+    .theme-btn {
+      margin-left: auto;
+      padding: 6px 12px; border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-elev); color: var(--text);
+      cursor: pointer; font-size: 13px;
+    }
     .nav {
-      position: sticky; top: 0; background: #0d1117;
-      padding: 12px 0; margin-bottom: 24px;
-      border-bottom: 1px solid #21262d;
-      display: flex; flex-wrap: wrap; gap: 6px; z-index: 10;
+      position: sticky; top: 53px; z-index: 9;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 24px;
+      display: flex; flex-wrap: wrap; gap: 6px;
+      overflow-x: auto;
     }
     .nav a {
-      color: #58a6ff; text-decoration: none; font-size: 12px;
-      padding: 3px 8px; border-radius: 6px; background: #161b22;
+      color: var(--text-dim); text-decoration: none; font-size: 12px;
+      padding: 3px 10px; border-radius: 99px;
+      background: var(--bg-elev);
+      white-space: nowrap;
     }
-    .nav a:hover { background: #21262d; }
+    .nav a:hover { color: var(--accent); }
+    main { padding: 24px; max-width: 1400px; margin: 0 auto; }
     h2 {
-      font-size: 15px; font-weight: 600; color: #f0f6fc;
-      margin: 32px 0 12px; padding-bottom: 8px;
-      border-bottom: 1px solid #21262d;
+      font-size: 15px; font-weight: 600;
+      margin: 32px 0 12px;
+      color: var(--text);
     }
+    h2 .count { color: var(--text-dim); font-weight: 400; font-size: 12px; margin-left: 6px; }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
       gap: 12px;
     }
     .cell {
-      background: #161b22; border: 1px solid #21262d;
-      border-radius: 10px; padding: 16px;
-      display: flex; flex-direction: column; align-items: center;
-      gap: 8px; min-height: 90px; justify-content: center;
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 12px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 10px;
+      min-height: 90px;
       transition: border-color .15s;
     }
-    .cell:hover { border-color: #30363d; }
-    .stage { display: flex; gap: 18px; align-items: center; justify-content: center; }
-    .item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
-    .label { font-size: 10px; color: #6e7681; }
+    .cell:hover { border-color: var(--accent); }
+    .name { font-size: 10px; color: var(--text-dim); font-family: ui-monospace, monospace; }
   </style>
 </head>
 <body>
-  <h1>CSS Loaders</h1>
-  <p class="subtitle">707 个纯 CSS loading 动画 · Vue / React 组件 · <a href="https://github.com/xyj2156/css-loaders">GitHub</a></p>
-  <div id="app"></div>
+  <header class="topbar">
+    <h1>CSS Loaders</h1>
+    <input class="search" id="search" placeholder="搜索 loader，如 line-1" />
+    <button class="theme-btn" id="theme-toggle">🌙</button>
+  </header>
+  <nav class="nav" id="nav"></nav>
+  <main id="app"></main>
   <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
