@@ -3,9 +3,13 @@ import "@x-ac/css-loading/style/polygons/l5.css";
 //#region src/generated/LoaderPolygons5.tsx
 var t = e();
 function n(e) {
-	return /* @__PURE__ */ (0, t.jsx)("div", {
+	let n = {};
+	return e.size && (n["--size"] = e.size), e.color && (n["--color-1"] = e.color), e.duration && (n["--duration"] = e.duration), /* @__PURE__ */ (0, t.jsx)("div", {
 		className: e.className,
-		style: e.style,
+		style: {
+			...n,
+			...e.style
+		},
 		children: /* @__PURE__ */ (0, t.jsx)("div", { className: "__loading-polygons-5" })
 	});
 }

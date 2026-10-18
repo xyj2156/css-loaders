@@ -1,11 +1,23 @@
-import { createElementBlock as e, defineComponent as t, normalizeClass as n, openBlock as r } from "vue";
+import { computed as e, createElementBlock as t, defineComponent as n, normalizeClass as r, normalizeStyle as i, openBlock as a } from "vue";
 import "@x-ac/css-loading/style/dots-vs-bars/l17.css";
 //#region src/generated/LoaderDotsVsBars17.vue?vue&type=script&setup=true&lang.ts
-var i = { class: /*@__PURE__*/ n("__loading-dots-vs-bars-17") }, a = /*@__PURE__*/ t({
+var o = /*@__PURE__*/ n({
 	__name: "LoaderDotsVsBars17",
-	setup(t) {
-		return (t, n) => (r(), e("div", i));
+	props: {
+		size: {},
+		color: {},
+		duration: {}
+	},
+	setup(n) {
+		let o = n, s = e(() => {
+			let e = {};
+			return o.size && (e["--size"] = o.size), o.color && (e["--color-1"] = o.color), o.duration && (e["--duration"] = o.duration), e;
+		});
+		return (e, n) => (a(), t("div", {
+			class: r("__loading-dots-vs-bars-17"),
+			style: i(s.value)
+		}, null, 4));
 	}
 });
 //#endregion
-export { a as default };
+export { o as default };
