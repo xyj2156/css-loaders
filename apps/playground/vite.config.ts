@@ -3,5 +3,6 @@ import vue from '@vitejs/plugin-vue';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+  base: '/css-loaders/',
   plugins: [vue(), react()],
 });
