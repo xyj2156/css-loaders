@@ -42,7 +42,7 @@ const App = defineComponent({
             { key: `g-${kind}`, class: 'grid' },
             classes.map((cls: string) =>
               h('div', { key: cls, class: 'cell' }, [
-                h('div', { class: cls }),
+                h('div', { class: 'stage' }, [h('div', { class: cls })]),
                 h('div', { class: 'name' }, cls.replace('__loading-', '')),
               ]),
             ),
