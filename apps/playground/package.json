@@ -1,0 +1,25 @@
+{
+  "name": "@xyj2156/playground",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@x-ac/css-loading": "workspace:^",
+    "@x-ac/vue-loading": "workspace:^",
+    "@x-ac/react-loading": "workspace:^",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vue": "^3.5.44"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "vite": "^8.0.0"
+  }
+}
